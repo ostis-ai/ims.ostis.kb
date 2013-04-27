@@ -1,1 +1,47 @@
+/!* keyword: set_binary_relation */
+set_binary_relation => nrel_main_ru_idtf: 
+	[бинарное отношение] ;;
+set_binary_relation => nrel_main_en_idtf: 
+	[binary relation] ;;
 
+set_binary_relation => nrel_ru_idtf: 
+	[класс однотипных связок] ;;
+set_binary_relation => nrel_ru_idtf: 
+	[относительное понятие] ;;
+
+set_binary_relation => nrel_inclusion: set_relation ;;
+
+set_binary_relation => nrel_definition:
+	[Бинарным отношением между двумя множествами называется соответствие элементов одного из них элементам второго.] ;;
+
+set_binary_relation <- set_areflexive_relation ;;
+set_binary_relation<- set_reflexive_relation ;;
+set_binary_relation<- set_symmetric_relation ;;
+set_binary_relation<- set_antisymmetric_relation ;;
+set_binary_relation<- set_asymmetrical_relation ;;
+set_binary_relation<- set_transitive_relation ;;
+set_binary_relation<- set_linear_order_relation ;;
+set_binary_relation<- set_strict_order_relation ;;
+
+set_binary_relation => nrel_ru_idtf: 
+	[Разбиение (по признаку свойств)] ;;
+set_binary_relation <= nrel_subdividing:
+{
+	set_areflexive_relation;
+	set_reflexive_relation;
+	set_symmetric_relation;
+	set_antisymmetric_relation;
+	set_asymmetrical_relation;
+	set_transitive_relation;
+	set_linear_order_relation;
+	set_strict_order_relation
+};;	
+
+set_binary_relation => hypermedia_nrel_explanation:
+	[
+		Любое канторовское_множество  пар  является  бинарным отношением. Любое бинарное отношение является множеством пар. <br>
+		/*в SCg-коде*/
+	]
+	(*
+		<=> nrel_semantic_equivalence: "file://images/set_binary_relation.png";;
+	*);;
