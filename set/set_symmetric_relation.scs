@@ -1,1 +1,20 @@
+/!* keyword: set_symmetric_relation */
+set_symmetric_relation => nrel_main_ru_idtf: 
+	[бинарное отношение] ;;
+set_symmetric_relation => nrel_main_en_idtf: 
+	[binary relation] ;;
+
+set_symmetric_relation => nrel_inclusion: set_binary_relation ;;
+
+set_symmetric_relation => nrel_definition:
+	[Симметричным отношением является бинарное отношение, для каждой связки которого существует связка, связывающая второй и первый элементы первой связки, в обратном порядке.] ;;
+
+set_symmetric_relation => hypermedia_nrel_explanation:
+	[
+		Симметричным отношением является отношение равентсва. <br>
+		/*в SCg-коде*/
+	]
+	(*
+		<=> nrel_semantic_equivalence: "file://images/set_symmetric_relation.png";;
+	*);;
 
