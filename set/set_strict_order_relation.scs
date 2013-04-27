@@ -1,1 +1,20 @@
+/!* keyword: set_strict_order_relation */
+set_strict_order_relation => nrel_main_ru_idtf: 
+	[отношение строгого порядка] ;;
+set_strict_order_relation => nrel_main_en_idtf: 
+	[strict order relation] ;;
+
+set_strict_order_relation => nrel_inclusion: set_binary_relation ;;
+
+set_strict_order_relation => nrel_definition:
+	[Отношением строгого порядка является бинарное отношение, которое является транзитивным, антисимметричным, арефлексивным.] ;;
+
+set_strict_order_relation => hypermedia_nrel_explanation:
+	[
+		Отношением строгого порядка является отношение строгого включения канторовского множества во множества. <br>
+		/*в SCg-коде*/
+	]
+	(*
+		<=> nrel_semantic_equivalence: "file://images/set_strict_order_relation.png";;
+	*);;
 
