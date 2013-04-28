@@ -1,1 +1,20 @@
+/!* keyword: set_identification */
+set_identification => nrel_main_ru_idtf: 
+	[идентификация*] ;;
+set_identification => nrel_main_en_idtf: 
+	[identification*] ;;
+
+set_identification<- set_binary_relation ;;
+
+set_identification => nrel_definition:
+	[Идентификацией является бинарное  отношение между  обозначением множества  и множеством синонимичных его внешних обозначений или термов.] ;;
+
+set_identification => hypermedia_nrel_explanation:
+	[
+		Бинарное  отношение между  обозначением множества и множеством синонимичных его внешних обозначений или термов. <br>
+		/*в SCg-коде*/
+	]
+	(*
+		<=> nrel_semantic_equivalence: "file://images/set_identification.png";;
+	*);;
 
