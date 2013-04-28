@@ -1,1 +1,20 @@
+/!* keyword: set_logical_hierarchy_of_concepts */
+set_logical_hierarchy_of_concepts => nrel_main_ru_idtf: 
+	[логическая иерархия понятий*] ;;
+set_logical_hierarchy_of_concepts => nrel_main_en_idtf: 
+	[logical hierarchy of concepts*] ;;
+
+set_logical_hierarchy_of_concepts<- set_binary_relation ;;
+
+set_logical_hierarchy_of_concepts => nrel_definition:
+	[Логической иерархией понятий является бинарное  отношение,  которое  связывает  множество определяющих понятий с определяемым понятием.] ;;
+
+set_logical_hierarchy_of_concepts => hypermedia_nrel_explanation:
+	[
+		Бинарное  отношение,  которое  связывает  множество  определяющих понятий с определяемым понятием. <br>
+		/*в SCg-коде*/
+	]
+	(*
+		<=> nrel_semantic_equivalence: "file://images/set_logical_hierarchy_of_concepts.png";;
+	*);;
 
