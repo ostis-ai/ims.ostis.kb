@@ -1,1 +1,20 @@
+/!* keyword: set_undefinable_concept */
+set_undefinable_concept => nrel_main_ru_idtf: 
+	[неопределяемое понятие*] ;;
+set_undefinable_concept => nrel_main_en_idtf: 
+	[undefinable concept_] ;;
+
+set_undefinable_concept<- set_role_relation ;;
+
+set_undefinable_concept => nrel_definition:
+	[Неопреляемое понятие понятий является атрибутивное  отношение,  связывающее  предметную область с неопределяемым понятием.] ;;
+
+set_undefinable_concept => hypermedia_nrel_explanation:
+	[
+		Атрибутивное  отношение,  связывающее  предметную  область с неопределяемым понятием. <br>
+		/*в SCg-коде*/
+	]
+	(*
+		<=> nrel_semantic_equivalence: "file://images/set_undefinable_concept.png";;
+	*);;
 
