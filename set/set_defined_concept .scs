@@ -1,1 +1,20 @@
+/!* keyword: set_defined_concept */
+set_defined_concept => nrel_main_ru_idtf: 
+	[определяемое понятие_] ;;
+set_defined_concept => nrel_main_en_idtf: 
+	[defined concept_] ;;
+
+set_defined_concept<- set_role_relation ;;
+
+set_defined_concept => nrel_definition:
+	[Определяемым понятием	 является атрибутивное отношение, связывающее предметную область с определяемым понятием.] ;;
+
+set_defined_concept => hypermedia_nrel_explanation:
+	[
+		Атрибутивное  отношение,  связывающее  предметную  область неопределяемым понятием. <br>
+		/*в SCg-коде*/
+	]
+	(*
+		<=> nrel_semantic_equivalence: "file://images/set_defined_concept.png";;
+	*);;
 
