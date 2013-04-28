@@ -1,1 +1,10 @@
+/!* keyword: set_publication */
+set_publication => nrel_main_ru_idtf: 
+	[публикация*] ;;
+set_publication => nrel_main_en_idtf: 
+	[publication*] ;;
 
+set_publication<- set_binary_relation ;;
+
+set_publication => nrel_definition:
+	[Публикацией является бинарное  отношение  между  информационной  конструкцией  и  множеством обозначений публикаций.] ;;
