@@ -4,7 +4,7 @@ set_transitive_relation => nrel_main_ru_idtf:
 set_transitive_relation => nrel_main_en_idtf: 
 	[transitive relation] ;;
 
-set_transitive_relation => nrel_inclusion: set_binary_relation ;;
+set_transitive_relation <- set_binary_relation ;;
 
 set_transitive_relation => nrel_definition:
 	[Транзитивным отношением является бинарное отношение, в котором для любых двух пар таких, что второй элемент первой является первым элементом второй, существует третья пара, первым элементом которой является первый элемент первой и вторым – второй элемент второй.] ;;
