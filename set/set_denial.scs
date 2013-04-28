@@ -1,1 +1,11 @@
+/!* keyword: set_denial */
+set_denial => nrel_main_ru_idtf: 
+	[отрицание*] ;;
+set_denial => nrel_main_en_idtf: 
+	[denial*] ;;
+
+set_denial <- set_relation ;;
+
+set_denial => nrel_definition:
+	[Отрицанием является множество логических связок, отрицающих кванторы или логические связки.] ;;
 
