@@ -1,1 +1,20 @@
+/!* keyword: set_disjunction */
+set_disjunction => nrel_main_ru_idtf: 
+	[дизъюнкция*] ;;
+set_disjunction => nrel_main_en_idtf: 
+	[disjunction*] ;;
+
+set_disjunction <- set_relation ;;
+
+set_disjunction => nrel_definition:
+	[Дизъюнкцией является множество дизъюнктивных логических связок, которые связывают дизъюнктивно кванторы и/или логические связки.] ;;
+
+set_disjunction => hypermedia_nrel_explanation:
+	[
+		Множество дизъюнктивных логических связок,  которые  связывают дизъюнктивно кванторы и/или логические связки. <br>
+		/*в SCg-коде*/
+	]
+	(*
+		<=> nrel_semantic_equivalence: "file://images/set_disjunction.png";;
+	*);;
 
