@@ -1,1 +1,11 @@
+/!* keyword: set_comment */
+set_comment => nrel_main_ru_idtf: 
+	[комментарий*] ;;
+set_comment => nrel_main_en_idtf: 
+	[comment*] ;;
+
+set_comment<- set_binary_relation ;;
+
+set_comment => nrel_definition:
+	[Комментарием является бинарное  отношение между элементом и множеством текстов, комментирующих этот элемент.] ;;
 
