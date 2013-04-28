@@ -1,1 +1,20 @@
+/!* keyword: set_product */
+set_product => nrel_main_ru_idtf: 
+	[произведение_] ;;
+set_product => nrel_main_en_idtf: 
+	[product_] ;;
+
+set_product <- set_role_relation ;;
+
+set_product => nrel_definition:
+	[Произведением является атрибутивное  отношение,  используемое  в  связках  произведения  чисел, для указания результата.] ;;
+
+set_product => hypermedia_nrel_explanation:
+	[
+		Произведение  чисел связывает  множество  множителей  и  число, являющееся результатом этого произведения чисел. <br>
+		/*в SCg-коде*/
+	]
+	(*
+		<=> nrel_semantic_equivalence: "file://images/set_product_numbers.png";;
+	*);;
 
