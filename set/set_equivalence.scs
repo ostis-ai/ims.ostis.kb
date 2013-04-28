@@ -1,1 +1,20 @@
+/!* keyword: set_equivalence */
+set_equivalence => nrel_main_ru_idtf: 
+	[эквиваленция*] ;;
+set_equivalence => nrel_main_en_idtf: 
+	[equivalence*] ;;
+
+set_equivalence<- set_relation ;;
+
+set_equivalence => nrel_definition:
+	[Эквиваленцией является множество логических связок – эквиваленций, которые связывают логически эквивалентные кванторы и/или логические связки.] ;;
+
+set_equivalence => hypermedia_nrel_explanation:
+	[
+		Множество логических связок –  эквиваленций,  которые  связывают логически эквивалентные кванторы и/или логические связки. <br>
+		/*в SCg-коде*/
+	]
+	(*
+		<=> nrel_semantic_equivalence: "file://images/set_equivalence.png";;
+	*);;
 
