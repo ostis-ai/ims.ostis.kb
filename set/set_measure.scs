@@ -1,1 +1,20 @@
+/!* keyword: set_measure */
+set_measure => nrel_main_ru_idtf: 
+	[единица измерения] ;;
+set_measure => nrel_main_en_idtf: 
+	[measure] ;;
+
+set_measure <- set_binary_relation ;;
+
+set_measure => nrel_definition:
+	[Единица измерения  - это класс множеств, каждое из которых является бинарным отношением между некоторым объектом и значением его измеряемого параметра] ;;
+
+set_measure => hypermedia_nrel_explanation:
+	[
+		Метры и метры квадратные относятся к единицам измерения. <br>
+		/*в SCg-коде*/
+	]
+	(*
+		<=> nrel_semantic_equivalence: "file://images/set_measure.png";;
+	*);;
 
