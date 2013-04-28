@@ -1,1 +1,20 @@
+/!* keyword: set_product_numbers */
+set_product_numbers => nrel_main_ru_idtf: 
+	[произведение чисел*] ;;
+set_product_numbers => nrel_main_en_idtf: 
+	[product numbers*] ;;
+
+set_product_numbers <- set_binary_relation ;;
+
+set_product_numbers => nrel_definition:
+	[Произведением чисел является бинарное  отношение  между  множеством  множителей  и  числом, являющимся результатом их произведения.] ;;
+
+set_product_numbers => hypermedia_nrel_explanation:
+	[
+		Произведение  чисел связывает  множество  множителей  и  число, являющееся результатом этого произведения чисел. <br>
+		/*в SCg-коде*/
+	]
+	(*
+		<=> nrel_semantic_equivalence: "file://images/set_product_numbers.png";;
+	*);;
 
