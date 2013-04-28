@@ -1,1 +1,11 @@
+/!* keyword: set_definition_relation */
+set_definition_relation => nrel_main_ru_idtf: 
+	[определение*] ;;
+set_definition_relation => nrel_main_en_idtf: 
+	[definition*] ;;
+
+set_definition_relation<- set_binary_relation ;;
+
+set_definition_relation => nrel_definition:
+	[Определением является бинарное отношение, связывающее определяемое понятие с его определением.] ;;
 
