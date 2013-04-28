@@ -1,1 +1,20 @@
+/!* keyword: set_bind_variables */
+set_bind_variables => nrel_main_ru_idtf: 
+	[связываемые переменные_] ;;
+set_bind_variables => nrel_main_en_idtf: 
+	[bind variables_] ;;
+
+set_bind_variables <- set_role_relation ;;
+
+set_bind_variables => nrel_definition:
+	[Связываемой переменной является атрибутивное отношение, которое связывает квантор с переменными, которые этим квантором связываются в рамках некоторой логической связки или квантора.] ;;
+
+set_bind_variables => hypermedia_nrel_explanation:
+	[
+		Атрибутивное отношение, которое связывает квантор с переменными, которые этим квантором связываются в рамках некоторой логической связки или квантора. <br>
+		/*в SCg-коде*/
+	]
+	(*
+		<=> nrel_semantic_equivalence: "file://images/set_existence.png";;
+	*);;
 
