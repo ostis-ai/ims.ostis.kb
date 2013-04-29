@@ -1,1 +1,19 @@
+/!* keyword: set_relation_attribute */
+set_relation_attribute => nrel_main_ru_idtf: 
+	[отношение_] ;;
+set_relation_attribute => nrel_main_en_idtf: 
+	[relation_] ;;
 
+set_relation_attribute<- set_role_relation ;;
+
+set_relation_attribute => nrel_definition:
+	[Отношение - это атрибутивное отношение, используемое в связках унарной проекции, для указания отношения, унарная проекция которого строится.] ;;
+	
+set_relation_attribute => hypermedia_nrel_explanation:
+	[
+		  Бинарное отношение между отношением и его схемой. <br>
+		/*в SCg-коде*/
+	]
+	(*
+		<=> nrel_semantic_equivalence: "file://images/set_unary_projection_relation.png";;
+	*);;
