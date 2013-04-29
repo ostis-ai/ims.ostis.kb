@@ -1,1 +1,19 @@
+/!* keyword: set_unary_projection_relation */
+set_unary_projection_relation => nrel_main_ru_idtf: 
+	[унарная проекция*] ;;
+set_unary_projection_relation => nrel_main_en_idtf: 
+	[unary projection*] ;;
 
+set_unary_projection_relation<- set_relation ;;
+
+set_unary_projection_relation => nrel_definition:
+	[Унарная проекция - это отношение между отношением,  атрибутивным  отношением и унарной проекцией этого отношения по этому атрибутивному отношению.] ;;
+	
+set_unary_projection_relation => hypermedia_nrel_explanation:
+	[
+		  Отношение между отношением,  атрибутивным  отношением и унарной проекцией этого отношения по этому атрибутивному отношению.  <br>
+		/*в SCg-коде*/
+	]
+	(*
+		<=> nrel_semantic_equivalence: "file://images/set_unary_projection_relation.png";;
+	*);;
