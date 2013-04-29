@@ -1,1 +1,19 @@
+/!* keyword: set_analogy */
+set_analogy => nrel_main_ru_idtf: 
+	[аналогия*] ;;
+set_analogy => nrel_main_en_idtf: 
+	[analogy*] ;;
 
+set_analogy<- set_relation ;;
+
+set_analogy => nrel_definition:
+	[Аналогией является соответствие, указывающее аналогию между двумя множествами элементов.] ;;
+	
+set_analogy => hypermedia_nrel_explanation:
+	[
+		 Соответствие,  указывающее  аналогию  между  двумя  множествами элементов. <br>
+		/*в SCg-коде*/
+	]
+	(*
+		<=> nrel_semantic_equivalence: "file://images/set_analogy.png";;
+	*);;
