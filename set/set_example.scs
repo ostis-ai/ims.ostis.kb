@@ -1,1 +1,19 @@
+/!* keyword: set_example */
+set_example => nrel_main_ru_idtf: 
+	[пример_] ;;
+set_example => nrel_main_en_idtf: 
+	[example_] ;;
 
+set_example<- set_role_relation ;;
+
+set_example => nrel_definition:
+	[Пример - это атрибутивное отношение, связывающее понятие с его примером.] ;;
+	
+set_example => hypermedia_nrel_explanation:
+	[
+		  Понятие примера_  –  атрибутивное  отношение,  которое  связывает понятие (sc-узел, из которого позитивная sc-дуга выходит) с его примером (sc-элемент, в который эта sc-дуга входит). <br>
+		/*в SCg-коде*/
+	]
+	(*
+		<=> nrel_semantic_equivalence: "file://images/set_example.png";;
+	*);;
