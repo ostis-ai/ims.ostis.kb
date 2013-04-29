@@ -1,1 +1,19 @@
+/!* keyword: set_base_sequence */
+set_base_sequence => nrel_main_ru_idtf: 
+	[базовая последовательность*] ;;
+set_base_sequence => nrel_main_en_idtf: 
+	[base sequence*] ;;
 
+set_base_sequence<- set_binary_relation ;;
+
+set_base_sequence => nrel_definition:
+	[Базовой последовательностью является бинарное  отношение,  которое  задаёт  порядок  изложения подразделов в разделе.] ;;
+	
+set_base_sequence => hypermedia_nrel_explanation:
+	[
+		 Бинарное отношение, которое задаёт порядок изложения подразделов в разделе. <br>
+		/*в SCg-коде*/
+	]
+	(*
+		<=> nrel_semantic_equivalence: "file://images/set_base_sequence.png";;
+	*);;
