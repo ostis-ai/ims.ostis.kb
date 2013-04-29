@@ -1,1 +1,19 @@
+/!* keyword: set_domain_of_definition */
+set_domain_of_definition => nrel_main_ru_idtf: 
+	[область определения*] ;;
+set_domain_of_definition => nrel_main_en_idtf: 
+	[domain of definition*] ;;
 
+set_domain_of_definition<- set_binary_relation ;;
+
+set_domain_of_definition => nrel_definition:
+	[Область определения - это бинарное  отношение между отношением и его областью определения.] ;;
+	
+set_domain_of_definition => hypermedia_nrel_explanation:
+	[
+		  Бинарное  отношение между отношением и его областью определения. <br>
+		/*в SCg-коде*/
+	]
+	(*
+		<=> nrel_semantic_equivalence: "file://images/set_domain_of_definition.png";;
+	*);;
