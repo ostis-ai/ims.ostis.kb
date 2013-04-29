@@ -1,1 +1,19 @@
+/!* keyword: set_decomposition */
+set_decomposition => nrel_main_ru_idtf: 
+	[декомпозиция*] ;;
+set_decomposition => nrel_main_en_idtf: 
+	[decomposition*] ;;
 
+set_decomposition<- set_binary_relation ;;
+
+set_decomposition => nrel_definition:
+	[Декомпозицией является бинарное  отношение которое связывает раздел со множеством его подразделов.] ;;
+	
+set_decomposition => hypermedia_nrel_explanation:
+	[
+		  Бинарное  отношение  которое  связывает  раздел  со  множеством  его подразделов. <br>
+		/*в SCg-коде*/
+	]
+	(*
+		<=> nrel_semantic_equivalence: "file://images/set_decomposition.png";;
+	*);;
