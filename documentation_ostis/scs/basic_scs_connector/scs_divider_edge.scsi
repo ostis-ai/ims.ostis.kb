@@ -1,0 +1,12 @@
+/!* keyword: scs_divider_edge */
+scs_divider_edge => nrel_main_ru_idtf: 
+	[sc.s-ребро] ;;
+
+scs_divider_edge <= set_nrel_inclusion:
+	basic_scs_connector;;
+scs_divider_edge <= scs_nrel_representation_scs_editor:
+	[↔];;
+scs_divider_edge <= scs_nrel_representation_standart_editor:
+	[<>];;
+scs_divider_edge => scs_nrel_representation_scg_code:
+	"file://../images/scs_divider/basic_scs_connector/image002.gif";;

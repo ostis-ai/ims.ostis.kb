@@ -1,0 +1,23 @@
+/!* keyword: special_scs_connector */
+special_scs_connector => nrel_main_ru_idtf: 
+	[специальный sc.s-коннектор] ;;
+special_scs_connector => nrel_main_en_idtf: 
+	[special sc.s-connector] ;;
+special_scs_connector => nrel_ru_idtf: 
+	[sc.s-разделитель, изображающий sc-коннектор, который принадлежит некоторому заранее известному множеству и для которого нет специального знака, принадлежащего SCg] ;;
+special_scs_connector <= set_nrel_subdividing:
+{
+	scs_divider_inclusion;
+	scs_divider_non_inclusion;
+	scs_divider_intersected_pair;
+	scs_divider_non_intersected_pair;
+	scs_divider_identifier;
+	scs_divider_semantically_equal_files;
+	scs_divider_semantically_non_equal_files;
+	scs_divider_translation;
+	scs_divider_semantic_inclusion;
+	scs_divider_equality;
+	scs_divider_non_equality
+};;
+special_scs_connector <= hypermedia_nrel_explanation:
+	"file://../images/scs_divider/table_special.png";;

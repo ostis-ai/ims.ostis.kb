@@ -14,18 +14,18 @@ sc_element => nrel_ru_idtf:
 sc_element => nrel_ru_idtf: 
 	[примитив, входящий в состав sc-конструкции] ;;
 
-sc_element <= nrel_subdividing:
+sc_element <= set_nrel_subdividing:
 	{
 		sc_node;
 		sc_edge;
 		sc_arc
 	};;
-sc_element <= nrel_subdividing:
+sc_element <= set_nrel_subdividing:
 	{
 		sc_const;
 		sc_variable
 	};;
-sc_element <= nrel_subdividing:
+sc_element <= set_nrel_subdividing:
 	{
 		sc_connector;
 		sc_tuple;
@@ -163,7 +163,7 @@ sc_arc => nrel_ru_idtf:
 	[атомарный связующий sc-элемент, являющийся ориентированной парой sc-элементов] ;;
 sc_arc => nrel_ru_idtf: 
 	[ориентированный sc-коннектор ] ;;	
-sc_arc <= nrel_subdividing:
+sc_arc <= set_nrel_subdividing:
 {
 	sc_arc_common;
 	sc_arc_main
@@ -184,7 +184,7 @@ sc_connector => nrel_ru_idtf:
 sc_connector => nrel_ru_idtf: 
 	[атомарный связующий sc-элемент] ;;
 	
-sc_connector <= nrel_subdividing:
+sc_connector <= set_nrel_subdividing:
 {
 	sc_edge;
 	sc_arc
@@ -240,7 +240,7 @@ sc_construction_structure <= hypermedia_nrel_explanation:
 	двумя бинарными ориентированными отношениями инцидентности, которые связывают sc-элементы между собой.
 	];;	
 
-sc_construction_structure <= nrel_subdividing:
+sc_construction_structure <= set_nrel_subdividing:
 {
 	sc_nrel_connector_component ;
 	sc_nrel_arc_second_component

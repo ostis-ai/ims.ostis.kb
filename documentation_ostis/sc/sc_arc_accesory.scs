@@ -4,13 +4,13 @@ sc_arc_accesory => nrel_main_ru_idtf:
 sc_arc_accesory => nrel_main_en_idtf:
 	[sc-arc accessory] ;;
 
-sc_arc_accesory <= nrel_subdividing:
+sc_arc_accesory <= set_nrel_subdividing:
 	{
 		sc_arc_accesory_pos;
 		sc_arc_accesory_neg;
 		sc_arc_accesory_fuz
 	};;
-sc_arc_accesory <= nrel_subdividing:
+sc_arc_accesory <= set_nrel_subdividing:
 	{
 		sc_arc_perm;
 		sc_arc_temp;

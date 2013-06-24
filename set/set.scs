@@ -67,7 +67,7 @@ set <- set_different_type_set_class ;;
 
 set => nrel_ru_idtf: 
 	[Разбиение (по признаку наличия кратных вхождений элементов)] ;;
-set <= nrel_subdividing:
+set <= set_nrel_subdividing:
 {
 	set_cantor_set;
 	set_multiset
@@ -75,7 +75,7 @@ set <= nrel_subdividing:
 
 set => nrel_ru_idtf: 
 	[Разбиение (по признаку рефлексивности множеств)] ;;
-set <= nrel_subdividing:
+set <= set_nrel_subdividing:
 {
 	set_reflexive_set;
 	set_non_reflexive_set
@@ -83,7 +83,7 @@ set <= nrel_subdividing:
 
 set => nrel_ru_idtf: 
 	[Разбиение (по признаку транзитивности множеств)] ;;
-set <= nrel_subdividing:
+set <= set_nrel_subdividing:
 {
 	set_transitive_set;
 	set_non_transitive_set
@@ -91,7 +91,7 @@ set <= nrel_subdividing:
 
 set => nrel_ru_idtf: 
 	[Разбиение (по признаку конечности множеств)] ;;
-set <= nrel_subdividing:
+set <= set_nrel_subdividing:
 {
 	set_infinite_set;
 	set_finite_set
@@ -99,7 +99,7 @@ set <= nrel_subdividing:
 
 set => nrel_ru_idtf: 
 	[Разбиение (по признаку семантической нормализованности множеств)] ;;
-set <= nrel_subdividing:
+set <= set_nrel_subdividing:
 {
 	set_semantically_normalized_set;
 	set_semantically_non_normalized_singleton
