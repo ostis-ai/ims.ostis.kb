@@ -1,0 +1,17 @@
+/!* keyword: scs_divider_const_arc */
+scs_divider_const_arc => nrel_main_ru_idtf: 
+	[константная sc.s-дуга] ;;
+scs_divider_const_arc <= set_nrel_inclusion:
+	additional_scs_connector;;
+scs_divider_const_arc <= scs_nrel_representation_scs_editor:
+	[⇒];;
+scs_divider_const_arc <= scs_nrel_representation_scs_editor:
+	[⇐];;
+scs_divider_const_arc <= scs_nrel_representation_standart_editor:
+	[<=];;
+scs_divider_const_arc <= scs_nrel_representation_standart_editor:
+	[=>];;	
+scs_divider_const_arc => scs_nrel_representation_scg_code:
+	"file://../images/scs_divider/additional_scs_connector/image017.gif";;
+scs_divider_const_arc => scs_nrel_representation_scg_code:
+	"file://../images/scs_divider/additional_scs_connector/image018.gif";;
