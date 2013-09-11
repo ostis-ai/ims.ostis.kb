@@ -7,7 +7,7 @@ Partition_SCn_code => nrel_main_en_idtf:
 	
 Partition_SCn_code <- non_atomic_partition;;
 
-Partition_SCn_code <= nrel_decomposition:
+Partition_SCn_code <= doc_nrel_partition_decomposition:
 	{
 		Partition_SCn_code_1_level;
 		Partition_SCn_code_2_level;
@@ -15,6 +15,6 @@ Partition_SCn_code <= nrel_decomposition:
 		Partition_SCn_code_4_level
 	};;
 
-Partition_SCn_code => nrel_introduction:
+Partition_SCn_code => doc_nrel_introduction:
 	[*^"file://../scn/scn_code.scsi"*]
 	;;

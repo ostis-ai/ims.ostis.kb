@@ -17,10 +17,10 @@ partition_identification <- scs_ostis_section;;
 
 partition_identification <- doc_non_atomic_partition;;
 
-partition_identification => nrel_introduction:
+partition_identification => doc_nrel_introduction:
 [Данный раздел описывает правила построения идентификаторов sc-элементов];;
 
-partition_identification <= nrel_decomposition: 
+partition_identification <= doc_nrel_partition_decomposition: 
 	{
 		partition_identification_common_regulations;
 		partition_identification_1_level;

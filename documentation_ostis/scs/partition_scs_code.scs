@@ -6,7 +6,7 @@ Partition_SCs_code => nrel_main_en_idtf:
 Partition_SCs_code => nrel_ru_idtf: 
 	[Раздел. SCs-код версии 0.1.0] ;;
 
-Partition_SCs_code <= nrel_decomposition: 
+Partition_SCs_code <= doc_nrel_partition_decomposition: 
 	{
 		Partition_SCs_code_1_level;
 		Partition_SCs_code_2_level;
@@ -22,6 +22,6 @@ Partition_SCs_code <= nrel_decomposition:
 	};;
 	
 Partition_SCs_code <- doc_non_atomic_partition;;
-Partition_SCs_code => nrel_introduction:
+Partition_SCs_code => doc_nrel_introduction:
 		[*^"file://scs_code.scsi"*]
 	;;
