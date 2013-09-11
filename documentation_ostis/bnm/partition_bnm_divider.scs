@@ -4,7 +4,5 @@ Partition_bnm_divider => nrel_main_en_idtf : [Partition. Backus-Naur metalanguag
 Partition_bnm_divider <- doc_atomic_partition;;
 Partition_bnm_divider <= doc_nrel_superpartition:
 	Partition_backus_naur_metalanguage;;
-Partition_bnm_divider <= nrel_basic_consequence:
-	Partition_bnm_sentence;;
 
 Partition_bnm_divider = [*^"file://partition_bnm_divider_content.scsi"*] ;;
