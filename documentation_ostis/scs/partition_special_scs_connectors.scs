@@ -5,9 +5,7 @@ Partition_special_scs_connectors => nrel_main_en_idtf:
 Partition_special_scs_connectors <- doc_atomic_partition;;
 Partition_special_scs_connectors <= doc_nrel_superpartition:
 	Partition_SCs_code;;
-Partition_special_scs_connectors <= doc_nrel_next_partition:
-	Partition_additional_scs_connectors;;
-Partition_special_scs_connectors => doc_nrel_next_partition:
+Partition_special_scs_connectors => doc_nrel_partition_basic_sequence:
 	Partition_non_scs_connector_scs_dividers;;
 Partition_special_scs_connectors =
 	[*^"file://merged_content/partition_special_scs_connectors_content.scsi"*]
