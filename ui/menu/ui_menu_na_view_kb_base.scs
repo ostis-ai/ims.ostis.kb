@@ -1,9 +1,7 @@
 ui_menu_na_view_kb_base	<- ui_user_command_noatom;;
 
-ui_menu_na_view_kb_base	=> nrel_main_ru_idtf: 
-	[Базовые];;
-ui_menu_na_view_kb_base => nrel_main_en_idtf: 
-	[Base];;
+ui_menu_na_view_kb_base	=> nrel_main_idtf: [Базовые] (* <- lang_ru;; *);;
+ui_menu_na_view_kb_base => nrel_main_idtf: [Base] (* <- lang_en;; *);;
 
 ui_menu_na_view_kb_base <= nrel_decomposition:
 {
