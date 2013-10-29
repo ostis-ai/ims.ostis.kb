@@ -1,6 +1,4 @@
 /!* keyword: hypermedia_nrel_creation_date */
 sc_node_norole_relation -> hypermedia_nrel_creation_date;;
-hypermedia_nrel_creation_date => nrel_main_ru_idtf: 
-		[дата создания*] ;;
-hypermedia_nrel_creation_date => nrel_main_en_idtf: 
-		[creation date*] ;;
+hypermedia_nrel_creation_date => nrel_main_idtf: [дата создания*] (* <- lang_ru;; *);;
+hypermedia_nrel_creation_date => nrel_main_idtf: [creation date*] (* <- lang_en;; *);;

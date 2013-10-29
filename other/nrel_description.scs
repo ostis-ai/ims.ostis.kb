@@ -1,8 +1,6 @@
 /!* keyword: nrel_description */
-nrel_description => nrel_main_ru_idtf: 
-	[описание*] ;;
-nrel_description => nrel_main_en_idtf: 
-	[description*] ;;
+nrel_description => nrel_main_idtf: [описание*] (* <- lang_ru;; *);;
+nrel_description => nrel_main_idtf: [description*] (* <- lang_en;; *);;
 nrel_description <- sc_node_norole_relation;;
 
 nrel_description => hypermedia_nrel_explanation: 

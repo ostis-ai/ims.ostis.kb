@@ -1,10 +1,6 @@
-
-
-hypermedia_format_txt => nrel_main_ru_idtf:
-	[текстовый формат];;
-
-hypermedia_format_txt => nrel_main_en_idtf:
-	[text format];;
+hypermedia_format_txt <- sc_node_not_relation;;
+hypermedia_format_txt => nrel_main_idtf: [формат txt] (* <- lang_ru;; *);;
+hypermedia_format_txt => nrel_main_idtf: [format txt] (* <- lang_en;; *);;
 
 hypermedia_format_txt => hypermedia_nrel_mimetype:
 	[text/plain];;

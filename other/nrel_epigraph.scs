@@ -1,6 +1,5 @@
 /!* keyword: nrel_epigraph */
-nrel_epigraph => nrel_main_ru_idtf: 
-	[эпиграф*] ;;
-nrel_epigraph => nrel_main_en_idtf: 
-	[epigraph*] ;;
 nrel_epigraph <- sc_node_norole_relation;;
+nrel_epigraph => nrel_main_idtf: [эпиграф*] (* <- lang_ru;; *);;
+nrel_epigraph => nrel_main_idtf: [epigraph*] (* <- lang_ru;; *);;
+

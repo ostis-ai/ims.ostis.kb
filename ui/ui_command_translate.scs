@@ -3,10 +3,7 @@
 ui_command_translate <- sc_node_not_relation;;
 
 /* identifiers */
-ui_command_translate => nrel_main_ru_idtf:
-	[команда трансляции];;
-
-ui_command_translate => nrel_main_en_idtf:
-	[translation command];;
+ui_command_translate => nrel_main_idtf: [команда трансляции] (* <- lang_ru;; *);;
+ui_command_translate => nrel_main_idtf: [translation command] (* <- lang_en;; *);;
 
 

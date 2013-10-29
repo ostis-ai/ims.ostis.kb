@@ -1,11 +1,8 @@
 hypermedia_format <- sc_node_not_relation;;
 
 /* identifiers */
-hypermedia_format => nrel_main_ru_idtf:
-	[формат];;
-
-hypermedia_format => nrel_main_en_idtf:
-	[format];;
+hypermedia_format => nrel_main_idtf: [формат] (* <- lang_ru;; *);;
+hypermedia_format => nrel_main_idtf: [format] (* <- lang_en;; *);;
 
 hypermedia_format = 
 { 

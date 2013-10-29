@@ -1,6 +1,4 @@
 /!* keyword: nrel_basic_consequence */
 sc_node_norole_relation -> nrel_basic_consequence;;
-nrel_basic_consequence => nrel_main_ru_idtf: 
-	[базовая последовательность*];;
-nrel_basic_consequence => nrel_main_en_idtf: 	
-	[base sequence*];;
+nrel_basic_consequence => nrel_main_idtf: [базовая последовательность*] (* <- lang_ru;; *);;
+nrel_basic_consequence => nrel_main_idtf: [base sequence*] (* <- lang_en;; *);;

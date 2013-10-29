@@ -1,8 +1,6 @@
 ui_user <- sc_node_not_relation;;
 
-ui_user => nrel_main_ru_idtf:
-	[пользователь];;
-ui_user => nrel_main_en_idtf:
-	[user];;
+ui_user => nrel_main_idtf: [пользователь] (* <- lang_ru;; *);;
+ui_user => nrel_main_idtf: [user] (* <- lang_en;; *);;
 
 
