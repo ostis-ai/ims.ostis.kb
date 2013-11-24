@@ -1,0 +1,6 @@
+/!* keyword: nrel_identification */
+sc_node_norole_relation -> nrel_identification;;
+nrel_identification => nrel_main_idtf: [основной идентификатор*] (* <- lang_ru;; *);;
+nrel_identification => nrel_main_idtf: [main identifier*] (* <- lang_en;; *);;
+
+nrel_identification => set_nrel_inclusion: nrel_main_idtf; nrel_main_idtf;;
