@@ -1,0 +1,27 @@
+section_scg_code
+=> nrel_main_idtf:
+	[Раздел. SCg-код]
+	(*
+	<- lang_ru;;
+	*);
+	[Section: SCg-code]
+	(*
+	<- lang_en;;
+	*);
+
+=> nrel_idtf:
+	[Раздел. Язык нелинейной визуализации текстов SC-кода]
+	(*
+	<- lang_ru;;
+	*);
+
+=> nrel_section_base_order:
+	section_scs_code;
+
+<= nrel_section_decomposition:
+	{
+		section_scg_code_level1;
+		section_scg_code_level2;
+		section_scg_code_level3;
+		section_scg_code_level4
+	};;
