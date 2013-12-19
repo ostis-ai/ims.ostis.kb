@@ -3,3 +3,34 @@ languages
 
 languages 
 -> lang_ru; lang_en;;
+
+// ----- Russian language -----
+lang_ru
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[Русский язык]
+	(*
+	<- lang_ru;;
+	*);
+
+=> nrel_main_idtf:
+	[Russian language]
+	(*
+	<- lang_en;;
+	*);;
+	
+
+// ----- English language -----
+lang_en
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[Английский язык]
+	(*
+	<- lang_ru;;
+	*);
+
+=> nrel_main_idtf:
+	[English language]
+	(*
+	<- lang_en;;
+	*);;

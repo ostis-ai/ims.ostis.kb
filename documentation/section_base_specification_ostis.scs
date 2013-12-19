@@ -4,18 +4,20 @@ section_base_specification_ostis
 	(*
 	<- lang_ru;;
 	*);
-=> nrel_main_idtf:
 	[Section. Base specififcation of OSTIS technology]
 	(*
 	<- lang_en;;
 	*);
+
 => nrel_idtf:
 	[Раздел. Обоснование, принципы построения и состав Технологии OSTIS]
 	(*
 	<- lang_ru;;
 	*);
+
 => nrel_section_base_order:
 	section_unificated_semantic_network_and_representation;
+
 => nrel_summary:
 	.summary
 	(*
@@ -26,6 +28,7 @@ section_base_specification_ostis
 			[^"file://section_base_specification_ostis/summary.html"];;
 		*);;
 	*);
+
 <= nrel_section_decomposition:
 	{
 		section_type_and_appointment;
