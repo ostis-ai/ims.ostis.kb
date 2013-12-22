@@ -11,8 +11,20 @@ section_scn_code
 
 <= nrel_section_decomposition:
 	{
-		section_scn_code_level1;
-		section_scn_code_level2;
-		section_scn_code_level3;
+		section_scn_code_level1
+		(*
+		=> nrel_section_base_order: 
+			section_scn_code_level2;;
+		*);
+		section_scn_code_level2
+		(*
+		=> nrel_section_base_order: 
+			section_scn_code_level3;;
+		*);
+		section_scn_code_level3
+		(*
+		=> nrel_section_base_order: 
+			section_scn_code_level4;;
+		*);
 		section_scn_code_level4
 	};;

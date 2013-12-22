@@ -88,10 +88,30 @@ section_subject_domain_of_sc_identifiers
 
 <= nrel_section_decomposition:
 	{
-		section_common_provisions_for_identifiers;
-		section_rules_for_atom_identifiers_scs_level1;
-		section_rules_for_noatom_identifiers_scs_level2;
-		section_rules_for_noatom_identifiers_scs_level6;
-		section_rules_for_identifiers_of_object_classes;
+		section_common_provisions_for_identifiers
+		(*
+		=> nrel_section_base_order: 
+			section_rules_for_atom_identifiers_scs_level1;;
+		*);
+		section_rules_for_atom_identifiers_scs_level1
+		(*
+		=> nrel_section_base_order: 
+			section_rules_for_noatom_identifiers_scs_level2;;
+		*);
+		section_rules_for_noatom_identifiers_scs_level2
+		(*
+		=> nrel_section_base_order: 
+			section_rules_for_noatom_identifiers_scs_level6;;
+		*);
+		section_rules_for_noatom_identifiers_scs_level6
+		(*
+		=> nrel_section_base_order: 
+			section_rules_for_identifiers_of_object_classes;;
+		*);
+		section_rules_for_identifiers_of_object_classes
+		(*
+		=> nrel_section_base_order: 
+			section_special_symbols_used_for_string_identifiers;;
+		*);
 		section_special_symbols_used_for_string_identifiers
 	};;

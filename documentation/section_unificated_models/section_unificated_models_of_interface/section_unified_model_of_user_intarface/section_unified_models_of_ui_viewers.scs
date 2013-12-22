@@ -1,0 +1,31 @@
+section_unified_models_of_ui_viewers
+=> nrel_main_idtf:
+	[Раздел. Унифицированные логико-семантические модели отображения унифицированных семантических сетей]
+	(*
+	<- lang_ru;;
+	*);
+	[Section. ...]
+	(*
+	<- lang_en;;
+	*);
+
+=> nrel_idtf:
+	[Раздел. sc-модели визуализации sc-текстов]
+	(*
+	<- lang_ru;;
+	*);
+
+<= nrel_section_decomposition:
+	{
+		section_unified_models_of_ui_scg_viewer
+		(*
+		=> nrel_section_base_order: 
+			section_unified_models_of_ui_scs_viewer;;
+		*);
+		section_unified_models_of_ui_scs_viewer
+		(*
+		=> nrel_section_base_order: 
+			section_unified_models_of_ui_scn_viewer;;
+		*);
+		section_unified_models_of_ui_scn_viewer
+	};;

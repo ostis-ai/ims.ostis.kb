@@ -31,12 +31,17 @@ section_unificated_models
 	<- lang_ru;;
 	*);
 
-=> nrel_section_base_order:
-	section_set_of_platforms;
-
 <= nrel_section_decomposition:
 	{
-		section_unificated_models_of_knowledge_bases;
-		section_unificated_models_of_knowledge_process_machines;
-		section_unificated_models_of_user_interface
+		section_unificated_models_of_knowledge_bases
+		(*
+		=> nrel_section_base_order: 
+			section_unificated_models_of_knowledge_process_machines;;
+		*);
+		section_unificated_models_of_knowledge_process_machines
+		(*
+		=> nrel_section_base_order: 
+			section_unificated_models_of_user_interface;;
+		*);
+		section_unificated_models_of_interface
 	};;

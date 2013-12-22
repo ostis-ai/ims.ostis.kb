@@ -15,13 +15,22 @@ section_scg_code
 	<- lang_ru;;
 	*);
 
-=> nrel_section_base_order:
-	section_scs_code;
-
 <= nrel_section_decomposition:
 	{
-		section_scg_code_level1;
-		section_scg_code_level2;
-		section_scg_code_level3;
+		section_scg_code_level1
+		(*
+		=> nrel_section_base_order: 
+			section_scg_code_level2;;
+		*);
+		section_scg_code_level2
+		(*
+		=> nrel_section_base_order: 
+			section_scg_code_level3;;
+		*);
+		section_scg_code_level3
+		(*
+		=> nrel_section_base_order: 
+			section_scg_code_level4;;
+		*);
 		section_scg_code_level4
 	};;

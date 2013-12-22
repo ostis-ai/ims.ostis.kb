@@ -1,0 +1,31 @@
+section_unified_models_of_ui_editors
+=> nrel_main_idtf:
+	[Раздел. Унифицированные логико-семантические модели редакторов вводимой информации]
+	(*
+	<- lang_ru;;
+	*);
+	[Section. ...]
+	(*
+	<- lang_en;;
+	*);
+
+=> nrel_idtf:
+	[Раздел. sc-модели редактирования внешних текстов]
+	(*
+	<- lang_ru;;
+	*);
+
+<= nrel_section_decomposition:
+	{
+		section_unified_models_of_ui_scg_editor
+		(*
+		=> nrel_section_base_order: 
+			section_unified_models_of_ui_scs_editor;;
+		*);
+		section_unified_models_of_ui_scs_editor
+		(*
+		=> nrel_section_base_order: 
+			section_unified_models_of_ui_scn_editor;;
+		*);
+		section_unified_models_of_ui_scn_editor
+	};;

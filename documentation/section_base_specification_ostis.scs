@@ -15,9 +15,6 @@ section_base_specification_ostis
 	<- lang_ru;;
 	*);
 
-=> nrel_section_base_order:
-	section_unificated_semantic_network_and_representation;
-
 => nrel_summary:
 	.summary
 	(*
@@ -31,15 +28,55 @@ section_base_specification_ostis
 
 <= nrel_section_decomposition:
 	{
-		section_type_and_appointment;
-		section_analogs_and_their_lacks;
-		section_problems_to_solve_analog_lacks;
-		section_principles_ostis;
-		section_prerequisites_ostis;
-		section_compare_characteristics;
-		section_ostis_compare_and_testing;
-		section_ostis_advantages;
-		section_ostis_novelty;
-		section_technology_concept;
+		section_type_and_appointment
+		(*
+		=> nrel_section_base_order: 
+			section_analogs_and_their_lacks;;
+		*);
+		section_analogs_and_their_lacks
+		(*
+		=> nrel_section_base_order: 
+			section_problems_to_solve_analog_lacks;;
+		*);
+		section_problems_to_solve_analog_lacks
+		(*
+		=> nrel_section_base_order: 
+			section_principles_ostis;;
+		*);
+		section_principles_ostis
+		(*
+		=> nrel_section_base_order: 
+			section_prerequisites_ostis;;
+		*);
+		section_prerequisites_ostis
+		(*
+		=> nrel_section_base_order: 
+			section_compare_characteristics;;
+		*);
+		section_compare_characteristics
+		(*
+		=> nrel_section_base_order: 
+			section_ostis_compare_and_testing;;
+		*);
+		section_ostis_compare_and_testing
+		(*
+		=> nrel_section_base_order: 
+			section_ostis_advantages;;
+		*);
+		section_ostis_advantages
+		(*
+		=> nrel_section_base_order: 
+			section_ostis_novelty;;
+		*);
+		section_ostis_novelty
+		(*
+		=> nrel_section_base_order: 
+			section_technology_concept;;
+		*);
+		section_technology_concept
+		(*
+		=> nrel_section_base_order: 
+			section_ostis_structure;;
+		*);
 		section_ostis_structure
 	};;
