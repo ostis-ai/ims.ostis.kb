@@ -1,0 +1,65 @@
+section_scs_code
+=> nrel_main_idtf:
+	[Раздел. SCs-код]
+	(*
+	<- lang_ru;;
+	*);
+	[Section. SCs-code]
+	(*
+	<- lang_en;;
+	*);
+
+<= nrel_section_decomposition:
+	{
+		section_scs_code_level1
+		(*
+		=> nrel_section_base_order: 
+			section_scs_code_level2;;
+		*);
+		section_scs_code_level2
+		(*
+		=> nrel_section_base_order: 
+			section_scs_code_level3;;
+		*);
+		section_scs_code_level3
+		(*
+		=> nrel_section_base_order: 
+			section_scs_code_level4;;
+		*);
+		section_scs_code_level4
+		(*
+		=> nrel_section_base_order: 
+			section_scs_code_level5;;
+		*);
+		section_scs_code_level5
+		(*
+		=> nrel_section_base_order: 
+			section_scs_code_level6;;
+		*);
+		section_scs_code_level6
+		(*
+		=> nrel_section_base_order: 
+			section_scs_code_level7;;
+		*);
+		section_scs_code_level7
+		(*
+		=> nrel_section_base_order: 
+			section_scs_code_base_connectors;;
+		*);
+		section_scs_code_base_connectors
+		(*
+		=> nrel_section_base_order: 
+			section_scs_code_additional_connectors;;
+		*);
+		section_scs_code_additional_connectors
+		(*
+		=> nrel_section_base_order: 
+			section_scs_code_special_connectors;;
+		*);
+		section_scs_code_special_connectors
+		(*
+		=> nrel_section_base_order: 
+			section_scs_non_connector_separators;;
+		*);
+		section_scs_non_connector_separators
+	};;
