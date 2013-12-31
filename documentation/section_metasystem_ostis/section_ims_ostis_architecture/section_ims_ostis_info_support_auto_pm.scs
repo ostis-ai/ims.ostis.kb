@@ -8,8 +8,12 @@ section_ims_ostis_info_support_auto_pm
 	(*
 	<- lang_en;;
 	*);
-	
-<= nrel_section_decomposition:
+=> nrel_section_decomposition:
 	{
-		.section
+		section_ims_ostis_project
+		(*
+		=> nrel_section_base_order:
+			section_ims_ostis_auto_pm_facilities;;
+		*);
+		section_ims_ostis_auto_pm_facilities
 	};;
