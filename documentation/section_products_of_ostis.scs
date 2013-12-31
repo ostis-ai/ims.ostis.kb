@@ -1,11 +1,19 @@
 section_products_of_ostis
 => nrel_main_idtf:
-	[Раздел. Прикладные интеллектуальные системы, построенные по Технологии OSTIS]
+	[Раздел. Прикладные интеллектуальные системы, построенные по технологии OSTIS]
 	(*
 	<- lang_ru;;
 	*);
-=> nrel_main_idtf:
 	[Section. Products of OSTIS technology]
 	(*
 	<- lang_en;;
-	*);;
+	*);
+=> nrel_section_decomposition:
+	{
+		section_intelligent_system_geometry
+		(*
+		=> nrel_section_base_order:
+			section_intelligent_system_graph_theory;;
+		*);
+		section_intelligent_system_graph_theory
+	};;
