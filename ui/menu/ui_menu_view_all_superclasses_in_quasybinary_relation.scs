@@ -1,0 +1,16 @@
+ui_menu_view_all_superclasses_in_quasybinary_relation <- ui_user_command_atom;;
+
+ui_menu_view_all_superclasses_in_quasybinary_relation => nrel_main_idtf: [Поиск всех надклассов в квазибинарном отношении] (* <- lang_ru;; *);;
+
+ui_menu_view_all_superclasses_in_quasybinary_relation => nrel_main_idtf: [Search all superclasses in quasybinary relation] (* <- lang_en;; *);;
+
+ui_menu_view_all_superclasses_in_quasybinary_relation => ui_nrel_command_template:
+	[*
+		question_search_all_superclasses_in_quasybinary_relation _-> ._question_search_all_superclasses_in_quasybinary_relation_instance
+			(*
+				_-> ui_arg_1;;				
+			*);;
+		._question_search_all_superclasses_in_quasybinary_relation_instance _<- question;;
+	*];;
+
+
