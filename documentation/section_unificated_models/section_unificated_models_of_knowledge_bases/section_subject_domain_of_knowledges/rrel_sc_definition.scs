@@ -1,0 +1,24 @@
+rrel_sc_definition
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+	[sc-текст определения']
+	(*
+	<- lang_ru;;
+	*);
+	[sc-text of definition']
+	(*
+	<- lang_en;;
+	*);
+	
+=>nrel_idtf:
+	[определяемый sc-элемент']
+	(*
+	<- lang_ru;;
+	*);
+	[центр определения']
+	(*
+	<- lang_en;;
+	*);
+	
+<- rrel_key_sc_element:
+	section_subject_domain_of_knowledges;;
