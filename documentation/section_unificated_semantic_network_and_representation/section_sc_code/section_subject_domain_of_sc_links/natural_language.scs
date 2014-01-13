@@ -1,0 +1,10 @@
+natural_language
+<- sc_node_not_relation;
+-> lang_ru;
+-> lang_en;
+<- rrel_key_sc_element:
+	section_subject_domain_of_sc_links;
+
+=> nrel_main_idtf:
+	[естественный язык] (* <- lang_ru;; *);
+	[natural language] (* <- lang_en;; *);;
