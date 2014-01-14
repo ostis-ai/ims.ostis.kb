@@ -7,15 +7,12 @@ sc_neighborhood
 	[sc-neighborhood] (* <- lang_en;; *);
 
 => nrel_idtf:
-	[sc-текст, являющийся семантической окрестностью некоторого sc-элемента] (* <- lang_ru;; *)
+	[sc-текст, являющийся семантической окрестностью некоторого sc-элемента] (* <- lang_ru;; *);
 
 <= nrel_inclusion:
-	sc_knowledge;
-
+	sc_knowledge; 
 => nrel_inclusion: 
 	sc_explanation; sc_definition; sc_note; sc_comment;
 
 <=> nrel_semantically_close_sc_element:
 	rrel_sc_neighborhood;;
-
-		
