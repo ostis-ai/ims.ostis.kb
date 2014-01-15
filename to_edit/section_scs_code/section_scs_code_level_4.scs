@@ -1,0 +1,14 @@
+/!* keyword: section_scs_code_level_4 */
+section_scs_code_level_4 => nrel_main_idtf: 
+	[Раздел. SCs-код. Уровень 4] (* <- lang_ru;; *);;
+section_scs_code_level_4 => nrel_main_idtf: 
+	[Partition. SCs-code. Level 4] (* <- lang_en;; *);;
+section_scs_code_level_4 <- doc_atomic_partition;;
+section_scs_code_level_4 <= doc_nrel_superpartition:
+	section_SCs_code;;
+section_scs_code_level_4 => doc_nrel_next_partition:
+	section_scs_code_level_5;;
+section_scs_code_level_4 <= doc_nrel_next_partition:
+	section_scs_code_level_3;;
+section_scs_code_level_4 = [*^"file://merged_content/section_scs_code_4_level_content.scsi"*]
+;;
