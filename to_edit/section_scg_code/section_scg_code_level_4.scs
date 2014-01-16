@@ -1,12 +1,6 @@
-/!* keyword: section_scg_code_level_4 */
 section_scg_code_level_4 => nrel_main_idtf: 
 	[Раздел. SCg-код. Уровень 4] (* <- lang_ru;; *);;
 section_scg_code_level_4 => nrel_main_idtf: 
 	[Partition. SCg-code. Level 4] (* <- lang_en;; *);;
 
 section_scg_code_level_4 <- doc_atomic_partition;;
-section_scg_code_level_4 <= doc_nrel_superpartition:
-	section_SCg_code;;
-	
-section_scg_code_level_4 = 
-	[*^"file://merged_content/section_scg_code_4_level_content.scsi"*];;

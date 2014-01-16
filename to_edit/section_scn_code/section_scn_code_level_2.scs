@@ -1,14 +1,6 @@
-/!*keyword: section_scn_code_level_2*/
 section_scn_code_level_2 => nrel_main_idtf: 
 	[Раздел. SCn-код. Уровень 2](* <- lang_ru;; *);;
 section_scn_code_level_2 => nrel_main_idtf: 
 	[Partition. SCn-code. Level 2](* <- lang_en;; *);;
 
 section_scn_code_level_2 <- atomic_partition;;
-section_scn_code_level_2 <= doc_nrel_superpartition:
-	section_SCn_code;;
-section_scn_code_level_2 => nrel_basic_consequence:
-	section_scn_code_level_3;;
-section_scn_code_level_2 <= nrel_basic_consequence:
-	section_scn_code_level_1;;
-section_scn_code_level_2 = [*^"file://scn_code_2_level.scsi"*];;

@@ -1,13 +1,5 @@
-/!* keyword: section_scs_code_level_1 */
 section_scs_code_level_1 => nrel_main_idtf: 
 	[Раздел. SCs-код. Уровень 1] (* <- lang_ru;; *);;
 section_scs_code_level_1 => nrel_main_idtf: 
 	[Partition. SCs-code. Level 1] (* <- lang_en;; *);;
 section_scs_code_level_1 <- doc_atomic_partition;;
-section_scs_code_level_1 <= doc_nrel_superpartition:
-	section_SCs_code;;
-section_scs_code_level_1 => doc_nrel_next_partition:
-	section_scs_code_level_2;;
-	
-section_scs_code_level_1 = 
-	[*^"file://merged_content/section_scs_code_level_1_content.scsi"*];;

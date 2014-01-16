@@ -1,15 +1,5 @@
-/!* keyword: section_scs_code_level_7 */
 section_scs_code_level_7 => nrel_main_idtf: 
 	[Раздел. SCs-код. Уровень 7] (* <- lang_ru;; *);;
 section_scs_code_level_7 => nrel_main_idtf: 
 	[Partition. SCs-code. Level 7] (* <- lang_en;; *);;
 section_scs_code_level_7 <- doc_atomic_partition;;
-section_scs_code_level_7 <= doc_nrel_superpartition:
-	section_SCs_code;;
-section_scs_code_level_7 => doc_nrel_next_partition:
-	section_scs_code_base_connectors;;
-section_scs_code_level_7 <= doc_nrel_next_partition:
-	section_scs_code_level_6;;
-section_scs_code_level_7 = 
-	[*^"file://merged_content/section_scs_code_7_level_content.scsi"*]
-;;
