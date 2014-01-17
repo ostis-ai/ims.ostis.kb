@@ -11,8 +11,11 @@ section_unificated_semantic_network_and_representation
 
 <= nrel_section_decomposition:
 	{
-		section_sc_code;
-		section_scg_code;
-		section_scs_code;
+		section_sc_code
+		(* => nrel_section_base_order: section_scg_code;; *);
+		section_scg_code
+		(* => nrel_section_base_order: section_scs_code;; *);
+		section_scs_code
+		(* => nrel_section_base_order: section_scn_code;; *);
 		section_scn_code
 	};;
