@@ -1,0 +1,18 @@
+sc_neighborhood
+<- sc_node_norole_relation;
+<- rrel_key_sc_element:
+	section_subject_domain_of_knowledges;
+=> nrel_main_idtf: 
+	[sc-окрестность] (* <- lang_ru;; *);
+	[sc-neighborhood] (* <- lang_en;; *);
+
+=> nrel_idtf:
+	[sc-текст, являющийся семантической окрестностью некоторого sc-элемента] (* <- lang_ru;; *);
+
+<= nrel_inclusion:
+	sc_knowledge; 
+=> nrel_inclusion: 
+	sc_explanation; sc_definition; sc_note; sc_comment;
+
+<=> nrel_semantically_close_sc_element:
+	rrel_sc_neighborhood;;

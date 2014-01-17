@@ -1,0 +1,17 @@
+sc_element_identification
+
+=> nrel_main_idtf:
+	[идентификация sc-элемента*]
+	(*
+	<- lang_ru;;
+	*);
+	[sc-element identification]
+	(*
+	<- lang_en;;
+	*);
+
+=> nrel_inclusion:
+	sc_element_basic_identification;;
+
+-> rrel_key_sc_element:
+	section_subject_domain_of_sc_identifiers;;

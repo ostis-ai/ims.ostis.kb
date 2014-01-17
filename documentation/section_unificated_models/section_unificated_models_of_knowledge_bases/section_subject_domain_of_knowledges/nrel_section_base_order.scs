@@ -1,0 +1,25 @@
+nrel_section_base_order
+
+<- sc_node_norole_relation;
+/* <- бинарное отношение */
+/* <- ориентированное отношение */
+
+<- rrel_key_sc_element:
+	section_subject_domain_of_knowledges;
+
+=> nrel_main_idtf:
+	[базовый порядок разделов*]
+	(*
+	<- lang_ru;;
+	*);
+	[base order of sections*]
+	(*
+	<- lang_en;;
+	*);
+
+=> nrel_idtf:
+	[базовая последовательность разделов*]
+	(*
+	<- lang_ru;;
+	*);;
+

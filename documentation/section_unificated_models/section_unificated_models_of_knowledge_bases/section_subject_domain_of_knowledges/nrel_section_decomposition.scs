@@ -1,0 +1,50 @@
+nrel_section_decomposition
+<- quasybinary_relation;
+<- decomposition_relation;
+<- sc_node_norole_relation;
+<- rrel_key_sc_element:
+	[*
+		sectionX 
+		<- section;
+		<= nrel_section_decomposition: 
+		{ 
+			sectionX1 
+			(* 
+			<- section;; 
+			=> nrel_section_base_order: sectionX2;;
+			*);
+			
+			sectionX2 
+			(* 
+			<- section;; 
+			=> nrel_section_base_order: sectionX3;; 
+			*);
+			
+			sectionX3 
+			(* 
+			<- section;; 
+			*)
+		};;
+		
+	*];
+<- rrel_key_sc_element:
+	section_subject_domain_of_knowledges;
+
+<= nrel_inclusion:
+	nrel_decomposition;
+=> nrel_main_idtf:
+	[декомпозиция раздела*]
+	(*
+	<- lang_ru;;
+	*);
+	[decomposition of section*]
+	(*
+	<- lang_en;;
+	*);;
+
+sectionX1 => nrel_main_idtf: [Раздел. X1]  (* <- lang_ru;; *);; 
+sectionX2 => nrel_main_idtf: [Раздел. X2]  (* <- lang_ru;; *);; 
+sectionX3 => nrel_main_idtf: [Раздел. X3]  (* <- lang_ru;; *);; 
+sectionX => nrel_main_idtf: [Раздел. X]    (* <- lang_ru;; *);; 
+section => nrel_main_idtf: [раздел]        (* <- lang_ru;; *);;
+
