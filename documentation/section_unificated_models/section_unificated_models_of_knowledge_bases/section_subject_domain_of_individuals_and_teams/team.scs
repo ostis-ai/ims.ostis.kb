@@ -1,0 +1,31 @@
+team
+
+=> nrel_main_idtf:
+	[коллектив] (* <- lang_ru;; *);
+	[team]      (* <- lang_en;; *);
+	
+=> nrel_idtf:
+	[авторский коллектив] (* <- lang_ru;; *);
+	[группа авторов] (* <- lang_ru;; *);
+	[команда] (* <- lang_ru;; *);
+	
+<= nrel_inclusion:
+	individual_or_team;
+	
+<- rrel_key_sc_element:
+	..note
+	(*
+	<- sc_note;;
+	<= nrel_sc_text_translaion:
+		..translation
+		(*
+		-> [<b><i>коллектив</i></b> – это группа (множество) физических лиц с распределенными между ними ролями, сформированная для коллективного создания некоторого артефакта.]
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+			*);;
+		*);;
+	*);
+
+<- rrel_key_sc_element:
+	section_subject_domain_of_indivduals_and_teams;;

@@ -1,0 +1,11 @@
+individual_or_team
+
+=> nrel_main_idtf:
+	[физическое лицо или коллектив] (* <- lang_ru;; *);
+	[individual or team]            (* <- lang_en;; *);
+
+<= nrel_second_domain:
+	author;
+
+<- rrel_key_sc_element:
+	section_subject_domain_or_individuals;;

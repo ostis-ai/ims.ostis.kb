@@ -1,0 +1,19 @@
+nrel_author
+
+=> nrel_main_idtf:
+	[автор*] (* <- lang_ru;; *);
+	[author*] (* <- lang_en;; *);
+	
+<- rrel_key_sc_element:
+	..explanation
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		..translation
+		(*
+		-> "file://nrel_author_explanation.html" (* <- lang_ru;; *);;
+		*);;
+	*);
+	
+<- rrel_key_sc_element:
+	section_subject_domain_of_individuals_and_teams;;
