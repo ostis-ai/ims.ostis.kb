@@ -3,13 +3,23 @@ nrel_system_identifier
 <- identification_relation;
 <= nrel_inclusion: 
 	nrel_identification;
-=> nrel_main_idtf:
+
+=> nrel_idtf:
 	[системный идентификатор*]
 	(*
 	<- lang_ru;;
 	*);
-=> nrel_main_idtf:
 	[system identifier*]
+	(*
+	<- lang_en;;
+	*);
+
+=> nrel_main_idtf:
+	[системный sc-идентификатор*]
+	(*
+	<- lang_ru;;
+	*);
+	[system sc-identifier*]
 	(*
 	<- lang_en;;
 	*);;

@@ -11,25 +11,25 @@ section_ims_ostis_subsystem_for_kpm_development_support
 
 <= nrel_section_decomposition:
 	{
-		section_library_kpm_components	
-		(*
-		=> nrel_section_base_order: 
-			section_metodology_kpm_development;;
+		section_reusable_kpm_component_library
+		(* 
+		=> nrel_section_base_order:
+			section_kpm_development_methodology;; 
 		*);
-		section_metodology_kpm_development
-		(*
-		=> nrel_section_base_order: 
-			section_help_study_kpm_development;;
+		section_kpm_development_methodology
+		(* 
+		=> nrel_section_base_order:
+			section_ims_ostis_subsystem_kpm_developers_guide;; 
 		*);
-		section_help_study_kpm_development
-		(*
-		=> nrel_section_base_order: 
-			section_support_automation_kpm_development;;
+		section_ims_ostis_subsystem_kpm_developers_guide
+		(* 
+		=> nrel_section_base_order:
+			section_ims_ostis_subsystem_kpm_info_support_development_automation;; 
 		*);
-		section_support_automation_kpm_development
-		(*
-		=> nrel_section_base_order: 
-			section_management_kpm_development;;
+		section_ims_ostis_subsystem_kpm_info_support_development_automation
+		(* 
+		=> nrel_section_base_order:
+			section_ims_ostis_subsystem_kpm_info_support_pm_automation;; 
 		*);
-		section_management_kpm_development
+		section_ims_ostis_subsystem_kpm_info_support_pm_automation
 	};;

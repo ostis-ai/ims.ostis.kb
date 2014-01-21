@@ -3,13 +3,26 @@ nrel_main_idtf
 <- identification_relation;
 <= nrel_inclusion: 
 	nrel_identification;
+
 => nrel_main_idtf: 
+	[основной sc-идентификатор*] 
+	(*
+	<- lang_ru;;
+	*);
+	[main sc-identifier*] 
+	(*
+	<- lang_en;; 
+	*);
+	
+=> nrel_idtf: 
 	[основной идентификатор*] 
 	(*
 	<- lang_ru;;
 	*);
-=> nrel_main_idtf: 
 	[main identifier*] 
 	(*
 	<- lang_en;; 
-	*);;
+	*);
+
+<- rrel_key_sc_element:
+	section_subject_domain_of_sc_identifiers;;

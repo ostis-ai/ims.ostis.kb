@@ -1,4 +1,5 @@
-sc_element_basic_identification
+nrel_sc_element_main_identification
+<- sc_node_norole_relation;
 
 => nrel_main_idtf:
 	[основная идентификация sc-элемента*]
@@ -10,5 +11,5 @@ sc_element_basic_identification
 	<- lang_en;;
 	*);
 	
--> rrel_key_sc_element:
+<- rrel_key_sc_element:
 	section_subject_domain_of_sc_identifiers;;

@@ -1,0 +1,25 @@
+section_reusable_kpm_component_library
+
+=> nrel_main_idtf:
+	[Раздел. Библиотека многократно используемых компонентов машин обработки знаний] (* <- lang_ru;; *);
+	[Section. ...] (* <- lang_en;; *);
+	
+<= nrel_section_decomposition:
+	{
+		section_kpm_agent_library_in_basic_lang
+		(*
+		=> nrel_section_base_order:
+			section_kpm_agent_library_in_platform_oriented_lang;;
+		*);
+		section_kpm_agent_library_in_platform_oriented_lang
+		(*
+		=> nrel_section_base_order:
+			section_specific_kpm_library_in_basic_lang;;
+		*);
+		section_specific_kpm_library_in_basic_lang
+		(*
+		=> nrel_section_base_order:
+			section_specific_kpm_library_in_platform_oriented_lang;;
+		*);
+		section_specific_kpm_library_in_platform_oriented_lang
+	};;
