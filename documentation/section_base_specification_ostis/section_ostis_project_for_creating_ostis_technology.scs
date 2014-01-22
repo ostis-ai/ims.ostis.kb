@@ -2,5 +2,16 @@ section_ostis_project_for_creating_ostis_technology
 
 => nrel_main_idtf:
 	[Раздел. Проект OSTIS, направленный на создание технологии OSTIS] (* <- lang_ru;; *);
-	[Section. ...] (* <- lang_en;; *);;
+	[Section. ...] (* <- lang_en;; *);
 	
+<- rrel_key_sc_element:
+	..explanation
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		..translation
+		(*
+		-> "file://section_ostis_project_for_creating_ostis_technology_explanation.html" (*	<- lang_ru;; *);;
+		=> nrel_main_idtf: [Файл. Пояснение. Проект OSTIS] (* <- lang_ru;; *);;
+		*);;
+	*);;
