@@ -1,0 +1,21 @@
+triangle
+=> nrel_main_idtf:
+	[треугольник] 
+	(* 
+	<- lang_ru;; 
+	<- sc_idtf;;
+	*);
+	[triangle] 
+	(* 
+	<- lang_en;;
+	<- sc_idtf;; 
+	*);
+
+=> nrel_idtf:
+	[множество всевозможных треугольников] 
+	(* 
+	<- lang_ru;; 
+	<- sc_idtf;;
+	*);;
+
+nrel_idtf => nrel_inclusion: nrel_main_idtf;;
