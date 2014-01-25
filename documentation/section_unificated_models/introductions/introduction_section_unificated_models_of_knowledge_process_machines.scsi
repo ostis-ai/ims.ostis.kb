@@ -1,6 +1,7 @@
 /* sc-agents description */
 
 abstract_sc_agent
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[абстрактный sc-агент]
 	(*
@@ -12,6 +13,7 @@ abstract_sc_agent
 	*);;
 
 atomic_abstract_sc_agent
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[атомарный абстрактный sc-агент]
 	(*
@@ -23,6 +25,7 @@ atomic_abstract_sc_agent
 	*);;
 
 non_atomic_abstract_sc_agent
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[неатомарный абстрактный sc-агент]
 	(*
@@ -34,6 +37,7 @@ non_atomic_abstract_sc_agent
 	*);;
 
 platform_dependent_abstract_sc_agent
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[платформенно-зависимый абстрактный sc-агент]
 	(*
@@ -45,6 +49,7 @@ platform_dependent_abstract_sc_agent
 	*);;
 
 platform_independent_abstract_sc_agent
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[платформенно-независимый абстрактный sc-агент]
 	(*
@@ -56,6 +61,7 @@ platform_independent_abstract_sc_agent
 	*);;
 
 nrel_abstract_sc_agent_decomposition
+<- sc_node_norole_relation;
 <- decomposition_relation;
 <- quasybinary_relation;
 => nrel_main_idtf:
@@ -69,6 +75,7 @@ nrel_abstract_sc_agent_decomposition
 	*);;
 
 sc_agent
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[sc-агент]
 	(*
@@ -80,6 +87,7 @@ sc_agent
 	*);;
 
 active_sc_agent
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[активный sc-агент]
 	(*
@@ -92,6 +100,7 @@ active_sc_agent
 
 nrel_sc_agent_key_sc_elements
 <- quasybinary_relation;
+<- sc_node_norole_relation;
 => nrel_main_idtf:
 	[ключевые sc-элементы sc-агента*]
 	(*
@@ -103,6 +112,7 @@ nrel_sc_agent_key_sc_elements
 	*);;
 
 nrel_sc_agent_program
+<- sc_node_norole_relation;
 <- quasybinary_relation;
 => nrel_main_idtf:
 	[программа sc-агента*]
@@ -115,6 +125,7 @@ nrel_sc_agent_program
 	*);;
 
 nrel_primary_initiation_condition
+<- sc_node_norole_relation;
 => nrel_main_idtf:
 	[первичное условие инициирования*]
 	(*
@@ -126,6 +137,7 @@ nrel_primary_initiation_condition
 	*);;
 
 nrel_initiation_condition_and_result
+<- sc_node_norole_relation;
 => nrel_main_idtf:
 	[условие инициирования и результат*]
 	(*
@@ -137,6 +149,7 @@ nrel_initiation_condition_and_result
 	*);;
 
 sc_description_of_sc_agent_behavior
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[sc-описание поведения sc-агента]
 	(*
@@ -149,6 +162,7 @@ sc_description_of_sc_agent_behavior
 
 /* Events description */
 sc_event
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[sc-событие]
 	(*
@@ -171,6 +185,7 @@ sc_event
 	};;
 
 sc_event_add_output_arc
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[sc-событие добавления выходящей sc-дуги]
 	(*
@@ -182,6 +197,7 @@ sc_event_add_output_arc
 	*);;
 
 sc_event_add_input_arc
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[sc-событие добавления входящей sc-дуги]
 	(*
@@ -193,6 +209,7 @@ sc_event_add_input_arc
 	*);;
 
 sc_event_add_incident_edge
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[sc-событие добавления инцидентного sc-ребра]
 	(*
@@ -204,6 +221,7 @@ sc_event_add_incident_edge
 	*);;
 
 sc_event_remove_output_arc
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[sc-событие удаления выходящей sc-дуги]
 	(*
@@ -215,6 +233,7 @@ sc_event_remove_output_arc
 	*);;
 
 sc_event_remove_input_arc
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[sc-событие удаления входящей sc-дуги]
 	(*
@@ -226,6 +245,7 @@ sc_event_remove_input_arc
 	*);;
 
 sc_event_remove_incident_edge
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[sc-событие удаления инцидентного sc-ребра]
 	(*
@@ -237,6 +257,7 @@ sc_event_remove_incident_edge
 	*);;
 
 sc_event_sc_element_removing
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[sc-событие удаления sc-элемента]
 	(*
@@ -248,6 +269,7 @@ sc_event_sc_element_removing
 	*);;
 
 sc_event_change_link_content
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[sc-событие изменения содержимого sc-ссылки]
 	(*
