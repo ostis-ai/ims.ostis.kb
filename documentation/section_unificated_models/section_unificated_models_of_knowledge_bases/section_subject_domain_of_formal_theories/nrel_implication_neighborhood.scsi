@@ -1,0 +1,12 @@
+[* bi => nrel_implication: bj;; *]
+=> nrel_main_idtf: [Контур 1] (* <- lang_ru;; *);
+<=> nrel_equivalence:
+	[* 
+	..impl 
+	<- nrel_implication; 
+	-> rrel_if: 
+		bi; 
+	-> rrel_then: 
+		bj;; 
+	*]
+	(* => nrel_main_idtf: [Контур 2] (* <- lang_ru;; *);; *);; 
