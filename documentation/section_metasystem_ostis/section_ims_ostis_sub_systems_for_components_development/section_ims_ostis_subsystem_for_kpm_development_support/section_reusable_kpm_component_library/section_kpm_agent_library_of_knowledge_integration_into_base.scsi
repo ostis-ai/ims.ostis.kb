@@ -34,7 +34,6 @@ sc_agent_of_set_cantorization
 		-> ..sc_agent_of_set_cantorization_agent (* <- active_sc_agent;; *);;
 	*);;
 
-/*
 ..sc_agent_of_set_cantorization_initiation_condition
 = [*
 	question_set_cantorization _-> .._question;;
@@ -48,5 +47,6 @@ sc_agent_of_set_cantorization
 	question_set_cantorization _-> .._question;;
 	question_finished _-> .._question;;
 	question _-> .._question;;
+	.._question _=> nrel_answer:: .._answer;;
 	.._question _-> .._parameter;;
-*];;*/
+*];;
