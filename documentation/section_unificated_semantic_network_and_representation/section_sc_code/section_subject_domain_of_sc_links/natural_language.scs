@@ -8,3 +8,9 @@ natural_language
 => nrel_main_idtf:
 	[естественный язык] (* <- lang_ru;; *);
 	[natural language] (* <- lang_en;; *);;
+	
+/* following is for compatibility reasons */
+languages 
+-> lang_ru; lang_en;
+<- sc_node_not_relation;;
+
