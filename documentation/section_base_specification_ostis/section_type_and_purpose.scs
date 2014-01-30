@@ -1,10 +1,10 @@
-section_type_and_appointment
+section_type_and_purpose
 => nrel_main_idtf:
 	[Раздел. Тип и назначение Технологии OSTIS]
 	(*
 	<- lang_ru;;
 	*);
-	[Section. Type and appointment of OSTIS technology]
+	[Section. Type and purpose of OSTIS technology]
 	(*
 	<- lang_en;;
 	*);
@@ -12,5 +12,5 @@ section_type_and_appointment
 <= nrel_sc_text_translation:
 	..translation
 	(*
-	-> "file://section_type_and_purpose_nl_text.html" (* <- lang_ru;; *);;
+	-> file_section_type_and_purpose;;
 	*);;

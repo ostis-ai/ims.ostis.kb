@@ -1,7 +1,6 @@
 nrel_semantically_close_sc_element
 <- sc_node_norole_relation;
 /*
-<=> аналог*: аналог*
 <- бинарное отношение
 <- неориентированное отношение
 <- частично транзитивное отношение
@@ -15,6 +14,7 @@ nrel_semantically_close_sc_element
 	[быть парой семантически близких sc-элементов*] (* <- lang_ru;; *);
 
 <- rrel_key_sc_element:
-	section_subject_domain_of_sc_elements;;
-
-
+	section_subject_domain_of_sc_elements;
+	
+<=> nrel_analogue:
+	nrel_analogue;;
