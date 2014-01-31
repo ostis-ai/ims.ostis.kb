@@ -10,7 +10,23 @@ abstract_sc_agent
 	[abstract sc-agent]
 	(*
 	<- lang_en;;
-	*);;
+	*);
+	<- rrel_key_sc_element:
+		..key_node_abstract_sc_agent
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_abstract_sc_agent
+			(*
+			-> rrel_example:
+				.file_explanation_for_abstract_sc_agent;;
+			*);;
+		*);
+	<= nrel_subdividing: 
+	{
+		atomic_abstract_sc_agent;
+		non_atomic_abstract_sc_agent
+	};;
 
 atomic_abstract_sc_agent
 <- sc_node_not_relation;
@@ -22,7 +38,23 @@ atomic_abstract_sc_agent
 	[atomic abstract sc-agent]
 	(*
 	<- lang_en;;
-	*);;
+	*);
+	<- rrel_key_sc_element:
+		..key_node_atomic_abstract_sc_agent
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_atomic_abstract_sc_agent
+			(*
+			-> rrel_example:
+				.file_explanation_for_atomic_abstract_sc_agent;;
+			*);;
+		*);
+	<= nrel_subdividing: 
+	{
+		platform_dependent_abstract_sc_agent;
+		platform_independent_abstract_sc_agent
+	};;
 
 non_atomic_abstract_sc_agent
 <- sc_node_not_relation;
@@ -34,7 +66,18 @@ non_atomic_abstract_sc_agent
 	[non-atomic abstract sc-agent]
 	(*
 	<- lang_en;;
-	*);;
+	*);
+	<- rrel_key_sc_element:
+		..key_node_non_atomic_abstract_sc_agent
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_non_atomic_abstract_sc_agent
+			(*
+			-> rrel_example:
+				.file_explanation_for_non_atomic_abstract_sc_agent;;
+			*);;
+		*);;
 
 platform_dependent_abstract_sc_agent
 <- sc_node_not_relation;
@@ -46,7 +89,18 @@ platform_dependent_abstract_sc_agent
 	[platform-dependent abstract sc-agent]
 	(*
 	<- lang_en;;
-	*);;
+	*);
+	<- rrel_key_sc_element:
+		..key_node_platform_dependent_abstract_sc_agent
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_platform_dependent_abstract_sc_agent
+			(*
+			-> rrel_example:
+				.file_explanation_for_platform_dependent_abstract_sc_agent;;
+			*);;
+		*);;
 
 platform_independent_abstract_sc_agent
 <- sc_node_not_relation;
@@ -58,7 +112,18 @@ platform_independent_abstract_sc_agent
 	[platform-independent abstract sc-agent]
 	(*
 	<- lang_en;;
-	*);;
+	*);
+	<- rrel_key_sc_element:
+		..key_node_platform_independent_abstract_sc_agent
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_platform_independent_abstract_sc_agent
+			(*
+			-> rrel_example:
+				.file_explanation_for_platform_independent_abstract_sc_agent;;
+			*);;
+		*);;
 
 nrel_abstract_sc_agent_decomposition
 <- sc_node_norole_relation;
@@ -72,7 +137,18 @@ nrel_abstract_sc_agent_decomposition
 	[abstract sc-agent decomposition*]
 	(*
 	<- lang_en;;
-	*);;
+	*);
+	<- rrel_key_sc_element:
+		..key_node_nrel_abstract_sc_agent_decomposition
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_nrel_abstract_sc_agent_decomposition
+			(*
+			-> rrel_example:
+				.file_explanation_for_nrel_abstract_sc_agent_decomposition;;
+			*);;
+		*);;
 
 sc_agent
 <- sc_node_not_relation;
@@ -84,7 +160,18 @@ sc_agent
 	[sc-agent]
 	(*
 	<- lang_en;;
-	*);;
+	*);
+	<- rrel_key_sc_element:
+		..key_node_sc_agent
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_sc_agent
+			(*
+			-> rrel_example:
+				.file_explanation_for_sc_agent;;
+			*);;
+		*);;
 
 active_sc_agent
 <- sc_node_not_relation;
@@ -96,7 +183,18 @@ active_sc_agent
 	[active sc-agent]
 	(*
 	<- lang_en;;
-	*);;
+	*);
+	<- rrel_key_sc_element:
+		..key_node_active_sc_agent
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_active_sc_agent
+			(*
+			-> rrel_example:
+				.file_explanation_for_active_sc_agent;;
+			*);;
+		*);;
 
 nrel_sc_agent_key_sc_elements
 <- quasybinary_relation;
@@ -109,7 +207,18 @@ nrel_sc_agent_key_sc_elements
 	[sc-agent key sc-elements*]
 	(*
 	<- lang_en;;
-	*);;
+	*);
+	<- rrel_key_sc_element:
+		..key_node_nrel_sc_agent_key_sc_elements
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_nrel_sc_agent_key_sc_elements
+			(*
+			-> rrel_example:
+				.file_explanation_for_nrel_sc_agent_key_sc_elements;;
+			*);;
+		*);;
 
 nrel_sc_agent_program
 <- sc_node_norole_relation;
@@ -122,7 +231,18 @@ nrel_sc_agent_program
 	[sc-agent program*]
 	(*
 	<- lang_en;;
-	*);;
+	*);
+	<- rrel_key_sc_element:
+		..key_node_nrel_sc_agent_program
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_nrel_sc_agent_program
+			(*
+			-> rrel_example:
+				.file_explanation_for_nrel_sc_agent_program;;
+			*);;
+		*);;
 
 nrel_primary_initiation_condition
 <- sc_node_norole_relation;
@@ -134,7 +254,18 @@ nrel_primary_initiation_condition
 	[primary initiation condition*]
 	(*
 	<- lang_en;;
-	*);;
+	*);
+	<- rrel_key_sc_element:
+		..key_node_nrel_primary_initiation_condition
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_nrel_primary_initiation_condition
+			(*
+			-> rrel_example:
+				.file_explanation_for_nrel_primary_initiation_condition;;
+			*);;
+		*);;
 
 nrel_initiation_condition_and_result
 <- sc_node_norole_relation;
@@ -146,7 +277,18 @@ nrel_initiation_condition_and_result
 	[initiation condition and result*]
 	(*
 	<- lang_en;;
-	*);;
+	*);
+	<- rrel_key_sc_element:
+		..key_node_nrel_initiation_condition_and_result
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_nrel_initiation_condition_and_result
+			(*
+			-> rrel_example:
+				.file_explanation_for_nrel_initiation_condition_and_result;;
+			*);;
+		*);;
 
 sc_description_of_sc_agent_behavior
 <- sc_node_not_relation;
@@ -158,7 +300,18 @@ sc_description_of_sc_agent_behavior
 	[sc-description of sc-agent behavior]
 	(*
 	<- lang_en;;
-	*);;
+	*);
+	<- rrel_key_sc_element:
+		..key_node_sc_description_of_sc_agent_behavior
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_sc_description_of_sc_agent_behavior
+			(*
+			-> rrel_example:
+				.file_explanation_for_sc_description_of_sc_agent_behavior;;
+			*);;
+		*);;
 
 /* Events description */
 sc_event
@@ -172,6 +325,17 @@ sc_event
 	(*
 	<- lang_en;;
 	*);
+	<- rrel_key_sc_element:
+		..key_node_sc_event
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_sc_event
+			(*
+			-> rrel_example:
+				.file_explanation_for_sc_event;;
+			*);;
+		*);
 	<= nrel_subdividing: 
 	{
 		sc_event_add_output_arc; /* calls after adding */
@@ -194,7 +358,18 @@ sc_event_add_output_arc
 	[sc-event of output sc-arc addition]
 	(*
 	<- lang_en;;
-	*);;
+	*);
+	<- rrel_key_sc_element:
+		..key_node_sc_event_add_output_arc
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_sc_event_add_output_arc
+			(*
+			-> rrel_example:
+				.file_explanation_for_sc_event_add_output_arc;;
+			*);;
+		*);;
 
 sc_event_add_input_arc
 <- sc_node_not_relation;
@@ -206,7 +381,18 @@ sc_event_add_input_arc
 	[sc-event of input sc-arc addition]
 	(*
 	<- lang_en;;
-	*);;
+	*);
+	<- rrel_key_sc_element:
+		..key_node_sc_event_add_input_arc
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_sc_event_add_input_arc
+			(*
+			-> rrel_example:
+				.file_explanation_for_sc_event_add_input_arc;;
+			*);;
+		*);;
 
 sc_event_add_incident_edge
 <- sc_node_not_relation;
@@ -218,7 +404,18 @@ sc_event_add_incident_edge
 	[sc-event of incident sc-edge addition]
 	(*
 	<- lang_en;;
-	*);;
+	*);
+	<- rrel_key_sc_element:
+		..key_node_sc_event_add_incident_edge
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_sc_event_add_incident_edge
+			(*
+			-> rrel_example:
+				.file_explanation_for_sc_event_add_incident_edge;;
+			*);;
+		*);;
 
 sc_event_remove_output_arc
 <- sc_node_not_relation;
@@ -230,7 +427,18 @@ sc_event_remove_output_arc
 	[sc-event of output sc-arc removing]
 	(*
 	<- lang_en;;
-	*);;
+	*);
+	<- rrel_key_sc_element:
+		..key_node_sc_event_remove_output_arc
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_sc_event_remove_output_arc
+			(*
+			-> rrel_example:
+				.file_explanation_for_sc_event_remove_output_arc;;
+			*);;
+		*);;
 
 sc_event_remove_input_arc
 <- sc_node_not_relation;
@@ -242,7 +450,18 @@ sc_event_remove_input_arc
 	[sc-event of input sc-arc removing]
 	(*
 	<- lang_en;;
-	*);;
+	*);
+	<- rrel_key_sc_element:
+		..key_node_sc_event_remove_input_arc
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_sc_event_remove_input_arc
+			(*
+			-> rrel_example:
+				.file_explanation_for_sc_event_remove_input_arc;;
+			*);;
+		*);;
 
 sc_event_remove_incident_edge
 <- sc_node_not_relation;
@@ -254,7 +473,18 @@ sc_event_remove_incident_edge
 	[sc-event of incident sc-edge removing]
 	(*
 	<- lang_en;;
-	*);;
+	*);
+	<- rrel_key_sc_element:
+		..key_node_sc_event_remove_incident_edge
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_sc_event_remove_incident_edge
+			(*
+			-> rrel_example:
+				.file_explanation_for_sc_event_remove_incident_edge;;
+			*);;
+		*);;
 
 sc_event_sc_element_removing
 <- sc_node_not_relation;
@@ -266,7 +496,18 @@ sc_event_sc_element_removing
 	[sc-event of sc-element removing]
 	(*
 	<- lang_en;;
-	*);;
+	*);
+	<- rrel_key_sc_element:
+		..key_node_sc_event_sc_element_removing
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_sc_event_sc_element_removing
+			(*
+			-> rrel_example:
+				.file_explanation_for_sc_event_sc_element_removing;;
+			*);;
+		*);;
 
 sc_event_change_link_content
 <- sc_node_not_relation;
@@ -278,5 +519,16 @@ sc_event_change_link_content
 	[sc-event of sc-link content change]
 	(*
 	<- lang_en;;
-	*);;
+	*);
+	<- rrel_key_sc_element:
+		..key_node_sc_event_change_link_content
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_sc_event_change_link_content
+			(*
+			-> rrel_example:
+				.file_explanation_for_sc_event_change_link_content;;
+			*);;
+		*);;
 
