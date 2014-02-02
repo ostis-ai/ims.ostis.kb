@@ -17,4 +17,91 @@ section_unified_semantic_model_of_machine_that_interpret_programs_of_base_progra
 	[Раздел. Абстрактная scp-машина]
 	(*
 	<- lang_ru;;
+	*);
+=> nrel_summary:
+	..summary
+	(*
+		<= nrel_sc_text_translation:	
+			..translation_summary
+			(*
+				-> rrel_example:
+					"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/summary.html"
+					(*<- lang_ru;;*);;
+			*);;
 	*);;
+		
+section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language = [*^"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language.scsi"*];;
+
+rrel_key_sc_element -> (section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language -> abstract_scp_machine)
+(*
+	=> nrel_key_sc_element_base_order: (section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language -> sc_agent_of_scp_program_insertion_to_sc_memory)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language -> sc_agent_of_proper_scp_program_insertion_to_sc_memory)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language -> sc_agent_of_scp_program_verivication)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language -> sc_agent_of_scp_program_syntactic_verivication)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language -> sc_agent_of_scp_program_semantic_verivication)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language -> sc_agent_of_scp_program_preprocessing)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language -> sc_agent_of_preprocessing_of_any_type_scp_program)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language -> nrel_scp_program_var)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language -> nrel_scp_program_const)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language -> nrel_scp_program_copied_const)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language -> nrel_template_of_scp_process_creation)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language -> sc_agent_of_preprocessing_of_agent_scp_program)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language -> sc_agent_of_scp_process_creation)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language -> scp_process)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language -> scp_oprator_interpretation_request)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language -> sc_agent_of_scp_operator_interpretation)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language -> executed_scp_operator)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language -> unsuccessfully_executed_scp_operator)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language -> successfully_executed_scp_operator)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language -> sc_agent_of_synchronization_of_scp_program_interpretation_process)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language -> sc_agent_of_scp_process_destruction)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language -> sc_agent_of_synchronization_of_events_in_sc_memory_and_its_realization)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language -> sc_agent_of_translation_of_primary_condition_of_initiation_sc_agent_in_its_internal_representation)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language -> sc_agent_of_processing_of_sc_event_initiating_active_sc_agent);;
+	*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;
