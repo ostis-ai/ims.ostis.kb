@@ -1,0 +1,72 @@
+individual_or_team
+
+=> nrel_main_idtf:
+	[физическое лицо или коллектив] (* <- lang_ru;; *);
+	[individual or team]            (* <- lang_en;; *);
+
+<= nrel_second_domain:
+	nrel_author;;
+	
+
+individual
+
+=> nrel_main_idtf:
+	[физическое лицо] (* <- lang_ru;; *);
+	[individual]      (* <- lang_en;; *);
+	
+=> nrel_idtf:
+	[персона] (* <- lang_ru;; *);;
+	
+
+nrel_author
+
+<- sc_node_norole_relation;
+
+=> nrel_main_idtf:
+	[автор*] (* <- lang_ru;; *);
+	[author*] (* <- lang_en;; *);
+	
+<- rrel_key_sc_element:
+	..explanation
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		..translation
+		(*
+		-> "file://nl_files/nrel_author_explanation.html" (* <- lang_ru;; *);;
+		*);;
+	*);;
+	
+
+team
+
+=> nrel_main_idtf:
+	[коллектив] (* <- lang_ru;; *);
+	[team]      (* <- lang_en;; *);
+	
+=> nrel_idtf:
+	[авторский коллектив] (* <- lang_ru;; *);
+	[группа авторов] (* <- lang_ru;; *);
+	[команда] (* <- lang_ru;; *);
+	
+<= nrel_inclusion:
+	individual_or_team;
+	
+<- rrel_key_sc_element:
+	..note
+	(*
+	<- sc_note;;
+	<= nrel_sc_text_translation:
+		..translation
+		(*
+		-> [<b><i>коллектив</i></b> – это группа (множество) физических лиц с распределенными между ними ролями, сформированная для коллективного создания некоторого артефакта.]
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+			*);;
+		*);;
+	*);;
+/*	
+<- rrel_key_sc_element:
+	[*^"file://neighborhoods/team.scsi"*] (* <- typical_sc_neighborhood;; *);;
+	*/
