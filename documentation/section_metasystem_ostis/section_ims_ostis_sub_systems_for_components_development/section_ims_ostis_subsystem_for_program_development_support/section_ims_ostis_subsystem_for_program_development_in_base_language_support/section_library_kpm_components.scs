@@ -7,4 +7,14 @@ section_library_kpm_components
 	[Section. ...]
 	(*
 	<- lang_en;;
-	*);;
+	*);
+
+<= nrel_section_decomposition:
+	{
+		section_library_kpm_components_search
+		(*
+		=> nrel_section_base_order: 
+			section_library_kpm_components_generation;;
+		*);
+		section_library_kpm_components_generation;;
+	};;
