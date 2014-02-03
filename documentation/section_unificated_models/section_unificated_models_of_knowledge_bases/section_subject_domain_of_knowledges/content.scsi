@@ -1,3 +1,10 @@
+typical_sc_neighborhood 
+<- rrel_key_sc_element:	
+	section_subject_domain_of_knowledges;
+=> nrel_main_idtf: 
+	[типичная sc-окрестность] (* <- lang_ru;; *);
+	[typical sc-neighborhood] (* <- lang_en;; *);;
+
 doc_atomic_section
 <- rrel_key_sc_element:
 	section_subject_domain_of_knowledges;
@@ -462,16 +469,4 @@ section
 	-> atomic_section;;
 	-> non_atomic_section;;
 	*);;
-	
-typical_sc_neighborhood
-
-<- rrel_key_sc_element:
-	section_subject_domain_of_knowledges;
-
-=> nrel_main_idtf:
-	[типичная sc-окрестность]
-	(* <- lang_ru;; *);
-	[typical sc-neighborhood]
-	(* <- lang_en;; *);;
-	
-	
+		
