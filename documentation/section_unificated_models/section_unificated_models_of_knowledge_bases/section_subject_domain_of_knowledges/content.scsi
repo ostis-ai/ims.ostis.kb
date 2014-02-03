@@ -1,0 +1,477 @@
+doc_atomic_section
+<- rrel_key_sc_element:
+	section_subject_domain_of_knowledges;
+=> nrel_main_idtf:
+	[атомарный раздел]
+	(* 
+	<- lang_ru;;
+	*);
+	[atomic section]
+	(*
+	<- lang_en;;
+	*);
+
+=> nrel_idtf:
+	[раздел, не имеющий подразделов]
+	(*
+	<- lang_ru;;
+	*);
+
+<= nrel_inclusion:
+	.qqq;; /*раздел базы знаний*/
+	
+doc_non_atomic_section
+<- rrel_key_sc_element:
+	section_subject_domain_of_knowledges;
+=> nrel_main_idtf:
+	[неатомарный раздел]
+	(* 
+	<- lang_ru;;
+	*);
+	[non-atomic section]
+	(*
+	<- lang_en;;
+	*);
+
+=> nrel_idtf:
+	[раздел, имеющий подразделы]
+	(*
+	<- lang_ru;;
+	*);
+	[раздел, декомпозируемый на подразделы]
+	(*
+	<- lang_ru;;
+	*);
+
+<= nrel_inclusion:
+	..qqq;; /*раздел базы знаний*/
+	
+non_essential_concept
+<- rrel_key_sc_element:
+	section_subject_domain_of_knowledges;
+
+=> nrel_main_idtf:
+	[неосновное понятие]
+	(*
+	<- lang_ru;;
+	*);
+	[non-essential concept]
+	(*
+	<- lang_en;;
+	*);;
+
+
+nrel_annotation
+<- rrel_key_sc_element:
+	section_subject_domain_of_knowledges;
+
+/* <- бинарное отношение */
+/* <- ориентированное отношение */
+
+=> nrel_main_idtf:
+	[аннотация*] (* <- lang_ru;; *);
+	[annotation*] (* <- lang_en;; *);
+
+=> nrel_idtf:
+	[реферат*] (* <- lang_ru;; *);;
+	
+nrel_conclusion
+<- rrel_key_sc_element:
+	section_subject_domain_of_knowledges;
+
+/* <- бинарное отношение */
+/* <- ориентированное отношение */
+
+=> nrel_main_idtf:
+	[заключение*] (* <- lang_ru;; *);
+	[conclusion*] (* <- lang_en;; *);;
+	
+nrel_epigraph
+<- rrel_key_sc_element:
+	section_subject_domain_of_knowledges;
+
+/* <- бинарное отношение */
+/* <- ориентированное отношение */
+
+=> nrel_main_idtf:
+	[эпиграф*] (* <- lang_ru;; *);
+	[epigraph*] (* <- lang_en;; *);;
+	
+nrel_introduction
+<- rrel_key_sc_element:
+	section_subject_domain_of_knowledges;
+
+/* <- бинарное отношение */
+/* <- ориентированное отношение */
+
+=> nrel_main_idtf:
+	[введение*] (* <- lang_ru;; *);
+	[introduction*] (* <- lang_en;; *);;
+	
+nrel_section_base_order
+
+<- sc_node_norole_relation;
+
+<- order_relation;
+/* <- бинарное отношение */
+/* <- ориентированное отношение */
+
+<- rrel_key_sc_element:
+	section_subject_domain_of_knowledges;
+
+=> nrel_main_idtf:
+	[базовый порядок разделов*]
+	(*
+	<- lang_ru;;
+	*);
+	[base order of sections*]
+	(*
+	<- lang_en;;
+	*);
+
+=> nrel_idtf:
+	[базовая последовательность разделов*]
+	(*
+	<- lang_ru;;
+	*);;
+
+nrel_section_decomposition
+<- quasybinary_relation;
+<- decomposition_relation;
+<- sc_node_norole_relation;
+<- rrel_key_sc_element:
+	[*^"file://neighborhoods/nrel_section_decomposition.scsi"*]
+	(* <- typical_sc_neighborhood;; *);
+<- rrel_key_sc_element:
+	section_subject_domain_of_knowledges;
+
+<= nrel_inclusion:
+	nrel_decomposition;
+=> nrel_main_idtf:
+	[декомпозиция раздела*]
+	(*
+	<- lang_ru;;
+	*);
+	[decomposition of section*]
+	(*
+	<- lang_en;;
+	*);;
+
+set_x => nrel_main_idtf: [X] (* <- lang_ru;; *);;
+set_y => nrel_main_idtf: [Y] (* <- lang_ru;; *);;
+
+nrel_base_order
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[базовый порядок*] (* <-lang_ru;; *);;
+	
+section => nrel_main_idtf: [раздел] (* <- lang_ru;; *);;
+
+rrel_key_sc_element
+<- sc_node_role_relation;
+<- rrel_key_sc_element:
+	section_subject_domain_of_knowledges;
+
+=> nrel_main_idtf: 
+	[ключевой sc-элемент']
+	(*
+	<- lang_ru;;
+	*);
+	[key sc-element'] 
+	(* 
+	<- lang_en;; 
+	*);
+
+=> nrel_idtf:
+	[быть ключевым sc-элементом заданного sc-знания']
+	(*
+	<- lang_ru;;
+	*);
+	
+=> nrel_inclusion:
+	rrel_sc_explanation
+	(*
+	<- non_essential_concept;;
+	*);
+	rrel_sc_definition
+	(*
+	<- non_essential_concept;;
+	*);
+	rrel_sc_note
+	(*
+	<- non_essential_concept;;
+	*);
+	rrel_sc_comment
+	(*
+	<- non_essential_concept;;
+	*);
+	rrel_typical_sc_neighborhood
+	(*
+	<- non_essential_concept;;
+	*);;
+
+	
+rrel_sc_comment
+<- sc_node_role_relation;
+<- rrel_key_sc_element:
+	section_subject_domain_of_knowledges;
+
+=> nrel_main_idtf:
+	[sc-комментарий']
+	(*
+	<- lang_ru;;
+	*);
+	[sc-comment']
+	(*
+	<- lang_en;;
+	*);;
+	
+rrel_sc_definition
+<- sc_node_role_relation;
+<- rrel_key_sc_element:
+	section_subject_domain_of_knowledges;
+<- rrel_key_sc_element:
+	[*^"file://neighborhoods/rrel_sc_definition.scsi"*]
+	(* <- typical_sc_neighborhood;; *);
+
+=> nrel_main_idtf:
+	[sc-текст определения']
+	(*
+	<- lang_ru;;
+	*);
+	[sc-text of definition']
+	(*
+	<- lang_en;;
+	*);
+	
+=>nrel_idtf:
+	[определяемый sc-элемент']
+	(*
+	<- lang_ru;;
+	*);
+	[центр определения']
+	(*
+	<- lang_en;;
+	*);;
+
+.Xdefinition => nrel_main_idtf: [SC-текст определения(X)];;
+
+rrel_sc_explanation
+<- sc_node_role_relation;
+<- rrel_key_sc_element:
+	section_subject_domain_of_knowledges;
+<- rrel_key_sc_element:
+	[*^"file://neighborhoods/rrel_sc_explanation.scsi"*]
+	(* <- typical_sc_neighborhood;; *);
+	
+=> nrel_main_idtf: 
+	[sc-пояснение']
+	(*
+	<- lang_ru;;
+	*);
+	[sc-explanation'] 
+	(* 
+	<- lang_en;; 
+	*);
+
+=> nrel_idtf:
+	[поясняемый sc-элемент']
+	(*
+	<- lang_ru;;
+	*);	
+	[центр пояснения']
+	(*
+	<- lang_ru;;
+	*);;
+
+.Xexplanation => nrel_main_idtf: [SC-пояснение(X)];;
+rrel_sc_neighborhood
+<- rrel_key_sc_element:
+	section_subject_domain_of_knowledges;
+
+=> nrel_idtf:
+	[центр sc-окрестности’] (* <- lang_ru;; *);
+	[ключевой знак sc-окрестности’] (* <- lang_ru;; *);
+	[знак сущности, описываемой заданной sc-окрестностью'] (* <- lang_ru;; *);
+	[быть sc-окрестностью заданного sc-элемента'](* <- lang_ru;; *);
+
+=> nrel_inclusion:
+	rrel_typical_sc_neighborhood;
+
+=> nrel_main_idtf:
+	[sc-окрестность'] (* <- lang_ru;; *);
+	[sc-neighborhood'] (* <- lang_en;; *);;
+	
+rrel_sc_note
+<- sc_node_role_relation;
+<- rrel_key_sc_element:
+	section_subject_domain_of_knowledges;
+
+=> nrel_main_idtf:
+	[sc-примечание']
+	(*
+	<- lang_ru;;
+	*);
+	[sc-note']
+	(*
+	<- lang_en;;
+	*);
+
+=> nrel_idtf:
+	[ключевой sc-элемент примечания']
+	(*
+	<- lang_ru;;
+	*);
+	[центр примечания']
+	(*
+	<- lang_ru;;
+	*);;
+
+rrel_typical_sc_neighborhood
+<- sc_node_role_relation;
+<- rrel_key_sc_element:
+	section_subject_domain_of_knowledges;
+
+=> nrel_main_idtf:
+	[типичная sc-окрестность'] 
+	(* 
+	<- lang_ru;; 
+	*);
+	[typical sc-neighborhood'] 
+	(* 
+	<- lang_en;; 
+	*);
+	
+=> nrel_idtf:
+	[быть типичной sc-окрестностью заданного sc-элемента']
+	(*
+	<- lang_ru;;
+	*);
+	[быть sc-окрестностью, являющейся типичным примером использования заданного sc-элемента']
+	(*
+	<- lang_ru;;
+	*);
+	[пример использования sc-элемента’]
+	(*
+	<- lang_ru;;
+	*);
+
+<- rrel_key_sc_element:
+	..explanation
+        (*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		..translation
+		(* 
+		-> rrel_sample:
+			"file://nl_files/typical_sc_neighborhood.html"
+			(*
+			<- lang_ru;;
+			*);;
+		*);;
+	*);;
+			
+sc_comment
+<- rrel_key_sc_element:
+	section_subject_domain_of_knowledges;
+
+=> nrel_main_idtf:
+	[sc-комментарий] (* <- lang_ru;; *);
+	[sc-comment] (* <- lang_en;; *);
+
+=> nrel_idtf:
+	[sc-комментарий к некоторому тексту (и не только sc-тексту)] (* <- lang_ru;; *);;
+	
+sc_definition
+<- rrel_key_sc_element:
+	section_subject_domain_of_knowledges;
+
+=> nrel_main_idtf: 
+	[sc-текст определения] (* <- lang_ru;; *);
+	[sc-text of a definition] (* <- lang_en;; *);;
+	
+sc_explanation
+<- rrel_key_sc_element:
+	section_subject_domain_of_knowledges;
+
+=> nrel_main_idtf:
+	[sc-пояснение] (* <- lang_ru;; *);
+	[sc-explanation] (* <- lang_en;; *);
+
+=> nrel_idtf:
+	[sc-комментарий к некоторому тексту (и не только sc-тексту)] (* <- lang_ru;; *);;
+	
+sc_knowledge
+<- rrel_key_sc_element:
+	section_subject_domain_of_knowledges;
+
+=> nrel_main_idtf:
+	[sc-знание] (* <- lang_ru;; *);
+	[sc-knowledge] (* <- lang_en;; *);
+
+=> nrel_idtf:
+	[sc-знание или целостный фрагмент sc-знания (например, sc-текст высказывания или sc-текст логической формулы, входящей в состав высказывания)] 
+	(* <- lang_ru;; *);;
+	
+sc_neighborhood
+<- sc_node_norole_relation;
+<- rrel_key_sc_element:
+	section_subject_domain_of_knowledges;
+=> nrel_main_idtf: 
+	[sc-окрестность] (* <- lang_ru;; *);
+	[sc-neighborhood] (* <- lang_en;; *);
+
+=> nrel_idtf:
+	[sc-текст, являющийся семантической окрестностью некоторого sc-элемента] (* <- lang_ru;; *);
+
+<= nrel_inclusion:
+	sc_knowledge; 
+=> nrel_inclusion: 
+	sc_explanation; sc_definition; sc_note; sc_comment;
+
+<=> nrel_semantically_close_sc_element:
+	rrel_sc_neighborhood;;
+	
+sc_note
+<- rrel_key_sc_element:
+	section_subject_domain_of_knowledges;
+
+=> nrel_main_idtf:
+	[sc-примечание] (* <- lang_ru;; *);
+	[sc-note] (* <- lang_en;; *);
+
+=> nrel_idtf:
+	[описание некоторого свойства рассматриваемой сущности] (* <- lang_ru;; *);;
+	
+section
+<- rrel_key_sc_element:
+	section_subject_domain_of_knowledges;
+
+=> nrel_main_idtf:
+	[раздел] (* <- lang_ru;; *);
+	[section] (* <- lang_en;; *);
+
+=> nrel_idtf:
+	[раздел базы знаний] (* <- lang_ru;; *);;
+	[sc-модель раздела базы знаний] (* <- lang_ru;; *);;
+
+<= nrel_decomposition:
+	structural_classification_criterion
+	(*
+	=> nrel_main_idtf: [структурный признак классификации разделов] (* <- lang_ru;; *);;
+	-> atomic_section;;
+	-> non_atomic_section;;
+	*);;
+	
+typical_sc_neighborhood
+
+<- rrel_key_sc_element:
+	section_subject_domain_of_knowledges;
+
+=> nrel_main_idtf:
+	[типичная sc-окрестность]
+	(* <- lang_ru;; *);
+	[typical sc-neighborhood]
+	(* <- lang_en;; *);;
+	
+	
