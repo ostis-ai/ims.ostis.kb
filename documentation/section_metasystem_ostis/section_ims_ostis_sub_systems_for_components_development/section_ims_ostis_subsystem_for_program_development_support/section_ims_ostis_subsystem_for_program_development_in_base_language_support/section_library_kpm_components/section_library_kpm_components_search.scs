@@ -9,4 +9,16 @@ section_library_kpm_components_search
 	<- lang_en;;
 	*);;
 
-/* section_library_kpm_components_search = [*^"file://section_library_kpm_components_search.scsi"*];; */
+section_library_kpm_components_search = [*^"file://section_library_kpm_components_search.scsi"*];;
+
+rrel_key_sc_element -> (section_library_kpm_components_search -> proc_search_all_output)
+(*
+	=> nrel_key_sc_element_base_order: (section_library_kpm_components_search -> proc_search_all_output_with_rel)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_library_kpm_components_search -> proc_search_all_input)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_library_kpm_components_search -> proc_search_all_input_with_rel)
+	(* <- rrel_key_sc_element;; *);;
+*);;*);;*);;
