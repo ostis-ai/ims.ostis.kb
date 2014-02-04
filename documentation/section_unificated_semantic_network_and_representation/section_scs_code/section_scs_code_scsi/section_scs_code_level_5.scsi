@@ -1,0 +1,139 @@
+scs_code_5_level 
+=> nrel_main_idtf: 
+	[SCs-код уровня 5] (*<-lang_ru;;*) ;
+	[SCs-level code 5] (*<-lang_en;;*) ;
+
+<- rrel_key_sc_element:
+		..scs_code_level_5_note
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_scs_code_level_5_ru
+			(*
+			-> rrel_example:		
+	[
+	На данном уровне SCs-кода вводятся средства, позволяющие расширить радиус семантической окрестности описываемого sc-элемента благодаря использованию так называемых встроенных предложений уровня 4, описывающих семантические окрестности любых sc-элементов, связанных с описываемым sc-элементом.
+	] (*<-lang_ru;;*) ;;
+		*);;
+
+		<= nrel_sc_text_translation:	
+			..translation_scs_code_level_5_en
+			(*
+			-> rrel_example:
+	[
+	At this level of the SCs-code the means, allowing to expand the radius of semantic neighborhood of a described sc-element thanks to the so-called built-in sc.s-4 level sentence, describing semantic neighborhoods of any sc-elements, connected to a described sc-element are entered.
+	] (*<-lang_en;;*) ;;
+			*);;
+	*);;
+
+scs_sentence_5_level 
+=> nrel_main_idtf: 
+	[sc.s-предложение уровня 5] (*<-lang_ru;;*) ;
+	[sc.s-5 level sentence] (*<-lang_en;;*) ;
+
+<- rrel_key_sc_element:
+		..scs_text_level_5_note
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_scs_text_level_5_ru
+			(*
+			-> rrel_example:
+	[
+	В sc.s-предложениях уровня 5 сокращается число отображаемых имен sc-элементов за счет введения встроенных sc.s-предложений при помощи разделителя (*...*). Более подробно правила использования данного разделителя описаны в соответствующем разделе.
+	Встроенные предложения внутри ограничителя (*...*), как и все sc.s-предложения, ограничиваются разделителем ;;.
+	Использование неатомарных идентификаторов вида <...>, {...}, \[*...*\] и \[...\] не разрешается.
+	] (*<-lang_ru;;*) ;;
+		*);;
+
+		<= nrel_sc_text_translation:	
+			..translation_scs_text_level_5_en
+			(*
+			-> rrel_example:
+	[
+	In sc.s-5 level sentences the number of display names of sc-elements is reduced through the introduction of integrated sc.s-sentences using a delimiter (* ... *).
+The usage rules of the specified delimiter are explained below in greater detail in appropriate section. 
+Using non-atomic identifiers such as <...>, {...}, \[*...*\] and \[...\] is not permitted.
+	] (*<-lang_en;;*) ;;
+			*);;
+		*);
+-> rrel_example:
+	[
+		Треугк(ТчкВ;ТчкС;ТчкD) => сторона*: Отр(ТчкВ;ТчкС); Отр(ТчкС;ТчкD)(* => граничная точка*: ТчкС; ТчкD ;; *) ;;
+	] (*<-lang_ru;;*) ;
+-> rrel_example:
+	[
+		Triangle(PntВ;PntС;PntD) => side*: Seg(PntВ;PntС); Seg(PntС;PntD)(* => boundary point *: PntС; PntD ;; *) ;;
+	] (*<-lang_en;;*) ;;
+	
+
+
+scs_text_5_level 
+=> nrel_main_idtf: 
+	[sc.s-текст уровня 5] (*<-lang_ru;;*) ;
+	[sc.s-5 level-text] (*<-lang_en;;*) ;
+
+<- rrel_key_sc_element:
+		..scs_text_level_5_note
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_scs_text_level_5_ru
+			(*
+			-> rrel_example:
+	[sc.s-текст уровня 5 - sc.s-текст, содержащий хотя бы одно sc.s-предложение уровня 5 и не содержащий sc.s-предложений уровня 6 и выше
+	] (*<-lang_ru;;*) ;;
+			*);;
+
+		<= nrel_sc_text_translation:	
+			..translation_scs_text_level_5_en
+			(*
+			-> rrel_example:
+
+	[sc.s-5 level-text is sc.s-text, that contains at least one sc.s-5 level sentence and doesn’t contain  sc.s-6 level sentence and above
+	] (*<-lang_en;;*) ;;
+			*);;
+		*);
+
+-> rrel_example:
+	[
+	четырехугольник ∍ Четырехугк(ТчкА;ТчкВ;ТчкС;ТчкD) (* => сторона*: включение*: Отр(ТчкВ;ТчкС); Отр(ТчкС;ТчкD);; *);;
+	треугольник ∍ Треугк(ТчкВ;ТчкС;ТчкD) (*=> сторона*: включение*: Отр(ТчкВ;ТчкС); Отр(ТчкС;ТчкD); Отр(ТчкB;ТчкD);; *);;
+	Треугк(ТчкВ;ТчкС;ТчкD) <= декомпозиция фигуры*: link1 (* ∍ Отр(ТчкВ;ТчкС); Отр(ТчкC;ТчкD); Отр(ТчкВ;ТчкD);; *);;
+	]
+	(*
+		<- rrel_key_sc_element:
+		..scs_text_level_5_example_note
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_scs_text_level_5_example_ru
+			(*
+			-> rrel_example:
+		[
+		Обратим внимание, что по сравнению с представлением данного текста в SCs-коде уровня 4 количество sc.s-предложений уменьшилось за счет объединения нескольких схожих sc.s-предложений уровня 4 в одно sc.s-предложение уровня 5 с использованием встроенных предложений и ограничителя (*…*).
+		](*<-lang_ru;;*);;
+			*);;
+		*);;
+	*);
+
+-> rrel_example:
+	[
+	tetragon ∍ Tetragon(PntА;PntВ;PntС;PntD) (* => side*: inclusion*: Seg(PntВ;PntС); Seg(PntС;PntD);; *);;
+	triangle ∍ Triangle(PntВ;PntС;PntD) (*=> side*: inclusion*: Seg(PntВ;PntС); Seg(PntС;PntD); Seg(PntB;PntD);; *);;
+	Triangle(PntВ;PntС;PntD) <= decomposition of figure*: link1 (* ∍ Seg(PntВ;PntС); Seg(PntC;PntD); Seg(PntВ;PntD);; *);;
+	]
+	(*
+	<- rrel_key_sc_element:
+		..scs_text_level_5_example_note2
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_scs_text_level_5_example_en
+			(*
+			-> rrel_example:
+		[
+Note that, in comparison with submission of this text in the SC.s-4 level-code the number of sc.s-sentences has been decreased by combining several similar sc.s-4 level sentences into one sc.s-5 level sentence using integrated sentences and a delimiter (*…*).		](*<-lang_en;;*);;
+			*);;
+		*);;
+	*);;

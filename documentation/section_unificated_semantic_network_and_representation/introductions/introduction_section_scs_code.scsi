@@ -1,0 +1,82 @@
+scs_code 
+=> nrel_main_idtf: 
+	[SCs-код] (*<-lang_ru;;*) ;
+	[SCs-code] (*<-lang_en;;*) ;
+=> nrel_idtf: 
+	[SCs-язык] (*<-lang_ru;;*) ;
+	[Semantic code string] (*<-lang_en;;*) ;
+
+<- rrel_key_sc_element:
+		..scs_code_note
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_scs_code_note_ru
+			(*
+			-> rrel_example:
+	[
+SCs-код - строковый (линейный) вариант представления SC-кода. Предназначен для представления sc-графов (текстов SC-кода) в виде последовательностей символов, которые могут быть отредактированы как при помощи стандартных текстовых редакторов, так и при помощи специализированного sc.s-редактора. Следовательно, одним из требований, предъявляемых к SCs-коду, помимо полноты и непротиворечивости, является возможность набора исходных текстов без помощи специализированного редактора, используя только символы стандартной клавиатуры.
+В отличие от SCn-кода, также являющегося текстовым вариантом отображения sc-графов, в SCs-коде форматирование не имеет значения, все предложения могут быть записаны в одну строку.
+В отличие от SCg-кода, в SCs-коде нет специальных обозначений для указания структурных типов sc-узлов, однако есть изображения sc-коннекторов, соответствующие ядру и расширению SCg-кода, а также изображения sc-коннекторов специального типа, для которых нет соответствия в SCg-коде.
+С формальной точки зрения SCs-код - множество sc.s-текстов. Каждый sc.s-текст представляет собой последовательность sc.s-предложений, каждое из которых оканчивается разделителем ;; (двойная точка с запятой). Множество sc.s-предложений разбивается на множество простых и множество сложных sc.s-предложений. Каждое сложное sc.s-предложение содержит в своем составе встроенные предложения, ограниченные ограничителем (*...*).
+В рамках sc.s-текста любого уровня допустимо использование комментариев следующего вида:
+// однострочный комментарий
+/* многострочный комментарий */
+В начале файла, содержащего sc.s-текст настоятельно рекомендуется указывать уровень и версию используемого SCs-кода. Для этого используются комментарий специального вида:
+/* SCs_code<" версия ">.Level <" номер уровня "> */
+Например: 
+/* SCs_code0.1.0.Level 6 */
+Следует отметить, что комментарий вида /*…*/, использованный внутри sc.s-рамки (см. соотв. раздел) не опускается при разборе sc.s-текста, и становится частью содержимого соответствующей sc-ссылки. Например при разборе предложения
+X => r1: \[TEXT1/*COMMENT*/TEXT2\];;
+Будет создана sc-ссылка с содержимым TEXT1/*COMMENT*/TEXT2, а не TEXT1TEXT2.
+SCs-код условно разделяется на 7 уровней сложности. Все уровни равнозначны по возможностям представления знаний, однако тексты более высоких уровней описывают sc-графы более лаконично и удобно. Введение уровней призвано облегчить работу разработчиков баз знаний при наборе sc.s-текстов. При разработке баз знаний рекомендуется использовать уровни до шестого включительно.
+	] (*<-lang_ru;;*) ;;
+*);;
+
+		<= nrel_sc_text_translation:	
+			..translation_scs_code_note_en
+			(*
+			-> rrel_example:
+	[
+The SCs-code is linear version of the representation  of the SC-code. The SCs-code is intended for the representation of sc-graphs(texts of the SC-code)   in form of symbols sequence which can be edited with means of standard text editors or with means of the specialized sc.s-editor. Therefore, one of requirements, which can be produced towards the SCs-code, besides completeness and consistence, is a possibility to set up source texts without assistance of the specialized editor, using only symbols of standard keyboard.
+In contrast to the SCn-code,which is also being the text version of sc-graphs mapping, formatting doesn’t matter in the SCs-code, all sentences could be written in one line.
+In contrast to the SCg-code, there are not special notations for indications of structural type of SC-nodes, but there are images of sc-connectors, corresponding to a kernel  and  an extension of the SCg-code, as well as images of particular SC-connectors, for which there is no match in the SCg-code.
+Technically, the SCs-code is the set of sc.s-texts. Each sc.s-text is a sequence of sc.s-sentences, each of which ends with the delimiter;; (double semicolon). Set of sc.s-sentences is divided  into the set of simple sc.s-sentences andthe  set  of  complex sc.s-sentences. Each complex sc.s-sentence  contains built-in sentences  in the composition. The  built-in sentences are restricted by the limiter (*…*).
+Comments  are allowed within the sc.s- text  of any level. It can be :
+//one-line comment
+/*multiline comment*/
+At the beginning of the file, containing sc.s-text  it is strongly recommended to specify the level and the version of the SCs-code. For this purpose, use the comment of a special kind:
+/* SCs_code<"version">.Level<" level number "> */
+For example:
+/* SCs_code0.1.0.Level 6 */
+It should be noted that the comment of the form /*...*/, used inside sc.s-frame (see the relevant section), isn’t omitted when parsing sc.s-text, and becomes part of the content of the corresponding sc-link. For example, when parsing a sentence
+X =>r1: \[TEXT1/*COMMENT*/TEXT2\];;
+Sc-link with contents TEXT1/*COMMENT*/TEXT2, ане TEXT1TEXT2 will be created.
+The SCs-code is conditionally separated on 7 levels of difficulties. All the levels are equivalentto thepossibilitiesof knowledge representation, however texts of higher levels describe sc-graphs more laconically and convenient. Introduction of levels are meant to facilitate the work of the knowledge base developers at a set of sc.s-texts. It is recommended that the development ofthe knowledge bases includes using levels before the six inclusive.
+	] (*<-lang_en;;*) ;;
+			*);;
+*);;
+
+scs_nrel_representation_scg_code 
+=> nrel_main_idtf: 
+	[отображение в SCg-коде*] (*<-lang_ru;;*) ;
+	[SCg-code representation*] (*<-lang_en;;*) ;
+	<- sc_node_norole_relation;;
+
+scs_nrel_representation_scs_editor 
+=> nrel_main_idtf: 
+	[отображение в sc.s-редакторе*] (*<-lang_ru;;*) ;
+	[sc.s-editor representation*]  (*<-lang_en;;*) ;
+	<- sc_node_norole_relation;;
+
+scs_nrel_representation_standart_editor 
+=> nrel_main_idtf:
+  	[отображение в стандартных редакторах*]  (*<-lang_ru;;*) ;
+	[standart editor representation*] (*<-lang_en;;*) ;
+	<- sc_node_norole_relation;;
+
+scs_nrel_using_example 
+=> nrel_main_idtf: 
+	[пример использования*] (*<-lang_ru;;*) ;
+	[using example*] (*<-lang_en;;*) ;
+	<- sc_node_norole_relation;;

@@ -1,0 +1,210 @@
+scs_code_1_level 
+=> nrel_main_idtf: 
+	[SCs-код уровня 1](*<-lang_ru;;*) ;
+	[SCs-code of level 1](*<-lang_en;;*) ;
+
+<- rrel_key_sc_element:
+		..scs_code_level_1_note
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_scs_code_level_1_ru
+			(*
+			-> rrel_example:
+	[
+	SCs-код уровня 1 аналогичен SCg-коду уровня 1 и представляет собой простейшее универсальное средство кодирования (представления) любого sc-графа в линейном виде, т.е. в виде цепочки (строки) символов. При этом каждому sc-элементу представляемого sc-графа взаимно-однозначно ставится в соответствие его строковый идентификатор (имя), что делает необходимым специально придумывать имена для всех (!) используемых sc-элементов, входящих в состав представляемого sc-графа.	
+	](*<-lang_ru;;*);;
+			*);;
+
+		<= nrel_sc_text_translation:	
+			..translation_scs_code_level_1_en
+			(*
+			-> rrel_example:
+	[
+	SCs-code of level 1 is similar to SCg-code of level 1 and represent the simplest universal coding instrument (representation)of any sc-graph in a linear look  that is in the form of a chain of symbols. At the same time , each sc-element  of the sc-graph, which was represented put one-to-one with it string identifier(name),that does necessary specially to invent names for all using sc-elements forming part of the represented sc-graph.
+	](*<-lang_en;;*);;
+			*);;
+	*);;
+
+
+scs_sentence_1_level 
+=> nrel_main_idtf: 
+	[sc.s-предложение уровня 1](*<-lang_ru;;*) ;
+	[sc.s-sentence of level 1](*<-lang_en;;*) ;
+
+<- rrel_key_sc_element:
+		..scs_sentence_level_1_note
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_scs_sentence_level_1_ru
+			(*
+			-> rrel_example:
+	[
+sc.s-предложение уровня 1 - sc.s-предложение, содержащее только sc.s-разделители инцидентности и имена sc-элементов.
+Каждое такое предложение представляет собой тройку, каждая из которых описывает инцидентность некоторого sc-коннектора и двух других sc-элементов.
+Для этого все sc-элементы должны быть проименованы. Коннекторы и файлы именуются соответственно правилам идентификации коннекторов и файлов. 
+Запрещается использование неатомарных идентификаторов, содержащих ограничители <...>, {...}, \[...\] или \[*...*\].
+При этом в каждой описываемой тройке среднее имя соответствует sc-коннектору, тип которого может быть уточнен при помощи правил идентификации.
+В случае, если указанный sc-коннектор ориентированный (т.е. является sc-дугой), то первый и третий элемент тройки соответствуют первому и второму элементам связки, знаком которой является данный sc-коннектор.
+Т.е. имя sc-элемента, из которого выходит указанная дуга, указывается первым в тройке, а имя sc-элемента, в который входит эта дуга, указывается третьим в тройке.
+Для указания типов sc-элементов могут быть использованы следующие правила уточнения типа sc-элемента:
+<" имя элемента с уточнением типа "> ::= <" тип элемента "> # \["<" имя элемента ">"\]
+<" тип элемента "> ::= (" sc_node || sc_link || sc_arc_common || sc_edge || sc_arc_main || sc_arc_access ")
+<" имя элемента "> - произвольная уникальная  строка символов, уникальная для sc-элементов заданного типа. В качестве имени рекомендуется использовать системный идентификатор sc-элемента. Если перед глобальным идентификатором ставится знак “.” , то такое имя служит только для обозначения элемента в исходных текстах, и не транслируется как системный идентификатор. При этом такое имя также должно быть уникальным в рамках всех исходных тестов базы знаний.
+<" имя элемента "> может отсутствовать, тогда sc-элемент, описанный как <" тип элемента "> # будет воспринят как sc-элемент указанного типа без идентификатора.
+sc-элемент без указания типа по умолчанию считается sc-узлом.
+	](*<-lang_ru;;*);;
+			*);;
+
+		<= nrel_sc_text_translation:	
+			..translation_scs_sentence_level_1_en
+			(*
+			-> rrel_example:
+	[
+sc.s-sentence of level 1 – sc.s-sentence including only a sc.s- separators   of  incidence and  names of  sc-elements.
+Each such sentence  represents the triple,  each  of  which describes incidence of some sc-connector and two other sc-elements.
+There are  all sc-elements should be are called  for this. Connectors  and  files name   in accordance with the identification rules of connectors and files.
+Use of not-atomic  identifiers , which  contain  limiters <...>, {...}, \[...\] or \[*...*\], is forbidden. 
+Thus at each described triple the middle name corresponds sc-connector the type of that can be refined using the identification rules of the connectors and files.
+In case the indicated sc-connector is oriented (it is a sc-arm), the first and third element of the triple correspond  to the first and second elements of the bunch.  The bunch’s sign is the given sc-connector.
+I.e. the name of the sc-element, from which it the specified arc exits, is listed first in the top of the triple. The name of the sc-element which includes this arc, is indicated for third in the triple.
+The following rules of specification of sc-elements’ types can be used for specifying of sc-element’s type :
+<" element’s name with type specification"> ::= <" type of element "> # \["<"name of element">"\]
+<" type of element "> ::= (" sc_node || sc_link || sc_arc_common || sc_edge || sc_arc_main || sc_arc_access ")
+<" element’s name "> - an arbitrary unique string string of characters, which is unique for the sc-elements of the given type. As a name it is recommended to use the system identifier of the sc-element. If the sign “.” is preceded to the global identifier then this name is only used to represent an element in the source texts. This name isn’t translated as the system identifier. Herewith such name must also be unique within all the source tests of the knowledge base.
+<" element’s name "> can be absent, but then  sc-element, which described as <" type of element "> #  will be treated as the sc-element of the indicated type without an identifier.
+A sc-element of the indicated type is considered as a sc-node by default.
+	](*<-lang_en;;*);;
+			*);;
+	*);
+
+=> nrel_generalized_syntax_structure:
+	[
+		<" sc.s-предложение уровня 1 "> ::= <" имя первого элемента тройки "> | <" имя коннектора "> | <" имя второго элемента тройки "> ;;
+	]
+	(*
+		<- backus_naur_metalanguage;;
+		<- lang_ru;;
+	*);
+=> nrel_generalized_syntax_structure:
+	[
+		<" sc.s-sentence of level 1 "> ::= <" name of the first element of the triple "> | <" name of the connector "> | <" name of the second element of the triple "> ;;
+	]
+	(*
+		<- backus_naur_metalanguage;;
+		<- lang_en;;
+	*);
+
+-> rrel_example:
+	[
+	Четырехугк(ТчкА;ТчкВ;ТчкС;ТчкD) | sc_arc_common#pair1 | Отр(ТчкВ;ТчкС);;
+	](*<-lang_ru;;*);
+-> rrel_example:
+	[
+	Tetragon(PntА; PntВ; PntС; PntD) | sc_arc_common#pair1 | Seg(PntВ; PntС);;
+	](*<-lang_en;;*);
+-> rrel_example:
+	[
+	включение* | sc-arc-main#arc2 | sc_arc_common#pair1;;
+	](*<-lang_ru;;*);
+-> rrel_example:
+	[
+	inclusion* | sc-arc-main#arc2 | sc_arc_common#pair1;;
+	](*<-lang_en;;*);
+-> rrel_example:
+	[
+	Четырехугк(ТчкА;ТчкВ;ТчкС;ТчкD) | sc_arc_common#pair1 | Отр(ТчкВ;ТчкС);;
+	](*<-lang_ru;;*);
+-> rrel_example:
+	[
+	Tetragon(PntА; PntВ; PntС; PntD) | sc_arc_common#pair1 | Seg(PntВ; PntС);;
+	](*<-lang_en;;*);;
+
+
+scs_text_1_level 
+=> nrel_main_idtf: 
+	[sc.s-текст уровня 1](*<-lang_ru;;*) ;
+	[sc.s-text of level 1](*<-lang_en;;*) ;
+
+<- rrel_key_sc_element:
+		..scs_text_level_1_note
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_scs_text_level_1_ru
+			(*
+			-> rrel_example:
+		[sc.s-текст уровня 1 - sc.s-текст, содержащий только sc.s-предложения уровня 1](*<-lang_ru;;*);;
+			*);;
+
+		<= nrel_sc_text_translation:	
+			..translation_scs_text_level_1_en
+			(*
+			-> rrel_example:
+		[sc.s-text of level 1 - sc.s-text, containing only sc.s-sentences of level 1](*<-lang_en;;*);;
+			*);;
+		*);
+-> rrel_example:
+		[
+		включение* | sc_arc_main#arc1 | sc_arc_common#pair2;;
+		включение* | sc_arc_main#arc2 | sc_arc_common#pair1;;
+		включение* | sc_arc_main#arc3 | sc_arc_common#pair3;;
+		включение* | sc_arc_main#arc4 | sc_arc_common#pair4;;
+		включение * | sc_arc_main#arc15 | sc_arc_common#pair5;;
+		сторона* | sc_arc_main#arc5 | sc_arc_common#pair1;;
+		сторона* | sc_arc_main#arc6 | sc_arc_common#pair2;;
+		сторона* | sc_arc_main#arc7 | sc_arc_common#pair4;;
+		сторона* | sc_arc_main#arc8 | sc_arc_common#pair3;;
+		сторона* | sc_arc_main#arc10 | sc_arc_common#pair5;;
+		Четырехугк(ТчкА;ТчкВ;ТчкС;ТчкD) | sc_arc_common#pair1 | Отр(ТчкВ;ТчкС);;
+		Четырехугк(ТчкА;ТчкВ;ТчкС;ТчкD) | sc_arc_common#pair2 | Отр(ТчкC;ТчкD);;
+		Треугк(ТчкВ;ТчкС;ТчкD) | sc_arc_common#pair3 | Отр(ТчкВ;ТчкС);;
+		Треугк(ТчкВ;ТчкС;ТчкD) | sc_arc_common#pair4 | Отр(ТчкC;ТчкD);; 
+		Треугк(ТчкВ;ТчкС;ТчкD) | sc_arc_common#pair5 | Отр(ТчкB;ТчкD);; 
+		четырехугольник | sc_arc_main#arc9 | Четырехугк(ТчкА;ТчкВ;ТчкС;ТчкD);;
+		треугольник | sc_arc_main#arc15 | Треугк(ТчкВ;ТчкС;ТчкD);;
+		link1 | sc_arc_common#pair6 | Треугк(ТчкВ;ТчкС;ТчкD);; 
+		декомпозиция фигуры* | sc_arc_main#arc14 | sc_arc_common#pair6;;
+		link1 | sc_arc_main#arc11 | Отр(ТчкВ;ТчкС);;
+		link1 | sc_arc_main#arc12 | Отр(ТчкC;ТчкD);;
+		link1 | sc_arc_main#arc13 | Отр(ТчкВ;ТчкD);;
+		]
+		(*
+			<=> nrel_semantic_equivalence: "file://../images/scs_text_example_1.png";;
+			<=> nrel_semantic_equivalence: "file://scs_code_htmls/scs_code_1_level_text1.html";;
+			<= hypermedia_nrel_illustration:
+				"file://../images/common_illusration.png";;
+			<-lang_ru;;
+		*);
+-> rrel_example:
+		[
+		inclusion* | sc_arc_main#arc1 | sc_arc_common#pair2;;
+		inclusion* | sc_arc_main#arc2 | sc_arc_common#pair1;;
+		inclusion* | sc_arc_main#arc3 | sc_arc_common#pair3;;
+		inclusion* | sc_arc_main#arc4 | sc_arc_common#pair4;;
+		inclusion* | sc_arc_main#arc15 | sc_arc_common#pair5;;
+		side* | sc_arc_main#arc5 | sc_arc_common#pair1;;
+		side* | sc_arc_main#arc6 | sc_arc_common#pair2;;
+		side* | sc_arc_main#arc7 | sc_arc_common#pair4;;
+		side* | sc_arc_main#arc8 | sc_arc_common#pair3;;
+		side* | sc_arc_main#arc10 | sc_arc_common#pair5;;
+		Tetragon(PntА; PntВ; PntС; PntD) | sc_arc_common#pair1 | Seg(PntВ; PntС);;
+		Tetragon(PntА; PntВ; PntС; PntD) | sc_arc_common#pair2 | Seg (PntC; PntD);;
+		Triangle(PntВ; PntС; PntD) | sc_arc_common#pair3 | Seg (PntВ; PntС);;
+		Triangle(PntВ; PntС; PntD) | sc_arc_common#pair4 | Seg (PntC; PntD);; 
+		Triangle(PntВ; PntС; PntD) | sc_arc_common#pair5 | Seg (PntB; PntD);; 
+		tetragon | sc_arc_main#arc9 | Tetragon(PntА; PntВ; PntС; PntD);;	
+		treangle | sc_arc_main#arc15 | Triangle(PntВ; PntС; PntD);;
+		link1 | sc_arc_common#pair6 | Triangle(PntВ; PntС; PntD);; 
+		decomposition of figure * | sc_arc_main#arc14 | sc_arc_common#pair6;;
+		link1 | sc_arc_main#arc11 | Seg(PntВ; PntС);;
+		link1 | sc_arc_main#arc12 | Seg(PntC; PntD);;
+		link1 | sc_arc_main#arc13 | Seg(PntВ; PntD);;
+		](*
+			<=> nrel_semantic_equivalence: "file://../images/scs_text_example_1.png";;
+			<=> nrel_semantic_equivalence: "file://scs_code_htmls/scs_code_1_level_text1.html";;
+			<= hypermedia_nrel_illustration:
+				"file://../images/common_illusration.png";;
+			<-lang_en;;
+		*);;
