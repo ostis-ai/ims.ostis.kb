@@ -1,13 +1,11 @@
 ..a = [* b_i => nrel_implication: b_j;; *];;
 ..b = [* 
 ..impl 
-<- nrel_implication;; 	
-/*
+<- nrel_implication; 	
 -> rrel_if: 
 	b_i; 
 -> rrel_then: 
 	b_j;; 
-*/
 *];;
 
 ..a <=> nrel_equivalence: ..b;;
