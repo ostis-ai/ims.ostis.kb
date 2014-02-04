@@ -1,11 +1,10 @@
-/!* keyword: special_scs_connector */
-special_scs_connector => nrel_main_ru_idtf: 
-	[специальный sc.s-коннектор] ;;
-special_scs_connector => nrel_main_en_idtf: 
-	[special sc.s-connector] ;;
-special_scs_connector => nrel_ru_idtf: 
-	[sc.s-разделитель, изображающий sc-коннектор, который принадлежит некоторому заранее известному множеству и для которого нет специального знака, принадлежащего SCg] ;;
-special_scs_connector <= set_nrel_subdividing:
+special_scs_connector => nrel_main_idtf: 
+	[специальный sc.s-коннектор](* <- lang_ru;; *) ;;
+special_scs_connector => nrel_main_idtf: 
+	[special sc.s-connector] (* <- lang_en;; *);;
+special_scs_connector => nrel_idtf: 
+	[sc.s-разделитель, изображающий sc-коннектор, который принадлежит некоторому заранее известному множеству и для которого нет специального знака, принадлежащего SCg] (* <- lang_ru;; *);;
+special_scs_connector <= nrel_subdividing:
 {
 	scs_divider_inclusion;
 	scs_divider_non_inclusion;
@@ -19,20 +18,38 @@ special_scs_connector <= set_nrel_subdividing:
 	scs_divider_equality;
 	scs_divider_non_equality
 };;
-special_scs_connector <= hypermedia_nrel_explanation:
-	"file://../images/scs_divider/table_special.png";;
+special_scs_connector <- rrel_key_sc_element:
+		..scs_special_scs_connector_note
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_special_scs_connector_note_ru
+			(*
+			-> rrel_example:
+				"file://../images/scs_divider/table_special.png"
+			(*<-lang_en;;*);;
+			*);;
+	*);;
 
-/!* keyword: scs_divider_equality */
-scs_divider_equality => nrel_main_ru_idtf: 
-	[sc.s-разделитель равенство] ;;
-scs_divider_equality <= set_nrel_inclusion:
-	special_scs_connector;;
+scs_divider_equality => nrel_main_idtf: 
+	[sc.s-разделитель равенство](* <- lang_ru;; *);;
 scs_divider_equality <= scs_nrel_representation_scs_editor:
 	[=];;
 scs_divider_equality <= scs_nrel_representation_standart_editor:
 	[=];;
-scs_divider_equality <= hypermedia_nrel_explanation:
-	[Разделяет имена синонимичных sc-элементов];;
+scs_divider_equality <- rrel_key_sc_element:
+		..scs_divider_equality_note
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_scs_divider_equality_note_ru
+			(*
+			-> rrel_example:
+				[Разделяет имена синонимичных sc-элементов]
+			(*<-lang_en;;*);;
+			*);;
+	*);;
+	
 scs_divider_equality <= nrel_using_example:
 	[Поток 72170x = {721701;721702;721703};;]
 	(*
@@ -46,17 +63,24 @@ scs_divider_equality <= nrel_using_example:
 		<=> nrel_semantic_equivalence: "file://../images/scs_divider/example_equality2.png" ;;
 	*);;
 
-/!* keyword: scs_divider_identifier */
-scs_divider_identifier => nrel_main_ru_idtf: 
-	[sc.s-разделитель идентификатор] ;;
-scs_divider_identifier <= set_nrel_inclusion:
-	special_scs_connector;;
+scs_divider_identifier => nrel_main_idtf: 
+	[sc.s-разделитель идентификатор] (* <- lang_ru;; *);;
 scs_divider_identifier <= scs_nrel_representation_scs_editor:
 	[=∙];;
 scs_divider_identifier <= scs_nrel_representation_scs_editor:
 	[∙=];;
-scs_divider_identifier <= hypermedia_nrel_explanation:
-	[Изображение связки отношения идентификатор*. Разделяет имя sc-объекта и имя файла, в котором хранится один из возможных идентификаторов указанного sc-элемента. Каждому sc-элементу может быть поставлено в соответствие несколько его идентификаторов.*];;
+scs_divider_identifier <- rrel_key_sc_element:
+		..scs_divider_identifier_note
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_scs_divider_identifier_note_ru
+			(*
+			-> rrel_example:
+			[Изображение связки отношения идентификатор*. Разделяет имя sc-объекта и имя файла, в котором хранится один из возможных идентификаторов 	указанного sc-элемента. Каждому sc-элементу может быть поставлено в соответствие несколько его идентификаторов.*]
+			(*<-lang_en;;*);;
+			*);;
+	*);;
 scs_divider_identifier <= nrel_using_example:
 	[
 		треугольник =∙ \[triangle\];;
@@ -74,17 +98,25 @@ scs_divider_identifier <= nrel_using_example:
 		<=> nrel_semantic_equivalence: "file://../images/scs_divider/example_identifier2.png" ;;
 	*);;
 
-/!* keyword: scs_divider_inclusion */ 
-scs_divider_inclusion => nrel_main_ru_idtf: 
-	[sc.s-разделитель включение] ;;
-scs_divider_inclusion <= set_nrel_inclusion:
-	special_scs_connector;;
+scs_divider_inclusion => nrel_main_idtf: 
+	[sc.s-разделитель включение] (* <- lang_ru;; *);;
 scs_divider_inclusion <= scs_nrel_representation_scs_editor:
 	[⊂];;
 scs_divider_inclusion <= scs_nrel_representation_scs_editor:
 	[⊃];;
-scs_divider_inclusion <= hypermedia_nrel_explanation:
-	[Изображение связки отношения включение*];;
+scs_divider_inclusion <- rrel_key_sc_element:
+		..scs_divider_inclusion_note
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_scs_divider_inclusion_note_ru
+			(*
+			-> rrel_example:
+				[Изображение связки отношения включение*]
+			(*<-lang_en;;*);;
+			*);;
+	*);;
+
 scs_divider_inclusion <= nrel_using_example:
 	[треугольник ⊂ многоугольник;;]
 	(*
@@ -98,15 +130,23 @@ scs_divider_inclusion <= nrel_using_example:
 		<=> nrel_semantic_equivalence: "file://../images/scs_divider/example_inclusion2.png" ;;
 	*);;
 
-/!* keyword: scs_divider_intersected_pair */
-scs_divider_intersected_pair => nrel_main_ru_idtf: 
-	[sc.s-разделитель пара пересекающихся множеств] ;;
-scs_divider_intersected_pair <= set_nrel_inclusion:
-	special_scs_connector;;
+scs_divider_intersected_pair => nrel_main_idtf: 
+	[sc.s-разделитель пара пересекающихся множеств] (* <- lang_ru;; *);;
 scs_divider_intersected_pair <= scs_nrel_representation_scs_editor:
 	[⊃⊂];;
-scs_divider_intersected_pair <= hypermedia_nrel_explanation:
-	[Изображение связки отношения пара пересекающихся множеств*];;
+scs_divider_intersected_pair <- rrel_key_sc_element:
+		..scs_divider_intersected_pair_note
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_scs_divider_intersected_pair_note_ru
+			(*
+			-> rrel_example:
+				[Изображение связки отношения пара пересекающихся множеств*]
+			(*<-lang_en;;*);;
+			*);;
+	*);;
+
 scs_divider_intersected_pair <= nrel_using_example:
 	[треугольник ⊃⊂ правильный многоугольник;;]
 	(*
@@ -120,17 +160,25 @@ scs_divider_intersected_pair <= nrel_using_example:
 		<=> nrel_semantic_equivalence: "file://../images/scs_divider/example_intersection_pair2.png" ;;
 	*);;
 
-/!* keyword: scs_divider_non_equality */
-scs_divider_non_equality => nrel_main_ru_idtf: 
-	[sc.s-разделитель неравенство] ;;
-scs_divider_non_equality <= set_nrel_inclusion:
-	special_scs_connector;;
+scs_divider_non_equality => nrel_main_idtf: 
+	[sc.s-разделитель неравенство] (* <- lang_ru;; *);;
 scs_divider_non_equality <= scs_nrel_representation_scs_editor:
 	[≠];;
 scs_divider_non_equality <= scs_nrel_representation_standart_editor:
 	[|=];;
-scs_divider_non_equality <= hypermedia_nrel_explanation:
-	[Разделяет имена sc-элементов, не являющихся синонимичными. Это иногда требуется чтобы подчеркнуть наличие семантической разницы между двумя знаками];;
+scs_divider_non_equality <- rrel_key_sc_element:
+		..scs_divider_non_equality_note
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_scs_divider_non_equality_note_ru
+			(*
+			-> rrel_example:
+				[Разделяет имена sc-элементов, не являющихся синонимичными. Это иногда требуется чтобы подчеркнуть наличие семантической разницы между двумя знаками]
+			(*<-lang_en;;*);;
+			*);;
+	*);;
+
 scs_divider_non_equality <= nrel_using_example:
 	[треугольник ≠ линейный треугольник;;]
 	(*
@@ -138,17 +186,25 @@ scs_divider_non_equality <= nrel_using_example:
 		<=> nrel_semantic_equivalence: "file://../images/scs_divider/example_non_equality.png" ;;
 	*);;
 
-/!* keyword: scs_divider_non_inclusion */
-scs_divider_non_inclusion => nrel_main_ru_idtf: 
-	[sc.s-разделитель невключение] ;;
-scs_divider_non_inclusion <= set_nrel_inclusion:
-	special_scs_connector;;
+scs_divider_non_inclusion => nrel_main_idtf: 
+	[sc.s-разделитель невключение] (* <- lang_ru;; *);;
 scs_divider_non_inclusion <= scs_nrel_representation_scs_editor:
 	[⊄];;
 scs_divider_non_inclusion <= scs_nrel_representation_scs_editor:
 	[⊅];;
-scs_divider_non_inclusion <= hypermedia_nrel_explanation:
-	[Изображение связки, не принадлежащей отношению включение*];;
+scs_divider_non_inclusion <- rrel_key_sc_element:
+		..scs_divider_non_inclusion_note
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_scs_divider_non_inclusion_note_ru
+			(*
+			-> rrel_example:
+				[Изображение связки, не принадлежащей отношению включение*]
+			(*<-lang_en;;*);;
+			*);;
+	*);;
+
 scs_divider_non_inclusion <= nrel_using_example:
 	[треугольник ⊄ правильный многоугольник;;]
 	(*
@@ -162,15 +218,23 @@ scs_divider_non_inclusion <= nrel_using_example:
 		<=> nrel_semantic_equivalence: "file://../images/scs_divider/example_non_inclusion2.png" ;;
 	*);;
 
-/!* keyword: scs_divider_non_intersected_pair */
-scs_divider_non_intersected_pair => nrel_main_ru_idtf: 
-	[sc.s-разделитель пара непересекающихся множеств] ;;
-scs_divider_non_intersected_pair <= set_nrel_inclusion:
-	special_scs_connector;;
+scs_divider_non_intersected_pair => nrel_main_idtf: 
+	[sc.s-разделитель пара непересекающихся множеств] (* <- lang_ru;; *);;
 scs_divider_non_intersected_pair <= scs_nrel_representation_scs_editor:
 	[⊃|⊂];;
-scs_divider_non_intersected_pair <= hypermedia_nrel_explanation:
-	[Изображение связки, не принадлежащей отношению пара пересекающихся множеств*];;
+scs_divider_non_intersected_pair <- rrel_key_sc_element:
+		..scs_divider_non_intersected_pair_note
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_scs_divider_non_intersected_pair_note_ru
+			(*
+			-> rrel_example:
+				[Изображение связки, не принадлежащей отношению пара пересекающихся множеств*]
+			(*<-lang_en;;*);;
+			*);;
+	*);;
+
 scs_divider_non_intersected_pair <= nrel_using_example:
 	[треугольник ⊃|⊂ квадрат;;]
 	(*
@@ -184,15 +248,23 @@ scs_divider_non_intersected_pair <= nrel_using_example:
 		<=> nrel_semantic_equivalence: "file://../images/scs_divider/example_non_intersection_pair2.png" ;;
 	*);;
 
-/!* keyword: scs_divider_semantically_equal_files */
-scs_divider_semantically_equal_files => nrel_main_ru_idtf: 
-	[sc.s-разделитель семантически эквивалентные файлы] ;;
-scs_divider_semantically_equal_files <= set_nrel_inclusion:
-	special_scs_connector;;
+scs_divider_semantically_equal_files => nrel_main_idtf: 
+	[sc.s-разделитель семантически эквивалентные файлы] (* <- lang_ru;; *);;
 scs_divider_semantically_equal_files <= scs_nrel_representation_scs_editor:
 	[≗];;
-scs_divider_semantically_equal_files <= hypermedia_nrel_explanation:
-	[Изображение связки отношения семантическая эквивалентность*. Разделяет имена двух файлов, которые являются семантически эквивалентными.];;
+scs_divider_semantically_equal_files <- rrel_key_sc_element:
+		..scs_divider_semantically_equal_files_note
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_scs_divider_semantically_equal_files_note_ru
+			(*
+			-> rrel_example:
+				[Изображение связки отношения семантическая эквивалентность*. Разделяет имена двух файлов, которые являются семантически эквивалентными.]
+			(*<-lang_en;;*);;
+			*);;
+	*);;
+
 scs_divider_semantically_equal_files <= nrel_using_example:
 	[
 		\[треугольник\] ≗ \[triangle\];;
@@ -202,15 +274,23 @@ scs_divider_semantically_equal_files <= nrel_using_example:
 		<=> nrel_semantic_equivalence: "file://../images/scs_divider/example_semantically_equal_files.png" ;;
 	*);;
 
-/!* keyword: scs_divider_semantically_non_equal_files */
-scs_divider_semantically_non_equal_files => nrel_main_ru_idtf: 
-	[sc.s-разделитель семантически неэквивалентные файлы] ;;
-scs_divider_semantically_non_equal_files <= set_nrel_inclusion:
-	special_scs_connector;;
+scs_divider_semantically_non_equal_files => nrel_main_idtf: 
+	[sc.s-разделитель семантически неэквивалентные файлы](* <- lang_ru;; *) ;;
 scs_divider_semantically_non_equal_files <= scs_nrel_representation_scs_editor:
 	[|≗];;
-scs_divider_semantically_non_equal_files <= hypermedia_nrel_explanation:
-	[Изображение связки, не принадлежащей отношению семантически эквивалентные файлы*. Разделяет имена двух файлов, которые не являются семантически эквивалентными, если есть необходимость подчеркнуть наличие семантической разницы между содержимым некоторых файлов.];;
+scs_divider_semantically_non_equal_files <- rrel_key_sc_element:
+		..scs_divider_semantically_non_equal_files_note
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_scs_divider_semantically_non_equal_files_note_ru
+			(*
+			-> rrel_example:
+	[Изображение связки, не принадлежащей отношению семантически эквивалентные файлы*. Разделяет имена двух файлов, которые не являются семантически эквивалентными, если есть необходимость подчеркнуть наличие семантической разницы между содержимым некоторых файлов.]
+			(*<-lang_en;;*);;
+			*);;
+	*);;
+
 scs_divider_semantically_non_equal_files <= nrel_using_example:
 	[
 		\[линейный треугольник\] |≗ \[треугольник\];;
@@ -220,17 +300,24 @@ scs_divider_semantically_non_equal_files <= nrel_using_example:
 		<=> nrel_semantic_equivalence: "file://../images/scs_divider/example_semantically_non_equal_files.png" ;;
 	*);;
 
-/!* keyword: scs_divider_semantic_inclusion */
-scs_divider_semantic_inclusion => nrel_main_ru_idtf:
-	[sc.s-разделитель семантическое включение] ;;
-scs_divider_semantic_inclusion <= set_nrel_inclusion:
-	special_scs_connector;;
+scs_divider_semantic_inclusion => nrel_main_idtf:
+	[sc.s-разделитель семантическое включение] (* <- lang_ru;; *);;
 scs_divider_semantic_inclusion <= scs_nrel_representation_scs_editor:
 	[≗>];;
 scs_divider_semantic_inclusion <= scs_nrel_representation_scs_editor:
 	[<≗];;
-scs_divider_semantic_inclusion <= hypermedia_nrel_explanation:
-	[Изображение связки, принадлежащей отношению семантическое включение*. Разделяет имя файла и обозначение sc-текста, которые связаны указанным отношением, либо имена двух файлов, связанных указанным отношением.];;
+scs_divider_semantic_inclusion <- rrel_key_sc_element:
+		..scs_divider_semantic_inclusion_note
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_scs_divider_semantic_inclusion_note_ru
+			(*
+			-> rrel_example:
+	[Изображение связки, принадлежащей отношению семантическое включение*. Разделяет имя файла и обозначение sc-текста, которые связаны указанным отношением, либо имена двух файлов, связанных указанным отношением.]
+			(*<-lang_en;;*);;
+			*);;
+	*);;
 scs_divider_semantic_inclusion <= nrel_using_example:
 	[
 		 \[Треугольник Треугк(ТчкА;ТчкВ;ТчкС) является прямоугольным\] ≗> \[*Треугк(ТчкА;ТчкВ;ТчкС) <- прямоугольный треугольник; равнобедренный треугольник;;*\];;
@@ -239,17 +326,25 @@ scs_divider_semantic_inclusion <= nrel_using_example:
 		<=> nrel_semantic_equivalence: "file://../images/scs_divider/example_non_semantic_inclusion.png" ;;
 	*);;
 
-/!* keyword: scs_divider_translation */
-scs_divider_translation => nrel_main_ru_idtf: 
-	[sc.s-разделитель трансляция] ;;
-scs_divider_translation <= set_nrel_inclusion:
-	special_scs_connector;;
+scs_divider_translation => nrel_main_idtf: 
+	[sc.s-разделитель трансляция] (* <- lang_ru;; *);;
 scs_divider_translation <= scs_nrel_representation_scs_editor:
 	[≗∙];;
 scs_divider_translation <= scs_nrel_representation_scs_editor:
 	[∙≗];;
-scs_divider_translation <= hypermedia_nrel_explanation:
-	[Изображение связки, принадлежащей отношению трансляция*. Разделяет обозначение sc-текста и имя файла, семантически эквивалентного данному sc-тексту.];;
+scs_divider_translation <- rrel_key_sc_element:
+		..scs_divider_translation_note
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_scs_divider_translation_note_ru
+			(*
+			-> rrel_example:
+			[Изображение связки, принадлежащей отношению трансляция*. Разделяет обозначение sc-текста и имя файла, семантически эквивалентного данному sc-тексту.]
+			(*<-lang_en;;*);;
+			*);;
+	*);;
+
 scs_divider_translation <= nrel_using_example:
 	[
 		\[*Треугк(ТчкА;ТчкВ;ТчкС) <- прямоугольный треугольник*\] ≗∙ \[Треугольник Треугк(ТчкА;ТчкВ;ТчкС) является прямоугольным\] ;;
