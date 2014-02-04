@@ -32,6 +32,15 @@ sc_agent_of_search_of_all_output_arcs
 		};;
 		
 		-> ..sc_agent_of_search_of_all_output_arcs_agent (* <- active_sc_agent;; *);;
+	*);
+=> nrel_inclusion: ..sc_agent_of_search_of_all_output_arcs_scp_realization
+	(*
+		<- platform_independent_abstract_sc_agent;;
+		<= nrel_sc_agent_program: 
+		{
+			agent_proc_search_all_output;
+			proc_search_all_output
+		};;
 	*);;
 
 ..sc_agent_of_search_of_all_output_arcs_initiation_condition
@@ -87,6 +96,16 @@ sc_agent_of_search_of_all_output_arcs_with_rel
 		};;
 		
 		-> ..sc_agent_of_search_of_all_output_arcs_with_rel_agent (* <- active_sc_agent;; *);;
+	*);
+=> nrel_inclusion: ..sc_agent_of_search_of_all_output_arcs_with_rel_scp_realization
+	(*
+		<- platform_independent_abstract_sc_agent;;
+		<= nrel_sc_agent_program: 
+		{
+			agent_proc_search_all_output_with_rel;
+			proc_search_all_output_with_rel;
+			proc_search_all_input
+		};;
 	*);;
 
 ..sc_agent_of_search_of_all_output_arcs_with_rel_initiation_condition
@@ -140,6 +159,15 @@ sc_agent_of_search_of_all_input_arcs
 		};;
 		
 		-> ..sc_agent_of_search_of_all_input_arcs_agent (* <- active_sc_agent;; *);;
+	*);
+=> nrel_inclusion: ..sc_agent_of_search_of_all_input_arcs_scp_realization
+	(*
+		<- platform_independent_abstract_sc_agent;;
+		<= nrel_sc_agent_program: 
+		{
+			agent_proc_search_all_input;
+			proc_search_all_input
+		};;
 	*);;
 
 ..sc_agent_of_search_of_all_input_arcs_initiation_condition
@@ -194,6 +222,16 @@ sc_agent_of_search_of_all_input_arcs_with_rel
 		};;
 		
 		-> ..sc_agent_of_search_of_all_input_arcs_with_rel_agent (* <- active_sc_agent;; *);;
+	*);
+=> nrel_inclusion: ..sc_agent_of_search_of_all_input_arcs_with_rel_scp_realization
+	(*
+		<- platform_independent_abstract_sc_agent;;
+		<= nrel_sc_agent_program: 
+		{
+			agent_proc_search_all_input_with_rel;
+			proc_search_all_input_with_rel;
+			proc_search_all_input
+		};;
 	*);;
 
 ..sc_agent_of_search_of_all_input_arcs_with_rel_initiation_condition
