@@ -1,0 +1,20 @@
+scg_code => nrel_main_idtf: 
+	[SCg-код] (* <- lang_ru;; *);
+	[SCg-code] (* <- lang_en;; *); 
+=> nrel_idtf: 
+	[Semantic Computer graphic Сode] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	..scg_code_note
+	(*
+	<- sc_note;;
+	<= nrel_sc_text_translation:	
+		..translation_scg_code_note
+		(*
+		-> rrel_example:
+	[
+	SCg-код (Semantic Computer graphic Сode) – это один из возможных способов визуализации (графического изображения) sc-конструкций на плоскости.
+	SCg-код условно разделяется на 4 уровня сложности. Все уровни равнозначны по возможностям представления знаний, однако тексты более высоких уровней описывают sc-конструкции более лаконично и удобно. Введение уровней призвано облегчить работу разработчиков баз знаний при наборе sc.g-текстов.
+	] (* <- lang_en;; *);;
+		*);;
+	*);;
