@@ -10,3 +10,29 @@ sc_node_role_relation ->
         rrel_9;
         rrel_10;
         rrel_11;;
+
+order_role_relation ->
+        rrel_1;
+        rrel_2;
+        rrel_3;
+        rrel_4;
+        rrel_5;
+        rrel_6;
+        rrel_7;
+        rrel_8;
+        rrel_9;
+        rrel_10;
+        rrel_11;;
+
+order_role_relation
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[ролевое порядковое отношение]
+	(* 
+	<- lang_ru;; 
+	*);
+=> nrel_main_idtf:
+	[order role relation]
+	(* 
+	<- lang_en;; 
+	*);;

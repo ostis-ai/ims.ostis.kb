@@ -1,0 +1,165 @@
+nrel_idtf
+<- sc_node_norole_relation;
+<- identification_relation;
+<= nrel_inclusion: 
+	nrel_identification;
+	
+=>nrel_main_idtf:
+	[sc-идентификатор*]
+	(*
+	<- lang_ru;;
+	*);
+	[sc-identifier*]
+	(*
+	<- lang_en;;
+	*);
+	
+=> nrel_idtf: 
+	[идентификатор*] 
+	(*
+	<- lang_ru;;
+	*);
+	[identifier*] 
+	(*
+	<- lang_en;; 
+	*);
+
+<- rrel_key_sc_element:
+	[*^"file://neighborhoods/nrel_idtf.scsi"*]
+	(*
+	-> nrel_system_identifier;;
+	<- typical_sc_neighborhood;;
+	*);;
+	
+nrel_main_idtf
+<- sc_node_norole_relation;
+<- identification_relation;
+<= nrel_inclusion: 
+	nrel_identification;
+
+=> nrel_main_idtf: 
+	[основной sc-идентификатор*] 
+	(*
+	<- lang_ru;;
+	*);
+	[main sc-identifier*] 
+	(*
+	<- lang_en;; 
+	*);
+	
+=> nrel_idtf: 
+	[основной идентификатор*] 
+	(*
+	<- lang_ru;;
+	*);
+	[main identifier*] 
+	(*
+	<- lang_en;; 
+	*);;
+	
+nrel_nearly_main_idtf
+<- sc_node_norole_relation;
+
+=> nrel_main_idtf:
+	[почти основной sc-идентификатор*]
+	(*
+	<- lang_ru;;
+	*);
+	[nearly main sc-identifier*]
+	(*
+	<- lang_en;;
+	*);;
+
+nrel_sc_element_identification
+<- sc_node_norole_relation;
+
+=> nrel_main_idtf:
+	[идентификация sc-элемента*]
+	(*
+	<- lang_ru;;
+	*);
+	[sc-element identification]
+	(*
+	<- lang_en;;
+	*);
+
+=> nrel_inclusion:
+	nrel_sc_element_main_identification;
+
+<- rrel_key_sc_element: 
+	[*^"file://neighborhoods/nrel_sc_element_identification.scsi"*]
+	(* <- typical_sc_neighborhood;; *);;
+	
+nrel_sc_element_main_identification
+<- sc_node_norole_relation;
+
+=> nrel_main_idtf:
+	[основная идентификация sc-элемента*]
+	(*
+	<- lang_ru;;
+	*);
+	[sc-element basic identification*]
+	(*
+	<- lang_en;;
+	*);;
+
+nrel_sc_element_nearly_main_identification
+<- sc_node_norole_relation;
+
+=> nrel_main_idtf:
+	[почти основная идентификация sc-элемента*]
+	(*
+	<- lang_ru;;
+	*);
+	[nearly main sc-element identification*]
+	(*
+	<- lang_en;;
+	*);;
+
+nrel_system_identifier 
+<- sc_node_norole_relation;
+<- identification_relation;
+<= nrel_inclusion: 
+	nrel_identification;
+
+=> nrel_idtf:
+	[системный идентификатор*]
+	(*
+	<- lang_ru;;
+	*);
+	[system identifier*]
+	(*
+	<- lang_en;;
+	*);
+
+=> nrel_main_idtf:
+	[системный sc-идентификатор*]
+	(*
+	<- lang_ru;;
+	*);
+	[system sc-identifier*]
+	(*
+	<- lang_en;;
+	*);;
+
+sc_idtf
+=> nrel_main_idtf:
+	[sc-идентификатор]
+	(*
+	<- lang_ru;;
+	*);
+	[sc-identifier]
+	(*
+	<- lang_en;;
+	*);
+
+<- rrel_key_sc_element:
+	..note
+	(*
+	<- sc_note;;
+	<= nrel_sc_text_translation:
+		..translation
+		(* 
+		-> [Существенно подчеркнуть, что выбор sc-идентификаторов влияет только на первичное восприятие принимаемых сообщений и на конечный этап синтеза передаваемых сообщений, но никак не влияет на рассуждения] (* <- lang_ru;; *);; 
+		*);;
+	*);;

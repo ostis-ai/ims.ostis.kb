@@ -1,0 +1,621 @@
+/* sc-agents description */
+
+abstract_sc_agent
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[абстрактный sc-агент]
+	(*
+	<- lang_ru;;
+	*);
+	[abstract sc-agent]
+	(*
+	<- lang_en;;
+	*);
+	<- rrel_key_sc_element:
+		..key_node_abstract_sc_agent
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_abstract_sc_agent
+			(*
+			-> rrel_example:
+				"file://introduction_section_unificated_models_of_knowledge_process_machines_htmls/explanation_for_abstract_sc_agent.html"
+				(*
+				<- lang_ru;;
+				*);;
+			*);;
+		*);
+
+	<= nrel_subdividing: 
+	{
+		atomic_abstract_sc_agent;
+		non_atomic_abstract_sc_agent
+	};;
+
+atomic_abstract_sc_agent
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[атомарный абстрактный sc-агент]
+	(*
+	<- lang_ru;;
+	*);
+	[atomic abstract sc-agent]
+	(*
+	<- lang_en;;
+	*);
+	<- rrel_key_sc_element:
+		..key_node_atomic_abstract_sc_agent
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_atomic_abstract_sc_agent
+			(*
+			-> rrel_example:
+				"file://introduction_section_unificated_models_of_knowledge_process_machines_htmls/explanation_for_atomic_abstract_sc_agent.html"
+				(*
+				<- sc_machine_file;;
+				<- lang_ru;;
+				*);;
+			*);;
+		*);
+	<= nrel_subdividing: 
+	{
+		platform_dependent_abstract_sc_agent;
+		platform_independent_abstract_sc_agent
+	};;
+
+non_atomic_abstract_sc_agent
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[неатомарный абстрактный sc-агент]
+	(*
+	<- lang_ru;;
+	*);
+	[non-atomic abstract sc-agent]
+	(*
+	<- lang_en;;
+	*);
+	<- rrel_key_sc_element:
+		..key_node_non_atomic_abstract_sc_agent
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_non_atomic_abstract_sc_agent
+			(*
+			-> rrel_example:
+				"file://introduction_section_unificated_models_of_knowledge_process_machines_htmls/explanation_for_non_atomic_abstract_sc_agent.html"
+				(*
+				<- sc_machine_file;;
+				<- lang_ru;;
+				*);;
+			*);;
+		*);;
+
+platform_dependent_abstract_sc_agent
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[платформенно-зависимый абстрактный sc-агент]
+	(*
+	<- lang_ru;;
+	*);
+	[platform-dependent abstract sc-agent]
+	(*
+	<- lang_en;;
+	*);
+	<- rrel_key_sc_element:
+		..key_node_platform_dependent_abstract_sc_agent
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_platform_dependent_abstract_sc_agent
+			(*
+			-> rrel_example:
+				"file://introduction_section_unificated_models_of_knowledge_process_machines_htmls/explanation_for_platform_dependent_abstract_sc_agent.html"
+				(*
+				<- sc_machine_file;;
+				<- lang_ru;;
+				*);;
+			*);;
+		*);;
+
+platform_independent_abstract_sc_agent
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[платформенно-независимый абстрактный sc-агент]
+	(*
+	<- lang_ru;;
+	*);
+	[platform-independent abstract sc-agent]
+	(*
+	<- lang_en;;
+	*);
+	<- rrel_key_sc_element:
+		..key_node_platform_independent_abstract_sc_agent
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_platform_independent_abstract_sc_agent
+			(*
+			-> rrel_example:
+				"file://introduction_section_unificated_models_of_knowledge_process_machines_htmls/explanation_for_platform_independent_abstract_sc_agent.html"
+				(*
+				<- sc_machine_file;;
+				<- lang_ru;;
+				*);;
+			*);;
+		*);;
+
+nrel_abstract_sc_agent_decomposition
+<- sc_node_norole_relation;
+<- decomposition_relation;
+<- quasybinary_relation;
+=> nrel_main_idtf:
+	[декомпозиция абстрактного sc-агента*]
+	(*
+	<- lang_ru;;
+	*);
+	[abstract sc-agent decomposition*]
+	(*
+	<- lang_en;;
+	*);
+	<- rrel_key_sc_element:
+		..key_node_nrel_abstract_sc_agent_decomposition
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_nrel_abstract_sc_agent_decomposition
+			(*
+			-> rrel_example:
+				"file://introduction_section_unificated_models_of_knowledge_process_machines_htmls/explanation_for_nrel_abstract_sc_agent_decomposition.html"
+				(*
+				<- sc_machine_file;;
+				<- lang_ru;;
+				*);;
+			*);;
+		*);;
+
+sc_agent
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[sc-агент]
+	(*
+	<- lang_ru;;
+	*);
+	[sc-agent]
+	(*
+	<- lang_en;;
+	*);
+	<- rrel_key_sc_element:
+		..key_node_sc_agent
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_sc_agent
+			(*
+			-> rrel_example:
+				"file://introduction_section_unificated_models_of_knowledge_process_machines_htmls/explanation_for_sc_agent.html"
+				(*
+				<- sc_machine_file;;
+				<- lang_ru;;
+				*);;
+			*);;
+		*);;
+
+active_sc_agent
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[активный sc-агент]
+	(*
+	<- lang_ru;;
+	*);
+	[active sc-agent]
+	(*
+	<- lang_en;;
+	*);
+	<- rrel_key_sc_element:
+		..key_node_active_sc_agent
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_active_sc_agent
+			(*
+			-> rrel_example:
+				"file://introduction_section_unificated_models_of_knowledge_process_machines_htmls/explanation_for_active_sc_agent.html"
+				(*
+				<- sc_machine_file;;
+				<- lang_ru;;
+				*);;
+			*);;
+		*);;
+
+nrel_sc_agent_key_sc_elements
+<- quasybinary_relation;
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[ключевые sc-элементы sc-агента*]
+	(*
+	<- lang_ru;;
+	*);
+	[sc-agent key sc-elements*]
+	(*
+	<- lang_en;;
+	*);
+	<- rrel_key_sc_element:
+		..key_node_nrel_sc_agent_key_sc_elements
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_nrel_sc_agent_key_sc_elements
+			(*
+			-> rrel_example:
+				"file://introduction_section_unificated_models_of_knowledge_process_machines_htmls/explanation_for_nrel_sc_agent_key_sc_elements.html"
+				(*
+				<- sc_machine_file;;
+				<- lang_ru;;
+				*);;
+			*);;
+		*);;
+
+nrel_sc_agent_program
+<- sc_node_norole_relation;
+<- quasybinary_relation;
+=> nrel_main_idtf:
+	[программа sc-агента*]
+	(*
+	<- lang_ru;;
+	*);
+	[sc-agent program*]
+	(*
+	<- lang_en;;
+	*);
+	<- rrel_key_sc_element:
+		..key_node_nrel_sc_agent_program
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_nrel_sc_agent_program
+			(*
+			-> rrel_example:
+				"file://introduction_section_unificated_models_of_knowledge_process_machines_htmls/explanation_for_nrel_sc_agent_program.html"
+				(*
+				<- sc_machine_file;;
+				<- lang_ru;;
+				*);;
+			*);;
+		*);;
+
+nrel_primary_initiation_condition
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[первичное условие инициирования*]
+	(*
+	<- lang_ru;;
+	*);
+	[primary initiation condition*]
+	(*
+	<- lang_en;;
+	*);
+	<- rrel_key_sc_element:
+		..key_node_nrel_primary_initiation_condition
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_nrel_primary_initiation_condition
+			(*
+			-> rrel_example:
+				"file://introduction_section_unificated_models_of_knowledge_process_machines_htmls/explanation_for_nrel_primary_initiation_condition.html"
+				(*
+				<- sc_machine_file;;
+				<- lang_ru;;
+				*);;
+			*);;
+		*);;
+
+nrel_initiation_condition_and_result
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[условие инициирования и результат*]
+	(*
+	<- lang_ru;;
+	*);
+	[initiation condition and result*]
+	(*
+	<- lang_en;;
+	*);
+	<- rrel_key_sc_element:
+		..key_node_nrel_initiation_condition_and_result
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_nrel_initiation_condition_and_result
+			(*
+			-> rrel_example:
+				"file://introduction_section_unificated_models_of_knowledge_process_machines_htmls/explanation_for_nrel_initiation_condition_and_result.html"
+				(*
+				<- sc_machine_file;;
+				<- lang_ru;;
+				*);;
+			*);;
+		*);;
+
+sc_description_of_sc_agent_behavior
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[sc-описание поведения sc-агента]
+	(*
+	<- lang_ru;;
+	*);
+	[sc-description of sc-agent behavior]
+	(*
+	<- lang_en;;
+	*);
+	<- rrel_key_sc_element:
+		..key_node_sc_description_of_sc_agent_behavior
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_sc_description_of_sc_agent_behavior
+			(*
+			-> rrel_example:
+				"file://introduction_section_unificated_models_of_knowledge_process_machines_htmls/explanation_for_sc_description_of_sc_agent_behavior.html"
+				(*
+				<- sc_machine_file;;
+				<- lang_ru;;
+				*);;
+			*);;
+		*);;
+
+/* Events description */
+sc_event
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[sc-событие]
+	(*
+	<- lang_ru;;
+	*);
+	[sc-event]
+	(*
+	<- lang_en;;
+	*);
+	<- rrel_key_sc_element:
+		..key_node_sc_event
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_sc_event
+			(*
+			-> rrel_example:
+				"file://introduction_section_unificated_models_of_knowledge_process_machines_htmls/explanation_for_sc_event.html"
+				(*
+				<- sc_machine_file;;
+				<- lang_ru;;
+				*);;
+			*);;
+		*);
+	<= nrel_subdividing: 
+	{
+		sc_event_add_output_arc; /* calls after adding */
+		sc_event_add_input_arc; /* calls after adding */
+		sc_event_add_incident_edge; /* calls before removing */
+		sc_event_remove_output_arc; /* calls before removing */
+		sc_event_remove_input_arc; /* calls before removing */
+		sc_event_remove_incident_edge; /* calls before removing */
+		sc_event_sc_element_removing; /* calls before deleting */
+		sc_event_change_link_content
+	};;
+
+sc_event_add_output_arc
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[sc-событие добавления выходящей sc-дуги]
+	(*
+	<- lang_ru;;
+	*);
+	[sc-event of output sc-arc addition]
+	(*
+	<- lang_en;;
+	*);
+	<- rrel_key_sc_element:
+		..key_node_sc_event_add_output_arc
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_sc_event_add_output_arc
+			(*
+			-> rrel_example:
+				"file://introduction_section_unificated_models_of_knowledge_process_machines_htmls/explanation_for_sc_event_add_output_arc.html"
+				(*
+				<- sc_machine_file;;
+				<- lang_ru;;
+				*);;
+			*);;
+		*);;
+
+sc_event_add_input_arc
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[sc-событие добавления входящей sc-дуги]
+	(*
+	<- lang_ru;;
+	*);
+	[sc-event of input sc-arc addition]
+	(*
+	<- lang_en;;
+	*);
+	<- rrel_key_sc_element:
+		..key_node_sc_event_add_input_arc
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_sc_event_add_input_arc
+			(*
+			-> rrel_example:
+				"file://introduction_section_unificated_models_of_knowledge_process_machines_htmls/explanation_for_sc_event_add_input_arc.html"
+				(*
+				<- sc_machine_file;;
+				<- lang_ru;;
+				*);;
+			*);;
+		*);;
+
+sc_event_add_incident_edge
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[sc-событие добавления инцидентного sc-ребра]
+	(*
+	<- lang_ru;;
+	*);
+	[sc-event of incident sc-edge addition]
+	(*
+	<- lang_en;;
+	*);
+	<- rrel_key_sc_element:
+		..key_node_sc_event_add_incident_edge
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_sc_event_add_incident_edge
+			(*
+			-> rrel_example:
+				"file://introduction_section_unificated_models_of_knowledge_process_machines_htmls/explanation_for_sc_event_add_incident_edge.html"
+				(*
+				<- sc_machine_file;;
+				<- lang_ru;;
+				*);;
+			*);;
+		*);;
+
+sc_event_remove_output_arc
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[sc-событие удаления выходящей sc-дуги]
+	(*
+	<- lang_ru;;
+	*);
+	[sc-event of output sc-arc removing]
+	(*
+	<- lang_en;;
+	*);
+	<- rrel_key_sc_element:
+		..key_node_sc_event_remove_output_arc
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_sc_event_remove_output_arc
+			(*
+			-> rrel_example:
+				"file://introduction_section_unificated_models_of_knowledge_process_machines_htmls/explanation_for_sc_event_remove_output_arc.html"
+				(*
+				<- sc_machine_file;;
+				<- lang_ru;;
+				*);;
+			*);;
+		*);;
+
+sc_event_remove_input_arc
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[sc-событие удаления входящей sc-дуги]
+	(*
+	<- lang_ru;;
+	*);
+	[sc-event of input sc-arc removing]
+	(*
+	<- lang_en;;
+	*);
+	<- rrel_key_sc_element:
+		..key_node_sc_event_remove_input_arc
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_sc_event_remove_input_arc
+			(*
+			-> rrel_example:
+				"file://introduction_section_unificated_models_of_knowledge_process_machines_htmls/explanation_for_sc_event_remove_input_arc.html"
+				(*
+				<- sc_machine_file;;
+				<- lang_ru;;
+				*);;
+			*);;
+		*);;
+
+sc_event_remove_incident_edge
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[sc-событие удаления инцидентного sc-ребра]
+	(*
+	<- lang_ru;;
+	*);
+	[sc-event of incident sc-edge removing]
+	(*
+	<- lang_en;;
+	*);
+	<- rrel_key_sc_element:
+		..key_node_sc_event_remove_incident_edge
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_sc_event_remove_incident_edge
+			(*
+			-> rrel_example:
+				"file://introduction_section_unificated_models_of_knowledge_process_machines_htmls/explanation_for_sc_event_remove_incident_edge.html"
+				(*
+				<- sc_machine_file;;
+				<- lang_ru;;
+				*);;
+			*);;
+		*);;
+
+sc_event_sc_element_removing
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[sc-событие удаления sc-элемента]
+	(*
+	<- lang_ru;;
+	*);
+	[sc-event of sc-element removing]
+	(*
+	<- lang_en;;
+	*);
+	<- rrel_key_sc_element:
+		..key_node_sc_event_sc_element_removing
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_sc_event_sc_element_removing
+			(*
+			-> rrel_example:
+				"file://introduction_section_unificated_models_of_knowledge_process_machines_htmls/explanation_for_sc_event_sc_element_removing.html"
+				(*
+				<- sc_machine_file;;
+				<- lang_ru;;
+				*);;
+			*);;
+		*);;
+
+sc_event_change_link_content
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[sc-событие изменения содержимого sc-ссылки]
+	(*
+	<- lang_ru;;
+	*);
+	[sc-event of sc-link content change]
+	(*
+	<- lang_en;;
+	*);
+	<- rrel_key_sc_element:
+		..key_node_sc_event_change_link_content
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_sc_event_change_link_content
+			(*
+			-> rrel_example:
+				"file://introduction_section_unificated_models_of_knowledge_process_machines_htmls/explanation_for_sc_event_change_link_content.html"
+				(*
+				<- sc_machine_file;;
+				<- lang_ru;;
+				*);;
+			*);;
+		*);;
