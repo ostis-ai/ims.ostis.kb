@@ -41,11 +41,11 @@ scs_divider_simple_colon <= scs_nrel_representation_scs_editor:
 scs_divider_simple_colon <= scs_nrel_representation_standart_editor:
 	[:];;
 scs_divider_simple_colon <- rrel_key_sc_element:
-		..scs_divider_simple_colon_note
+		..scs_divider_simple_colon_explanation
 		(*
-		<- sc_note;;
+		<- sc_explanation;;
 		<= nrel_sc_text_translation:	
-			..translation_scs_divider_simple_colon_note_ru
+			..translation_scs_divider_simple_colon_explanation_ru
 			(*
 			-> rrel_example:
 				[Является изображением константных позитивных стационарных sc-дуг, проведенных из каждого из именуемых узлов в те sc-коннекторы, изображение которых находится перед перечислением имен вышеупомянутых узлов. Если указанные разделители встречаются в предложении несколько раз, то такая запись указывает, что все уточнения типа относятся к одному и тому же коннектору.]
@@ -75,11 +75,11 @@ scs_divider_double_colon <= scs_nrel_representation_scs_editor:
 scs_divider_double_colon <= scs_nrel_representation_standart_editor:
 	[::];;
 scs_divider_double_colon <- rrel_key_sc_element:
-		..scs_divider_double_colon_note
+		..scs_divider_double_colon_explanation
 		(*
-		<- sc_note;;
+		<- sc_explanation;;
 		<= nrel_sc_text_translation:	
-			..translation_scs_divider_double_colon_note_ru
+			..translation_scs_divider_double_colon_explanation_ru
 			(*
 			-> rrel_example:
 				[Является изображением переменных позитивных стационарных sc-дуг, проведенных из каждого из именуемых узлов в те sc-коннекторы, изображение которых находится перед перечислением имен вышеупомянутых узлов. Если указанные разделители встречаются в предложении несколько раз, то такая запись указывает, что все уточнения типа относятся к одному и тому же коннектору.]
@@ -95,11 +95,11 @@ scs_divider_simple_plus <= scs_nrel_representation_scs_editor:
 scs_divider_simple_plus <= scs_nrel_representation_standart_editor:
 	[+];;
 scs_divider_simple_plus <- rrel_key_sc_element:
-		..scs_divider_simple_plus_note
+		..scs_divider_simple_plus_explanation
 		(*
-		<- sc_note;;
+		<- sc_explanation;;
 		<= nrel_sc_text_translation:	
-			..translation_scs_divider_simple_plus_note_ru
+			..translation_scs_divider_simple_plus_explanation_ru
 			(*
 			-> rrel_example:
 				[Является изображением константной позитивной стационарной sc-дуги, проведенной из узла, имя которого находится слева от данного разделителя, в sc-коннектор, связывающий модификатор, имя которого стоит после данного разделителя, и модифицируемый указанным модификатором sc-коннектор. Если указанные разделители встречаются в предложении несколько раз, то такая запись указывает, что все уточнения типа относятся к одному и тому же коннектору.]
@@ -127,11 +127,11 @@ scs_divider_double_plus <= scs_nrel_representation_scs_editor:
 scs_divider_double_plus <= scs_nrel_representation_standart_editor:
 	[++];;
 scs_divider_double_plus <- rrel_key_sc_element:
-		..scs_divider_double_plus_note
+		..scs_divider_double_plus_explanation
 		(*
-		<- sc_note;;
+		<- sc_explanation;;
 		<= nrel_sc_text_translation:	
-			..translation_scs_divider_double_plus_note_ru
+			..translation_scs_divider_double_plus_explanation_ru
 			(*
 			-> rrel_example:
 	[Является изображением переменной позитивной стационарной sc-дуги, проведенной из узла, имя которого находится слева от данного разделителя, в sc-коннектор, связывающий модификатор, имя которого стоит после данного разделителя, и модифицируемый указанным модификатором sc-коннектор. Если указанные разделители встречаются в предложении несколько раз, то такая запись указывает, что все уточнения типа относятся к одному и тому же коннектору.]
@@ -149,11 +149,11 @@ scs_divider_subsentence <= scs_nrel_representation_scs_editor:
 	[(*...*)]
 };;
 scs_divider_subsentence <- rrel_key_sc_element:
-		..scs_divider_subsentence_note
+		..scs_divider_subsentence_explanation
 		(*
-		<- sc_note;;
+		<- sc_explanation;;
 		<= nrel_sc_text_translation:	
-			..translation_scs_divider_subsentence_note_ru
+			..translation_scs_divider_subsentence_explanation_ru
 			(*
 			-> rrel_example:
 	[Указывает границы встроенного sc.s-предложения в рамках sc.s-предложения. Если встроенное sc.s-предложение не содержит разделителей точка с запятой, то при записи границы (*...*) могут быть опущены]
@@ -177,11 +177,11 @@ scs_divider_simple_semicolon <= scs_nrel_representation_scs_editor:
 scs_divider_simple_semicolon <= scs_nrel_representation_standart_editor:
 	[;];;
 scs_divider_simple_semicolon <- rrel_key_sc_element:
-		..scs_divider_simple_semicolon_note
+		..scs_divider_simple_semicolon_explanation
 		(*
-		<- sc_note;;
+		<- sc_explanation;;
 		<= nrel_sc_text_translation:	
-			..translation_scs_divider_simple_semicolon_note_ru
+			..translation_scs_divider_simple_semicolon_explanation_ru
 			(*
 			-> rrel_example:
 	[Является разделителем компонентов сложного sc.s-предложения.
@@ -215,11 +215,11 @@ scs_divider_double_semicolon <= scs_nrel_representation_scs_editor:
 scs_divider_double_semicolon <= scs_nrel_representation_standart_editor:
 	[;;];;
 scs_divider_double_semicolon <- rrel_key_sc_element:
-		..scs_divider_double_semicolon_note
+		..scs_divider_double_semicolon_explanation
 		(*
-		<- sc_note;;
+		<- sc_explanation;;
 		<= nrel_sc_text_translation:	
-			..translation_scs_divider_double_semicolon_note_ru
+			..translation_scs_divider_double_semicolon_explanation_ru
 			(*
 			-> rrel_example:
 				[Разделяет sc.s-предложения в рамках sc.s-текста]
