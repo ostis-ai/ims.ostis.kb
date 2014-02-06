@@ -1,0 +1,43 @@
+scn_code_4_level => nrel_main_idtf: 
+	[SCn-код уровня 4] (* <- lang_ru;; *);
+	[SCn-code level 4] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	..scn_code_4_level_explanation
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:	
+		..translation_scn_code_4_level_explanation
+		(*
+		-> rrel_example:
+	[
+	В SCn-коде уровня 4 улучшается визуальное восприятие текстов за счет введения разделителя перечисления и удаления некоторых частей sc.s-предложений.
+	На данном уровне вводится разделитель перечисления •. Данный разделитель используется в следующих случаях:
+	1) При отображении составных идентификаторов {...} или <...>
+	2) При отображении уточнений типа sc.s-коннектора с использованием разделителя двоеточие. 
+	При этом, если модификаторы sc.s-коннектора полностью совпадают для всех sc-элементов, стоящих в правой части sc.s-коннектора, то перечисляются только сами sc-элементы.
+	В противном случае перечисление может происходить в несколько уровней, при этом на каждом уровне перечисляются sc-элементы и модификаторы, имеющие общую часть на вышестоящем уровне.
+	3) При использовании разделителя небинарная связка ⊖ (данный разделитель не имеет аналога в SCs-коде).
+	4) При описании идентификаторов sc-элементов используется разделитель равенства = (синтаксически аналогичный sc.s-коннектору равенства).
+	]
+	(* <- lang_ru;; *);;
+		*);;
+	*);
+
+-> rrel_example:
+		"file://../images/scn_text_example_4_1.png";
+-> rrel_example:
+		"file://../images/scn_text_example_4_2.png"
+		(*
+			<=> nrel_semantic_equivalence: "file://../images/scn_text_example_4_2_comment.png";;
+		*);
+-> rrel_example:
+		"file://../images/scn_text_example_4_3.png"
+		(*
+			<=> nrel_semantic_equivalence: "file://../images/scn_text_example_4_3_comment.png";;
+		*);
+-> rrel_example:
+		"file://../images/scn_text_example_4_4.png"
+		(*
+			<=> nrel_semantic_equivalence: "file://../images/scn_text_example_4_4_comment.png";;
+		*);;

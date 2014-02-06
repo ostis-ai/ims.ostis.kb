@@ -1,0 +1,169 @@
+scs_code_3_level 
+=> nrel_main_idtf: 
+	[SCs-код уровня 3] (*<-lang_ru;;*) ;
+	[SCs-level code 3] (*<-lang_en;;*) ;
+
+<- rrel_key_sc_element:
+		..scs_code_level_3_explanation
+		(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:	
+			..translation_scs_code_level_3_ru
+			(*
+			-> rrel_example:
+	[
+		На данном уровне SCs-кода вводятся дополнительные лаконичные средства описания типологии sc-коннекторов	- так называемые модификаторы и метамодификаторы sc.s-коннекторов.
+	] (*<-lang_ru;;*) ;;
+			*);;
+
+		<= nrel_sc_text_translation:	
+			..translation_scs_code_level_3_en
+			(*
+			-> rrel_example:
+	[
+		Additional concise tools for description of the typology, that so-called modifiers and meta-modifiers of sc-connectors are introduced at this level of SCs-code.
+	] (*<-lang_en;;*) ;;
+			*);;
+	*);;
+
+scs_sentence_3_level 
+=> nrel_main_idtf: 
+	[sc.s-предложение уровня 3] (*<-lang_ru;;*) ;
+	[sc.s-3 level sentences] (*<-lang_en;;*) ;
+
+<- rrel_key_sc_element:
+		..scs_sentence_level_3_explanation
+		(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:	
+			..translation_scs_sentence_level_3_ru
+			(*
+			-> rrel_example:
+	[
+	В sc.s-предложениях уровня 3 обеспечивается возможность сокращенно записывать уточнения типов sc-коннекторов, для чего вводятся sc.s-разделители : и :: (модификаторы sc-коннекторов), а также + и ++ (метамодификаторы sc-коннекторов).
+	Если указанные разделители встречаются в предложении несколько раз, то такая запись указывает, что все уточнения типа относятся к одному и тому же sc-коннектору.
+	Допускается использование уточнения типа sc-коннектора в составе неатомарных идентификаторов, введенных в sc.s-предложениях уровня 2, например (v1 => r1 : r2: v2).
+	Использование неатомарных идентификаторов вида <...>, {...}, \[*...*\] и \[...\] не разрешается.
+	](*<-lang_ru;;*) ;;
+			*);;
+
+		<= nrel_sc_text_translation:	
+			..translation_scs_sentence_level_3_en
+			(*
+			-> rrel_example:
+	[
+	It is possible to abbreviated record clarifying the types of sc-connectors for which we introduced sc.s-delimiters : and :: (modifiers sc-connectors) in sc.s-3 level sentences.
+If these delimiters are found in a sentence several times, the record points that all the updates type refer to the same sc-connector.
+You can use refinement type of sc-connectors, as part of non-atomic identifiers entered in the proposals, for example (v1 => r1 : r2: v2). 
+Using non-atomic identifiers such as  <...>, {...}, \[* ... *\], \[...\] is not permitted.
+	](*<-lang_en;;*) ;;
+			*);;
+	*);
+
+-> rrel_example:
+	[
+		Четырехугк(ТчкА;ТчкВ;ТчкС;ТчкD) => сторона* : Отр(ТчкВ;ТчкС);;
+	] (*<-lang_ru;;*) ;
+-> rrel_example:
+	[
+		Tetragon(PntА;PntВ;PntС;PntD) => side* : Seg(PntВ;PntС);;
+	](*<-lang_en;;*) ;
+-> rrel_example:
+	[
+		треугольник => идентификатор* : основной англоязычный идентификатор*: \[triangle\];;
+	] (*<-lang_ru;;*) ;
+-> rrel_example:
+	[
+		triangle => identifier* : main English-language identifier*:  \[triangle\];;
+	](*<-lang_en;;*) ;;
+	
+
+scs_text_3_level 
+=> nrel_main_idtf: 
+	[sc.s-текст уровня 3] (*<-lang_ru;;*) ;
+	[sc.s-3 level-text] (*<-lang_en;;*) ;
+
+<- rrel_key_sc_element:
+		..scs_text_level_3_explanation
+		(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:	
+			..translation_scs_text_level_3_ru
+			(*
+			-> rrel_example:
+	[sc.s-текст уровня 3 - sc.s-текст, содержащий хотя бы одно sc.s-предложение уровня 3 и не содержащий sc.s-предложений уровня 4 и выше.
+	](*<-lang_ru;;*) ;;
+			*);;
+
+		<= nrel_sc_text_translation:	
+			..translation_scs_text_level_3_en
+			(*
+			-> rrel_example:
+	[sc.s-3 level-text is sc.s-text, that contains at least one sc.s-3 level sentence and doesn’t contain  sc.s-4 level sentence and above.
+	] (*<-lang_en;;*) ;;
+			*);;
+		*);
+
+-> rrel_example:
+	[
+	Четырехугк(ТчкА;ТчкВ;ТчкС;ТчкD) => сторона* : включение* : Отр(ТчкВ;ТчкС);;
+	Четырехугк(ТчкА;ТчкВ;ТчкС;ТчкD) => сторона* : включение* : Отр(ТчкС;ТчкD);;
+	Треугк(ТчкВ;ТчкС;ТчкD) => сторона* : включение* : Отр(ТчкВ;ТчкС);;
+	Треугк(ТчкВ;ТчкС;ТчкD) => сторона* : включение* : Отр(ТчкС;ТчкD);;
+	Треугк(ТчкВ;ТчкС;ТчкD) => сторона*: включение* : Отр(ТчкB;ТчкD);;
+	четырехугольник ∍ Четырехугк(ТчкА;ТчкВ;ТчкС;ТчкD);;
+	треугольник ∍ Треугк(ТчкВ;ТчкС;ТчкD);;
+	Треугк(ТчкВ;ТчкС;ТчкD) <= декомпозиция фигуры*: link1;;
+	link1 ∍ Отр(ТчкВ;ТчкС);;
+	link1 ∍ Отр(ТчкC;ТчкD);;
+	link1 ∍ Отр(ТчкВ;ТчкD);;
+	]
+	(*
+		<- rrel_key_sc_element:
+		..scs_text_level_3_example_explanation
+		(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:	
+			..translation_scs_text_level_3_example_ru
+			(*
+			-> rrel_example:
+		[Заметим, что по сравнению с представлением в SCs-коде 2 уровня, данный пример содержит меньше sc.s-предложений, поскольку несколько sc.s-предложений уровня 2 могут быть объединены в одно sc.s-предложение уровня 3. Также в данном примере отсутствуют ограничители (  ), удаление которых стало возможным благодаря введению разделителя :.	]
+		(*<-lang_ru;;*);;
+			*);;
+		*);;
+	*);
+
+-> rrel_example:
+	[
+	Tetragon(PntА;PntВ;PntС;PntD) => side* : inclusion* : Seg(PntВ;PntС);;
+Tetragon(PntА;PntВ;PntС;PntD) => side* : inclusion* : Seg(PntС;PntD);;
+Triangle(PntВ;PntС;PntD) => side* : inclusion* : Seg(PntВ;PntС);;
+Triangle(PntВ;PntС;PntD) => side* : inclusion* : Seg(PntС;PntD);;
+Triangle(PntВ;PntС;PntD) => side*: inclusion* : Seg(PntB;PntD);;
+	tetragon ∍ Tetragon(PntА;PntВ;PntС;PntD);;
+	triangle ∍ Triangle(PntВ;PntС;PntD);;
+	Triangle(PntВ;PntС;PntD) <= decomposition of figure*: link1;;
+	link1 ∍ Seg(PntВ;PntС);;
+	link1 ∍ Seg(PntC;PntD);;
+	link1 ∍ Seg(PntВ;PntD);;
+	]
+	(*
+	<- rrel_key_sc_element:
+		..scs_text_level_3_example_explanation2
+		(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:	
+			..translation_scs_text_level_3_example_en
+			(*
+			-> rrel_example:
+		[Note that compared with the presentation in the SC.s-2 level-code, the sample contains fewer sc.s-sentences, because several sc.s-2 level sentence can be combined into a sc.s-3 level sentence. Also in this example, there are no limits ( ), the removal of which became possible thanks to the introduction of the delimiter:.
+		](*<-lang_en;;*);;
+			*);;
+		*);;
+	*);
+
+-> rrel_example:
+	[X => r1: r2: r3: Y;;]
+	(*
+		<=> nrel_semantic_equivalence: "file://../images/scs_text_example_3.png";;
+	*);;

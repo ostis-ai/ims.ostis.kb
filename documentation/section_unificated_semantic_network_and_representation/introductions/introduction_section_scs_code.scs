@@ -1,0 +1,14 @@
+introduction_section_scn_code
+=> nrel_main_idtf:
+	[Введение. Раздел. SCn-код]
+	(*
+	<- lang_ru;;
+	*);
+	[Introduction. Section. SCn-code]
+	(*
+	<- lang_en;;
+	*);;
+
+introduction_section_scn_code = [*^"file://introduction_section_scn_code.scsi"*];;
+
+rrel_key_sc_element -> (introduction_section_scn_code -> scn_code);;

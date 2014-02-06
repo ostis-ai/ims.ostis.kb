@@ -1,0 +1,77 @@
+scg_code_3_level => nrel_main_idtf: 
+	[SCg-код уровня 3] (* <- lang_ru;; *);
+	[SCg-code level 3] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	..scg_code_3_level_explanation1
+	(*
+	<- sc_explanation;;
+	=> hypermedia_nrel_illustration: 
+		"file://files/level2_moon_prop.png"
+		(*
+		<- rrel_key_sc_element:
+			..scg_code_3_level_comment1
+			(*
+			<- sc_comment;;
+			<= nrel_sc_text_translation:
+				..translation_scg_code_3_level_comment1
+				(*
+				-> rrel_example:
+					[Запись некоторой информации о луне с помощью SCg-кода 2-го уровня]
+					(* <- lang_ru;; *);;
+				*);;
+			*);;
+		*);;
+	<= nrel_sc_text_translation:	
+		..translation_scg_code_3_level_explanation1
+		(*
+		-> rrel_example:
+	[
+	При больших объемах sc.g-текстов и второго уровня может оказаться недостаточно. Как и при переходе с 1-го уровня на 2-й уровень, повышение читабельности sc.g-текстов можно достичь еще более существенным сокращением, изображаемых на экране, элементов. Для этого введен 3-й уровень SCg-кода.
+	Часто возникает ситуация, когда из sc.g-узла выходит много sc.g-дуг(пар) (или же большое количество sc.g-дуг (пар) в него входит). В таком случае sc.g-текст становится сложно читать, так как вокруг этого sc.g-узла рисуется много sc.g-дуг (пар), которые могут накладываться на текстовый идентификатор. Кроме того в таком тексте средняя длина sc.g-дуг (пар) увеличивается, что приводит к трудностям в поиске начальных и конечных элементов этих sc.g-дуг (см. иллюстрацию)
+	](* <- lang_ru;; *);;
+		*);;
+	*);
+
+<- rrel_key_sc_element:
+	..scg_code_3_level_explanation2
+	(*
+	<- sc_explanation;;
+	=> hypermedia_nrel_illustration: 
+		"file://files/level3_moon_prop.png"
+		(*
+		<- rrel_key_sc_element:
+			..scg_code_3_level_comment2
+			(*
+			<- sc_comment;;
+			<= nrel_sc_text_translation:
+				..translation_scg_code_3_level_comment2
+				(*
+				-> rrel_example:
+					[Запись некоторой информации о луне с помощью SCg-кода 3-го уровня]
+					(* <- lang_ru;; *);;
+				*);;
+			*);;
+		*);;
+	<= nrel_sc_text_translation:	
+		..translation_scg_code_3_level_explanation2
+		(*
+		-> rrel_example:
+	[
+	Очевидно, что если потребуется добавить еще информации об объекте, то единственным выходом будет его дублирование. Другими словами придется создать еще один узел с идентификатором Луна и связывать новые свойства sc.g-парами с ним. Решить данную проблему можно увеличив контактную площадь узла. Для этого вводится новый элемент - sc.g-шина. Пример того же sc.g-текста записанного с помощью SCg-кода 3-го уровня можно посмотреть на изображении
+	](* <- lang_ru;; *);;
+		*);;
+	*);
+
+<- rrel_key_sc_element:
+	..scg_code_3_level_explanation3
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:	
+		..translation_scg_code_3_level_explanation3
+		(*
+		-> rrel_example:
+			"file://files/level3_table.png"
+		(* <- lang_ru;; *);;
+		*);;
+	*);;
