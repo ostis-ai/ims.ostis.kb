@@ -17,11 +17,11 @@ basic_scs_connector <= nrel_subdividing:
 	scs_divider_const_pos_stat_accessory_arc
 };;
 basic_scs_connector <- rrel_key_sc_element:
-		..scs_basic_scs_connector_note
+		..scs_basic_scs_connector_explanation
 		(*
-		<- sc_note;;
+		<- sc_explanation;;
 		<= nrel_sc_text_translation:	
-			..translation_basic_scs_connector_note_ru
+			..translation_basic_scs_connector_explanation_ru
 			(*
 			-> rrel_example:
 				"file://../images/scs_divider/table_kernel.png"
@@ -40,9 +40,9 @@ scs_divider_accessory_arc <= scs_nrel_representation_standart_editor:
 scs_divider_accessory_arc <= scs_nrel_representation_standart_editor:
 	[**>];;
 scs_divider_accessory_arc => scs_nrel_representation_scg_code:
-	"file://../images/scs_divider/basic_scs_connector/image007.gif";;
+	"file://../images/scs_divider/basic_scs_connector/image007.png";;
 scs_divider_accessory_arc => scs_nrel_representation_scg_code:
-	"file://../images/scs_divider/basic_scs_connector/image008.gif";;
+	"file://../images/scs_divider/basic_scs_connector/image008.png";;
 
 scs_divider_common_type_arc => nrel_main_idtf: 
 	[sc.s-дуга общего вида] (* <- lang_ru;; *);;
@@ -55,9 +55,9 @@ scs_divider_common_type_arc <= scs_nrel_representation_standart_editor:
 scs_divider_common_type_arc <= scs_nrel_representation_standart_editor:
 	[>];;
 scs_divider_common_type_arc => scs_nrel_representation_scg_code:
-	"file://../images/scs_divider/basic_scs_connector/image004.gif";;
+	"file://../images/scs_divider/basic_scs_connector/image004.png";;
 scs_divider_common_type_arc => scs_nrel_representation_scg_code:
-	"file://../images/scs_divider/basic_scs_connector/image005.gif";;
+	"file://../images/scs_divider/basic_scs_connector/image005.png";;
 
 scs_divider_const_pos_stat_accessory_arc => nrel_main_idtf: 
 	[константная позитивная стационарная sc.s-дуга принадлежности] (* <- lang_ru;; *);;
@@ -70,9 +70,9 @@ scs_divider_const_pos_stat_accessory_arc <= scs_nrel_representation_standart_edi
 scs_divider_const_pos_stat_accessory_arc <= scs_nrel_representation_standart_editor:
 	[->];;
 scs_divider_const_pos_stat_accessory_arc => scs_nrel_representation_scg_code:
-	"file://../images/scs_divider/basic_scs_connector/image010.gif";;
+	"file://../images/scs_divider/basic_scs_connector/image010.png";;
 scs_divider_const_pos_stat_accessory_arc => scs_nrel_representation_scg_code:
-	"file://../images/scs_divider/basic_scs_connector/image011.gif";;
+	"file://../images/scs_divider/basic_scs_connector/image011.png";;
 
 scs_divider_edge => nrel_main_idtf: 
 	[sc.s-ребро] (* <- lang_ru;; *);;
@@ -81,4 +81,4 @@ scs_divider_edge <= scs_nrel_representation_scs_editor:
 scs_divider_edge <= scs_nrel_representation_standart_editor:
 	[<>];;
 scs_divider_edge => scs_nrel_representation_scg_code:
-	"file://../images/scs_divider/basic_scs_connector/image002.gif";;
+	"file://../images/scs_divider/basic_scs_connector/image002.png";;

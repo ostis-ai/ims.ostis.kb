@@ -1,0 +1,153 @@
+scg_code_2_level => nrel_main_idtf: 
+	[SCg-код уровня 2] (* <- lang_ru;; *);
+	[SCg-code level 2] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	..scg_code_2_level_explanation1
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:	
+		..translation_scg_code_2_level_explanation1
+		(*
+		-> rrel_example:
+	[
+	Второй уровень sc.g-кода направлен на повышение наглядности отображаемых sc.g-текстов путем уменьшения количества изображаемых sc.g-элементов. Для этого выделены наиболее часто используемые типы sc.g-элементов и каждому из них в соответствие поставлен некоторый графический и четко ращличимый признак.
+	Изображения sc-узлов имеют два признака: константность и структурный тип. Для их изображения используются следующие правила:
+	•	константные sc-узлы изображаются в виде окружностей, переменные - в виде квадратов;
+	•	структурный тип sc-узла изображается внутри окружности (квадрата), который соответвует признаку констатности;
+	]
+	(* <- lang_ru;; *);;
+		*);;
+	*);
+
+=> hypermedia_nrel_illustration:
+	"file://files/level1_triangle_struct.png"
+	(*
+	<- rrel_key_sc_element:
+		..scg_code_2_level_comment1
+		(*
+		<- sc_comment;;
+		=> hypermedia_nrel_illustration:
+			"file://files/level2_triangle_struct.png";;
+		<= nrel_sc_text_translation:
+			..translation_scg_code_2_level_comment1
+			(*
+			-> rrel_example:
+		[
+			К примеру у нас есть sc-узел, обозначающий множество всех возможных треугольников, с идентификатором треугольник, который входит во множество всех объектов являющихся sc-узлами, обозначающими константное понятие, не являющееся отношением.
+			Видно, что sc-узел с идентификатором треугольник имеет два четко отличимых признака: он является константой и он является sc-узлом, обозначающим понятие не являющееся отношением. Изображение такого узла с помощью SCg-кода второго уровня строится следующим образом:
+			•	так как sc-узел треугольник является константой, то он изображается в виде окружности;
+			•	внутри окружности изображается структурный тип (sc-узел, обозначающий понятие не являющееся отношением). Данный структурный тип изображается в виде буквы X с горизонтальной линией по середине.
+			С помощью SCg-кода второго уровня этот узел изображается следующим образом: 
+		](* <- lang_ru;; *);;
+			*);;
+		*);;
+	*);
+
+<- rrel_key_sc_element:
+	..scg_code_2_level_explanation1
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:	
+		..translation_scg_code_2_level_explanation1
+		(*
+		-> rrel_example:
+			"file://files/level2_table.png"
+		(* <- lang_ru;; *);;
+		*);;
+	*);
+
+-> rrel_example:
+	"file://files/level2_triangle_ABC.png"
+	(*
+	<- rrel_key_sc_element:
+		..scg_code_2_level_comment2
+		(*
+		<- sc_comment;;
+		<- rrel_key_sc_element:
+			..scg_code_2_level_comment3
+			(*
+			<- sc_comment;;
+			<- rrel_key_sc_element:
+				..scg_code_2_level_comment4
+				(*
+					<- sc_comment;;
+				<= nrel_sc_text_translation:
+					..translation_scg_code_2_level_comment4
+					(*
+					-> rrel_example:
+						[Имеется треугольник с вершинами в точках A, B и C (запись с помощью SCg-кода 1-го уровня).]
+						(* <- lang_ru;; *);;
+					*);;
+				*);;
+			<= nrel_sc_text_translation:
+				..translation_scg_code_2_level_comment3
+				(*
+				-> rrel_example:
+					"file://files/level1_triangle_ABC.png"
+					(* <- lang_ru;; *);;
+				*);;
+			*);;
+		<= nrel_sc_text_translation:
+			..translation_scg_code_2_level_comment2
+			(*
+			-> rrel_example:
+				[Имеется треугольник с вершинами в точках A, B и C (запись с помощью SCg-кода 2-го уровня).]
+				(* <- lang_ru;; *);;
+			*);;
+		*);;
+	*);
+
+<- rrel_key_sc_element:
+		..scg_code_2_level_comment5
+		(*
+		<- sc_comment;;
+		<= nrel_sc_text_translation:
+			..translation_scg_code_2_level_comment5
+			(*
+			-> rrel_example:
+				[Из примеров видно, что SCg-код 2-го уровня значительно сокращает количество элементов присутствующих на экране. Это в свою очередь позволяет повысить читабельность sc.g-текстов.]
+				(* <- lang_ru;; *);;
+			*);;
+		*);
+
+-> rrel_example:
+	"file://files/level2_moon.png"
+	(*
+	<- rrel_key_sc_element:
+		..scg_code_2_level_comment6
+		(*
+		<- sc_comment;;
+		<= nrel_sc_text_translation:
+			..translation_scg_code_2_level_comment6
+			(*
+			-> rrel_example:
+				[Луна вращается вокруг планеты "Земля" (запись с помощью SCg-кода 2-го уровня).]
+				(* <- lang_ru;; *);;
+			*);;
+		*);;
+	<- rrel_key_sc_element:
+		..scg_code_2_level_comment7
+		(*
+		<- sc_comment;;
+		<- rrel_key_sc_element:
+			..scg_code_2_level_comment8
+			(*
+				<- sc_comment;;
+			<= nrel_sc_text_translation:
+				..translation_scg_code_2_level_comment8
+				(*
+				-> rrel_example:
+					[Луна вращается вокруг планеты "Земля" (запись с помощью SCg-кода 1-го уровня).]
+					(* <- lang_ru;; *);;
+				*);;
+			*);;
+		<= nrel_sc_text_translation:
+			..translation_scg_code_2_level_comment7
+			(*
+			-> rrel_example:
+				"file://files/level1_moon.png"
+				(* <- lang_ru;; *);;
+			*);;
+		*);;
+	*);;
