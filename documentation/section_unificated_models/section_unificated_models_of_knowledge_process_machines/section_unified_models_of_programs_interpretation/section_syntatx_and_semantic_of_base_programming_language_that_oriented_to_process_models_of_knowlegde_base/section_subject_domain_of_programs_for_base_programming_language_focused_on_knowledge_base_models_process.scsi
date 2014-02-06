@@ -1,0 +1,1856 @@
+scp_language
+	<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[язык SCP]
+		(*<- lang_ru;;*);
+		[SCP language]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_scp_language
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_scp_language
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_scp_language.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+scp_program
+	<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[scp-программа]
+		(*<- lang_ru;;*);
+		[scp-program]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_scp_program
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_scp_program
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_scp_program.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+scp_procedure
+	<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[scp-процедура]
+		(*<- lang_ru;;*);
+		[scp-procedure]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_scp_procedure
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_scp_procedure
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_scp_procedure.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);
+	<= nrel_subdividing: 
+	{
+		agent_scp_program;
+		agent_scp_procedure
+	};;
+
+agent_scp_procedure
+	<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[агентная scp-процедура]
+		(*<- lang_ru;;*);
+		[agent scp-procedure]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_agent_scp_procedure
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_agent_scp_procedure
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_agent_scp_procedure.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+rrel_params
+	=> nrel_main_idtf:
+		[параметры']
+		(*<- lang_ru;;*);
+		[parameters']
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_rrel_params
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_rrel_params
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_rrel_params.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+rrel_operators
+	=> nrel_main_idtf:
+		[операторы']
+		(*<- lang_ru;;*);
+		[operators']
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_rrel_operators
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_rrel_operators
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_rrel_operators.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+rrel_init
+	=> nrel_main_idtf:
+		[начальный оператор']
+		(*<- lang_ru;;*);
+		[initiating operator']
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_rrel_init
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_rrel_init
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_rrel_init.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+rrel_in
+	=> nrel_main_idtf:
+		[in-параметр']
+		(*<- lang_ru;;*);
+		[in-parameter']
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_rrel_in
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_rrel_in
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_rrel_in.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+rrel_out
+	=> nrel_main_idtf:
+		[out-параметр']
+		(*<- lang_ru;;*);
+		[out-parameter']
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_rrel_out
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_rrel_out
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_rrel_out.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+sc_structure
+	<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[sc-конструкция]
+		(*<- lang_ru;;*);
+		[sc-structure]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_sc_structure
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_sc_structure
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_sc_structure.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);
+	<= nrel_subdividing: 
+	{
+		standard_sc_structure;
+		non_standard_sc_structure
+	};;
+
+standard_sc_structure
+	<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[sc-конструкция стандартного вида]
+		(*<- lang_ru;;*);
+		[standard sc-structure]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_standard_sc_structure
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_standard_sc_structure
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_standard_sc_structure.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);
+	<= nrel_subdividing: 
+	{
+		sc_1_el_str;
+		sc_3_el_str;
+		sc_5_el_str
+	};;
+
+sc_1_el_str
+	<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[одноэлементная sc-конструкция]
+		(*<- lang_ru;;*);
+		[one-element sc-structure]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_sc_1_el_str
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_sc_1_el_str
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_sc_1_el_str.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+sc_3_el_str
+	<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[трехэлементная sc-конструкция]
+		(*<- lang_ru;;*);
+		[three-element sc-structure]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_sc_3_el_str
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_sc_3_el_str
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_sc_3_el_str.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+sc_5_el_str
+	<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[пятиэлементная sc-конструкция]
+		(*<- lang_ru;;*);
+		[five-element sc-structure]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_sc_5_el_str
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_sc_5_el_str
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_sc_5_el_str.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+non_standard_sc_structure
+	<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[sc-конструкция стандартного вида]
+		(*<- lang_ru;;*);
+		[non-standard sc-structure]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_non_standard_sc_structure
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_non_standard_sc_structure
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_non_standard_sc_structure.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+rrel_scp_operand_type
+	=> nrel_main_idtf:
+		[тип scp-операнда']
+		(*<- lang_ru;;*);
+		[type of scp-operand']
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_rrel_scp_operand_type
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_rrel_scp_operand_type
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_rrel_scp_operand_type.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);
+	<= nrel_subdividing: 
+	{
+		rrel_scp_const;
+		rrel_scp_var
+	};;
+
+rrel_scp_const
+	=> nrel_main_idtf:
+		[scp-константа']
+		(*<- lang_ru;;*);
+		[scp-constant']
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_rrel_scp_const
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_rrel_scp_const
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_rrel_scp_const.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+rrel_scp_var
+	=> nrel_main_idtf:
+		[scp-переменная']
+		(*<- lang_ru;;*);
+		[scp-variable']
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_rrel_scp_var
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_rrel_scp_var
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_rrel_scp_var.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+nrel_scp_var_value
+	=> nrel_main_idtf:
+		[значение scp-переменной*]
+		(*<- lang_ru;;*);
+		[value of scp-variable*]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_nrel_scp_var_value
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_nrel_scp_var_value
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_nrel_scp_var_value.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+rrel_type_of_scp_operand_value
+	=> nrel_main_idtf:
+		[тип значения scp-операнда']
+		(*<- lang_ru;;*);
+		[type of scp-operand value']
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_rrel_type_of_scp_operand_value
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_rrel_type_of_scp_operand_value
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_rrel_type_of_scp_operand_value.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);
+	<= nrel_subdividing: 
+	{
+		rrel_fixed;
+		rrel_assign
+	};;
+
+rrel_fixed
+	=> nrel_main_idtf:
+		[scp-операнд с заданным значением']
+		(*<- lang_ru;;*);
+		[scp-operand with fixed value']
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_rrel_fixed
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_rrel_fixed
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_rrel_fixed.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+rrel_assign
+	=> nrel_main_idtf:
+		[scp-операнд со свободным значением']
+		(*<- lang_ru;;*);
+		[scp-operand with assign value']
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_rrel_assign
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_rrel_assign
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_rrel_assign.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+rrel_type_of_sc_element
+	=> nrel_main_idtf:
+		[тип sc-элемента']
+		(*<- lang_ru;;*);
+		[type of sc-element']
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_rrel_type_of_sc_element
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_rrel_type_of_sc_element
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_rrel_type_of_sc_element.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);
+	<= nrel_subdividing: 
+	{
+		rrel_const;
+		rrel_var;
+		rrel_node;
+		rrel_arc;
+		rrel_edge;
+		rrel_link
+	};;
+
+rrel_arc
+	=> nrel_main_idtf:
+		[sc-дуга']
+		(*<- lang_ru;;*);
+		[sc-arc']
+		(*<- lang_en;;*);
+	<= nrel_subdividing: 
+	{
+		rrel_common;
+		rrel_access
+	};;
+
+rrel_access
+	=> nrel_main_idtf:
+		[sc-дуга принадлежности'']
+		(*<- lang_ru;;*);
+		[access sc-arc']
+		(*<- lang_en;;*);
+	<= nrel_subdividing: 
+	{
+		rrel_pos;
+		rrel_neg;
+		rrel_fuz;
+		rrel_temp;
+		rrel_perm
+	};;
+
+rrel_pos_const_perm
+	=> nrel_main_idtf:
+		[sc-дуга основного вида']
+		(*<- lang_ru;;*);
+		[main type sc-arc']
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_rrel_pos_const_perm
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_rrel_pos_const_perm
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_rrel_pos_const_perm.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+rrel_set
+	=> nrel_main_idtf:
+		[формируемое множество']
+		(*<- lang_ru;;*);
+		[created set']
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_rrel_set
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_rrel_set
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_rrel_set.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+rrel_erase
+	=> nrel_main_idtf:
+		[удаляемый sc-элемент']
+		(*<- lang_ru;;*);
+		[deleted sc-element']
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_rrel_erase
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_rrel_erase
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_rrel_erase.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+nrel_goto
+	=> nrel_main_idtf:
+		[следующий оператор*]
+		(*<- lang_ru;;*);
+		[next operator*]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_nrel_goto
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_nrel_goto
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_nrel_goto.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);
+	<= nrel_subdividing: 
+	{
+		nrel_then;
+		nrel_else
+	};;
+
+nrel_then
+	=> nrel_main_idtf:
+		[следующий оператор при успешном выполнении*]
+		(*<- lang_ru;;*);
+		[next operator if current is successfully executed']
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_nrel_then
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_nrel_then
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_nrel_then.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+nrel_else
+	=> nrel_main_idtf:
+		[следующий оператор при безуспешном выполнении*]
+		(*<- lang_ru;;*);
+		[next operator if current is unsuccessfully executed']
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_nrel_else
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_nrel_else
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_nrel_else.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+/*----------------------scp_operator----------------------*/
+
+scp_operator
+	=> nrel_main_idtf:
+		[scp-оператор]
+		(*<- lang_ru;;*);
+		[scp-operator]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_scp_operator
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_scp_operator
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_scp_operator.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);
+	<= nrel_subdividing: 
+	{
+		scp_operator_of_sc_structure_generation;
+		scp_operator_of_sc_structure_associative_search;
+		scp_operator_of_sc_structure_deleting;
+		scp_operator_of_conditions_check;
+		scp_operator_of_sc_link_content_process;
+		scp_operator_of_event_control;
+		scp_operator_of_scp_process_control;
+		scp_operator_of_scp_operand_value_control;
+		scp_operator_of_information_output_to_consol
+	};;
+
+/*----------------------scp-operator of sc-structure generation----------------------*/
+
+scp_operator_of_sc_structure_generation
+	=> nrel_main_idtf:
+		[scp-оператор генерации sc-конструкций]
+		(*<- lang_ru;;*);
+		[scp-operator of sc-structure generation]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_scp_operator_of_sc_structure_generation
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_scp_operator_of_sc_structure_generation
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_scp_operator_of_sc_structure_generation.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);
+	<= nrel_subdividing: 
+	{
+		genEl;
+		genElStr3;
+		genElStr5;
+		sys_gen
+	};;
+
+genEl
+	=> nrel_main_idtf:
+		[scp-оператор генерации одноэлементной sc-конструкций]
+		(*<- lang_ru;;*);
+		[scp-operator of one-element sc-structure generation]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_genEl
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_genEl
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_genEl.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);
+	-> rrel_example:
+		..scp_operator_example_genEl (*
+			-> rrel_1: rrel_assign: rrel_const: rrel_node: rrel_scp_var: .._elem1_genEl;;
+			=> nrel_goto: ..scp_operator_example_goto_genEl;;
+		*);;
+
+genElStr3
+	=> nrel_main_idtf:
+		[scp-оператор генерации трехэлементной sc-конструкции]
+		(*<- lang_ru;;*);
+		[scp-operator of three-element sc-structure generation]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_genElStr3
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_genElStr3
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_genElStr3.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);
+	-> rrel_example:
+		..scp_operator_example_genElStr3 (*
+			-> rrel_1: rrel_fixed: rrel_scp_var: .._set_genElStr3;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: .._arc1_genElStr3;;
+			-> rrel_3: rrel_assign: rrel_scp_var: .._element_genElStr3;;
+
+			=> nrel_goto: ..scp_operator_example_goto_genElStr3;;
+		*);;
+
+genElStr5
+	=> nrel_main_idtf:
+		[scp-оператор генерации пятиэлементной sc-конструкции]
+		(*<- lang_ru;;*);
+		[scp-operator of five-element sc-structure generation]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_genElStr5
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_genElStr5
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_genElStr5.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+sys_gen
+	=> nrel_main_idtf:
+		[scp-оператор генерации sc-конструкции по произвольному образцу]
+		(*<- lang_ru;;*);
+		[scp-operator of sc-structure generation by pattern]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_sys_gen
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_sys_gen
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_sys_gen.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+/*----------------------scp-operator of sc-structure associative search----------------------*/
+
+scp_operator_of_sc_structure_associative_search
+	=> nrel_main_idtf:
+		[scp-оператор ассоциативного поиска sc-конструкций]
+		(*<- lang_ru;;*);
+		[scp-operator of sc-structure associative search]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_scp_operator_of_sc_structure_associative_search
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_scp_operator_of_sc_structure_associative_search
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_scp_operator_of_sc_structure_associative_search.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);
+	<= nrel_subdividing: 
+	{
+		searchElStr3;
+		searchElStr5;
+		searchSetStr3;
+		searchSetStr5;
+		sys_search
+	};;
+
+searchElStr3
+	=> nrel_main_idtf:
+		[scp-оператор поиска трехэлементной sc-конструкции]
+		(*<- lang_ru;;*);
+		[scp-operator of three-element sc-structure search]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_searchElStr3
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_searchElStr3
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_searchElStr3.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+searchElStr5
+	=> nrel_main_idtf:
+		[scp-оператор поиска пятиэлементной sc-конструкции]
+		(*<- lang_ru;;*);
+		[scp-operator of five-element sc-structure search]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_searchElStr5
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_searchElStr5
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_searchElStr5.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+searchSetStr3
+	=> nrel_main_idtf:
+		[scp-оператор поиска трехэлементной sc-конструкции с формированием множеств]
+		(*<- lang_ru;;*);
+		[scp-operator of three-element sc-structure search with set creation]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_searchSetStr3
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_searchSetStr3
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_searchSetStr3.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+searchSetStr5
+	=> nrel_main_idtf:
+		[scp-оператор поиска пятиэлементной sc-конструкции с формированием множеств]
+		(*<- lang_ru;;*);
+		[scp-operator of five-element sc-structure search with set creation]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_searchSetStr5
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_searchSetStr5
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_searchSetStr5.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+sys_search
+	=> nrel_main_idtf:
+		[scp-оператор поиска sc-конструкции по произвольному образцу]
+		(*<- lang_ru;;*);
+		[scp-operator of sc-structure search by pattern]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_sys_search
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_sys_search
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_sys_search.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+/*----------------------scp-operator of sc-structure deleting----------------------*/
+
+scp_operator_of_sc_structure_deleting
+	=> nrel_main_idtf:
+		[scp-оператор удаления sc-конструкций]
+		(*<- lang_ru;;*);
+		[scp-operator of sc-structure deleting]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_scp_operator_of_sc_structure_deleting
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_scp_operator_of_sc_structure_deleting
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_scp_operator_of_sc_structure_deleting.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);
+	<= nrel_subdividing: 
+	{
+		eraseEl;
+		eraseElStr3;
+		eraseElStr5;
+		eraseSetStr3;
+		eraseSetStr5
+	};;
+
+eraseEl
+	=> nrel_main_idtf:
+		[scp-оператор удаления одноэлементной sc-конструкции]
+		(*<- lang_ru;;*);
+		[scp-operator of one-element sc-structure deleting]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_eraseEl
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_eraseEl
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_eraseEl.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+eraseElStr3
+	=> nrel_main_idtf:
+		[scp-оператор удаления трехэлементной sc-конструкции]
+		(*<- lang_ru;;*);
+		[scp-operator of three-element sc-structure deleting]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_eraseElStr3
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_eraseElStr3
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_eraseElStr3.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+eraseElStr5
+	=> nrel_main_idtf:
+		[scp-оператор удаления пятиэлементной sc-конструкции]
+		(*<- lang_ru;;*);
+		[scp-operator of five-element sc-structure deleting]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_eraseElStr5
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_eraseElStr5
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_eraseElStr5.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+eraseSetStr3
+	=> nrel_main_idtf:
+		[scp-оператор удаления множества элементов трехэлементной sc-конструкции]
+		(*<- lang_ru;;*);
+		[scp-operator of three-element sc-structure set deleting]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_eraseSetStr3
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_eraseSetStr3
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_eraseSetStr3.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+eraseSetStr5
+	=> nrel_main_idtf:
+		[scp-оператор удаления множества элементов пятиэлементной sc-конструкции]
+		(*<- lang_ru;;*);
+		[scp-operator of five-element sc-structure set deleting]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_eraseSetStr5
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_eraseSetStr5
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_eraseSetStr5.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+/*----------------------scp-operator of conditions check----------------------*/
+
+scp_operator_of_conditions_check
+	=> nrel_main_idtf:
+		[scp-оператор проверки условий]
+		(*<- lang_ru;;*);
+		[scp-operator of conditions check]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_scp_operator_of_conditions_check
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_scp_operator_of_conditions_check
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_scp_operator_of_conditions_check.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);
+	<= nrel_subdividing: 
+	{
+		ifType;
+		ifVarAssign;
+		ifFormCont;
+		ifCoin;
+		ifEq;
+		ifGr
+	};;
+
+ifType
+	=> nrel_main_idtf:
+		[scp-оператор проверки типа sc-элемента]
+		(*<- lang_ru;;*);
+		[scp-operator of sc-element type check]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_ifType
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_ifType
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_ifType.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+ifVarAssign
+	=> nrel_main_idtf:
+		[scp-оператор проверки наличия значения у переменной]
+		(*<- lang_ru;;*);
+		[scp-operator of check is variable assigned]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_ifVarAssign
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_ifVarAssign
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_ifVarAssign.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+ifFormCont
+	=> nrel_main_idtf:
+		[scp-оператор проверки наличия содержимого у sc-ссылки]
+		(*<- lang_ru;;*);
+		[scp-operator of check is sc-link content exist]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_ifFormCont
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_ifFormCont
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_ifFormCont.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+ifCoin
+	=> nrel_main_idtf:
+		[scp-оператор проверки совпадения значений операндов]
+		(*<- lang_ru;;*);
+		[scp-operator of check of coincidence of values of operands]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_ifCoin
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_ifCoin
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_ifCoin.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+ifEq
+	=> nrel_main_idtf:
+		[scp-оператор проверки равенства числовых содержимых sc-ссылок]
+		(*<- lang_ru;;*);
+		[scp-operator of check of equality of numerical contents of sc-links]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_ifEq
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_ifEq
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_ifEq.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+ifGr
+	=> nrel_main_idtf:
+		[scp-оператор сравнения числовых содержимых sc-ссылок]
+		(*<- lang_ru;;*);
+		[scp-operator of comparison of numerical contents of sc-links]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_ifGr
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_ifGr
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_ifGr.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+/*----------------------scp-operator of sc-link content process----------------------*/
+
+scp_operator_of_sc_link_content_process
+	=> nrel_main_idtf:
+		[scp-оператор обработки содержимых sc-ссылок]
+		(*<- lang_ru;;*);
+		[scp-operator of sc-link content process]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_scp_operator_of_sc_link_content_process
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_scp_operator_of_sc_link_content_process
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_scp_operator_of_sc_link_content_process.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);
+	<= nrel_subdividing: 
+	{
+		contAdd;
+		contSub;
+		contMult;
+		contDiv;
+		contPow;
+		contLn;
+		contSin;
+		contCos;
+		contTg;
+		contASin;
+		contACos;
+		contATg;
+		contAssign;
+		contErase
+	};;
+
+contAdd
+	=> nrel_main_idtf:
+		[scp-оператор сложения числовых содержимых sc-ссылок]
+		(*<- lang_ru;;*);
+		[scp-operator of comparison of numerical contents of sc-links]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_contAdd
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_contAdd
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_contAdd.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+contSub
+	=> nrel_main_idtf:
+		[scp-оператор вычитания числовых содержимых sc-ссылок]
+		(*<- lang_ru;;*);
+		[scp-operator of addition of numerical contents of sc-links]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_contSub
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_contSub
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_contSub.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+contMult
+	=> nrel_main_idtf:
+		[scp-оператор умножения числовых содержимых sc-ссылок]
+		(*<- lang_ru;;*);
+		[scp-operator of multiplication of numerical contents of sc-links]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_contMult
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_contMult
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_contMult.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+contDiv
+	=> nrel_main_idtf:
+		[scp-оператор деления числовых содержимых sc-ссылок]
+		(*<- lang_ru;;*);
+		[scp-operator of division of numerical contents of sc-links]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_contDiv
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_contDiv
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_contDiv.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+contPow
+	=> nrel_main_idtf:
+		[scp-оператор возведения числового содержимого sc-ссылки в степень]
+		(*<- lang_ru;;*);
+		[scp-operator of raising of numerical contents of sc-link to power exponent]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_contPow
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_contPow
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_contPow.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+contLn
+	=> nrel_main_idtf:
+		[scp-оператор вычисления логарифма числового содержимого sc-ссылки]
+		(*<- lang_ru;;*);
+		[scp-operator of computation of a logarithm of numerical contents of the sc-link]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_contLn
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_contLn
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_contLn.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+contSin
+	=> nrel_main_idtf:
+		[scp-оператор вычисления синуса числового содержимого sc-ссылки]
+		(*<- lang_ru;;*);
+		[scp-operator of computation of a Sin of numerical contents of the sc-link]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_contSin
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_contSin
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_contSin.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+contCos
+	=> nrel_main_idtf:
+		[scp-оператор вычисления косинуса числового содержимого sc-ссылки]
+		(*<- lang_ru;;*);
+		[scp-operator of computation of a Cos of numerical contents of the sc-link]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_contCos
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_contCos
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_contCos.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+contTg
+	=> nrel_main_idtf:
+		[scp-оператор вычисления тангенса числового содержимого sc-ссылки]
+		(*<- lang_ru;;*);
+		[scp-operator of computation of a Tg of numerical contents of the sc-link]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_contTg
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_contTg
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_contTg.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+contASin
+	=> nrel_main_idtf:
+		[scp-оператор вычисления арксинуса числового содержимого sc-ссылки]
+		(*<- lang_ru;;*);
+		[scp-operator of computation of a arcSin of numerical contents of the sc-link]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_contASin
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_contASin
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_contASin.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+contACos
+	=> nrel_main_idtf:
+		[scp-оператор вычисления арккосинуса числового содержимого sc-ссылки]
+		(*<- lang_ru;;*);
+		[scp-operator of computation of a arcCos of numerical contents of the sc-link]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_contACos
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_contACos
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_contACos.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+contATg
+	=> nrel_main_idtf:
+		[scp-оператор вычисления арктангенса числового содержимого sc-ссылки]
+		(*<- lang_ru;;*);
+		[scp-operator of computation of a arcTg of numerical contents of the sc-link]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_contATg
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_contATg
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_contATg.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+contAssign
+	=> nrel_main_idtf:
+		[scp-оператор копирования содержимого sc-ссылки]
+		(*<- lang_ru;;*);
+		[scp-operator of copying of contents of sc-links]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_contAssign
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_contAssign
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_contAssign.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+contErase
+	=> nrel_main_idtf:
+		[scp-оператор удаления содержимого sc-ссылки]
+		(*<- lang_ru;;*);
+		[scp-operator of erasing of contents of sc-links]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_contErase
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_contErase
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_contErase.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+/*----------------------scp-operator of event control----------------------*/
+
+scp_operator_of_event_control
+	=> nrel_main_idtf:
+		[scp-оператор управления событиями]
+		(*<- lang_ru;;*);
+		[scp-operator of event control]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_scp_operator_of_event_control
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_scp_operator_of_event_control
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_scp_operator_of_event_control.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);
+	<= nrel_subdividing: 
+	{
+		sys_wait
+	};;
+
+sys_wait
+	=> nrel_main_idtf:
+		[scp-оператор ожидания события]
+		(*<- lang_ru;;*);
+		[scp-operator of event waiting]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_sys_wait
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_sys_wait
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_sys_wait.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+/*----------------------scp-operator of scp-process control----------------------*/
+
+scp_operator_of_scp_process_control
+	=> nrel_main_idtf:
+		[scp-оператор управления scp-процессами]
+		(*<- lang_ru;;*);
+		[scp-operator of scp-process control]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_scp_operator_of_scp_process_control
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_scp_operator_of_scp_process_control
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_scp_operator_of_scp_process_control.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);
+	<= nrel_subdividing: 
+	{
+		call;
+		waitReturn;
+		waitReturnSet;
+		return
+	};;
+
+/*
+scp_process ДОБАВИТЬ В ЦЕПОЧКУ
+*/
+
+call
+	=> nrel_main_idtf:
+		[scp-оператор асинхронного вызова подпрограммы]
+		(*<- lang_ru;;*);
+		[scp-operator of an asynchronous call of the subprogramme]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_call
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_call
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_call.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+waitReturn
+	=> nrel_main_idtf:
+		[scp-оператор ожидания завершения выполнения scp-программы]
+		(*<- lang_ru;;*);
+		[scp-operator of waiting of completion of scp-program]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_waitReturn
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_waitReturn
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_waitReturn.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+waitReturnSet
+	=> nrel_main_idtf:
+		[scp-оператор ожидания завершения выполнения множества scp-программ]
+		(*<- lang_ru;;*);
+		[scp-operator of waiting of completion of set of scp-programs]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_waitReturnSet
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_waitReturnSet
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_waitReturnSet.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+return
+	=> nrel_main_idtf:
+		[scp-оператор завершения выполнения программы]
+		(*<- lang_ru;;*);
+		[scp-operator of completion of scp-program]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_return
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_return
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_return.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+/*----------------------scp-operator of scp-operand value control----------------------*/
+
+scp_operator_of_scp_operand_value_control
+	=> nrel_main_idtf:
+		[scp-оператор управления значениями операндов]
+		(*<- lang_ru;;*);
+		[scp-operator of scp-operand value control]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_scp_operator_of_scp_operand_value_control
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_scp_operator_of_scp_operand_value_control
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_scp_operator_of_scp_operand_value_control.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);
+	<= nrel_subdividing: 
+	{
+		varAssign;
+		varErase
+	};;
+
+varAssign
+	=> nrel_main_idtf:
+		[scp-оператор присваивания значения переменнойы]
+		(*<- lang_ru;;*);
+		[scp-operator of assign value to scp-variable]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_varAssign
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_varAssign
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_varAssign.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+varErase
+	=> nrel_main_idtf:
+		[scp-оператор удаления значения переменной]
+		(*<- lang_ru;;*);
+		[scp-operator of scp-variable value erasing]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_varErase
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_varErase
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_varErase.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+/*----------------------scp-operator of consol print----------------------*/
+
+scp_operator_of_information_output_to_consol
+	=> nrel_main_idtf:
+		[scp-оператор вывода информации в консоль]
+		(*<- lang_ru;;*);
+		[scp-operator of information output to consol]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_scp_operator_of_information_output_to_consol
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_scp_operator_of_information_output_to_consol
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_scp_operator_of_information_output_to_consol.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);
+	<= nrel_subdividing: 
+	{
+		print;
+		printNl;
+		printEl
+	};;
+
+print
+	=> nrel_main_idtf:
+		[scp-оператор вывода содержимого sc-ссылки]
+		(*<- lang_ru;;*);
+		[scp-operator of print content of sc-link to consol]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_print
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_print
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_print.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+printNl
+	=> nrel_main_idtf:
+		[scp-оператор вывода содержимого sc-ссылки с переходом на новую строку]
+		(*<- lang_ru;;*);
+		[scp-operator of print content of sc-link to consol followed by a carriage return character and a newline character]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_printNl
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_printNl
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_printNl.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+printEl
+	=> nrel_main_idtf:
+		[scp-оператор распечатки семантической окрестности sc-элемента]
+		(*<- lang_ru;;*);
+		[scp-operator of printout of semantic neighborhood of a sc-element]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_printEl
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_printEl
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_printEl.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
