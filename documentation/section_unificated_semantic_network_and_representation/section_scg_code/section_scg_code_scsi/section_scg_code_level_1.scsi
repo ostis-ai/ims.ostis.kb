@@ -26,7 +26,19 @@ scg_code_1_level => nrel_main_idtf:
 	..scg_code_1_level_explanation2
 	(*
 	<- sc_explanation;;
-	=> hypermedia_nrel_illustration: "file://files/level1_identification.png";;
+	<- rrel_key_sc_element:
+		..scg_level_1_illustration1
+		(*
+		<- sc_illustration;;
+		<= nrel_sc_text_translation:	
+			..translation_scg_level_1_illustration1_ru
+			(*
+			-> rrel_example:
+				"file://files/level1_identification.png"
+			(*<-lang_ru;;*);;
+			*);;
+		*);;
+
 	<= nrel_sc_text_translation:	
 		..translation_scg_code_1_level_explanation2
 		(*
