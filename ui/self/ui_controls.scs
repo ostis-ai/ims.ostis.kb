@@ -1,0 +1,52 @@
+ui_control_task_panel
+=> nrel_main_idtf:
+	[Панель задач] (* <- lang_ru;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* ->	[элемент упарвления на котором отображаются количество отправленных на сервер запросов] (* <- lang_ru;; *);; *);;
+	*);;
+
+
+ui_control_select_idtf_mode
+=> nrel_main_idtf:
+	[Элемент управления позволяющий изменить используемый режим идентификации] (* <- lang_ru;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* ->	[элемент упарвления, который позволяет переключать режим идентификации] (* <- lang_ru;; *);; *);;
+	*);;
+
+ui_control_search_idtf_edit
+=> nrel_main_idtf:
+	[Элемент управления поиска sc-элементов по идентификатору] (* <- lang_ru;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* ->	[элемент упарвления, который позволяет находить sc-элементы по их идентификаторам] (* <- lang_ru;; *);; *);;
+	*);;
+
+ui_control_select_window_type
+=> nrel_main_idtf:
+	[Элемент управления смены внешнего внешнего языка для активного окна] (* <- lang_ru;; *);;
+
+ui_control_print_window_content
+=> nrel_main_idtf:
+	[Элемент управления вывода содержимого активного окна на печать] (* <- lang_ru;; *);;
+
+ui_control_argument_button_clear
+=> nrel_main_idtf:
+	[Элемент управления очистки списка аргументов команды] (* <- lang_ru;; *);;
+
+ui_control_argument_button_add
+=> nrel_main_idtf:
+	[Элемент управления добавления нового аргумента команды] (* <- lang_ru;; *);;
