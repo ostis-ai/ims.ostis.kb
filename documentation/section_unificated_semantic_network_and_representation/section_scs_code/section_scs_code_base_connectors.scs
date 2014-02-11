@@ -4,3 +4,18 @@ section_scs_code_base_connectors => nrel_main_idtf:
 section_scs_code_base_connectors <- doc_atomic_partition;;
 
 section_scs_code_base_connectors = [*^"file://section_scs_code_scsi/section_scs_code_base_connectors.scsi"*];;
+
+rrel_key_sc_element -> (section_scs_code_base_connectors -> basic_scs_connector)
+(*
+	=> nrel_key_sc_element_base_order: (section_scs_code_base_connectors -> scs_divider_edge)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_scs_code_base_connectors -> scs_divider_common_type_arc)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_scs_code_base_connectors -> scs_divider_accessory_arc)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_scs_code_base_connectors -> scs_divider_const_pos_stat_accessory_arc)
+	(* <- rrel_key_sc_element;; *);;
+*);;*);;*);;*);;

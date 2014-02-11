@@ -4,3 +4,30 @@ section_scs_non_connector_separators => nrel_main_idtf:
 section_scs_non_connector_separators <- doc_atomic_partition;;
 
 section_scs_non_connector_separators = [*^"file://section_scs_code_scsi/section_scs_non_connector_separators.scsi"*];;
+
+rrel_key_sc_element -> (section_scs_non_connector_separators -> scs_divider_incidence)
+(*
+	=> nrel_key_sc_element_base_order: (section_scs_non_connector_separators -> scs_divider_modifier)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_scs_non_connector_separators -> scs_divider_simple_colon)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_scs_non_connector_separators -> scs_divider_double_colon)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_scs_non_connector_separators -> scs_divider_simple_plus)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_scs_non_connector_separators -> scs_divider_double_plus)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_scs_non_connector_separators -> scs_divider_subsentence)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_scs_non_connector_separators -> scs_divider_simple_semicolon)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_scs_non_connector_separators -> scs_divider_double_semicolon)
+	(* <- rrel_key_sc_element;; *);;
+*);;*);;*);;*);;*);;*);;*);;*);;

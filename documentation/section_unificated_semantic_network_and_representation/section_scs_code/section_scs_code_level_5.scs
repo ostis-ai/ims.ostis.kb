@@ -5,3 +5,12 @@ section_scs_code_level_5 => nrel_main_idtf:
 section_scs_code_level_5 <- doc_atomic_partition;;
 
 section_scs_code_level_5 = [*^"file://section_scs_code_scsi/section_scs_code_level_5.scsi"*];;
+
+rrel_key_sc_element -> (section_scs_code_level_5 -> scs_code_5_level)
+(*
+	=> nrel_key_sc_element_base_order: (section_scs_code_level_5 -> scs_sentence_5_level)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_scs_code_level_5 -> scs_text_5_level)
+	(* <- rrel_key_sc_element;; *);;
+*);;*);;

@@ -4,3 +4,52 @@ section_scs_code_additional_connectors => nrel_main_idtf:
 section_scs_code_additional_connectors <- doc_atomic_partition;;
 
 section_scs_code_additional_connectors = [*^"file://section_scs_code_scsi/section_scs_code_additional_connectors.scsi"*];;
+
+rrel_key_sc_element -> (section_scs_code_additional_connectors -> additional_scs_connector)
+(*
+	=> nrel_key_sc_element_base_order: (section_scs_code_additional_connectors -> scs_divider_const_edge)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_scs_code_additional_connectors -> scs_divider_var_edge)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_scs_code_additional_connectors -> scs_divider_const_arc)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_scs_code_additional_connectors -> scs_divider_var_arc)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_scs_code_additional_connectors -> scs_divider_var_pos_stat_accessory_arc)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_scs_code_additional_connectors -> scs_divider_const_neg_stat_accessory_arc)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_scs_code_additional_connectors -> scs_divider_var_neg_stat_accessory_arc)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_scs_code_additional_connectors -> scs_divider_const_fuz_stat_accessory_arc)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_scs_code_additional_connectors -> scs_divider_var_fuz_stat_accessory_arc)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_scs_code_additional_connectors -> scs_divider_const_pos_nonstat_accessory_arc)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_scs_code_additional_connectors -> scs_divider_var_pos_nonstat_accessory_arc)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_scs_code_additional_connectors -> scs_divider_const_neg_nonstat_accessory_arc)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_scs_code_additional_connectors -> scs_divider_var_neg_nonstat_accessory_arc)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_scs_code_additional_connectors -> scs_divider_const_fuz_nonstat_accessory_arc)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_scs_code_additional_connectors -> scs_divider_var_fuz_nonstat_accessory_arc)
+	(* <- rrel_key_sc_element;; *);;
+*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;
+
