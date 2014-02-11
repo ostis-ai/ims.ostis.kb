@@ -1,8 +1,7 @@
-ui_menu_view_all_identifiers <- ui_user_command_atom;;
+ui_menu_view_all_identifiers <- ui_user_command_class_atom; ui_user_command_class_view_kb;;
 
-ui_menu_view_all_identifiers => nrel_main_idtf: [Поиск всех идентификаторов] (* <- lang_ru;; *);;
-
-ui_menu_view_all_identifiers => nrel_main_idtf: [Search all identifiers] (* <- lang_en;; *);;
+ui_menu_view_all_identifiers => nrel_main_idtf: [Запрос всех идентификаторов] (* <- lang_ru;; *);;
+ui_menu_view_all_identifiers => nrel_main_idtf: [Request of all identifiers] (* <- lang_en;; *);;
 
 ui_menu_view_all_identifiers => ui_nrel_command_template:
 	[*

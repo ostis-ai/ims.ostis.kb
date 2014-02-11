@@ -1,0 +1,9 @@
+ui_input_device
+=> nrel_main_idtf:
+	[устройство ввода] (* <- lang_ru;; *);
+<= nrel_subdividing:
+	{
+		ui_input_device_mouse;
+		ui_input_device_keyboard
+	};;
+
