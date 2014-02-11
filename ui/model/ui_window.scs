@@ -2,8 +2,7 @@ ui_window
 => nrel_main_idtf:
 	[интерфейсное окно] (* <- lang_ru;; *);
 	[interface window] (* <- lang_en;; *);
-
-<= nrel_inclusion:
+=> nrel_inclusion:
 	ui_sc_machine_window;;
 
 
@@ -26,7 +25,8 @@ ui_sc_machine_window
 	};
 	{
 		ui_sc_machine_window_scg;
-		ui_sc_machine_window_scs
+		ui_sc_machine_window_scs;
+		ui_sc_machine_window_scn
 	};;
 
 // --------------------
@@ -40,7 +40,7 @@ ui_sc_machine_window_contour
 	(*
 	<- sc_explanation;;
 	<= nrel_sc_text_translation:
-		... (* ->	[окно sc-машины обозначающее sc-структуру] (* <- lang_ru;; *);; *);;
+		... (* ->	[окно sc-машины, обозначающее sc-структуру] (* <- lang_ru;; *);; *);;
 	*);;
 
 
@@ -55,7 +55,7 @@ ui_sc_machine_window_frame
 	(*
 	<- sc_explanation;;
 	<= nrel_sc_text_translation:
-		... (* -> [окно sc-машины обозначающее файл] (* <- lang_ru;; *);; *);;
+		... (* -> [окно sc-машины, обозначающее файл] (* <- lang_ru;; *);; *);;
 	*);;
 
 // ----------------------------
@@ -68,7 +68,7 @@ ui_sc_machine_window_scg
 	(*
 	<- sc_explanation;;
 	<= nrel_sc_text_translation:
-		... (* -> [множество окон sc-машины, которые отображают информацию в виде sc.g-текстов ] (* <- lang_ru;; *);; *);;
+		... (* -> [Множество окон sc-машины, которые отображают информацию в виде sc.g-текстов ] (* <- lang_ru;; *);; *);;
 	*);;
 
 // ---------------------------
@@ -81,6 +81,18 @@ ui_sc_machine_window_scs
 	(*
 	<- sc_explanation;;
 	<= nrel_sc_text_translation:
-		... (* -> [множество окон sc-машины, которые отображают информацию в виде sc.s-текстов ] (* <- lang_ru;; *);; *);;
+		... (* -> [Множество окон sc-машины, которые отображают информацию в виде sc.s-текстов ] (* <- lang_ru;; *);; *);;
 	*);;
 
+// ---------------------------
+ui_sc_machine_window_scn
+=> nrel_main_idtf:
+	[окно sc-машины с sc.n-содержимым] (* <- lang_ru;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [Множество окон sc-машины, которые отображают информацию в виде sc.n-текстов ] (* <- lang_ru;; *);; *);;
+	*);;

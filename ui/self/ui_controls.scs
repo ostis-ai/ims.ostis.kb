@@ -1,39 +1,14 @@
 ui_control_task_panel
 => nrel_main_idtf:
-	[Панель задач] (* <- lang_ru;; *);
-
-<- rrel_key_sc_element:
-	...
-	(*
-	<- sc_explanation;;
-	<= nrel_sc_text_translation:
-		... (* ->	[элемент упарвления на котором отображаются количество отправленных на сервер запросов] (* <- lang_ru;; *);; *);;
-	*);;
-
+	[Панель задач] (* <- lang_ru;; *);;
 
 ui_control_select_idtf_mode
 => nrel_main_idtf:
-	[Элемент управления позволяющий изменить используемый режим идентификации] (* <- lang_ru;; *);
-
-<- rrel_key_sc_element:
-	...
-	(*
-	<- sc_explanation;;
-	<= nrel_sc_text_translation:
-		... (* ->	[элемент упарвления, который позволяет переключать режим идентификации] (* <- lang_ru;; *);; *);;
-	*);;
+	[Элемент управления позволяющий изменить используемый режим идентификации] (* <- lang_ru;; *);;
 
 ui_control_search_idtf_edit
 => nrel_main_idtf:
-	[Элемент управления поиска sc-элементов по идентификатору] (* <- lang_ru;; *);
-
-<- rrel_key_sc_element:
-	...
-	(*
-	<- sc_explanation;;
-	<= nrel_sc_text_translation:
-		... (* ->	[элемент упарвления, который позволяет находить sc-элементы по их идентификаторам] (* <- lang_ru;; *);; *);;
-	*);;
+	[Элемент управления поиска sc-элементов по идентификатору] (* <- lang_ru;; *);;
 
 ui_control_select_window_type
 => nrel_main_idtf:

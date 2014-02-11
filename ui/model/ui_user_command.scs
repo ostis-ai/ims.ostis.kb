@@ -1,7 +1,14 @@
 ui_user_command
 => nrel_main_idtf:
 	[пользовательская команда] (* <- lang_ru;; *);
-	[user command] (* <- lang_en;; *);;
+	[user command] (* <- lang_en;; *);
+=> nrel_inclusion:
+	ui_user_command_sc_machine;;
+
+ui_user_command_sc_machine
+=> nrel_main_idtf:
+	[пользовательская команда sc-машины] (* <- lang_ru;; *);
+	[user command of sc-machine] (* <- lang_en;; *);;
 
 // ------------ command classes ------------
 ui_user_command_class
@@ -28,11 +35,11 @@ ui_user_command_class
 
 ui_user_command_class_atom
 => nrel_main_idtf:
-	[класс атомарных пользовательских команд] (* <- lang_ru;; *);;
+	[атомарный класс пользовательских команд] (* <- lang_ru;; *);;
 
 ui_user_command_class_noatom
 => nrel_main_idtf:
-	[класс неатомарных пользовательских команд] (* <- lang_ru;; *);
+	[неатомарный класс пользовательских команд] (* <- lang_ru;; *);
 => ui_nrel_command_init_sequence:
 	...
 	(*
