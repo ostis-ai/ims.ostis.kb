@@ -1,0 +1,21 @@
+<p>
+Задачей 
+<b><sc_element sys_idtf  = "sc_agent_of_synchronization_of_scp_program_interpretation_process">sc-агента синхронизации процесса интерпретации scp-программ</sc_element></b> является обеспечение переходов между 
+<sc_element sys_idtf  = "scp_operator">scp-операторами</sc_element> в рамках одной 
+<sc_element sys_idtf  = "scp_program">scp-программы</sc_element>. Данный 
+<sc_element sys_idtf  = "sc_agent">sc-агент</sc_element> активизируется при добавлении некоторого 
+<sc_element sys_idtf  = "scp_operator">scp-оператора</sc_element> во множество выполненных 
+<sc_element sys_idtf  = "scp_operator">scp-операторов</sc_element>. Далее осуществляется переход по 
+<sc_element sys_idtf  = "rrel_arc">sc-дуге</sc_element>, принадлежащей отношению 
+<sc_element sys_idtf  = "nrel_goto">следующий scp-оператор*</sc_element> (или более частным отношениям, в случае, если 
+<sc_element sys_idtf  = "scp_operator">scp-оператор</sc_element> был добавлен во множество 
+<sc_element sys_idtf  = "successfully_executed_scp_operator">успешно выполненных scp-операторов</sc_element> или 
+<sc_element sys_idtf  = "unsuccessfully_executed_scp_operator">безуспешно выполненных scp-операторов</sc_element>). При этом очередной 
+<sc_element sys_idtf  = "scp_operator">scp-оператор</sc_element> становится 
+<sc_element sys_idtf  = "active_scp_operator">активным scp-оператором</sc_element> только в том случае, если все 
+<sc_element sys_idtf  = "scp_operator">scp-операторы</sc_element>, связанные с ним входящими 
+<sc_element sys_idtf  = "rrel_arc">sc-дугами</sc_element>, принадлежащими отношению 
+<sc_element sys_idtf  = "nrel_goto">следующий scp-оператор*</sc_element> (или более частным отношениям) стали элементами множества 
+<sc_element sys_idtf  = "executed_scp_operator">выполненных scp-операторов</sc_element> (или, соответственно, его подмножеств). В противном случае происходит ожидание завершения выполнения требуемых 
+<sc_element sys_idtf  = "scp_operator">scp-операторов</sc_element>.
+</p>
