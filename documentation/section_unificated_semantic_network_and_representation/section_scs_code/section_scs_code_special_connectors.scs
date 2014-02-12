@@ -4,3 +4,40 @@ section_scs_code_special_connectors => nrel_main_idtf:
 section_scs_code_special_connectors <- doc_atomic_partition;;
 
 section_scs_code_special_connectors = [*^"file://section_scs_code_scsi/section_scs_code_special_connectors.scsi"*];;
+
+rrel_key_sc_element -> (section_scs_code_special_connectors -> special_scs_connector)
+(*
+	=> nrel_key_sc_element_base_order: (section_scs_code_special_connectors -> scs_divider_inclusion)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_scs_code_special_connectors -> scs_divider_non_inclusion)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_scs_code_special_connectors -> scs_divider_intersected_pair)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_scs_code_special_connectors -> scs_divider_non_intersected_pair)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_scs_code_special_connectors -> scs_divider_identifier)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_scs_code_special_connectors -> scs_divider_semantically_equal_files)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_scs_code_special_connectors -> scs_divider_semantically_non_equal_files)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_scs_code_special_connectors -> scs_divider_translation)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_scs_code_special_connectors -> scs_divider_semantic_inclusion)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_scs_code_special_connectors -> scs_divider_equality)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_scs_code_special_connectors -> scs_divider_non_equality)
+	(* <- rrel_key_sc_element;; *);;
+*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;
+

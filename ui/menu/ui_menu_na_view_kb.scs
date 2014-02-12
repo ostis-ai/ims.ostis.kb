@@ -1,6 +1,6 @@
-ui_menu_na_view_kb <- ui_user_command_noatom;
-=> nrel_main_idtf: [Просмотр БЗ] (* <- lang_ru;; *);
-=> nrel_main_idtf: [View KB] (* <- lang_en;; *);
+ui_menu_na_view_kb <- ui_user_command_class_noatom;
+=> nrel_main_idtf: [Команды просмотра базы знаний] (* <- lang_ru;; *);
+=> nrel_main_idtf: [Commands to view knowledge base] (* <- lang_en;; *);
 <= nrel_ui_commands_decomposition:
 {
 	ui_menu_na_view_kb_base;

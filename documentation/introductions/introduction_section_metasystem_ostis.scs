@@ -1,0 +1,15 @@
+introduction_section_metasystem_ostis
+=> nrel_main_idtf:
+	[Введение. Метасистема IMS.OSTIS]
+	(*
+	<- lang_ru;;
+	*);
+=> nrel_main_idtf:
+	[Introduction. Metasystem IMS.OSTIS]
+	(*
+	<- lang_en;;
+	*);;
+
+introduction_section_metasystem_ostis = [*^"file://introduction_section_metasystem_ostis.scsi"*];;
+
+rrel_sc_key_element -> (introduction_section_metasystem_ostis -> metasystem_ostis);;
