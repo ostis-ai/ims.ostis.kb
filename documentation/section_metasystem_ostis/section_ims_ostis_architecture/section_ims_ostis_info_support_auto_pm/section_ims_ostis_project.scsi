@@ -1,0 +1,47 @@
+ims_ostis_project
+=> nrel_main_idtf:
+	[Проект IMS.OSTIS]
+	(*
+	<- lang_ru;;
+	*);
+	[IMS.OSTIS project]
+	(*
+	<- lang_en;;
+	*);
+
+<- rrel_key_sc_element:
+	..explanation
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		..translation
+		(*
+		-> "file://section_ims_ostis_project_explanation.html" (* <- lang_ru;; *);;
+		=> nrel_main_idtf: [Файл. Пояснение. Проект IMS.OSTIS] (* <- lang_ru;; *);;
+		*);;
+	*);
+
+=> nrel_main_product: 
+	metasystem_ostis;
+
+<= nrel_main_subproject: 
+	project_ostis;
+
+<= nrel_performer: {
+	rrel_project_leader: golenkov_v_v;
+	rrel_kb_admin: davydenko_i_t;
+	rrel_kpm_admin: shunkevich_d_v;
+	rrel_system_admin: koronchik_d_n
+};;
+
+project_ostis
+=> nrel_main_idtf:
+	[Проект OSTIS]
+	(*
+	<- lang_ru;;
+	*);
+	[OSTIS project]
+	(*
+	<- lang_en;;
+	*);;
+
