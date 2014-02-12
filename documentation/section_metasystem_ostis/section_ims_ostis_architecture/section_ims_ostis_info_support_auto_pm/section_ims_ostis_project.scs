@@ -18,16 +18,8 @@ section_ims_ostis_project
 	[Раздел. Описание текущего состояния Проекта IMS.OSTIS, а также его прошлого и планируемого будущего]
 	(*
 	<- lang_ru;;
-	*);
-
-<- rrel_key_sc_element:
-	..explanation
-	(*
-	<- sc_explanation;;
-	<= nrel_sc_text_translation:
-		..translation
-		(*
-		-> "file://section_ims_ostis_project_explanation.html" (* <- lang_ru;; *);;
-		=> nrel_main_idtf: [Файл. Пояснение. Проект IMS.OSTIS] (* <- lang_ru;; *);;
-		*);;
 	*);;
+
+section_ims_ostis_project = [*^"file://section_ims_ostis_project.scsi"*];;
+
+rrel_key_sc_element -> (section_ims_ostis_project -> ims_ostis_project);;
