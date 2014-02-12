@@ -27,7 +27,7 @@ special_scs_connector <- rrel_key_sc_element:
 			(*
 			-> rrel_example:
 				"file://../images/scs_divider/table_special.png"
-			(*<-lang_en;;*);;
+			(*<-lang_ru;;*);;
 			*);;
 	*);;
 
@@ -46,7 +46,7 @@ scs_divider_equality <- rrel_key_sc_element:
 			(*
 			-> rrel_example:
 				[Разделяет имена синонимичных sc-элементов]
-			(*<-lang_en;;*);;
+			(*<-lang_ru;;*);;
 			*);;
 	*);;
 	
@@ -78,7 +78,7 @@ scs_divider_identifier <- rrel_key_sc_element:
 			(*
 			-> rrel_example:
 			[Изображение связки отношения идентификатор*. Разделяет имя sc-объекта и имя файла, в котором хранится один из возможных идентификаторов 	указанного sc-элемента. Каждому sc-элементу может быть поставлено в соответствие несколько его идентификаторов.*]
-			(*<-lang_en;;*);;
+			(*<-lang_ru;;*);;
 			*);;
 	*);;
 scs_divider_identifier <= nrel_using_example:
@@ -113,7 +113,7 @@ scs_divider_inclusion <- rrel_key_sc_element:
 			(*
 			-> rrel_example:
 				[Изображение связки отношения включение*]
-			(*<-lang_en;;*);;
+			(*<-lang_ru;;*);;
 			*);;
 	*);;
 
@@ -143,7 +143,7 @@ scs_divider_intersected_pair <- rrel_key_sc_element:
 			(*
 			-> rrel_example:
 				[Изображение связки отношения пара пересекающихся множеств*]
-			(*<-lang_en;;*);;
+			(*<-lang_ru;;*);;
 			*);;
 	*);;
 
@@ -175,7 +175,7 @@ scs_divider_non_equality <- rrel_key_sc_element:
 			(*
 			-> rrel_example:
 				[Разделяет имена sc-элементов, не являющихся синонимичными. Это иногда требуется чтобы подчеркнуть наличие семантической разницы между двумя знаками]
-			(*<-lang_en;;*);;
+			(*<-lang_ru;;*);;
 			*);;
 	*);;
 
@@ -201,7 +201,7 @@ scs_divider_non_inclusion <- rrel_key_sc_element:
 			(*
 			-> rrel_example:
 				[Изображение связки, не принадлежащей отношению включение*]
-			(*<-lang_en;;*);;
+			(*<-lang_ru;;*);;
 			*);;
 	*);;
 
@@ -231,7 +231,7 @@ scs_divider_non_intersected_pair <- rrel_key_sc_element:
 			(*
 			-> rrel_example:
 				[Изображение связки, не принадлежащей отношению пара пересекающихся множеств*]
-			(*<-lang_en;;*);;
+			(*<-lang_ru;;*);;
 			*);;
 	*);;
 
@@ -261,7 +261,7 @@ scs_divider_semantically_equal_files <- rrel_key_sc_element:
 			(*
 			-> rrel_example:
 				[Изображение связки отношения семантическая эквивалентность*. Разделяет имена двух файлов, которые являются семантически эквивалентными.]
-			(*<-lang_en;;*);;
+			(*<-lang_ru;;*);;
 			*);;
 	*);;
 
@@ -287,7 +287,7 @@ scs_divider_semantically_non_equal_files <- rrel_key_sc_element:
 			(*
 			-> rrel_example:
 	[Изображение связки, не принадлежащей отношению семантически эквивалентные файлы*. Разделяет имена двух файлов, которые не являются семантически эквивалентными, если есть необходимость подчеркнуть наличие семантической разницы между содержимым некоторых файлов.]
-			(*<-lang_en;;*);;
+			(*<-lang_ru;;*);;
 			*);;
 	*);;
 
@@ -315,7 +315,7 @@ scs_divider_semantic_inclusion <- rrel_key_sc_element:
 			(*
 			-> rrel_example:
 	[Изображение связки, принадлежащей отношению семантическое включение*. Разделяет имя файла и обозначение sc-текста, которые связаны указанным отношением, либо имена двух файлов, связанных указанным отношением.]
-			(*<-lang_en;;*);;
+			(*<-lang_ru;;*);;
 			*);;
 	*);;
 scs_divider_semantic_inclusion <= nrel_using_example:
@@ -341,7 +341,7 @@ scs_divider_translation <- rrel_key_sc_element:
 			(*
 			-> rrel_example:
 			[Изображение связки, принадлежащей отношению трансляция*. Разделяет обозначение sc-текста и имя файла, семантически эквивалентного данному sc-тексту.]
-			(*<-lang_en;;*);;
+			(*<-lang_ru;;*);;
 			*);;
 	*);;
 

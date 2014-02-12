@@ -388,7 +388,7 @@ sc_neighborhood
 <= nrel_inclusion:
 	sc_knowledge; 
 => nrel_inclusion: 
-	sc_explanation; sc_definition; sc_note; sc_comment;
+	sc_explanation; sc_definition; sc_note; sc_comment; sc_elaboration;
 
 <=> nrel_semantically_close_sc_element:
 	rrel_sc_neighborhood;;
@@ -402,6 +402,12 @@ sc_note
 => nrel_idtf:
 	[описание некоторого свойства рассматриваемой сущности] (* <- lang_ru;; *);;
 	
+sc_elaboration
+=> nrel_main_idtf: [sc-уточнение] (* <- lang_ru;; *);
+=> nrel_main_idtf: [sc-elaboration] (* <- lang_en;; *);
+<- rrel_key_sc_element:
+	section_subject_domain_of_knowledges;;
+
 section
 
 => nrel_main_idtf:
@@ -419,4 +425,66 @@ section
 	-> atomic_section;;
 	-> non_atomic_section;;
 	*);;
-		
+
+sense
+=> nrel_main_idtf: [смысл] (* <- lang_ru;; *);
+=> nrel_idtf: [смысловое представление информации] (* <- lang_ru;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_elaboration;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> "file://nl_files/sense_elaboration1.html";;
+		*);;
+	*);
+	...
+	(*
+	<- sc_elaboration;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> "file://nl_files/sense_elaboration2.html";;
+		*);;
+	*);
+	...
+	(*
+	<- sc_elaboration;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> "file://nl_files/sense_elaboration3.html";;
+		*);;
+	*);
+	...
+	(*
+	<- sc_elaboration;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> "file://nl_files/sense_elaboration4.html";;
+		*);;
+	*);
+	...
+	(*
+	<- sc_elaboration;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> "file://nl_files/sense_elaboration5.html";;
+		*);;
+	*);
+	...
+	(*
+	<- sc_elaboration;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> "file://nl_files/sense_elaboration6.html";;
+		*);;
+	*);
+	
+<- rrel_key_sc_element:
+	section_subject_domain_of_knowledges;;
