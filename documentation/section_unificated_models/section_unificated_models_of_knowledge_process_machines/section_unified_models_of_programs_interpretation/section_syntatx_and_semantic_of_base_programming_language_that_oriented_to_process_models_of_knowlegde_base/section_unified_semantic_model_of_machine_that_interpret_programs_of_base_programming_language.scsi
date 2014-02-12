@@ -52,12 +52,7 @@ abstract_scp_machine
 		*);
 		sc_agent_of_scp_process_destruction
 		(*
-			=> nrel_abstract_sc_agent_base_order: 
-				sc_agent_of_scp_process_destruction;;
-		*);
-		sc_agent_of_scp_process_destruction
-		(*
-			=> nrel_abstract_sc_agent_base_order: 
+			=> nrel_abstract_sc_agent_base_order:  
 				sc_agent_of_synchronization_of_events_in_sc_memory_and_its_realization;;
 		*);
 		sc_agent_of_synchronization_of_events_in_sc_memory_and_its_realization
