@@ -1,0 +1,22 @@
+<p>
+Операторы класса 
+<b><sc_element sys_idtf  = "waitReturn">scp-оператор ожидания завершения выполнения scp-программы</sc_element></b> описывают действие ожидания завершения выполнения вызванной 
+<sc_element sys_idtf  = "scp_program">scp-программы</sc_element>, то есть 
+<sc_element sys_idtf  = "scp_process">scp-процесса</sc_element>, созданного при выполнении 
+<sc_element sys_idtf  = "call">scp-оператора асинхронного вызова подпрограммы</sc_element>. Если 
+<sc_element sys_idtf  = "scp_process">scp-процесс</sc_element> завершился до того, как началось выполнение 
+<sc_element sys_idtf  = "scp_operator">scp-оператора</sc_element> данного класса, то будет выполнен 
+<sc_element sys_idtf  = "nrel_goto">следующий scp-оператор*</sc_element>, в противном случае 
+<sc_element sys_idtf  = "scp_program">scp-программа</sc_element> приостановит свое выполнение до того, как ожидаемый 
+<sc_element sys_idtf  = "scp_process">scp-процесс</sc_element> не завершится. После выполнения 
+<sc_element sys_idtf  = "scp_operator">scp-оператора</sc_element> данного класса конструкция, описывающая заданный 
+<sc_element sys_idtf  = "scp_process">scp-процесс</sc_element> будет удалена из 
+<sc_element sys_idtf  = "sc_memory">sc-памяти</sc_element>. В связи c этим запрещается использование нескольких 
+<sc_element sys_idtf  = "scp_operator">scp-операторов</sc_element> данного класса для знака одного и того же 
+<sc_element sys_idtf  = "scp_process">scp-процесса</sc_element>.
+</p>
+<p>
+Каждый оператор данного класса содержит один операнд, значением которого является знак 
+<sc_element sys_idtf  = "scp_process">scp-процесса</sc_element>, завершения которого необходимо дождаться. Операнд должен быть помечен как 
+<sc_element sys_idtf  = "rrel_fixed">scp-операнд с заданным значением'</sc_element>.
+</p>

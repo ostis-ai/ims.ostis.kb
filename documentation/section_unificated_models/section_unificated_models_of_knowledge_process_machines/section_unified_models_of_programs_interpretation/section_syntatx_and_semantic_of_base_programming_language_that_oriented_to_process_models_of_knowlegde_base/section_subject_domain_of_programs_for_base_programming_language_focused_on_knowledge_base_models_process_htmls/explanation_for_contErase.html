@@ -1,0 +1,13 @@
+<p>
+Операторы класса 
+<b><sc_element sys_idtf  = "contErase">scp-оператор удаления содержимого sc-ссылки</sc_element></b> описывают действие удаления произвольного содержимого некоторой 
+<sc_element sys_idtf  = "rrel_link">sc-ссылки</sc_element>.
+</p>
+<p>
+Каждый оператор данного класса содержит один операнд. Данный операнд должен быть помечен как 
+<sc_element sys_idtf  = "rrel_fixed">scp-операнд с заданным значением'</sc_element>. Значением данного операнда является 
+<sc_element sys_idtf  = "rrel_link">sc-ссылка</sc_element>, содержимое которой будет удалено. После выполнения оператора указанная 
+<sc_element sys_idtf  = "rrel_link">sc-ссылка</sc_element> будет считаться 
+<sc_element sys_idtf  = "rrel_link">sc-ссылкой</sc_element>, для которой не сформировано содержимое, то есть не существует соответствующего ей файла. При этом сама 
+<sc_element sys_idtf  = "rrel_link">sc-ссылка</sc_element> не удаляется.
+</p>
