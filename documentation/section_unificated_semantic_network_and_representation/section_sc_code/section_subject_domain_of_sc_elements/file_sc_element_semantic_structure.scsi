@@ -1,0 +1,77 @@
+sc_element
+
+<= nrel_subdividing:
+	{
+	sc_constant
+	(*
+	=> nrel_idtf: [sc-знак фиксированной (конкретной) сущности] (* <- lang_ru;; *);;
+	*);
+	sc_variable
+	(*
+	=> nrel_idtf: [sc-знак нефиксированной (произвольной) сущности] (* <- lang_ru;; *);;
+	*)
+	};
+	
+<= nrel_subdividing:
+	{
+	primary_sc_element
+	(*
+	=> nrel_idtf: [sc-знак  внешней описываемой сущности ] (* <- lang_ru;; *);;
+	*);	
+	
+	sc_set
+	(*
+	=> nrel_idtf: [вторичный sc-элемент] (* <- lang_ru;; *);;
+	=> nrel_idtf: [знак множества sc-элементов] (* <- lang_ru;; *);;
+	=> nrel_idtf: [sc-метазнак] (* <- lang_ru;; *);;
+	=> nrel_idtf: [sc-текст] (* <- lang_ru;; *);;
+	=> nrel_idtf: [текст SC-кода] (* <- lang_ru;; *);;
+	=> nrel_idtf: [знак sc-текста] (* <- lang_ru;; *);;
+	*)
+	};;
+	
+sc_set
+<= nrel_subdividing:
+	{
+	sc_tuple
+	(*
+	=> nrel_idtf: [sc-элемент, обозначающий класс sc-элементов] (* <- lang_ru;; *);;
+	=> nrel_idtf: [sc-знак множества sc-элементов, эквивалентных в том или ином смысле] (* <- lang_ru;; *);;
+	*);
+	sc_structure
+	(*
+	=> nrel_idtf: [sc-знак множества sc-элементов, в состав которого входят sc-связки или 
+sc-структуры, связывающие эти sc-элементы] (* <- lang_ru;; *);;
+	*);
+	sc_class
+	};;
+	
+sc_tuple
+<= nrel_subdividing:
+	{
+	binary_sc_tuple;
+	nonbinary_sc_tuple
+	};
+	
+<= nrel_subdividing:
+	{
+	oriented_sc_tuple;
+	nonoriented_sc_tuple
+	};;
+	
+binary_sc_tuple
+=> nrel_inclusion: quasybinary_sc_tuple;
+=> nrel_inсlusion: membership_or_nonmembership_tuple;
+<= nrel_subdividing:
+	{
+	binary_nonatomic_sc_tuple;
+	sc_connector;
+	binary_atomic_sc_tuple
+	(*
+	<= nrel_subdividing:
+		{
+		sc_edge;
+		sc_arc;
+		};;
+	*)
+	};;
