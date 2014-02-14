@@ -66,20 +66,20 @@ scp_procedure
 		agent_scp_procedure
 	};;
 
-agent_scp_procedure
+agent_scp_program
 	<- sc_node_not_relation;
 	=> nrel_main_idtf:
-		[агентная scp-процедура]
+		[агентная scp-программа]
 		(*<- lang_ru;;*);
-		[agent scp-procedure]
+		[agent scp-program]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		..key_node_agent_scp_procedure
+		..key_node_agent_scp_program
 		(*
 			<- sc_note;;
 			<- sc_explanation;;
 			<= nrel_sc_text_translation:	
-				..translation_agent_scp_procedure
+				..translation_agent_scp_program
 				(*
 					-> rrel_example:
 						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_agent_scp_procedure.html"
@@ -306,7 +306,7 @@ sc_5_el_str
 non_standard_sc_structure
 	<- sc_node_not_relation;
 	=> nrel_main_idtf:
-		[sc-конструкция стандартного вида]
+		[sc-конструкция нестандартного вида]
 		(*<- lang_ru;;*);
 		[non-standard sc-structure]
 		(*<- lang_en;;*);
@@ -880,6 +880,18 @@ searchElStr5
 						(*<- lang_ru;;*);;
 				*);;
 		*);;
+
+searchSet
+	=> nrel_main_idtf:
+		[scp-оператор ассоциативного поиска sc-конструкций с формированием множеств]
+		(*<- lang_ru;;*);
+		[scp-operator of sc-structure associative search and set creation]
+		(*<- lang_en;;*);
+	<= nrel_subdividing: 
+	{
+		searchSetStr3;
+		searchSetStr5
+	};;
 
 searchSetStr3
 	=> nrel_main_idtf:
@@ -1616,9 +1628,26 @@ scp_operator_of_scp_process_control
 		return
 	};;
 
-/*
-scp_process ДОБАВИТЬ В ЦЕПОЧКУ
-*/
+scp_process
+	<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[scp-процесс]
+		(*<- lang_ru;;*);
+		[scp-process]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_scp_process
+		(*
+			<- sc_note;;
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_scp_process
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_scp_process.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
 
 call
 	=> nrel_main_idtf:

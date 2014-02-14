@@ -16,8 +16,9 @@ ims_ostis_project
 	<= nrel_sc_text_translation:
 		..translation
 		(*
-		-> "file://section_ims_ostis_project_explanation.html" (* <- lang_ru;; *);;
+		-> "file://section_ims_ostis_project_explanation.html" (* <- lang_ru;; 
 		=> nrel_main_idtf: [Файл. Пояснение. Проект IMS.OSTIS] (* <- lang_ru;; *);;
+			*);;
 		*);;
 	*);
 
@@ -32,6 +33,84 @@ ims_ostis_project
 	rrel_kb_admin: davydenko_i_t;
 	rrel_kpm_admin: shunkevich_d_v;
 	rrel_system_admin: koronchik_d_n
+};
+
+<= nrel_project_decomposition: {
+	ims_ostis_kb_project
+	(*
+	=> nrel_key_sc_element_base_order:
+		ims_ostis_kpm_project;;
+	*);
+	ims_ostis_kpm_project
+	(*
+	=> nrel_key_sc_element_base_order:
+		ims_ostis_ui_project;;
+	*);
+	ims_ostis_ui_project
+	(*
+	=> nrel_key_sc_element_base_order:
+		ims_ostis_platform_project;;
+	*);
+	ims_ostis_platform_project
+};
+
+<= nrel_project_decomposition: {
+	ims_ostis_project_autoupdate
+	(*
+	=> nrel_key_sc_element_base_order:
+		ims_ostis_project_autocontrol;;
+	*);
+	ims_ostis_project_autocontrol
+	(*
+	=> nrel_key_sc_element_base_order:
+		ims_ostis_project_autosecurity;;
+	*);
+	ims_ostis_project_autosecurity
+	(*
+	=> nrel_key_sc_element_base_order:
+		ims_ostis_project_kb_support;;
+	*);
+	ims_ostis_project_kb_support
+	(*
+	=> nrel_key_sc_element_base_order:
+		ims_ostis_project_program_support;;
+	*);
+	ims_ostis_project_program_support
+	(*
+	=> nrel_key_sc_element_base_order:
+		ims_ostis_project_kpm_support;;
+	*);
+	ims_ostis_project_kpm_support
+	(*
+	=> nrel_key_sc_element_base_order:
+		ims_ostis_project_ui_support;;
+	*);
+	ims_ostis_project_ui_support
+	(*
+	=> nrel_key_sc_element_base_order:
+		ims_ostis_project_education_support;;
+	*);
+	ims_ostis_project_education_support
+	(*
+	=> nrel_key_sc_element_base_order:
+		ims_ostis_project_consult;;
+	*);
+	ims_ostis_project_consult
+	(*
+	=> nrel_key_sc_element_base_order:
+		ims_ostis_project_intelligent_systems_support;;
+	*);
+	ims_ostis_project_intelligent_systems_support
+	(*
+	=> nrel_key_sc_element_base_order:
+		ims_ostis_project_intelligent_systems_control;;
+	*);
+	ims_ostis_project_intelligent_systems_control
+	(*
+	=> nrel_key_sc_element_base_order:
+		ims_ostis_project_intelligent_systems_security;;
+	*);
+	ims_ostis_project_intelligent_systems_security
 };;
 
 project_ostis

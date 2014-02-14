@@ -1,0 +1,20 @@
+<p>
+Задачей 
+<b><sc_element sys_idtf  = "sc_agent_of_scp_operator_interpretation">sc-агента интерпретации scp-операторов</sc_element></b> является собственно интерпретация операторов 
+<sc_element sys_idtf  = "scp_program">scp-программы</sc_element>, то есть выполнение в 
+<sc_element sys_idtf  = "sc_memory">sc-памяти</sc_element> действий, описываемых конкретным 
+<sc_element sys_idtf  = "scp_operator">scp-оператором</sc_element>. Данный 
+<sc_element sys_idtf  = "sc_agent">sc-агент</sc_element> активируется при появлении в 
+<sc_element sys_idtf  = "sc_memory">sc-памяти</sc_element> 
+<sc_element sys_idtf  = "scp_operator">scp-оператора</sc_element>, принадлежащего классу 
+<sc_element sys_idtf  = "active_sc_agent">активных scp-операторов</sc_element>. После выполнения действий, описываемых 
+<sc_element sys_idtf  = "scp_operator">scp-оператором</sc_element>, 
+<sc_element sys_idtf  = "scp_operator">scp-оператор</sc_element> добавляется во множество 
+<sc_element sys_idtf  = "executed_scp_operator">выполненных scp-операторов</sc_element>. В случае, когда семантика действия, описываемого 
+<sc_element sys_idtf  = "scp_operator">scp-оператором</sc_element>, предполагает возможность ветвления 
+<sc_element sys_idtf  = "scp_program">scp-программы</sc_element> после выполнения данного 
+<sc_element sys_idtf  = "scp_operator">scp-оператора</sc_element>, то используется одно из подмножеств класса 
+<sc_element sys_idtf  = "executed_scp_operator">выполненных scp-операторов</sc_element> – 
+<sc_element sys_idtf  = "unsuccessfully_executed_scp_operator">безуспешно выполненный scp-оператор</sc_element> или 
+<sc_element sys_idtf  = "successfully_executed_scp_operator">успешно выполненный scp-оператор</sc_element>.
+</p>

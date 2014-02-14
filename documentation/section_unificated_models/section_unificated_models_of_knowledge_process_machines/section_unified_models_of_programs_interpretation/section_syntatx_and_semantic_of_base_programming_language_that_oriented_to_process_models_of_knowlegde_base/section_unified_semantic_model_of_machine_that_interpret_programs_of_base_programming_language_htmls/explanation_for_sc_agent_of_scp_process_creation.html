@@ -1,0 +1,60 @@
+<p>
+Задачей 
+<b><sc_element sys_idtf  = "sc_agent_of_scp_process_creation">sc-агента создания scp-процессов</sc_element></b> является создание 
+<sc_element sys_idtf  = "scp_process">scp-процессов</sc_element>, соответствующих заданной 
+<sc_element sys_idtf  = "scp_program">scp-программе</sc_element>. Данный 
+<sc_element sys_idtf  = "sc_agent">sc-агент</sc_element> активируется при появлении в 
+<sc_element sys_idtf  = "sc_memory">sc-памяти</sc_element> 
+<sc_element sys_idtf  = "question_initiated">инициированного вопроса</sc_element>, принадлежащего классу 
+<sc_element sys_idtf  = "scp_oprator_interpretation_request">запросов интерпретации scp-программы</sc_element>.
+</p>
+<p>
+После проверки 
+<sc_element sys_idtf  = "sc_agent">sc-агентом</sc_element> условия инициирования выполняется создание 
+<sc_element sys_idtf  = "scp_process">scp-процесса</sc_element> с учетов конкретных параметров интерпретации 
+<sc_element sys_idtf  = "scp_program">scp-программы</sc_element>, после чего осуществляется поиск 
+<sc_element sys_idtf  = "rrel_init">начального оператора'</sc_element> 
+<sc_element sys_idtf  = "scp_process">scp-процесса</sc_element> и его активизация.
+</p>
+<p>
+Создание уникальных копий выполняемой 
+<sc_element sys_idtf  = "scp_program">scp-программы</sc_element> при каждом ее запуске требует дополнительных затрат времени и памяти, однако такой подход имеет ряд существенных преимуществ:
+</p>
+<ol>
+<li>
+созданный 
+<sc_element sys_idtf  = "scp_process">scp-процесс</sc_element> может быть реконфигурирован прямо в процессе выполнения, при этом нет опасности повреждения исходной 
+<sc_element sys_idtf  = "scp_program">scp-программы</sc_element>;
+</li>
+<li>
+выполнение созданного 
+<sc_element sys_idtf  = "scp_process">scp-процесса</sc_element> не требует обращений к исходной 
+<sc_element sys_idtf  = "scp_program">scp-программе</sc_element>, таким образом, исключается необходимость синхронизации доступа 
+<sc_element sys_idtf  = "scp_process">scp-процессов</sc_element>, соответствующих одной и той же 
+<sc_element sys_idtf  = "scp_program">scp-программе</sc_element> как к разделяемому ресурсу;
+</li>
+<li>
+выполнение созданных 
+<sc_element sys_idtf  = "scp_process">scp-процессов</sc_element> может физически осуществляться на разных устройствах параллельно, что существенно увеличивает эффект от наращивания аппаратной основы дополнительными ресурсами;
+</li>
+<li>
+отсутствует необходимость указывать 
+<sc_element sys_idtf  = "scp_process">scp-процесс</sc_element>, в рамках которого некоторая 
+<sc_element sys_idtf  = "rrel_scp_var">scp-переменная'</sc_element> имеет заданное 
+<sc_element sys_idtf  = "nrel_scp_var_value">значение*</sc_element>, поскольку каждая 
+<sc_element sys_idtf  = "scp_var">scp-переменная</sc_element>' становится уникальной в рамках 
+<sc_element sys_idtf  = "sc_memory">sc-памяти</sc_element> в результате копирования и может иметь только одно 
+<sc_element sys_idtf  = "nrel_scp_var_value">значение*</sc_element>;
+</li>
+<li>
+при создании 
+<sc_element sys_idtf  = "scp_process">scp-процесса</sc_element> 
+<sc_element sys_idtf  = "rrel_scp_var">scp-переменные'</sc_element>, соответствующие 
+<sc_element sys_idtf  = "rrel_in">in-параметрам'</sc_element> 
+<sc_element sys_idtf  = "scp_program">scp-программы</sc_element> физически заменяются 
+<sc_element sys_idtf  = "sc_element">sc-элементами</sc_element>, указанными в качестве параметров интерпретации в соответствующем запросе. Такая замена позволяет исключить дополнительную операцию поиска 
+<sc_element sys_idtf  = "nrel_scp_var_value">значения*</sc_element> для указанных 
+<sc_element sys_idtf  = "rrel_scp_var">scp-переменных'</sc_element>, поскольку они становятся 
+<sc_element sys_idtf  = "rrel_scp_const">scp-константами'</sc_element>.
+</li>
+</ol>
