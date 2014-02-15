@@ -1,0 +1,108 @@
+
+project_task
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[проектная задача]
+	(*
+	<- lang_ru;;
+	*);
+	[project task]
+	(*
+	<- lang_en;;
+	*);
+<= nrel_subdividing:{
+	project_task_error_fix;
+	project_task_improvement;
+	project_task_optimization
+};
+<= nrel_subdividing:{
+	project_task_critical;
+	project_task_low_priority;
+	project_task_middle_priority;
+	project_task_high_priority
+};;
+
+project_task_error_fix
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[проектная задача по исправлению ошибки]
+	(*
+	<- lang_ru;;
+	*);
+	[error fix project task]
+	(*
+	<- lang_en;;
+	*);;
+
+project_task_improvement
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[проектная задача по улучшению]
+	(*
+	<- lang_ru;;
+	*);
+	[improvement project task]
+	(*
+	<- lang_en;;
+	*);;
+
+project_task_optimization
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[проектная задача по оптимизации]
+	(*
+	<- lang_ru;;
+	*);
+	[optimization project task]
+	(*
+	<- lang_en;;
+	*);;
+
+project_task_critical
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[критическая проектная задача]
+	(*
+	<- lang_ru;;
+	*);
+	[critical project task]
+	(*
+	<- lang_en;;
+	*);;
+
+project_task_low_priority
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[проектная задача с низким приоритетом]
+	(*
+	<- lang_ru;;
+	*);
+	[low priority project task]
+	(*
+	<- lang_en;;
+	*);;
+
+project_task_middle_priority
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[проектная задача со средним приоритетом]
+	(*
+	<- lang_ru;;
+	*);
+	[middle priority project task]
+	(*
+	<- lang_en;;
+	*);;
+
+project_task_high_priority
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[проектная задача c высоким приоритетом]
+	(*
+	<- lang_ru;;
+	*);
+	[high priority project task]
+	(*
+	<- lang_en;;
+	*);;
+
