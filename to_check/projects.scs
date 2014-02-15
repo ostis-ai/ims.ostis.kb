@@ -48,6 +48,7 @@ nrel_performer
 	*);;
 
 rrel_project_leader
+<- sc_node_role_relation;
 => nrel_main_idtf:
 	[руководитель проекта']
 	(*
@@ -59,6 +60,7 @@ rrel_project_leader
 	*);;
 
 rrel_kb_admin
+<- sc_node_role_relation;
 => nrel_main_idtf:
 	[администратор базы знаний']
 	(*
@@ -70,6 +72,7 @@ rrel_kb_admin
 	*);;
 
 rrel_kpm_admin
+<- sc_node_role_relation;
 => nrel_main_idtf:
 	[администратор машины обработки знаний']
 	(*
@@ -81,12 +84,25 @@ rrel_kpm_admin
 	*);;
 
 rrel_system_admin
+<- sc_node_role_relation;
 => nrel_main_idtf:
 	[системный администратор’]
 	(*
 	<- lang_ru;;
 	*);
 	[system administrator']
+	(*
+	<- lang_en;;
+	*);;
+
+rrel_responsible_performer
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+	[ответственный исполнитель’]
+	(*
+	<- lang_ru;;
+	*);
+	[responsible performer']
 	(*
 	<- lang_en;;
 	*);;
@@ -134,3 +150,159 @@ koronchik_d_n
 	(*
 	<- lang_en;;
 	*);;
+
+project
+=> nrel_main_idtf:
+	[проект]
+	(*
+	<- lang_ru;;
+	*);
+	[project]
+	(*
+	<- lang_en;;
+	*);;
+
+nrel_creation_date
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[дата создания*]
+	(*
+	<- lang_ru;;
+	*);
+	[creation date*]
+	(*
+	<- lang_en;;
+	*);;
+
+nrel_planned_completion_terms
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[планируемые сроки завершения*]
+	(*
+	<- lang_ru;;
+	*);
+	[planned completion terms*]
+	(*
+	<- lang_en;;
+	*);;
+
+nrel_project_task
+<- sc_node_norole_relation;
+<- quasybinary_relation;
+=> nrel_main_idtf:
+	[проектная задача*]
+	(*
+	<- lang_ru;;
+	*);
+	[project task*]
+	(*
+	<- lang_en;;
+	*);;
+
+project_task
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[проектная задача]
+	(*
+	<- lang_ru;;
+	*);
+	[project task]
+	(*
+	<- lang_en;;
+	*);
+<= nrel_subdividing:{
+	project_task_error_fix;
+	project_task_improvement;
+	project_task_optimization
+};
+<= nrel_subdividing:{
+	project_task_critical;
+	project_task_low_priority;
+	project_task_middle_priority;
+	project_task_high_priority
+};;
+
+project_task_error_fix
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[проектная задача по исправлению ошибки]
+	(*
+	<- lang_ru;;
+	*);
+	[error fix project task]
+	(*
+	<- lang_en;;
+	*);;
+
+project_task_improvement
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[проектная задача по улучшению]
+	(*
+	<- lang_ru;;
+	*);
+	[improvement project task]
+	(*
+	<- lang_en;;
+	*);;
+
+project_task_optimization
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[проектная задача по оптимизации]
+	(*
+	<- lang_ru;;
+	*);
+	[optimization project task]
+	(*
+	<- lang_en;;
+	*);;
+
+project_task_critical
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[критическая проектная задача]
+	(*
+	<- lang_ru;;
+	*);
+	[critical project task]
+	(*
+	<- lang_en;;
+	*);;
+
+project_task_low_priority
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[проектная задача с низким приоритетом]
+	(*
+	<- lang_ru;;
+	*);
+	[low priority project task]
+	(*
+	<- lang_en;;
+	*);;
+
+project_task_middle_priority
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[проектная задача со средним приоритетом]
+	(*
+	<- lang_ru;;
+	*);
+	[middle priority project task]
+	(*
+	<- lang_en;;
+	*);;
+
+project_task_high_priority
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[проектная задача c высоким приоритетом]
+	(*
+	<- lang_ru;;
+	*);
+	[high priority project task]
+	(*
+	<- lang_en;;
+	*);;
+

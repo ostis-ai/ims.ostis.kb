@@ -1,0 +1,17 @@
+<p>
+<b><sc_element sys_idtf  = "agent_scp_program">агентные scp-программы</sc_element></b> представляют собой частный случай 
+<sc_element sys_idtf  = "scp_program">scp-программ</sc_element> вообще, однако заслуживают отдельного рассмотрения, поскольку используются наиболее часто. 
+<sc_element sys_idtf  = "scp_program">scp-программы</sc_element> данного класса представляют собой реализации программ агентов обработки знаний, и имеют жестко фиксированную структуру множества параметров. Множество параметров в данном случае состоит из двух 
+<sc_element sys_idtf  = "rrel_in">in-параметров</sc_element>. Значение первого параметра является знаком бинарной ориентированной пары, являющееся вторым компонентом связки отношения 
+<sc_element sys_idtf  = "nrel_primary_initiation_condition">первичное условие инициирования*</sc_element> для 
+<sc_element sys_idtf  = "abstract_sc_agent">абстрактного sc-агента</sc_element>, в множество программ sc-агента* которого входит рассматриваемая 
+<b><sc_element sys_idtf  = "agent_scp_program">агентная scp-программа</sc_element></b>.
+</p>
+<p>	
+Значением второго параметра является 
+<sc_element sys_idtf  = "sc_element">sc-элемент</sc_element>, с которым непосредственно связано 
+<sc_element sys_idtf  = "sc_event">sc-событие</sc_element>, в результате возникновения которого был инициирован соответствующий 
+<sc_element sys_idtf  = "sc_agent">sc-агент</sc_element>, т.е., например, сгенерированная либо удаляемая 
+<sc_element sys_idtf  = "rrel_arc">sc-дуга</sc_element> или 
+<sc_element sys_idtf  = "rrel_edge">sc-ребро</sc_element>.
+</p>

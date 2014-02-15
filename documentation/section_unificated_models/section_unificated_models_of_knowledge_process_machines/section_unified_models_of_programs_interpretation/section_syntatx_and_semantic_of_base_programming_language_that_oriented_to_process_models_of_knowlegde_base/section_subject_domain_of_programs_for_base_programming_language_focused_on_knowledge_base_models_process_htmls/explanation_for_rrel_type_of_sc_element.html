@@ -1,0 +1,20 @@
+<p>
+Ролевое отношение 
+<b><sc_element sys_idtf  = "rrel_type_of_sc_element">тип sc-элемента'</sc_element></b> используется для уточнения типа 
+<sc_element sys_idtf  = "sc_element">sc-элемента</sc_element>, выступающего в роли значения некоторого операнда. 
+<b><sc_element sys_idtf  = "rrel_type_of_sc_element">тип sc-элемента'</sc_element></b> имеет смысл указывать только для операндов, помеченных как 
+<sc_element sys_idtf  = "rrel_assign">scp-операнд со свободным значением'</sc_element>, тогда данное уточнение типа 
+<sc_element sys_idtf  = "sc_element">sc-элемента</sc_element> будет использовано для сужения области поиска либо уточнения параметров генерации каких-либо конструкций. Значением 
+<sc_element sys_idtf  = "rrel_fixed">scp-операндов с заданным значением'</sc_element> является конкретный, известный на момент начала выполнения 
+<sc_element sys_idtf  = "scp_operator">scp-оператора</sc_element> 
+<sc_element sys_idtf  = "sc_element">sc-элемент</sc_element> с конкретным типом, не зависящим от указания 
+<b><sc_element sys_idtf  = "rrel_type_of_sc_element">типа sc-элемента'</sc_element></b>, в связи с чем использование ролевого отношения 
+<b><sc_element sys_idtf  = "rrel_type_of_sc_element">тип sc-элемента'</sc_element></b> в данном случае является некорректным.
+</p>
+<p>	
+Допускается использование комбинаций семантически непротиворечащих друг другу подмножеств указанного отношения. Например, допускается комбинация 
+<sc_element sys_idtf  = "rrel_const">константный sc-элемент'</sc_element> и 
+<sc_element sys_idtf  = "rrel_common">sc-дуга общего вида'</sc_element>, но не допускается комбинация 
+<sc_element sys_idtf  = "rrel_node">sc-узел'</sc_element> и 
+<sc_element sys_idtf  = "rrel_arc">sc-дуга'</sc_element>.
+</p>

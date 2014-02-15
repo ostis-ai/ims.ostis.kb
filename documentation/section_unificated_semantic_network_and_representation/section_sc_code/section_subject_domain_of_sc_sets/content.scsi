@@ -1,0 +1,163 @@
+nrel_inclusion
+
+<- sc_node_norole_relation;
+
+=> nrel_main_idtf:
+	[включение*]
+	(*
+	<- lang_ru;;
+	*);
+	[inclusion*]
+	(*
+	<- lang_en;;
+	*);
+	
+=> nrel_inclusion:
+	nrel_strict_inclusion;
+
+<- rrel_key_sc_element:
+	section_subject_domain_of_sc_sets;
+	
+<- rrel_key_sc_element:
+	[*^"file://neighborhoods/nrel_inclusion.scsi"*] 
+	(* 
+	<- typical_sc_neighborhood;; 
+	<= nrel_sc_text_translation:
+		..translation
+		(*
+		-> rrel_example: [Si ⊇ Sj];; 
+		*);;
+	*);;
+	
+..si => nrel_main_idtf: [Si] (* <- lang_ru;; *);;
+..sj => nrel_main_idtf: [Sj] (* <- lang_ru;; *);;
+
+nrel_strict_inclusion
+
+<- sc_node_norole_relation;
+
+=> nrel_main_idtf:
+	[строгое включение*]
+	(*
+	<- lang_ru;;
+	*);
+	[strict inclusion*]
+	(*
+	<- lang_en;;
+	*);
+	
+<- rrel_key_sc_element:
+	section_subject_domain_of_sc_sets;;
+
+nrel_subdividing
+
+<- sc_node_norole_relation;
+<- quasybinary_relation;
+<- decomposition_relation;
+
+/*
+<= nrel_inclusion: декомпозиция*; объединение*;
+*/
+
+=> nrel_main_idtf:
+	[разбиение*]
+	(*
+	<- lang_ru;;
+	*);
+	[subdividing*]
+	(*
+	<- lang_en;;
+	*);
+	
+=> nrel_idtf:
+	[разбиение множества*] (* <- lang_ru;; *);
+	[объединение попарно непересекающихся множеств*] (* <- lang_ru;; *);
+	[декомпозиция множества*] (* <- lang_ru;; *);
+	
+<- rrel_key_sc_element:
+	section_subject_domain_of_sc_sets;
+	
+<- rrel_key_sc_element:
+	[*^"file://neighborhoods/nrel_subdividing.scsi"*]
+	(* <- typical_sc_neighborhood;; *);;
+
+rrel_example
+
+<- sc_node_role_relation;
+
+=> nrel_main_idtf:
+	[пример']
+	(*
+	<- lang_ru;;
+	*);
+	[sample']
+	(*
+	<- lang_en;;
+	*);
+	
+=> nrel_idtf:
+	[типичный пример']
+	(*
+	<- lang_ru;;
+	*);
+	
+<- rrel_key_sc_element:
+	section_subject_domain_of_sc_sets;;
+	
+sc_set
+
+=> nrel_main_idtf:
+	[sc-множество] (* <- lang_ru;; *);
+	[sc-set]       (* <- lang_en;; *);
+	
+=> nrel_idtf:
+	[sc-текст] (* <- lang_ru;; *);
+	[текст SC-кода] (* <- lang_ru;; *);
+	[Множество всевозможных текстов SC-кода] (* <- lang_ru;; *);
+	[Максимальное множество текстов SC-кода] (* <- lang_ru;; *);
+	[sc-знание или фрагмент sc-знания (например, sc-текст высказывания или sc-текст логической формулы, входящей в состав высказывания)] (* <- lang_ru;; *);
+	
+<- rrel_key_sc_element:
+	...
+	(* 
+	<- sc_note;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> [<b><i>sc-множество</b></i> чаще всего с синтаксической точки зрения представляет собой связную sc-структуру] 
+			(* 
+			<- lang_ru;; 
+			=> nrel_format: format_html;; 
+			*);;
+		*);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_advantage;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> "file://nl_files/sc_code_advantages.html";;		
+		*);;	
+	*);
+	
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> "file://nl_files/sc_set_definition.html";;
+		*);;
+	*);
+	
+<- rrel_sc_key_element:
+	section_subject_domain_of_sc_sets;
+
+=> nrel_inclusion:
+	sc_knowledge;;
+
+
