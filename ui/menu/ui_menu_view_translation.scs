@@ -1,8 +1,8 @@
 ui_menu_view_translation <- ui_user_command_class_atom; ui_user_command_class_view_kb;;
 
-ui_menu_view_translation => nrel_main_idtf: [Поиск трансляции] (* <- lang_ru;; *);;
+ui_menu_view_translation => nrel_main_idtf: [Запрос трансляции] (* <- lang_ru;; *);;
 
-ui_menu_view_translation => nrel_main_idtf: [Search of translation] (* <- lang_en;; *);;
+ui_menu_view_translation => nrel_main_idtf: [Request of translation] (* <- lang_en;; *);;
 
 ui_menu_view_translation => ui_nrel_command_template:
 	[*
@@ -14,3 +14,5 @@ ui_menu_view_translation => ui_nrel_command_template:
 		._question_search_links_of_relation_connected_with_element_instance _<- question;;
 	*];;
 
+ui_menu_view_translation => ui_nrel_command_lang_template: [Запрос трансляции: $ui_arg_1] (* <- lang_ru;; *);;
+ui_menu_view_translation => ui_nrel_command_lang_template: [Request of translation: $ui_arg_1] (* <- lang_en;; *);;
