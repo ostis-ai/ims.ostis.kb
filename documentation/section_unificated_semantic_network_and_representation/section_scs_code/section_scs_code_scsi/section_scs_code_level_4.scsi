@@ -10,22 +10,16 @@ scs_code_4_level => nrel_main_idtf:
 			..translation_scs_code_level_4_ru
 			(*
 			-> rrel_example:		
-	[
-	На данном уровне SCs-кода вводятся средства лаконичной записи группы sc.s-предложений уровня 2 или sc.s-предложений уровня 3, у которых 
-	1) В качестве первого (левого) компонента используется одно и то же имя (т.е. имя одного и того же элемента). 
-	2) Полностью аналогичны sc.s-коннекторы вместе с группой приписанных им модификаторов sc.s-коннекторов. 
-	] (*<-lang_ru;;*) ;;
+	"file://scs_code_htmls/scs_code_4_level_text1.html"
+	(*<-lang_ru;;*) ;;
 		*);;
 
 		<= nrel_sc_text_translation:	
 			..translation_scs_code_level_4_en
 			(*
 			-> rrel_example:
-	[
-	At this level of the SCs-code we introduced the concise entries of sc.s-2 level sentences or sc.s-3 level sentences, that have:
-1.	The same name (i.e. the name of the same element) is used as the first (left) component.
-2.	Sc.s-connectors are completely analogous to the group of modifiers sc.s-connectors, which are assigned to them.
-	] (*<-lang_en;;*) ;;
+	"file://scs_code_htmls/scs_code_4_level_text2.html"
+	(*<-lang_en;;*) ;;
 			*);;
 	*);;
 
@@ -43,26 +37,16 @@ scs_sentence_4_level
 			..translation_scs_sentence_level_4_ru
 			(*
 			-> rrel_example:
-	[
-	sc.s-предложение уровня 4 можно считать описанием семантической окрестности радиуса 1 для заданного sc-элемента, т.е описанием известных связей заданного sc-элемента с другими смежными ему sc-элементами.
-	В sc.s-предложениях уровня 4 cокращается число изображений sc-коннекторов путем введения sc.s-разделителя ;. 
-	Более подробно правила использования указанного разделителя рассмотрены ниже в соответствующем разделе.
-	На данном уровне SCs-кода разрешается использование указанного разделителя только для случаев, описанных выше в пояснении к SCs-коду уровня 4.
-	Использование неатомарных идентификаторов вида <...>, {...}, \[*...*\] и \[...\] не разрешается.
-	] (*<-lang_ru;;*) ;;
+	"file://scs_code_htmls/scs_code_4_level_text3.html"
+	(*<-lang_ru;;*) ;;
 		*);;
 
 		<= nrel_sc_text_translation:	
 			..translation_scs_sentence_level_4_en
 			(*
 			-> rrel_example:
-	[
-	Therefore, sc.s-4 level sentences can be considered as a description of the semantic neighborhood of radius 1 for a given element, i.e. the description of a given sc-element known links to other related sc-elements of it. 
-In sc.s-4 level sentences number of sc.s-connector images is reduced by introducing sc.s-delimiter ;.
-The usage rules of the specified delimiter are explained below in greater detail in appropriate section. 
-At this level of the SCs-code using of the specified delimiter is allowed only for the cases described above in the explanation to SC.s-4 level-code.
-Using non-atomic identifiers such as <...>, {...}, \[* ... *\], \[...\] is not permitted.
-	] (*<-lang_en;;*) ;;
+	"file://scs_code_htmls/scs_code_4_level_text4.html"
+	 (*<-lang_en;;*) ;;
 			*);;
 	*);
 -> rrel_example:
@@ -118,8 +102,8 @@ scs_text_4_level => nrel_main_idtf:
 			..translation_scs_text_level_4_example_ru
 			(*
 			-> rrel_example:
-		[Обратим внимание, что по сравнению с представлением данного текста в SCs-коде уровня 3 количество sc.s-предложений уменьшилось за счет объединения нескольких схожих sc.s-предложений уровня 3 в одно sc.s-предложение уровня 4 с использованием разделителя ;.
-		](*<-lang_ru;;*);;
+		"file://scs_code_htmls/scs_code_4_level_text5.html"
+		(*<-lang_ru;;*);;
 			*);;
 		*);;
 	*);
@@ -142,9 +126,8 @@ scs_text_4_level => nrel_main_idtf:
 			..translation_scs_text_level_4_example_en
 			(*
 			-> rrel_example:
-		[
-Note that, in comparison with submission of this text in the SC.s-3 level-code the number of sc.s-sentences has been decreased by combining several similar sc.s-3 level sentences into one sc.s-4 level sentence using a delimiter;.
-		](*<-lang_en;;*);;
+		"file://scs_code_htmls/scs_code_4_level_text6.html"
+		(*<-lang_en;;*);;
 			*);;
 		*);;
 	*);;

@@ -10,24 +10,16 @@ scs_code_2_level => nrel_main_idtf:
 			..translation_scs_code_level_2_ru
 			(*
 			-> rrel_example:
-	[
-	На данном уровне SCs-кода вводятся средства минимизации числа специально придумываемых имен sc-коннекторов.
-	К таким средствам относятся: 
-	1) Алфавит изображений sc-коннекторов, отражающих тип изображаемых sc-коннекторов.
-	2) Неатомарные имена sc-коннекторов, построенные на основе sc-коннекторов.
-	](*<-lang_ru;;*) ;;
+	"file://scs_code_htmls/scs_code_2_level_text1.html"
+	(*<-lang_ru;;*) ;;
 			*);;
 
 		<= nrel_sc_text_translation:	
 			..translation_scs_code_level_2_en
 			(*
 			-> rrel_example:
-	[
-	Means to minimize the number of specially invent names of sc-connectors are introduced at this level of SCs-code.
-Such tools include:
-1.	Alphabet images of sc-connectors, reflecting the type of depicted sc-connectors.
-2.	Non-atomic names of sc-connectors,  that are based on sc-connectors.
-	](*<-lang_en;;*) ;;
+	"file://scs_code_htmls/scs_code_2_level_text2.html"
+	(*<-lang_en;;*) ;;
 			*);;
 	*);;
 
@@ -44,22 +36,16 @@ scs_sentence_2_level => nrel_main_idtf:
 			..translation_scs_sentence_level_2_ru
 			(*
 			-> rrel_example:
-	[
-	В sc.s-предложениях уровня 2 обеспечивается возможность не вводить имена для всех sc-коннекторов.
-	Для этого вводятся sc.s-разделители, являющиеся изображениями sc-коннекторов (например ∍ ), а также неатомарные идентификаторы коннекторов вида (...). Ниже отдельно приведена таблица sc.s-разделителей, являющихся изображениями sc-коннекторов.
-	В случае наличия кратных коннекторов между некоторыми sc-элементами с целью избежания омонимии вводятся суффиксы, например (v1 -> v2)1, (v1 -> v2)2.
-	Использование неатомарных идентификаторов вида <...>, {...}, \[*...*\], \[...\] не разрешается.
-	](*<-lang_ru;;*) ;;
+	"file://scs_code_htmls/scs_code_2_level_text3.html"
+	(*<-lang_ru;;*) ;;
 			*);;
 
 		<= nrel_sc_text_translation:	
 			..translation_scs_sentence_level_2_en
 			(*
 			-> rrel_example:
-	[
-	The possibility of not to enter names for all sc-connectors is provided in sc.s-2 level sentences.  For this purpose we introduce sc.s-delimiters, which are images of sc-connectors (e.g. ∍ ), as well as non-atomic IDs connectors type of (...).There is a table of sc.s-delimiters that are images sc-connectors below. If there are multiples of connectors between some sc-elements, suffixes are introduced, in order to avoid homonymy, for example (v1 -> v2)1, (v1 -> v2)2.
-Using non-atomic identifiers such as <...>, {...}, \[* ... *\], \[...\] is not permitted.
-	](*<-lang_en;;*) ;;		
+	"file://scs_code_htmls/scs_code_2_level_text4.html"
+	(*<-lang_en;;*) ;;		
 			*);;
 	*);
 
@@ -70,7 +56,7 @@ Using non-atomic identifiers such as <...>, {...}, \[* ... *\], \[...\] is not p
 	<" sc.s-предложение уровня 2 "> ::= <" имя sc-элемента "> <" изображение коннектора "> <" имя sc-элемента "> ;;
 	]
 	(*
-		<- Backus_naur_metalanguage ;;
+		<- backus_naur_metalanguage ;;
 		<-lang_ru;;
 	*);
 
@@ -81,7 +67,7 @@ Using non-atomic identifiers such as <...>, {...}, \[* ... *\], \[...\] is not p
 	<" sc.s-2 level sentences "> ::= <" name of sc-element "> <" image of connector "> <" name of sc-element "> ;;
 	]
 	(*
-		<- Backus_naur_metalanguage ;;
+		<- backus_naur_metalanguage ;;
 		<-lang_en;;
 	*);
 
@@ -115,16 +101,16 @@ scs_text_2_level => nrel_main_idtf:
 			..translation_scs_text_level_2_ru
 			(*
 			-> rrel_example:
-	[sc.s-текст уровня 2 - sc.s-текст, содержащий хотя бы одно sc.s-предложение уровня 2 и не содержащий sc.s-предложений уровня 3 и выше
-	](*<-lang_ru;;*) ;;
+	"file://scs_code_htmls/scs_code_2_level_text5.html"
+	(*<-lang_ru;;*) ;;
 			*);;
 
 		<= nrel_sc_text_translation:	
 			..translation_scs_text_level_2_en
 			(*
 			-> rrel_example:
-	[sc.s-2 level-text is sc.s-text, that contains at least one sc.s sentence level 2 and doesn’t contain  sc.s-3 level sentence and above.
-	](*<-lang_en;;*);;
+	"file://scs_code_htmls/scs_code_2_level_text6.html"
+	(*<-lang_en;;*);;
 			*);;
 		*);
 -> rrel_example:
@@ -155,9 +141,8 @@ scs_text_2_level => nrel_main_idtf:
 			..translation_scs_text_level_2_example_ru
 			(*
 			-> rrel_example:
-		[
-Можно заметить, что в данном примере отсутствуют имена sc-коннекторов, которые были искусственно введены для представления данного фрагмента в SCs-коде уровня 1, поскольку они заменены соответствующими изображениями sc-коннекторов.
-		](*<-lang_ru;;*);;
+		"file://scs_code_htmls/scs_code_2_level_text7.html"
+		(*<-lang_ru;;*);;
 			*);;
 		*);;
 	*);
@@ -190,9 +175,8 @@ scs_text_2_level => nrel_main_idtf:
 			..translation_scs_text_level_2_example_en
 			(*
 			-> rrel_example:
-		[
-As you can see, there are no names of sc-connectors, which have been artificially introduced for the submission of this fragment in the SCs-code level 1, because they are replaced with corresponding images of sc-connectors.
-		](*<-lang_en;;*);;
+		"file://scs_code_htmls/scs_code_2_level_text8.html"
+		(*<-lang_en;;*);;
 			*);;
 		*);;
 	*);;

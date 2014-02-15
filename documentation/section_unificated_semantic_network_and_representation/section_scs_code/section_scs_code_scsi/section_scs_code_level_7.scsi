@@ -11,18 +11,16 @@ scs_code_7_level
 			..translation_scs_code_level_7_ru
 			(*
 			-> rrel_example:		
-	[
-	На данном уровне SCs-кода разрешается перечисление (через разделитель ;) таких компонентов, которые различным образом связаны с описываемым компонентом sc.s-предложения (т.е. разные sc.s-коннекторы и/или их модификаторы).
-	](*<-lang_ru;;*) ;;
+	"file://scs_code_htmls/scs_code_7_level_text1.html"
+	(*<-lang_ru;;*) ;;
 		*);;
 
 		<= nrel_sc_text_translation:	
 			..translation_scs_code_level_7_en
 			(*
 			-> rrel_example:
-	[
-	At this level of  SCs-code is permitted to use  the enumeration (through the divider ;) such special components,which are connected different method with the described component of sc-sentence(i.e different sc.s-connectors and/or their modifiers).
-	](*<-lang_en;;*);;
+	"file://scs_code_htmls/scs_code_7_level_text1.html"
+				(*<-lang_en;;*);;
 			*);;
 	*);;
 
@@ -41,26 +39,16 @@ scs_sentence_7_level
 			..translation_scs_sentence_level_7_ru
 			(*
 			-> rrel_example:
-	[
-	В sc.s-предложениях уровня 7 разрешается использовать sc.s-разделитель ; во всех случаях, для которых предназначен данный разделитель. Более подробно правила использования указанного разделителя рассмотрены ниже в соответствующем разделе.
-	Правила умолчания (неотображения) разделителей SCs-кода:
-	1) После разделителя ; одинаковые изображения sc-коннекторов опускаются. Например, вместо X -> r1: r2: Y; -> r3: Z;; отображается X -> r1: r2: Y; r3: Z;;
-	2) Если после sc.s-разделителя ; присутствуют не только одинаковые изображения sc-коннекторов, но и одинаковые модификаторы коннекторов, то их имена также опускаются. Например, вместо X -> r1: r2: Y; -> r1: r2: Z;; пишется X -> r1: r2: Y; Z;;
-	3) Ограничитель встроенных предложений (*...*) может опускаться в случае, если встроенное предложение не содержит разелителя ;. Например, вместо X -> r1: r2: Y(* => r3: Z *);; пишется X -> r1: r2: Y => r3: Z;;
-	];;
+	"file://scs_code_htmls/scs_code_7_level_text1.html"
+	;;
 		*);;
 
 		<= nrel_sc_text_translation:	
 			..translation_scs_sentence_level_7_en
 			(*
 			-> rrel_example:
-	[
-	sc.s-delimiter is allowed to use in sc.s-sentences of level 7  in all cases for which this delimiter is intended. More detailed rules for the use of the delimiter are discussed below in the section.
-	Rules defaults (not display) of delimiters SCs-code:
-	1) After the delimiter ; the same image sc-connectors are removed. For example, X -> r1: r2: Y; r3: Z;; display instead of X -> r1: r2: Y; -> r3: Z;;  
-	2) If after sc.s-delimiter present not only identical images of sc-connectors, but also the same modifiers and connectors, their names are omitted. For example, X -> r1: r2: Y; Z;; instead of X -> r1: r2: Y; -> r1: r2: Z;;
-	3) The delimiter of built-in sentences (*...*)can removed if the built-in sentence doesn't contain a delimiter. For example, X -> r1: r2: Y => r3: Z;; instead of X -> r1: r2: Y(* => r3: Z *);; 
-	](*<-lang_en;;*) ;;
+	"file://scs_code_htmls/scs_code_7_level_text1.html"
+	(*<-lang_en;;*) ;;
 			*);;
 	*);
 
@@ -79,9 +67,8 @@ scs_sentence_7_level
 			..translation_scs_text_level_7_example_ru
 			(*
 			-> rrel_example:
-		[
-		Обратим внимание, что по сравнению с представлением данного sc.s-предложения в SCs-коде уровня 6 запись стала более лаконичной за счет объединения и удаления схожих фрагментов sc.s-предложений уровня 6.
-		](*<-lang_ru;;*);;
+		"file://scs_code_htmls/scs_code_7_level_text1.html"
+		(*<-lang_ru;;*);;
 			*);;
 		*);;
 	*);
@@ -103,9 +90,8 @@ scs_sentence_7_level
 			..translation_scs_text_level_7_example_en
 			(*
 			-> rrel_example:
-		[
-		Let's pay attention that in comparison with representation of this sc.s-sentence in a level 6 SCs-code record became more laconic at the expense of combining and deleting similar fragments of sc.s-sentences of level 6.
-		](*<-lang_en;;*);;
+		"file://scs_code_htmls/scs_code_7_level_text1.html"
+		(*<-lang_en;;*);;
 			*);;
 		*);;
 	*);;
