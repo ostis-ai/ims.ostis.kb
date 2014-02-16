@@ -1,108 +1,305 @@
-
 project_task
-<- sc_node_not_relation;
-=> nrel_main_idtf:
-	[проектная задача]
-	(*
-	<- lang_ru;;
-	*);
-	[project task]
-	(*
-	<- lang_en;;
-	*);
-<= nrel_subdividing:{
-	project_task_error_fix;
-	project_task_improvement;
-	project_task_optimization
-};
-<= nrel_subdividing:{
-	project_task_critical;
-	project_task_low_priority;
-	project_task_middle_priority;
-	project_task_high_priority
-};;
+	<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[проектная задача]
+		(*<- lang_ru;;*);
+		[project task]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_project_task
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_project_task
+				(*
+					-> rrel_example:
+						[Проектная задача – это действие, которое необходимо выполнить в рамках определённого проекта для достижения постеленной цели. Отвечает на вопрос: «Какими действиями можно достигнуть поставленной цели».];;
+				*);;
+		*);
+	<= nrel_subdividing: 
+	{
+		proposed_project_task;
+		approve_project_task;
+		executable_project_task;
+		verifiable_project_task;
+		completed_project_task
+	};
+	{
+		basic_project_task;
+		project_verification_task;
+		project_task_error_fix;
+		project_task_optimization;
+		innovation_project_task
+	};
+	{
+		blocking_project_task;
+		critical_project_task;
+		important_project_task;
+		unimportant_project_task
+	};;
+
+proposed_project_task
+	<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[предлагаемая проектная задача]
+		(*<- lang_ru;;*);
+		[proposed project task]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_blocking_project_task
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_blocking_project_task
+				(*
+					-> rrel_example:
+						[Предлагаемая проектная задача (задача-черновик), которая может быть предложена кем угодно.];;
+				*);;
+		*);;
+
+approve_project_task
+	<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[утверждаемая проектная задача]
+		(*<- lang_ru;;*);
+		[approve project tas]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_approve_project_task
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_approve_project_task
+				(*
+					-> rrel_example:
+						[Утверждаемая проектная задача – задача, находящаяся на согласовании (задача, необходимость выполнения которой оценивается руководителем соответствующего проекта).];;
+				*);;
+		*);;
+
+executable_project_task
+	<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[исполняемая проектная задача]
+		(*<- lang_ru;;*);
+		[executable project task]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_executable_project_task
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_executable_project_task
+				(*
+					-> rrel_example:
+						[Исполняемая проектная задача – задача, находящаяся на исполнении у некоторого исполнителя проекта.];;
+				*);;
+		*);;
+
+verifiable_project_task
+	<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[проверяемая проектная задача]
+		(*<- lang_ru;;*);
+		[verifiable project task]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_verifiable_project_task
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_verifiable_project_task
+				(*
+					-> rrel_example:
+						[Проверяемая проектная задача – задача, результат выполнения которой в текущий момент проверяется (тестируется, рецензируется).];;
+				*);;
+		*);;
+
+completed_project_task
+	<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[завершённая проектная задача]
+		(*<- lang_ru;;*);
+		[completed project task]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_completed_project_task
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_completed_project_task
+				(*
+					-> rrel_example:
+						[Завершённая проектная задача – задача, результат выполнения которой прошёл проверку успешно. В случае, если указанная проверка прошла неуспешно (выявлены ошибки), создаётся новая исполняемая проектная задача, направленная на исполнение выявленных ошибок, исполнителем которой назначается тот, кто эти ошибки совершил.];;
+				*);;
+		*);;
+
+basic_project_task
+	<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[основная проектная задача]
+		(*<- lang_ru;;*);
+		[basic project task]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_basic_project_task
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_basic_project_task
+				(*
+					-> rrel_example:
+						[Основная задача – это проектная задача, связанная с написанием некоторой спецификации для Проекта IMS.OSTIS.];;
+				*);;
+		*);;
+
+project_verification_task
+	<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[проектная задача верификации]
+		(*<- lang_ru;;*);
+		[project verification task]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_project_verification_task
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_project_verification_task
+				(*
+					-> rrel_example:
+						[Задача верификации – это проектная задача, созданная с целью выявления возможных ошибок в проекте.];;
+				*);;
+		*);;
 
 project_task_error_fix
-<- sc_node_not_relation;
-=> nrel_main_idtf:
-	[проектная задача по исправлению ошибки]
-	(*
-	<- lang_ru;;
-	*);
-	[error fix project task]
-	(*
-	<- lang_en;;
-	*);;
-
-project_task_improvement
-<- sc_node_not_relation;
-=> nrel_main_idtf:
-	[проектная задача по улучшению]
-	(*
-	<- lang_ru;;
-	*);
-	[improvement project task]
-	(*
-	<- lang_en;;
-	*);;
+	<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[проектная задача по исправлению ошибки]
+		(*<- lang_ru;;*);
+		[error fix project task]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_project_task_error_fix
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_project_task_error_fix
+				(*
+					-> rrel_example:
+						[Проектная задача по исправлению ошибки – это проектная задача, направленная на исправление ошибки, обнаруженной в проекте в процессе разработки, тестирования или эксплуатации.];;
+				*);;
+		*);;
 
 project_task_optimization
-<- sc_node_not_relation;
-=> nrel_main_idtf:
-	[проектная задача по оптимизации]
-	(*
-	<- lang_ru;;
-	*);
-	[optimization project task]
-	(*
-	<- lang_en;;
-	*);;
+	<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[проектная задача оптимизации]
+		(*<- lang_ru;;*);
+		[optimization project task]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_project_task_optimization
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_project_task_optimization
+				(*
+					-> rrel_example:
+						[Проектная задача оптимизации – это проектная задача, подразумевающая внесение изменений в уже существующий проект, направленное на усовершенствование этого проекта.];;
+				*);;
+		*);;
 
-project_task_critical
-<- sc_node_not_relation;
-=> nrel_main_idtf:
-	[критическая проектная задача]
-	(*
-	<- lang_ru;;
-	*);
-	[critical project task]
-	(*
-	<- lang_en;;
-	*);;
+innovation_project_task
+	<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[проектная задача инновации]
+		(*<- lang_ru;;*);
+		[innovation project task]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_innovation_project_task
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_innovation_project_task
+				(*
+					-> rrel_example:
+						[Проектная задача инновации – это проектная задача, результатом которой является какое-либо нововведение в некотором проекте.];;
+				*);;
+		*);;
 
-project_task_low_priority
-<- sc_node_not_relation;
-=> nrel_main_idtf:
-	[проектная задача с низким приоритетом]
-	(*
-	<- lang_ru;;
-	*);
-	[low priority project task]
-	(*
-	<- lang_en;;
-	*);;
+blocking_project_task
+	<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[блокирующая проектная задача]
+		(*<- lang_ru;;*);
+		[blocking project tas]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_blocking_project_task
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_blocking_project_task
+				(*
+					-> rrel_example:
+						[Блокирующая проектная задача – это проектная задача, предполагающая её немедленное выполнение, так как в ином случае дальнейшая реализация проекта будет приостановлена.];;
+				*);;
+		*);;
 
-project_task_middle_priority
-<- sc_node_not_relation;
-=> nrel_main_idtf:
-	[проектная задача со средним приоритетом]
-	(*
-	<- lang_ru;;
-	*);
-	[middle priority project task]
-	(*
-	<- lang_en;;
-	*);;
+critical_project_task
+	<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[критическая проектная задача]
+		(*<- lang_ru;;*);
+		[critical project task]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_critical_project_task
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_critical_project_task
+				(*
+					-> rrel_example:
+						[Критическая проектная задача – это проектная задача, означающая, что в проекте обнаружены серьёзные ошибки, связанные с потерей данных, неработоспособностью Метасистемы IMS.OSTIS в целом.];;
+				*);;
+		*);;
 
-project_task_high_priority
-<- sc_node_not_relation;
-=> nrel_main_idtf:
-	[проектная задача c высоким приоритетом]
-	(*
-	<- lang_ru;;
-	*);
-	[high priority project task]
-	(*
-	<- lang_en;;
-	*);;
+important_project_task
+	<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[важная проектная задача]
+		(*<- lang_ru;;*);
+		[important project task]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_important_project_task
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_important_project_task
+				(*
+					-> rrel_example:
+						[Важная проектная задача – это проектная задача, означающая, что результат выполнения данной проектной задачи привнесет значимые результаты в развитие Метасистемы IMS.OSTIS.];;
+				*);;
+		*);;
 
+unimportant_project_task
+	<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[неважная проектная задача]
+		(*<- lang_ru;;*);
+		[unimportant project task]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_unimportant_project_task
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_unimportant_project_task
+				(*
+					-> rrel_example:
+						[Неважная проектная задача – это проектная задача, предполагающая, что текущая проектная задача может быть выполнена в последнюю очередь.];;
+				*);;
+		*);;
