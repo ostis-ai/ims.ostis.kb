@@ -12,7 +12,26 @@ ui_control_search_idtf_edit
 
 ui_control_select_window_type
 => nrel_main_idtf:
-	[Элемент управления смены внешнего языка для активного окна] (* <- lang_ru;; *);;
+	[Элемент управления смены внешнего языка для активного окна] (* <- lang_ru;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- ui_descr_initiate_order;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> "file://contents/ui_control_select_window_type_descr_initiate.html" (* <- lang_ru;; *);;
+		*);;	
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [элемент управления, который позволяет выбрать внешний язык используемый для отображения] (* <- lang_ru;; *);; *);;
+	*);;
 
 ui_control_print_window_content
 => nrel_main_idtf:
@@ -25,3 +44,4 @@ ui_control_argument_button_clear
 ui_control_argument_button_add
 => nrel_main_idtf:
 	[Элемент управления добавления нового аргумента команды] (* <- lang_ru;; *);;
+
