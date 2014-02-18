@@ -156,3 +156,20 @@ format_png
 	*);
 => nrel_mimetype:
 	[image/png];;
+
+// --- link to github sources ---
+format_github_source_link
+<- sc_node_not_relation;
+<- format;
+=> nrel_main_idtf: 
+	[формат github source] 
+	(* 
+	<- lang_ru;;
+	 *);
+=> nrel_main_idtf: 
+	[format github source] 
+	(* 
+	<- lang_en;;
+	*);
+=> nrel_mimetype:
+	[text/plain];;
