@@ -1,20 +1,3 @@
-subject_domain_of_external_sc_identifiers
-	=> nrel_main_idtf:
-		[Предметная область внешних sc-идентификаторов]
-		(* <- lang_ru;; *);
-		[Subject domain of external sc-identifiers]
-		(* <- lang_en;; *);
-	<-subject_domain;
-	->rrel_maximum_object_research_class:
-		sc_identifiers;
-	->rrel_object_research_class:
-	{
-		atomic_sc_identifier;
-		non_atomic_sc_identifier;
-		line_sc_identifier;
-		non_line_sc_identifier
-	};;
-
 sc_idtf
 	<=nrel_second_domain:
 		nrel_idtf;
@@ -38,6 +21,7 @@ sc_idtf
 
 
 nrel_idtf
+	<- sc_node_norole_relation;
 	=> nrel_main_idtf:
 		[sc-идентификатор*]
 		(* <- lang_ru;; *);
@@ -56,6 +40,7 @@ nrel_idtf
 		*);;
 	
 nrel_main_idtf
+	<- sc_node_norole_relation;
 	=> nrel_main_idtf:
 		[основной sc-идентификатор*]
 		(* <- lang_ru;; *);
@@ -107,6 +92,7 @@ nrel_sc_element_nearly_main_identification
 		(* <- lang_en;; *);;
 
 nrel_system_identifier
+	<- sc_node_norole_relation;
 	=> nrel_main_idtf:
 		[системный sc-идентификатор*]
 		(* <- lang_ru;; *);
