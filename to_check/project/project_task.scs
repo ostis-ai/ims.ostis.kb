@@ -1,0 +1,25 @@
+project_task
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[проектная задача]
+	(*
+	<- lang_ru;;
+	*);
+	[project task]
+	(*
+	<- lang_en;;
+	*);
+
+<= nrel_subdividing:
+{
+	project_task_error_fix;
+	project_task_improvement;
+	project_task_optimization
+};
+<= nrel_subdividing:
+{
+	project_task_critical;
+	project_task_low_priority;
+	project_task_middle_priority;
+	project_task_high_priority
+};;
