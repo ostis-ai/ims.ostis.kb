@@ -4,3 +4,7 @@ section_ims_ostis_structure
 	(*
 	<- lang_ru;;
 	*);;
+
+section_ims_ostis_structure = [*^"file://section_ims_ostis_structure.scsi"*];;
+
+rrel_key_sc_element -> (section_ims_ostis_structure -> metasystem_ostis);;
