@@ -15,4 +15,10 @@ web_platform_based_on_software_sc_memory_scp_implementation
 			<- lang_ru;;
 			*);;
 		*);;
-	*);;
+	*);
+<= nrel_sc_model_implementation:
+	abstract_scp_machine;
+<= nrel_dependent_implementation:
+	web_platform_based_on_software_sc_memory_implementation;
+=> nrel_source_code:
+	"file://section_web_platform_based_on_software_sc_memory_scp_implementation_htmls/web_platform_based_on_software_sc_memory_scp_implementation_source.html";;

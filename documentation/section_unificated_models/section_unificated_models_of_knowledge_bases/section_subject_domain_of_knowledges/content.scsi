@@ -388,7 +388,7 @@ sc_neighborhood
 <= nrel_inclusion:
 	sc_knowledge; 
 => nrel_inclusion: 
-	sc_explanation; sc_definition; sc_note; sc_comment; sc_elaboration;
+	sc_explanation; sc_definition; sc_note; sc_comment; sc_elaboration; sc_advantage;
 
 <=> nrel_semantically_close_sc_element:
 	rrel_sc_neighborhood;;
@@ -488,3 +488,77 @@ sense
 	
 <- rrel_key_sc_element:
 	section_subject_domain_of_knowledges;;
+
+sense_space
+
+=> nrel_main_idtf: [смысловое пространство] (* <- lang_ru;; *);
+=> nrel_idtf: [семантическое пространство] (* <- lang_ru;; *);
+=> nrel_idtf: [смысловой универсум] (* <- lang_ru;; *);
+=> nrel_idtf: [смысловое пространство знаний] (* <- lang_ru;; *);
+=> nrel_idtf: [бесконечная семантическая сеть, включающая в себя все известные понятия (концепты) и все элементы (экземпляры) этих понятий, а также знаки всех известных структур и связей вместе с их элементами (компонентами)] (* <- lang_ru;; *);;
+
+sc_sense_space
+
+=> nrel_main_idtf: [SC-пространство] (* <- lang_ru;; *);
+
+=> nrel_idtf: [Смысловое пространство, представленное в SC-коде] (* <- lang_ru;; *);
+=> nrel_idtf: [SC-текст смыслового пространства] (* <- lang_ru;; *);
+=> nrel_idtf: [Глобальный sc-текст] (* <- lang_ru;; *);
+=> nrel_idtf: [Унифицированная модель смыслового универсума] (* <- lang_ru;; *);
+=> nrel_idtf: [SC-универсум] (* <- lang_ru;; *);
+=> nrel_idtf: [Унифицированная модель смыслового пространства] (* <- lang_ru;; *);
+=> nrel_idtf: [Глобальная унифицированная семантическая сеть] (* <- lang_ru;; *);
+=> nrel_idtf: [Результат интеграции всевозможных текстов SC-кода] (* <- lang_ru;; *);
+=> nrel_idtf: [SC-модель смыслового пространства] (* <- lang_ru;; *);
+
+<= nrel_join:
+	sc_set;
+
+<- infinite_sc_set
+	(* => nrel_idtf: [бесконечный sc-текст] (* <- lang_ru;; *);; *);
+
+<- sense_space;;
+
+global_knowledge_base
+
+=> nrel_main_idtf: [глобальная база знаний] (* <- lang_ru;; *);
+
+=> nrel_idtf: [конечная информационная конструкция, являющаяся формальным представлением всех знаний, накопленных человечеством к текущему моменту] (* <- lang_ru;; *);
+
+<- maximum_semantically_equivalent_construction_class;
+
+<- finite_sc_set
+	(*
+	=> nrel_idtf: [конечный sc-текст];;
+	*);;
+
+
+global_kb_sense_model
+=> nrel_main_idtf: [смысловая модель глобальной базы знаний] (* <- lang_ru;; *);
+=> nrel_idtf: [глобальная база знаний, представленная в виде семантической сети] (* <- lang_ru;; *);
+=> nrel_idtf: [семантическая модель глобальной базы знаний] (* <- lang_ru;; *);
+<= nrel_inclusion: global_knowledge_base;;
+
+
+global_kb_sc_model
+=> nrel_main_idtf: [SC-модель глобальной базы знаний];
+=> nrel_idtf: [Глобальная база знаний, представленная в SC-коде] (* <- lang_ru;; *);
+=> nrel_idtf: [Унифицированная смысловая модель глобальной базы знаний] (* <- lang_ru;; *);
+=> nrel_idtf: [Унифицированная семантическая модель глобальной базы знаний] (* <- lang_ru;; *);
+<- global_kb_sense_model;;
+
+local_knowledge_base
+=> nrel_main_idtf: [локальная база знаний] (* <- lang_ru;; *);
+=> nrel_idtf: [конечная информационная конструкция, являющаяся формальным представлением всех знаний, достаточных для функционирования некоторой интеллектуальной системы и хранимых в памяти этой системы] (* <- lang_ru;; *);
+=> nrel_idtf: [формальная модель, интегрирующая все знания, хранимые в памяти интеллектуальной системы] (* <- lang_ru;; *);;
+
+local_kb_sense_model
+=> nrel_main_idtf: [смысловая модель локальной базы знаний] (* <- lang_ru;; *);
+=> nrel_idtf: [локальная база знаний, представленная в виде семантической сети] (* <- lang_ru;; *);
+<= nrel_inclusion: local_knowledge_base;;
+
+local_kb_sc_model
+=> nrel_main_idtf: [sc-модель локальной базы знаний] (* <- lang_ru;; *);
+=> nrel_idtf: [локальная база знаний, представленная в SC-коде] (* <- lang_ru;; *);
+=> nrel_idtf: [Унифицированная смысловая модель базы знаний] (* <- lang_ru;; *);
+<= nrel_inclusion: local_kb_sense_model;;

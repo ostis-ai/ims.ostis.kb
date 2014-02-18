@@ -11,30 +11,16 @@ scs_code_6_level
 			..translation_scs_code_level_6_ru
 			(*
 			-> rrel_example:		
-	[
-	На данном уровне SCs-кода для именования sc-структур и sc-ссылок (sc-файлов) разрешается использование таких специальных неатомарных имен sc-элементов, как 
-	1) имя-контур sc-структуры
-	2) имя-рамка sc-файла
-	Имя-рамка (sc.s-рамка) представляет собой любой линейный текст, заключенный в квадратные скобки \[...\].
-	Имя-контур (sc.s-контур) представляет собой sc.s-текст, заключенный в квадратные скобки со звездочками \[*...*\]. При этом в sc.s-контуре допускается запись только sc.s-текстов.
-	Использование указанных неатомарных имен превращает sc.s-предложения в сложные, в состав которых могут входить другие sc.s-предложения и даже целые sc.s-тексты.
-	При этом на данном уровне разрешается использовать все виды неатомарных идентификаторов, например <...> и {...}.
-	](*<-lang_ru;;*) ;;
+	"file://scs_code_htmls/scs_code_6_level_text1.html"
+	(*<-lang_ru;;*) ;;
 		*);;
 
 		<= nrel_sc_text_translation:	
 			..translation_scs_code_level_6_en
 			(*
 			-> rrel_example:
-	[
-	At this level for naming sc-structures of  SCs-code is permitted to use such special non-atomic name of sc-elements as:
-	1)	Name-contour of a sc-structure
-	2)	Name-frame of a sc-file
-	A name-frame (sc.s-frame) represents any sc-text which enclosed in square brackets \[...\].
-	A name-contour (sc.s-contour) represents any sc-text which enclosed in square brackets with asterisks \[*...*\]. Thus in sc.s-contour is allowed to record  only sc.s-texts.
-	The use of these non-atomic names turns sc.s-sentences in the complex sc.s-sentences, which may include other sc.s-sentences or even whole sc.s-texts.
-	At that  all kinds of the non-atomic identifiers can be used at this level. For example <...> and {...}.
-	](*<-lang_en;;*);;
+	"file://scs_code_htmls/scs_code_6_level_text2.html"
+	(*<-lang_en;;*);;
 			*);;
 	*);;
 
@@ -79,9 +65,8 @@ scs_sentence_6_level
 			..translation_scs_text_level_6_example_ru
 			(*
 			-> rrel_example:
-		[
-		Обратим внимание, что по сравнению с представлением аналогичного текста в SCs-коде уровня 5, данный текст содержит сложные идентификаторы вида {…}, \[…\], \[*…*\], что позволяет явно записывать содержимое некоторых sc-ссылок в рамках sc.s-текста, более лаконично записывать множества из нескольких элементов, а также использовать понятие sc.s-контура, аналогичное sc.g-контуру.
-		](*<-lang_ru;;*);;
+		"file://scs_code_htmls/scs_code_6_level_text3.html"
+		(*<-lang_ru;;*);;
 			*);;
 		*);;
 	*);
@@ -103,9 +88,8 @@ Triangle(PntВ; PntС; PntD) <= decomposition of figure*: { Seg(PntВ; PntС); S
 			..translation_scs_text_level_6_example_en
 			(*
 			-> rrel_example:
-		[
-		Let's pay attention that in comparison with submission of the similar text in SCs-code of level 5, this text contains difficult identifiers’ kind {…}, \[…\], \[*…*\], This allows to record explicitly a contents of some sc-links within a sc-text, more laconically to write sets from several elements, as well as to use the concept of sc.s-contour similar to sc.g-contour. 
-		](*<-lang_en;;*);;
+		"file://scs_code_htmls/scs_code_6_level_text4.html"
+		(*<-lang_en;;*);;
 			*);;
 		*);;
 	*);

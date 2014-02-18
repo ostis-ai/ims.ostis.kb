@@ -1,0 +1,99 @@
+subject_domain_sc_model
+
+=> nrel_main_idtf: [sc-модель предметной области] (* <- lang_ru;; *);
+=> nrel_idtf: [sc-текст предметной области] (* <- lang_ru;; *);
+=> nrel_idtf: [предметная область, представленная в SC-коде] (* <- lang_ru;; *);
+=> nrel_idtf: [sc-граф предметной области] (* <- lang_ru;; *);
+=> nrel_idtf: [уточнение понятия предметной области на базе SC-кода] (* <- lang_ru;; *);
+
+<= nrel_inclusion: infinite_sc_set; subject_domain; sc_knowledge;
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_note;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> [<b>sc-модель предметной области</b> - предметная область, представленная в рамках SC-модели смыслового пространства] 
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+			*);;
+		*);;
+	*);
+	
+<- rrel_key_sc_element:
+	[*^"file://neighborhoods/subject_domain_sc_model.scsi"*]
+	(* <- typical_sc_neighborhood;; *);;
+	
+rrel_maximum_studied_object_class
+<- sc_node_role_relation;
+=> nrel_main_idtf: [максимальный класс исследуемых объектов'] (* <- lang_ru;; *);;
+
+rrel_studied_secondary_object_class
+<- sc_node_role_relation;
+=> nrel_main_idtf: [исследуемый класс вторичных объектов'] (* <- lang_ru;; *);;
+
+rrel_non_studied_external_class
+<- sc_node_role_relation;
+=> nrel_main_idtf: [неисследуемый внешний класс'] (* <- lang_ru;; *);;
+
+rrel_maximum_primary_element_class
+<- sc_node_role_relation;
+=> nrel_main_idtf: [максимальный класс первичных элементов'] (* <- lang_ru;; *);;
+
+rrel_relation
+<- sc_node_role_relation;
+=> nrel_main_idtf: [отношение'] (* <- lang_ru;; *);;
+
+rrel_class_of_classes
+<- sc_node_role_relation;
+=> nrel_main_idtf: [класс классов'] (* <-lang_ru;; *);;
+
+subject_domain
+<- sc_node_not_relation;
+=> nrel_main_idtf: [предметная область] (* <- lang_ru;; *);;
+
+general_subject_domain
+=> nrel_main_idtf: [общая предметная область] (* <- lang_ru;; *);;
+
+general_subject_domain_of_subject_domains
+<- general_subject_domain;
+=> nrel_main_idtf: [Общая предметная область предметных областей] (* <- lang_ru;; *);;
+
+general_subject_domain_of_elements
+<- general_subject_domain;
+=> nrel_main_idtf: [Общая предметная область знаков] (* <- lang_ru;; *);;
+
+general_subject_domain_of_sets
+<- general_subject_domain;
+=> nrel_main_idtf: [Общая предметная область множеств] (* <- lang_ru;; *);;
+
+general_subject_domain_of_relations
+<- general_subject_domain;
+=> nrel_main_idtf: [Общая предметная область отношений] (* <- lang_ru;; *);;
+
+general_subject_domain_of_structures
+<- general_subject_domain;
+=> nrel_main_idtf: [Общая предметная область структур] (* <- lang_ru;; *);;
+
+general_subject_domain_of_numbers_relations_structures
+<- general_subject_domain;
+=> nrel_main_idtf: [Общая модель чисел, числовых отношений и структур] (* <- lang_ru;; *);;
+
+general_subject_domain_of_parametric_models
+<- general_subject_domain;
+=> nrel_main_idtf: [Общая предметная область параметрических моделей] (* <- lang_ru;; *);;
+
+general_subject_domain_of_ontologies
+<- general_subject_domain;
+=> nrel_main_idtf: [Общая предметная область онтологий] (* <- lang_ru;; *);;
+
+general_subject_domain_of_semantic_neighborhoods
+<- general_subject_domain;
+=> nrel_main_idtf: [Общая предметная область семантических окрестностей] (* <- lang_ru;; *);;
+
+general_subject_domain_of_knowledge
+<- general_subject_domain;
+=> nrel_main_idtf: [Общая предметная область знаний] (* <- lang_ru;; *);;

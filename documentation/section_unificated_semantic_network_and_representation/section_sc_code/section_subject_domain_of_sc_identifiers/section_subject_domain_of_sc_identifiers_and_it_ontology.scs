@@ -1,0 +1,84 @@
+section_subject_domain_of_external_sc_identifiers_and_it_ontology
+=> nrel_main_idtf:
+	[Раздел. Предметная область внешних sc-идентификаторов и ее онтология]
+	(*
+	<- lang_ru;;
+	*);
+	[Section. Subject domain of external c-identifiers and it ontology]
+	(*
+	<- lang_en;;
+	*);
+
+=> nrel_idtf:
+	[Раздел. sc-идентификатор]
+	(*
+	<- lang_ru;;
+	*);
+	[Раздел. Идентификация sc-элементов]
+	(*
+	<- lang_ru;;
+	*);
+	[Раздел. Правила построения индентификаторов sc-элементов]
+	(*
+	<- lang_ru;;
+	*);
+	[Разел базы знаний OSTIS, описывающий sc-идентификаторы]
+	(*
+	<- lang_ru;;
+	*);
+
+<- section_atom;
+
+=> nrel_epigraph:
+	...
+	(*
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/section_epigraph1.html"
+			(*<- lang_ru;;*);;
+		*);;
+	*);
+
+	...
+	(*
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/section_epigraph2.html"
+			(*<- lang_ru;;*);;
+		*);;
+	*);
+ 
+=> nrel_summary:
+	...
+	(*
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/summary.html"
+			(*<- lang_ru;;*);;
+		*);;
+	*);
+
+=> nrel_introduction:
+	introduction_subject_domain_of_sc_identifiers;;
+
+introduction_subject_domain_of_sc_identifiers
+	=> nrel_main_idtf:
+	[Введение. Предметная область sc-идентификаторов и ее онтология]
+	(*
+	<- lang_ru;;
+	*);
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> [Если мы хотим добиться доступности, читабельности, быстрого понимания и усвоения формализованной информации, хранимой в базе знаний, мы прежде всего должны подумать об удобных именах описываемых сущностей.]
+		(* <- lang_ru;; *);;
+		*);;
+
+section_subject_domain_of_external_sc_identifiers_and_it_ontology
+= [*^"file://section_subject_domain_of_sc_identifiers_and_it_ontology_content.scsi"*];;

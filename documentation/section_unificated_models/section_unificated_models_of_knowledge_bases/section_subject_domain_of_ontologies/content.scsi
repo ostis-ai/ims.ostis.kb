@@ -1,27 +1,151 @@
+subject_domain_of_ontologies
+	=> nrel_main_idtf:
+		[Предметная область онтологий]
+		(* <- lang_ru;; *);
+		[Subject domain of ontologies]
+		(* <- lang_en;; *);
+	<- subject_domain;
+	-> rrel_maximum_object_research_class:
+		ontology;
+	-> rrel_object_research_class:
+	{
+		integrated_ontology;
+		teoretic_set_ontology;
+		strustural_ontology;
+		logial_ontology;
+		terminological_ontology
+	};;
+
+ontology
+	=> nrel_main_idtf:
+		[онтология]
+		(* <- lang_ru;; *);
+		[ontology]
+		(* <- lang_en;; *);
+
+	=> nrel_idtf:
+	  [система понятий соответствующей предметной области]
+	  (* <- lang_ru;; *);
+	  [концептуальный каркас (скелет) описания некоторой предметной области]
+	  (* <- lang_ru;; *);
+	  [концептуальная (семантическая) основа различных языков, обеспечивающих описание объектов исследования, принадлежащих заданной предметной области]
+	  (* <- lang_ru;; *);
+	  [семантический интерфейс для интеграции знаний по заданной предметной области и для согласованного понимания различными субъектами этих знаний]
+	  (* <- lang_ru;; *);
+	  [онтология соответствующей предметной области]
+	  (* <- lang_ru;; *);
+	  [описание концептов и отношений заданной предметной области]
+	  (* <- lang_ru;; *);
+	<= nrel_subdividing:
+	{
+		theoretic_set_ontology;
+		structural_ontology;
+		logical_ontology;
+		terminological_ontology
+	};
+	<- rrel_key_sc_element:
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+					-> "file://section_subject_domain_of_ontologies_html/explanation_for_ontology.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
 integrated_ontology
-<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[интегрированная онтология]
+		(* <- lang_ru;; *);
+		[integrated ontology]
+		(* <- lang_en;; *);
 
-=> nrel_main_idtf:
-	[интегрированная онтология] (* <- lang_ru;; *);
-	[integrated ontology] (* <- lang_en;; *);;
-
-set_theoretic_ontology
-<- sc_node_not_relation;
-
-=> nrel_main_idtf:
-	[теоретико-множественная онтология] (* <- lang_ru;; *);
-	[set-theoretic ontology] (* <- lang_en;; *);;
+	<- rrel_key_sc_element:
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+					-> "file://section_subject_domain_of_ontologies_html/explanation_for_integrated_ontology.html"
+					(*<- lang_ru;;*);;
+				*);;
+		*);;
 
 structural_ontology
-<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[структурная онтология]
+		(* <- lang_ru;; *);
+		[structural ontology]
+		(* <- lang_en;; *);
 
-=> nrel_main_idtf:
-	[структурная онтология] (* <- lang_ru;; *);
-	[structural ontology] (* <- lang_en;; *);;
+	<- rrel_key_sc_element:
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+					-> "file://section_subject_domain_of_ontologies_html/explanation_for_structural_ontology.html"
+					(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+theoretic_set_ontology
+	=> nrel_main_idtf:
+		[теоретико-множественная онтология]
+		(* <- lang_ru;; *);
+		[theoretic set ontology]
+		(* <- lang_en;; *);
+
+	<- rrel_key_sc_element:
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+					-> "file://section_subject_domain_of_ontologies_html/explanation_for_theoretic_set_ontology.html"
+					(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+logical_ontology
+	=> nrel_main_idtf:
+		[логическая онтология]
+		(* <- lang_ru;; *);
+		[logical ontology]
+		(* <- lang_en;; *);
+
+	<- rrel_key_sc_element:
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+					-> "file://section_subject_domain_of_ontologies_html/explanation_for_logical_ontology.html"
+					(*<- lang_ru;;*);;
+				*);;
+		*);;
 
 terminological_ontology
-<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[терминологическая онтология]
+		(* <- lang_ru;; *);
+		[terminological ontology]
+		(* <- lang_en;; *);
 
-=> nrel_main_idtf:
-	[терминологическая онтология] (* <- lang_ru;; *);
-	[terminological ontology] (* <- lang_en;; *);;
+	<- rrel_key_sc_element:
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+					-> "file://section_subject_domain_of_ontologies_html/explanation_for_terminological_ontology.html"
+					(*<- lang_ru;;*);;
+				*);;
+		*);;
