@@ -34,9 +34,7 @@ sc_idtf
 					-> "file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/note_for_sc_idtf.html"
 						(*<- lang_ru;;*);;
 				*);;
-		*);
-	<- rrel_key_sc_element:
-		section_subject_domain_of_external_sc_identifiers_and_it_ontology;;
+		*);;
 
 
 nrel_idtf
@@ -55,9 +53,7 @@ nrel_idtf
 					-> "file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/explanation_for_nrel_idtf.html"
 						(*<- lang_ru;;*);;
 				*);;
-		*);
-	<- rrel_key_sc_element:
-		section_subject_domain_of_external_sc_identifiers_and_it_ontology;;
+		*);;
 	
 nrel_main_idtf
 	=> nrel_main_idtf:
@@ -75,15 +71,51 @@ nrel_main_idtf
 					-> "file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/explanation_for_nrel_main_idtf.html"
 						(*<- lang_ru;;*);;
 				*);;
-		*);
-	<- rrel_key_sc_element:
-		section_subject_domain_of_external_sc_identifiers_and_it_ontology;;
+		*);;
+
+nrel_nearly_main_idtf
+	<- sc_node_norole_relation;
+
+	=> nrel_main_idtf:
+		[почти основной sc-идентификатор*]
+		(* <- lang_ru;; *);
+		[nearly main sc-identifier*]
+		(* <- lang_en;; *);;
+
+nrel_sc_element_identification
+	<- sc_node_norole_relation;
+
+	=> nrel_main_idtf:
+		[идентификация sc-элемента*]
+		(* <- lang_ru;; *);
+		[sc-element identification]
+		(* <- lang_en;; *);
+	=> nrel_inclusion:
+		nrel_sc_element_main_identification;
+
+	<- rrel_key_sc_element: 
+		[*^"file://neighborhoods/nrel_sc_element_identification.scsi"*]
+		(* <- typical_sc_neighborhood;; *);;
+
+nrel_sc_element_nearly_main_identification
+	<- sc_node_norole_relation;
+
+	=> nrel_main_idtf:
+		[почти основная идентификация sc-элемента*]
+		(* <- lang_ru;; *);
+		[nearly main sc-element identification*]
+		(* <- lang_en;; *);;
 
 nrel_system_identifier
 	=> nrel_main_idtf:
 		[системный sc-идентификатор*]
 		(* <- lang_ru;; *);
 		[system sc-identifier*]
+		(* <- lang_en;; *);
+	=> nrel_idtf:
+		[системный идентификатор*]
+		(* <- lang_ru;; *);
+		[system identifier*]
 		(* <- lang_en;; *);
 	<- rrel_key_sc_element:
 		...
@@ -95,9 +127,7 @@ nrel_system_identifier
 					-> "file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/explanation_for_nrel_system_identifier.html"
 						(*<- lang_ru;;*);;
 				*);;
-		*);
-	<- rrel_key_sc_element:
-		section_subject_domain_of_external_sc_identifiers_and_it_ontology;; 
+		*);; 
 
 system_identifier
 	<=nrel_second_domain:
@@ -188,9 +218,7 @@ system_identifier
 	                            (*<- lang_ru;;*);;
 	                    *);;
 	            *);;
-        *);
-	<- rrel_key_sc_element:
-		section_subject_domain_of_external_sc_identifiers_and_it_ontology;; 
+        *);; 
 
 sc_var_identifier
 	=> nrel_main_idtf:
@@ -208,9 +236,7 @@ sc_var_identifier
 					-> "file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/naming_rule_for_sc_var_identifier.html"
 						(*<- lang_ru;;*);;
 				*);;
-		*);
-	<- rrel_key_sc_element:
-		section_subject_domain_of_external_sc_identifiers_and_it_ontology;; 
+		*);; 
 
 sc_const_identifier
 	=> nrel_main_idtf:
@@ -239,9 +265,7 @@ sc_const_identifier
 				-> "file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/comment_for_system_identifier.html"
 					(*<- lang_ru;;*);;
 			*);;
-	*);
-	<- rrel_key_sc_element:
-		section_subject_domain_of_external_sc_identifiers_and_it_ontology;;
+	*);;
 
 non_role_relation_identifier
 	=> nrel_main_idtf:
@@ -259,9 +283,7 @@ non_role_relation_identifier
 					-> "file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/naming_rule_for_non_role_relation_identifier.html"
 						(*<- lang_ru;;*);;
 				*);;
-		*);
-	<- rrel_key_sc_element:
-		section_subject_domain_of_external_sc_identifiers_and_it_ontology;; 
+		*);; 
 
 role_relation_identifier
 	=> nrel_main_idtf:
@@ -279,9 +301,7 @@ role_relation_identifier
 					-> "file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/naming_rule_for_role_relation_identifier.html"
 						(*<- lang_ru;;*);;
 				*);;
-		*);
-	<- rrel_key_sc_element:
-		section_subject_domain_of_external_sc_identifiers_and_it_ontology;; 
+		*);; 
 
 line_sc_identifier
 	=> nrel_main_idtf:
@@ -305,9 +325,7 @@ line_sc_identifier
 	{
 		atomic_sc_identifier;
 		non_atomic_sc_identifier
-	};
-	<- rrel_key_sc_element:
-		section_subject_domain_of_external_sc_identifiers_and_it_ontology;;
+	};;
 
 non_line_sc_identifier
 	=> nrel_main_idtf:
@@ -325,9 +343,7 @@ non_line_sc_identifier
 					-> "file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/note_for_non_line_sc_identifier.html"
 						(*<- lang_ru;;*);;
 				*);;
-		*);
-	<- rrel_key_sc_element:
-		section_subject_domain_of_external_sc_identifiers_and_it_ontology;;
+		*);;
 
 atomic_sc_identifier
 	=> nrel_main_idtf:
@@ -347,9 +363,7 @@ atomic_sc_identifier
 				*);;
 		*);
 	->rrel_example:
-		[треугольник];
-	<- rrel_key_sc_element:
-		section_subject_domain_of_external_sc_identifiers_and_it_ontology;; 
+		[треугольник];; 
 
 non_atomic_sc_identifier
 	=> nrel_main_idtf:
@@ -391,9 +405,7 @@ non_atomic_sc_identifier
 		sc_identifier_set;
 		sc_identifier_tuple;
 		sc_identifier_operation
-	};
-	<- rrel_key_sc_element:
-		section_subject_domain_of_external_sc_identifiers_and_it_ontology;; 
+	};; 
 
 atomic_sc_identifier_of_scs_code_1_level
 	=> nrel_main_idtf:
@@ -410,9 +422,7 @@ atomic_sc_identifier_of_scs_code_1_level
 					-> "file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/naming_rule_for_atomic_sc_identifier_of_scs_code_1_level.html"
 						(*<- lang_ru;;*);;
 				*);;
-		*);
-	<- rrel_key_sc_element:
-		section_subject_domain_of_external_sc_identifiers_and_it_ontology;;
+		*);;
 
 non_atomic_sc_identifier_of_scs_code_2_level
 	=> nrel_main_idtf:
@@ -429,9 +439,7 @@ non_atomic_sc_identifier_of_scs_code_2_level
 					-> "file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/naming_rule_for_non_atomic_sc_identifier_of_scs_code_2_level.html"
 						(*<- lang_ru;;*);;
 				*);;
-		*);
-	<- rrel_key_sc_element:
-		section_subject_domain_of_external_sc_identifiers_and_it_ontology;;
+		*);;
 
 non_atomic_sc_identifier_of_scs_and_scg_code_6_level
 	=> nrel_main_idtf:
@@ -448,9 +456,7 @@ non_atomic_sc_identifier_of_scs_and_scg_code_6_level
 					-> "file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/naming_rule_for_non_atomic_sc_identifier_of_scs_and_scg_code_6_level.html"
 						(*<- lang_ru;;*);;
 				*);;
-		*);
-	<- rrel_key_sc_element:
-		section_subject_domain_of_external_sc_identifiers_and_it_ontology;;
+		*);;
 
 sc_identifier_contour
 	=> nrel_main_idtf:
@@ -471,9 +477,7 @@ sc_identifier_contour
 				-> "file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/explanation_for_sc_identifier_contour.html"
 					(*<- lang_ru;;*);;
 			*);;
-	*);
-	<- rrel_key_sc_element:
-		section_subject_domain_of_external_sc_identifiers_and_it_ontology;;
+	*);;
 
 sc_identifier_link
 	=> nrel_main_idtf:
@@ -494,9 +498,7 @@ sc_identifier_link
 				-> "file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/explanation_for_sc_identifier_link.html"
 					(*<- lang_ru;;*);;
 			*);;
-	*);
-	<- rrel_key_sc_element:
-		section_subject_domain_of_external_sc_identifiers_and_it_ontology;;
+	*);;
 
 sc_identifier_set
 	=> nrel_main_idtf:
@@ -529,9 +531,7 @@ sc_identifier_set
 					"file://section_subject_domain_of_sc_identifiers_and_it_ontology_img/typical_sc_neighborhood_for_sc_identifier_set1.png";
 					"file://section_subject_domain_of_sc_identifiers_and_it_ontology_img/typical_sc_neighborhood_for_sc_identifier_set2.png";;
 			*);;
-	*);
-	<- rrel_key_sc_element:
-		section_subject_domain_of_external_sc_identifiers_and_it_ontology;;
+	*);;
 
 sc_identifier_tuple
 	=> nrel_main_idtf:
@@ -563,9 +563,7 @@ sc_identifier_tuple
 				-> 
 					"file://section_subject_domain_of_sc_identifiers_and_it_ontology_img/typical_sc_neighborhood_for_sc_identifier_tuple_set.png";;
 			*);;
-	*);
-	<- rrel_key_sc_element:
-		section_subject_domain_of_external_sc_identifiers_and_it_ontology;;
+	*);;
 
 sc_identifier_operation
 	=> nrel_main_idtf:
@@ -597,6 +595,4 @@ sc_identifier_operation
 				-> 
 					"file://section_subject_domain_of_sc_identifiers_and_it_ontology_img/typical_sc_neighborhood_for_sc_identifier_operation_set.png";;
 			*);;
-	*);
-	<- rrel_key_sc_element:
-		section_subject_domain_of_external_sc_identifiers_and_it_ontology;;
+	*);;
