@@ -12,7 +12,7 @@ subject_domain_of_subject_domains
 		subject_domain_sc_model
 	};;
 
-	subject_domain
+subject_domain
 	=> nrel_main_idtf:
 		[предметная область]
 		(* <- lang_ru;; *);
@@ -60,9 +60,7 @@ subject_domain_of_subject_domains
 	{
 		stationary_subject_domain;
 		non_stationary_subject_domain
-	};
-	<- rrel_key_sc_element:
-		section_subject_domain_of_subject_domains;;
+	};;
 
 stationary_subject_domain
 	=> nrel_main_idtf:
@@ -83,9 +81,7 @@ stationary_subject_domain
 					-> "file://section_subject_domain_of_subject_domains_htmls/explanation_for_stationary_subject_domain.html"
 						(*<- lang_ru;;*);;
 				*);;
-		*);
-	<- rrel_key_sc_element:
-		section_subject_domain_of_subject_domains;;
+		*);;
 
 non_stationary_subject_domain
 	=> nrel_main_idtf:
@@ -106,9 +102,7 @@ non_stationary_subject_domain
 					-> "file://section_subject_domain_of_subject_domains_htmls/explanation_for_non_stationary_subject_domain.html"
 						(*<- lang_ru;;*);;
 				*);;
-		*);
-	<- rrel_key_sc_element:
-		section_subject_domain_of_subject_domains;;
+		*);;
 
 primary_subject_domain
 	=> nrel_main_idtf:
@@ -137,10 +131,8 @@ primary_subject_domain
 		/*Предметная область графовых структур и алгебраических отношений*/
 	-> number_and_numerical_structure_subject_domain; 
 		/*Предметная область чисел и числовых структур*/
-	-> any_line_languages_subject_domain; 
+	-> any_line_languages_subject_domain;; 
 		/*Предметная область текстов всевозможных строковых языков*/
-	<- rrel_key_sc_element:
-		section_subject_domain_of_subject_domains;;
 
 secondary_subject_domain
 	=> nrel_main_idtf:
@@ -170,10 +162,8 @@ secondary_subject_domain
 		/*Предметная область логических онтологий*/
 	-> terminological_ontology_subject_domain;
 		/*Предметная область терминологических онтологий*/
-	-> situations_and_events_in_any_non_stationary_subject_domain;
+	-> situations_and_events_in_any_non_stationary_subject_domain;;
 		/*Предметная область ситуаций и событий во всевозможных нестационарных предметных областях*/
-	<- rrel_key_sc_element:
-		section_subject_domain_of_subject_domains;;
 
 rrel_maximum_object_research_class
 	=> nrel_main_idtf:
@@ -191,9 +181,7 @@ rrel_maximum_object_research_class
 					-> "file://section_subject_domain_of_subject_domains_htmls/explanation_for_rrel_maximum_object_research_class.html"
 						(*<- lang_ru;;*);;
 				*);;
-		*);
-	<- rrel_key_sc_element:
-		section_subject_domain_of_subject_domains;;
+		*);;
 
 rrel_object_research_class
 	=> nrel_main_idtf:
@@ -211,9 +199,7 @@ rrel_object_research_class
 					-> "file://section_subject_domain_of_subject_domains_htmls/explanation_for_rrel_object_research_class.html"
 						(*<- lang_ru;;*);;
 				*);;
-		*);
-	<- rrel_key_sc_element:
-		section_subject_domain_of_subject_domains;;
+		*);;
 
 subject_domain_sc_model
 	=> nrel_main_idtf:
@@ -246,9 +232,7 @@ subject_domain_sc_model
 					-> "file://section_subject_domain_of_subject_domains_htmls/explanation_for_subject_domain_sc_model.html"
 						(*<- lang_ru;;*);;
 				*);;
-		*);
-	<- rrel_key_sc_element:
-		section_subject_domain_of_subject_domains;;
+		*);;
 
 nrel_particular_subject_domain
 	=> nrel_main_idtf:
@@ -273,6 +257,4 @@ nrel_particular_subject_domain
 					-> "file://section_subject_domain_of_subject_domains_htmls/explanation_for_nrel_particular_subject_domain.html"
 						(*<- lang_ru;;*);;
 				*);;
-		*);
-	<- rrel_key_sc_element:
-		section_subject_domain_of_subject_domains;;
+		*);;
