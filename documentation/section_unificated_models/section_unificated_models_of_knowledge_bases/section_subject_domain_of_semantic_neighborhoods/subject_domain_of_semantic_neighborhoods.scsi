@@ -1,15 +1,13 @@
 subject_domain_of_semantic_neighborhoods
 	=> nrel_main_idtf:
-		[Предметная область знаний]
+		[Предметная область сементических окрестностей]
 		(* <- lang_ru;; *);
-		[Subject domain of knowledges]
+		[Subject domain of semantic neighborhoods]
 		(* <- lang_en;; *);
 	<- subject_domain;
-	-> rrel_maximum_object_research_class:
-		sc_neighborhoods;
-	->
-		sc_explanation;
-		sc_comment;
+	-> rrel_maximum_object_study_class:
+		sc_neighborhood;
+	->	sc_explanation;
 		logic_semantic_neighborhoods;
 		theoretic_set_semantic_neighborhoods;
 		decomposition_description;
@@ -17,5 +15,5 @@ subject_domain_of_semantic_neighborhoods
 		description_of_gaps;
 		description_of_benefits;
 
-	=>nrel_sc_ontology:
+	=> nrel_sc_ontology:
 		ontology_subject_domain_of_semantic_neighborhoods;;
