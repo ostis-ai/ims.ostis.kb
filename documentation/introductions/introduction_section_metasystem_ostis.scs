@@ -8,6 +8,16 @@ introduction_section_metasystem_ostis
 	[Introduction. Metasystem IMS.OSTIS]
 	(*
 	<- lang_en;;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+		<= nrel_sc_text_translation:	
+			...
+			(*
+				-> "file://introduction_section_metasystem_ostis_htmls/introduction_section_metasystem_ostis_explanation.html"
+					(*<- lang_ru;;*);;
+			*);;
 	*);;
 
 introduction_section_metasystem_ostis = [*^"file://introduction_section_metasystem_ostis.scsi"*];;

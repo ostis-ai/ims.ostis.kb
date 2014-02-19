@@ -1,17 +1,3 @@
-subject_domain_of_subject_domains
-	=> nrel_main_idtf:
-		[Предметная область предметных областей]
-		(* <- lang_ru;; *);
-		[Subject domain of subject domains]
-		(* <- lang_en;; *);
-	<- subject_domain;
-	->rrel_object_research_class:
-	{
-		primary_subject_domain;
-		secondary_subject_domain;
-		subject_domain_sc_model
-	};;
-
 subject_domain
 	=> nrel_main_idtf:
 		[предметная область]
@@ -166,6 +152,7 @@ secondary_subject_domain
 		/*Предметная область ситуаций и событий во всевозможных нестационарных предметных областях*/
 
 rrel_maximum_object_research_class
+	<- sc_node_role_relation;
 	=> nrel_main_idtf:
 		[максимальный класс объектов исследования’]
 		(* <- lang_ru;; *);
@@ -184,6 +171,7 @@ rrel_maximum_object_research_class
 		*);;
 
 rrel_object_research_class
+	<- sc_node_role_relation;
 	=> nrel_main_idtf:
 		[класс объектов исследования’]
 		(* <- lang_ru;; *);
@@ -217,10 +205,8 @@ subject_domain_sc_model
 		[уточнение понятия предметной области на основе SC-кода]
 		(* <- lang_ru;; *);
 	<=nrel_inclusion:
-		infinite_set;
-	<=nrel_inclusion:
+		infinite_sc_set;
 		subject_domain;
-	<=nrel_inclusion:
 		sc_knowledge;
 	<- rrel_key_sc_element:
 		...
@@ -235,6 +221,7 @@ subject_domain_sc_model
 		*);;
 
 nrel_particular_subject_domain
+	<- sc_node_norole_relation;
 	=> nrel_main_idtf:
 		[частная предметная область*]
 		(* <- lang_ru;; *);
