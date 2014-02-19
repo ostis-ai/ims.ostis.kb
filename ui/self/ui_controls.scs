@@ -12,7 +12,28 @@ ui_control_select_idtf_mode
 // ------------------------------------------------
 ui_control_search_idtf_edit
 => nrel_main_idtf:
-	[Элемент управления поиска sc-элементов по идентификатору] (* <- lang_ru;; *);;
+	[Элемент управления поиска sc-элементов по идентификатору] (* <- lang_ru;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- ui_descr_initiate_order;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> "file://contents/ui_control_search_idtf_edit_descr_initiate.html" (* <- lang_ru;; *);;
+		*);;	
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [элемент управления, который позволяет осуществлять поиск объектов по идентификаторам] (* <- lang_ru;; *);; *);;
+	*);;
+
+ui_control_search_idtf_edit_example = "file://contents/ui_control_search_idtf_edit_example.gif";;
 
 
 // ------------------------------------------------

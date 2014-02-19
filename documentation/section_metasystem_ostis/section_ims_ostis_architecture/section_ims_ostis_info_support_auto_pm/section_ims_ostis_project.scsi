@@ -22,6 +22,8 @@ ims_ostis_project
 		*);;
 	*);
 
+<- project;
+
 => nrel_main_product: 
 	metasystem_ostis;
 
@@ -31,21 +33,9 @@ ims_ostis_project
 <= nrel_performer: {
     grakova_n_v;
     rusetski_k_v;
-	rrel_project_leader: golenkov_v_v
-	(*
-	=> nrel_key_sc_element_base_order:
-		davydenko_i_t;;
-	*);
-	rrel_kb_admin: davydenko_i_t
-	(*
-	=> nrel_key_sc_element_base_order:
-		shunkevich_d_v;;
-	*);
-	rrel_kpm_admin: shunkevich_d_v
-	(*
-	=> nrel_key_sc_element_base_order:
-		koronchik_d_n;;
-	*);
+	rrel_project_leader: golenkov_v_v;
+	rrel_kb_admin: davydenko_i_t;
+	rrel_kpm_admin: shunkevich_d_v;
 	rrel_system_admin: koronchik_d_n
 };
 
@@ -128,6 +118,7 @@ ims_ostis_project
 };;
 
 project_ostis
+<- project;
 => nrel_main_idtf:
 	[Проект OSTIS]
 	(*
