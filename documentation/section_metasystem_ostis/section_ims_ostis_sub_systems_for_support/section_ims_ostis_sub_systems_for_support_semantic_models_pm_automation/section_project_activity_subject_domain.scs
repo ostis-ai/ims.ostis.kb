@@ -8,3 +8,8 @@ section_project_activity_subject_domain
 	(*
 	<- lang_en;;
 	*);;
+
+section_project_activity_subject_domain = [*^"file://section_project_activity_subject_domain.scsi"*];;
+
+rrel_key_sc_element ->
+(ontology_subject_domain_of_knowledges -> project_activity_subject_domain);;
