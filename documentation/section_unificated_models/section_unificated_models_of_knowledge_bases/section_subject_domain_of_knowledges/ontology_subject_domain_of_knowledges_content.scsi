@@ -19,6 +19,17 @@ doc_atomic_section
 	(*
 	<- lang_ru;;
 	*);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+				-> "file://section_subject_domain_of_knowledges_html/explanation_for_doc_atomic_section.html"
+					(*<- lang_ru;;*);;
+			*);;
+	*);
 
 <= nrel_inclusion:
 	.qqq;; /*раздел базы знаний*/
@@ -43,6 +54,17 @@ doc_non_atomic_section
 	(*
 	<- lang_ru;;
 	*);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+				-> "file://section_subject_domain_of_knowledges_html/explanation_for_doc_non_atomic_section.html"
+					(*<- lang_ru;;*);;
+			*);;
+	*);
 
 <= nrel_inclusion:
 	..qqq;; /*раздел базы знаний*/
@@ -62,6 +84,8 @@ non_essential_concept
 
 nrel_annotation
 
+<- sc_node_norole_relation;
+
 /* <- бинарное отношение */
 /* <- ориентированное отношение */
 
@@ -74,6 +98,8 @@ nrel_annotation
 	
 nrel_conclusion
 
+<- sc_node_norole_relation;
+
 /* <- бинарное отношение */
 /* <- ориентированное отношение */
 
@@ -83,6 +109,8 @@ nrel_conclusion
 	
 nrel_epigraph
 
+<- sc_node_norole_relation;
+
 /* <- бинарное отношение */
 /* <- ориентированное отношение */
 
@@ -91,6 +119,8 @@ nrel_epigraph
 	[epigraph*] (* <- lang_en;; *);;
 	
 nrel_introduction
+
+<- sc_node_norole_relation;
 
 /* <- бинарное отношение */
 /* <- ориентированное отношение */
@@ -366,6 +396,29 @@ sc_explanation
 
 => nrel_idtf:
 	[sc-комментарий к некоторому тексту (и не только sc-тексту)] (* <- lang_ru;; *);;
+
+knowledge_type
+	=> nrel_main_idtf:
+		[вид знаний] (* <- lang_ru;; *);
+		[knowledge type] (* <- lang_en;; *);
+	=> nrel_idtf:
+		[Семейство подмножеств Множества всевозможных знаний] (* <- lang_ru;; *);
+		[тип знаний] (* <- lang_ru;; *);
+	->
+		subject_domain;
+		semantic_neighborhood;
+		description;
+		comparison;
+		definition;
+		ontology;
+		purpose;
+		task;
+		program;
+		knowledge_of_factual_dimensions;
+		formal_theory;
+		statement;
+		logical_formula;;
+
 	
 sc_knowledge
 => nrel_main_idtf:
@@ -374,7 +427,20 @@ sc_knowledge
 
 => nrel_idtf:
 	[sc-знание или целостный фрагмент sc-знания (например, sc-текст высказывания или sc-текст логической формулы, входящей в состав высказывания)] 
-	(* <- lang_ru;; *);;
+	(* <- lang_ru;; *);
+	[Множество всевозможных знаний] 
+	(* <- lang_ru;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+				-> "file://section_subject_domain_of_knowledges_html/explanation_for_sc_knowledge.html"
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
 	
 sc_neighborhood
 <- sc_node_norole_relation;
@@ -421,9 +487,25 @@ section
 <= nrel_decomposition:
 	structural_classification_criterion
 	(*
-	=> nrel_main_idtf: [структурный признак классификации разделов] (* <- lang_ru;; *);;
-	-> atomic_section;;
-	-> non_atomic_section;;
+		=> nrel_main_idtf: [структурный признак классификации разделов] (* <- lang_ru;; *);;
+		-> atomic_section;;
+		-> non_atomic_section;;
+	*);
+<=nrel_subdividing:
+	{
+		doc_atomic_section;
+		doc_non_atomic_section
+	};
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+				-> "file://section_subject_domain_of_knowledges_html/explanation_for_section.html"
+					(*<- lang_ru;;*);;
+			*);;
 	*);;
 
 sense
