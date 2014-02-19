@@ -120,3 +120,63 @@ project
 	(*
 	<- lang_en;;
 	*);;
+
+rrel_kb_admin
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+	[администратор базы знаний']
+	(*
+	<- lang_ru;;
+	*);
+	[knowledge base administrator']
+	(*
+	<- lang_en;;
+	*);;
+
+rrel_kpm_admin
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+	[администратор машины обработки знаний']
+	(*
+	<- lang_ru;;
+	*);
+	[knowledge processing machine administrator']
+	(*
+	<- lang_en;;
+	*);;
+
+rrel_project_leader
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+	[руководитель проекта']
+	(*
+	<- lang_ru;;
+	*);
+	[project leader']
+	(*
+	<- lang_en;;
+	*);;
+
+rrel_responsible_performer
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+	[ответственный исполнитель’]
+	(*
+	<- lang_ru;;
+	*);
+	[responsible performer']
+	(*
+	<- lang_en;;
+	*);;
+
+rrel_system_admin
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+	[системный администратор’]
+	(*
+	<- lang_ru;;
+	*);
+	[system administrator']
+	(*
+	<- lang_en;;
+	*);;
