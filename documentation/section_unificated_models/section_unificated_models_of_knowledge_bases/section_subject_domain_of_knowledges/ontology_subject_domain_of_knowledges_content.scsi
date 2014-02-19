@@ -29,10 +29,7 @@ doc_atomic_section
 				-> "file://section_subject_domain_of_knowledges_html/explanation_for_doc_atomic_section.html"
 					(*<- lang_ru;;*);;
 			*);;
-	*);
-
-<= nrel_inclusion:
-	.qqq;; /*раздел базы знаний*/
+	*);;
 	
 doc_non_atomic_section
 => nrel_main_idtf:
@@ -64,13 +61,9 @@ doc_non_atomic_section
 				-> "file://section_subject_domain_of_knowledges_html/explanation_for_doc_non_atomic_section.html"
 					(*<- lang_ru;;*);;
 			*);;
-	*);
-
-<= nrel_inclusion:
-	..qqq;; /*раздел базы знаний*/
+	*);;
 	
 non_essential_concept
-
 => nrel_main_idtf:
 	[неосновное понятие]
 	(*
@@ -470,9 +463,7 @@ sc_note
 	
 sc_elaboration
 => nrel_main_idtf: [sc-уточнение] (* <- lang_ru;; *);
-=> nrel_main_idtf: [sc-elaboration] (* <- lang_en;; *);
-<- rrel_key_sc_element:
-	section_subject_domain_of_knowledges;;
+=> nrel_main_idtf: [sc-elaboration] (* <- lang_en;; *);;
 
 section
 
@@ -566,10 +557,7 @@ sense
 		(*
 		-> "file://nl_files/sense_elaboration6.html";;
 		*);;
-	*);
-	
-<- rrel_key_sc_element:
-	section_subject_domain_of_knowledges;;
+	*);;
 
 sense_space
 
