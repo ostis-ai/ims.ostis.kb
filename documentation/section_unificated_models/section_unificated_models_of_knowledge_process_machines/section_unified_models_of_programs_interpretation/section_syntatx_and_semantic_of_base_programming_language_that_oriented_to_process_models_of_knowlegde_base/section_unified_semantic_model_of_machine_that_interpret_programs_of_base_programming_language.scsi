@@ -37,9 +37,9 @@ abstract_scp_machine
 		sc_agent_of_scp_process_creation
 		(*
 			=> nrel_abstract_sc_agent_base_order: 
-				sc_agent_of_scp_oprator_interpretation;;
+				sc_agent_of_scp_operator_interpretation;;
 		*);
-		sc_agent_of_scp_oprator_interpretation
+		sc_agent_of_scp_operator_interpretation
 		(*
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_synchronization_of_scp_program_interpretation_process;;
@@ -390,9 +390,9 @@ sc_agent_of_scp_operator_interpretation
 	<- sc_node_not_relation;
 	<- abstract_sc_agent;
 	=> nrel_main_idtf:
-		[sc-агент погружения scp-программ в sc-память]
+		[sc-агент интерпретации scp-операторов]
 		(*<- lang_ru;;*);
-		[sc-agent of scp-operator nterpretation]
+		[sc-agent of scp-operator interpretation]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
 		..key_node_sc_agent_of_scp_operator_interpretation
