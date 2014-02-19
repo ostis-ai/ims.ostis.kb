@@ -1,0 +1,30 @@
+ostis_conferences
+<- sc_node_not_relation;
+<- wolrd_science_technical_conferences;
+
+=> nrel_main_idtf:
+	[Конференции OSTIS] (* <- lang_ru;; *);
+	[OSTIS conferences] (* <- lang_en;; *);
+
+=> nrel_logo:
+	"file://contents/conf-logo.jpg";
+
+=> nrel_purpose:
+	"file://contents/ostis_conferences_goal_ru.html" (* <- lang_ru;; *);
+
+=> nrel_address:
+	[Республика Беларусь, г. Минск, ул. Платонова, д. 39] (* <- lang_ru;; *);
+
+=> nrel_location:
+	"file://contents/conf-location.googlemaplink";
+
+<- rrel_key_sc_element:
+    ...
+    (*
+    <- sc_explanation;;
+    <= nrel_sc_text_translation:	
+	    ...
+	    (*
+        -> "file://contents/ostis_conferences_explanation_ru.html" (* <- lang_ru;; *);;
+        *);;
+    *);;
