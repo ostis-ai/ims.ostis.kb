@@ -5,7 +5,22 @@ individual
 	[individual]      (* <- lang_en;; *);
 	
 => nrel_idtf:
-	[персона] (* <- lang_ru;; *);;
+	[персона] (* <- lang_ru;; *);
+	
+<- rrel_key_sc_element:
+	..note
+	(*
+	<- sc_note;;
+	<= nrel_sc_text_translation:
+		..translation
+		(*
+		-> [<b><i>физическое лицо</i></b> –  это человек, осуществляющий некоторую деятельность]
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+			*);;
+		*);;
+	*);;
 	
 
 nrel_author
