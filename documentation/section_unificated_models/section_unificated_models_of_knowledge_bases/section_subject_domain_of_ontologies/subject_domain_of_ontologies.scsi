@@ -1,0 +1,19 @@
+subject_domain_of_ontologies
+	=> nrel_main_idtf:
+		[Предметная область онтологий]
+		(* <- lang_ru;; *);
+		[Subject domain of ontologies]
+		(* <- lang_en;; *);
+	<- subject_domain;
+	-> rrel_maximum_object_research_class:
+		ontology;
+	-> rrel_object_research_class:
+	{
+		integrated_ontology;
+		teoretic_set_ontology;
+		strustural_ontology;
+		logial_ontology;
+		terminological_ontology
+	};
+	=>nrel_otology:
+		ontology_subject_domain_of_ontologies;;
