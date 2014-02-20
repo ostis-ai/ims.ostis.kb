@@ -3,4 +3,14 @@ section_ims_ostis_dialog_example
 	[Раздел. Пример диалога пользователя с IMS.OSTIS, демонстрирующий ее возможности и достоинства]
 	(*
 	<- lang_ru;;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+		<= nrel_sc_text_translation:	
+			...
+			(*
+				-> "file://section_ims_ostis_dialog_example_explanation.html"
+					(*<- lang_ru;;*);;
+			*);;
 	*);;

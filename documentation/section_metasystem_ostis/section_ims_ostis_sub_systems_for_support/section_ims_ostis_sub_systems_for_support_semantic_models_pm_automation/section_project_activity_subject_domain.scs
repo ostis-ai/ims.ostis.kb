@@ -8,3 +8,8 @@ section_project_activity_subject_domain
 	(*
 	<- lang_en;;
 	*);;
+
+section_project_activity_subject_domain = [*^"file://section_project_activity_subject_domain.scsi"*];;
+
+rrel_key_sc_element ->
+(section_project_activity_subject_domain -> project_activity_subject_domain);;

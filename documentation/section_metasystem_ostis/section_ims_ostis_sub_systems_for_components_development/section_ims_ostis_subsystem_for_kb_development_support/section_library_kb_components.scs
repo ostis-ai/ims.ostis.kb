@@ -4,7 +4,22 @@ section_library_kb_components
 	(*
 	<- lang_ru;;
 	*);
-	[Section. ...]
+	[Section. Library of reusable components of knowledge bases]
 	(*
 	<- lang_en;;
-	*);;
+	*);
+
+	<= nrel_section_decomposition:
+		{
+			section_library_sc_models_ontology
+			(*
+				=> nrel_section_base_order: 
+					section_library_used_languages_descriptions;;
+			*);
+			section_library_used_languages_descriptions
+			(*
+				=> nrel_section_base_order: 
+					section_library_various_basic_knowledge;;
+			*);
+			section_library_various_basic_knowledge
+		};;

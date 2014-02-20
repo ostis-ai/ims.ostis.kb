@@ -154,10 +154,14 @@ sc_set
 		*);;
 	*);
 	
-<- rrel_sc_key_element:
+<- rrel_key_sc_element:
 	section_subject_domain_of_sc_sets;
 
 => nrel_inclusion:
 	sc_knowledge;;
 
+infinite_sc_set
+=> nrel_main_idtf: [бесконечное sc-множество] (* <- lang_ru;; *);
 
+<- rrel_key_sc_element:
+	section_subject_domain_of_sc_sets;;

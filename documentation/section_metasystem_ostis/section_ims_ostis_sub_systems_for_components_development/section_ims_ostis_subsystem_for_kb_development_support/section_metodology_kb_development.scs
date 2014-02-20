@@ -13,4 +13,14 @@ section_metodology_kb_development
 	[Раздел. Методика проектирования sc-моделей баз знаний]
 	(*
 	<- lang_ru;;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+		<= nrel_sc_text_translation:	
+			...
+			(*
+				-> "file://section_metodology_kb_development_htmls/section_metodology_kb_development_explanation.html"
+					(*<- lang_ru;;*);;
+			*);;
 	*);;
