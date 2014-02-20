@@ -1,12 +1,45 @@
 ui_control_task_panel
 => nrel_main_idtf:
-	[Панель задач] (* <- lang_ru;; *);;
+	[Панель задач] (* <- lang_ru;; *);
+	[Task panel] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [элемент управления, который отображает количество задач выполняемых пользовательским интерфейсом] (* <- lang_ru;; *);; *);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [control that shows number of processing user interface tasks] (* <- lang_en;; *);; *);;
+	*);;
 
 
 // ------------------------------------------------
 ui_control_select_idtf_mode
 => nrel_main_idtf:
-	[Элемент управления позволяющий изменить используемый режим идентификации] (* <- lang_ru;; *);;
+	[Элемент смены режима идентификации] (* <- lang_ru;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [элемент управления, который позволяет сменить режим идентификации] (* <- lang_ru;; *);; *);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [control that allow to change identifiers language mode] (* <- lang_en;; *);; *);;
+	*);;
 
 
 // ------------------------------------------------
@@ -28,9 +61,28 @@ ui_control_search_idtf_edit
 <- rrel_key_sc_element:
 	...
 	(*
+	<- ui_descr_oper_semantic_control;;
+	<= nrel_sc_text_translation:
+		...	
+		(*
+		-> "file://contents/ui_control_search_idtf_edit_descr_oper_sem_ru.html" (* <- lang_ru;; *);;
+		*);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
 	<- sc_explanation;;
 	<= nrel_sc_text_translation:
 		... (* -> [элемент управления, который позволяет осуществлять поиск объектов по идентификаторам] (* <- lang_ru;; *);; *);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [control that allows to search sc-elements by their identifiers] (* <- lang_en;; *);; *);;
 	*);;
 
 ui_control_search_idtf_edit_example = "file://contents/ui_control_search_idtf_edit_example.gif";;
@@ -58,6 +110,14 @@ ui_control_select_window_type
 	<- sc_explanation;;
 	<= nrel_sc_text_translation:
 		... (* -> [элемент управления, который позволяет выбрать внешний язык используемый для отображения] (* <- lang_ru;; *);; *);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [control that allows to change view language] (* <- lang_en;; *);; *);;
 	*);;
 
 
@@ -72,6 +132,14 @@ ui_control_print_window_content
 	<- sc_explanation;;
 	<= nrel_sc_text_translation:
 		... (* -> [элемент управления, который позволяет подготовить к пеачти содержимое активного окна] (* <- lang_ru;; *);; *);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [control that allows to prepare active window content for print] (* <- lang_en;; *);; *);;
 	*);;
 
 
@@ -97,6 +165,14 @@ ui_control_argument_button_clear
 	<- sc_explanation;;
 	<= nrel_sc_text_translation:
 		... (* -> [элемент управления, который позволяет очистить список аргументов команды] (* <- lang_ru;; *);; *);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [control that allows to clear request arguments list] (* <- lang_en;; *);; *);;
 	*);;
 
 
@@ -111,5 +187,13 @@ ui_control_argument_button_add
 	<- sc_explanation;;
 	<= nrel_sc_text_translation:
 		... (* -> [элемент управления, который позволяет добавить новый аргумент команды] (* <- lang_ru;; *);; *);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [control that allows to add new argument to request] (* <- lang_en;; *);; *);;
 	*);;
 
