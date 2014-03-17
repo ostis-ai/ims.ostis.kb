@@ -683,7 +683,7 @@ sc_agent_of_full_pattern_search
 
 ..sc_agent_of_full_pattern_search_initiation_condition
 = [*
-	question_search_full_semantic_neighborhood _-> .._question;;
+	question_full_pattern_search _-> .._question;;
 	question_initiated _-> .._question;;
 	question _-> .._question;;
 	.._question _-> .._parameter;;
@@ -691,7 +691,7 @@ sc_agent_of_full_pattern_search
 
 ..sc_agent_of_full_pattern_search_result
 = [*
-	question_search_full_semantic_neighborhood _-> .._question;;
+	question_full_pattern_search _-> .._question;;
 	question_finished _-> .._question;;
 	question _-> .._question;;
 	.._question _=> nrel_answer:: .._answer;;
