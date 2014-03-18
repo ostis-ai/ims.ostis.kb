@@ -113,6 +113,27 @@ sc_agent_of_proper_scp_program_insertion_to_sc_memory
 				*);;
 		*);;
 
+formed_scp_program
+	<- sc_node_not_relation;
+	<- abstract_sc_agent;
+	=> nrel_main_idtf:
+		[сформированная scp-программа]
+		(*<- lang_ru;;*);
+		[formed scp-program]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				...
+				(*
+					-> rrel_example:
+						[Во множество сформированных scp-программ попадают scp-программы, погруженные в sc-память]
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
 sc_agent_of_scp_program_verivication
 	<- sc_node_not_relation;
 	<- abstract_sc_agent;
@@ -181,6 +202,46 @@ sc_agent_of_scp_program_semantic_verivication
 				(*
 					-> rrel_example:
 						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_sc_agent_of_scp_program_semantic_verivication.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+correct_scp_program
+	<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[корректная scp-программа]
+		(*<- lang_ru;;*);
+		[correct scp-program]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				...
+				(*
+					-> rrel_example:
+						[Во множество корректных scp-программ попадают scp-программы, успешно прошедшие процедуры синтаксической и семантической верификации.]
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+incorrect_scp_program
+	<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[некорректная scp-программа]
+		(*<- lang_ru;;*);
+		[incorrect scp-program]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				...
+				(*
+					-> rrel_example:
+						[Во множество некорректных scp-программ попадают scp-программы, в которых в процессе синтаксической или семантической верификации выявлены какие-либо ошибки.]
 						(*<- lang_ru;;*);;
 				*);;
 		*);;
@@ -285,6 +346,26 @@ nrel_template_of_scp_process_creation
 				(*
 					-> rrel_example:
 						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_nrel_template_of_scp_process_creation.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+prepared_scp_program
+	<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[подготовленная scp-программа]
+		(*<- lang_ru;;*);
+		[prepared scp-program]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				...
+				(*
+					-> rrel_example:
+						[Во множество подготовленных scp-программ попадают корректные scp-программы, прошедшие процедуру предварительной обработки.]
 						(*<- lang_ru;;*);;
 				*);;
 		*);;

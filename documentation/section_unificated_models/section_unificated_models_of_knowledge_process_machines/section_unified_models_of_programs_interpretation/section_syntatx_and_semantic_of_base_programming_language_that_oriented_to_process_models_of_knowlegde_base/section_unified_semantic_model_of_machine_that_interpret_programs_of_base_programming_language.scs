@@ -41,6 +41,9 @@ rrel_key_sc_element -> (section_unified_semantic_model_of_machine_that_interpret
 	=> nrel_key_sc_element_base_order: (section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language -> sc_agent_of_proper_scp_program_insertion_to_sc_memory)
 (*
 	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language -> formed_scp_program)
+(*
+	<- rrel_key_sc_element;;
 	=> nrel_key_sc_element_base_order: (section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language -> sc_agent_of_scp_program_verivication)
 (*
 	<- rrel_key_sc_element;;
@@ -48,6 +51,12 @@ rrel_key_sc_element -> (section_unified_semantic_model_of_machine_that_interpret
 (*
 	<- rrel_key_sc_element;;
 	=> nrel_key_sc_element_base_order: (section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language -> sc_agent_of_scp_program_semantic_verivication)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language -> correct_scp_program)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language -> incorrect_scp_program)
 (*
 	<- rrel_key_sc_element;;
 	=> nrel_key_sc_element_base_order: (section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language -> sc_agent_of_scp_program_preprocessing)
@@ -60,6 +69,9 @@ rrel_key_sc_element -> (section_unified_semantic_model_of_machine_that_interpret
 (*
 	<- rrel_key_sc_element;;
 	=> nrel_key_sc_element_base_order: (section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language -> nrel_scp_program_copied_const)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language -> prepared_scp_program)
 (*
 	<- rrel_key_sc_element;;
 	=> nrel_key_sc_element_base_order: (section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language -> nrel_template_of_scp_process_creation)
@@ -100,4 +112,4 @@ rrel_key_sc_element -> (section_unified_semantic_model_of_machine_that_interpret
 	<- rrel_key_sc_element;;
 	=> nrel_key_sc_element_base_order: (section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language -> sc_agent_of_processing_of_sc_event_initiating_active_sc_agent)
 	(* <- rrel_key_sc_element;; *);;
-*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;
+*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;
