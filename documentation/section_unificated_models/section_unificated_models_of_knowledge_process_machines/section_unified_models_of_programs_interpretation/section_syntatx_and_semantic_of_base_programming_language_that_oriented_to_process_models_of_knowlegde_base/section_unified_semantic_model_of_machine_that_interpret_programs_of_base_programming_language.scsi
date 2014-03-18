@@ -191,35 +191,17 @@ sc_agent_of_scp_program_preprocessing
 	=> nrel_main_idtf:
 		[sc-агент предварительной обработки scp-программ]
 		(*<- lang_ru;;*);
-		[sc-agent of scp-program preprocessing]
-		(*<- lang_en;;*);
-	<= nrel_abstract_sc_agent_decomposition:
-	{
-		sc_agent_of_preprocessing_of_any_type_scp_program
-		(*
-			=> nrel_abstract_sc_agent_base_order: 
-				sc_agent_of_preprocessing_of_agent_scp_program;;
-		*);
-		sc_agent_of_preprocessing_of_agent_scp_program
-	};;
-
-sc_agent_of_preprocessing_of_any_type_scp_program
-	<- sc_node_not_relation;
-	<- abstract_sc_agent;
-	=> nrel_main_idtf:
-		[sc-агент предварительной обработки scp-программ произвольного вида]
-		(*<- lang_ru;;*);
-		[sc-agent of preprocessing of any type scp-program]
+		[sc-agent of preprocessing of scp-programs]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		..key_node_sc_agent_of_preprocessing_of_any_type_scp_program
+		...
 		(*
 			<- sc_explanation;;
 			<= nrel_sc_text_translation:	
-				..translation_sc_agent_of_preprocessing_of_any_type_scp_program
+				...
 				(*
 					-> rrel_example:
-						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_sc_agent_of_preprocessing_of_any_type_scp_program.html"
+						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_sc_agent_of_preprocessing_of_scp_program.html"
 						(*<- lang_ru;;*);;
 				*);;
 		*);
@@ -303,25 +285,6 @@ nrel_template_of_scp_process_creation
 				(*
 					-> rrel_example:
 						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_nrel_template_of_scp_process_creation.html"
-						(*<- lang_ru;;*);;
-				*);;
-		*);;
-
-sc_agent_of_preprocessing_of_agent_scp_program
-	=> nrel_main_idtf:
-		[шаблон создания scp-процесса*]
-		(*<- lang_ru;;*);
-		[sc-agent of preprocessing of agent scp-program]
-		(*<- lang_en;;*);
-	<- rrel_key_sc_element:
-		..key_node_sc_agent_of_preprocessing_of_agent_scp_program
-		(*
-			<- sc_explanation;;
-			<= nrel_sc_text_translation:	
-				..translation_sc_agent_of_preprocessing_of_agent_scp_program
-				(*
-					-> rrel_example:
-						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_sc_agent_of_preprocessing_of_agent_scp_program.html"
 						(*<- lang_ru;;*);;
 				*);;
 		*);;
