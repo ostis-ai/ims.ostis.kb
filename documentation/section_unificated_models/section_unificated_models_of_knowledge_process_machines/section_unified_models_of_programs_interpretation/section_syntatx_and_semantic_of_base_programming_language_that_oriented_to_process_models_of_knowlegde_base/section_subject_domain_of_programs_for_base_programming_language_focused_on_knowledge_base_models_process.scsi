@@ -543,7 +543,49 @@ rrel_set
 						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_rrel_set.html"
 						(*<- lang_ru;;*);;
 				*);;
-		*);;
+		*);
+=> nrel_inclusion:
+        rrel_set_1;
+        rrel_set_2;
+        rrel_set_3;
+        rrel_set_4;
+        rrel_set_5;;
+
+rrel_set_1
+=> nrel_main_idtf:
+	[формируемое множество 1']
+	(*<- lang_ru;;*);
+	[created set 1']
+	(*<- lang_en;;*);;
+
+rrel_set_2
+=> nrel_main_idtf:
+	[формируемое множество 2']
+	(*<- lang_ru;;*);
+	[created set 2']
+	(*<- lang_en;;*);;
+
+rrel_set_3
+=> nrel_main_idtf:
+	[формируемое множество 3']
+	(*<- lang_ru;;*);
+	[created set 3']
+	(*<- lang_en;;*);;
+
+rrel_set_4
+=> nrel_main_idtf:
+	[формируемое множество 4']
+	(*<- lang_ru;;*);
+	[created set 4']
+	(*<- lang_en;;*);;
+
+rrel_set_5
+=> nrel_main_idtf:
+	[формируемое множество 5']
+	(*<- lang_ru;;*);
+	[created set 5']
+	(*<- lang_en;;*);;
+
 
 rrel_erase
 	=> nrel_main_idtf:
@@ -658,6 +700,75 @@ scp_operator
 		scp_operator_of_scp_operand_value_control;
 		scp_operator_of_information_output_to_consol
 	};;
+
+/*----------------------scp_operator_atomic_type----------------------*/
+
+scp_operator_atomic_type
+	=> nrel_main_idtf:
+		[атомарный тип scp-оператора]
+		(*<- lang_ru;;*);
+		[scp-operator atomic type]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				...
+				(*
+					-> rrel_example:
+						[Под атомарным типом scp-оператора понимается такой подкласс класса scp-операторов, который больше не разбивается на подклассы.]
+						(*<- lang_ru;;*);;
+				*);;
+		*);
+	-> genEl;
+	-> genElStr3;
+	-> genElStr5;
+	-> sys_gen;
+	-> searchElStr3;
+	-> searchElStr5;
+	-> searchSetStr3;
+	-> searchSetStr5;
+	-> sys_search;
+	-> searchSetStr3;
+	-> searchSetStr5;
+	-> eraseEl;
+	-> eraseElStr3;
+	-> eraseElStr5;
+	-> eraseSetStr3;
+	-> eraseSetStr5;
+	-> ifType;
+	-> ifVarAssign;
+	-> ifFormCont;
+	-> ifCoin;
+	-> ifEq;
+	-> ifGr;
+	-> contAdd;
+	-> contSub;
+	-> contMult;
+	-> contDiv;
+	-> contPow;
+	-> contLn;
+	-> contSin;
+	-> contCos;
+	-> contTg;
+	-> contASin;
+	-> contACos;
+	-> contATg;
+	-> contAssign;
+	-> contErase;
+	-> call;
+	-> waitReturn;
+	-> waitReturnSet;
+	-> return;
+	-> varAssign;
+	-> varErase;
+	-> print;
+	-> printNl;
+	-> printEl;
+	-> sys_wait;
+	-> sys_set_event_handler;
+	-> sys_delete_event_handler;;
 
 /*----------------------scp-operator of sc-structure generation----------------------*/
 

@@ -368,21 +368,21 @@ scp_process
 		*);;
 
 
-scp_oprator_interpretation_request
+scp_operator_interpretation_request
 	<- sc_node_not_relation;
 	=> nrel_main_idtf:
 		[запрос интерпретации scp-операторов]
 		(*<- lang_ru;;*);
-		[scp-oprator interpretation_request]
+		[scp-operator interpretation_request]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		..key_node_scp_oprator_interpretation_request
+		..key_node_scp_operator_interpretation_request
 		(*
 			<- sc_explanation;;
 			<= nrel_sc_text_translation:	
-				..translation_scp_oprator_interpretation_request
+				..translation_scp_operator_interpretation_request
 				(*
-					-> rrel_example: ..TODO_scp_oprator_interpretation_request_example;;
+					-> rrel_example: ..TODO_scp_operator_interpretation_request_example;;
 				*);;
 		*);;
 
