@@ -275,6 +275,7 @@ sc_agent_of_scp_program_preprocessing
 	};;
 
 nrel_scp_program_var
+	<- sc_node_norole_relation;
 	=> nrel_main_idtf:
 		[переменные scp-программы*]
 		(*<- lang_ru;;*);
@@ -294,6 +295,7 @@ nrel_scp_program_var
 		*);;
 
 nrel_scp_program_const
+	<- sc_node_norole_relation;
 	=> nrel_main_idtf:
 		[константы scp-программы*]
 		(*<- lang_ru;;*);
@@ -313,6 +315,7 @@ nrel_scp_program_const
 		*);;
 
 nrel_scp_program_copied_const
+	<- sc_node_norole_relation;
 	=> nrel_main_idtf:
 		[копируемые константы scp-программы*]
 		(*<- lang_ru;;*);
@@ -332,6 +335,7 @@ nrel_scp_program_copied_const
 		*);;
 
 nrel_template_of_scp_process_creation
+	<- sc_node_norole_relation;
 	=> nrel_main_idtf:
 		[шаблон создания scp-процесса*]
 		(*<- lang_ru;;*);

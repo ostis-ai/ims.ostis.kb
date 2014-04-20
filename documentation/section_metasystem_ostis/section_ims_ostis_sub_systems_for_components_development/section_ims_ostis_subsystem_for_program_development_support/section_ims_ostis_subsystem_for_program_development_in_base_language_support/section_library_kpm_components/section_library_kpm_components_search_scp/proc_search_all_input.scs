@@ -86,7 +86,7 @@ scp_program -> proc_search_all_input (*
 		  <- printEl;;
 		  -> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
 
-		  => nrel_goto: .proc_search_all_input_operator8;;
+		  => nrel_goto: .proc_search_all_input_operator_return;;
 		*);;
 
 		/* Garbage cleaning */

@@ -12,17 +12,17 @@ sc_agent_of_set_cantorization
 		question_set_cantorization
 	};
 <- key_sc_element:
-	..sc_agent_of_set_cantorization_behavior
+	...
 	(*
 	<- sc_description_of_sc_agent_behavior;;
 	<= nrel_sc_text_translation:
-		..translation
+		...
 		(*
 		-> rrel_example:
 			[Задачей sc-агента канторизации множеств является склейка всех кратных sc-дуг, связывающих заданное множество с каким-либо из его элементов.];;
 		*);;
 	*);
-=> nrel_inclusion: ..sc_agent_of_set_cantorization_c_realization
+=> nrel_inclusion: ...
 	(*
 		<- platform_dependent_abstract_sc_agent;;
 		<= nrel_sc_agent_program: 
@@ -31,7 +31,7 @@ sc_agent_of_set_cantorization
 			[owner=deniskoronchik; repo=sc-machine; path= sc-kpm/merge/agents/merge_set.h; syntax=cpp] (* => nrel_format: format_github_source_link;; *)
 		};;
 		
-		-> ..sc_agent_of_set_cantorization_agent (* <- active_sc_agent;; *);;
+		-> sc_agent_of_set_cantorization_c (* <- active_sc_agent;; *);;
 	*);;
 
 ..sc_agent_of_set_cantorization_initiation_condition
