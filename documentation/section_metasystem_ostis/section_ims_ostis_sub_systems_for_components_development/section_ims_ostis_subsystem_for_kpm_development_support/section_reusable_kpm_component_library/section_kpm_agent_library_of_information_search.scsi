@@ -697,3 +697,65 @@ sc_agent_of_full_pattern_search
 	.._question _=> nrel_answer:: .._answer;;
 	.._question _-> .._parameter;;
 *];;
+
+
+/*============================================================================================================================================================================*/
+
+sc_agent_of_full_pattern_search_with_full_result_gen
+=> nrel_main_idtf:
+	[sc-агент поиска всех конструкций, полностью изоморфных заданному образцу с генерацией множества всевозможных результатов] (* <- lang_ru;; *);
+	[sc-agent of search of all constructions, which are completely isomorphic to given pattern with complete result set generation] (* <- lang_en;; *);
+<- abstract_sc_agent;
+=> nrel_primary_initiation_condition: (sc_event_add_output_arc => question_initiated);
+=> nrel_initiation_condition_and_result: (..sc_agent_of_full_pattern_search_with_full_result_gen_initiation_condition => ..sc_agent_of_full_pattern_search_with_full_result_gen_result);
+<= nrel_sc_agent_key_sc_elements: 
+	{
+		question_initiated;
+		question;
+		question_full_pattern_search_with_full_result_gen
+	};
+<- key_sc_element:
+	...
+	(*
+	<- sc_description_of_sc_agent_behavior;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[Задачей sc-агента поиска поиска всех конструкций, полностью изоморфных заданному образцу, является поиск sc-конструкций полностью изоморфных заданному образцу поиска, содержащему хотя бы одну sc-переменную и хотя бы одну sc-константу. Первым параметром для соответствующего действия является sc-узел, обозначающий образец поиска, вторым парметром - sc-узел, обозначающий множество результатов поиска, т.е. пар соответствия, первым элементом каждой из которых является некоторый sc-переменная из образца, вторым - соответствующая ей sc-константа.];;
+		*);;
+	*);
+=> nrel_inclusion: ...
+	(*
+		<- platform_dependent_abstract_sc_agent;;
+		<= nrel_sc_agent_program: 
+		{
+			[owner=deniskoronchik; repo=sc-machine; path= sc-kpm/search/agents/search_pattern/sc_system_operators.cpp; syntax=cpp] (* => nrel_format: format_github_source_link;; *);
+			[owner=deniskoronchik; repo=sc-machine; path= sc-kpm/search/agents/search_pattern/sc_system_search.cpp; syntax=cpp] (* => nrel_format: format_github_source_link;; *);
+			[owner=deniskoronchik; repo=sc-machine; path= sc-kpm/search/agents/search_pattern/search_pattern_functions.cpp; syntax=cpp] (* => nrel_format: format_github_source_link;; *);
+			[owner=deniskoronchik; repo=sc-machine; path= sc-kpm/search/agents/search_pattern/sc_system_operators.h; syntax=cpp] (* => nrel_format: format_github_source_link;; *);
+			[owner=deniskoronchik; repo=sc-machine; path= sc-kpm/search/agents/search_pattern/sc_system_search.h; syntax=cpp] (* => nrel_format: format_github_source_link;; *);
+			[owner=deniskoronchik; repo=sc-machine; path= sc-kpm/search/agents/search_pattern/search_pattern_functions.h; syntax=cpp] (* => nrel_format: format_github_source_link;; *)
+		};;
+		
+		-> sc_agent_of_full_pattern_search_with_full_result_gen_c (* <- active_sc_agent;; *);;
+	*);;
+
+..sc_agent_of_full_pattern_search_with_full_result_gen_initiation_condition
+= [*
+	question_full_pattern_search_with_full_result_gen _-> .._question;;
+	question_initiated _-> .._question;;
+	question _-> .._question;;
+	.._question _-> rrel_1:: .._parameter_pattern;;
+	.._question _-> rrel_2:: .._parameter_result_set;;
+*];;
+
+..sc_agent_of_full_pattern_search_with_full_result_gen_result
+= [*
+	question_full_pattern_search_with_full_result_gen _-> .._question;;
+	question_finished _-> .._question;;
+	question _-> .._question;;
+	.._question _=> nrel_answer:: .._answer;;
+	.._question _-> rrel_1:: .._parameter_pattern;;
+	.._question _-> rrel_2:: .._parameter_result_set;;
+*];;
