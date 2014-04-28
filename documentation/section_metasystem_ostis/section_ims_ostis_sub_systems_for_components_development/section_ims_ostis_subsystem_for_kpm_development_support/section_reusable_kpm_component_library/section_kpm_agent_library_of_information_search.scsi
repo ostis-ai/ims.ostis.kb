@@ -12,17 +12,17 @@ sc_agent_of_search_of_all_output_arcs
 		question_search_all_output_const_pos_arcs
 	};
 <- key_sc_element:
-	..sc_agent_of_search_of_all_output_arcs_behavior
+	...
 	(*
 	<- sc_description_of_sc_agent_behavior;;
 	<= nrel_sc_text_translation:
-		..translation_sc_agent_of_search_of_all_output_arcs_behavior
+		...
 		(*
 		-> rrel_example:
 			[Задачей sc-агента поиска всех выходящих константных позитивных стационарных sc-дуг принадлежности является поиск всех выходящих константных позитивных стационарных sc-дуг принадлежности.];;
 		*);;
 	*);
-=> nrel_inclusion: ..sc_agent_of_search_of_all_output_arcs_c_realization
+=> nrel_inclusion: ...
 	(*
 		<- platform_dependent_abstract_sc_agent;;
 		<= nrel_sc_agent_program: 
@@ -31,9 +31,9 @@ sc_agent_of_search_of_all_output_arcs
 			[owner=deniskoronchik; repo=sc-machine; path= sc-kpm/search/agents/search_output_arcs.h; syntax=cpp] (* => nrel_format: format_github_source_link;; *)
 		};;
 		
-		-> ..sc_agent_of_search_of_all_output_arcs_agent (* <- active_sc_agent;; *);;
+		-> sc_agent_of_search_of_all_output_arcs_c (* <- active_sc_agent;; *);;
 	*);
-=> nrel_inclusion: ..sc_agent_of_search_of_all_output_arcs_scp_realization
+=> nrel_inclusion: ...
 	(*
 		<- platform_independent_abstract_sc_agent;;
 		<= nrel_sc_agent_program: 
@@ -41,7 +41,7 @@ sc_agent_of_search_of_all_output_arcs
 			agent_proc_search_all_output;
 			proc_search_all_output
 		};;
-		-> sc_agent_of_search_of_all_output_arcs_agent_scp;; /* (* <- active_sc_agent;; *);;*/
+		-> sc_agent_of_search_of_all_output_arcs_scp (* <- active_sc_agent;; *);; 
 	*);;
 
 ..sc_agent_of_search_of_all_output_arcs_initiation_condition
@@ -81,13 +81,13 @@ sc_agent_of_search_of_all_output_arcs_with_rel
 	(*
 	<- sc_description_of_sc_agent_behavior;;
 	<= nrel_sc_text_translation:
-		..translation_sc_agent_of_search_of_all_output_arcs_with_rel_behavior
+		...
 		(*
 		-> rrel_example:
 			[Задачей sc-агента поиска всех выходящих константных позитивных стационарных sc-дуг принадлежности с отношениями является поиск всех выходящих константных позитивных стационарных sc-дуг принадлежности, а также всех ролевых отношений, которым принадлежат какие-либо из найденных дуг принадлежности];;
 		*);;
 	*);
-=> nrel_inclusion: ..sc_agent_of_search_of_all_output_arcs_with_rel_c_realization
+=> nrel_inclusion: ...
 	(*
 		<- platform_dependent_abstract_sc_agent;;
 		<= nrel_sc_agent_program: 
@@ -96,9 +96,9 @@ sc_agent_of_search_of_all_output_arcs_with_rel
 			[owner=deniskoronchik; repo=sc-machine; path= sc-kpm/search/agents/search_output_arcs.h; syntax=cpp] (* => nrel_format: format_github_source_link;; *)
 		};;
 		
-		-> ..sc_agent_of_search_of_all_output_arcs_with_rel_agent (* <- active_sc_agent;; *);;
+		-> sc_agent_of_search_of_all_output_arcs_with_rel_c (* <- active_sc_agent;; *);;
 	*);
-=> nrel_inclusion: ..sc_agent_of_search_of_all_output_arcs_with_rel_scp_realization
+=> nrel_inclusion: ...
 	(*
 		<- platform_independent_abstract_sc_agent;;
 		<= nrel_sc_agent_program: 
@@ -107,7 +107,7 @@ sc_agent_of_search_of_all_output_arcs_with_rel
 			proc_search_all_output_with_rel;
 			proc_search_all_input
 		};;
-		-> ..sc_agent_of_search_of_all_output_arcs_with_rel_scp (* <- active_sc_agent;; *);;
+		-> sc_agent_of_search_of_all_output_arcs_with_rel_scp (* <- active_sc_agent;; *);;
 	*);;
 
 ..sc_agent_of_search_of_all_output_arcs_with_rel_initiation_condition
@@ -141,17 +141,17 @@ sc_agent_of_search_of_all_input_arcs
 		question_search_all_input_const_pos_arcs
 	};
 <- key_sc_element:
-	..sc_agent_of_search_of_all_input_arcs_behavior
+	...
 	(*
 	<- sc_description_of_sc_agent_behavior;;
 	<= nrel_sc_text_translation:
-		..translation_sc_agent_of_search_of_all_input_arcs_behavior
+		...
 		(*
 		-> rrel_example:
 			[Задачей sc-агента поиска всех входящих константных позитивных стационарных sc-дуг принадлежности является поиск всех входящих константных позитивных стационарных sc-дуг принадлежности.];;
 		*);;
 	*);
-=> nrel_inclusion: ..sc_agent_of_search_of_all_input_arcs_c_realization
+=> nrel_inclusion: ...
 	(*
 		<- platform_dependent_abstract_sc_agent;;
 		<= nrel_sc_agent_program: 
@@ -160,9 +160,9 @@ sc_agent_of_search_of_all_input_arcs
 			[owner=deniskoronchik; repo=sc-machine; path= sc-kpm/search/agents/search_input_arcs.h; syntax=cpp] (* => nrel_format: format_github_source_link;; *)
 		};;
 		
-		-> ..sc_agent_of_search_of_all_input_arcs_agent (* <- active_sc_agent;; *);;
+		-> sc_agent_of_search_of_all_input_arcs_c (* <- active_sc_agent;; *);;
 	*);
-=> nrel_inclusion: ..sc_agent_of_search_of_all_input_arcs_scp_realization
+=> nrel_inclusion: ...
 	(*
 		<- platform_independent_abstract_sc_agent;;
 		<= nrel_sc_agent_program: 
@@ -170,7 +170,7 @@ sc_agent_of_search_of_all_input_arcs
 			agent_proc_search_all_input;
 			proc_search_all_input
 		};;
-		-> ..sc_agent_of_search_of_all_input_arcs_scp (* <- active_sc_agent;; *);;
+		-> sc_agent_of_search_of_all_input_arcs_scp (* <- active_sc_agent;; *);;
 	*);;
 
 ..sc_agent_of_search_of_all_input_arcs_initiation_condition
@@ -205,17 +205,17 @@ sc_agent_of_search_of_all_input_arcs_with_rel
 		question_search_all_input_const_pos_arcs_with_rel
 	};
 <- key_sc_element:
-	..sc_agent_of_search_of_all_input_arcs_with_rel_behavior
+	...
 	(*
 	<- sc_description_of_sc_agent_behavior;;
 	<= nrel_sc_text_translation:
-		..translation_sc_agent_of_search_of_all_input_arcs_with_rel_behavior
+		...
 		(*
 		-> rrel_example:
 			[Задачей sc-агента поиска всех входящих константных позитивных стационарных sc-дуг принадлежности с отношениями является поиск всех входящих константных позитивных стационарных sc-дуг принадлежности, а также всех ролевых отношений, которым принадлежат какие-либо из найденных дуг принадлежности];;
 		*);;
 	*);
-=> nrel_inclusion: ..sc_agent_of_search_of_all_input_arcs_with_rel_c_realization
+=> nrel_inclusion: ...
 	(*
 		<- platform_dependent_abstract_sc_agent;;
 		<= nrel_sc_agent_program: 
@@ -224,7 +224,7 @@ sc_agent_of_search_of_all_input_arcs_with_rel
 			[owner=deniskoronchik; repo=sc-machine; path= sc-kpm/search/agents/search_input_arcs.h; syntax=cpp] (* => nrel_format: format_github_source_link;; *)
 		};;
 		
-		-> ..sc_agent_of_search_of_all_input_arcs_with_rel_agent (* <- active_sc_agent;; *);;
+		-> sc_agent_of_search_of_all_input_arcs_with_rel_c (* <- active_sc_agent;; *);;
 	*);
 => nrel_inclusion: ..sc_agent_of_search_of_all_input_arcs_with_rel_scp_realization
 	(*
@@ -235,7 +235,7 @@ sc_agent_of_search_of_all_input_arcs_with_rel
 			proc_search_all_input_with_rel;
 			proc_search_all_input
 		};;
-		-> ..sc_agent_of_search_of_all_input_arcs_with_rel_scp (* <- active_sc_agent;; *);;
+		-> sc_agent_of_search_of_all_input_arcs_with_rel_scp (* <- active_sc_agent;; *);;
 	*);;
 
 ..sc_agent_of_search_of_all_input_arcs_with_rel_initiation_condition
@@ -270,17 +270,17 @@ sc_agent_of_search_of_decomposition
 		question_search_decomposition
 	};
 <- key_sc_element:
-	..sc_agent_of_search_of_decomposition_behavior
+	...
 	(*
 	<- sc_description_of_sc_agent_behavior;;
 	<= nrel_sc_text_translation:
-		..translation_sc_agent_of_search_of_decomposition_behavior
+		...
 		(*
 		-> rrel_example:
 			[Задачей sc-агента поиска декомпозиции заданного sc-элемента является поиск всех sc-элементов, на которые декомпозируется заданный sc-элемент при помощи связок отношений, принадлежащих классу отношение декомпозиции. Если на указанных sc-элементах задано отношение порядка, то его связки также добавляются во множество, являющееся результатом выполнения действия поиска декомпозиции заданного sc-элемента. При этом учитываются декомпозиция только на один уровень.];;
 		*);;
 	*);
-=> nrel_inclusion: ..sc_agent_of_search_of_decomposition_c_realization
+=> nrel_inclusion: ...
 	(*
 		<- platform_dependent_abstract_sc_agent;;
 		<= nrel_sc_agent_program: 
@@ -289,7 +289,7 @@ sc_agent_of_search_of_decomposition
 			[owner=deniskoronchik; repo=sc-machine; path= sc-kpm/search/agents/search_structure.h; syntax=cpp] (* => nrel_format: format_github_source_link;; *)
 		};;
 		
-		-> ..sc_agent_of_search_of_decomposition_agent (* <- active_sc_agent;; *);;
+		-> sc_agent_of_search_of_decomposition_agent_c (* <- active_sc_agent;; *);;
 	*);;
 
 ..sc_agent_of_search_of_decomposition_initiation_condition
@@ -324,17 +324,17 @@ sc_agent_of_search_of_all_subclasses_in_quasybinary_relation
 		question_search_all_subclasses_in_quasybinary_relation
 	};
 <- key_sc_element:
-	..sc_agent_of_search_of_all_subclasses_in_quasybinary_relation_behavior
+	...
 	(*
 	<- sc_description_of_sc_agent_behavior;;
 	<= nrel_sc_text_translation:
-		..translation_sc_agent_of_search_of_all_subclasses_in_quasybinary_relation_behavior
+		...
 		(*
 		-> rrel_example:
 			[Задачей sc-агента поиска всех подклассов в квазибинарном отношении является поиск всех элементов, входящих во множество, являющееся первым компонентом какой-либо бинарной ориентированной пары некоторого квазибинарного отношения, вторым компонентом которой является заданный sc-элемент. После этого та же процедура поиска выполняется для каждого из найденных sc-элементов и далее рекурсивно до тех пор, пока пока поиск соответствующей конструкции успешен. Если на указанных sc-элементах задано отношение порядка, то его связки также добавляются во множество, являющееся результатом выполнения действия поиска декомпозиции заданного sc-элемента.];;
 		*);;
 	*);
-=> nrel_inclusion: ..sc_agent_of_search_of_all_subclasses_in_quasybinary_relation_c_realization
+=> nrel_inclusion: ...
 	(*
 		<- platform_dependent_abstract_sc_agent;;
 		<= nrel_sc_agent_program: 
@@ -343,7 +343,7 @@ sc_agent_of_search_of_all_subclasses_in_quasybinary_relation
 			[owner=deniskoronchik; repo=sc-machine; path= sc-kpm/search/agents/search_structure.h; syntax=cpp] (* => nrel_format: format_github_source_link;; *)
 		};;
 		
-		-> ..sc_agent_of_search_of_all_subclasses_in_quasybinary_relation_agent (* <- active_sc_agent;; *);;
+		-> sc_agent_of_search_of_all_subclasses_in_quasybinary_relation_c (* <- active_sc_agent;; *);;
 	*);;
 
 ..sc_agent_of_search_of_all_subclasses_in_quasybinary_relation_initiation_condition
@@ -378,17 +378,17 @@ sc_agent_of_search_of_all_superclasses_in_quasybinary_relation
 		question_search_all_superclasses_in_quasybinary_relation
 	};
 <- key_sc_element:
-	..sc_agent_of_search_of_all_superclasses_in_quasybinary_relation_behavior
+	...
 	(*
 	<- sc_description_of_sc_agent_behavior;;
 	<= nrel_sc_text_translation:
-		..translation_sc_agent_of_search_of_all_superclasses_in_quasybinary_relation_behavior
+		...
 		(*
 		-> rrel_example:
 			[Задачей sc-агента поиска всех надклассов в квазибинарном отношении является поиск всех элементов, являющихся вторым компонентом какой-либо бинарной ориентированной пары некоторого квазибинарного отношения, первым элементом которой является множество, элементом которого является заданный sc-элемент. После этого та же процедура поиска выполняется для каждого из найденных sc-элементов и далее рекурсивно до тех пор, пока поиск соответствующей конструкции успешен.];;
 		*);;
 	*);
-=> nrel_inclusion: ..sc_agent_of_search_of_all_superclasses_in_quasybinary_relation_c_realization
+=> nrel_inclusion: ...
 	(*
 		<- platform_dependent_abstract_sc_agent;;
 		<= nrel_sc_agent_program: 
@@ -397,7 +397,7 @@ sc_agent_of_search_of_all_superclasses_in_quasybinary_relation
 			[owner=deniskoronchik; repo=sc-machine; path= sc-kpm/search/agents/search_structure.h; syntax=cpp] (* => nrel_format: format_github_source_link;; *)
 		};;
 		
-		-> ..sc_agent_of_search_of_all_superclasses_in_quasybinary_relation_agent (* <- active_sc_agent;; *);;
+		-> sc_agent_of_search_of_all_superclasses_in_quasybinary_relation_c (* <- active_sc_agent;; *);;
 	*);;
 
 ..sc_agent_of_search_of_all_superclasses_in_quasybinary_relation_initiation_condition
@@ -432,17 +432,17 @@ sc_agent_of_search_of_all_identifiers
 		question_search_all_identifiers
 	};
 <- key_sc_element:
-	..sc_agent_of_search_of_all_identifiers_behavior
+	...
 	(*
 	<- sc_description_of_sc_agent_behavior;;
 	<= nrel_sc_text_translation:
-		..translation_sc_agent_of_search_of_all_superclasses_in_quasybinary_relation_behavior
+		...
 		(*
 		-> rrel_example:
 			[Задачей sc-агента поиска всех идентификаторов заданного sc-элемента является поиск всех исходящих из заданного sc-элемента бинарных ориентированных пар, принадлежащих некоторому отношению идентификации.];;
 		*);;
 	*);
-=> nrel_inclusion: ..sc_agent_of_search_of_all_identifiers_c_realization
+=> nrel_inclusion: ...
 	(*
 		<- platform_dependent_abstract_sc_agent;;
 		<= nrel_sc_agent_program: 
@@ -451,7 +451,7 @@ sc_agent_of_search_of_all_identifiers
 			[owner=deniskoronchik; repo=sc-machine; path= sc-kpm/search/agents/search_identifiers.h; syntax=cpp] (* => nrel_format: format_github_source_link;; *)
 		};;
 		
-		-> ..sc_agent_of_search_of_all_identifiers_agent (* <- active_sc_agent;; *);;
+		-> sc_agent_of_search_of_all_identifiers_agent_c (* <- active_sc_agent;; *);;
 	*);;
 
 ..sc_agent_of_search_of_all_identifiers_initiation_condition
@@ -486,17 +486,17 @@ sc_agent_of_search_of_all_identified_elements
 		question_search_all_identified_elements
 	};
 <- key_sc_element:
-	..sc_agent_of_search_of_all_identified_elements_behavior
+	...
 	(*
 	<- sc_description_of_sc_agent_behavior;;
 	<= nrel_sc_text_translation:
-		..translation_sc_agent_of_search_of_all_identified_elements_behavior
+		...
 		(*
 		-> rrel_example:
 			[Задачей sc-агента поиска всех идентифицированных sc-элементов в базе знаний является поиск всех связок отношения основной идентификатор* и инцидентных им sc-элементов.];;
 		*);;
 	*);
-=> nrel_inclusion: ..sc_agent_of_search_of_all_identified_elements_c_realization
+=> nrel_inclusion: ...
 	(*
 		<- platform_dependent_abstract_sc_agent;;
 		<= nrel_sc_agent_program: 
@@ -505,7 +505,7 @@ sc_agent_of_search_of_all_identified_elements
 			[owner=deniskoronchik; repo=sc-machine; path= sc-kpm/search/agents/search_identifiers.h; syntax=cpp] (* => nrel_format: format_github_source_link;; *)
 		};;
 		
-		-> ..sc_agent_of_search_of_all_identified_elements_agent (* <- active_sc_agent;; *);;
+		-> sc_agent_of_search_of_all_identified_elements_agent_c (* <- active_sc_agent;; *);;
 	*);;
 
 ..sc_agent_of_search_of_all_identified_elements_initiation_condition
@@ -538,11 +538,11 @@ sc_agent_of_search_of_full_semantic_neighborhood
 		question_search_full_semantic_neighborhood
 	};
 <- key_sc_element:
-	..sc_agent_of_search_of_full_semantic_neighborhood_behavior
+	...
 	(*
 	<- sc_description_of_sc_agent_behavior;;
 	<= nrel_sc_text_translation:
-		..translation_sc_agent_of_search_of_full_semantic_neighborhood_behavior
+		...
 		(*
 		-> rrel_example:
 			[Задачей sc-агента поиска полной сементической окрестности заданного sc-элемента является поиск всех sc-коннекторов, инцидентных заданному sc-элементу, а также sc-элементов, являющихся частью нижеперечисленых конструкций:
@@ -554,7 +554,7 @@ sc_agent_of_search_of_full_semantic_neighborhood
 .];;
 		*);;
 	*);
-=> nrel_inclusion: ..sc_agent_of_search_of_full_semantic_neighborhood_c_realization
+=> nrel_inclusion: ...
 	(*
 		<- platform_dependent_abstract_sc_agent;;
 		<= nrel_sc_agent_program: 
@@ -563,7 +563,7 @@ sc_agent_of_search_of_full_semantic_neighborhood
 			[owner=deniskoronchik; repo=sc-machine; path= sc-kpm/search/agents/search_semantic_neighborhood.h; syntax=cpp] (* => nrel_format: format_github_source_link;; *)
 		};;
 		
-		-> ..sc_agent_of_search_of_full_semantic_neighborhood_agent (* <- active_sc_agent;; *);;
+		-> sc_agent_of_search_of_full_semantic_neighborhood_c (* <- active_sc_agent;; *);;
 	*);;
 
 ..sc_agent_of_search_of_full_semantic_neighborhood_initiation_condition
@@ -598,17 +598,17 @@ sc_agent_of_search_of_links_of_relation_connected_with_element
 		question_search_links_of_relation_connected_with_element
 	};
 <- key_sc_element:
-	..sc_agent_of_search_of_links_of_relation_connected_with_element_behavior
+	...
 	(*
 	<- sc_description_of_sc_agent_behavior;;
 	<= nrel_sc_text_translation:
-		..translation_sc_agent_of_search_of_links_of_relation_connected_with_element_behavior
+		...
 		(*
 		-> rrel_example:
 			[Задачей sc-агента поиска связок заданного отношения, компонентом которых является заданный sc-элемент, является поиск всех связок заданного отношения, компонентом которых является заданный sc-элемент. Если отношение при этом является квазибинарным, то поиск осуществляется с учетом конфигурации связок квазибинарного отношения.];;
 		*);;
 	*);
-=> nrel_inclusion: ..sc_agent_of_search_of_links_of_relation_connected_with_element_c_realization
+=> nrel_inclusion: ...
 	(*
 		<- platform_dependent_abstract_sc_agent;;
 		<= nrel_sc_agent_program: 
@@ -617,7 +617,7 @@ sc_agent_of_search_of_links_of_relation_connected_with_element
 			[owner=deniskoronchik; repo=sc-machine; path= sc-kpm/search/agents/search_semantic_neighborhood.h; syntax=cpp] (* => nrel_format: format_github_source_link;; *)
 		};;
 		
-		-> ..sc_agent_of_search_of_links_of_relation_connected_with_element_agent (* <- active_sc_agent;; *);;
+		-> sc_agent_of_search_of_links_of_relation_connected_with_element_c (* <- active_sc_agent;; *);;
 	*);;
 
 ..sc_agent_of_search_of_links_of_relation_connected_with_element_initiation_condition
@@ -655,17 +655,17 @@ sc_agent_of_full_pattern_search
 		question_full_pattern_search
 	};
 <- key_sc_element:
-	..sc_agent_of_full_pattern_search_behavior
+	...
 	(*
 	<- sc_description_of_sc_agent_behavior;;
 	<= nrel_sc_text_translation:
-		..translation_sc_agent_of_full_pattern_search_behavior
+		...
 		(*
 		-> rrel_example:
 			[Задачей sc-агента поиска поиска всех конструкций, полностью изоморфных заданному образцу, является поиск sc-конструкций полностью изоморфных заданному образцу поиска, содержащему хотя бы одну sc-переменную и хотя бы одну sc-константу.];;
 		*);;
 	*);
-=> nrel_inclusion: ..sc_agent_of_full_pattern_search_c_realization
+=> nrel_inclusion: ...
 	(*
 		<- platform_dependent_abstract_sc_agent;;
 		<= nrel_sc_agent_program: 
@@ -678,7 +678,7 @@ sc_agent_of_full_pattern_search
 			[owner=deniskoronchik; repo=sc-machine; path= sc-kpm/search/agents/search_pattern/search_pattern_functions.h; syntax=cpp] (* => nrel_format: format_github_source_link;; *)
 		};;
 		
-		-> ..sc_agent_of_full_pattern_search_agent (* <- active_sc_agent;; *);;
+		-> sc_agent_of_full_pattern_search_c (* <- active_sc_agent;; *);;
 	*);;
 
 ..sc_agent_of_full_pattern_search_initiation_condition
@@ -696,4 +696,66 @@ sc_agent_of_full_pattern_search
 	question _-> .._question;;
 	.._question _=> nrel_answer:: .._answer;;
 	.._question _-> .._parameter;;
+*];;
+
+
+/*============================================================================================================================================================================*/
+
+sc_agent_of_full_pattern_search_with_full_result_gen
+=> nrel_main_idtf:
+	[sc-агент поиска всех конструкций, полностью изоморфных заданному образцу с генерацией множества всевозможных результатов] (* <- lang_ru;; *);
+	[sc-agent of search of all constructions, which are completely isomorphic to given pattern with complete result set generation] (* <- lang_en;; *);
+<- abstract_sc_agent;
+=> nrel_primary_initiation_condition: (sc_event_add_output_arc => question_initiated);
+=> nrel_initiation_condition_and_result: (..sc_agent_of_full_pattern_search_with_full_result_gen_initiation_condition => ..sc_agent_of_full_pattern_search_with_full_result_gen_result);
+<= nrel_sc_agent_key_sc_elements: 
+	{
+		question_initiated;
+		question;
+		question_full_pattern_search_with_full_result_gen
+	};
+<- key_sc_element:
+	...
+	(*
+	<- sc_description_of_sc_agent_behavior;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[Задачей sc-агента поиска поиска всех конструкций, полностью изоморфных заданному образцу, является поиск sc-конструкций полностью изоморфных заданному образцу поиска, содержащему хотя бы одну sc-переменную и хотя бы одну sc-константу. Первым параметром для соответствующего действия является sc-узел, обозначающий образец поиска, вторым парметром - sc-узел, обозначающий множество результатов поиска, т.е. пар соответствия, первым элементом каждой из которых является некоторый sc-переменная из образца, вторым - соответствующая ей sc-константа.];;
+		*);;
+	*);
+=> nrel_inclusion: ...
+	(*
+		<- platform_dependent_abstract_sc_agent;;
+		<= nrel_sc_agent_program: 
+		{
+			[owner=deniskoronchik; repo=sc-machine; path= sc-kpm/search/agents/search_pattern/sc_system_operators.cpp; syntax=cpp] (* => nrel_format: format_github_source_link;; *);
+			[owner=deniskoronchik; repo=sc-machine; path= sc-kpm/search/agents/search_pattern/sc_system_search.cpp; syntax=cpp] (* => nrel_format: format_github_source_link;; *);
+			[owner=deniskoronchik; repo=sc-machine; path= sc-kpm/search/agents/search_pattern/search_pattern_functions.cpp; syntax=cpp] (* => nrel_format: format_github_source_link;; *);
+			[owner=deniskoronchik; repo=sc-machine; path= sc-kpm/search/agents/search_pattern/sc_system_operators.h; syntax=cpp] (* => nrel_format: format_github_source_link;; *);
+			[owner=deniskoronchik; repo=sc-machine; path= sc-kpm/search/agents/search_pattern/sc_system_search.h; syntax=cpp] (* => nrel_format: format_github_source_link;; *);
+			[owner=deniskoronchik; repo=sc-machine; path= sc-kpm/search/agents/search_pattern/search_pattern_functions.h; syntax=cpp] (* => nrel_format: format_github_source_link;; *)
+		};;
+		
+		-> sc_agent_of_full_pattern_search_with_full_result_gen_c (* <- active_sc_agent;; *);;
+	*);;
+
+..sc_agent_of_full_pattern_search_with_full_result_gen_initiation_condition
+= [*
+	question_full_pattern_search_with_full_result_gen _-> .._question;;
+	question_initiated _-> .._question;;
+	question _-> .._question;;
+	.._question _-> rrel_1:: .._parameter_pattern;;
+	.._question _-> rrel_2:: .._parameter_result_set;;
+*];;
+
+..sc_agent_of_full_pattern_search_with_full_result_gen_result
+= [*
+	question_full_pattern_search_with_full_result_gen _-> .._question;;
+	question_finished _-> .._question;;
+	question _-> .._question;;
+	.._question _=> nrel_answer:: .._answer;;
+	.._question _-> rrel_1:: .._parameter_pattern;;
+	.._question _-> rrel_2:: .._parameter_result_set;;
 *];;
