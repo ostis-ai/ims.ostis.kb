@@ -7,6 +7,7 @@ subject_domain_of_sc_relations
 <- rrel_key_sc_element:
 	section_subject_domain_of_sc_relations;;
 
+
 sc_relation
 
 => nrel_main_idtf:
@@ -15,7 +16,7 @@ sc_relation
 
 => nrel_idtf:
 	[множество отношений] (* <- lang_ru;; *);
-	[Множество всевозможных отношений] (* <- lang_ru;; *);
+	[множество всевозможных отношений] (* <- lang_ru;; *);
 
 <- rrel_key_sc_element:
 	...
@@ -54,9 +55,9 @@ sc_relation
 	ternary_relation;
 	quasybinary_relation;
 
-
 <- rrel_key_sc_element:
 	section_subject_domain_of_sc_relations;;
+
 
 unary_relation
 
@@ -83,6 +84,7 @@ unary_relation
 <- rrel_key_sc_element:
 	section_subject_domain_of_sc_relations;;
 
+
 binary_relation
 
 => nrel_main_idtf:
@@ -104,7 +106,6 @@ binary_relation
 	equivalence_relation;
 	related_relation;
 
-
 <- rrel_key_sc_element:
 	...
 	(*
@@ -120,6 +121,7 @@ binary_relation
 
 <- rrel_key_sc_element:
 	section_subject_domain_of_sc_relations;;
+
 
 quasybinary_relation
 
@@ -146,6 +148,7 @@ quasybinary_relation
 <- rrel_key_sc_element:
 	section_subject_domain_of_sc_relations;;
 
+
 ternary_relation
 
 => nrel_main_idtf:
@@ -170,6 +173,7 @@ ternary_relation
 
 <- rrel_key_sc_element:
 	section_subject_domain_of_sc_relations;;
+
 
 oriented_relation
 
@@ -196,6 +200,7 @@ oriented_relation
 <- rrel_key_sc_element:
 	section_subject_domain_of_sc_relations;;
 
+
 non_oriented_relation
 
 => nrel_main_idtf:
@@ -221,6 +226,7 @@ non_oriented_relation
 <- rrel_key_sc_element:
 	section_subject_domain_of_sc_relations;;
 
+
 reflexive_relation
 
 => nrel_main_idtf:
@@ -242,6 +248,7 @@ reflexive_relation
 
 <- rrel_key_sc_element:
 	section_subject_domain_of_sc_relations;;
+
 
 areflexive_relation
 
@@ -265,6 +272,7 @@ areflexive_relation
 <- rrel_key_sc_element:
 	section_subject_domain_of_sc_relations;;
 
+
 antireflexive_relation
 
 => nrel_main_idtf:
@@ -286,6 +294,7 @@ antireflexive_relation
 
 <- rrel_key_sc_element:
 	section_subject_domain_of_sc_relations;;
+
 
 symmetric_relation
 
@@ -310,6 +319,7 @@ symmetric_relation
 <- rrel_key_sc_element:
 	section_subject_domain_of_sc_relations;;
 
+
 asymmetric_relation
 
 => nrel_main_idtf:
@@ -331,6 +341,7 @@ asymmetric_relation
 
 <- rrel_key_sc_element:
 	section_subject_domain_of_sc_relations;;
+
 
 antisymmetric_relation
 
@@ -354,6 +365,7 @@ antisymmetric_relation
 <- rrel_key_sc_element:
 	section_subject_domain_of_sc_relations;;
 
+
 transitive_relation
 
 => nrel_main_idtf:
@@ -375,6 +387,7 @@ transitive_relation
 
 <- rrel_key_sc_element:
 	section_subject_domain_of_sc_relations;;
+
 
 related_relation
 
@@ -398,6 +411,7 @@ related_relation
 
 <- rrel_key_sc_element:
 	section_subject_domain_of_sc_relations;;
+
 
 order_relation
 
@@ -424,6 +438,7 @@ order_relation
 
 <- rrel_key_sc_element:
 	section_subject_domain_of_sc_relations;;
+
 
 strict_order_relation
 
@@ -457,7 +472,6 @@ non_strict_order_relation
 	[отношение нестрогого порядка] (* <- lang_ru;; *);
 	[non strict order relation] (* <- lang_en;; *);
 
-
 <= nrel_strict_inclusion:
 	binary_relation;
 
@@ -476,6 +490,7 @@ non_strict_order_relation
 
 <- rrel_key_sc_element:
 	section_subject_domain_of_sc_relations;;
+
 
 equivalence_relation
 
@@ -498,6 +513,7 @@ equivalence_relation
 
 <- rrel_key_sc_element:
 	section_subject_domain_of_sc_relations;;
+
 
 attribute
 
@@ -548,7 +564,23 @@ nrel_definitional_domain
 	*);
 
 <- rrel_key_sc_element:
+	...
+	(*
+		<- typical_sc_neighborhood;;
+		<= nrel_sc_text_translation:
+		...
+		
+			(*
+				<= nrel_sctrict_inclusion: 
+					sc.g_text;;
+				-> rrel_example:
+					"file://section_subject_domain_of_sc_relations_content_png/definitional_domain.png";;
+			*);;
+	*);
+
+<- rrel_key_sc_element:
 	section_subject_domain_of_sc_relations;;
+
 
 nrel_relation_schema
 
@@ -566,13 +598,28 @@ nrel_relation_schema
 		...
 			(*
 				-> rrel_example:
-					"file://section_subject_domain_of_sc_relations_content/explanation_for_relation_schema.html"
-					(*<- lang_ru;;*);;
+					"file://section_subject_domain_of_sc_relations_content/explanation_for_relation_schema.html";;
+			*);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- typical_sc_neighborhood;;
+		<= nrel_sc_text_translation:
+		...
+		
+			(*
+				<= nrel_sctrict_inclusion: 
+					sc.g_text;;
+				-> rrel_example:
+					"file://section_subject_domain_of_sc_relations_content_png/relation_schema.png";;
 			*);;
 	*);
 
 <- rrel_key_sc_element:
 	section_subject_domain_of_sc_relations;;
+
 
 nrel_first_domain
 
@@ -596,7 +643,23 @@ nrel_first_domain
 	*);
 
 <- rrel_key_sc_element:
+	...
+	(*
+		<- typical_sc_neighborhood;;
+		<= nrel_sc_text_translation:
+		...
+		
+			(*
+				<= nrel_sctrict_inclusion: 
+					sc.g_text;;
+				-> rrel_example:
+					"file://section_subject_domain_of_sc_relations_content_png/first_domain.png";;
+			*);;
+	*);
+
+<- rrel_key_sc_element:
 	section_subject_domain_of_sc_relations;;
+
 
 nrel_second_domain
 
@@ -620,7 +683,23 @@ nrel_second_domain
 	*);
 
 <- rrel_key_sc_element:
+	...
+	(*
+		<- typical_sc_neighborhood;;
+		<= nrel_sc_text_translation:
+		...
+		
+			(*
+				<= nrel_sctrict_inclusion: 
+					sc.g_text;;
+				-> rrel_example:
+					"file://section_subject_domain_of_sc_relations_content_png/second_domain.png";;
+			*);;
+	*);
+
+<- rrel_key_sc_element:
 	section_subject_domain_of_sc_relations;;
+
 
 nrel_third_domain
 
@@ -644,7 +723,23 @@ nrel_third_domain
 	*);
 
 <- rrel_key_sc_element:
+	...
+	(*
+		<- typical_sc_neighborhood;;
+		<= nrel_sc_text_translation:
+		...
+		
+			(*
+				<= nrel_sctrict_inclusion: 
+					sc.g_text;;
+				-> rrel_example:
+					"file://section_subject_domain_of_sc_relations_content_png/third_domain.png";;
+			*);;
+	*);
+
+<- rrel_key_sc_element:
 	section_subject_domain_of_sc_relations;;
+
 
 nrel_composition_of_relations
 
@@ -664,6 +759,21 @@ nrel_composition_of_relations
 				-> rrel_example:
 					"file://section_subject_domain_of_sc_relations_content/explanation_for_composition_of_relations.html"
 					(*<- lang_ru;;*);;
+			*);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- typical_sc_neighborhood;;
+		<= nrel_sc_text_translation:
+		...
+		
+			(*
+				<= nrel_sctrict_inclusion: 
+					sc.g_text;;
+				-> rrel_example:
+					"file://section_subject_domain_of_sc_relations_content_png/composition_of_relations.png";;
 			*);;
 	*);
 
@@ -693,7 +803,23 @@ nrel_compliance
 	*);
 
 <- rrel_key_sc_element:
+	...
+	(*
+		<- typical_sc_neighborhood;;
+		<= nrel_sc_text_translation:
+		...
+		
+			(*
+				<= nrel_sctrict_inclusion: 
+					sc.g_text;;
+				-> rrel_example:
+					"file://section_subject_domain_of_sc_relations_content_png/compliance.png";;
+			*);;
+	*);
+
+<- rrel_key_sc_element:
 	section_subject_domain_of_sc_relations;;
+
 
 nrel_full_compliance
 
@@ -703,6 +829,9 @@ nrel_full_compliance
 
 => nrel_idtf:
 	[всюдуопределенное соответствие*] (* <- lang_ru;; *);
+
+<= nrel_strict_inclusion:
+	nrel_compliance;
 
 <- ternary_relation;
 
@@ -720,15 +849,48 @@ nrel_full_compliance
 	*);
 
 <- rrel_key_sc_element:
+	...
+	(*
+		<- typical_sc_neighborhood;;
+		<= nrel_sc_text_translation:
+		...
+		
+			(*
+				<= nrel_sctrict_inclusion: 
+					sc.g_text;;
+				-> rrel_example:
+					"file://section_subject_domain_of_sc_relations_content_png/full_compliance.png";;
+			*);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- image;;
+		<= nrel_sc_text_translation:
+		...
+		
+			(*
+				-> rrel_example:
+					"file://section_subject_domain_of_sc_relations_content_png/surjection.png";;
+			*);;
+	*);
+
+<- rrel_key_sc_element:
 	section_subject_domain_of_sc_relations;;
 
 
-
-nrel_univocal_compliance
+nrel_surjection
 
 => nrel_main_idtf:
-	[однозначное соответствие*] (* <- lang_ru;; *);
-	[univocal compliance*] (* <- lang_en;; *);
+	[сюръекция*] (* <- lang_ru;; *);
+	[surjection*] (* <- lang_en;; *);
+
+=> nrel_idtf:
+	[сюръективное соответствие*] (* <- lang_ru;; *);
+
+<= nrel_strict_inclusion:
+	nrel_compliance;
 
 <- ternary_relation;
 
@@ -740,8 +902,36 @@ nrel_univocal_compliance
 		...
 			(*
 				-> rrel_example:
-					"file://section_subject_domain_of_sc_relations_content/explanation_for_univocal_compliance.html"
+					"file://section_subject_domain_of_sc_relations_content/explanation_for_surjection.html"
 					(*<- lang_ru;;*);;
+			*);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- typical_sc_neighborhood;;
+		<= nrel_sc_text_translation:
+		...
+		
+			(*
+				<= nrel_sctrict_inclusion: 
+					sc.g_text;;
+				-> rrel_example:
+					"file://section_subject_domain_of_sc_relations_content_png/surjection_scg.png";;
+			*);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- image;;
+		<= nrel_sc_text_translation:
+		...
+		
+			(*
+				-> rrel_example:
+					"file://section_subject_domain_of_sc_relations_content_png/surjection.png";;
 			*);;
 	*);
 
@@ -749,15 +939,76 @@ nrel_univocal_compliance
 	section_subject_domain_of_sc_relations;;
 
 
+nrel_injection
+
+=> nrel_main_idtf:
+	[инъекция*] (* <- lang_ru;; *);
+	[injection*] (* <- lang_en;; *);
+
+=> nrel_idtf:
+	[инъективное соответствие*] (* <- lang_ru;; *);
+
+<= nrel_strict_inclusion:
+	nrel_compliance;
+
+<- ternary_relation;
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					"file://section_subject_domain_of_sc_relations_content/explanation_for_injection.html"
+					(*<- lang_ru;;*);;
+			*);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- typical_sc_neighborhood;;
+		<= nrel_sc_text_translation:
+		...
+		
+			(*
+				<= nrel_sctrict_inclusion: 
+					sc.g_text;;
+				-> rrel_example:
+					"file://section_subject_domain_of_sc_relations_content_png/injection_scg.png";;
+			*);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- image;;
+		<= nrel_sc_text_translation:
+		...
+		
+			(*
+				-> rrel_example:
+					"file://section_subject_domain_of_sc_relations_content_png/injection.png";;
+			*);;
+	*);
+
+<- rrel_key_sc_element:
+	section_subject_domain_of_sc_relations;;
+
 
 nrel_bijection
 
 => nrel_main_idtf:
-	[взаимнооднозначное соответствие*] (* <- lang_ru;; *);
+	[биекция*] (* <- lang_ru;; *);
 	[bijection*] (* <- lang_en;; *);
 
 => nrel_idtf:
-	[биекция*] (* <- lang_ru;; *);
+	[взаимно однозначное соответствие*] (* <- lang_ru;; *);
+
+<= nrel_strict_inclusion:
+	nrel_compliance;
 
 <- ternary_relation;
 
@@ -775,13 +1026,51 @@ nrel_bijection
 	*);
 
 <- rrel_key_sc_element:
+	...
+	(*
+		<- typical_sc_neighborhood;;
+		<= nrel_sc_text_translation:
+		...
+		
+			(*
+				<= nrel_sctrict_inclusion: 
+					sc.g_text;;
+				-> rrel_example:
+					"file://section_subject_domain_of_sc_relations_content_png/bijection_scg.png";;
+			*);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- image;;
+		<= nrel_sc_text_translation:
+		...
+		
+			(*
+				-> rrel_example:
+					"file://section_subject_domain_of_sc_relations_content_png/bijection.png";;
+			*);;
+	*);
+
+
+<- rrel_key_sc_element:
 	section_subject_domain_of_sc_relations;;
+
 
 nrel_functional_compliance
 
 => nrel_main_idtf:
-	[функиональное соответствие*] (* <- lang_ru;; *);
+	[функциональное соответствие*] (* <- lang_ru;; *);
 	[functional compliance*] (* <- lang_en;; *);
+
+=> nrel_idtf:
+	[функция*] (* <- lang_ru;; *);
+
+<= nrel_sctrict_inclusion:
+	nrel_compliance;
+	nrel_injection;
+	nrel_surjection;
 
 <- ternary_relation;
 
@@ -799,7 +1088,23 @@ nrel_functional_compliance
 	*);
 
 <- rrel_key_sc_element:
+	...
+	(*
+		<- typical_sc_neighborhood;;
+		<= nrel_sc_text_translation:
+		...
+		
+			(*
+				<= nrel_sctrict_inclusion: 
+					sc.g_text;;
+				-> rrel_example:
+					"file://section_subject_domain_of_sc_relations_content_png/functional_compliance.png";;
+			*);;
+	*);
+
+<- rrel_key_sc_element:
 	section_subject_domain_of_sc_relations;;
+
 
 nrel_arity_of_relations
 
@@ -811,6 +1116,7 @@ nrel_arity_of_relations
 	[арность отношения*] (* <- lang_ru;; *);
 
 <- binary_relation;
+<- oriented_relation;
 
 <- rrel_key_sc_element:
 	...
@@ -822,6 +1128,21 @@ nrel_arity_of_relations
 				-> rrel_example:
 					"file://section_subject_domain_of_sc_relations_content/explanation_for_arity_of_relations.html"
 					(*<- lang_ru;;*);;
+			*);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- typical_sc_neighborhood;;
+		<= nrel_sc_text_translation:
+		...
+		
+			(*
+				<= nrel_sctrict_inclusion: 
+					sc.g_text;;
+				-> rrel_example:
+					"file://section_subject_domain_of_sc_relations_content_png/arity_of_relations.png";;
 			*);;
 	*);
 
