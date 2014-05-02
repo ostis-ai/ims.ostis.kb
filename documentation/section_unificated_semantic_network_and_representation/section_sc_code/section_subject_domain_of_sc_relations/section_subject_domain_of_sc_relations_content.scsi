@@ -34,7 +34,7 @@ sc_relation
 <- rrel_key_sc_element:
 	...
 	(*
-		<- sc_explanation;;
+		<- sc_definition;;
 		<= nrel_sc_text_translation:
 		...
 			(*
@@ -71,7 +71,7 @@ unary_relation
 <- rrel_key_sc_element:
 	...
 	(*
-		<- sc_explanation;;
+		<- sc_definition;;
 		<= nrel_sc_text_translation:
 		...
 			(*
@@ -109,7 +109,7 @@ binary_relation
 <- rrel_key_sc_element:
 	...
 	(*
-		<- sc_explanation;;
+		<- sc_definition;;
 		<= nrel_sc_text_translation:
 		...
 			(*
@@ -187,7 +187,7 @@ oriented_relation
 <- rrel_key_sc_element:
 	...
 	(*
-		<- sc_explanation;;
+		<- sc_definition;;
 		<= nrel_sc_text_translation:
 		...
 			(*
@@ -213,7 +213,7 @@ non_oriented_relation
 <- rrel_key_sc_element:
 	...
 	(*
-		<- sc_explanation;;
+		<- sc_definition;;
 		<= nrel_sc_text_translation:
 		...
 			(*
@@ -236,7 +236,7 @@ reflexive_relation
 <- rrel_key_sc_element:
 	...
 	(*
-		<- sc_explanation;;
+		<- sc_definition;;
 		<= nrel_sc_text_translation:
 		...
 			(*
@@ -259,7 +259,7 @@ areflexive_relation
 <- rrel_key_sc_element:
 	...
 	(*
-		<- sc_explanation;;
+		<- sc_definition;;
 		<= nrel_sc_text_translation:
 		...
 			(*
@@ -282,7 +282,7 @@ antireflexive_relation
 <- rrel_key_sc_element:
 	...
 	(*
-		<- sc_explanation;;
+		<- sc_definition;;
 		<= nrel_sc_text_translation:
 		...
 			(*
@@ -306,7 +306,7 @@ symmetric_relation
 <- rrel_key_sc_element:
 	...
 	(*
-		<- sc_explanation;;
+		<- sc_definition;;
 		<= nrel_sc_text_translation:
 		...
 			(*
@@ -329,7 +329,7 @@ asymmetric_relation
 <- rrel_key_sc_element:
 	...
 	(*
-		<- sc_explanation;;
+		<- sc_definition;;
 		<= nrel_sc_text_translation:
 		...
 			(*
@@ -352,7 +352,7 @@ antisymmetric_relation
 <- rrel_key_sc_element:
 	...
 	(*
-		<- sc_explanation;;
+		<- sc_definition;;
 		<= nrel_sc_text_translation:
 		...
 			(*
@@ -375,7 +375,7 @@ transitive_relation
 <- rrel_key_sc_element:
 	...
 	(*
-		<- sc_explanation;;
+		<- sc_definition;;
 		<= nrel_sc_text_translation:
 		...
 			(*
@@ -399,7 +399,7 @@ related_relation
 <- rrel_key_sc_element:
 	...
 	(*
-		<- sc_explanation;;
+		<- sc_definition;;
 		<= nrel_sc_text_translation:
 		...
 			(*
@@ -426,7 +426,7 @@ order_relation
 <- rrel_key_sc_element:
 	...
 	(*
-		<- sc_explanation;;
+		<- sc_definition;;
 		<= nrel_sc_text_translation:
 		...
 			(*
@@ -452,7 +452,7 @@ strict_order_relation
 <- rrel_key_sc_element:
 	...
 	(*
-		<- sc_explanation;;
+		<- sc_definition;;
 		<= nrel_sc_text_translation:
 		...
 			(*
@@ -478,7 +478,7 @@ non_strict_order_relation
 <- rrel_key_sc_element:
 	...
 	(*
-		<- sc_explanation;;
+		<- sc_definition;;
 		<= nrel_sc_text_translation:
 		...
 			(*
@@ -501,7 +501,7 @@ equivalence_relation
 <- rrel_key_sc_element:
 	...
 	(*
-		<- sc_explanation;;
+		<- sc_definition;;
 		<= nrel_sc_text_translation:
 		...
 			(*
@@ -515,14 +515,14 @@ equivalence_relation
 	section_subject_domain_of_sc_relations;;
 
 
-attribute
+role_relation
 
 => nrel_main_idtf:
-	[атрибут*] (* <- lang_ru;; *);
-	[attribute*] (* <- lang_en;; *);
+	[ролевое отношение] (* <- lang_ru;; *);
+	[role relation] (* <- lang_en;; *);
 
 =>nrel_idtf:
-	[ролевое отношение] (* <- lang_ru;; *);
+	[атрибут] (* <- lang_ru;; *);
 	[атрибутивное отношение] (* <- lang_ru;; *);
 
 <- rrel_key_sc_element:
@@ -752,7 +752,7 @@ nrel_composition_of_relations
 <- rrel_key_sc_element:
 	...
 	(*
-		<- sc_explanation;;
+		<- sc_definition;;
 		<= nrel_sc_text_translation:
 		...
 			(*
@@ -792,7 +792,7 @@ nrel_compliance
 <- rrel_key_sc_element:
 	...
 	(*
-		<- sc_explanation;;
+		<- sc_definition;;
 		<= nrel_sc_text_translation:
 		...
 			(*
@@ -838,7 +838,7 @@ nrel_full_compliance
 <- rrel_key_sc_element:
 	...
 	(*
-		<- sc_explanation;;
+		<- sc_definition;;
 		<= nrel_sc_text_translation:
 		...
 			(*
@@ -897,7 +897,7 @@ nrel_surjection
 <- rrel_key_sc_element:
 	...
 	(*
-		<- sc_explanation;;
+		<- sc_definition;;
 		<= nrel_sc_text_translation:
 		...
 			(*
@@ -956,7 +956,7 @@ nrel_injection
 <- rrel_key_sc_element:
 	...
 	(*
-		<- sc_explanation;;
+		<- sc_definition;;
 		<= nrel_sc_text_translation:
 		...
 			(*
@@ -1015,7 +1015,7 @@ nrel_bijection
 <- rrel_key_sc_element:
 	...
 	(*
-		<- sc_explanation;;
+		<- sc_definition;;
 		<= nrel_sc_text_translation:
 		...
 			(*
@@ -1077,7 +1077,7 @@ nrel_functional_compliance
 <- rrel_key_sc_element:
 	...
 	(*
-		<- sc_explanation;;
+		<- sc_definition;;
 		<= nrel_sc_text_translation:
 		...
 			(*
