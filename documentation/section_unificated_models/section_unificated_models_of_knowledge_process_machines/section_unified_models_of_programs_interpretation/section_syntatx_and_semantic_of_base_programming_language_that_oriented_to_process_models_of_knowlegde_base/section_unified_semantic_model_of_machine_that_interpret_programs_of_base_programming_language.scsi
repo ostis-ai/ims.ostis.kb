@@ -9,22 +9,37 @@ abstract_scp_machine
 	=> nrel_idtf:
 		[формальная модель операционной семантики Языка SCP]
 		(*<- lang_ru;;*);
+		[the formal model of operational semantics of SCP Language ]
+		(*<- lang_en;;*);
 		[sc-модель операционной семантики Языка SCP]
 		(*<- lang_ru;;*);
+		[sc-model of operational semantics of Language SCP]
+		(*<- lang_en;;*);
 		[унифицированная логико-семантическая модель машины интерпретации программ базового языка программирования, ориентированного на обработку sc-моделей баз знаний]
 		(*<- lang_ru;;*);
+		[the unified logiko-semantic model of the machine interpretation of programs of a host language of programming, ориентированного на обработку sc-моделей баз знаний]
+		(*<- lang_en;;*);
 		[класс sc-агентов, обеcпечивающих интерпретацию scp-программ в sc-памяти]
 		(*<- lang_ru;;*);
+		[class of sc-agents, describing the interpretation  of scp-programs in sc-memory]
+		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		..key_node_abstract_scp_machine
+		...
 		(*
 			<- sc_explanation;;
-			<= nrel_sc_text_translation:	
-				..translation_abstract_scp_machine
+			<= nrel_sc_text_translation:
+				...
 				(*
 					-> rrel_example:
 						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_abstract_scp_machine.html"
 						(*<- lang_ru;;*);;
+				*);;
+			<= nrel_sc_text_translation:
+				...
+				(*
+					-> rrel_example:
+						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_abstract_scp_machine_en.html"
+						(*<- lang_en;;*);;
 				*);;
 		*);
 	<= nrel_abstract_sc_agent_decomposition:
@@ -66,15 +81,22 @@ sc_agent_of_scp_program_insertion_to_sc_memory
 		[sc-agent of scp-program insertion to sc-memory]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		..key_node_sc_agent_of_scp_program_insertion_to_sc_memory
+		...
 		(*
 			<- sc_explanation;;
 			<= nrel_sc_text_translation:	
-				..translation_sc_agent_of_scp_program_insertion_to_sc_memory
+				...
 				(*
 					-> rrel_example:
 						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_sc_agent_of_scp_program_insertion_to_sc_memory.html"
 						(*<- lang_ru;;*);;
+				*);;
+			<= nrel_sc_text_translation:
+				...
+				(*
+					-> rrel_example:
+						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_sc_agent_of_scp_program_insertion_to_sc_memory_en.html"
+						(*<- lang_en;;*);;
 				*);;
 		*);
 	<= nrel_abstract_sc_agent_decomposition:
@@ -101,15 +123,22 @@ sc_agent_of_proper_scp_program_insertion_to_sc_memory
 		[sc-agent of proper scp-program insertion to sc-memory]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		..key_node_sc_agent_of_proper_scp_program_insertion_to_sc_memory
+		...
 		(*
 			<- sc_explanation;;
 			<= nrel_sc_text_translation:	
-				..translation_sc_agent_of_proper_scp_program_insertion_to_sc_memory
+				...
 				(*
 					-> rrel_example:
 						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_sc_agent_of_proper_scp_program_insertion_to_sc_memory.html"
 						(*<- lang_ru;;*);;
+				*);;
+			<= nrel_sc_text_translation:
+				...
+				(*
+					-> rrel_example:
+						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_sc_agent_of_proper_scp_program_insertion_to_sc_memory_en.html"
+						(*<- lang_en;;*);;
 				*);;
 		*);;
 
@@ -143,15 +172,22 @@ sc_agent_of_scp_program_verivication
 		[sc-agent of scp-program verivication]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		..key_node_sc_agent_of_scp_program_verivication
+		...
 		(*
 			<- sc_explanation;;
 			<= nrel_sc_text_translation:	
-				..translation_sc_agent_of_scp_program_verivication
+				...
 				(*
 					-> rrel_example:
 						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_sc_agent_of_scp_program_verivication.html"
 						(*<- lang_ru;;*);;
+								*);;
+			<= nrel_sc_text_translation:
+				...
+				(*
+					-> rrel_example:
+						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_sc_agent_of_scp_program_verivication_en.html"
+						(*<- lang_en;;*);;
 				*);;
 		*);
 	<= nrel_abstract_sc_agent_decomposition:
@@ -173,15 +209,22 @@ sc_agent_of_scp_program_syntactic_verivication
 		[sc-agent of scp-program syntactic verivication]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		..key_node_sc_agent_of_scp_program_syntactic_verivication
+		...
 		(*
 			<- sc_explanation;;
 			<= nrel_sc_text_translation:	
-				..translation_sc_agent_of_scp_program_syntactic_verivication
+				...
 				(*
 					-> rrel_example:
 						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_sc_agent_of_scp_program_syntactic_verivication.html"
 						(*<- lang_ru;;*);;
+								*);;
+			<= nrel_sc_text_translation:
+				...
+				(*
+					-> rrel_example:
+						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_sc_agent_of_scp_program_syntactic_verivication_en.html"
+						(*<- lang_en;;*);;
 				*);;
 		*);;
 
@@ -194,15 +237,23 @@ sc_agent_of_scp_program_semantic_verivication
 		[sc-agent of scp-program semantic verivication]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		..key_node_sc_agent_of_scp_program_semantic_verivication
+		...
 		(*
 			<- sc_explanation;;
 			<= nrel_sc_text_translation:	
-				..translation_sc_agent_of_scp_program_semantic_verivication
+				...
 				(*
 					-> rrel_example:
 						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_sc_agent_of_scp_program_semantic_verivication.html"
 						(*<- lang_ru;;*);;
+				*);;
+			<= nrel_sc_text_translation:
+				...
+
+				(*
+					-> rrel_example:
+						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_sc_agent_of_scp_program_semantic_verivication_en.html"
+						(*<- lang_en;;*);;
 				*);;
 		*);;
 
@@ -264,6 +315,13 @@ sc_agent_of_scp_program_preprocessing
 					-> rrel_example:
 						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_sc_agent_of_preprocessing_of_scp_program.html"
 						(*<- lang_ru;;*);;
+								*);;
+			<= nrel_sc_text_translation:
+				...
+				(*
+					-> rrel_example:
+						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_sc_agent_of_preprocessing_of_scp_program_en.html"
+						(*<- lang_en;;*);;
 				*);;
 		*);
 	<= nrel_sc_agent_key_node:
@@ -282,15 +340,22 @@ nrel_scp_program_var
 		[scp-program var*]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		..key_node_nrel_scp_program_var
+		...
 		(*
 			<- sc_explanation;;
 			<= nrel_sc_text_translation:	
-				..translation_nrel_scp_program_var
+				...
 				(*
 					-> rrel_example:
 						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_nrel_scp_program_var.html"
 						(*<- lang_ru;;*);;
+								*);;
+			<= nrel_sc_text_translation:
+				...
+				(*
+					-> rrel_example:
+						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_nrel_scp_program_var_en.html"
+						(*<- lang_en;;*);;
 				*);;
 		*);;
 
@@ -302,15 +367,22 @@ nrel_scp_program_const
 		[scp-program const*]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		..key_node_nrel_scp_program_const
+		...
 		(*
 			<- sc_explanation;;
 			<= nrel_sc_text_translation:	
-				..translation_nrel_scp_program_const
+				...
 				(*
 					-> rrel_example:
 						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_nrel_scp_program_const.html"
 						(*<- lang_ru;;*);;
+								*);;
+			<= nrel_sc_text_translation:
+				...
+				(*
+					-> rrel_example:
+						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_nrel_scp_program_const_en.html"
+						(*<- lang_en;;*);;
 				*);;
 		*);;
 
@@ -326,11 +398,18 @@ nrel_scp_program_copied_const
 		(*
 			<- sc_explanation;;
 			<= nrel_sc_text_translation:	
-				..translation_nrel_scp_program_copied_const
+				...
 				(*
 					-> rrel_example:
 						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_nrel_scp_program_copied_const.html"
 						(*<- lang_ru;;*);;
+				*);;
+			<= nrel_sc_text_translation:
+				...
+				(*
+					-> rrel_example:
+						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_nrel_scp_program_copied_const_en.html"
+						(*<- lang_en;;*);;
 				*);;
 		*);;
 
@@ -342,15 +421,22 @@ nrel_template_of_scp_process_creation
 		[template of scp-process creation*]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		..key_node_nrel_template_of_scp_process_creation
+		...
 		(*
 			<- sc_explanation;;
 			<= nrel_sc_text_translation:	
-				..translation_nrel_template_of_scp_process_creation
+				...
 				(*
 					-> rrel_example:
 						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_nrel_template_of_scp_process_creation.html"
 						(*<- lang_ru;;*);;
+								*);;
+			<= nrel_sc_text_translation:
+				...
+				(*
+					-> rrel_example:
+						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_nrel_template_of_scp_process_creation_en.html"
+						(*<- lang_en;;*);;
 				*);;
 		*);;
 
@@ -383,15 +469,22 @@ sc_agent_of_scp_process_creation
 		[sc-agent of scp-process creation]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		..key_node_sc_agent_of_scp_process_creation
+		...
 		(*
 			<- sc_explanation;;
 			<= nrel_sc_text_translation:	
-				..translation_sc_agent_of_scp_process_creation
+				...
 				(*
 					-> rrel_example:
 						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_sc_agent_of_scp_process_creation.html"
 						(*<- lang_ru;;*);;
+								*);;
+			<= nrel_sc_text_translation:
+				...
+				(*
+					-> rrel_example:
+						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_sc_agent_of_scp_process_creation_en.html"
+						(*<- lang_en;;*);;
 				*);;
 		*);;
 
@@ -403,15 +496,22 @@ scp_process
 		[scp-process]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		..key_node_scp_process
+		...
 		(*
 			<- sc_explanation;;
 			<= nrel_sc_text_translation:	
-				..translation_scp_process
+				...
 				(*
 					-> rrel_example:
 						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_scp_process.html"
 						(*<- lang_ru;;*);;
+								*);;
+			<= nrel_sc_text_translation:
+				...
+				(*
+					-> rrel_example:
+						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_scp_process_en.html"
+						(*<- lang_en;;*);;
 				*);;
 		*);;
 
@@ -424,14 +524,15 @@ scp_operator_interpretation_request
 		[scp-operator interpretation_request]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		..key_node_scp_operator_interpretation_request
+		...
 		(*
 			<- sc_explanation;;
 			<= nrel_sc_text_translation:	
-				..translation_scp_operator_interpretation_request
+				...
 				(*
 					-> rrel_example: ..TODO_scp_operator_interpretation_request_example;;
 				*);;
+				
 		*);;
 
 sc_agent_of_scp_operator_interpretation
@@ -443,15 +544,22 @@ sc_agent_of_scp_operator_interpretation
 		[sc-agent of scp-operator interpretation]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		..key_node_sc_agent_of_scp_operator_interpretation
+		...
 		(*
 			<- sc_explanation;;
 			<= nrel_sc_text_translation:	
-				..translation_sc_agent_of_scp_operator_interpretation
+				...
 				(*
 					-> rrel_example:
 						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_sc_agent_of_scp_operator_interpretation.html"
 						(*<- lang_ru;;*);;
+								*);;
+			<= nrel_sc_text_translation:
+				...
+				(*
+					-> rrel_example:
+						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_sc_agent_of_scp_operator_interpretation_en.html"
+						(*<- lang_en;;*);;
 				*);;
 		*);
 	<= nrel_abstract_sc_agent_decomposition:
@@ -700,15 +808,22 @@ unsuccessfully_executed_scp_operator
 		[unsuccessfully executed scp-operator]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		..key_node_unsuccessfully_executed_scp_operator
+		...
 		(*
 			<- sc_explanation;;
 			<= nrel_sc_text_translation:	
-				..translation_unsuccessfully_executed_scp_operator
+				...
 				(*
 					-> rrel_example:
 						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_unsuccessfully_executed_scp_operator.html"
 						(*<- lang_ru;;*);;
+				*);;
+			<= nrel_sc_text_translation:
+				...
+				(*
+					-> rrel_example:
+						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_unsuccessfully_executed_scp_operator_en.html"
+						(*<- lang_en;;*);;
 				*);;
 		*);;
 
@@ -720,15 +835,22 @@ successfully_executed_scp_operator
 		[successfully executed scp-operator]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		..key_node_successfully_executed_scp_operator
+		...
 		(*
 			<- sc_explanation;;
 			<= nrel_sc_text_translation:	
-				..translation_successfully_executed_scp_operator
+				...
 				(*
 					-> rrel_example:
 						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_successfully_executed_scp_operator.html"
 						(*<- lang_ru;;*);;
+				*);;
+			<= nrel_sc_text_translation:
+				...
+				(*
+					-> rrel_example:
+						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_successfully_executed_scp_operator_en.html"
+						(*<- lang_en;;*);;
 				*);;
 		*);;
 
@@ -740,15 +862,22 @@ sc_agent_of_synchronization_of_scp_program_interpretation_process
 		[sc-agent of synchronization of scp-program interpretation process]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		..key_node_sc_agent_of_synchronization_of_scp_program_interpretation_process
+		...
 		(*
 			<- sc_explanation;;
 			<= nrel_sc_text_translation:	
-				..translation_sc_agent_of_synchronization_of_scp_program_interpretation_process
+				...
 				(*
 					-> rrel_example:
 						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_sc_agent_of_synchronization_of_scp_program_interpretation_process.html"
 						(*<- lang_ru;;*);;
+				*);;
+			<= nrel_sc_text_translation:
+				...
+				(*
+					-> rrel_example:
+						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_sc_agent_of_synchronization_of_scp_program_interpretation_process_en.html"
+						(*<- lang_en;;*);;
 				*);;
 		*);;
 
@@ -761,15 +890,22 @@ sc_agent_of_scp_process_destruction
 		[sc-agent of scp-process destruction]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		..key_node_sc_agent_of_scp_process_destruction
+		...
 		(*
 			<- sc_explanation;;
 			<= nrel_sc_text_translation:	
-				..translation_sc_agent_of_scp_process_destruction
+				...
 				(*
 					-> rrel_example:
 						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_sc_agent_of_scp_process_destruction.html"
 						(*<- lang_ru;;*);;
+				*);;
+			<= nrel_sc_text_translation:
+				...
+				(*
+					-> rrel_example:
+						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_sc_agent_of_scp_process_destruction_en.html"
+						(*<- lang_en;;*);;
 				*);;
 		*);;
 
@@ -782,15 +918,22 @@ sc_agent_of_synchronization_of_events_in_sc_memory_and_its_realization
 		[sc-agent of synchronization of events in sc memory and its realization]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		..key_node_sc_agent_of_synchronization_of_events_in_sc_memory_and_its_realization
+		...
 		(*
 			<- sc_explanation;;
 			<= nrel_sc_text_translation:	
-				..translation_sc_agent_of_synchronization_of_events_in_sc_memory_and_its_realization
+				...
 				(*
 					-> rrel_example:
 						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_sc_agent_of_synchronization_of_events_in_sc_memory_and_its_realization.html"
 						(*<- lang_ru;;*);;
+				*);;
+			<= nrel_sc_text_translation:
+				...
+				(*
+					-> rrel_example:
+						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_sc_agent_of_synchronization_of_events_in_sc_memory_and_its_realization_en.html"
+						(*<- lang_en;;*);;
 				*);;
 		*);
 	<= nrel_abstract_sc_agent_decomposition:
@@ -812,15 +955,22 @@ sc_agent_of_translation_of_primary_condition_of_initiation_sc_agent_in_its_inter
 		[sc-agent of translation of primary condition of initiation of sc-agent in its internal representation]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		..key_node_sc_agent_of_translation_of_primary_condition_of_initiation_sc_agent_in_its_internal_representation
+		...
 		(*
 			<- sc_explanation;;
 			<= nrel_sc_text_translation:	
-				..translation_sc_agent_of_translation_of_primary_condition_of_initiation_sc_agent_in_its_internal_representation
+				...
 				(*
 					-> rrel_example:
 						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_sc_agent_of_translation_of_primary_condition_of_initiation_sc_agent_in_its_internal_representation.html"
 						(*<- lang_ru;;*);;
+				*);;
+			<= nrel_sc_text_translation:
+				...
+				(*
+					-> rrel_example:
+						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_sc_agent_of_translation_of_primary_condition_of_initiation_sc_agent_in_its_internal_representation_en.html"
+						(*<- lang_en;;*);;
 				*);;
 		*);;
 
@@ -833,14 +983,21 @@ sc_agent_of_processing_of_sc_event_initiating_active_sc_agent
 		[sc-agent of processing of sc-event, initiating active sc-agent]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		..key_node_sc_agent_of_processing_of_sc_event_initiating_active_sc_agent
+		...
 		(*
 			<- sc_explanation;;
 			<= nrel_sc_text_translation:	
-				..translation_sc_agent_of_processing_of_sc_event_initiating_active_sc_agent
+				...
 				(*
 					-> rrel_example:
 						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_sc_agent_of_processing_of_sc_event_initiating_active_sc_agent.html"
 						(*<- lang_ru;;*);;
+				*);;
+			<= nrel_sc_text_translation:
+				...
+				(*
+					-> rrel_example:
+						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_sc_agent_of_processing_of_sc_event_initiating_active_sc_agent_en.html"
+						(*<- lang_en;;*);;
 				*);;
 		*);;
