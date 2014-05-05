@@ -113,6 +113,27 @@ sc_agent_of_proper_scp_program_insertion_to_sc_memory
 				*);;
 		*);;
 
+formed_scp_program
+	<- sc_node_not_relation;
+	<- abstract_sc_agent;
+	=> nrel_main_idtf:
+		[сформированная scp-программа]
+		(*<- lang_ru;;*);
+		[formed scp-program]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				...
+				(*
+					-> rrel_example:
+						[Во множество сформированных scp-программ попадают scp-программы, погруженные в sc-память]
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
 sc_agent_of_scp_program_verivication
 	<- sc_node_not_relation;
 	<- abstract_sc_agent;
@@ -185,41 +206,63 @@ sc_agent_of_scp_program_semantic_verivication
 				*);;
 		*);;
 
+correct_scp_program
+	<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[корректная scp-программа]
+		(*<- lang_ru;;*);
+		[correct scp-program]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				...
+				(*
+					-> rrel_example:
+						[Во множество корректных scp-программ попадают scp-программы, успешно прошедшие процедуры синтаксической и семантической верификации.]
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+incorrect_scp_program
+	<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[некорректная scp-программа]
+		(*<- lang_ru;;*);
+		[incorrect scp-program]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				...
+				(*
+					-> rrel_example:
+						[Во множество некорректных scp-программ попадают scp-программы, в которых в процессе синтаксической или семантической верификации выявлены какие-либо ошибки.]
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
 sc_agent_of_scp_program_preprocessing
 	<- sc_node_not_relation;
 	<- abstract_sc_agent;
 	=> nrel_main_idtf:
 		[sc-агент предварительной обработки scp-программ]
 		(*<- lang_ru;;*);
-		[sc-agent of scp-program preprocessing]
-		(*<- lang_en;;*);
-	<= nrel_abstract_sc_agent_decomposition:
-	{
-		sc_agent_of_preprocessing_of_any_type_scp_program
-		(*
-			=> nrel_abstract_sc_agent_base_order: 
-				sc_agent_of_preprocessing_of_agent_scp_program;;
-		*);
-		sc_agent_of_preprocessing_of_agent_scp_program
-	};;
-
-sc_agent_of_preprocessing_of_any_type_scp_program
-	<- sc_node_not_relation;
-	<- abstract_sc_agent;
-	=> nrel_main_idtf:
-		[sc-агент предварительной обработки scp-программ произвольного вида]
-		(*<- lang_ru;;*);
-		[sc-agent of preprocessing of any type scp-program]
+		[sc-agent of preprocessing of scp-programs]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		..key_node_sc_agent_of_preprocessing_of_any_type_scp_program
+		...
 		(*
 			<- sc_explanation;;
 			<= nrel_sc_text_translation:	
-				..translation_sc_agent_of_preprocessing_of_any_type_scp_program
+				...
 				(*
 					-> rrel_example:
-						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_sc_agent_of_preprocessing_of_any_type_scp_program.html"
+						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_sc_agent_of_preprocessing_of_scp_program.html"
 						(*<- lang_ru;;*);;
 				*);;
 		*);
@@ -232,6 +275,7 @@ sc_agent_of_preprocessing_of_any_type_scp_program
 	};;
 
 nrel_scp_program_var
+	<- sc_node_norole_relation;
 	=> nrel_main_idtf:
 		[переменные scp-программы*]
 		(*<- lang_ru;;*);
@@ -251,6 +295,7 @@ nrel_scp_program_var
 		*);;
 
 nrel_scp_program_const
+	<- sc_node_norole_relation;
 	=> nrel_main_idtf:
 		[константы scp-программы*]
 		(*<- lang_ru;;*);
@@ -270,6 +315,7 @@ nrel_scp_program_const
 		*);;
 
 nrel_scp_program_copied_const
+	<- sc_node_norole_relation;
 	=> nrel_main_idtf:
 		[копируемые константы scp-программы*]
 		(*<- lang_ru;;*);
@@ -289,6 +335,7 @@ nrel_scp_program_copied_const
 		*);;
 
 nrel_template_of_scp_process_creation
+	<- sc_node_norole_relation;
 	=> nrel_main_idtf:
 		[шаблон создания scp-процесса*]
 		(*<- lang_ru;;*);
@@ -307,21 +354,22 @@ nrel_template_of_scp_process_creation
 				*);;
 		*);;
 
-sc_agent_of_preprocessing_of_agent_scp_program
+prepared_scp_program
+	<- sc_node_not_relation;
 	=> nrel_main_idtf:
-		[шаблон создания scp-процесса*]
+		[подготовленная scp-программа]
 		(*<- lang_ru;;*);
-		[sc-agent of preprocessing of agent scp-program]
+		[prepared scp-program]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		..key_node_sc_agent_of_preprocessing_of_agent_scp_program
+		...
 		(*
 			<- sc_explanation;;
 			<= nrel_sc_text_translation:	
-				..translation_sc_agent_of_preprocessing_of_agent_scp_program
+				...
 				(*
 					-> rrel_example:
-						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_sc_agent_of_preprocessing_of_agent_scp_program.html"
+						[Во множество подготовленных scp-программ попадают корректные scp-программы, прошедшие процедуру предварительной обработки.]
 						(*<- lang_ru;;*);;
 				*);;
 		*);;
