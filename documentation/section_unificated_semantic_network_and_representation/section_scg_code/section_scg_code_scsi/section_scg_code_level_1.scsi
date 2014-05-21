@@ -6,20 +6,33 @@ scg_code_1_level => nrel_main_idtf:
 	[SCg-ядро] (* <- lang_ru;; *);
 
 <- rrel_key_sc_element:
-	..scg_code_1_level_explanation1
+	...scg_code_1_level_explanation1
 	(*
 	<- sc_explanation;;
-	<= nrel_sc_text_translation:	
-		..translation_scg_code_1_level_explanation1
-		(*
-		-> rrel_example:
-	"file://scg_code_htmls/scg_code_1_level_text1.html"
-		(* <- lang_ru;; *);;
-		*);;
-	*);
+        <= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://scg_code_htmls/scg_code_1_level_text1.html"
+				(*
+				<- lang_ru;;
+				*);;
+			*);;
+                <= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://scg_code_htmls/scg_code_1_level_text1_en.html"
+				(*
+				<- lang_en;;
+				*);;
+			*);;
+		*);
+        
 
+	
 <- rrel_key_sc_element:
-	..scg_code_1_level_explanation2
+	...scg_code_1_level_explanation2
 	(*
 	<- sc_explanation;;
 	<- rrel_key_sc_element:
@@ -27,7 +40,7 @@ scg_code_1_level => nrel_main_idtf:
 		(*
 		<- sc_illustration;;
 		<= nrel_sc_text_translation:	
-			..translation_scg_level_1_illustration1_ru
+			...translation_scg_level_1_illustration1_ru
 			(*
 			-> rrel_example:
 				"file://files/level1_identification.png"
@@ -35,21 +48,32 @@ scg_code_1_level => nrel_main_idtf:
 			*);;
 		*);;
 
-	<= nrel_sc_text_translation:	
-		..translation_scg_code_1_level_explanation2
-		(*
-		-> rrel_example:
-		"file://scg_code_htmls/scg_code_1_level_text2.html"
-	(* <- lang_ru;; *);;
-	*);;	
-*);
+ <= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://scg_code_htmls/scg_code_1_level_text2.html"
+				(*
+				<- lang_ru;;
+				*);;
+			*);;
+                <= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://scg_code_htmls/scg_code_1_level_text2_en.html"
+				(*
+				<- lang_en;;
+				*);;
+			*);;
+		*);	
 
 <- rrel_key_sc_element:
-	..scg_code_1_level_explanation3
+	...scg_code_1_level_explanation3
 	(*
 	<- sc_explanation;;
 	<= nrel_sc_text_translation:	
-		..translation_scg_code_1_level_explanation3
+		...translation_scg_code_1_level_explanation3
 		(*
 		-> rrel_example:
 			"file://files/level1_table.png"
@@ -61,11 +85,11 @@ scg_code_1_level => nrel_main_idtf:
 	"file://files/level1_triangle_ABC.png"
 	(*
 	<- rrel_key_sc_element:
-		..scg_code_1_level_comment1
+		...scg_code_1_level_comment1
 		(*
 		<- sc_explanation;;
 		<= nrel_sc_text_translation:	
-			..translation_scg_code_1_level_comment1
+			...translation_scg_code_1_level_comment1
 			(*
 			-> rrel_example:
 				[Имеется треугольник с вершинами в точках A, B и C.]
@@ -78,11 +102,11 @@ scg_code_1_level => nrel_main_idtf:
 	"file://files/level1_moon.png"
 	(*
 	<- rrel_key_sc_element:
-		..scg_code_1_level_comment2
+		...scg_code_1_level_comment2
 		(*
 		<- sc_explanation;;
 		<= nrel_sc_text_translation:	
-			..translation_scg_code_1_level_comment2
+			...translation_scg_code_1_level_comment2
 			(*
 			-> rrel_example:
 				[Луна вращается вокруг планеты "Земля".]
@@ -92,14 +116,25 @@ scg_code_1_level => nrel_main_idtf:
 	*);
 
 <- rrel_key_sc_element:
-	..scg_code_1_level_explanation4
+	...scg_code_1_level_explanation4
 	(*
 	<- sc_explanation;;
 	<= nrel_sc_text_translation:	
-		..translation_scg_code_1_level_explanation4
-		(*
-		-> rrel_example:
-			"file://scg_code_htmls/scg_code_1_level_text3.html"
-		(* <- lang_ru;; *);;
-		*);;
+			...
+			(*
+			-> rrel_example:
+				"file://scg_code_htmls/scg_code_1_level_text3.html"
+				(*
+				<- lang_ru;;
+				*);;
+			*);;
+                <= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://scg_code_htmls/scg_code_1_level_text3_en.html"
+				(*
+				<- lang_en;;
+				*);;
+			*);;
 	*);;

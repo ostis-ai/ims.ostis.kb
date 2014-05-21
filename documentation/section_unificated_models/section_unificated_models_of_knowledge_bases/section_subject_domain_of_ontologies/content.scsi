@@ -1,3 +1,21 @@
+subject_domain_of_ontologies
+	-> rrel_maximum_studied_object_class:
+		ontology;
+	-> rrel_studied_object_class:
+		integrated_ontology;
+		theoretic_set_ontology;
+		structural_ontology;
+		logical_ontology;
+		terminological_ontology;
+<- rrel_key_sc_element:
+	section_subject_domain_of_ontologies;;
+
+	
+	
+	
+
+
+
 ontology
 	=> nrel_main_idtf:
 		[онтология]
@@ -18,35 +36,41 @@ ontology
 	  (* <- lang_ru;; *);
 	  [описание концептов и отношений заданной предметной области]
 	  (* <- lang_ru;; *);
-	<= nrel_subdividing:
-	{
-		theoretic_set_ontology;
-		structural_ontology;
-		logical_ontology;
-		terminological_ontology;
-		ontology_of_informational_programs_and_tasks
-	};
-	<- rrel_key_sc_element:
+	
+=> nrel_strict_inclusion:
+	theoretic_set_ontology;
+	structural_ontology;
+	logical_ontology;
+	terminological_ontology;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
 		...
-		(*
-			<- sc_explanation;;
-			<= nrel_sc_text_translation:
-				...
-				(*
-					-> "file://nl_files/explanation_for_ontology.html"
-						(*<- lang_ru;;*);;
-				*);;
-		*);;
+			(*
+				-> rrel_example:
+					"file://section_subject_domain_of_ontology_content/explanation_for_ontology.html"
+					(*<- lang_ru;;*);;
+			*);;
+	*);
+<- rrel_key_sc_element:
+	section_subject_domain_of_ontologies;;
+	
+	
+	
+	
 
 ontology_of_informational_programs_and_tasks
 => nrel_main_idtf: [онтология информационных программ и задач] (* <- lang_ru;; *);;
+		
 		
 nrel_sc_ontology
 	<- sc_node_norole_relation;
 	=> nrel_main_idtf:
 		[sc-онтология*]
 		(* <- lang_ru;; *);
-		[ontology*]
+		[sc-ontology*]
 		(* <- lang_en;; *);
 	=> nrel_idtf:
 		[онтология*]
@@ -55,16 +79,23 @@ nrel_sc_ontology
 		(* <- lang_ru;; *);
 
 	<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
 		...
-		(*
-			<- sc_explanation;;
-			<= nrel_sc_text_translation:
-				...
-				(*
-					-> "file://nl_files/explanation_for_nrel_sc_ontology.html"
+			(*
+				-> rrel_example:
+					"file://section_subject_domain_of_ontology_content/explanation_for_nrel_sc_ontology.html"
 					(*<- lang_ru;;*);;
-				*);;
-		*);;
+			*);;
+	*);
+
+<- rrel_key_sc_element:
+	section_subject_domain_of_ontologies;;
+	
+	
+	
 
 integrated_ontology
 	=> nrel_main_idtf:
@@ -73,17 +104,28 @@ integrated_ontology
 		[integrated ontology]
 		(* <- lang_en;; *);
 
-	<- rrel_key_sc_element:
+<= nrel_strict_inclusion:		
+	integrated_ontology;
+
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
 		...
-		(*
-			<- sc_explanation;;
-			<= nrel_sc_text_translation:
-				...
-				(*
-					-> "file://nl_files/explanation_for_integrated_ontology.html"
+			(*
+				-> rrel_example:
+					"file://section_subject_domain_of_ontology_content/explanation_for_integrated_ontology.html"
 					(*<- lang_ru;;*);;
-				*);;
-		*);;
+			*);;
+	*);
+
+<- rrel_key_sc_element:
+	section_subject_domain_of_ontologies;;
+
+
+
 
 structural_ontology
 	=> nrel_main_idtf:
@@ -92,17 +134,27 @@ structural_ontology
 		[structural ontology]
 		(* <- lang_en;; *);
 
-	<- rrel_key_sc_element:
+		
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
 		...
-		(*
-			<- sc_explanation;;
-			<= nrel_sc_text_translation:
-				...
-				(*
-					-> "file://nl_files/explanation_for_structural_ontology.html"
+			(*
+				-> rrel_example:
+					"file://section_subject_domain_of_ontology_content/explanation_for_integrated_ontology.html"
 					(*<- lang_ru;;*);;
-				*);;
-		*);;
+			*);;
+	*);
+
+<- rrel_key_sc_element:
+	section_subject_domain_of_ontologies;;
+	
+	
+	
+	
+	
 
 theoretic_set_ontology
 	=> nrel_main_idtf:
@@ -110,18 +162,26 @@ theoretic_set_ontology
 		(* <- lang_ru;; *);
 		[theoretic set ontology]
 		(* <- lang_en;; *);
-
-	<- rrel_key_sc_element:
+		
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
 		...
-		(*
-			<- sc_explanation;;
-			<= nrel_sc_text_translation:
-				...
-				(*
-					-> "file://nl_files/explanation_for_theoretic_set_ontology.html"
+			(*
+				-> rrel_example:
+					"file://section_subject_domain_of_ontology_content/explanation_for_theoretic_set_ontology.html"
 					(*<- lang_ru;;*);;
-				*);;
-		*);;
+			*);;
+	*);
+
+<- rrel_key_sc_element:
+	section_subject_domain_of_ontologies;;
+	
+	
+	
+	
 
 logical_ontology
 	=> nrel_main_idtf:
@@ -129,18 +189,26 @@ logical_ontology
 		(* <- lang_ru;; *);
 		[logical ontology]
 		(* <- lang_en;; *);
-
-	<- rrel_key_sc_element:
+		
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
 		...
-		(*
-			<- sc_explanation;;
-			<= nrel_sc_text_translation:
-				...
-				(*
-					-> "file://nl_files/explanation_for_logical_ontology.html"
+			(*
+				-> rrel_example:
+					"file://section_subject_domain_of_ontology_content/explanation_for_logical_ontology.html"
 					(*<- lang_ru;;*);;
-				*);;
-		*);;
+			*);;
+	*);
+
+<- rrel_key_sc_element:
+	section_subject_domain_of_ontologies;;
+	
+	
+	
+	
 
 terminological_ontology
 	=> nrel_main_idtf:
@@ -148,18 +216,25 @@ terminological_ontology
 		(* <- lang_ru;; *);
 		[terminological ontology]
 		(* <- lang_en;; *);
-
-	<- rrel_key_sc_element:
+		
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
 		...
-		(*
-			<- sc_explanation;;
-			<= nrel_sc_text_translation:
-				...
-				(*
-					-> "file://nl_files/explanation_for_terminological_ontology.html"
+			(*
+				-> rrel_example:
+					"file://section_subject_domain_of_ontology_content/explanation_for_terminological_ontology.html"
 					(*<- lang_ru;;*);;
-				*);;
-		*);;
+			*);;
+	*);
+
+<- rrel_key_sc_element:
+	section_subject_domain_of_ontologies;;
+	
+	
+	
 		
 high_level_ontology
 => nrel_main_idtf: [онтология верхнего уровня] (* <- lang_ru;; *);;

@@ -1,4 +1,4 @@
-sc_idtf
+level_sc_idtf
 	<=nrel_second_domain:
 		nrel_idtf;
 	=> nrel_main_idtf:
@@ -12,13 +12,26 @@ sc_idtf
 		(*
 			<- sc_note;;
 			<= nrel_sc_text_translation:	
-				...
+			...
+			(*
+			-> rrel_example:
+				"file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/note_for_sc_idtf.html" 
 				(*
-					-> "file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/note_for_sc_idtf.html"
-						(*<- lang_ru;;*);;
+				<- lang_ru;;
 				*);;
-		*);;
+			*);;
+                        <= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/note_for_sc_idtf_en.html" 
+				(*
+				<- lang_en;;
+				*);;
+			*);;
+                  *);;
 
+                               
 
 nrel_idtf
 	<- sc_node_norole_relation;
@@ -31,14 +44,28 @@ nrel_idtf
 		...
 		(*
 			<- sc_explanation;;
-			<= nrel_sc_text_translation:	
-				...
+
+                        <= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/explanation_for_nrel_idtf.html"
 				(*
-					-> "file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/explanation_for_nrel_idtf.html"
-						(*<- lang_ru;;*);;
+				<- lang_ru;;
 				*);;
-		*);;
-	
+			*);;
+                        <= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/explanation_for_nrel_idtf_en.html"
+				(*
+				<- lang_en;;
+				*);;
+			*);;
+                  *);;
+			
+
 nrel_main_idtf
 	<- sc_node_norole_relation;
 	=> nrel_main_idtf:
@@ -50,13 +77,27 @@ nrel_main_idtf
 		...
 		(*
 			<- sc_explanation;;
-			<= nrel_sc_text_translation:	
-				...
+                         <= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/explanation_for_nrel_main_idtf.html"
 				(*
-					-> "file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/explanation_for_nrel_main_idtf.html"
-						(*<- lang_ru;;*);;
+				<- lang_ru;;
 				*);;
-		*);;
+			*);;
+                        <= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/explanation_for_nrel_main_idtf_en.html"
+				(*
+				<- lang_en;;
+				*);;
+			*);;
+                  *);;
+
+			
 
 nrel_nearly_main_idtf
 	<- sc_node_norole_relation;
@@ -107,13 +148,26 @@ nrel_system_identifier
 		...
 		(*
 			<- sc_explanation;;
-			<= nrel_sc_text_translation:	
-				...
+                         <= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/explanation_for_nrel_system_identifier.html"
 				(*
-					-> "file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/explanation_for_nrel_system_identifier.html"
-						(*<- lang_ru;;*);;
+				<- lang_ru;;
 				*);;
-		*);; 
+			*);;
+                        <= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/explanation_for_nrel_system_identifier_en.html"
+				(*
+				<- lang_en;;
+				*);;
+			*);;
+                  *);;
+			
 
 system_identifier
 	<=nrel_second_domain:
@@ -127,12 +181,25 @@ system_identifier
 		...
 		(*
 			<- sc_explanation;;
-			<= nrel_sc_text_translation:	
-				...
+                         <= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/explanation_for_system_identifier.html"
 				(*
-					-> "file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/explanation_for_system_identifier.html"
-						(*<- lang_ru;;*);;
+				<- lang_ru;;
 				*);;
+			*);;
+                        <= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/explanation_for_system_identifier_en.html"
+				(*
+				<- lang_en;;
+				*);;
+			*);;
+                  
 		*);
 	->rrel_example:
     	[rrel_summand]
@@ -216,13 +283,26 @@ sc_var_identifier
 	=> nrel_naming_rule:
 		...
 		(*
-			<= nrel_sc_text_translation:	
-				...
+			   <= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/naming_rule_for_sc_var_identifier.html"
 				(*
-					-> "file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/naming_rule_for_sc_var_identifier.html"
-						(*<- lang_ru;;*);;
+				<- lang_ru;;
 				*);;
-		*);; 
+			*);;
+                        <= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/naming_rule_for_sc_var_identifier_en.html"
+				(*
+				<- lang_en;;
+				*);;
+			*);;
+                *);;
+
 
 sc_const_identifier
 	=> nrel_main_idtf:
@@ -234,25 +314,52 @@ sc_const_identifier
 	=> nrel_naming_rule:
 		...
 		(*
-			<= nrel_sc_text_translation:	
-				...
+
+                         <= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/naming_rule_for_sc_const_identifier.html"
 				(*
-					-> "file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/naming_rule_for_sc_const_identifier.html"
-						(*<- lang_ru;;*);;
+				<- lang_ru;;
 				*);;
-		*);
+			*);;
+                        <= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/naming_rule_for_sc_const_identifier_en.html"
+				(*
+				<- lang_en;;
+				*);;
+			*);;
+                *);
+			
 	<- rrel_key_sc_element:
 	...
 	(*
 		<- sc_comment;;
-		<= nrel_sc_text_translation:	
+                  <= nrel_sc_text_translation:	
 			...
 			(*
-				-> "file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/comment_for_system_identifier.html"
-					(*<- lang_ru;;*);;
+			-> rrel_example:
+				"file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/comment_for_system_identifier.html"
+				(*
+				<- lang_ru;;
+				*);;
 			*);;
-	*);;
+                        <= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/comment_for_system_identifier_en.html"
+				(*
+				<- lang_en;;
+				*);;
+			*);;
+         *);;
 
+		
 non_role_relation_identifier
 	=> nrel_main_idtf:
 		[идентификатор неролевого отношения]
@@ -263,13 +370,27 @@ non_role_relation_identifier
 	=> nrel_naming_rule:
 		...
 		(*
-			<= nrel_sc_text_translation:	
-				...
+
+                        <= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/naming_rule_for_non_role_relation_identifier.html"
 				(*
-					-> "file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/naming_rule_for_non_role_relation_identifier.html"
-						(*<- lang_ru;;*);;
+				<- lang_ru;;
 				*);;
-		*);; 
+			*);;
+                        <= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/naming_rule_for_non_role_relation_identifier_en.html"
+				(*
+				<- lang_en;;
+				*);;
+			*);;
+                *);;
+			
 
 role_relation_identifier
 	=> nrel_main_idtf:
@@ -281,13 +402,27 @@ role_relation_identifier
 	=> nrel_naming_rule:
 		...
 		(*
-			<= nrel_sc_text_translation:	
-				...
+
+                        <= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/naming_rule_for_role_relation_identifier.html"
 				(*
-					-> "file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/naming_rule_for_role_relation_identifier.html"
-						(*<- lang_ru;;*);;
+				<- lang_ru;;
 				*);;
-		*);; 
+			*);;
+                        <= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/naming_rule_for_role_relation_identifier_en.html"
+				(*
+				<- lang_en;;
+				*);;
+			*);;
+                *);;
+			
 
 line_sc_identifier
 	=> nrel_main_idtf:
@@ -300,13 +435,27 @@ line_sc_identifier
 		...
 		(*
 			<- sc_note;;
-			<= nrel_sc_text_translation:	
-				...
+
+                          <= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/note_for_line_sc_identifier.html"
 				(*
-					-> "file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/note_for_line_sc_identifier.html"
-						(*<- lang_ru;;*);;
+				<- lang_ru;;
 				*);;
-		*);
+			*);;
+                        <= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/note_for_line_sc_identifier_en.html"
+				(*
+				<- lang_en;;
+				*);;
+			*);;
+                *);
+			
 	<= nrel_subdividing:
 	{
 		atomic_sc_identifier;
@@ -323,14 +472,27 @@ non_line_sc_identifier
 		...
 		(*
 			<- sc_note;;
-			<= nrel_sc_text_translation:	
-				...
-				(*
-					-> "file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/note_for_non_line_sc_identifier.html"
-						(*<- lang_ru;;*);;
-				*);;
-		*);;
 
+                          <= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/note_for_non_line_sc_identifier.html"
+				(*
+				<- lang_ru;;
+				*);;
+			*);;
+                        <= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/note_for_non_line_sc_identifier_en.html"
+				(*
+				<- lang_en;;
+				*);;
+			*);;
+                *);;
+			
 atomic_sc_identifier
 	=> nrel_main_idtf:
 		[атомарный sc-идентификатор]
@@ -341,13 +503,28 @@ atomic_sc_identifier
 		...
 		(*
 			<- sc_note;;
-			<= nrel_sc_text_translation:	
-				...
+
+                       <= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/note_atomic_sc_identifier.html"
 				(*
-					-> "file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/note_atomic_sc_identifier.html"
-						(*<- lang_ru;;*);;
+				<- lang_ru;;
 				*);;
-		*);
+			*);;
+                        <= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/note_atomic_sc_identifier_en.html"
+				(*
+				<- lang_en;;
+				*);;
+			*);;
+                *);
+		
+			
 	->rrel_example:
 		[треугольник];; 
 
@@ -362,13 +539,27 @@ non_atomic_sc_identifier
 		...
 		(*
 			<- sc_note;;
-			<= nrel_sc_text_translation:	
-				...
+
+                       <= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/note_non_atomic_sc_identifier.html"
 				(*
-					-> "file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/note_non_atomic_sc_identifier.html"
-						(*<- lang_ru;;*);;
+				<- lang_ru;;
 				*);;
-		*);
+			*);;
+                        <= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/note_non_atomic_sc_identifier_en.html"
+				(*
+				<- lang_en;;
+				*);;
+			*);;
+                *);
+			
 	->rrel_example:
 		[Треугк.(Тчк.А; Тчк.B; Тчк.С)]
 		(*
@@ -376,14 +567,27 @@ non_atomic_sc_identifier
 			...
 			(*
 				<- sc_comment;;
-				<= nrel_sc_text_translation:	
-					...
-					(*
-						-> "file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/sc_comment_non_atomic_sc_identifier_example.html"
-							(*<- lang_ru;;*);;
-					*);;
+                        <= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/sc_comment_non_atomic_sc_identifier_example.html"
+				(*
+				<- lang_ru;;
+				*);;
 			*);;
-		*);
+                        <= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/sc_comment_non_atomic_sc_identifier_example_en.html"
+				(*
+				<- lang_en;;
+				*);;
+			*);;
+			*);;
+                *);
+                                				
 	<= nrel_subdividing:
 	{
 		sc_identifier_contour;
@@ -401,15 +605,19 @@ atomic_sc_identifier_of_scs_code_1_level
 		(* <- lang_en;; *);
 	=> nrel_naming_rule:
 		...
-		(*
-			<= nrel_sc_text_translation:	
-				...
+		(*      
+                        <= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/naming_rule_for_atomic_sc_identifier_of_scs_code_1_level.html"
 				(*
-					-> "file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/naming_rule_for_atomic_sc_identifier_of_scs_code_1_level.html"
-						(*<- lang_ru;;*);;
+				<- lang_ru;;
 				*);;
-		*);;
+			*);;
+                *);;
 
+			
 non_atomic_sc_identifier_of_scs_code_2_level
 	=> nrel_main_idtf:
 		[неатомарный sc-идентификатор SCs-кода  уровня 2]
@@ -419,12 +627,25 @@ non_atomic_sc_identifier_of_scs_code_2_level
 	=> nrel_naming_rule:
 		...
 		(*
-			<= nrel_sc_text_translation:	
-				...
+
+                        <= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/naming_rule_for_non_atomic_sc_identifier_of_scs_code_2_level.html"
 				(*
-					-> "file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/naming_rule_for_non_atomic_sc_identifier_of_scs_code_2_level.html"
-						(*<- lang_ru;;*);;
+				<- lang_ru;;
 				*);;
+			*);;
+                        <= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/naming_rule_for_non_atomic_sc_identifier_of_scs_code_2_level_en.html"
+				(*
+				<- lang_en;;
+				*);;
+                        *);;
 		*);;
 
 non_atomic_sc_identifier_of_scs_and_scg_code_6_level
@@ -436,13 +657,28 @@ non_atomic_sc_identifier_of_scs_and_scg_code_6_level
 	=> nrel_naming_rule:
 		...
 		(*
-			<= nrel_sc_text_translation:	
-				...
+			
+                     <= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/naming_rule_for_non_atomic_sc_identifier_of_scs_and_scg_code_6_level.html"
 				(*
-					-> "file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/naming_rule_for_non_atomic_sc_identifier_of_scs_and_scg_code_6_level.html"
-						(*<- lang_ru;;*);;
+				<- lang_ru;;
 				*);;
+			*);;
+                        <= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/naming_rule_for_non_atomic_sc_identifier_of_scs_and_scg_code_6_level_en.html"
+				(*
+				<- lang_en;;
+				*);;
+                         *);;
 		*);;
+
+                  
 
 sc_identifier_contour
 	=> nrel_main_idtf:
@@ -457,12 +693,26 @@ sc_identifier_contour
 	...
 	(*
 		<- sc_explanation;;
-		<= nrel_sc_text_translation:	
+
+                <= nrel_sc_text_translation:	
 			...
 			(*
-				-> "file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/explanation_for_sc_identifier_contour.html"
-					(*<- lang_ru;;*);;
+			-> rrel_example:
+				"file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/explanation_for_sc_identifier_contour.html"
+				(*
+				<- lang_ru;;
+				*);;
 			*);;
+                        <= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/explanation_for_sc_identifier_contour_en.html"
+				(*
+				<- lang_en;;
+				*);;
+		        *);;
+		
 	*);;
 
 sc_identifier_link
@@ -478,13 +728,28 @@ sc_identifier_link
 	...
 	(*
 		<- sc_explanation;;
-		<= nrel_sc_text_translation:	
+
+                <= nrel_sc_text_translation:	
 			...
 			(*
-				-> "file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/explanation_for_sc_identifier_link.html"
-					(*<- lang_ru;;*);;
+			-> rrel_example:
+				"file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/explanation_for_sc_identifier_link.html"
+				(*
+				<- lang_ru;;
+				*);;
 			*);;
+                        <= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/explanation_for_sc_identifier_link_en.html"
+				(*
+				<- lang_en;;
+				*);;
+		        *);;
+		
 	*);;
+
 
 sc_identifier_set
 	=> nrel_main_idtf:
@@ -499,12 +764,26 @@ sc_identifier_set
 	...
 	(*
 		<- sc_explanation;;
-		<= nrel_sc_text_translation:	
+                <= nrel_sc_text_translation:	
 			...
 			(*
-				-> "file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/explanation_for_sc_identifier_set.html"
-					(*<- lang_ru;;*);;
+			-> rrel_example:
+				"file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/explanation_for_sc_identifier_set.html"
+				(*
+				<- lang_ru;;
+				*);;
 			*);;
+                        <= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/explanation_for_sc_identifier_set_en.html"
+				(*
+				<- lang_en;;
+				*);;
+		        *);;
+                
+		
 	*);
 	<- rrel_key_sc_element:
 	...
@@ -532,12 +811,26 @@ sc_identifier_tuple
 	...
 	(*
 		<- sc_explanation;;
-		<= nrel_sc_text_translation:	
+ 
+                <= nrel_sc_text_translation:	
 			...
 			(*
-				-> "file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/explanation_for_sc_identifier_tuple.html"
-					(*<- lang_ru;;*);;
+			-> rrel_example:
+				"file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/explanation_for_sc_identifier_tuple.html"
+				(*
+				<- lang_ru;;
+				*);;
 			*);;
+                        <= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/explanation_for_sc_identifier_tuple_en.html"
+				(*
+				<- lang_en;;
+                                *);;
+		        *);;
+		
 	*);
 	<- rrel_key_sc_element:
 	...
@@ -564,12 +857,26 @@ sc_identifier_operation
 	...
 	(*
 		<- sc_explanation;;
-		<= nrel_sc_text_translation:	
+
+                <= nrel_sc_text_translation:	
 			...
 			(*
-				-> "file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/explanation_for_sc_identifier_operation.html"
-					(*<- lang_ru;;*);;
+			-> rrel_example:
+				"file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/explanation_for_sc_identifier_operation.html"
+				(*
+				<- lang_ru;;
+				*);;
 			*);;
+                        <= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://section_subject_domain_of_sc_identifiers_and_it_ontology_htmls/explanation_for_sc_identifier_operation_en.html"
+				(*
+				<- lang_en;;
+                                *);;
+		        *);;
+		
 	*);
 	<- rrel_key_sc_element:
 	...
