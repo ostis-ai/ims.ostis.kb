@@ -1,16 +1,16 @@
-subject_domain_of_natural_persons_and_groups
+subject_domain_of_persons_and_groups
 <- subject_domain;
 
 -> rrel_maximum_studied_object_class:
-	natural_person;
+	person;
 	group;
 
 -> rrel_studied_object_class:
-	natural_person;
+	person;
 	group;
 
 <- rrel_key_sc_element:
-	section_subject_domain_of_natural_persons_and_groups;;
+	section_subject_domain_of_persons_and_groups;;
 
 
 group
@@ -32,20 +32,20 @@ group
 		...
 			(*
 				-> rrel_example:
-					"file://section_subject_domain_of_natural_persons_and_groups_content/explanation_for_group.html"
+					"file://content/explanation_for_group.html"
 					(*<- lang_ru;;*);;
 			*);;
 	*);
 
 <- rrel_key_sc_element:
-	section_subject_domain_of_natural_persons_and_groups;;
+	section_subject_domain_of_persons_and_groups;;
 
 
-natural_person
+person
 
 => nrel_main_idtf:
 	[физическое лицо] (* <- lang_ru;; *);
-	[natural person] (* <- lang_en;; *);
+	[person] (* <- lang_en;; *);
 
 => nrel_idtf:
 	[персона] (* <- lang_ru;; *);
@@ -58,13 +58,13 @@ natural_person
 		...
 			(*
 				-> rrel_example:
-					"file://section_subject_domain_of_natural_persons_and_groups_content/explanation_for_natural_person.html"
+					"file://content/explanation_for_person.html"
 					(*<- lang_ru;;*);;
 			*);;
 	*);
 
 <- rrel_key_sc_element:
-	section_subject_domain_of_natural_persons_and_groups;;
+	section_subject_domain_of_persons_and_groups;;
 
 
 nrel_first_name
@@ -79,7 +79,7 @@ nrel_first_name
 	[имя физического лица*] (* <- lang_ru;; *);
 
 => nrel_first_domain:
-	natural_person;
+	person;
 	
 <- rrel_key_sc_element:
 	...
@@ -89,7 +89,7 @@ nrel_first_name
 		...
 			(*
 				-> rrel_example:
-					"file://section_subject_domain_of_natural_persons_and_groups_content/explanation_for_nrel_first_name.html"
+					"file://content/explanation_for_nrel_first_name.html"
 					(*<- lang_ru;;*);;
 			*);;
 	*);
@@ -105,12 +105,12 @@ nrel_first_name
 				<= nrel_sctrict_inclusion: 
 					sc.g_text;;
 				-> rrel_example:
-					"file://section_subject_domain_of_natural_persons_and_groups_png/nrel_first_name.png";;
+					"file://content/nrel_first_name.png";;
 			*);;
 	*);
 
 <- rrel_key_sc_element:
-	section_subject_domain_of_natural_persons_and_groups;;
+	section_subject_domain_of_persons_and_groups;;
 
 nrel_surname
 
@@ -124,7 +124,7 @@ nrel_surname
 	[фамилия физического лица*] (* <- lang_ru;; *);
 
 => nrel_first_domain:
-	natural_person;
+	person;
 	
 <- rrel_key_sc_element:
 	...
@@ -134,7 +134,7 @@ nrel_surname
 		...
 			(*
 				-> rrel_example:
-					"file://section_subject_domain_of_natural_persons_and_groups_content/explanation_for_nrel_surname.html"
+					"file://content/explanation_for_nrel_surname.html"
 					(*<- lang_ru;;*);;
 			*);;
 	*);
@@ -150,12 +150,12 @@ nrel_surname
 				<= nrel_sctrict_inclusion: 
 					sc.g_text;;
 				-> rrel_example:
-					"file://section_subject_domain_of_natural_persons_and_groups_png/nrel_surname.png";;
+					"file://content/nrel_surname.png";;
 			*);;
 	*);
 
 <- rrel_key_sc_element:
-	section_subject_domain_of_natural_persons_and_groups;;
+	section_subject_domain_of_persons_and_groups;;
 
 
 
@@ -171,7 +171,7 @@ nrel_patronymic_name
 	[отчество физического лица*] (* <- lang_ru;; *);
 
 => nrel_first_domain:
-	natural_person;
+	person;
 	
 <- rrel_key_sc_element:
 	...
@@ -181,7 +181,7 @@ nrel_patronymic_name
 		...
 			(*
 				-> rrel_example:
-					"file://section_subject_domain_of_natural_persons_and_groups_content/explanation_for_nrel_patronymic_name.html"
+					"file://content/explanation_for_nrel_patronymic_name.html"
 					(*<- lang_ru;;*);;
 			*);;
 	*);
@@ -197,12 +197,12 @@ nrel_patronymic_name
 				<= nrel_sctrict_inclusion: 
 					sc.g_text;;
 				-> rrel_example:
-					"file://section_subject_domain_of_natural_persons_and_groups_png/nrel_patronymic_name.png";;
+					"file://content/nrel_patronymic_name.png";;
 			*);;
 	*);
 
 <- rrel_key_sc_element:
-	section_subject_domain_of_natural_persons_and_groups;;
+	section_subject_domain_of_persons_and_groups;;
 
 
 nrel_personal_photo
@@ -214,7 +214,7 @@ nrel_personal_photo
 <- binary_relation;
 
 => nrel_first_domain:
-	natural_person;
+	person;
 	
 <- rrel_key_sc_element:
 	...
@@ -224,7 +224,7 @@ nrel_personal_photo
 		...
 			(*
 				-> rrel_example:
-					"file://section_subject_domain_of_natural_persons_and_groups_content/explanation_for_nrel_personal_photo.html"
+					"file://content/explanation_for_nrel_personal_photo.html"
 					(*<- lang_ru;;*);;
 			*);;
 	*);
@@ -240,7 +240,7 @@ nrel_personal_photo
 				<= nrel_sctrict_inclusion: 
 					sc.g_text;;
 				-> rrel_example:
-					"file://section_subject_domain_of_natural_persons_and_groups_png/nrel_personal_photo.png";;
+					"file://content/nrel_personal_photo.png";;
 			*);;
 	*);
 
@@ -253,13 +253,13 @@ nrel_personal_photo
 		
 			(*
 				-> rrel_example:
-					"file://section_subject_domain_of_natural_persons_and_groups_png/nrel_personal_photo.jpg";;
+					"file://content/nrel_personal_photo.jpg";;
 			*);;
 	*);
 
 
 <- rrel_key_sc_element:
-	section_subject_domain_of_natural_persons_and_groups;;
+	section_subject_domain_of_persons_and_groups;;
 
 
 nrel_group_photo
@@ -271,7 +271,7 @@ nrel_group_photo
 <- binary_relation;
 
 => nrel_first_domain:
-	natural_person;
+	person;
 	
 <- rrel_key_sc_element:
 	...
@@ -281,7 +281,7 @@ nrel_group_photo
 		...
 			(*
 				-> rrel_example:
-					"file://section_subject_domain_of_natural_persons_and_groups_content/explanation_for_nrel_group_photo.html"
+					"file://content/explanation_for_nrel_group_photo.html"
 					(*<- lang_ru;;*);;
 			*);;
 	*);
@@ -297,7 +297,7 @@ nrel_group_photo
 				<= nrel_sctrict_inclusion: 
 					sc.g_text;;
 				-> rrel_example:
-					"file://section_subject_domain_of_natural_persons_and_groups_png/nrel_group_photo.png";;
+					"file://content/nrel_group_photo.png";;
 			*);;
 	*);
 
@@ -310,13 +310,13 @@ nrel_group_photo
 		
 			(*
 				-> rrel_example:
-					"file://section_subject_domain_of_natural_persons_and_groups_png/nrel_group_photo.jpg";;
+					"file://content/nrel_group_photo.jpg";;
 			*);;
 	*);
 
 
 <- rrel_key_sc_element:
-	section_subject_domain_of_natural_persons_and_groups;;
+	section_subject_domain_of_persons_and_groups;;
 
 
 nrel_sex
@@ -328,7 +328,7 @@ nrel_sex
 <- binary_relation;
 
 => nrel_first_domain:
-	natural_person;
+	person;
 	
 <- rrel_key_sc_element:
 	...
@@ -338,7 +338,7 @@ nrel_sex
 		...
 			(*
 				-> rrel_example:
-					"file://section_subject_domain_of_natural_persons_and_groups_content/explanation_for_nrel_sex.html"
+					"file://content/explanation_for_nrel_sex.html"
 					(*<- lang_ru;;*);;
 			*);;
 	*);
@@ -354,12 +354,12 @@ nrel_sex
 				<= nrel_sctrict_inclusion: 
 					sc.g_text;;
 				-> rrel_example:
-					"file://section_subject_domain_of_natural_persons_and_groups_png/nrel_sex.png";;
+					"file://content/nrel_sex.png";;
 			*);;
 	*);
 
 <- rrel_key_sc_element:
-	section_subject_domain_of_natural_persons_and_groups;;
+	section_subject_domain_of_persons_and_groups;;
 
 nrel_birthday
 
@@ -370,7 +370,7 @@ nrel_birthday
 <- binary_relation;
 
 => nrel_first_domain:
-	natural_person;
+	person;
 	
 <- rrel_key_sc_element:
 	...
@@ -380,7 +380,7 @@ nrel_birthday
 		...
 			(*
 				-> rrel_example:
-					"file://section_subject_domain_of_natural_persons_and_groups_content/explanation_for_nrel_birthday.html"
+					"file://content/explanation_for_nrel_birthday.html"
 					(*<- lang_ru;;*);;
 			*);;
 	*);
@@ -396,12 +396,12 @@ nrel_birthday
 				<= nrel_sctrict_inclusion: 
 					sc.g_text;;
 				-> rrel_example:
-					"file://section_subject_domain_of_natural_persons_and_groups_png/nrel_birthday.png";;
+					"file://content/nrel_birthday.png";;
 			*);;
 	*);
 
 <- rrel_key_sc_element:
-	section_subject_domain_of_natural_persons_and_groups;;
+	section_subject_domain_of_persons_and_groups;;
 
 
 nrel_foundation_date
@@ -423,7 +423,7 @@ nrel_foundation_date
 		...
 			(*
 				-> rrel_example:
-					"file://section_subject_domain_of_natural_persons_and_groups_content/explanation_for_nrel_foundation_date.html"
+					"file://content/explanation_for_nrel_foundation_date.html"
 					(*<- lang_ru;;*);;
 			*);;
 	*);
@@ -439,12 +439,12 @@ nrel_foundation_date
 				<= nrel_sctrict_inclusion: 
 					sc.g_text;;
 				-> rrel_example:
-					"file://section_subject_domain_of_natural_persons_and_groups_png/nrel_foundation_date.png";;
+					"file://content/nrel_foundation_date.png";;
 			*);;
 	*);
 
 <- rrel_key_sc_element:
-	section_subject_domain_of_natural_persons_and_groups;;
+	section_subject_domain_of_persons_and_groups;;
 
 
 
