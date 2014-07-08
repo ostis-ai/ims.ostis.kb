@@ -73,7 +73,7 @@ scp_program -> agent_proc_search_all_output (*
 		  -> rrel_2: rrel_assign: rrel_const: rrel_common: rrel_scp_var: _arc;;
 		  -> rrel_3: rrel_fixed: rrel_scp_var: _answer;;
 		  -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
-		  -> rrel_5: rrel_fixed: rrel_scp_const: question_nrel_answer;;
+		  -> rrel_5: rrel_fixed: rrel_scp_const: nrel_answer;;
 
 		  => nrel_goto: .agent_proc_search_all_output_operator_return;;
 		*);;
