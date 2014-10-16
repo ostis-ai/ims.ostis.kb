@@ -72,6 +72,52 @@ abstract_scp_machine
 		sc_agent_of_synchronization_of_events_in_sc_memory_and_its_realization
 	};;
 
+scp_operator_executable_after_one_of_previous
+	<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[scp-оператор, выполняемый после завершения хотя бы одного из предыдущих]
+		(*<- lang_ru;;*);
+		[scp-perator executable after one of previous]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				...
+				(*
+					-> rrel_example:
+						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_scp_operator_executable_after_one_of_previous.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);
+	<=nrel_using_example:
+		"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_img/scp_operator_executable_after_one_of_previous_then.gif";
+	<=nrel_using_example:
+		"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_img/scp_operator_executable_after_one_of_previous_else.gif";;
+
+scp_operator_executable_after_all_previous
+	<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[scp-оператор, выполняемый после завершения всех предыдущих]
+		(*<- lang_ru;;*);
+		[scp-perator executable after all previous]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				...
+				(*
+					-> rrel_example:
+						"file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_htmls/explanation_for_scp_operator_executable_after_all_previous.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);
+	<=nrel_using_example:
+		    "file://section_unified_semantic_model_of_machine_that_interpret_programs_of_base_programming_language_img/scp_operator_executable_after_all_previous.gif";;
+
 sc_agent_of_scp_program_insertion_to_sc_memory
 	<- sc_node_not_relation;
 	<- abstract_sc_agent;
