@@ -1,4 +1,5 @@
 sc_action
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[sc-действие]
 	(*
@@ -43,9 +44,8 @@ sc_action
 => nrel_stric_inclusion:
 	executed_sc_action;;
 
-
-
 executable_sc_action
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[выполняемое sc-действие]
 	(*
@@ -68,10 +68,9 @@ executable_sc_action
 		(* <- lang_ru;; *);;
 		*);;
 	*);;
-	
-
 
 executed_sc_action
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[выполненное sc-действие]
 	(*
@@ -99,11 +98,9 @@ executed_sc_action
 	successfully_executed_sc_action;
 	unsuccessfully_executed_sc_action
 	};;
-	
-
-
 
 successfully_executed_sc_action
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[успешно выполненное sc-действие]
 	(*
@@ -142,9 +139,8 @@ successfully_executed_sc_action
 		*);;
 	*);;
 	
-	
-	
 unsuccessfully_executed_sc_action
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[безуспешно выполненное sc-действие]
 	(*
@@ -166,9 +162,7 @@ unsuccessfully_executed_sc_action
 			"file://nl_files/explanation_for_unsuccessfully_executed_sc_action.html"
 		(* <- lang_ru;; *);;
 		*);;
-	*);;
-	
-	
+	*);;	
 	
 nrel_decomposition_of_sc_action
 <- sc_node_norole_relation;
@@ -211,9 +205,7 @@ nrel_decomposition_of_sc_action
 		*);;
 	*);
 <- decomposition_relation;
-<- quasybinary_relation;;
-
-	
+<- quasybinary_relation;;	
 
 nrel_sequence_of_actions
 <- sc_node_norole_relation;
@@ -255,8 +247,6 @@ nrel_sequence_of_actions
 		*);;
 	*);;
 
-
-
 nrel_result
 <- sc_node_norole_relation;
 
@@ -283,9 +273,8 @@ nrel_result
 		*);;
 	*);;
 
-
-
-sc_task
+question /* sc_task */
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[sc-задача]
 	(*
@@ -296,7 +285,7 @@ sc_task
 	<- lang_en;;
 	*);
 
-=> nrl_idtf:
+=> nrel_idtf:
 	[sc-описание некоторого желаемого состояния или события либо в базе знаний, либо
 во внешней среде]
 	(*
@@ -318,17 +307,16 @@ sc_task
 <= nrel_subdividing:
 	{
 	informational_sc_task;
-	behavioral_sc_task;
+	behavioral_sc_task
 	};
 <= nrel_subdividing:
-	{
-	procedural_sc_task;
-	declarative_sc_task;
+	{	
+	procedural_formulation_of_sc_task;
+	declarative_formulation_of_sc_task
 	};;
 
-
-
 informational_sc_task
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[информационная sc-задача]
 	(*
@@ -367,9 +355,8 @@ informational_sc_task
 		*);;
 	*);;
 
-
-
 behavioral_sc_task
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[поведенческая sc-задача]
 	(*
@@ -397,6 +384,7 @@ behavioral_sc_task
 
 
 declarative_formulation_of_sc_task
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[декларативная формулировка sc-задачи]
 	(*
@@ -419,11 +407,9 @@ declarative_formulation_of_sc_task
 		(* <- lang_ru;; *);;
 		*);;
 	*);;
-	
-	
-	
 
 procedural_formulation_of_sc_task
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[процедурная формулировка sc-задачи]
 	(*
@@ -447,10 +433,8 @@ procedural_formulation_of_sc_task
 		*);;
 	*);;
 
-
-
-
-initiated_sc_task
+question_initiated /* initiated_sc_task */
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[инициированная sc-задача]
 	(*
@@ -460,7 +444,7 @@ initiated_sc_task
 	(*
 	<- lang_en;;
 	*);
-
+<= nrel_inclusion: question;
 <- rrel_key_sc_element:
 	...
 	(*
@@ -489,8 +473,25 @@ initiated_sc_task
 		*);;
 	*);;
 
+question_finished /* examined_sc_task */
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[просмотренная sc-задача]
+	(*
+	<- lang_ru;;
+	*);
+	[examined sc-task]
+	(*
+	<- lang_en;;
+	*);
+<= nrel_inclusion: question;
+<= nrel_subdividing:
+	{
+	question_finished_successfully;
+	question_finished_unsuccessfully
+	};;
 
-solved_sc_task
+question_finished_successfully /*solved_sc_task*/
 => nrel_main_idtf:
 	[решенная sc-задача]
 	(*
@@ -529,9 +530,8 @@ solved_sc_task
 		*);;
 	*);;
 
-
-
-unsolved_sc_task
+question_finished_unsuccessfully /*unsolved_sc_task*/
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[нерешенная sc-задача]
 	(*
