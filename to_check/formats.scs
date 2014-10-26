@@ -173,3 +173,20 @@ format_github_source_link
 	*);
 => nrel_mimetype:
 	[text/plain];;
+
+// ======== PDF ========
+format_pdf
+<- sc_node_not_relation;
+<- format;
+=> nrel_main_idtf: 
+	[формат pdf] 
+	(* 
+	<- lang_ru;; 
+	*);
+=> nrel_main_idtf: 
+	[format pdf] 
+	(* 
+	<- lang_en;; 
+	*);
+=> nrel_mimetype:
+	[application/pdf];;
