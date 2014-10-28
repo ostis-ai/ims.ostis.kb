@@ -1,0 +1,655 @@
+sc_action
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[sc-действие]
+	(*
+	<- lang_ru;;
+	*);
+	[sc-action]
+	(*
+	<- lang_en;;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://section_subject_domain_of_questions_and_tasks_htmls/explanation_for_sc_action.html"
+		(* <- lang_ru;; *);;
+		*);;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_sc_neighborhood;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		<= nrel_strict_inclusion:
+			sc.g_text;;
+			
+		-> rrel_example:
+			"file://section_subject_domain_of_questions_and_tasks_img/explanation_for_sc_action.png";;
+			
+		*);;
+	*);
+=> nrel_strict_inclusion:
+	executable_sc_action;
+=> nrel_strict_inclusion:
+	sc_process;
+=> nrel_stric_inclusion:
+	executed_sc_action;;
+
+executable_sc_action
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[выполняемое sc-действие]
+	(*
+	<- lang_ru;;
+	*);
+	[executable sc-action]
+	(*
+	<- lang_en;;
+	*);
+	
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://section_subject_domain_of_questions_and_tasks_htmls/explanation_for_executable_sc_action.html"
+		(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+executed_sc_action
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[выполненное sc-действие]
+	(*
+	<- lang_ru;;
+	*);
+	[executed sc-action]
+	(*
+	<- lang_en;;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://section_subject_domain_of_questions_and_tasks_htmls/explanation_for_executed_sc_action.html"
+		(* <- lang_ru;; *);;
+		*);;
+	*);
+<= nrel_subdividing:
+	{
+	successfully_executed_sc_action;
+	unsuccessfully_executed_sc_action
+	};;
+
+successfully_executed_sc_action
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[успешно выполненное sc-действие]
+	(*
+	<- lang_ru;;
+	*);
+	[successfully executed sc-action]
+	(*
+	<- lang_en;;
+	*);
+	
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://section_subject_domain_of_questions_and_tasks_htmls/explanation_for_successfully_executed_sc_action.html"
+		(* <- lang_ru;; *);;
+		*);;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_sc_neighborhood;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		<= nrel_strict_inclusion:
+			sc.g_text;;
+			
+		-> rrel_example:
+			"file://section_subject_domain_of_questions_and_tasks_img/explanation_for_successfully_executed_sc_action.png";;
+			
+		*);;
+	*);;
+	
+unsuccessfully_executed_sc_action
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[безуспешно выполненное sc-действие]
+	(*
+	<- lang_ru;;
+	*);
+	[unsuccessfully executed sc-action]
+	(*
+	<- lang_en;;
+	*);
+	
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://section_subject_domain_of_questions_and_tasks_htmls/explanation_for_unsuccessfully_executed_sc_action.html"
+		(* <- lang_ru;; *);;
+		*);;
+	*);;	
+	
+nrel_decomposition_of_sc_action
+<- sc_node_norole_relation;
+
+=> nrel_main_idtf:
+	[декомпозиция sc-действия*]
+	(*
+	<- lang_ru;;
+	*);
+	[decomposition of sc-action*]
+	(*
+	<- lang_en;;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://section_subject_domain_of_questions_and_tasks_htmls/explanation_for_nrel_decomposition_of_sc_action.html"
+		(* <- lang_ru;; *);;
+		*);;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_sc_neighborhood;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		<= nrel_strict_inclusion:
+			sc.g_text;;
+			
+		-> rrel_example:
+			"file://section_subject_domain_of_questions_and_tasks_img/explanation_for_nrel_decomposition_of_sc_action.png";;
+			
+		*);;
+	*);
+<- decomposition_relation;
+<- quasybinary_relation;;	
+
+nrel_sequence_of_actions
+<- sc_node_norole_relation;
+
+=> nrel_main_idtf:
+	[последовательность действий*]
+	(*
+	<- lang_ru;;
+	*);
+	[sequence of actions]
+	(*
+	<- lang_en;;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://section_subject_domain_of_questions_and_tasks_htmls/explanation_for_nrel_sequence_of_actions.html"
+		(* <- lang_ru;; *);;
+		*);;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_sc_neighborhood;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		<= nrel_strict_inclusion:
+			sc.g_text;;
+			
+		-> rrel_example:
+			"file://section_subject_domain_of_questions_and_tasks_img/explanation_for_nrel_sequence_of_actions.png";;	
+		*);;
+	*);;
+
+nrel_result
+<- sc_node_norole_relation;
+
+=> nrel_main_idtf:
+	[результат*]
+	(*
+	<- lang_ru;;
+	*);
+	[result*]
+	(*
+	<- lang_en;;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://section_subject_domain_of_questions_and_tasks_htmls/explanation_for_nrel_result.html"
+		(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+question /* sc_task */
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[sc-задача]
+	(*
+	<- lang_ru;;
+	*);
+	[sc-task]
+	(*
+	<- lang_en;;
+	*);
+
+=> nrel_idtf:
+	[sc-описание некоторого желаемого состояния или события либо в базе знаний, либо
+во внешней среде]
+	(*
+	<- lang_ru;;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://section_subject_domain_of_questions_and_tasks_htmls/explanation_for_sc_task.html"
+		(* <- lang_ru;; *);;
+		*);;
+	*);
+<= nrel_subdividing:
+	{
+	informational_sc_task;
+	behavioral_sc_task
+	};
+<= nrel_subdividing:
+	{	
+	procedural_formulation_of_sc_task;
+	declarative_formulation_of_sc_task
+	};;
+
+informational_sc_task
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[информационная sc-задача]
+	(*
+	<- lang_ru;;
+	*);
+	[informational sc-task]
+	(*
+	<- lang_en;;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://section_subject_domain_of_questions_and_tasks_htmls/explanation_for_informational_sc_task.html"
+		(* <- lang_ru;; *);;
+		*);;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_sc_neighborhood;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		<= nrel_strict_inclusion:
+			sc.g_text;;
+			
+		-> rrel_example:
+			"file://section_subject_domain_of_questions_and_tasks_img/explanation_for_informational_sc_task.png";;
+			
+		*);;
+	*);;
+
+behavioral_sc_task
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[поведенческая sc-задача]
+	(*
+	<- lang_ru;;
+	*);
+	[behavioral sc-task]
+	(*
+	<- lang_en;;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://section_subject_domain_of_questions_and_tasks_htmls/explanation_for_behavioral_sc_task.html"
+		(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+
+
+
+declarative_formulation_of_sc_task
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[декларативная формулировка sc-задачи]
+	(*
+	<- lang_ru;;
+	*);
+	[declarative formulation of sc-task]
+	(*
+	<- lang_en;;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://section_subject_domain_of_questions_and_tasks_htmls/explanation_for_declarative_formulation_of_sc_task.html"
+		(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+procedural_formulation_of_sc_task
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[процедурная формулировка sc-задачи]
+	(*
+	<- lang_ru;;
+	*);
+	[procedural formulation of sc-task]
+	(*
+	<- lang_en;;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://section_subject_domain_of_questions_and_tasks_htmls/explanation_for_procedural_formulation_of_sc_task.html"
+		(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+question_initiated /* initiated_sc_task */
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[инициированная sc-задача]
+	(*
+	<- lang_ru;;
+	*);
+	[initiated sc-task]
+	(*
+	<- lang_en;;
+	*);
+<= nrel_inclusion: question;
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://section_subject_domain_of_questions_and_tasks_htmls/explanation_for_initiated_sc_task.html"
+		(* <- lang_ru;; *);;
+		*);;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_sc_neighborhood;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		<= nrel_strict_inclusion:
+			sc.g_text;;
+			
+		-> rrel_example:
+			"file://section_subject_domain_of_questions_and_tasks_img/explanation_for_initiated_sc_task.png";;
+			
+		*);;
+	*);;
+
+question_finished /* examined_sc_task */
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[просмотренная sc-задача]
+	(*
+	<- lang_ru;;
+	*);
+	[examined sc-task]
+	(*
+	<- lang_en;;
+	*);
+<= nrel_inclusion: question;
+<= nrel_subdividing:
+	{
+	question_finished_successfully;
+	question_finished_unsuccessfully
+	};;
+
+question_finished_successfully /*solved_sc_task*/
+=> nrel_main_idtf:
+	[решенная sc-задача]
+	(*
+	<- lang_ru;;
+	*);
+	[solved sc-task]
+	(*
+	<- lang_en;;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://section_subject_domain_of_questions_and_tasks_htmls/explanation_for_solved_sc_task.html"
+		(* <- lang_ru;; *);;
+		*);;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_sc_neighborhood;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		<= nrel_strict_inclusion:
+			sc.g_text;;
+			
+		-> rrel_example:
+			"file://section_subject_domain_of_questions_and_tasks_img/explanation_for_solved_sc_task.png";;
+			
+		*);;
+	*);;
+
+question_finished_unsuccessfully /*unsolved_sc_task*/
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[нерешенная sc-задача]
+	(*
+	<- lang_ru;;
+	*);
+	[unsolved sc-task]
+	(*
+	<- lang_en;;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://section_subject_domain_of_questions_and_tasks_htmls/explanation_for_unsolved_sc_task.html"
+		(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+
+nrel_task
+<- sc_node_norole_relation;
+
+=> nrel_main_idtf:
+	[задача*]
+	(*
+	<- lang_ru;;
+	*);
+	[task*]
+	(*
+	<- lang_en;;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://section_subject_domain_of_questions_and_tasks_htmls/explanation_for_nrel_task.html"
+		(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+
+
+
+nrel_solution
+<- sc_node_norole_relation;
+
+=> nrel_main_idtf:
+	[решение*]
+	(*
+	<- lang_ru;;
+	*);
+	[solution*]
+	(*
+	<- lang_en;;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://section_subject_domain_of_questions_and_tasks_htmls/explanation_for_nrel_solution.html"
+		(* <- lang_ru;; *);;
+		*);;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_sc_neighborhood;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		<= nrel_strict_inclusion:
+			sc.g_text;;
+			
+		-> rrel_example:
+			"file://section_subject_domain_of_questions_and_tasks_img/explanation_for_nrel_solution.png";;
+			
+		*);;
+	*);;
+
+
+
+
+nrel_executor
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[исполнитель*]
+	(*
+	<- lang_ru;;
+	*);
+	[executor*]
+	(*
+	<- lang_en;;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://section_subject_domain_of_questions_and_tasks_htmls/explanation_for_nrel_executor.html"
+		(* <- lang_ru;; *);;
+		*);;
+	*);;

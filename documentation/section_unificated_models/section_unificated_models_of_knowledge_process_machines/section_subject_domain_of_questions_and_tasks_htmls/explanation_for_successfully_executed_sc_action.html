@@ -1,0 +1,16 @@
+<p>Во множество <b><sc_element sys_idtf = "successfully_executed_sc_action">успешно выполненных sc-действий</sc_element></b> попадают <sc_element sys_idtf = "action">действия</sc_element>,
+выполнение которых успешно завершено с точки зрения sc-агента,
+осуществлявшего их выполнение, т.е. достигнута поставленная цель, например,
+получены решение и ответ какой-либо задачи, успешно преобразована какая-
+либо конструкция и т.д.</p>
+<p>Если действие было выполнено успешно, то, в случае действия по генерации
+каких-либо знаний, к <sc_element sys_idtf = "sc_action">sc-действию</sc_element> при помощи связки отношения <sc_element sys_idtf = "nrel_result">результат*</sc_element>
+приписывается <sc_element sys_idtf = "sc_structure">sc-конструкция</sc_element>, описывающая результат выполнения указанного
+действия. В случае, когда <sc_element sys_idtf = "sc_action">sc-действие</sc_element> направлено не только на генерацию
+знаний, а на какие-либо другие изменения базы знаний, <sc_element sys_idtf = "sc_structure">sc-конструкция</sc_element>,
+описывающая результат действия, формируется в соответствии с правилами
+описания истории изменений базы знаний.</p>
+<p>В случае, когда успешное выполнение <sc_element sys_idtf = "sc_action">sc-действия</sc_element> приводит к решению какой-
+либо конкретной, сформулированной <sc_element sys_idtf = "informational_sc_task">информационной sc-задачи</sc_element>, на решение
+которой направлено рассматриваемое <sc_element sys_idtf = "sc_action">sc-действие</sc_element>, то генерируется
+соответствующая связка отношения <sc_element sys_idtf = "nrel_answer">ответ*</sc_element>, связывающая <sc_element sys_idtf = "question">sc-задачу</sc_element> и <sc_element sys_idtf = "sc_structure">sc-конструкцию</sc_element>, описывающую ответ на указанную задачу.<p>
