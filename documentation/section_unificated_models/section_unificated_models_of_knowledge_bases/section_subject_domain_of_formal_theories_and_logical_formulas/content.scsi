@@ -1,4 +1,3 @@
-
 subject_domain_of_formal_theories_and_logical_formulas
 -> rrel_maximum_studied_object_class:
 	formal_theory_U_logical_formula; 
@@ -6,8 +5,6 @@ subject_domain_of_formal_theories_and_logical_formulas
 	...;
 <- rrel_key_sc_element:
 	section_subject_domain_of_formal_theories_and_logical_formulas;;
-
-
 
 statement
 => nrel_main_idtf:
@@ -19,8 +16,6 @@ statement
 	(*
 	<- lang_en;;
 	*);
-
-
 <- rrel_key_sc_element:
 	...
 	(*
@@ -30,15 +25,11 @@ statement
 		(*
 		-> rrel_example:
 			"file://nl_files/explanation_for_statement.html"
-		(* <- lang_ru;; *);;
+				(* <- lang_ru;; *);;
 		*);;
 	*);
 <- rrel_key_sc_element:
 	section_subject_domain_of_formal_theories_and_logical_formulas;;
-
-
-
-
 	
 formal_theory
 => nrel_main_idtf:
@@ -50,8 +41,6 @@ formal_theory
 	(*
 	<- lang_en;;
 	*);
-
-
 <- rrel_key_sc_element:
 	...
 	(*
@@ -61,15 +50,12 @@ formal_theory
 		(*
 		-> rrel_example:
 			"file://nl_files/explanation_for_formal_theory.html"
-		(* <- lang_ru;; *);;
+				(* <- lang_ru;; *);;
 		*);;
 	*);
 <- rrel_key_sc_element:
 	section_subject_domain_of_formal_theories_and_logical_formulas;;
 
-	
-	
-	
 logical_variable
 => nrel_main_idtf:
 	[логическая переменная]
@@ -80,8 +66,6 @@ logical_variable
 	(*
 	<- lang_en;;
 	*);
-
-
 <- rrel_key_sc_element:
 	...
 	(*
@@ -91,16 +75,11 @@ logical_variable
 		(*
 		-> rrel_example:
 			"file://nl_files/explanation_for_logical_variable.html"
-		(* <- lang_ru;; *);;
+				(* <- lang_ru;; *);;
 		*);;
 	*);
 <- rrel_key_sc_element:
 	section_subject_domain_of_formal_theories_and_logical_formulas;;	
-	
-	
-	
-	
-	
 	
 propositional_variable	
 => nrel_main_idtf:
@@ -112,8 +91,6 @@ propositional_variable
 	(*
 	<- lang_en;;
 	*);
-
-
 <- rrel_key_sc_element:
 	...
 	(*
@@ -129,14 +106,8 @@ propositional_variable
 <- rrel_key_sc_element:
 	section_subject_domain_of_formal_theories_and_logical_formulas;;	
 	
-	
-	
-	
-	
-	
 rrel_axiom
 <- sc_node_role_relation;
-
 => nrel_main_idtf:
 	[аксиома']
 	(*
@@ -146,8 +117,6 @@ rrel_axiom
 	(*
 	<- lang_en;;
 	*);
-
-
 <- rrel_key_sc_element:
 	...
 	(*
@@ -157,7 +126,7 @@ rrel_axiom
 		(*
 		-> rrel_example:
 			"file://nl_files/explanation_for_rrel_axiom.html"
-		(* <- lang_ru;; *);;
+				(* <- lang_ru;; *);;
 		*);;
 	*);
 <- rrel_key_sc_element:
@@ -167,25 +136,14 @@ rrel_axiom
 	<= nrel_sc_text_translation:
 		...
 		(*
-		<= nrel_strict_inclusion:
-			sc.g_text;;
-			
 		-> rrel_example:
-			"file://nl_files/explanation_for_rrel_axiom.png";;
-			
+			"file://nl_files/explanation_for_rrel_axiom.png";;			
 		*);;
 	*);
 	section_subject_domain_of_formal_theories_and_logical_formulas;;
-
-	
-	
-	
-		
-	
 	
 rrel_theorem
 <- sc_node_role_relation;
-
 => nrel_main_idtf:
 	[теорема']
 	(*
@@ -195,8 +153,6 @@ rrel_theorem
 	(*
 	<- lang_en;;
 	*);
-
-
 <- rrel_key_sc_element:
 	...
 	(*
@@ -206,7 +162,7 @@ rrel_theorem
 		(*
 		-> rrel_example:
 			"file://nl_files/explanation_for_rrel_theorem.html"
-		(* <- lang_ru;; *);;
+				(* <- lang_ru;; *);;
 		*);;
 	*);
 <- rrel_key_sc_element:
@@ -216,22 +172,12 @@ rrel_theorem
 	<= nrel_sc_text_translation:
 		...
 		(*
-		<= nrel_strict_inclusion:
-			sc.g_text;;
-			
 		-> rrel_example:
-			"file://nl_files/explanation_for_rrel_theorem.png";;
-			
+			"file://nl_files/explanation_for_rrel_theorem.png";;			
 		*);;
 	*);
 <- rrel_key_sc_element:
 	section_subject_domain_of_formal_theories_and_logical_formulas;;
-
-	
-	
-	
-		
-	
 	
 logical_formula
 => nrel_main_idtf:
@@ -243,7 +189,6 @@ logical_formula
 	(*
 	<- lang_en;;
 	*);
-
 <= nrel_subdividing:
 	{
 	general_validity_of_a_logical_formula;
@@ -255,7 +200,6 @@ logical_formula
 	workable_logical_formula;
 	impossible_logical_formula
 	};
-
 <- rrel_key_sc_element:
 	...
 	(*
@@ -265,17 +209,12 @@ logical_formula
 		(*
 		-> rrel_example:
 			"file://nl_files/explanation_for_logical_formula.html"
-		(* <- lang_ru;; *);;
+				(* <- lang_ru;; *);;
 		*);;
 	*);
 <- rrel_key_sc_element:
 	section_subject_domain_of_formal_theories_and_logical_formulas;;
-
 	
-	
-	
-
-		
 general_validity_of_a_logical_formula
 => nrel_main_idtf:
 	[общезначимая логическая формула]
@@ -286,14 +225,12 @@ general_validity_of_a_logical_formula
 	(*
 	<- lang_en;;
 	*);
-
 <= nrel_strict_inclusion:
 	logical_formula;
 <= nrel_strict_inclusion:
 	workable_logical_formula;
 <= nrel_strict_inclusion:
 	tautology;
-
 <- rrel_key_sc_element:
 	...
 	(*
@@ -309,9 +246,6 @@ general_validity_of_a_logical_formula
 <- rrel_key_sc_element:
 	section_subject_domain_of_formal_theories_and_logical_formulas;;
 
-	
-	
-	
 contradictory_logical_formula
 => nrel_main_idtf:
 	[противоречивая логическая формула]
@@ -322,14 +256,12 @@ contradictory_logical_formula
 	(*
 	<- lang_en;;
 	*);
-
 <= nrel_strict_inclusion:
 	logical_formula;
 <= nrel_strict_inclusion:
 	impossible_logical_formula;
 <= nrel_strict_inclusion:
 	tautology;
-
 <- rrel_key_sc_element:
 	...
 	(*
@@ -339,14 +271,11 @@ contradictory_logical_formula
 		(*
 		-> rrel_example:
 			"file://nl_files/explanation_for_contradictory_logical_formula.html"
-		(* <- lang_ru;; *);;
+				(* <- lang_ru;; *);;
 		*);;
 	*);
 <- rrel_key_sc_element:
 	section_subject_domain_of_formal_theories_and_logical_formulas;;
-
-	
-	
 
 neutral_logical_formula
 => nrel_main_idtf:
@@ -362,7 +291,6 @@ neutral_logical_formula
 	logical_formula;
 <= nrel_strict_inclusion:
 	workable_logical_formula;
-
 <- rrel_key_sc_element:
 	...
 	(*
@@ -372,15 +300,11 @@ neutral_logical_formula
 		(*
 		-> rrel_example:
 			"file://nl_files/explanation_for_neutral_logical_formula.html"
-		(* <- lang_ru;; *);;
+				(* <- lang_ru;; *);;
 		*);;
 	*);
 <- rrel_key_sc_element:
 	section_subject_domain_of_formal_theories_and_logical_formulas;;	
-	
-	
-	
-	
 	
 workable_logical_formula
 => nrel_main_idtf:
@@ -394,7 +318,6 @@ workable_logical_formula
 	*);
 <= nrel_strict_inclusion:
 	logical_formula;
-
 <- rrel_key_sc_element:
 	...
 	(*
@@ -404,15 +327,11 @@ workable_logical_formula
 		(*
 		-> rrel_example:
 			"file://nl_files/explanation_for_workable_logical_formula.html"
-		(* <- lang_ru;; *);;
+				(* <- lang_ru;; *);;
 		*);;
 	*);
 <- rrel_key_sc_element:
 	section_subject_domain_of_formal_theories_and_logical_formulas;;
-
-	
-	
-	
 	
 impossible_logical_formula
 => nrel_main_idtf:
@@ -426,7 +345,6 @@ impossible_logical_formula
 	*);
 <= nrel_strict_inclusion:
 	logical_formula;
-
 <- rrel_key_sc_element:
 	...
 	(*
@@ -436,16 +354,11 @@ impossible_logical_formula
 		(*
 		-> rrel_example:
 			"file://nl_files/explanation_for_impossible_logical_formula.html"
-		(* <- lang_ru;; *);;
+				(* <- lang_ru;; *);;
 		*);;
 	*);
 <- rrel_key_sc_element:
 	section_subject_domain_of_formal_theories_and_logical_formulas;;
-
-	
-		
-	
-	
 	
 tautology
 => nrel_main_idtf:
@@ -462,7 +375,6 @@ tautology
 	(*
 	<- lang_ru;;
 	*);
-
 <- rrel_key_sc_element:
 	...
 	(*
@@ -472,16 +384,11 @@ tautology
 		(*
 		-> rrel_example:
 			"file://nl_files/explanation_for_tautology.html"
-		(* <- lang_ru;; *);;
+				(* <- lang_ru;; *);;
 		*);;
 	*);
 <- rrel_key_sc_element:
 	section_subject_domain_of_formal_theories_and_logical_formulas;;
-
-	
-
-	
-
 
 logical_operation
 => nrel_main_idtf:
@@ -506,8 +413,6 @@ logical_operation
 	(*
 	<- lang_ru;;
 	*);
-
-
 <- rrel_key_sc_element:
 	...
 	(*
@@ -517,16 +422,11 @@ logical_operation
 		(*
 		-> rrel_example:
 			"file://nl_files/explanation_for_logical_operation.html"
-		(* <- lang_ru;; *);;
+				(* <- lang_ru;; *);;
 		*);;
 	*);
 <- rrel_key_sc_element:
 	section_subject_domain_of_formal_theories_and_logical_formulas;;
-
-	
-	
-	
-	
 	
 nrel_implication
 <- sc_node_norole_relation;
@@ -547,7 +447,6 @@ nrel_implication
 <- logical_operation;
 <- binary_relation;
 <- oriented_relation;
-
 <- rrel_key_sc_element:
 	...
 	(*
@@ -557,7 +456,7 @@ nrel_implication
 		(*
 		-> rrel_example:
 			"file://nl_files/explanation_for_nrel_implication.html"
-		(* <- lang_ru;; *);;
+				(* <- lang_ru;; *);;
 		*);;
 	*);
 <- rrel_key_sc_element:
@@ -567,12 +466,8 @@ nrel_implication
 	<= nrel_sc_text_translation:
 		...
 		(*
-		<= nrel_strict_inclusion:
-			sc.g_text;;
-			
 		-> rrel_example:
-			"file://nl_files/explanation_for_nrel_implication.png";;
-			
+			"file://nl_files/explanation_for_nrel_implication.png";;			
 		*);;
 	*);
 <- rrel_key_sc_element:
@@ -581,15 +476,8 @@ nrel_implication
 <- rrel_key_sc_element:
 	section_subject_domain_of_formal_theories_and_logical_formulas;;
 	
-	
-	
-	
-	
-	
 rrel_if
-
 <- sc_node_role_relation;
-
 => nrel_main_idtf:
 	[если'] 
 	(* 
@@ -599,9 +487,7 @@ rrel_if
 	(* 
 	<- lang_en;; 
 	*);
-	
 <= nrel_inclusion: rrel_1;
-
 <- rrel_key_sc_element:
 	...
 	(*
@@ -611,7 +497,7 @@ rrel_if
 		(*
 		-> rrel_example:
 			"file://nl_files/explanation_for_rrel_if.html"
-		(* <- lang_ru;; *);;
+				(* <- lang_ru;; *);;
 		*);;
 	*);
 <- rrel_key_sc_element:
@@ -621,26 +507,15 @@ rrel_if
 	<= nrel_sc_text_translation:
 		...
 		(*
-		<= nrel_strict_inclusion:
-			sc.g_text;;
-			
 		-> rrel_example:
-			"file://nl_files/explanation_for_rrel_if.png";;
-			
+			"file://nl_files/explanation_for_rrel_if.png";;			
 		*);;
 	*);
 <- rrel_key_sc_element:
 	section_subject_domain_of_formal_theories_and_logical_formulas;;
 
-	
-	
-	
-
-	
-
 rrel_then
 <- sc_node_role_relation;
-
 => nrel_main_idtf:
 	[то'] 
 	(* 
@@ -650,9 +525,7 @@ rrel_then
 	(* 
 	<- lang_en;; 
 	*);
-	
 <= nrel_inclusion: rrel_2;
-
 <- rrel_key_sc_element:
 	...
 	(*
@@ -662,7 +535,7 @@ rrel_then
 		(*
 		-> rrel_example:
 			"file://nl_files/explanation_for_rrel_then.html"
-		(* <- lang_ru;; *);;
+				(* <- lang_ru;; *);;
 		*);;
 	*);
 <- rrel_key_sc_element:
@@ -672,24 +545,12 @@ rrel_then
 	<= nrel_sc_text_translation:
 		...
 		(*
-		<= nrel_strict_inclusion:
-			sc.g_text;;
-			
 		-> rrel_example:
-			"file://nl_files/explanation_for_rrel_then.png";;
-			
+			"file://nl_files/explanation_for_rrel_then.png";;			
 		*);;
 	*);
 <- rrel_key_sc_element:
 	section_subject_domain_of_formal_theories_and_logical_formulas;;
-
-	
-	
-	
-	
-	
-	
-	
 	
 nrel_equivalence	
 <- sc_node_norole_relation;
@@ -705,7 +566,6 @@ nrel_equivalence
 <- logical_operation;
 <- binary_relation;
 <- non_oriented_relation;
-
 <- rrel_key_sc_element:
 	...
 	(*
@@ -715,7 +575,7 @@ nrel_equivalence
 		(*
 		-> rrel_example:
 			"file://nl_files/explanation_for_nrel_equivalence.html"
-		(* <- lang_ru;; *);;
+				(* <- lang_ru;; *);;
 		*);;
 	*);
 <- rrel_key_sc_element:
@@ -725,19 +585,12 @@ nrel_equivalence
 	<= nrel_sc_text_translation:
 		...
 		(*
-		<= nrel_strict_inclusion:
-			sc.g_text;;
-			
 		-> rrel_example:
-			"file://nl_files/explanation_for_nrel_equivalence.png";;
-			
+			"file://nl_files/explanation_for_nrel_equivalence.png";;			
 		*);;
 	*);
 <- rrel_key_sc_element:
 	section_subject_domain_of_formal_theories_and_logical_formulas;;
-
-	
-		
 	
 nrel_conjunction	
 <- sc_node_norole_relation;
@@ -759,7 +612,6 @@ nrel_conjunction
 	(*
 	<- lang_ru;;
 	*);
-
 <- rrel_key_sc_element:
 	...
 	(*
@@ -779,21 +631,12 @@ nrel_conjunction
 	<= nrel_sc_text_translation:
 		...
 		(*
-		<= nrel_strict_inclusion:
-			sc.g_text;;
-			
 		-> rrel_example:
-			"file://nl_files/explanation_for_nrel_conjunction.png";;
-			
+			"file://nl_files/explanation_for_nrel_conjunction.png";;			
 		*);;
 	*);
 <- rrel_key_sc_element:
 	section_subject_domain_of_formal_theories_and_logical_formulas;;
-	
-	
-	
-	
-	
 
 nrel_disjunction
 <- sc_node_norole_relation;	
@@ -819,11 +662,8 @@ nrel_disjunction
 	(*
 	<- lang_ru;;
 	*);
-
 <- logical_operation;
-<- binary_relation; /*?????????? */
 <- non_oriented_relation;
-
 <- rrel_key_sc_element:
 	...
 	(*
@@ -843,20 +683,12 @@ nrel_disjunction
 	<= nrel_sc_text_translation:
 		...
 		(*
-		<= nrel_strict_inclusion:
-			sc.g_text;;
-			
 		-> rrel_example:
-			"file://nl_files/explanation_for_nrel_disjunction.png";;
-			
+			"file://nl_files/explanation_for_nrel_disjunction.png";;			
 		*);;
 	*);
 <- rrel_key_sc_element:
 	section_subject_domain_of_formal_theories_and_logical_formulas;;
-
-	
-
-
 
 nrel_strict_disjunction
 <- sc_node_norole_relation;
@@ -883,10 +715,7 @@ nrel_strict_disjunction
 	<- lang_ru;;
 	*);
 <- logical_operation;
-<- binary_relation; /* ??????? */
 <- non_oriented_relation;
-
-
 <- rrel_key_sc_element:
 	...
 	(*
@@ -896,7 +725,7 @@ nrel_strict_disjunction
 		(*
 		-> rrel_example:
 			"file://nl_files/explanation_for_nrel_strict_disjunction.html"
-		(* <- lang_ru;; *);;
+				(* <- lang_ru;; *);;
 		*);;
 	*);
 <- rrel_key_sc_element:
@@ -906,22 +735,13 @@ nrel_strict_disjunction
 	<= nrel_sc_text_translation:
 		...
 		(*
-		<= nrel_strict_inclusion:
-			sc.g_text;;
-			
 		-> rrel_example:
-			"file://nl_files/explanation_for_nrel_strict_disjunction.png";;
-			
+			"file://nl_files/explanation_for_nrel_strict_disjunction.png";;			
 		*);;
 	*);
 <- rrel_key_sc_element:
 	section_subject_domain_of_formal_theories_and_logical_formulas;;
 
-	
-	
-
-
-	
 negation
 => nrel_main_idtf:
 	[отрицание]
@@ -932,8 +752,6 @@ negation
 	(*
 	<- lang_en;;
 	*);
-
-
 <- rrel_key_sc_element:
 	...
 	(*
@@ -943,7 +761,7 @@ negation
 		(*
 		-> rrel_example:
 			"file://nl_files/explanation_for_negation.html"
-		(* <- lang_ru;; *);;
+				(* <- lang_ru;; *);;
 		*);;
 	*);
 <- rrel_key_sc_element:
@@ -953,21 +771,12 @@ negation
 	<= nrel_sc_text_translation:
 		...
 		(*
-		<= nrel_strict_inclusion:
-			sc.g_text;;
-			
 		-> rrel_example:
-			"file://nl_files/explanation_for_negation.png";;
-			
+			"file://nl_files/explanation_for_negation.png";;			
 		*);;
 	*);
 <- rrel_key_sc_element:
 	section_subject_domain_of_formal_theories_and_logical_formulas;;
-
-	
-	
-	
-	
 	
 quantifier
 => nrel_main_idtf:
@@ -979,8 +788,6 @@ quantifier
 	(*
 	<- lang_en;;
 	*);
-
-
 <- rrel_key_sc_element:
 	...
 	(*
@@ -990,16 +797,11 @@ quantifier
 		(*
 		-> rrel_example:
 			"file://nl_files/explanation_for_quantifier.html"
-		(* <- lang_ru;; *);;
+				(* <- lang_ru;; *);;
 		*);;
 	*);
 <- rrel_key_sc_element:
 	section_subject_domain_of_formal_theories_and_logical_formulas;;
-	
-	
-	
-
-
 
 nrel_generality
 <- sc_node_norole_relation;
@@ -1012,7 +814,6 @@ nrel_generality
 	(*
 	<- lang_en;;
 	*);
-	
 => nrel_idtf:
 	[квантор всеобщности*]
 	(*
@@ -1022,11 +823,9 @@ nrel_generality
 	(*
 	<- lang_ru;;
 	*);
-	
 <- quantifier;
 <- binary_relation;
 <- oriented_relation;
-
 <- rrel_key_sc_element:
 	...
 	(*
@@ -1036,7 +835,7 @@ nrel_generality
 		(*
 		-> rrel_example:
 			"file://nl_files/explanation_for_nrel_generality.html"
-		(* <- lang_ru;; *);;
+				(* <- lang_ru;; *);;
 		*);;
 	*);
 <- rrel_key_sc_element:
@@ -1045,23 +844,14 @@ nrel_generality
 	<- typical_sc_neighborhood;;
 	<= nrel_sc_text_translation:
 		...
-		(*
-		<= nrel_strict_inclusion:
-			sc.g_text;;
-			
+		(*			
 		-> rrel_example:
-			"file://nl_files/explanation_for_nrel_generality.png";;
-			
+			"file://nl_files/explanation_for_nrel_generality.png";;	
 		*);;
 	*);
 <- rrel_key_sc_element:
 	section_subject_domain_of_formal_theories_and_logical_formulas;;
 
-	
-	
-	
-	
-	
 nrel_existence	
 => nrel_main_idtf:
 	[существование*]
@@ -1080,7 +870,6 @@ nrel_existence
 <- quantifier;
 <- binary_relation;
 <- non_oriented_relation;
-
 <- rrel_key_sc_element:
 	...
 	(*
@@ -1090,7 +879,7 @@ nrel_existence
 		(*
 		-> rrel_example:
 			"file://nl_files/explanation_for_nrel_existence.html"
-		(* <- lang_ru;; *);;
+				(* <- lang_ru;; *);;
 		*);;
 	*);
 <- rrel_key_sc_element:
@@ -1100,20 +889,12 @@ nrel_existence
 	<= nrel_sc_text_translation:
 		...
 		(*
-		<= nrel_strict_inclusion:
-			sc.g_text;;
-			
 		-> rrel_example:
-			"file://nl_files/explanation_for_nrel_existence.png";;
-			
+			"file://nl_files/explanation_for_nrel_existence.png";;			
 		*);;
 	*);
 <- rrel_key_sc_element:
 	section_subject_domain_of_formal_theories_and_logical_formulas;;
-
-	
-	
-	
 
 rrel_bind_variables
 <- sc_node_role_relation;
@@ -1126,8 +907,6 @@ rrel_bind_variables
 	(*
 	<- lang_en;;
 	*);
-
-
 <- rrel_key_sc_element:
 	...
 	(*
@@ -1137,7 +916,7 @@ rrel_bind_variables
 		(*
 		-> rrel_example:
 			"file://nl_files/explanation_for_rrel_bind_variables.html"
-		(* <- lang_ru;; *);;
+				(* <- lang_ru;; *);;
 		*);;
 	*);
 <- rrel_key_sc_element:
@@ -1147,19 +926,12 @@ rrel_bind_variables
 	<= nrel_sc_text_translation:
 		...
 		(*
-		<= nrel_strict_inclusion:
-			sc.g_text;;
-			
 		-> rrel_example:
-			"file://nl_files/explanation_for_rrel_bind_variables.png";;
-			
+			"file://nl_files/explanation_for_rrel_bind_variables.png";;			
 		*);;
 	*);
 <- rrel_key_sc_element:
 	section_subject_domain_of_formal_theories_and_logical_formulas;;
-
-
-
 
 nrel_free_variables
 <- sc_node_norole_relation;
@@ -1172,7 +944,6 @@ nrel_free_variables
 	(*
 	<- lang_en;;
 	*);
-
 <- binary_relation;
 <- rrel_key_sc_element:
 	...
@@ -1183,7 +954,7 @@ nrel_free_variables
 		(*
 		-> rrel_example:
 			"file://nl_files/explanation_for_nrel_free_variables.html"
-		(* <- lang_ru;; *);;
+				(* <- lang_ru;; *);;
 		*);;
 	*);
 <- rrel_key_sc_element:
@@ -1193,21 +964,12 @@ nrel_free_variables
 	<= nrel_sc_text_translation:
 		...
 		(*
-		<= nrel_strict_inclusion:
-			sc.g_text;;
-			
 		-> rrel_example:
-			"file://nl_files/explanation_for_nrel_free_variables.png";;
-			
+			"file://nl_files/explanation_for_nrel_free_variables.png";;			
 		*);;
 	*);
 <- rrel_key_sc_element:
 	section_subject_domain_of_formal_theories_and_logical_formulas;;
-
-
-	
-	
-	
 	
 atomic_existence
 => nrel_main_idtf:
@@ -1220,7 +982,6 @@ atomic_existence
 	<- lang_en;;
 	*);
 
-
 <- rrel_key_sc_element:
 	...
 	(*
@@ -1230,15 +991,11 @@ atomic_existence
 		(*
 		-> rrel_example:
 			"file://nl_files/explanation_for_atomic_existence.html"
-		(* <- lang_ru;; *);;
+				(* <- lang_ru;; *);;
 		*);;
 	*);
 <- rrel_key_sc_element:
 	section_subject_domain_of_formal_theories_and_logical_formulas;;
-
-	
-	
-	
 	
 atomic_formula
 => nrel_main_idtf:
@@ -1250,8 +1007,6 @@ atomic_formula
 	(*
 	<- lang_en;;
 	*);
-
-
 <- rrel_key_sc_element:
 	...
 	(*
@@ -1261,15 +1016,11 @@ atomic_formula
 		(*
 		-> rrel_example:
 			"file://nl_files/explanation_for_atomic_formula.html"
-		(* <- lang_ru;; *);;
+				(* <- lang_ru;; *);;
 		*);;
 	*);
 <- rrel_key_sc_element:
 	section_subject_domain_of_formal_theories_and_logical_formulas;;
-
-	
-		
-	
 	
 non_atomic_formula	
 => nrel_main_idtf:
@@ -1286,8 +1037,6 @@ non_atomic_formula
 	(*
 	<- lang_ru;;
 	*);
-	
-
 <- rrel_key_sc_element:
 	...
 	(*
@@ -1297,22 +1046,15 @@ non_atomic_formula
 		(*
 		-> rrel_example:
 			"file://nl_files/explanation_for_non_atomic_formula.html"
-		(* <- lang_ru;; *);;
+				(* <- lang_ru;; *);;
 		*);;
 	*);
 <- rrel_key_sc_element:
 	section_subject_domain_of_formal_theories_and_logical_formulas;;
 
-	
-
-
-
-
-	
-
 existence_and_uniqueness
 => nrel_main_idtf:
-	[existence and uniqueness]
+	[существование и единственность]
 	(*
 	<- lang_ru;;
 	*);
@@ -1320,8 +1062,6 @@ existence_and_uniqueness
 	(*
 	<- lang_en;;
 	*);
-
-
 <- rrel_key_sc_element:
 	...
 	(*
@@ -1337,9 +1077,16 @@ existence_and_uniqueness
 <- rrel_key_sc_element:
 	section_subject_domain_of_formal_theories_and_logical_formulas;;
 
-	
-
-	
-	
-	
+atomic_existence_and_uniqueness
+=> nrel_main_idtf:
+	[атомарное существование и единственность]
+	(*
+	<- lang_ru;;
+	*);
+	[atomic existence and uniqueness]
+	(*
+	<- lang_en;;
+	*);
+<- rrel_key_sc_element:
+	section_subject_domain_of_formal_theories_and_logical_formulas;;
 
