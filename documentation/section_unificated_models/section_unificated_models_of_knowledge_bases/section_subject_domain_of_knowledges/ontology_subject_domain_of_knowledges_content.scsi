@@ -109,57 +109,44 @@ sc_note
 
 sc_statement
 => nrel_main_idtf:
-	[sc-утверждение] (* <- lang_ru;; *);
-	[sc-statement] (* <- lang_en;; *);
+	[sc-утверждение]
+	(* <- lang_ru;; *);
+	[sc-statement]
+	(* <- lang_en;; *);
 => nrel_idtf:
-	[sc-текст утверждения о некоторой сущности] (* <- lang_ru;; *);;
+	[sc-текст утверждения о некоторой сущности]
+	(* <- lang_ru;; *);;
 	
+sc_illustration
+=> nrel_main_idtf:
+	[sc-иллюстрация] 
+	(* <- lang_ru;; *);
+	[sc-illustration] 
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[sc-текст, иллюстрирующий некоторую сущность] 
+	(* <- lang_ru;; *);;
 
 sc_elaboration
-=> nrel_main_idtf: [sc-уточнение] (* <- lang_ru;; *);
-=> nrel_main_idtf: [sc-elaboration] (* <- lang_en;; *);;
-
+=> nrel_main_idtf: 
+	[sc-уточнение]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf: 
+	[sc-elaboration]
+	(* <- lang_en;; *);;
 
 rrel_key_sc_element
 <- sc_node_role_relation;
 
 => nrel_main_idtf: 
 	[ключевой элемент']
-	(*
-	<- lang_ru;;
-	*);
+	(* <- lang_ru;; *);
 	[key sc-element'] 
-	(* 
-	<- lang_en;; 
-	*);
+	(* <- lang_en;; *);
 
 => nrel_idtf:
 	[быть ключевым sc-элементом заданного sc-знания']
-	(*
-	<- lang_ru;;
-	*);
-	
-/*=> nrel_strict_inclusion: 
-	rrel_sc_explanation
-	(*
-	<- non_essential_concept;;
-	*);
-	rrel_sc_definition
-	(*
-	<- non_essential_concept;;
-	*);
-	rrel_sc_note
-	(*
-	<- non_essential_concept;;
-	*);
-	rrel_sc_comment
-	(*
-	<- non_essential_concept;;
-	*);
-	rrel_typical_sc_neighborhood
-	(*
-	<- non_essential_concept;;
-	*);*/
+	(* <- lang_ru;; *);
 	
 <- rrel_key_sc_element:
 	...
@@ -178,21 +165,14 @@ rrel_main_key_sc_element
 <- sc_node_role_relation;
 => nrel_main_idtf: 
 	[главный ключевой элемент']
-	(*
-	<- lang_ru;;
-	*);
+	(* <- lang_ru;; *);
 	[main key sc-element'] 
-	(* 
-	<- lang_en;; 
-	*);
+	(* <- lang_en;; *);
 => nrel_idtf:
 	[быть главным ключевым sc-элементом заданного sc-знания']
-	(*
-	<- lang_ru;;
-	*);
+	(* <- lang_ru;; *);
 => nrel_inclusion: 
 	rrel_key_sc_element;;
-
 
 section
 => nrel_main_idtf:
