@@ -1,0 +1,938 @@
+subject_domain_of_numbers_and_number_structures
+=> nrel_main_idtf:
+	[Предметная область чисел и числовых структур]
+	(*
+	<- lang_ru;;
+	*);
+	[Subject domain of numbers and number structures]
+	(*
+	<- lang_en;;
+	*);
+<- subject_domain;
+
+/*
+<- rrel_maximum_studied_object_class:
+число U математическое выражение 
+*/
+
+-> rrel_studied_object_class:
+	natural_number;
+	whole_number;
+	rational_number;
+	irrational_number;
+	real_number;	
+	complex_number;;
+	
+number
+=> nrel_main_idtf:
+	[число]
+	(*
+	<- lang_ru;;
+	*);
+	[number]
+	(*
+	<- lang_en;;
+	*);
+=> nrel_idtf:
+	[множество чисел]
+	(*
+	<- lang_ru;;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[число – это основное понятие математики, используемое для
+количественной характеристики, сравнения, нумерации объектов и их
+частей. Письменными знаками для обозначения чисел служат цифры,
+а также символы математических операций . ]
+		(* <- lang_ru;; *);;
+		*);;
+	*);
+<= nrel_subdividing:
+	{
+	positive_number;
+	negative_number;
+	number_zero
+	};
+<- rrel_key_sc_element:
+	section_subject_domain_of_numbers_and_number_structures;;
+	
+	
+	
+natural_number
+=> nrel_main_idtf:
+	[натуральное число]
+	(*
+	<- lang_ru;;
+	*);
+	[natural number]
+	(*
+	<- lang_en;;
+	*);
+=> nrel_idtf:
+	[множество натуральных чисел]
+	(*
+	<- lang_ru;;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[ натуральное число – это подмножество множества целых чисел,
+которые используются при счете предметов . ]
+		(* <- lang_ru;; *);;
+		*);;
+	*);
+=> nrel_strict_inclusion:
+	whole_number;
+<- rrel_key_sc_element:
+	section_subject_domain_of_numbers_and_number_structures;;
+	
+	
+whole_number
+=> nrel_main_idtf:
+	[целое число]
+	(*
+	<- lang_ru;;
+	*);
+	[whole number]
+	(*
+	<- lang_en;;
+	*);
+=> nrel_idtf:
+	[множество целых чисел]
+	(*
+	<- lang_ru;;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[ целое число – это подмножество множества рациональных чисел,
+получаемых объединением натуральных чисел с множеством
+чисел противоположных натуральным и нулѐм.]
+		(* <- lang_ru;; *);;
+		*);;
+	*);
+<= nrel_strict_inclusion:
+	rational_number;
+<- rrel_key_sc_element:
+	section_subject_domain_of_numbers_and_number_structures;;
+	
+	
+rational_number
+=> nrel_main_idtf:
+	[рациональное число]
+	(*
+	<- lang_ru;;
+	*);
+	[rational number]
+	(*
+	<- lang_en;;
+	*);
+=> nrel_idtf:
+	[множество рациональных чисел]
+	(*
+	<- lang_ru;;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[ рациональное число – это число, представляемое обыкновенной
+дробью, где числитель — целое число, а знаменатель — натуральное
+число.]
+		(* <- lang_ru;; *);;
+		*);;
+	*);
+<= nrel_strict_inclusion:
+	real_number;
+<- rrel_key_sc_element:
+	section_subject_domain_of_numbers_and_number_structures;;
+	
+	
+irrational_number
+=> nrel_main_idtf:
+	[иррациональное число]
+	(*
+	<- lang_ru;;
+	*);
+	[irrational number]
+	(*
+	<- lang_en;;
+	*);
+=> nrel_idtf:
+	[множество иррациональных чисел]
+	(*
+	<- lang_ru;;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[ иррациональное число – это число, это вещественное число, которое
+не является рациональным, то есть не может быть представлено в виде
+дроби, где числитель — целое число, знаменатель — натуральное
+число. Иррациональное число может быть представлено в виде
+бесконечной непериодической десятичной дроби.]
+		(* <- lang_ru;; *);;
+		*);;
+	*);
+<= nrel_strict_inclusion:
+	real_number;
+<- rrel_key_sc_element:
+	section_subject_domain_of_numbers_and_number_structures;;
+	
+	
+real_number
+=> nrel_main_idtf:
+	[действительное число]
+	(*
+	<- lang_ru;;
+	*);
+	[real number]
+	(*
+	<- lang_en;;
+	*);
+=> nrel_idtf:
+	[действительное число]
+	(*
+	<- lang_ru;;
+	*);
+	
+<= nrel_combination:
+	{
+	rational_number;
+	irrational_number
+	};
+<= nrel_subdividing:
+	{
+	positive_number;
+	negative_number
+	};
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[действительное число – это множество чисел, получаемое в
+результате объединения иррациональных и рациональных чисел.]
+		(* <- lang_ru;; *);;
+		*);;
+	*);
+<= nrel_strict_inclusion:
+	complex_number;
+<- rrel_key_sc_element:
+	section_subject_domain_of_numbers_and_number_structures;;
+	
+	
+complex_number
+=> nrel_main_idtf:
+	[комплексное число]
+	(*
+	<- lang_ru;;
+	*);
+	[complex number]
+	(*
+	<- lang_en;;
+	*);
+=> nrel_idtf:
+	[множество комплексных чисел]
+	(*
+	<- lang_ru;;
+	*);
+	
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[комплексное число – число вида z=a+bi, где a и b – вещественные
+числа, i – мнимая единица . .]
+		(* <- lang_ru;; *);;
+		*);;
+	*);
+<- rrel_key_sc_element:
+	section_subject_domain_of_numbers_and_number_structures;;
+	
+	
+negative_number
+=> nrel_main_idtf:
+	[отрицательное число]
+	(*
+	<- lang_ru;;
+	*);
+	[negative number]
+	(*
+	<- lang_en;;
+	*);
+=> nrel_idtf:
+	[множество отрицательных чисел]
+	(*
+	<- lang_ru;;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[отрицательное число – число меньше нуля.]
+		(* <- lang_ru;; *);;
+		*);;
+	*);
+<- rrel_key_sc_element:
+	section_subject_domain_of_numbers_and_number_structures;;
+	
+	
+
+positive_number
+=> nrel_main_idtf:
+	[положительное число]
+	(*
+	<- lang_ru;;
+	*);
+	[positive number]
+	(*
+	<- lang_en;;
+	*);
+=> nrel_idtf:
+	[множество положительных чисел]
+	(*
+	<- lang_ru;;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[положительное число – число больше нуля.]
+		(* <- lang_ru;; *);;
+		*);;
+	*);
+<- rrel_key_sc_element:
+	section_subject_domain_of_numbers_and_number_structures;;
+	
+	
+arithmetic_expression
+=> nrel_main_idtf:
+	[арифметическое выражение]
+	(*
+	<- lang_ru;;
+	*);
+	[arithmetic expression]
+	(*
+	<- lang_en;;
+	*);
+=> nrel_idtf:
+	[множество арифметических выражений]
+	(*
+	<- lang_ru;;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[арифметическое выражение – это совокупность чисел, скобок,
+объединенных знаками арифметических действий таким образом,
+чтобы оно имело определенное числовое значение.]
+		(* <- lang_ru;; *);;
+		*);;
+	*);
+<- rrel_key_sc_element:
+	section_subject_domain_of_numbers_and_number_structures;;
+	
+	
+arithmetic_operation
+=> nrel_main_idtf:
+	[арифметическая операция]
+	(*
+	<- lang_ru;;
+	*);
+	[arithmetic operation]
+	(*
+	<- lang_en;;
+	*);
+=> nrel_idtf:
+	[множество арифметических операций]
+	(*
+	<- lang_ru;;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[арифметическая операция – это вычислительная операция над
+числами]
+		(* <- lang_ru;; *);;
+		*);;
+	*);
+<- rrel_key_sc_element:
+	section_subject_domain_of_numbers_and_number_structures;;
+	
+	
+
+nrel_sum
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[сумма*]
+	(*
+	<- lang_ru;;
+	*);
+	[sum*]
+	(*
+	<- lang_en;;
+	*);
+=> nrel_idtf:
+	[сложение*]
+	(*
+	<- lang_ru;;
+	*);
+
+<- quasybinary_relation;
+<- arithmetic_operation;
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[сумма* – это арифметическая операция, в результате которой по
+данным числам (слагаемым) находится новое число (сумма),
+обозначающее столько единиц, сколько их содержится во всех
+слагаемых.]
+		(* <- lang_ru;; *);;
+		*);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_sc_neighborhood;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		<= nrel_strict_inclusion:
+			sc.g_text;;
+			
+		-> rrel_example:
+			"file://nl_files/explanation_for_nrel_sum.png";;
+			
+		*);;
+	*);
+<- rrel_key_sc_element:
+	section_subject_domain_of_numbers_and_number_structures;;
+	
+	
+	
+nrel_multiplication
+<- sc_node_norole_relation;
+
+=> nrel_main_idtf:
+	[произведение*]
+	(*
+	<- lang_ru;;
+	*);
+	[multiplication*]
+	(*
+	<- lang_en;;
+	*);
+=> nrel_idtf:
+	[умножение*]
+	(*
+	<- lang_ru;;
+	*);
+
+<- quasybinary_relation;
+<- arithmetic_operation;
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[произведение* – это арифметическая операция, в результате которой
+один аргумент складывается столько раз, сколько показывает другой. ]
+		(* <- lang_ru;; *);;
+		*);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_sc_neighborhood;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		<= nrel_strict_inclusion:
+			sc.g_text;;
+			
+		-> rrel_example:
+			"file://nl_files/explanation_for_nrel_multiplication.png";;
+			
+		*);;
+	*);
+<- rrel_key_sc_element:
+	section_subject_domain_of_numbers_and_number_structures;;
+	
+	
+	
+nrel_pow
+<- sc_node_norole_relation;
+
+=> nrel_main_idtf:
+	[возведение в степень*]
+	(*
+	<- lang_ru;;
+	*);
+	[pow*]
+	(*
+	<- lang_en;;
+	*);
+	
+<- arithmetic_operation;
+<- ternary_relation;
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[возведение в степень* – это арифметическая операция, в результате
+которой число, называемое основанием степени, умножается само на
+себя столько раз, каков показатель степени.]
+		(* <- lang_ru;; *);;
+		*);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_sc_neighborhood;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		<= nrel_strict_inclusion:
+			sc.g_text;;
+			
+		-> rrel_example:
+			"file://nl_files/explanation_for_nrel_pow.png";;
+			
+		*);;
+	*);
+<- rrel_key_sc_element:
+	section_subject_domain_of_numbers_and_number_structures;;
+	
+	
+	
+nrel_greater
+<- sc_node_norole_relation;
+
+=> nrel_main_idtf:
+	[больше*]
+	(*
+	<- lang_ru;;
+	*);
+	[greater*]
+	(*
+	<- lang_en;;
+	*);
+
+<- arithmetic_operation;
+<- binary_relation;
+<- strict_order_relation;
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[больше* – это арифметическая операция сравнения чисел. Из двухчисел на координатной прямой больше то, которое расположено
+правее.]
+		(* <- lang_ru;; *);;
+		*);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_sc_neighborhood;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		<= nrel_strict_inclusion:
+			sc.g_text;;
+			
+		-> rrel_example:
+			"file://nl_files/explanation_for_nrel_greater.png";;
+			
+		*);;
+	*);
+<- rrel_key_sc_element:
+	section_subject_domain_of_numbers_and_number_structures;;
+	
+	
+	
+nrel_less
+<- sc_node_norole_relation;
+
+=> nrel_main_idtf:
+	[меньше*]
+	(*
+	<- lang_ru;;
+	*);
+	[less*]
+	(*
+	<- lang_en;;
+	*);
+
+<- arithmetic_operation;
+<- binary_relation;
+<- strict_order_relation;
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[меньше* – это арифметическая операция сравнения чисел. Из двух
+чисел на координатной прямой меньше то, которое расположено
+левее.]
+		(* <- lang_ru;; *);;
+		*);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_sc_neighborhood;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		<= nrel_strict_inclusion:
+			sc.g_text;;
+			
+		-> rrel_example:
+			"file://nl_files/explanation_for_nrel_less.png";;
+			
+		*);;
+	*);
+<- rrel_key_sc_element:
+	section_subject_domain_of_numbers_and_number_structures;;
+	
+	
+	
+nrel_greater_or_equal
+<- sc_node_norole_relation;
+
+=> nrel_main_idtf:
+	[больше или равно*]
+	(*
+	<- lang_ru;;
+	*);
+	[greater or equal]
+	(*
+	<- lang_en;;
+	*);
+
+<- arithmetic_operation;
+<- binary_relation;
+<- non_strict_order_relation;
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[больше или равно* – это арифметическая операция сравнения чисел.
+Из двух чисел на координатной прямой больше или равно то, которое
+расположено правее или равно данному числу.]
+		(* <- lang_ru;; *);;
+		*);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_sc_neighborhood;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		<= nrel_strict_inclusion:
+			sc.g_text;;
+			
+		-> rrel_example:
+			"file://nl_files/explanation_for_nrel_greater_or_equal.png";;
+			
+		*);;
+	*);
+<- rrel_key_sc_element:
+	section_subject_domain_of_numbers_and_number_structures;;
+	
+	
+	
+nrel_less_or_equal
+<- sc_node_norole_relation;
+
+=> nrel_main_idtf:
+	[меньше или равно*]
+	(*
+	<- lang_ru;;
+	*);
+	[less or equal]
+	(*
+	<- lang_en;;
+	*);
+
+<- arithmetic_operation;
+<- binary_relation;
+<- non_strict_order_relation;
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[меньше или равно* – это арифметическая операция сравнения чисел.
+Из двух чисел на координатной прямой меньше или равно то, которое
+расположено левее или равно данному числу.]
+		(* <- lang_ru;; *);;
+		*);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_sc_neighborhood;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		<= nrel_strict_inclusion:
+			sc.g_text;;
+			
+		-> rrel_example:
+			"file://nl_files/explanation_for_nrel_less_or_equal.png";;
+			
+		*);;
+	*);
+<- rrel_key_sc_element:
+	section_subject_domain_of_numbers_and_number_structures;;
+	
+	
+	
+nrel_equality
+<- sc_node_norole_relation;
+
+=> nrel_main_idtf:
+	[равенство*]
+	(*
+	<- lang_ru;;
+	*);
+	[equality*]
+	(*
+	<- lang_en;;
+	*);
+=> nrel_idtf:
+	[равенство чисел*]
+	(*
+	<- lang_ru;;
+	*);
+
+<- arithmetic_operation;
+<- binary_relation;
+<- strict_order_relation;
+<- reflexive_relation;
+<- transitive_relation;
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[равенство* – отношение взаимной заменяемости объектов, которые
+именно в силу этой заменяемости и считаются равными]
+		(* <- lang_ru;; *);;
+		*);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_sc_neighborhood;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		<= nrel_strict_inclusion:
+			sc.g_text;;
+			
+		-> rrel_example:
+			"file://nl_files/explanation_for_nrel_equality.png";;
+			
+		*);;
+	*);
+<- rrel_key_sc_element:
+	section_subject_domain_of_numbers_and_number_structures;;
+	
+	
+number_pi
+=> nrel_main_idtf:
+	[Число Пи]
+	(*
+	<- lang_ru;;
+	*);
+	[Number pi]
+	(*
+	<- lang_en;;
+	*);
+	
+<- irrational_number;
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[Число Пи – это математическая константа, равная отношению
+длины окружности к длине еѐ диаметра.]
+		(* <- lang_ru;; *);;
+		*);;
+	*);
+<- rrel_key_sc_element:
+	section_subject_domain_of_numbers_and_number_structures;;
+	
+	
+number_zero
+=> nrel_main_idtf:
+	[Число нуль]
+	(*
+	<- lang_ru;;
+	*);
+	[Number zero]
+	(*
+	<- lang_en;;
+	*);
+	
+<- whole_number;
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[Число нуль – это целое число, разделяющее на числовой
+прямой положительные целые иотрицательные целые числа.]
+		(* <- lang_ru;; *);;
+		*);;
+	*);
+<- rrel_key_sc_element:
+	section_subject_domain_of_numbers_and_number_structures;;
+
+	
+number_one
+=> nrel_main_idtf:
+	[Число один]
+	(*
+	<- lang_ru;;
+	*);
+	[Number one]
+	(*
+	<- lang_en;;
+	*);
+	
+<- whole_number;
+<- natural_number;
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[Число один – это наименьшее натуральное число.]
+		(* <- lang_ru;; *);;
+		*);;
+	*);
+<- rrel_key_sc_element:
+	section_subject_domain_of_numbers_and_number_structures;;
