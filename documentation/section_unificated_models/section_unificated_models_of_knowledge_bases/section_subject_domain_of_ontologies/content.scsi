@@ -232,8 +232,33 @@ terminological_ontology
 
 <- rrel_key_sc_element:
 	section_subject_domain_of_ontologies;;
-	
-	
+
+
+nrel_using_constants
+	=> nrel_main_idtf:
+		[используемые константы*]
+		(* <- lang_ru;; *);
+		[using constants*]
+		(* <- lang_en;; *);
+
+<- quasybinary_relation;
+<- sc_node_norole_relation;
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					"file://section_subject_domain_of_ontology_content/explanation_for_nrel_using_constants.html"
+					(*<- lang_ru;;*);;
+			*);;
+	*);	
+
+<- rrel_key_sc_element:
+	section_subject_domain_of_ontologies;;
 	
 		
 high_level_ontology
