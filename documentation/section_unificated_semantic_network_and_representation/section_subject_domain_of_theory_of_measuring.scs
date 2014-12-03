@@ -1,0 +1,40 @@
+section_subject_domain_of_theory_of_measuring
+=> nrel_main_idtf:
+	[Раздел. Предметная область теории измерений]
+	(*
+	<- lang_ru;;
+	*);
+	[section. Subject domain of theory of measuring]
+	(*
+	<- lang_en;;
+	*);
+
+=> nrel_idtf:
+	[Раздел базы знаний OSTIS, описывающий теорию измерений]
+	(*
+	<- lang_ru;;
+	*);
+	[Интегрированная онтология Предметной области теории измерений]
+	(*
+	<- lang_ru;;
+	*);
+
+<- integrated_ontology;
+
+<= nrel_sc_ontology:
+	subject_domain_of_theory_of_measuring
+	(*
+		=> nrel_main_idtf:
+			[Предметная область теории измерений]
+			(*
+			<- lang_ru;;
+			*);
+			[Subject domain of theory of measuring]
+			(*
+			<- lang_en;;
+			*);;
+		
+		<- subject_domain;;
+	*);;
+
+section_subject_domain_of_theory_of_measuring = [*^"file://section_subject_domain_of_theory_of_measuring/section_subject_domain_of_theory_of_measuring_content.scsi"*];;

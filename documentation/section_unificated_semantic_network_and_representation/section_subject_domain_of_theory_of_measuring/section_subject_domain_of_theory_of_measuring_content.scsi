@@ -1,0 +1,247 @@
+subject_domain_of_theory_of_measuring
+
+<- subject_domain;
+
+-> rrel_maximum_studied_object_class:
+	quantity;
+
+<- rrel_key_sc_element:
+	section_subject_domain_of_theory_of_measuring;;
+
+
+quantity
+
+=> nrel_main_idtf:
+	[величина] (* <- lang_ru;; *);
+	[quantity] (* <- lang_en;; *);
+
+=> nrel_idtf:
+	[множество величин]  (* <- lang_ru;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					"file://section_subject_domain_of_theory_of_measuring_content/explanation_for_quantity.html"
+					(*<- lang_ru;;*);;
+			*);;
+	*);
+
+<- rrel_key_sc_element:
+	section_subject_domain_of_sc_relations;;
+
+nrel_sum_quantities
+
+=> nrel_main_idtf:
+	[сумма величин*] (* <- lang_ru;; *);
+	[sum quantities*] (* <- lang_en;; *);
+
+=> nrel_idtf:
+	[сложение величин*]  (* <- lang_ru;; *);
+
+<- quasybinary_relation;
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					"file://section_subject_domain_of_theory_of_measuring_content/explanation_for_nrel_sum_quantities.html"
+					(*<- lang_ru;;*);;
+			*);;
+	*);
+
+<- rrel_key_sc_element:
+	section_subject_domain_of_sc_relations;;
+
+
+nrel_multiplication_quantities
+
+=> nrel_main_idtf:
+	[произведение величин*] (* <- lang_ru;; *);
+	[multiplication quantities*] (* <- lang_en;; *);
+
+=> nrel_idtf:
+	[умножение величин*]  (* <- lang_ru;; *);
+
+<- quasybinary_relation;
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					"file://section_subject_domain_of_theory_of_measuring_content/explanation_for_nrel_multiplication_quantities.html"
+					(*<- lang_ru;;*);;
+			*);;
+	*);
+
+<- rrel_key_sc_element:
+	section_subject_domain_of_sc_relations;;
+
+
+nrel_pow_quantities
+
+=> nrel_main_idtf:
+	[возведение в степень величины*] (* <- lang_ru;; *);
+	[pow quantities*] (* <- lang_en;; *);
+
+
+<- ternary_relation;
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					"file://section_subject_domain_of_theory_of_measuring_content/explanation_for_nrel_pow_quantities.html"
+					(*<- lang_ru;;*);;
+			*);;
+	*);
+
+<- rrel_key_sc_element:
+	section_subject_domain_of_sc_relations;;
+
+
+nrel_greater_quantity
+
+=> nrel_main_idtf:
+	[большая величина*] (* <- lang_ru;; *);
+	[greater quantity*] (* <- lang_en;; *);
+
+
+<- binary_relation;
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					"file://section_subject_domain_of_theory_of_measuring_content/explanation_for_nrel_greater_quantity.html"
+					(*<- lang_ru;;*);;
+			*);;
+	*);
+
+<- rrel_key_sc_element:
+	section_subject_domain_of_sc_relations;;
+
+
+nrel_less_quantity
+
+=> nrel_main_idtf:
+	[меньшая величина*] (* <- lang_ru;; *);
+	[less quantity*] (* <- lang_en;; *);
+
+
+<- binary_relation;
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					"file://section_subject_domain_of_theory_of_measuring_content/explanation_for_nrel_less_quantity.html"
+					(*<- lang_ru;;*);;
+			*);;
+	*);
+
+<- rrel_key_sc_element:
+	section_subject_domain_of_sc_relations;;
+
+
+nrel_greater_or_equal_quantity
+
+=> nrel_main_idtf:
+	[большая или равная величина*] (* <- lang_ru;; *);
+	[greater or equal quantity*] (* <- lang_en;; *);
+
+
+<- binary_relation;
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					"file://section_subject_domain_of_theory_of_measuring_content/explanation_for_nrel_greater_or_equal_quantity.html"
+					(*<- lang_ru;;*);;
+			*);;
+	*);
+
+<- rrel_key_sc_element:
+	section_subject_domain_of_sc_relations;;
+
+nrel_less_or_equal_quantity
+
+=> nrel_main_idtf:
+	[меньшая или равная величина*] (* <- lang_ru;; *);
+	[less or equal quantity*] (* <- lang_en;; *);
+
+
+<- binary_relation;
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					"file://section_subject_domain_of_theory_of_measuring_content/explanation_for_nrel_less_or_equal_quantity.html"
+					(*<- lang_ru;;*);;
+			*);;
+	*);
+
+<- rrel_key_sc_element:
+	section_subject_domain_of_sc_relations;;
+
+nrel_equality_quantities
+
+=> nrel_main_idtf:
+	[равенство величин*] (* <- lang_ru;; *);
+	[equality quantities*] (* <- lang_en;; *);
+
+
+<- binary_relation;
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					"file://section_subject_domain_of_theory_of_measuring_content/explanation_for_nrel_equality_quantities.html"
+					(*<- lang_ru;;*);;
+			*);;
+	*);
+
+<- rrel_key_sc_element:
+	section_subject_domain_of_sc_relations;;
+
+
+
