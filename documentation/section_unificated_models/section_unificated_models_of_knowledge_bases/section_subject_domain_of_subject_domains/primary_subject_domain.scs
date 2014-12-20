@@ -1,0 +1,19 @@
+sc_node_not_relation -> primary_subject_domain;;
+
+primary_subject_domain
+	=> nrel_main_idtf:
+		[первичная предметная область]
+		(* <- lang_ru;; *);
+		[primary subject domain]
+		(* <- lang_en;; *);
+	<- rrel_key_sc_element:
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				...
+				(*
+					-> "file://nl_files/explanation_for_primary_subject_domain.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;

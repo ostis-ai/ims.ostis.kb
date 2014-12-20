@@ -1,0 +1,33 @@
+sc_node_not_relation -> subject_domain_sc_model;;
+
+subject_domain_sc_model
+
+=> nrel_main_idtf: 
+	[sc-модель предметной области] (* <- lang_ru;; *);
+	[subject domain sc-model] (* <- lang_en;; *);
+=> nrel_idtf: 
+	[sc-текст предметной области] (* <- lang_ru;; *);
+	[предметная область, представленная в SC-коде] (* <- lang_ru;; *);
+	[sc-граф предметной области] (* <- lang_ru;; *);
+	[уточнение понятия предметной области на базе SC-кода] (* <- lang_ru;; *);
+
+<= nrel_inclusion: infinite_sc_set; subject_domain; sc_knowledge;
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_note;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> [<b>sc-модель предметной области</b> - предметная область, представленная в рамках SC-модели смыслового пространства] 
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+			*);;
+		*);;
+	*);
+	
+<- rrel_key_sc_element:
+	[*^"file://nl_files/subject_domain_sc_model.scsi"*]
+	(* <- typical_sc_neighborhood;; *);;
