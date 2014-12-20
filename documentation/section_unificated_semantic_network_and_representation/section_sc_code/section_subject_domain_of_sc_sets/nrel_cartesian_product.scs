@@ -1,0 +1,46 @@
+sc_node_norole_relation -> nrel_cartesian_product;;
+
+nrel_cartesian_product
+=> nrel_main_idtf:
+	[декартово произведение*] 
+	(* <- lang_ru;;	*);
+	[cartesian product*] 
+	(* <- lang_en;;	*);
+
+=>nrel_idtf:
+	[декартово произведение множеств*]
+	(* <- lang_ru;;	*);
+	[прямое произведение множеств*]
+	(* <- lang_ru;;	*);	
+
+<- oriented_relation;
+<- quasybinary_relation;
+=> nrel_first_domain:
+	sets_family;
+=> nrel_second_domain:
+	set_of_oriented_pairs;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					"file://nl_files/explanation_for_cartesian_product.html"
+					(*<- lang_ru;;*);;
+			*);;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_sc_neighborhood;;
+	<= nrel_sc_text_translation:
+	...
+		(*
+		<= nrel_strict_inclusion:
+			sc.g_text;;
+		-> rrel_example:
+			"file://nl_files/nrel_cartesian_product.png";;
+		*);;
+	*);;

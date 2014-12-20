@@ -1,0 +1,29 @@
+sc_node_not_relation -> triple_set;;
+
+triple_set
+=> nrel_main_idtf:
+	[тройка]
+	(* <- lang_ru;;	*);
+	[triple]
+	(* <- lang_en;;	*);
+	
+=> nrel_idtf:
+	[множество, мощность которого равна 3]
+	(* <- lang_ru;;	*);
+	
+=> nrel_idtf:
+	[трехэлементное множество]
+	(* <- lang_ru;;	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://nl_files/explanation_for_triple_set.html"
+		(* <- lang_ru;; *);;
+		*);;
+	*);;

@@ -1,0 +1,27 @@
+sc_node_not_relation -> pair_set;;
+
+pair_set
+=> nrel_main_idtf:
+	[пара]
+	(* <- lang_ru;;	*);
+	[pair]
+	(* <- lang_en;;	*);
+=> nrel_idtf:
+	[множество, мощность которого равна 2]
+	(* <- lang_ru;;	*);
+=> nrel_idtf:
+	[двухэлементное множество]
+	(* <- lang_ru;;	*);
+	
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://nl_files/explanation_for_pair_set.html"
+		(* <- lang_ru;; *);;
+		*);;
+	*);;

@@ -1,0 +1,29 @@
+sc_node_not_relation -> infinite_set;;
+
+infinite_set
+=> nrel_main_idtf:
+	[бесконечное множество]
+	(* <- lang_ru;;	*);
+	[infinite set]
+	(* <- lang_en;;	*);
+=> nrel_idtf:
+	[множество с бесконечным количеством элементов]
+	(* <- lang_ru;;	*);
+
+<= nrel_subdividing:
+	{
+	countable_set;
+	uncountable_set
+	};
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://nl_files/explanation_for_infinite_set.html"
+		(* <- lang_ru;; *);;
+		*);;
+	*);;

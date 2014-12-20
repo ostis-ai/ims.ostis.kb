@@ -1,0 +1,27 @@
+sc_node_not_relation -> singletone;;
+
+singletone
+=> nrel_main_idtf:
+	[синглетон]
+	(* <- lang_ru;;	*);
+	[singletone]
+	(* <- lang_en;;	*);
+=> nrel_idtf:
+	[множество, мощность которого равна 1] 
+	(* <- lang_ru;;	*);
+=> nrel_idtf:
+	[одноэлементное множество] 
+	(* <- lang_ru;;	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://nl_files/explanation_for_singletone.html"
+		(* <-lang_ru;; *);;
+		*);;
+	*);;

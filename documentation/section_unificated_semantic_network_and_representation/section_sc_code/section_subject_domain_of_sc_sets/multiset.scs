@@ -1,0 +1,30 @@
+sc_node_not_relation -> multiset;;
+
+multiset
+=> nrel_main_idtf:
+	[мультимножество]
+	(* <- lang_ru;; *);
+	[multiset]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[множество, имеющее кратные вхождения хотя бы одного элемента]
+	(* <- lang_ru;;	*);
+	[множество с кратными элементами]
+	(* <- lang_ru;;	*);
+	[множество с кратными вхождениями]
+	(* <- lang_ru;;	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+			->
+			
+			"file://nl_files/explanation_for_multiset.html"
+			
+			(*<- lang_ru;; *);;
+			*);;
+	*);;

@@ -1,0 +1,69 @@
+sc_node_norole_relation -> nrel_inclusion;;
+taxonomy_relation -> nrel_inclusion;;
+
+nrel_inclusion
+=> nrel_main_idtf:
+	[включение*]
+	(* <- lang_ru;;	*);
+	[inclusion*]
+	(* <- lang_en;;	*);
+=> nrel_idtf:
+	[включение множества*]
+	(* <- lang_ru;;	*);
+	
+=> nrel_first_domain:
+	set;
+=> nrel_second_domain:
+	set;
+=> nrel_definitional_domain:
+	set;
+	
+<- binary_relation;
+<- oriented_relation;
+	
+<- rrel_key_sc_element:
+	[*^"file://nl_files/nrel_inclusion.scsi"*] 
+	(* 
+	<- typical_sc_neighborhood;; 
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://nl_files/explanation_for_nrel_inclusion.html"
+			(* <- lang_ru;; *);;
+		*);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_sc_neighborhood;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		<= nrel_strict_inclusion:
+			sc.g_text;;
+			
+		-> rrel_example:
+			"file://nl_files/nrel_inclusion.png";;
+			
+		*);;
+	*);
+	
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_illustration;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://nl_files/explanation_for_nrel_inclusion_diag.png";;
+		*);;
+	*);;

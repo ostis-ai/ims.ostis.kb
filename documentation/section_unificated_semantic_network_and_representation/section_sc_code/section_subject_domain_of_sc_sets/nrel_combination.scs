@@ -1,0 +1,68 @@
+sc_node_norole_relation -> nrel_combination;;
+
+nrel_combination
+<- quasybinary_relation;
+=> nrel_main_idtf:
+	[объединение*]
+	(* <- lang_ru;;	*);
+	[combination*]
+	(* <- lang_en;; *);
+	
+=> nrel_idtf:
+	[объединение множеств*] 
+	(* <- lang_ru;; *);
+	
+=> nrel_first_domain:
+	... (* <= nrel_boolean: set;; *);
+	
+=> nrel_second_domain:
+	set;
+
+=> nrel_definitional_domain:
+	... 
+	(*
+	<= nrel_combination: 
+		{
+		set;
+		...
+		(* <= nrel_boolean: set;; *)
+		};;
+	*);
+	
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_definition;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+			-> rrel_example:
+				"file://nl_files/explanation_for_nrel_combination.html"
+					(*<- lang_ru;;*);;
+			*);;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- typical_sc_neighborhood;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+			<= nrel_strict_inclusion:
+				sc.g_text;;
+			-> rrel_example:
+				"file://nl_files/nrel_combination.png";;
+			*);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- image;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://nl_files/explanation_for_nrel_combination_diag.png";;
+		*);;
+	*);;

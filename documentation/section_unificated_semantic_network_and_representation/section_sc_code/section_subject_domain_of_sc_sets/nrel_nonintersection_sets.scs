@@ -1,0 +1,65 @@
+sc_node_norole_relation -> nrel_nonintersection_sets;;
+
+nrel_nonintersection_sets
+<- binary_relation;
+<- non_oriented_relation;
+
+=> nrel_main_idtf:
+	[непересекающиеся множества*] 
+	(* <- lang_ru;; *);
+	[nonintersection sets*] 
+	(* <- lang_en;;	*);
+
+=> nrel_idtf:
+	[быть парой непересекающихся множеств*]
+	(* <- lang_ru;;	*);	
+	[быть парой множеств, не имеющих общие элементы*]
+	(* <- lang_ru;;	*);	
+	
+=> nrel_first_domain:
+	set;
+	
+=> nrel_second_domain:
+	set;
+	
+=> nrel_definitional_domain:
+	set;	
+	
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					"file://nl_files/explanation_for_nonintersection_sets.html"
+					(*<- lang_ru;;*);;
+			*);;
+	*);
+	
+<- rrel_key_sc_element:
+	...
+	(*
+		<- typical_sc_neighborhood;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				<= nrel_strict_inclusion:
+					sc.g_text;;
+				-> rrel_example:
+				"file://nl_files/nrel_nonintersection_sets.png";;
+			*);;
+	*);
+	
+<- rrel_key_sc_element:
+	...
+	(*
+	<- image;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://nl_files/nonintersection_sets_diag.png";;
+		*);;
+	*);;

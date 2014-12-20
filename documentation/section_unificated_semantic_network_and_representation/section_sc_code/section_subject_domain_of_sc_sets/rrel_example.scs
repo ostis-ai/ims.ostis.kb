@@ -1,0 +1,38 @@
+sc_node_role_relation -> rrel_example;;
+
+rrel_example
+=> nrel_main_idtf:
+	[пример']
+	(* <- lang_ru;;	*);
+	[sample']
+	(* <- lang_en;; *);	
+=> nrel_idtf:
+	[типичный пример']
+	(* <- lang_ru;;	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- typical_sc_neighborhood;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+			<= nrel_strict_inclusion:
+				sc.g_text;;
+			-> rrel_example:
+				"file://nl_files/rrel_example.png";;
+			*);;
+	*);
+	
+<- nrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://nl_files/explanation_for_rrel_example.html"
+		(* <- lang_ru;; *);;
+		*);;
+	*);;
