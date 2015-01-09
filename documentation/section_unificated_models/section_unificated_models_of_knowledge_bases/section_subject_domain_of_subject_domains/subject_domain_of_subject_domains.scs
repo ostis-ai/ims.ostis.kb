@@ -24,19 +24,16 @@ subject_domain_of_subject_domains
 -> rrel_studied_object_class:
 	subject_domain_sc_model;
 	
--> rrel_relation:
+-> rrel_studied_relation:
 	nrel_particular_subject_domain;
--> rrel_relation:
-	rrel_class_of_classes;
--> rrel_relation:
-	rrel_maximum_primary_element_class;
--> rrel_relation:
+-> rrel_studied_relation:
 	rrel_maximum_studied_object_class;
--> rrel_relation:
-	rrel_non_studied_external_class;
--> rrel_relation:
-	rrel_relation;
--> rrel_relation:
+-> rrel_studied_relation:
 	rrel_studied_object_class;
--> rrel_relation:
-	rrel_studied_secondary_object_class;;
+-> rrel_studied_relation:
+	rrel_class_non_studied_objects;
+-> rrel_studied_relation:
+	rrel_non_studied_relation;
+-> rrel_studied_relation:
+	rrel_studied_relation;;
+

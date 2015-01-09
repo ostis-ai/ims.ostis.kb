@@ -1,15 +1,13 @@
 sc_node_not_relation -> secondary_subject_domain;;
 
 secondary_subject_domain
-	=> nrel_main_idtf:
+=> nrel_main_idtf:
 		[вторичная предметная область]
 		(* <- lang_ru;; *);
 		[secondary subject domain]
 		(* <- lang_en;; *);
-	=> nrel_idtf:
-		[предметная метаобласть]
-		(* <- lang_ru;; *);
-	<- rrel_key_sc_element:
+
+<- rrel_key_sc_element:
 		...
 		(*
 			<- sc_explanation;;
