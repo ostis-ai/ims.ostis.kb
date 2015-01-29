@@ -1,0 +1,33 @@
+knowledge_base_IMS
+=> nrel_main_idtf:
+	[База знаний IMS]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[Knowledge base IMS]
+	(* <- lang_en;; *);
+
+<= nrel_section_decomposition:
+	{
+        	doc_technology_ostis
+		(*
+		=> nrel_section_base_order: 
+			doc_IMS;;
+		*);
+		doc_IMS
+		(*
+		=> nrel_section_base_order: 
+			context_technology_OSTIS_and_Metasystem_IMS_in_the_Global_knowledge_base;;
+		*);
+		context_technology_OSTIS_and_Metasystem_IMS_in_the_Global_knowledge_base
+		(*
+		=> nrel_section_base_order: 
+			history_of_development_IMS;;
+		*);
+		history_of_development_IMS
+		(*
+		=> nrel_section_base_order: 
+			doc_project_IMS	;;
+		*);
+		doc_project_IMS
+	};;
+

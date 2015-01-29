@@ -1,0 +1,21 @@
+section_subsystem_to_support_the_integrated_design_of_unified_logical_semantic_models_of_user_interfaces_of_intelligent_systems_and_platform_specific_options
+=> nrel_main_idtf:
+	[Раздел. Подсистема для поддержки комплексного проектирования унифицированных логико-семантических моделей пользовательских интерфейсов интеллектуальных систем и их платформенно-зависимых вариантов]
+	(* <- lang_ru;; *);
+	[Section. Subsystem to support the integrated design of unified logical-semantic models of user interfaces of intelligent systems and platform-specific options]
+	(* <- lang_en;; *);
+
+<= nrel_section_decomposition:
+	{
+		section_subsystem_for_advisory_services_and_training_developers_of_user_interfaces_of_intelligent_systems
+		(*
+		=> nrel_section_base_order: 
+			section_subsystem_for_information_support_and_automation_of_designing_user_interfaces_of_intelligent_systems;;
+		*);
+		section_subsystem_for_information_support_and_automation_of_designing_user_interfaces_of_intelligent_systems
+		(*
+		=> nrel_section_base_order: 
+			section_subsystem_for_information_support_and_automation_of_user_interface_design_of_intelligent_systems;;
+		*);
+		section_subsystem_for_information_support_and_automation_of_user_interface_design_of_intelligent_systems
+	};;

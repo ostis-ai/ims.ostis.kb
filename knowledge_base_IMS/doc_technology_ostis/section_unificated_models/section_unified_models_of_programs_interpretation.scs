@@ -1,0 +1,25 @@
+section_unified_models_of_programs_interpretation
+=> nrel_main_idtf:
+	[Раздел. Унифицированные логико-семантические модели машин  интерпретации программ, хранимых в sc-памяти и ориентированных на обработку sc-моделей баз знаний]
+	(* <- lang_ru;; *);
+	[Section. Unified logical-semantic models of the machines interpretation of programs stored in sc-memory and oriented on processing sc-models of knowledge bases]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[Раздел. Sc-модели интерпретации программ, представленных в SC-коде и ориентированных на обработку текстов SC-кода]
+	(* <- lang_ru;; *);
+	[Раздел. Семейство языков программирования, ориентированных на обработку унифицированных семантических моделей баз знаний]
+	(* <- lang_ru;; *);
+
+=> nrel_introduction:
+	introduction_section_unified_models_of_programs_interpretation;
+
+<= nrel_section_decomposition:
+	{
+	section_set_of_programing_languages_oriented_to_process_models_of_knowlegde_base
+	(*
+	=> nrel_section_base_order: 
+		section_syntatx_and_semantic_of_base_programming_language_that_oriented_to_process_models_of_knowlegde_base;;
+	*);
+	section_syntatx_and_semantic_of_base_programming_language_that_oriented_to_process_models_of_knowlegde_base
+	};;

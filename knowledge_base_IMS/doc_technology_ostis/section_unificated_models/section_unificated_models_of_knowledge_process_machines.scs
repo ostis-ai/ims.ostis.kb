@@ -1,0 +1,58 @@
+section_unificated_models_of_knowledge_process_machines
+
+=> nrel_main_idtf:
+	[Раздел. Унифицированные логико-семантические модели машин обработки знаний]
+	(* <- lang_ru;; *);
+	[Section. Unified semantic models of knowledge processing machines]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[Раздел. sc-модель машины обработки знаний]
+	(* <- lang_ru;; *);
+	[Раздел. sc-машина]
+	(* <- lang_ru;; *);
+
+<= nrel_section_base_order: section_unificated_models_of_knowledge_bases;
+=> nrel_section_base_order: section_unificated_models_of_interface;
+
+<= nrel_section_decomposition:
+	{
+		section_subject_domain_of_questions_and_tasks
+		(*
+		=> nrel_section_base_order: 
+			section_unified_models_of_programs_interpretation;;
+		*);
+		section_unified_models_of_programs_interpretation
+		(*
+		=> nrel_section_base_order: 
+			section_unified_model_of_information_search;;
+		*);
+		section_unified_model_of_information_search
+		(*
+		=> nrel_section_base_order: 
+			section_unified_model_of_knowledge_integration_into_base;;
+		*);
+		section_unified_model_of_knowledge_integration_into_base
+		(*
+		=> nrel_section_base_order: 
+			section_unified_model_of_ontology_alignment;;
+		*);
+		section_unified_model_of_ontology_alignment
+		(*
+		=> nrel_section_base_order: 
+			section_unified_models_of_solution_search_of_formulated_tasks;;
+		*);
+		section_unified_models_of_solution_search_of_formulated_tasks
+		(*
+		=> nrel_section_base_order: 
+			section_unified_models_of_logical_solvers;;
+		*);
+		section_unified_models_of_logical_solvers
+		(*
+		=> nrel_section_base_order: 
+			section_unified_model_of_garbage_collection;;
+		*);
+		section_unified_model_of_garbage_collection
+	};
+	
+=> nrel_introduction:
+	introduction_section_unificated_models_of_knowledge_process_machines;;

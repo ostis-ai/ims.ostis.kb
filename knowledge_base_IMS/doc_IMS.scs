@@ -1,0 +1,69 @@
+doc_IMS
+=> nrel_main_idtf:
+	[Документация. IMS]
+	(* <- lang_ru;; *);
+	[Documentation. IMS]
+	(* <- lang_en;; *);
+	
+=> nrel_idtf:
+	[Документация. Метасистема IMS]
+	(* <- lang_ru;; *);
+=> nrel_idtf:
+	[Раздел. IMS.OSTIS]
+	(* <- lang_ru;; *);
+=> nrel_idtf:
+	[Раздел. Полное описание Метасистемы IMS.OSTIS]
+	(* <- lang_ru;; *);
+=> nrel_idtf:
+	[Документация. Интеллектуальная метасистема, построенная по Технологии OSTIS и ориентированная на комплексную поддержку проектирования интеллектуальных систем на основе Технологии OSTIS]
+	(* <- lang_ru;; *);
+	
+<= nrel_section_decomposition:
+	{
+		justification_of_development_IMS
+		(*
+		=> nrel_section_base_order: 
+			justification_of_the_choice_platform_implementation_of_IMS;;
+		*);
+		justification_of_the_choice_platform_implementation_of_IMS
+		(*
+		=> nrel_section_base_order: 
+			structure_knowledge_base_IMS;;
+		*);
+		structure_knowledge_base_IMS
+		(*
+		=> nrel_section_base_order: 
+			structure_machine_knowledge_processing_IMS;;
+		*);
+		structure_machine_knowledge_processing_IMS
+		(*
+		=> nrel_section_base_order: 
+			structure_IMS_user_interface;;
+		*);
+		structure_IMS_user_interface
+		(*
+		=> nrel_section_base_order: 
+			section_the_IMS_for_advisory_services_and_end_user_training_IMS;;
+		*);
+		section_the_IMS_for_advisory_services_and_end_user_training_IMS
+		(*
+		=> nrel_section_base_order: 
+			section_the_IMS_for_design_automation_IMS;;
+		*);
+		section_the_IMS_for_design_automation_IMS
+		(*
+		=> nrel_section_base_order: 
+			section_the_IMS_to_design_management_IMS;;
+		*);
+		section_the_IMS_to_design_management_IMS
+		(*
+		=> nrel_section_base_order: 
+			section_the_IMS_for_information_security_management_IMS;;
+		*);
+		section_the_IMS_for_information_security_management_IMS
+		(*
+		=> nrel_section_base_order: 
+			section_systems_developed_with_IMS;;
+		*);
+		section_systems_developed_with_IMS
+	};;

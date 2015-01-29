@@ -1,0 +1,52 @@
+section_sc_code
+=> nrel_main_idtf:
+	[Раздел. SC-код]
+	(* <- lang_ru;; *);
+	[Section. SC-code]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[Раздел. Абстрактный графовый язык унифицированных семантических сетей]
+	(* <- lang_ru;; *);
+	[Раздел. Формальное уточнение понятия унифицированной семантической сети]
+	(* <- lang_ru;; *);
+
+<= nrel_section_decomposition:
+	{
+		justification_of_development_sc_code
+		(*
+		=> nrel_section_base_order: 
+			section_subject_domain_of_sc_signs;;
+		*);
+		section_subject_domain_of_sc_signs
+		(*
+		=> nrel_section_base_order: 
+			section_subject_domain_of_sc_sets;;
+		*);
+		section_subject_domain_of_sc_sets
+		(*
+		=> nrel_section_base_order: 
+			section_subject_domain_of_sc_ligaments_and_relations;;
+		*);
+		section_subject_domain_of_sc_ligaments_and_relations
+		(*
+		=> nrel_section_base_order: 
+			section_subject_domain_of_parameters_and_their_values;;
+		*);
+		section_subject_domain_of_parameters_and_their_values
+		(*
+		=> nrel_section_base_order: 
+			section_subject_domain_of_sc_structures;;
+		*);
+		section_subject_domain_of_sc_structures
+		(*
+		=> nrel_section_base_order: 
+			section_subject_domain_of_sc_links;;
+		*);
+		section_subject_domain_of_sc_links
+		(*
+		=> nrel_section_base_order: 
+			section_subject_domain_of_sc_identifiers;;
+		*);
+		section_subject_domain_of_sc_identifiers
+	};;

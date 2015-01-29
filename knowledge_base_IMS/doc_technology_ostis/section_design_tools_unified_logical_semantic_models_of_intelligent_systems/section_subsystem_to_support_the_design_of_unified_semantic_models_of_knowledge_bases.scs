@@ -1,0 +1,21 @@
+section_subsystem_to_support_the_design_of_unified_semantic_models_of_knowledge_bases
+=> nrel_main_idtf:
+	[Раздел. Подсистема для поддержки проектирования унифицированных семантических моделей баз знаний]
+	(* <- lang_ru;; *);
+	[Section. Subsystem to support the design of unified semantic models of knowledge bases]
+	(* <- lang_en;; *);
+
+<= nrel_section_decomposition:
+	{
+		section_subsystem_for_advisory_services_and_training_developers_unified_semantic_models_of_knowledge_bases
+		(*
+		=> nrel_section_base_order: 
+			section_subsystem_for_information_support_and_design_automation_unified_semantic_models_of_knowledge_bases;;
+		*);
+		section_subsystem_for_information_support_and_design_automation_unified_semantic_models_of_knowledge_bases
+		(*
+		=> nrel_section_base_order: 
+			section_subsystem_for_information_support_and_automation_of_the_design_of_unified_semantic_models_of_knowledge_bases;;
+		*);
+		section_subsystem_for_information_support_and_automation_of_the_design_of_unified_semantic_models_of_knowledge_bases
+	};;

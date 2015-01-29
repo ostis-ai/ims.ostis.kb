@@ -1,0 +1,38 @@
+section_scn_code
+=> nrel_main_idtf:
+	[Раздел. SCn-код]
+	(* <- lang_ru;; *);
+	[Section: SCn-code]
+	(* <- lang_en;; *);
+
+<= nrel_sc_text_translation:
+	"file://nl_files/section_scn_code_pdf.html"
+	(* <- lang_ru;; *);
+
+<= nrel_section_decomposition:
+	{
+	justification_of_development_scn_code
+	(*
+	=> nrel_section_base_order: 
+		section_scn_code_level_1;;
+	*);
+	section_scn_code_level_1
+	(*
+	=> nrel_section_base_order: 
+		section_scn_code_level_2;;
+	*);
+	section_scn_code_level_2
+	(*
+	=> nrel_section_base_order: 
+		section_scn_code_level_3;;
+	*);
+	section_scn_code_level_3
+	(*
+	=> nrel_section_base_order: 
+		section_scn_code_level_4;;
+	*);
+	section_scn_code_level_4
+	};
+
+=> nrel_introduction:
+	introduction_section_scn_code;;
