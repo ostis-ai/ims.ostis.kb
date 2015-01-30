@@ -3,4 +3,17 @@ section_library_of_reusable_components_processing_machinery_knowledge
 	[Раздел. Библиотека многократно используемых компонентов машин обработки знаний]
 	(* <- lang_ru;; *);
 	[Section. Library of reusable components processing machinery knowledge]
-	(* <- lang_en;; *);;
+	(* <- lang_en;; *);
+
+
+<= nrel_section_decomposition:
+	{
+	section_library_of_reusable_sc_agents
+	(*
+	=> nrel_section_base_order: 
+		section_library_of_reusable_programs_for_sc_text_processing;;
+	*);
+	section_library_of_reusable_programs_for_sc_text_processing
+	};;
+
+section_library_of_reusable_components_processing_machinery_knowledge = [*^"file://section_library_of_reusable_components_processing_machinery_knowledge.scsi"*];;

@@ -1,0 +1,25 @@
+lib_component_proc_of_finding_identifier
+=> nrel_main_idtf:
+	[Компонент библиотеки. scp-программа поиска идентификаторов]
+	(* <- lang_ru;; *);
+	[Library component. scp-program of identifier search]
+	(* <- lang_en;; *);
+
+<- platform_independent_reusable_component_OSTIS;
+<- reusable_scp_program;
+
+-> rrel_key_sc_element: 
+	proc_of_finding_identifier;
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Proc_Identifier.html" 
+				(* <- lang_ru;; *);;
+		*);;
+	*);;

@@ -1,0 +1,25 @@
+lib_component_proc_of_finding_translation
+=> nrel_main_idtf:
+	[Компонент библиотеки. scp-программа поиска трансляции]
+	(* <- lang_ru;; *);
+	[Library component. scp-program of translation search]
+	(* <- lang_en;; *);
+
+<- platform_independent_reusable_component_OSTIS;
+<- reusable_scp_program;
+
+-> rrel_key_sc_element: 
+	proc_of_finding_translation;
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Proc_Translation.html"
+				(* <- lang_ru;; *);;
+		*);;
+	*);;

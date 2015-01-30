@@ -1,0 +1,214 @@
+agent_of_finding_theorems
+=> nrel_main_idtf:
+	[агентная scp-программа поиска теорем для заданной онтологии] 
+	(* <- lang_ru;; *);
+	[agent scp-program of finding_theorems for given ontology] 
+	(* <- lang_en;; *);
+
+	<- agent_scp_program;;
+
+scp_program -> agent_of_finding_theorems 
+	(*
+	-> rrel_params: .agent_of_finding_theorems_params 
+		(*
+		-> rrel_1: rrel_in: _event;;
+		-> rrel_2: rrel_in: _input_arc;;
+		*);;
+
+	-> rrel_operators: .agent_of_finding_theorems_operator_set 
+		(*		
+		-> rrel_init: .agent_of_finding_theorems_operator1A 
+			(*
+			 <- searchElStr3;;
+		  	-> rrel_1: rrel_assign: rrel_scp_var: _temp;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_var: _input_arc;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _quest;;
+
+		  	=> nrel_goto: .agent_of_finding_theorems_operator1B;;
+			*);;
+
+		-> .agent_of_finding_theorems_operator1B 
+			(*
+			<- searchElStr3;;
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: question_finding_theorems;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+
+		  	=> nrel_then: .agent_of_finding_theorems_operator1C;;
+		  	=> nrel_else: .agent_of_finding_theorems_operator_return;;
+			*);;
+
+		-> .agent_of_finding_theorems_operator1C 
+			(*
+			<- searchElStr3;;
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+		 	-> rrel_3: rrel_assign: rrel_scp_var: _elem;;	
+
+                 	=> nrel_then: .agent_of_finding_theorems_operator1D;;
+                 	=> nrel_else: .agent_of_finding_theorems_operator_return;;
+                 	*);;  
+
+		-> .agent_of_finding_theorems_operator1D 
+			(*
+			<- genEl;;
+		 	-> rrel_1: rrel_assign: rrel_const: rrel_node: rrel_scp_var: _answer;;
+		 
+		 	=> nrel_goto: .agent_of_finding_theorems_operator2A;;
+                 	*);;
+
+		-> .agent_of_finding_theorems_operator2A 
+			(*
+			<- searchSetStr5;;
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _elem;;
+		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		 	-> rrel_3: rrel_assign: rrel_scp_var: _el2;;
+                 	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		 	-> rrel_5: rrel_fixed: rrel_scp_const: rrel_theorem;;
+	         
+                 	-> rrel_set_3: rrel_assign: rrel_scp_var: _all_statements;;
+
+                	=> nrel_then: .agent_of_finding_theorems_operator2B;;
+		 	=> nrel_else: .agent_of_finding_theorems_operator_return;;
+                 	*);;
+
+		-> .agent_of_finding_theorems_operator2B 
+			(*
+			<- searchSetStr5;;
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _elem;;
+		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		 	-> rrel_3: rrel_assign: rrel_scp_var: _elem2;;
+                 	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		 	-> rrel_5: rrel_fixed: rrel_scp_const: rrel_theorem;;
+
+	         	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+                 	-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer;;
+                 	-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer;;
+
+                 	=> nrel_then: .agent_of_finding_theorems_operator2C;;
+		 	=> nrel_else: .agent_of_finding_theorems_operator_return;;
+                 	*);;
+
+		-> .agent_of_finding_theorems_operator2C 
+			(*
+			<- searchElStr3;;
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _all_statements;;
+		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+		 	-> rrel_3: rrel_assign: rrel_scp_var: _nessecary_vertex;;
+
+		 	=> nrel_then: .agent_of_finding_theorems_operator2D;;
+                 	=> nrel_else: .agent_of_finding_theorems_operator3A;;
+		 	*);; 
+
+		-> .agent_of_finding_theorems_operator2D 
+			(*
+			<- eraseEl;;
+		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc;;
+
+                 	=> nrel_goto: .agent_of_finding_theorems_operator2E;;
+		 	*);;
+
+		-> .agent_of_finding_theorems_operator2E
+			(*
+		 	<- searchElStr5;;
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _nessecary_vertex;;
+		 	-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+		 	-> rrel_3: rrel_assign: rrel_scp_var: _smth;;
+                 	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		 	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_main_idtf;;
+
+                 	=> nrel_then: .agent_of_finding_theorems_operator2F;;
+			=> nrel_else: .agent_of_finding_theorems_operator2C;;
+                 	*);;
+
+		-> .agent_of_finding_theorems_operator2F 
+			(*
+			<- call;;
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_finding_identifier;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .proc_finding_theorems_operator2F_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _nessecary_vertex;;
+				-> rrel_2: rrel_fixed: rrel_scp_var: _answer;;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .agent_of_finding_theorems_operator2G;;
+			*);;
+
+		-> .agent_of_finding_theorems_operator2G 
+			(*
+			<- waitReturn;;
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .agent_of_finding_theorems_operator2C;;
+			*);;				
+
+		-> .agent_of_finding_theorems_operator3A 
+			(*
+			<- searchSetStr3;;
+			-> rrel_1: rrel_fixed: rrel_scp_const: sc_ontology;;
+		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		 	-> rrel_3: rrel_fixed: rrel_scp_var: _elem;;
+
+	         	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+
+                 	=> nrel_goto: .agent_of_finding_theorems_operator3B;;
+                 	*);;		
+
+		-> .agent_of_finding_theorems_operator3B 
+			(*
+			<- genElStr3;;
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _elem;;
+
+		  	=> nrel_goto: .agent_of_finding_theorems_operator3C;;
+			*);;
+
+		-> .agent_of_finding_theorems_operator3C 
+			(*
+			<- genElStr3;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_const: sc_ontology;;
+
+		  	=> nrel_goto: .agent_of_finding_theorems_operator3D;;
+			*);;	
+
+		-> .agent_of_finding_theorems_operator3D 
+			(*
+			<- genElStr3;;
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_const: rrel_theorem;;
+
+		  	=> nrel_goto: .agent_of_finding_theorems_operator3E;;
+			*);;
+
+		-> .agent_of_finding_theorems_operator3E 
+			(*
+			<- eraseEl;;
+			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _all_statements;;
+
+			=> nrel_goto: .agent_of_finding_theorems_gen_answer;;
+		 	*);;
+
+		-> .agent_of_finding_theorems_gen_answer 
+			(*
+		  	<- genElStr5;;
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+		  	-> rrel_2: rrel_assign: rrel_const: rrel_common: rrel_scp_var: _arc;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _answer;;
+		  	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		  	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_answer;;
+
+		  	=> nrel_goto: .agent_of_finding_theorems_operator_return;;
+			*);;
+					
+		-> .agent_of_finding_theorems_operator_return 
+			(*
+			<- return;;
+			*);;
+		*);;
+	*);;
+

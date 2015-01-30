@@ -7,27 +7,55 @@ section_library_OSTIS
 
 <= nrel_section_decomposition:
 	{
-		section_library_interpreters_unified_logical_semantic_models_of_intelligent_systems
-		(*
-		=> nrel_section_base_order: 
-			section_library_of_reusable_components_of_knowledge_bases;;
-		*);
-		section_library_of_reusable_components_of_knowledge_bases
-		(*
-		=> nrel_section_base_order: 
-			section_library_of_reusable_components_processing_machinery_knowledge;;
-		*);
-		section_library_of_reusable_components_processing_machinery_knowledge
-		(*
-		=> nrel_section_base_order: 
-			section_library_of_reusable_components_interfaces;;
-		*);
-		section_library_of_reusable_components_interfaces
-		(*
-		=> nrel_section_base_order: 
-			section_library_of_typical_subsystems_of_intelligent_systems;;
-		*);
-		section_library_of_typical_subsystems_of_intelligent_systems
-		
+	section_library_interpreters_unified_logical_semantic_models_of_intelligent_systems
+	(*
+	=> nrel_section_base_order: 
+		section_library_of_reusable_components_of_knowledge_bases;;
+	*);
+	section_library_of_reusable_components_of_knowledge_bases
+	(*
+	=> nrel_section_base_order: 
+		section_library_of_reusable_components_processing_machinery_knowledge;;
+	*);
+	section_library_of_reusable_components_processing_machinery_knowledge
+	(*
+	=> nrel_section_base_order: 
+		section_library_of_reusable_components_interfaces;;
+	*);
+	section_library_of_reusable_components_interfaces
+	(*
+	=> nrel_section_base_order: 
+		section_library_of_typical_subsystems_of_intelligent_systems;;
+	*);
+	section_library_of_typical_subsystems_of_intelligent_systems
+	};
+
+<= nrel_section_decomposition:
+	{
+	section_library_of_atomic_reusable_components
+	(*
+	=> nrel_section_base_order: 
+		section_library_of_non_atomic_reusable_components;;
+	*);
+	section_library_of_non_atomic_reusable_components
+	};
+
+<= nrel_section_decomposition:
+	{
+	section_library_of_platform_dependent_reusable_components
+	(*
+	=> nrel_section_base_order: 
+		section_library_of_platform_independent_reusable_components;;
+	*);
+	section_library_of_platform_independent_reusable_components
+	};
+
+<= nrel_section_decomposition:
+	{
+	section_copying_reusable_component_ostis
+	(*
+	=> nrel_section_base_order: 
+		section_pattern_of_typical_component_ostis;;
+	*);
+	section_pattern_of_typical_component_ostis
 	};;
-		

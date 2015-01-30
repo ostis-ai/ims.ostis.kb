@@ -1,0 +1,30 @@
+lib_component_agent_of_finding_illustrations
+=> nrel_main_idtf:
+	[Компонент библиотеки. sc-агент поиска иллюстраций]
+	(* <- lang_ru;; *);
+	[Library component. sc-agent of illustrations search]
+	(* <- lang_en;; *);
+
+<- platform_independent_reusable_component_OSTIS; 
+<- atomic_reusable_component_OSTIS; 
+<- reusable_scp_agent;
+
+=> nrel_attendant_component: 
+	lib_component_ui_menu_file_for_finding_illustrations; 
+
+-> rrel_key_sc_element: 
+	.platform_independent_realization_of_sc_agent_of_finding_illustrations; 
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Agent_Illustration.html"
+				(* <- lang_ru;; *);; 
+		*);;
+	*);;
+

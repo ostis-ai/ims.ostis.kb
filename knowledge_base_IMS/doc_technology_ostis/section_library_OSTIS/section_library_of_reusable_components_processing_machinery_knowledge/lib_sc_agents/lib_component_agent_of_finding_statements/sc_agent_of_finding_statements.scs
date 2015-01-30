@@ -1,0 +1,53 @@
+sc_agent_of_finding_statements
+=> nrel_main_idtf:
+	[sc-агент поиска утверждений для заданного понятия] 
+	(* <- lang_ru;; *);
+	
+	[sc-agent of finding statements for given concept] 
+	(* <- lang_en;; *);
+
+<- abstract_sc_agent;
+
+=> nrel_primary_initiation_condition: 
+	(sc_event_add_output_arc => question_initiated);
+
+=> nrel_initiation_condition_and_result: 
+	(..sc_agent_of_finding_statements_condition => ..sc_agent_of_finding_statements_result);
+
+<= nrel_sc_agent_key_sc_elements: 
+	{
+	question_initiated;
+	question;
+	question_of_finding_statements
+	};
+
+=> nrel_inclusion: 
+	.platform_independent_realization_of_sc_agent_of_finding_statements
+	(*
+	<- platform_independent_abstract_sc_agent;;
+	<= nrel_sc_agent_program: 
+		{
+		agent_of_finding_statements;
+		proc_of_finding_translation;
+		proc_of_finding_identifier	
+		};;
+	-> sc_agent_of_finding_statements_scp    
+		(* <- active_sc_agent;; *);;
+	*);;
+
+..sc_agent_of_finding_statements_condition
+= [*
+	question_of_finding_statements _-> .._question;;
+	question_initiated _-> .._question;;
+	question _-> .._question;;
+	.._question _-> .._parameter;;
+*];;
+
+..sc_agent_of_finding_statements_result
+= [*
+	question_of_finding_statements _-> .._question;;
+	question_finished _-> .._question;;
+	question _-> .._question;;
+	.._question _=> nrel_answer:: .._answer;;
+	.._question _-> .._parameter;;
+*];;
