@@ -1,0 +1,41 @@
+lib_component_ui_menu_file_for_finding_key_concepts
+=> nrel_main_idtf:
+	[Компонент библиотеки. Команда пользовательского интерфейса поиска ключевых понятий для заданной предметной области]
+	(* <- lang_ru;; *);
+	[Library component. User interface command of finding key concepts for given subject domain]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components;
+<- library_of_atomic_reusable_components;
+
+
+<- rrel_key_sc_element:
+	... 
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Ui_Key_Concepts.html"
+				(* <- lang_ru;; *);;
+		*);;
+	*);
+	
+<- rrel_key_sc_element:
+	... 
+	(*
+	<- sc_illustration;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://images/key_concepts.png";; 
+		*);;
+	*);;
+
+lib_component_ui_menu_file_for_finding_key_concepts = [*^"file://ui_menu_file_for_finding_key_concepts.scsi"*];; 
+
+
+
+

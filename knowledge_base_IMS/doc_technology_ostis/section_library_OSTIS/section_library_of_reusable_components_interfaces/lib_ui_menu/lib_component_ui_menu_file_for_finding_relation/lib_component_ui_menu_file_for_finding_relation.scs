@@ -1,0 +1,41 @@
+lib_component_ui_menu_file_for_finding_relation
+=> nrel_main_idtf:
+	[Компонент библиотеки. Команда пользовательского интерфейса поиска отношений, заданных на понятии]
+	(* <- lang_ru;; *);
+	[Library component. User interface command of finding relations, defined for given concept]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components;
+<- library_of_atomic_reusable_components;
+
+
+<- rrel_key_sc_element:
+	... 
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Ui_Relation.html"
+				(* <- lang_ru;; *);;
+		*);;
+	*);
+	
+<- rrel_key_sc_element:
+	... 
+	(*
+	<- sc_illustration;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://images/relation.png";; 
+		*);;
+	*);;
+
+lib_component_ui_menu_file_for_finding_relation = [*^"file://ui_menu_file_for_finding_relation.scsi"*];; 
+
+
+
+

@@ -1,0 +1,37 @@
+lib_component_ui_menu_file_for_finding_constants
+=> nrel_main_idtf:
+	[Компонент библиотеки. Команда пользовательского интерфейса для поиска констант, через которые определяется заданное понятие]
+	(* <- lang_ru;; *);
+	[Library component. User interface command for finding constants, which defined for given concept]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components;
+<- library_of_atomic_reusable_components;
+
+
+<- rrel_key_sc_element:
+	... 
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Ui_Constants.html"
+				(* <- lang_ru;; *);;
+		*);;
+	*);
+	
+<- rrel_key_sc_element:
+	... 
+	(*
+	<- sc_illustration;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://images/constants.png";; 
+		*);;
+	*);;
+
+lib_component_ui_menu_file_for_finding_constants = [*^"file://ui_menu_file_for_finding_constants.scsi"*];; 

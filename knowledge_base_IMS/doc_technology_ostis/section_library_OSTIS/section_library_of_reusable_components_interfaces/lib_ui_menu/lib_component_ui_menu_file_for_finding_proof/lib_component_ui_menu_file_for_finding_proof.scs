@@ -1,0 +1,37 @@
+lib_component_ui_menu_file_for_finding_proof
+=> nrel_main_idtf:
+	[Компонент библиотеки. Команда пользовательского интерфейса для поиска доказательства]
+	(* <- lang_ru;; *);
+	[Library component. User interface command for proof search]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components;
+<- library_of_atomic_reusable_components;
+
+
+<- rrel_key_sc_element:
+	... 
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Ui_Proof.html"
+				(* <- lang_ru;; *);;
+		*);;
+	*);
+	
+<- rrel_key_sc_element:
+	... 
+	(*
+	<- sc_illustration;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://images/proof.png";; 
+		*);;
+	*);;
+
+lib_component_ui_menu_file_for_finding_proof = [*^"file://ui_menu_file_for_finding_proof.scsi"*];; 

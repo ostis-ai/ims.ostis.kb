@@ -1,0 +1,41 @@
+lib_component_ui_menu_file_for_finding_main_concept
+=> nrel_main_idtf:
+	[Компонент библиотеки. Команда пользовательского интерфейса запроса понятий, которые определяются на основе заданного]
+	(* <- lang_ru;; *);
+	[Library component. User interface command of request of concepts, which are defined on the base of given]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components;
+<- library_of_atomic_reusable_components;
+
+
+<- rrel_key_sc_element:
+	... 
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Ui_Main_concept.html"
+				(* <- lang_ru;; *);;
+		*);;
+	*);
+	
+<- rrel_key_sc_element:
+	... 
+	(*
+	<- sc_illustration;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://images/main_concept.png";; 
+		*);;
+	*);;
+
+lib_component_ui_menu_file_for_finding_main_concept = [*^"file://ui_menu_file_for_finding_main_concept.scsi"*];; 
+
+
+
+
