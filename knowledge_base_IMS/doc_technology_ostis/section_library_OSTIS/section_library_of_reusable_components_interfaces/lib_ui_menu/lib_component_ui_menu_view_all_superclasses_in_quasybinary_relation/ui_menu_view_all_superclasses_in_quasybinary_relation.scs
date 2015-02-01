@@ -1,0 +1,18 @@
+ui_menu_view_all_superclasses_in_quasybinary_relation <- ui_user_command_class_atom; ui_user_command_class_view_kb;;
+
+ui_menu_view_all_superclasses_in_quasybinary_relation => nrel_main_idtf: [Запрос всех надклассов] (* <- lang_ru;; *);;
+ui_menu_view_all_superclasses_in_quasybinary_relation => nrel_main_idtf: [Request of all superclasses] (* <- lang_en;; *);;
+
+ui_menu_view_all_superclasses_in_quasybinary_relation => ui_nrel_command_template:
+	[*
+		question_search_all_superclasses_in_quasybinary_relation _-> ._question_search_all_superclasses_in_quasybinary_relation_instance
+			(*
+				_-> ui_arg_1;;				
+			*);;
+		._question_search_all_superclasses_in_quasybinary_relation_instance _<- question;;
+	*];;
+
+
+
+ui_menu_view_all_superclasses_in_quasybinary_relation => ui_nrel_command_lang_template: [Запрос всех надклассов: $ui_arg_1] (* <- lang_ru;; *);;
+ui_menu_view_all_superclasses_in_quasybinary_relation => ui_nrel_command_lang_template: [Request of all superclasses: $ui_arg_1] (* <- lang_en;; *);;

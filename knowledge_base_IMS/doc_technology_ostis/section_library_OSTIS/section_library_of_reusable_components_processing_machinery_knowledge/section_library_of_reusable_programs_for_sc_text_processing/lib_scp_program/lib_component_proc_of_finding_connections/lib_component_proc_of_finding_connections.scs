@@ -1,0 +1,25 @@
+lib_component_proc_of_finding_connections
+=> nrel_main_idtf:
+	[Компонент библиотеки. scp-программа поиска связей между двумя понятиями]
+	(* <- lang_ru;; *);
+	[Library component. scp-program of connections search between two concepts]
+	(* <- lang_en;; *);
+
+<- platform_independent_reusable_component_OSTIS;
+<- reusable_scp_program;
+
+-> rrel_key_sc_element: 
+	proc_of_finding_connections;
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Proc_Connections.html"
+				(* <- lang_ru;; *);;
+		*);;
+	*);;

@@ -1,0 +1,49 @@
+sc_agent_of_pattern_search
+=> nrel_main_idtf:
+	[sc-агент поиска всех конструкций, изоморфных заданному образцу] (* <- lang_ru;; *);
+	[sc-agent of search of all constructions, which are isomorphic to given pattern] (* <- lang_en;; *);
+<- abstract_sc_agent;
+=> nrel_primary_initiation_condition: (sc_event_add_output_arc => question_initiated);
+=> nrel_initiation_condition_and_result: (..sc_agent_of_pattern_search_initiation_condition 
+=> ..sc_agent_of_pattern_search_result);
+<= nrel_sc_agent_key_sc_elements: 
+	{
+		question_initiated;
+		question;
+		question_pattern_search
+	};
+
+=> nrel_inclusion: 
+	.c_realization_of_agent_of_pattern_search
+	(*
+		<- platform_dependent_abstract_sc_agent;;
+		<= nrel_sc_agent_program: 
+		{
+			[owner=deniskoronchik; repo=sc-machine; path= sc-kpm/search/agents/search_pattern/sc_system_operators.cpp; syntax=cpp] (* => nrel_format: format_github_source_link;; *);
+			[owner=deniskoronchik; repo=sc-machine; path= sc-kpm/search/agents/search_pattern/sc_system_search.cpp; syntax=cpp] (* => nrel_format: format_github_source_link;; *);
+			[owner=deniskoronchik; repo=sc-machine; path= sc-kpm/search/agents/search_pattern/search_pattern_functions.cpp; syntax=cpp] (* => nrel_format: format_github_source_link;; *);
+			[owner=deniskoronchik; repo=sc-machine; path= sc-kpm/search/agents/search_pattern/sc_system_operators.h; syntax=cpp] (* => nrel_format: format_github_source_link;; *);
+			[owner=deniskoronchik; repo=sc-machine; path= sc-kpm/search/agents/search_pattern/sc_system_search.h; syntax=cpp] (* => nrel_format: format_github_source_link;; *);
+			[owner=deniskoronchik; repo=sc-machine; path= sc-kpm/search/agents/search_pattern/search_pattern_functions.h; syntax=cpp] (* => nrel_format: format_github_source_link;; *)
+		};;
+		
+		-> sc_agent_of_pattern_search_c (* <- active_sc_agent;; *);;
+	*);;
+
+..sc_agent_of_pattern_search_initiation_condition
+= [*
+	question_pattern_search _-> .._question;;
+	question_initiated _-> .._question;;
+	question _-> .._question;;
+	.._question _-> .._parameter;;
+*];;
+
+..sc_agent_of_pattern_search_result
+= [*
+	question_pattern_search _-> .._question;;
+	question_finished _-> .._question;;
+	question _-> .._question;;
+	.._question _=> nrel_answer:: .._answer;;
+	.._question _-> .._parameter;;
+*];;
+

@@ -1,0 +1,25 @@
+lib_component_agent_of_pattern_search
+=> nrel_main_idtf:
+	[Компонент библиотеки. sc-агент поиска всех конструкций, изоморфных заданному образцу] (* <- lang_ru;; *);
+	[Компонент библиотеки. sc-agent of search of all constructions, which are isomorphic to given pattern] (* <- lang_en;; *);
+
+<- library_of_platform_dependent_reusable_components; 
+<- library_of_atomic_reusable_components;
+
+=> nrel_attendant_component: 
+	lib_component_ui_menu_view_pattern_search; 
+
+-> rrel_key_sc_element: 
+	.c_realization_of_agent_of_pattern_search; 
+
+<- key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[Задачей sc-агента поиска поиска всех конструкций, полностью изоморфных заданному образцу, является поиск sc-конструкций полностью изоморфных заданному образцу поиска, содержащему хотя бы одну sc-переменную и хотя бы одну sc-константу.];;
+		*);;
+	*);;

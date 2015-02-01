@@ -1,0 +1,25 @@
+lib_component_proc_finding_overall_concepts
+=> nrel_main_idtf:
+	[Компонент библиотеки. scp-программа поиска общих надклассов/составных частей для двух множеств]
+	(* <- lang_ru;; *);
+	[Library component. scp-program of general superclasses/elements search for two sets]
+	(* <- lang_en;; *);
+
+<- platform_independent_reusable_component_OSTIS;
+<- reusable_scp_program;
+
+-> rrel_key_sc_element: 
+	proc_finding_overall_concepts;
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Proc_Superclass.html"
+				(* <- lang_ru;; *);;
+		*);;
+	*);;

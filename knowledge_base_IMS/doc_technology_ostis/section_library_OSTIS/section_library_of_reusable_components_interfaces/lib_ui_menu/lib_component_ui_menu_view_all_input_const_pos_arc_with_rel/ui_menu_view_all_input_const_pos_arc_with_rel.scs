@@ -1,0 +1,15 @@
+ui_menu_view_all_input_const_pos_arc_with_rel <- ui_user_command_class_atom; ui_user_command_class_view_kb;;
+
+ui_menu_view_all_input_const_pos_arc_with_rel => nrel_main_idtf: [Запрос позитивных, константных входящих дуг с отношениями] (* <- lang_ru;; *);;
+ui_menu_view_all_input_const_pos_arc_with_rel => nrel_main_idtf: [Request of positive, constant and input edges with relations] (* <- lang_en;; *);;
+ui_menu_view_all_input_const_pos_arc_with_rel => ui_nrel_command_template:
+	[*
+		question_search_all_input_const_pos_arcs_with_rel _-> ._question_search_all_input_const_pos_arcs_with_rel_instance
+			(*
+				_-> ui_arg_1;;				
+			*);;
+		._question_search_all_input_const_pos_arcs_with_rel_instance _<- question;;
+	*];;
+
+ui_menu_view_all_input_const_pos_arc_with_rel => ui_nrel_command_lang_template: [Запрос позитивных, константных входящих дуг с отношениями: $ui_arg_1] (* <- lang_ru;; *);;
+ui_menu_view_all_input_const_pos_arc_with_rel => ui_nrel_command_lang_template: [Request of positive, constant and input edges with relations: $ui_arg_1] (* <- lang_en;; *);;
