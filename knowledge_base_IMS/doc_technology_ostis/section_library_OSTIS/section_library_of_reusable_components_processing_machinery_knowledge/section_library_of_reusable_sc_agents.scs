@@ -3,6 +3,41 @@ section_library_of_reusable_sc_agents
 	[Раздел. Библиотека многократно используемых sc-агентов]
 	(* <- lang_ru;; *);
 	[Section. Library of reusable sc-agents]
-	(* <- lang_en;; *);;
+	(* <- lang_en;; *);
+
+<= nrel_section_decomposition:
+	{
+		section_kpm_agent_library_of_information_search
+		(*
+		=> nrel_section_base_order:
+			section_kpm_agent_library_of_knowledge_integration_into_base;;
+		*);
+		section_kpm_agent_library_of_knowledge_integration_into_base
+		(*
+		=> nrel_section_base_order:
+			section_kpm_agent_library_of_ontology_alignment;;
+		*);
+		section_kpm_agent_library_of_ontology_alignment
+		(*
+		=> nrel_section_base_order:
+			section_kpm_agent_library_of_solution_search_of_formulated_tasks;;
+		*);
+		section_kpm_agent_library_of_solution_search_of_formulated_tasks
+		(*
+		=> nrel_section_base_order:
+			section_kpm_agent_library_of_logical_inference;;
+		*);
+		section_kpm_agent_library_of_logical_inference
+		(*
+		=> nrel_section_base_order:
+			section_kpm_agent_library_of_garbage_collection;;
+		*);
+		section_kpm_agent_library_of_garbage_collection
+		(*
+		=> nrel_section_base_order:
+			section_kpm_agent_library_of_coordination;;
+		*);
+		section_kpm_agent_library_of_coordination
+	};;
 
 section_library_of_reusable_sc_agents = [*^"file://section_library_of_reusable_sc_agents.scsi"*];;
