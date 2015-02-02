@@ -1,0 +1,34 @@
+library_OSTIS
+=> nrel_main_idtf:
+	[Библиотека OSTIS]
+	(* <- lang_ru;; *);
+	[Library OSTIS]
+	(* <- lang_en;; *);
+
+<= nrel_subdividing:
+	{
+	library_interpreters_unified_logical_semantic_models_of_intelligent_systems;
+	library_of_reusable_components_of_knowledge_bases;
+	pattern_of_typical_component_ostis;
+	library_of_reusable_components_processing_machinery_knowledge;
+	library_of_reusable_components_interfaces;
+	library_of_typical_subsystems_of_intelligent_systems
+	};
+
+<= nrel_subdividing:
+	{
+	library_of_atomic_reusable_components;
+	library_of_non_atomic_reusable_components
+	};
+
+<= nrel_subdividing:
+	{
+	library_of_platform_dependent_reusable_components;
+	library_of_platform_independent_reusable_components
+	};
+
+<= nrel_subdividing:
+	{
+	copying_reusable_component_ostis;
+	pattern_of_typical_component_ostis
+	};;

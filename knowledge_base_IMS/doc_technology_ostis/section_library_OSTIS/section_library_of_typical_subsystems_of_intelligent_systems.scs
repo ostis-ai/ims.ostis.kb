@@ -7,16 +7,17 @@ section_library_of_typical_subsystems_of_intelligent_systems
 
 <= nrel_section_decomposition:
 	{
-		section_library_subsystems_for_advisory_services_and_training_component_developers_of_intelligent_systems
-		(*
-		=> nrel_section_base_order: 
-			section_library_subsystems_for_the_information_and_support_design_automation_components_of_intelligent_systems;;
-		*);
-		section_library_subsystems_for_the_information_and_support_design_automation_components_of_intelligent_systems
-		(*
-		=> nrel_section_base_order: 
+	section_library_subsystems_for_advisory_services_and_training_component_developers_of_intelligent_systems
+	(*
+	=> nrel_section_base_order: 
+		section_library_subsystems_for_the_information_and_support_design_automation_components_of_intelligent_systems;;
+	*);
+	section_library_subsystems_for_the_information_and_support_design_automation_components_of_intelligent_systems
+	(*
+	=> nrel_section_base_order: 
 			section_library_subsystems_for_information_support_and_automation_of_designing_intelligent_systems_components;;
-		*);
-		section_library_subsystems_for_information_support_and_automation_of_designing_intelligent_systems_components
-		
+	*);
+	section_library_subsystems_for_information_support_and_automation_of_designing_intelligent_systems_components		
 	};;
+
+section_library_of_typical_subsystems_of_intelligent_systems = [*^"file://section_library_of_typical_subsystems_of_intelligent_systems.scsi"*];;
