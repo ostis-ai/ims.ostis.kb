@@ -3,6 +3,16 @@ section_library_of_reusable_components_interfaces
 	[Раздел. Библиотека многократно используемых компонентов sc-моделей интерфейсов]
 	(* <- lang_ru;; *);
 	[Section. Library of reusable components of interfaces sc-models]
-	(* <- lang_en;; *);;
+	(* <- lang_en;; *);
+
+<= nrel_section_decomposition:
+	{
+	section_library_of_external_languages_description
+	(*
+	=> nrel_section_base_order: 
+		section_library_of_control_elements;;
+	*);
+	section_library_of_control_elements
+	};;
 
 section_library_of_reusable_components_interfaces = [*^"file://section_library_of_reusable_components_interfaces.scsi"*];;
