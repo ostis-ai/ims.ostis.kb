@@ -11,6 +11,10 @@ lib_component_proc_of_finding_connections
 -> rrel_key_sc_element: 
 	proc_of_finding_connections;
 
+=> nrel_attendant_component: 
+	lib_component_proc_finding_overall_concepts;
+	lib_component_proc_finding_arcs_between_concepts;
+
 <- rrel_key_sc_element: 
 	...
 	(*
@@ -20,7 +24,7 @@ lib_component_proc_of_finding_connections
 		(*
 		-> rrel_example:
 			"file://htmls/Proc_Connections.html"
-				(* <- lang_ru;; *);;
+			(* <- lang_ru;; *);;
 		*);;
 	*);;
 

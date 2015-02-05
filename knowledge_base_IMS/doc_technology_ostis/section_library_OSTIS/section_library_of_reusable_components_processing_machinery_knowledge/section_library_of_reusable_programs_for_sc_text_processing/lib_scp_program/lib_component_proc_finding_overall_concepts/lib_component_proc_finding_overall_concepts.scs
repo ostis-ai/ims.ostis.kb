@@ -11,6 +11,9 @@ lib_component_proc_finding_overall_concepts
 -> rrel_key_sc_element: 
 	proc_finding_overall_concepts;
 
+=> nrel_attendant_component: 
+	lib_component_proc_equivalent_elements; 
+
 <- rrel_key_sc_element: 
 	...
 	(*
@@ -20,7 +23,7 @@ lib_component_proc_finding_overall_concepts
 		(*
 		-> rrel_example:
 			"file://htmls/Proc_Superclass.html"
-				(* <- lang_ru;; *);;
+			(* <- lang_ru;; *);;
 		*);;
 	*);;
 
