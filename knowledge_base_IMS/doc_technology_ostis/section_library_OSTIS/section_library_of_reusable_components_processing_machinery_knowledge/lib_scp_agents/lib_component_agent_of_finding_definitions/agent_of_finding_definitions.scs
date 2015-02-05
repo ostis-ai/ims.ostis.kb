@@ -1,7 +1,7 @@
 agent_of_finding_definitions
 => nrel_main_idtf:
-	[агентная scp-программа поиска определений для заданного понятия] (* <- lang_ru;; *);
-	[agent scp-program of finding definitions for given concept] (* <- lang_en;; *);
+	[агентная scp-программа поиска определения или пояснения для заданного объекта] (* <- lang_ru;; *);
+	[agent scp-program of finding definition or explanation for given object] (* <- lang_en;; *);
 	<- agent_scp_program;;
 
 scp_program -> agent_of_finding_definitions 
