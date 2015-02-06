@@ -10,9 +10,34 @@ section_library_of_reusable_components_interfaces
 	section_library_of_external_languages_description
 	(*
 	=> nrel_section_base_order: 
-		section_library_of_control_elements;;
+		section_library_of_external_languages_editors;;
 	*);
-	section_library_of_control_elements
+	section_library_of_external_languages_editors
+	(*
+	=> nrel_section_base_order: 
+		section_library_of_translators_to_sc;;
+	*);
+	section_library_of_translators_to_sc
+	(*
+	=> nrel_section_base_order: 
+		section_library_of_translators_from_sc;;
+	*);
+	section_library_of_translators_from_sc
+	(*
+	=> nrel_section_base_order: 
+		section_library_of_visualizators;;
+	*);
+	section_library_of_visualizators
+	(*
+	=> nrel_section_base_order: 
+		section_library_of_communication_environments;;
+	*);
+	section_library_of_communication_environments
+	(*
+	=> nrel_section_base_order: 
+		section_library_of_interface_control_elements;;
+	*);
+	section_library_of_interface_control_elements
 	};;
 
 section_library_of_reusable_components_interfaces = [*^"file://section_library_of_reusable_components_interfaces.scsi"*];;
