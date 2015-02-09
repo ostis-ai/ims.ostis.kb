@@ -1,20 +1,23 @@
 doc_web_platform_based_on_software_sc_memory
 => nrel_main_idtf:
-	[Раздел. Web-ориентированная платформа  интерпретации sc-моделей интеллектуальных систем, основанная на специальном формате кодирования sc-текстов]
-	(*
-	<- lang_ru;;
-	*);
+	[Документация. Web-ориентированная платформа  интерпретации sc-моделей интеллектуальных систем]
+	(* <- lang_ru;;	*);
 	
-<= nrel_doc_decomposition:
+<= nrel_section_decomposition:
 	{
+		justification_of_web_platform_based_on_software_sc_memory_implementation
+		(*
+		=> nrel_section_base_order: 
+			doc_web_platform_based_on_software_sc_memory_code_format;;
+		*);
 		doc_web_platform_based_on_software_sc_memory_code_format
 		(*
-		=> nrel_doc_base_order: 
+		=> nrel_section_base_order: 
 			doc_web_platform_based_on_software_sc_memory_implementation;;
 		*);
 		doc_web_platform_based_on_software_sc_memory_implementation
 		(*
-		=> nrel_doc_base_order: 
+		=> nrel_section_base_order: 
 			doc_web_platform_based_on_software_sc_memory_scp_implementation;;
 		*);
 		doc_web_platform_based_on_software_sc_memory_scp_implementation
