@@ -5,6 +5,19 @@ library_OSTIS
 	[Library OSTIS]
 	(* <- lang_en;; *);
 
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:	
+		...
+		(*
+		-> rrel_example:
+			"file://nl_files/library_OSTIS.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);
+
 <= nrel_subdividing:
 	{
 	library_interpreters_unified_logical_semantic_models_of_intelligent_systems;
@@ -26,3 +39,20 @@ library_OSTIS
 	library_of_platform_dependent_reusable_components;
 	library_of_platform_independent_reusable_components
 	};;
+
+nrel_attendant_component
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[сопутствующий компонент*] 
+	(* <- lang_ru;; *);
+	[attendant component*]
+	(* <- lang_en;; *);;
+
+nrel_subsidiary_sc_system
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[дочерняя sc-система*] 
+	(* <- lang_ru;; *);
+	[subsidiary sc-system*]
+	(* <- lang_en;; *);;
+

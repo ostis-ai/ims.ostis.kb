@@ -14,4 +14,17 @@ library_of_reusable_sc_agents
 	kpm_agent_library_of_logical_inference;
 	kpm_agent_library_of_garbage_collection;
 	kpm_agent_library_of_coordination
-	};;
+	};
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:	
+		...
+		(*
+		-> rrel_example:
+			"file://nl_files/library_of_reusable_sc_agents.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);;

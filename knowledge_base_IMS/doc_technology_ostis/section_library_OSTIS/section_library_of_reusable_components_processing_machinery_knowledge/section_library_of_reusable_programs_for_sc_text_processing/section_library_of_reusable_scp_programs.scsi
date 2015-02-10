@@ -12,4 +12,17 @@ library_of_reusable_scp_programs
 -> lib_component_proc_of_finding_connections;
 -> lib_component_proc_finding_overall_concepts;
 -> lib_component_proc_equivalent_elements;
--> lib_component_proc_finding_arcs_between_concepts;;
+-> lib_component_proc_finding_arcs_between_concepts;
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:	
+		...
+		(*
+		-> rrel_example:
+			"file://nl_files/library_of_reusable_scp_programs.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);;

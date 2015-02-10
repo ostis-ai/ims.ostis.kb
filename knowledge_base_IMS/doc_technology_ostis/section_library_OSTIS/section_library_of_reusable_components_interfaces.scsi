@@ -14,4 +14,17 @@ library_of_reusable_components_interfaces
 	library_of_visualizators;
 	library_of_communication_environments;
 	library_of_interface_control_elements
-	};;
+	};
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:	
+		...
+		(*
+		-> rrel_example:
+			"file://nl_files/library_of_reusable_components_interfaces.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);;

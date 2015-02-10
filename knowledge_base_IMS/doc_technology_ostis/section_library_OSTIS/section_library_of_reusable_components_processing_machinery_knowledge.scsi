@@ -9,4 +9,17 @@ library_of_reusable_components_processing_machinery_knowledge
 	{
 	library_of_reusable_sc_agents;
 	library_of_reusable_programs_for_sc_text_processing
-	};;
+	};
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:	
+		...
+		(*
+		-> rrel_example:
+			"file://nl_files/library_of_reusable_components_processing_machinery_knowledge.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);;
