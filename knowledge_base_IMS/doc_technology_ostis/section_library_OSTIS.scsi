@@ -56,3 +56,13 @@ nrel_subsidiary_sc_system
 	[subsidiary sc-system*]
 	(* <- lang_en;; *);;
 
+nrel_library_component_decomposition
+<- sc_node_norole_relation;
+<- decomposition_relation;
+<- quasybinary_relation;
+=> nrel_main_idtf:
+	[декомпозиция компонента библиотеки*]
+	(* <- lang_ru;;	*);
+=> nrel_main_idtf:
+	[library component decomposition*]
+	(* <- lang_en;;	*);;
