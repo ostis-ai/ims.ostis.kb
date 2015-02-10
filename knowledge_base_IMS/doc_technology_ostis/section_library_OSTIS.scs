@@ -36,3 +36,16 @@ section_library_OSTIS
 	};;
 
 section_library_OSTIS = [*^"file://section_library_OSTIS.scsi"*];;
+
+rrel_key_sc_element -> (section_library_OSTIS -> library_OSTIS)
+(*
+	=> nrel_key_sc_element_base_order: (section_library_OSTIS -> nrel_attendant_component)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_library_OSTIS -> nrel_subsidiary_sc_system)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_library_OSTIS -> nrel_library_component_decomposition)
+	(* <- rrel_key_sc_element;; *);;
+*);;*);;*);;
+

@@ -17,11 +17,4 @@ section_library_of_reusable_components_processing_machinery_knowledge
 
 section_library_of_reusable_components_processing_machinery_knowledge = [*^"file://section_library_of_reusable_components_processing_machinery_knowledge.scsi"*];;
 
-rrel_key_sc_element ->
-(section_library_of_reusable_components_processing_machinery_knowledge -> library_of_reusable_components_processing_machinery_knowledge)
-(*
-<- rrel_key_sc_element;;
-=> nrel_key_sc_element_base_order:
-(section_library_of_reusable_components_processing_machinery_knowledge -> core_of_reusable_components_of_sc_machines)
-(* <- rrel_key_sc_element;; *);;
-*);;
+rrel_key_sc_element -> (section_library_of_reusable_components_processing_machinery_knowledge -> library_of_reusable_components_processing_machinery_knowledge);;

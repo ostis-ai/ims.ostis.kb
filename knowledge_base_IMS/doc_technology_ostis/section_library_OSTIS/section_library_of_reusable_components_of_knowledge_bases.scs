@@ -7,11 +7,4 @@ section_library_of_reusable_components_of_knowledge_bases
 
 section_library_of_reusable_components_of_knowledge_bases = [*^"file://section_library_of_reusable_components_of_knowledge_bases.scsi"*];;
 
-rrel_key_sc_element ->
-(section_library_of_reusable_components_of_knowledge_bases -> library_of_reusable_components_of_knowledge_bases)
-(*
-<- rrel_key_sc_element;;
-=> nrel_key_sc_element_base_order:
-(section_library_of_reusable_components_of_knowledge_bases -> core_of_reusable_components_of_knowledge_bases)
-(* <- rrel_key_sc_element;; *);;
-*);;
+rrel_key_sc_element -> (section_library_of_reusable_components_of_knowledge_bases -> library_of_reusable_components_of_knowledge_bases);;
