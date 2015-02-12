@@ -1,0 +1,21 @@
+machine_knowledge_processing_IMS
+=> nrel_main_idtf:
+	[Машина обработки знаний IMS]
+	(* <- lang_ru;; *);
+	[Machine knowledge processing IMS]
+	(* <- lang_en;; *);
+
+<= nrel_abstract_sc_agent_decomposition:
+	{
+	sc_agent_of_pattern_search;
+	sc_agent_of_search_of_all_identifiers;
+	sc_agent_of_search_of_all_input_arcs;
+	sc_agent_of_search_of_all_input_arcs_with_rel;
+	sc_agent_of_search_of_all_output_arcs;
+	sc_agent_of_search_of_all_output_arcs_with_rel;
+	sc_agent_of_search_of_all_subclasses_in_quasybinary_relation;
+	sc_agent_of_search_of_all_superclasses_in_quasybinary_relation;
+	sc_agent_of_search_of_decomposition;
+	sc_agent_of_search_of_full_semantic_neighborhood;
+	sc_agent_of_search_of_links_of_relation_connected_with_element
+	};;

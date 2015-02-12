@@ -4,3 +4,7 @@ structure_machine_knowledge_processing_IMS
 	(* <- lang_ru;; *);
 	[Structure. Machine knowledge processing IMS]
 	(* <- lang_en;; *);;
+
+structure_machine_knowledge_processing_IMS = [*^"file://structure_machine_knowledge_processing_IMS.scsi"*];;
+
+rrel_key_sc_element -> (structure_machine_knowledge_processing_IMS -> machine_knowledge_processing_IMS);;
