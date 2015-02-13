@@ -1,0 +1,26 @@
+sc_node_struct -> subject_domain_of_sc_elements;;
+
+subject_domain_of_sc_elements
+=> nrel_main_idtf:
+	[Предметная область sc-элементов]
+	(* <- lang_ru;; *);
+	[Subject domain of sc-elements]
+	(* <- lang_en;; *);
+
+<- subject_domain;
+
+<- rrel_key_sc_element: 
+        ...
+	(*
+	<- sc_explanation;; 
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[Предметная область sc-элементов - предметная область, объектами исследования которой являются атомарные фрагменты текстов SC-кода.]
+			(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+
+	

@@ -1,0 +1,618 @@
+	sc_element
+	=> nrel_main_idtf:
+		[sc-элемент]
+		(* <- lang_ru;; *);
+		[sc-element]
+		(* <- lang_en;; *);
+	=> nrel_idtf:
+		[sc-знак]
+		(* <- lang_ru;; *);
+		[знак сущности]
+		(* <- lang_ru;; *);
+		[знак, входящий в текст SC-кода]
+		(* <- lang_ru;; *);
+		[сущность]
+		(* <- lang_ru;; *);
+		[sc-знак сущности]
+		(* <- lang_ru;; *);
+		[знак, входящий в состав текста SC-кода]
+		(* <- lang_ru;; *);;
+		
+	
+	alphabet_sc_code
+	=> nrel_main_idtf:
+		[Алфавит SC-кода]
+		(* <- lang_ru;; *);
+		[Alphabet of SC-code]
+		(* <- lang_en;; *);
+	=> nrel_idtf:
+		[Семейство классов синтаксически выделенных sc-элементов]
+		(* <- lang_ru;; *);
+		[Семейство классов sc-элементов, элементы каждого из которых имеют одинаковые синтаксические метки]
+		(* <- lang_ru;; *);
+		[Семейство классов эквивалентности для неявно заданного отношения эквивалентности быть sc-элементами, имеющими одинаковую синтаксическую метку]
+		(* <- lang_ru;; *);;
+	
+	abstract_essence
+	=> nrel_main_idtf:
+		[абстрактная сущность]
+		(* <- lang_ru;; *);
+		[abstract essence]
+		(* <- lang_en;; *);
+	=> nrel_idtf:
+		[sc-знак абстрактной сущности]
+		(* <- lang_ru;; *);;
+		
+	abstract_terminal_essence
+	=> nrel_main_idtf:
+		[абстрактная терминальная сущность]
+		(* <- lang_ru;; *);
+		[abstract terminal essence]
+		(* <- lang_en;; *);
+	=> nrel_idtf:
+		[первичный элемент абстрактной структуры]
+		(* <- lang_ru;; *);;
+
+	action
+	=> nrel_main_idtf:
+		[действие]
+		(* <- lang_ru;; *);
+		[аction]
+		(* <- lang_en;; *);;
+		
+	class
+		=> nrel_main_idtf:
+		[класс]
+		(* <- lang_ru;; *);
+		[class]
+		(* <- lang_en;; *);
+	=> nrel_idtf:
+		[sc-класс]
+		(* <- lang_ru;; *);
+		[класс sc-элементов]
+		(* <- lang_ru;; *);
+		[sc-понятие]
+		(* <- lang_ru;; *);
+		[sc-концепт]
+		(* <- lang_ru;; *);;
+	
+	
+	class_of_abstract_terminal_essence
+	=> nrel_main_idtf:
+		[класс абстрактных терминальных сущностей]
+		(* <- lang_ru;; *);
+		[class of abstract terminal essence]
+		(* <- lang_en;; *);;
+		
+	class_of_classes
+	=> nrel_main_idtf:
+		[класс классов]
+		(* <- lang_ru;; *);
+		[class of classes]
+		(* <- lang_en;; *);;
+	
+	class_of_material_or_kvazimaterial_essence
+	=> nrel_main_idtf:
+		[класс материальных или квазиматериальных сущностей]
+		(* <- lang_ru;; *);
+		[class of material or kvazimaterial essence]
+		(* <- lang_en;; *);;
+	
+	class_of_terminal_essence
+	=> nrel_main_idtf:
+		[класс терминальных сущностей]
+		(* <- lang_ru;; *);
+		[class of terminal essence]
+		(* <- lang_en;; *);;
+	
+	constant_essence
+	=> nrel_main_idtf:
+		[постоянная сущность]
+		(* <- lang_ru;; *);
+		[constant essence]
+		(* <- lang_en;; *);
+	=> nrel_idtf:
+		[постоянно существующая сущность]
+		(* <- lang_ru;; *);
+		[стационарная сущность]
+		(* <- lang_ru;; *);;
+	
+	constant_sc_tuple
+	=> nrel_main_idtf:
+		[постоянная связка]
+		(* <- lang_ru;; *);
+		[сonstant tuple]
+		(* <- lang_en;; *);
+	=> nrel_idtf:
+		[стационарная связка]
+		(* <- lang_ru;; *);;
+	
+	constant_sc_edge
+	=> nrel_main_idtf:
+		[постоянное sc-ребро]
+		(* <- lang_ru;; *);
+		[сonstant sc-edge]
+		(* <- lang_en;; *);
+	=> nrel_idtf:
+		[атомарный неориентированный связующий sc-элемент]
+		(* <- lang_ru;; *);
+		[неориентированный sc-коннектор]
+		(* <- lang_ru;; *);;
+		
+	
+	constant_sc_arc_of_usual_type
+	=> nrel_main_idtf:
+		[константная sc-дуга обычного вида]
+		(* <- lang_ru;; *);
+		[сonstant sc-arc of usual type]
+		(* <- lang_en;; *);;
+
+	constant_sc_arc_of_constant_accessories
+	=> nrel_main_idtf:
+		[константная sc-дуга постоянной принадлежности]
+		(* <- lang_ru;; *);
+		[сonstant sc-arc of constant accessories]
+		(* <- lang_en;; *);;
+		
+	essence_of_the_future_time
+	=> nrel_main_idtf:
+		[сущность будущего времени]
+		(* <- lang_ru;; *);
+		[essence of the future time]
+		(* <- lang_en;; *);
+	=> nrel_idtf:
+		[будущая сущность]
+		(* <- lang_ru;; *);;
+	
+	essence_of_the_past_time
+	=> nrel_main_idtf:
+		[сущность прошлого времени]
+		(* <- lang_ru;; *);
+		[essence of the past time]
+		(* <- lang_en;; *);
+	=> nrel_idtf:
+		[прошлая сущность]
+		(* <- lang_ru;; *);
+		[сущность, прекратившая свое существование]
+		(* <- lang_ru;; *);
+		[сущность, существовавшая в прошлом времени]
+		(* <- lang_ru;; *);
+		[сущность «жившая» в прошлом времени]
+		(* <- lang_ru;; *);;
+		
+	essence_of_the_present
+	=> nrel_main_idtf:
+		[сущность настоящего времени]
+		(* <- lang_ru;; *);
+		[essence of the present]
+		(* <- lang_en;; *);
+	=> nrel_idtf:
+		[сущность, существующая в текущий момент времени]
+		(* <- lang_ru;; *);
+		[множество всех сущностей, существующих в текущий момент]
+		(* <- lang_ru;; *);
+		[Текущее состояние окружающего Мира]
+		(* <- lang_ru;; *);;
+	
+	event
+	=> nrel_main_idtf:
+		[событие]
+		(* <- lang_ru;; *);
+		[event]
+		(* <- lang_en;; *);
+	=> nrel_idtf:
+		[переходный процесс]
+		(* <- lang_ru;; *);
+		[процесс перехода от одного состояния к другому]
+		(* <- lang_ru;; *);
+		[воздействие]
+		(* <- lang_ru;; *);
+		[событие, осуществляемое неким целенаправленным активным субъектом]
+		(* <- lang_ru;; *);;
+	
+	fictional_entity
+	=> nrel_main_idtf:
+		[вымышленная сущность]
+		(* <- lang_ru;; *);
+		[fictional entity]
+		(* <- lang_en;; *);
+	=> nrel_idtf:
+		[придуманная сущность]
+		(* <- lang_ru;; *);;
+	
+	material_essence
+	=> nrel_main_idtf:
+		[материальная сущность]
+		(* <- lang_ru;; *);
+		[material essence]
+		(* <- lang_en;; *);
+	=> nrel_idtf:
+		[естественная сущность]
+		(* <- lang_ru;; *);
+		[объект исследования естественной науки]
+		(* <- lang_ru;; *);
+		[физическая сущность]
+		(* <- lang_ru;; *);
+		[материальный объект]
+		(* <- lang_ru;; *);
+		[реальная сущность]
+		(* <- lang_ru;; *);
+		[знак материальной сущности]
+		(* <- lang_ru;; *);
+		[sc-знак материальной сущности]
+		(* <- lang_ru;; *);;
+	
+	
+	material_or_quasimaterial_essence
+	=> nrel_main_idtf:
+		[материальная или квазиматериальная сущность]
+		(* <- lang_ru;; *);
+		[material or quasimaterial essence]
+		(* <- lang_en;; *);;
+	
+	non_binary_sc_tuple
+	=> nrel_main_idtf:
+		[небинарная sc-связка]
+		(* <- lang_ru;; *);
+		[non binary sc-tuple]
+		(* <- lang_en;; *);;
+	
+	oriented_pair
+	=> nrel_main_idtf:
+		[ориентированная пара]
+		(* <- lang_ru;; *);
+		[oriented pair]
+		(* <- lang_en;; *);
+	=> nrel_idtf:
+		[ориентированная бинарная связка]
+		(* <- lang_ru;; *);
+		[ориентированная пара sc-элементов]
+		(* <- lang_ru;; *);
+		[константная ориентированная пара sc-элементов]
+		(* <- lang_ru;; *);;
+	
+	pair
+	=> nrel_main_idtf:
+		[пара]
+		(* <- lang_ru;; *);
+		[pair]
+		(* <- lang_en;; *);
+	=> nrel_idtf:
+		[бинарная связка]
+		(* <- lang_ru;; *);
+		[пара sc-элементов]
+		(* <- lang_ru;; *);
+		[sc-пара]
+		(* <- lang_ru;; *);
+		[двухмощное множество]
+		(* <- lang_ru;; *);;
+	
+	pair_of_access_or_non_access
+	=> nrel_main_idtf:
+		[пара принадлежности или непринадлежности]
+		(* <- lang_ru;; *);
+		[pair of access or no access]
+		(* <- lang_en;; *);;
+	
+	pair_of_constant_access
+	=> nrel_main_idtf:
+		[пара постоянной принадлежности]
+		(* <- lang_ru;; *);
+		[pair of constant access]
+		(* <- lang_en;; *);
+	=> nrel_idtf:
+		[пара стационарной принадлежности]
+		(* <- lang_ru;; *);
+		[sc-пара стационарной принадлежности]
+		(* <- lang_ru;; *);
+		[Отношение постоянной принадлежности]
+		(* <- lang_ru;; *);
+		[Отношение стационарной принадлежности]
+		(* <- lang_ru;; *);;
+	
+	pair_of_temporary_access
+	=> nrel_main_idtf:
+		[пара временной принадлежности]
+		(* <- lang_ru;; *);
+		[pair of temporary access]
+		(* <- lang_en;; *);
+	=> nrel_idtf:
+		[пара нестационарной принадлежности]
+		(* <- lang_ru;; *);
+		[отношение временной принадлежности]
+		(* <- lang_ru;; *);;
+	
+	pair_of_temporary_unaccess
+	=> nrel_main_idtf:
+		[пара временной непринадлежности]
+		(* <- lang_ru;; *);
+		[pair of temporary unaccess]
+		(* <- lang_en;; *);;
+	
+	pair_of_constant_unclear_access
+		=> nrel_main_idtf:
+		[пара постоянной нечеткой принадлежности]
+		(* <- lang_ru;; *);
+		[pair of constant unclear access]
+		(* <- lang_en;; *);;
+	
+	
+	pair_of_temporary_unclear_access
+	=> nrel_main_idtf:
+		[пара временной нечеткой принадлежности]
+		(* <- lang_ru;; *);
+		[pair of temporary unclear access]
+		(* <- lang_en;; *);;
+	
+	pair_of_constant_access_or_non_access
+	=> nrel_main_idtf:
+		[пара постоянной принадлежности или непринадлежности]
+		(* <- lang_ru;; *);
+		[pair of constant access or non access]
+		(* <- lang_en;; *);;
+	
+	pair_of_temporary_access_or_non_access
+	=> nrel_main_idtf:
+		[пара временной принадлежности или непринадлежности]
+		(* <- lang_ru;; *);
+		[pair of temporary access or non access]
+		(* <- lang_en;; *);;
+	
+	quasimaterial_essence
+	=> nrel_main_idtf:
+		[квазиматериальная сущность]
+		(* <- lang_ru;; *);
+		[quasimaterial essence]
+		(* <- lang_en;; *);
+	=> nrel_idtf:
+		[вымышленная сущность, подобная материальной]
+		(* <- lang_ru;; *);
+		[псевдоматериальная сущность]
+		(* <- lang_ru;; *);
+		[sc-знак квазиматериальной сущности]
+		(* <- lang_ru;; *);
+		[придуманная сущность, подобная материальной]
+		(* <- lang_ru;; *);;
+	
+	sc_arc
+	=> nrel_main_idtf:
+		[sc-дуга]
+		(* <- lang_ru;; *);
+		[sc-arc]
+		(* <- lang_en;; *);;
+		
+	sc_arc_main
+	=> nrel_main_idtf:
+		[sc-дуга ]
+		(* <- lang_ru;; *);
+		[sc-arc]
+		(* <- lang_en;; *);;
+	
+	sc_arc_generic
+	=> nrel_main_idtf:
+		[sc-дуга ]
+		(* <- lang_ru;; *);
+		[sc-arc]
+		(* <- lang_en;; *);;
+	
+	
+	sc_connector
+	=> nrel_main_idtf:
+		[sc-коннектор]
+		(* <- lang_ru;; *);
+		[sc-connector]
+		(* <- lang_en;; *);;
+	
+	sc_constant
+	=> nrel_main_idtf:
+		[sc-константа]
+		(* <- lang_ru;; *);
+		[sc-constant]
+		(* <- lang_en;; *);;
+			
+	sc_edge
+	=> nrel_main_idtf:
+		[sc-ребро]
+		(* <- lang_ru;; *);
+		[sc-edge]
+		(* <- lang_en;; *);;
+	
+	sc_node
+	=> nrel_main_idtf:
+		[sc-узел]
+		(* <- lang_ru;; *);
+		[sc-node]
+		(* <- lang_en;; *);;
+		
+	sc_sign_file
+	=> nrel_main_idtf:
+		[sc-знак файла]
+		(* <- lang_ru;; *);
+		[sc-sign file]
+		(* <- lang_en;; *);
+	=> nrel_idtf:
+		[константный sc-знак файла]
+		(* <- lang_ru;; *);
+		[sc-знак конкретного (фиксированного) файла]
+		(* <- lang_ru;; *);
+		[конкретный файл]
+		(* <- lang_ru;; *);
+		[файл]
+		(* <- lang_ru;; *);
+		[электронный образ внешней информационной конструкции]
+		(* <- lang_ru;; *);
+		[внешняя информационная конструкция]
+		(* <- lang_ru;; *);;
+		
+	sc_variable
+	=> nrel_main_idtf:
+		[sc-переменная]
+		(* <- lang_ru;; *);
+		[sc-variable]
+		(* <- lang_en;; *);
+	=> nrel_idtf:
+		[sc-знак переменной сущности]
+		(* <- lang_ru;; *);
+		[переменная сущность]
+		(* <- lang_ru;; *);
+		[обозначение произвольной сущности, которое пробегает некоторое дополнительно уточняемое множество знаков]
+		(* <- lang_ru;; *);
+		[sc-обозначение произвольной сущности, которому соответствует некоторое дополнительно уточняемое множество sc-элементов, являющееся областью возможных значений этого sc-обозначения]
+		(* <- lang_ru;; *);;
+		
+	
+	sc_variable_of_first_order
+	=> nrel_main_idtf:
+		[sc-переменная первого порядка]
+		(* <- lang_ru;; *);
+		[sc-variable of first order]
+		(* <- lang_en;; *);;
+	
+	
+	sc_variable_of_mixed_order
+	=> nrel_main_idtf:
+		[sc-переменная смешанного порядка]
+		(* <- lang_ru;; *);
+		[sc-variable of mixed order]
+		(* <- lang_en;; *);;
+
+	
+	sc_variable_of_second_order
+	=> nrel_main_idtf:
+		[sc-переменная второго порядка]
+		(* <- lang_ru;; *);
+		[sc-variable of first order]
+		(* <- lang_en;; *);
+	=> nrel_idtf:
+		[sc-метапеременная]
+		(* <- lang_ru;; *);;
+		
+	
+	situation
+	=> nrel_main_idtf:
+		[ситуация]
+		(* <- lang_ru;; *);
+		[situation]
+		(* <- lang_en;; *);
+	=> nrel_idtf:
+		[временно существующая сущность]
+		(* <- lang_ru;; *);
+		[нестационарная структура]
+		(* <- lang_ru;; *);;
+	
+	sc_structure
+	=> nrel_main_idtf:
+		[sc-структура]
+		(* <- lang_ru;; *);
+		[sc-structure]
+		(* <- lang_en;; *);
+	=> nrel_idtf:
+		[структура]
+		(* <- lang_ru;; *);
+		[структура sc-элементов]
+		(* <- lang_ru;; *);;
+			
+	temporary_essence
+		=> nrel_main_idtf:
+		[временная сущность]
+		(* <- lang_ru;; *);
+		[temporary essence]
+		(* <- lang_en;; *);
+	=> nrel_idtf:
+		[временно существующая сущность]
+		(* <- lang_ru;; *);
+		[нестационарная сущность]
+		(* <- lang_ru;; *);
+		[процесс]
+		(* <- lang_ru;; *);;
+	
+	temporary_sc_tuple
+	=> nrel_main_idtf:
+		[временная sc-связка]
+		(* <- lang_ru;; *);
+		[temporary sc-tuple]
+		(* <- lang_en;; *);
+	=> nrel_idtf:
+		[временно существующая связь]
+		(* <- lang_ru;; *);
+		[нестационарная связка]
+		(* <- lang_ru;; *);;
+	
+	terminal_sc_constant
+		=> nrel_main_idtf:
+		[терминальная sc-константа]
+		(* <- lang_ru;; *);
+		[terminal sc-constant]
+		(* <- lang_en;; *);
+	=> nrel_idtf:
+		[терминальная сущность]
+		(* <- lang_ru;; *);
+		[первичная sc-константа]
+		(* <- lang_ru;; *);
+		[первичная сущность]
+		(* <- lang_ru;; *);
+		[терминальная константная сущность]
+		(* <- lang_ru;; *);;
+	
+	sc_tuple
+	=> nrel_main_idtf:
+		[sc-связка]
+		(* <- lang_ru;; *);
+		[sc-tuple]
+		(* <- lang_en;; *);
+	=> nrel_idtf:
+		[связь между сущностями]
+		(* <- lang_ru;; *);
+		[связка]
+		(* <- lang_ru;; *);
+		[sc-знак связи]
+		(* <- lang_ru;; *);;
+	
+	unfable_entity
+	=> nrel_main_idtf:
+		[невымышленная константа]
+		(* <- lang_ru;; *);
+		[unfable entity]
+		(* <- lang_en;; *);
+	=> nrel_idtf:
+		[действительно существующая сущность]
+		(* <- lang_ru;; *);;
+	
+	variable_sc_edge
+	=> nrel_main_idtf:
+		[переменное sc-ребро]
+		(* <- lang_ru;; *);
+		[variable sc-edge]
+		(* <- lang_en;; *);;
+	
+	variable_sc_arc_of_usual_type
+	=> nrel_main_idtf:
+		[переменная sc-дуга обычного вида]
+		(* <- lang_ru;; *);
+		[variable sc-arc of usual type]
+		(* <- lang_en;; *);;
+	
+	variable_sc_arc_of_constant_accessories
+	=> nrel_main_idtf:
+		[переменная sc-дуга постоянной принадлежности]
+		(* <- lang_ru;; *);
+		[variable sc-arc of constant accessories]
+		(* <- lang_en;; *);;
+		
+	sc_link
+	=> nrel_main_idtf:
+		[sc-ссылка] (* <- lang_ru;; *);
+		[sc-link]   (* <- lang_en;; *);;
+	
+	nrel_synonymy
+	=> nrel_main_idtf:
+		[синонимия*]
+		(* <- lang_ru;; *);
+		[synonymy*]
+		(* <- lang_en;; *);
+	=> nrel_idtf:
+		[быть синонимичными sc-элементами*]
+		(* <- lang_ru;; *);
+		[синонимия sc-элементов*]
+		(* <- lang_ru;; *);;
+		

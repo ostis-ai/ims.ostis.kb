@@ -1,0 +1,75 @@
+structural_specification_of_subject_domain_of_sc_elements
+<- structural_spacification;
+=> nrel_main_idtf:
+	[Структурная спецификация Предметной области sc-элементов]
+	(* <- lang_ru;; *);
+	[Structural specification of subject domain of sc-elements]
+	(* <- lang_en;; *);;
+
+structural_specification_of_subject_domain_of_sc_elements = [*
+	subject_domain_of_sc_elements
+	
+	-> rrel_maximum_studied_object_class:
+		sc_element;
+	
+	-> rrel_not_maximum_studied_object_class:
+		alphabet_sc_code;
+		abstract_essence;
+		abstract_terminal_essence;
+		action;
+		class;
+		class_of_abstract_terminal_essence;
+		class_of_classes;
+		class_of_material_or_kvazimaterial_essence;
+		class_of_terminal_essence;
+		constant_essence;
+		constant_sc_tuple;
+		constant_sc_edge;
+		constant_sc_arc_of_usual_type;
+		constant_sc_arc_of_constant_accessories;
+		essence_of_the_future_time;
+		essence_of_the_past_time;
+		essence_of_the_present;
+		event;
+		fictional_entity;
+		material_essence;
+		material_or_quasimaterial_essence;
+		non_binary_sc_tuple;
+		oriented_pair;
+		pair;
+		pair_of_access_or_non_access;
+		pair_of_constant_access;
+		pair_of_temporary_access;
+		pair_of_temporary_unaccess;
+		pair_of_constant_unclear_access;
+		pair_of_temporary_unclear_access;
+		pair_of_constant_access_or_non_access;
+		pair_of_temporary_access_or_non_access;
+		quasimaterial_essence;
+		sc_arc;
+		sc_arc_main;
+		sc_arc_generic;
+		sc_connector;
+		sc_constant;
+		sc_edge;
+		sc_node;
+		sc_sign_file;
+		sc_variable;
+		sc_variable_of_first_order;
+		sc_variable_of_mixed_order;
+		sc_variable_of_second_order;
+		situation;
+		sc_structure;
+		temporary_essence;
+		temporary_sc_tuple;
+		terminal_sc_constant;
+		sc_tuple;
+		sc_link;
+		unfable_entity;
+		variable_sc_edge;
+		variable_sc_arc_of_usual_type;
+		variable_sc_arc_of_constant_accessories;
+	
+	-> rrel_studied_relation:
+		nrel_synonymy;;
+	*];;

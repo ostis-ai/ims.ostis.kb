@@ -1,0 +1,229 @@
+alphabet_sc_code
+-> constant_sc_tuple;
+-> constant_sc_edge;
+-> constant_sc_arc_of_usual_type;
+-> constant_sc_arc_of_constant_accessories;
+-> non_binary_sc_tuple;
+-> oriented_pair;
+-> pair;
+-> pair_of_access_or_non_access;
+-> pair_of_constant_access;
+-> pair_of_temporary_access;
+-> pair_of_temporary_unaccess;
+-> pair_of_constant_unclear_access;
+-> pair_of_temporary_unclear_access;
+-> pair_of_constant_access_or_non_access;
+-> pair_of_temporary_access_or_non_access;
+-> sc_arc;
+-> sc_arc_main;
+-> sc_arc_generic;
+-> sc_connector;
+-> sc_constant;
+-> sc_edge;
+-> sc_node;
+-> sc_sign_file;
+-> sc_variable;
+-> sc_variable_of_first_order;
+-> sc_variable_of_mixed_order;
+-> sc_variable_of_second_order;
+-> sc_structure;
+-> terminal_sc_constant;
+-> sc_tuple;
+-> sc_link;
+-> variable_sc_edge;
+-> variable_sc_arc_of_usual_type;
+-> variable_sc_arc_of_constant_accessories;;
+
+sc_element
+<= nrel_subdividing:
+	{
+		sc_constant;
+		sc_variable			
+	};
+<= nrel_subdividing:
+	{
+		material_or_quasimaterial_essence;
+		abstract_essence
+	};;
+
+abstract_essence
+<= nrel_subdividing:
+	{
+		sc_variable;
+		set;
+		abstract_terminal_essence
+	};;
+	
+abstract_terminal_essence
+=> nrel_strict_inclusion:
+	real_number;
+=> nrel_strict_inclusion:
+	geometrical_point;
+=> nrel_strict_inclusion:
+	route_point_in_the_graph_structure;;
+
+class
+=> nrel_strict_inclusion:
+	class_of_terminal_essence;
+	class_of_material_or_kvazimaterial_essence;
+	class_of_abstract_terminal_essence;
+	relation;
+	class_of_structures;
+	class_of_classes;
+	value;
+	parameter;;
+
+event
+=> nrel_strict_inclusion:
+	action;;
+
+material_or_quasimaterial_essence
+<= nrel_subdividing:
+	{
+		material_essence;
+		quasimaterial_essence
+	};;
+
+non_binary_sc_tuple
+=> nrel_strict_inclusion:
+	singleton;
+=> nrel_strict_inclusion:
+	triple;;
+
+oriented_pair
+=> nrel_strict_inclusion:
+	pair_of_constant_access;
+	pair_of_temporary_access;
+	pair_of_temporary_unaccess;
+	pair_of_constant_unclear_access;
+	pair_of_temporary_unclear_access;
+	pair_of_access_or_non_access;;
+	
+pair
+<= nrel_subdividing:
+	{
+		non_oriented_pair;
+		oriented_pair
+	};;
+	
+pair_of_access_or_non_access
+<= nrel_subdividing:
+	{
+		pair_of_constant_access_or_non_access;
+		pair_of_temporary_access_or_non_access
+	};
+
+<= nrel_subdividing:
+	{
+		pair_of_access;
+		pair_of_non_access;
+		pair_of_unclear_access
+	};;
+
+sc_arc
+<= nrel_subdividing:
+		{
+			constant_sc_arc_of_usual_type;
+			variable_sc_arc_of_usual_type;
+			constant_sc_arc_of_constant_accessories;
+			variable_sc_arc_of_constant_accessories
+		};;
+		
+sc_connector
+<= nrel_subdividing:
+	{	
+	sc_edge;
+	sc_arc
+	};;
+
+sc_constant
+<= nrel_subdividing:
+	{
+		terminal_sc_constant;
+		set			
+	};
+<= nrel_subdividing:
+	{
+		fictional_entity;
+		unfable_entity
+	};
+<= nrel_subdividing:
+	{
+		constant_essence;
+		temporary_essence
+	};;
+
+sc_edge
+<= nrel_subdividing:
+		{
+			constant_sc_edge;
+			variable_sc_edge			
+		};;
+		
+sc_sign_file
+=> nrel_strict_inclusion:
+	sc_identifier;;
+	
+sc_variable
+=> nrel_strict_inclusion:
+	sc_variable_of_first_order;
+	sc_variable_of_second_order;
+	sc_variable_of_mixed_order;;
+
+
+sc_structure
+<= nrel_subdividing:
+	{
+		trivial_sc_structure;
+		nontrivial_sc_structure
+	};
+	
+<= nrel_subdividing:
+	{
+		connected_sc_structure;
+		disconnected_sc_structure
+	};;
+
+temporary_essence
+<= nrel_subdividing:
+	{
+		material_essence;
+		quasimaterial_essence;
+		temporary_tuple;
+		situation;
+		event
+	};
+	
+<= nrel_subdividing:
+	{
+		essence_of_the_past_time;
+		essence_of_the_present;
+		essence_of_the_future_time
+	};;
+
+terminal_sc_constant
+<= nrel_subdividing:
+	{
+		material_or_quasimaterial_essence;
+		sc_sign_file;
+		abstract_terminal_essence
+	};;
+
+sc_tuple
+<= nrel_subdividing:
+	{
+		non_binary_sc_tuple;
+		pair
+	};
+<= nrel_subdividing:
+	{
+		constant_sc_tuple;
+		temporary_sc_tuple
+	};;
+
+sc_link
+<= nrel_subdividing:
+	{
+		sc_machine_file;
+		internet_resource
+	};;

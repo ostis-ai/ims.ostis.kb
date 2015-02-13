@@ -1,0 +1,822 @@
+sc_element
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[sc-элемент - множество всевозможных атомарных фрагментов sc-текста]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+
+alphabet_sc_code
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[Алфавит SC-кода - алфавит элементов унифицированных семантических сетей]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+abstract_essence
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[абстрактная сущность - sc-знак абстрактной сущности]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+abstract_terminal_essence
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[абстрактная терминальная сущность - абстрактная константная (конкретная, фиксированная) сущность, не являющаяся множеством]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+action
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[действие - ...]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+class
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[класс - множество всех тех и только тех sc-элементов, которые обозначают сущности, эквивалентные в заданном смысле, т.е. удовлетворяющие соответствующим требованиям]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+class_of_abstract_terminal_essence
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[класс абстрактных терминальных сущностей - ...]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+class_of_classes
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[класс классов - ...]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+class_of_material_or_kvazimaterial_essence
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[класс материальных или квазиматериальных сущностей - ...]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+class_of_terminal_essence
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[класс терминальных сущностей - ...]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+constant_essence
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[постоянная сущность - sc-знак постоянно существующей сущности]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+constant_sc_tuple
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[постоянная связка - ...]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+constant_sc_edge
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[постоянное sc-ребро - атомарный связующий sc-элемент, являющийся неориентированной парой sc-элементов, либо такой ориентированной парой sc-элементов, направленность которой в текущий момент не известна]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+constant_sc_arc_of_usual_type
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[константная sc-дуга обычного вида - ...]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+constant_sc_arc_of_constant_accessories
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[константная sc-дуга постоянной принадлежности - ...]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+
+essence_of_the_future_time
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[сущность будущего времени - ...]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+
+essence_of_the_past_time
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[сущность прошлого времени - sc-знак сущности, прекратившей свое существование]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+essence_of_the_present
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[сущность настоящего времени - sc-знак сущности, существующей в текущий момент времени]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+event
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[событие - sc-знак, обозначающий процесс перехода от одного состояния к другому]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+fictional_entity
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[вымышленная сущность - sc-знак, обозначающий придуманную сущность]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+material_essence
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[материальная сущность - sc-элемент, обозначающий конкретную материальную сущность]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+material_or_quasimaterial_essence
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[материальная или квазиматериальная сущность - sc-элемент, обозначающий материальную или квазиматериальную сущность]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+non_binary_sc_tuple
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[небинарная sc-связка - ...]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+oriented_pair
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[ориентированная пара - ...]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+pair
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[пара - константная пара sc-элементов]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+pair_of_access_or_non_access
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[пара принадлежности или непринадлежности - ...]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+pair_of_constant_access
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[пара постоянной принадлежности - ...]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+
+pair_of_temporary_access
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[пара временной принадлежности - ...]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+
+pair_of_temporary_unaccess
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[пара временной принадлежности - ...]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+pair_of_constant_unclear_access
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[пара постоянной нечеткой принадлежности - ...]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+pair_of_temporary_unclear_access
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[пара временной нечеткой принадлежности - ...]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+
+pair_of_constant_access_or_non_access
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[пара постоянной принадлежности или непринадлежности - ...]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+pair_of_temporary_access_or_non_access
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[пара временной принадлежности или непринадлежности - ...]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+quasimaterial_essence
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[квазиматериальная сущность - sc-знак вымышленной сущности, подобной материальной]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+sc_arc
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[sc-дуга - ...]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+sc_arc_main
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[sc-дуга - ...]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+sc_arc_generic
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[sc-дуга - ...]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+sc_connector
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[sc-коннектор - синтаксически атомарная связка sc-элементов]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+sc_constant
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[sc-константа - константный sc-элемент]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+
+sc_edge
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[sc-ребро - ...]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+sc_node
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[sc-узел - ...]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+sc_sign_file
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[sc-знак файла - sc-константа, обозначающая файл, хранимый либо во внешней файловой памяти sc-системы, либо в другом месте]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+sc_variable
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[sc-переменная - sc-знак произвольной сущности из некоторого дополнительно уточняемого множества сущностей]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+sc_variable_of_first_order
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[sc-переменная первого порядка - sc-переменная, значениями которой являются только sc-константы]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+sc_variable_of_mixed_order
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[sc-переменная смешанного порядка - sc-переменная, значениями которой являются как sc-константы, так и sc-переменные первого порядка]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+sc_variable_of_second_order
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[sc-переменная второго порядка - sc-переменная, значениями которой являются только sc-переменные первого порядка]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+situation
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[ситуация - sc-знак состояния динамической системы]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+
+sc_structure
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[sc-структура - структура sc-элементов]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+temporary_essence
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[временная сущность - sc-знак временно существующей сущности]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+temporary_sc_tuple
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[временная sc-связка - sc-знак временно существующей связи]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+terminal_sc_constant
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[терминальная sc-константа - sc-константа, не являющаяся знаком множества]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+sc_tuple
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[sc-связка - связка sc-элементов]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+sc_link
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[sc-ссылка - ...]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+unfable_entity
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[невымышленная константа - sc-знак действительно существующей сущности]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+variable_sc_edge
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[переменное sc-ребро - ...]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+variable_sc_arc_of_usual_type
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[переменная sc-дуга обычного вида - ...]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+variable_sc_arc_of_constant_accessories
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[переменная sc-дуга постоянной принадлежности - ...]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+	
+nrel_synonymy
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[синонимия* - отношение, с помощью которого явно указывается факт синонимии некоторых sc-элементов]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+

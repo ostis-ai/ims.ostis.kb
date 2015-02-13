@@ -1,0 +1,22 @@
+terminological_ontology_of_subject_domain_of_sc_elements
+<- terminological_ontology;
+=> nrel_main_idtf:
+	[Терминологическая онтология Предметной области sc-элементов]
+	(* <- lang_ru;; *);
+	[Terminological ontology of subject domain of sc-elements]
+	(* <- lang_en;; *);;
+
+terminological_ontology_of_subject_domain_of_sc_elements = [*^"file://terminological_ontology_of_subject_domain_of_sc_elements.scsi"*];;
+
+rrel_key_sc_element -> (terminological_ontology_of_subject_domain_of_sc_elements -> sc_element)
+(*
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_sc_elements -> alphabet_sc_code)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_sc_elements -> abstract_essence)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_sc_elements -> abstract_terminal_essence)
+	(* <- rrel_key_sc_element;; *);;
+*);;*);;*);;
+
