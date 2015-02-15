@@ -1,0 +1,80 @@
+ontology
+=> nrel_strict_inclusion:
+	integrated_ontology;
+	structural_spacification;
+	terminological_ontology;
+	theoretic_set_ontology;
+	logical_ontology;
+	ontology_of_tasks_and_solutions_of_tasks;
+	ontology_classes_of_tasks_and_ways_of_solving_tasks;;
+
+metaontology
+<= nrel_strict_inclusion:
+	ontology;
+=> nrel_strict_inclusion:
+	logical_system_of_concepts_and_their_definitions;
+	logical_system_statements_and_proofs;;
+	
+nrel_ontology
+<- binary_relation;
+=> nrel_first_domain:
+	subject_domain;
+=> nrel_second_domain:
+	ontology;
+=> nrel_definitional_domain: 
+	...
+	(*
+	<= nrel_combination: 
+		{
+		subject_domain;
+		ontology
+		};;
+	*);;
+
+nrel_using_constants
+<- binary_relation;
+=> nrel_first_domain:
+	sc_concept;
+=> nrel_second_domain:
+	...
+	(*
+	<= nrel_boolean:
+		sc_concept;;
+	*);
+=> nrel_definitional_domain: 
+	...
+	(*
+	<= nrel_combination: 
+		{
+		sc_concept;
+		...
+		(*
+			<= nrel_boolean:
+				sc_concept;;
+		*)
+		};;
+	*);;
+
+nrel_using_statements
+<- binary_relation;
+=> nrel_first_domain:
+	sc_statement;
+=> nrel_second_domain:
+	...
+	(*
+	<= nrel_boolean:
+		sc_statement;;
+	*);
+=> nrel_definitional_domain: 
+	...
+	(*
+	<= nrel_combination: 
+		{
+		sc_statement;
+		...
+		(*
+			<= nrel_boolean:
+				sc_statement;;
+		*)
+		};;
+	*);;

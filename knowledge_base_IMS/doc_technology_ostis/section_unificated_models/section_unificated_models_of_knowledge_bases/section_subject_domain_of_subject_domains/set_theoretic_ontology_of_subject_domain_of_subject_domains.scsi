@@ -1,0 +1,48 @@
+subject_domain
+<= nrel_subdividing:
+	{
+		primary_subject_domain;
+		secondary_subject_domain
+	};
+<= nrel_strict_inclusion:
+	knowledge;	
+<= nrel_subdividing:
+	{
+		static_subject_domain;
+		dynamic_subject_domain
+	};;
+	
+nrel_private_subject_domain
+<= nrel_subdividing:
+	{
+		nrel_private_subject_area_result_of_restricting_class_objects;
+		nrel_private_subject_area_result_narrowing_set_relations_defined_objects_they_study
+	};;
+
+rrel_maximum_studied_object_class
+<= nrel_strict_inclusion:
+	rrel_key_sc_element_of_subject_domain;;
+
+rrel_not_maximum_studied_object_class
+<= nrel_strict_inclusion:
+	rrel_key_sc_element_of_subject_domain;;
+	
+rrel_studied_relation
+<= nrel_strict_inclusion:
+	rrel_key_sc_element_of_subject_domain;;
+	
+rrel_concept_investigated_in_another_subject_domain
+=> nrel_strict_inclusion:
+	rrel_concept_investigated_in_private_subject_domain;;
+	
+rrel_concept_investigated_in_particular_subject_domain
+<= nrel_strict_inclusion:
+	rrel_key_sc_element_of_subject_domain;;
+	
+rrel_investigated_concept
+<= nrel_strict_inclusion:
+	rrel_key_sc_element_of_subject_domain;;
+	
+rrel_key_research_object
+<= nrel_strict_inclusion:
+	rrel_key_sc_element_of_subject_domain;;

@@ -1,0 +1,153 @@
+subject_domain
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[предметная область]
+	(* <- lang_ru;; *);
+	[subject domain]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[sc-модель предметной области]
+	(* <- lang_ru;; *);;
+	
+dynamic_subject_domain
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[динамическая предметная область]
+	(* <- lang_ru;; *);
+	[non stationary subject domain]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[нестационарная предметная область]
+	(* <- lang_ru;; *);;
+
+primary_subject_domain
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[первичная предметная область]
+	(* <- lang_ru;; *);
+	[primary subject domain]
+	(* <- lang_en;; *);;
+
+secondary_subject_domain
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[вторичная предметная область]
+	(* <- lang_ru;; *);
+	[secondary subject domain]
+	(* <- lang_en;; *);;
+
+static_subject_domain
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[статическая предметная область]
+	(* <- lang_ru;; *);
+	[static subject domain]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[предметная область, в состав которой входят постоянно существующие объекты исследования, постоянно существующие связи и структуры]
+	(* <- lang_ru;; *);
+	[стационарная предметная область]
+	(* <- lang_ru;; *);;
+
+nrel_particular_subject_domain
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[частная предметная область*]
+	(* <- lang_ru;; *);
+	[particular subject domain*]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[быть частной предметной областью*]
+	(* <- lang_ru;; *);
+	[предметная область, детализирующая описание одного из классов объектов исследования другой (более общей) предметной области*]
+	(* <- lang_ru;; *);
+	[предметная область, максимальный класс объектов исследования которой является подмножеством максимального класса объектов исследования другой (более общей) предметной области*]
+	(* <- lang_ru;; *);;
+
+nrel_private_subject_area_result_of_restricting_class_objects
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[ частная предметная область, являющаяся результатом сужения класса исследуемых объектов*]
+	(* <- lang_ru;; *);
+	[private subject area result of restricting class objects*]
+	(* <- lang_en;; *);;
+
+nrel_private_subject_area_result_narrowing_set_relations_defined_objects_they_study
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[ частная предметная область, являющаяся результатом сужения набора отношений, заданных на объектах исследования или вторичных им объектах*]
+	(* <- lang_ru;; *);
+	[nrel private subject area result narrowing set relations defined objects they study*]
+	(* <- lang_en;; *);;
+	
+rrel_maximum_studied_object_class
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+	[максимальный класс объектов исследования’]
+	(* <- lang_ru;; *);
+	[maximum object research class']
+	(* <- lang_en;; *);;
+
+rrel_not_maximum_studied_object_class
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+	[немаксимальный класс объектов исследования']
+	(* <- lang_ru;; *);
+	[not maximum studied object class']
+	(* <- lang_en;; *);;
+
+rrel_studied_relation
+<- sc_node_role_relation;
+=> nrel_main_idtf: 
+	[исследуемое отношение']
+	(* <- lang_ru;; *);
+	[studied relation']
+	(* <- lang_en;; *);;
+
+rrel_concept_investigated_in_another_subject_domain
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+	[понятие, исследуемое в другой предметной области’]
+	(* <- lang_ru;; *);
+	[concept, investigated in another subject domain]
+	(* <- lang_en;; *);;
+
+rrel_concept_investigated_in_particular_subject_domain
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+	[понятие, исследуемое в частной предметной области’]
+	(* <- lang_ru;; *);
+	[concept investigated in particular subject domain]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[понятие, определяемое и исследуемое в частной предметной области’]
+	(* <- lang_ru;; *);
+	[понятие, исследуемое в предметной области, которая связана с заданной связкой отношения быть частной предметной областью’]
+	(* <- lang_ru;; *);;
+
+rrel_investigated_concept
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+	[исследуемое понятие’]
+	(* <- lang_ru;; *);
+	[investigated concept']
+	(* <- lang_en;; *);;
+
+rrel_key_research_object
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+	[ключевой объект исследования’]
+	(* <- lang_ru;; *);
+	[key research object']
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[объект исследования, обладающий особыми свойствами’]
+	(* <- lang_ru;; *);;
+	
+rrel_key_sc_element_of_subject_domain
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+	[ключевой sc-элемент предметной области’]
+	(* <- lang_ru;; *);
+	[key sc-element of subject domain']
+	(* <- lang_en;; *);;

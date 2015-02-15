@@ -1,0 +1,31 @@
+structural_specification_of_subject_domain_of_ontologies
+<- structural_spacification;
+=> nrel_main_idtf:
+	[Структурная спецификация Предметной области онтологий]
+	(* <- lang_ru;; *);
+	[Structural specification of subject domain of ontologies]
+	(* <- lang_en;; *);;
+
+structural_specification_of_subject_domain_of_ontologies = [*	
+subject_domain_of_ontologies
+-> rrel_maximum_studied_object_class:
+	ontology;
+	
+-> rrel_not_maximum_studied_object_class:
+	integrated_ontology;
+	logical_ontology;
+	logical_system_of_concepts_and_their_definitions;
+	logical_system_statements_and_proofs;
+	metaontology;
+	structural_specification;
+	terminological_ontology;
+	theoretic_set_ontology;
+	ontology_of_tasks_and_solutions_of_tasks;
+	ontology_classes_of_tasks_and_ways_of_solving_tasks;
+	
+		
+-> rrel_relation:
+	nrel_ontology;
+	nrel_using_constants;
+	nrel_using_statements;;
+*];;

@@ -1,0 +1,83 @@
+state_of_knowledge_base
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[состояние базы знаний –...]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+current_state_of_knowledge_base
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[текущее состояние базы знаний – множество sc-элементов, входящих в состав текущего состояния базы знаний.]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+past_state_of_knowledge_base
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[прошлое состояние базы знаний – ...]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+future_state_of_the_knowledge_base
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[будущее состояние базы знаний – ...]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+set_of_sc_elements_that_will_be_put_into_the_current_state_of_kb
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[множество sc-элементов, которые планируется ввести в текущее состояние базы знаний – ]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+set_of_sc_elements_deleted_from_current_status_of_the_kb
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[множество sc-элементов, удаленных из текущего состояния базы знаний – ]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;

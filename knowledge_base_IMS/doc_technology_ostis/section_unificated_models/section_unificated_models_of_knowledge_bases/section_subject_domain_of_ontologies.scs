@@ -3,4 +3,30 @@ section_subject_domain_of_ontologies
 	[Раздел. Предметная область онтологий]
 	(* <- lang_ru;; *);
 	[Section. Subject domain of ontologies]
-	(* <- lang_en;; *);;
+	(* <- lang_en;; *);
+
+<= nrel_section_decomposition:
+	{
+		subject_domain_of_ontologies
+		(*
+		=> nrel_section_base_order: 
+			structural_specification_of_subject_domain_of_ontologies;;
+		*);
+		structural_specification_of_subject_domain_of_ontologies
+		(*
+		=> nrel_section_base_order: 
+			terminological_ontology_of_subject_domain_of_ontologies;;
+		*);
+		terminological_ontology_of_subject_domain_of_ontologies
+		(*
+		=> nrel_section_base_order: 
+			set_theoretic_ontology_of_subject_domain_of_ontologies;;
+		*);
+		set_theoretic_ontology_of_subject_domain_of_ontologies
+		(*
+		=> nrel_section_base_order: 
+			logical_ontology_of_subject_domain_of_ontologies;;
+		*);
+		logical_ontology_of_subject_domain_of_ontologies
+	
+	};;

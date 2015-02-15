@@ -1,0 +1,140 @@
+ontology
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[онтология]
+	(* <- lang_ru;; *);
+	[ontology]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+  [система понятий соответствующей предметной области]
+  (* <- lang_ru;; *);
+  [концептуальный каркас (скелет) описания некоторой предметной области]
+  (* <- lang_ru;; *);
+  [концептуальная (семантическая) основа различных языков, обеспечивающих описание объектов исследования, принадлежащих заданной предметной области]
+  (* <- lang_ru;; *);
+  [семантический интерфейс для интеграции знаний по заданной предметной области и для согласованного понимания различными субъектами этих знаний]
+  (* <- lang_ru;; *);
+  [онтология соответствующей предметной области]
+  (* <- lang_ru;; *);
+  [sc-онтология]
+  (* <- lang_ru;; *);
+  [sc-модель онтологии предметной области]
+  (* <- lang_ru;; *);
+  [онтология предметной области]
+  (* <- lang_ru;; *);
+  [онтология предметной области, представленная в SC-коде]
+  (* <- lang_ru;; *);
+  [sc-текст онтологии]
+  (* <- lang_ru;; *);
+  [спецификация предметной области]
+  (* <- lang_ru;; *);
+  [описание концептов и отношений заданной предметной области]
+  (* <- lang_ru;; *);;
+
+integrated_ontology
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+		[интегрированная онтология]
+		(* <- lang_ru;; *);
+		[integrated ontology]
+		(* <- lang_en;; *);;
+
+logical_ontology
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[логическая онтология]
+	(* <- lang_ru;; *);
+	[logical ontology]
+	(* <- lang_en;; *);;
+
+logical_system_of_concepts_and_their_definitions
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[логическая система понятий и их определений]
+	(* <- lang_ru;; *);
+	[logical_system_of_concepts_and_their_definitions]
+	(* <- lang_en;; *);;
+
+logical_system_statements_and_proofs
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[логическая система утверждений и их доказательств]
+	(* <- lang_ru;; *);
+	[logical_system_statements_and_proofs]
+	(* <- lang_en;; *);;
+
+metaontology
+<- sc_node_not_relation;
+=> nrel_main_idtf: 
+	[метаонтология] (* <- lang_ru;; *);;
+
+structural_specification
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[структурная спецификация]
+	(* <- lang_ru;; *);
+	[structural specification]
+	(* <- lang_en;; *);;
+
+terminological_ontology
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[терминологическая онтология]
+	(* <- lang_ru;; *);
+	[terminological ontology]
+	(* <- lang_en;; *);;
+
+theoretic_set_ontology
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[теоретико-множественная онтология]
+	(* <- lang_ru;; *);
+	[theoretic set ontology]
+	(* <- lang_en;; *);;
+
+ontology_of_tasks_and_solutions_of_tasks
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[онтология задач и решений задач]
+	(* <- lang_ru;; *);
+	[ontology of tasks and solutions of tasks]
+	(* <- lang_en;; *);;
+
+ontology_classes_of_tasks_and_ways_of_solving_tasks
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[онтология классов задач и способов решения задач]
+	(* <- lang_ru;; *);
+	[ontology classes of tasks and ways of solving tasks]
+	(* <- lang_en;; *);;
+
+nrel_ontology
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[онтология*]
+	(* <- lang_ru;; *);
+	[ontology*]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[sc-онтология*]
+	(* <- lang_ru;; *);
+	[быть онтологией предметной области*]
+	(* <- lang_ru;; *);
+	[быть онтологией заданной предметной области*]
+	(* <- lang_ru;; *);;
+
+nrel_using_constants
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[используемые константы*]
+	(* <- lang_ru;; *);
+	[using constants*]
+	(* <- lang_en;; *);;
+
+nrel_using_statements
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[используемые утверждения*]
+	(* <- lang_ru;; *);
+	[using statements*]
+	(* <- lang_en;; *);;
