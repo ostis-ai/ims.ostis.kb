@@ -10,9 +10,14 @@ natural_language
 	lang_ru;;
 
 nrel_sc_text_translation
-=> nrel_second_domain:
+=> nrel_first_domain:
+	set;
+=> nrel_first_domain:
 	syntactically_equivalent_construction_class;;
 
 languages 
 -> lang_ru; lang_en;
 <- sc_node_not_relation;;
+
+nrel_sc_text_translation
+<- quasibinary_relation;;
