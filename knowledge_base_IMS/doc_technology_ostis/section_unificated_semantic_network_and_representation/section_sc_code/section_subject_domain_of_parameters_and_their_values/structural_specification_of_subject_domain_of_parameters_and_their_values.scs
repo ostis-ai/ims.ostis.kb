@@ -1,0 +1,30 @@
+structural_specification_of_subject_domain_of_parameters_and_their_values
+<- structural_spacification;
+=> nrel_main_idtf:
+	[Структурная спецификация Предметной области параметров и их значений]
+	(* <- lang_ru;; *);
+	[Structural specification of subject domain of parameters and their values]
+	(* <- lang_en;; *);;
+
+structural_specification_of_subject_domain_of_parameters_and_their_values = [*
+
+subject_domain_of_parameters_and_their_values
+
+-> rrel_maximum_studied_object_class:
+	parameter;
+	
+-> rrel_not_maximum_studied_object_class:
+	parametric_model;
+	immeasurable_parameter;
+	measurable_parameter;
+	value;
+	scale;
+
+-> rrel_relation:
+	exact_value;
+	value_in_a_fixed_interval;
+	inaccurate_value;
+	nrel_measurement_scale;;
+	
+*];;
+	

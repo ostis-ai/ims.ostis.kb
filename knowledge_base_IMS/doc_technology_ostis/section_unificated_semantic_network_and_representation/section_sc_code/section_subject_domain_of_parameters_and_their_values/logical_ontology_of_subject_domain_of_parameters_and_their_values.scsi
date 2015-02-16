@@ -1,0 +1,149 @@
+parameter
+<- sc_node_not_relation;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+				-> rrel_example:
+					[параметр - семейство классов сущностей, имеющих одинаковое или почти одинаковое значение заданного параметра]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+parametric_model
+<- sc_node_not_relation;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+				-> rrel_example:
+					[параметрическая модель - спецификация заданной сущности через указание ее «координат» в абстрактном параметрическом пространстве (в пространстве признаков)]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+immeasurable_parameter
+<- sc_node_not_relation;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+				-> rrel_example:
+					[неизмеряемый параметр - ]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+measurable_parameter
+<- sc_node_not_relation;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+				-> rrel_example:
+					[измеряемый параметр - ]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+value
+<- sc_node_not_relation;
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[Каждая величина связывается с соответствующим ей параметром с помощью следующих ролевых отношений: точная величина’, неточная величина’, величина в фиксированном интервале’]
+			(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+scale
+<- sc_node_not_relation;
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[шкала - множество результатов измерения величины]
+			(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+exact_value
+<- sc_role_relation;
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[точная величина' - ...]
+			(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+value_in_a_fixed_interval
+<- sc_role_relation;
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[величина в фиксированном интервале' - ...]
+			(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+inaccurate_value
+<- sc_role_relation;
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[неточная величина' - ...]
+			(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+nrel_measurement_scale
+<- sc_norole_relation;
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[шкала измерения* - бинарное отношение, связывающее величину со шкалой, в которой проивзодится измерение заданной величины.]
+			(* <- lang_ru;; *);;
+		*);;
+	*);;

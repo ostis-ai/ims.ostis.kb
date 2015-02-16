@@ -3,4 +3,49 @@ section_subject_domain_of_parameters_and_their_values
 	[Раздел. Предметная область параметров и их значений]
 	(* <- lang_ru;; *);
 	[Section. Subject domain of parameters and their values]
-	(* <- lang_en;; *);;
+	(* <- lang_en;; *);
+
+<= nrel_section_decomposition:
+	{
+		subject_domain_of_parameters_and_their_values
+		(*
+		=> nrel_section_base_order: 
+			structural_specification_of_subject_domain_of_parameters_and_their_values;;
+		*);
+		structural_specification_of_subject_domain_of_parameters_and_their_values
+		(*
+		=> nrel_section_base_order: 
+			terminological_ontology_of_subject_domain_of_parameters_and_their_values;;
+		*);
+		terminological_ontology_of_subject_domain_of_parameters_and_their_values
+		(*
+		=> nrel_section_base_order: 
+			set_theoretic_ontology_of_subject_domain_of_parameters_and_their_values;;
+		*);
+		set_theoretic_ontology_of_subject_domain_of_parameters_and_their_values
+		(*
+		=> nrel_section_base_order: 
+			logical_ontology_of_subject_domain_of_parameters_and_their_values;;
+		*);
+		logical_ontology_of_subject_domain_of_parameters_and_their_values
+		(*
+		=> nrel_section_base_order: 
+			logical_hierarchy_notions_of_subject_domain_of_parameters_and_their_values;;
+		*);
+		logical_hierarchy_notions_of_subject_domain_of_parameters_and_their_values
+		(*
+		=> nrel_section_base_order: 
+			logical_hierarchy_of_statements_about_the_subject_domain_of_parameters_and_their_values;;
+		*);
+		logical_hierarchy_of_statements_about_the_subject_domain_of_parameters_and_their_values
+		(*
+		=> nrel_section_base_order: 
+			ontology_problems_and_solutions_of_the_subject_domain_of_parameters_and_their_values;;
+		*);
+		ontology_problems_and_solutions_of_the_subject_domain_of_parameters_and_their_values
+		(*
+		=> nrel_section_base_order: 
+			ontology_classes_of_problems_and_ways_of_solving_problems_at_subject_domain_of_parameters_and_their_values;;
+		*);
+		ontology_classes_of_problems_and_ways_of_solving_problems_at_subject_domain_of_parameters_and_their_values
+	};;
