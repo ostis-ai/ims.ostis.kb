@@ -1,0 +1,41 @@
+structural_specification_of_subject_domain_of_semantic_neighbourhoods
+<- structural_spacification;
+=> nrel_main_idtf:
+	[Структурная спецификация Предметной области семантических окретсностей]
+	(* <- lang_ru;; *);
+	[Structural specification of subject domain of semantic neighbourhoods]
+	(* <- lang_en;; *);;
+
+structural_specification_of_subject_domain_of_semantic_neighbourhoods = [*	
+subject_domain_of_semantic_neighbourhoods
+-> rrel_maximum_studied_object_class:
+	semantic_neighbourhood;
+	
+-> rrel_not_maximum_studied_object_class:
+	basic_semantic_neighbourhood;
+	typical_sc_neighbourhood;
+	comparative_analysis;
+	decomposition_description;
+	description_of_benefits;
+	description_of_gaps;
+	logic_semantic_neighbourhood;
+	theoretic_set_semantic_neighbourhood;
+	terminological_neighbourhood;
+	general_semantic_neighbourhood;
+	sc_text_definition;
+	sc_note;
+	sc_comment;
+	sc_explanation;
+	parametric_model;
+	documentation;
+	technical_documentation_of_system;
+	project_documentation;
+	documentation_of_technology;
+	sc_text_statement;
+	sc_text_of_proof;
+	plan_for_solving_the_problem;
+	sc_text_of_justification_for_solving_problem;
+	generalized_formulation_of_the_relevant_class_of_problems;
+	method_of_solving_problems_of_the_relevant_class;;
+	
+*];;

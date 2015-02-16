@@ -7,3 +7,22 @@ logical_ontology_of_subject_domain_of_knowledge_base_state_changes
 	(* <- lang_en;; *);;
 
 logical_ontology_of_subject_domain_of_knowledge_base_state_changes = [*^"file://logical_ontology_of_subject_domain_of_knowledge_base_state_changes.scsi"*];;
+
+rrel_key_sc_element -> (logical_ontology_of_subject_domain_of_knowledge_base_state_changes -> state_of_knowledge_base)
+(*
+	=> nrel_key_sc_element_base_order: (logical_ontology_of_subject_domain_of_knowledge_base_state_changes -> current_state_of_knowledge_base)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_of_subject_domain_of_knowledge_base_state_changes -> past_state_of_the_knowledge_base)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_of_subject_domain_of_knowledge_base_state_changes -> future_state_of_the_knowledge_base)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_of_subject_domain_of_knowledge_base_state_changes -> set_of_sc_elements_that_will_be_put_into_the_current_state_of_kb)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_of_subject_domain_of_knowledge_base_state_changes -> set_of_sc_elements_deleted_from_current_status_of_the_kb)
+	(* <- rrel_key_sc_element;; *);;
+*);;*);;*);;*);;*);;
+

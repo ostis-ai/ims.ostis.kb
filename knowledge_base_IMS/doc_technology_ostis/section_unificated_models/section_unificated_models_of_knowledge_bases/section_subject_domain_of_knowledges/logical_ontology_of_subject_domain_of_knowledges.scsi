@@ -1,0 +1,364 @@
+knowledge
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[знание - это стационарная знаковая конструкция обладающая некоторой семантической целостностью.]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+atomic_section
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[атомарный раздел - знак множества всевозможных атомарных разделов, входящих в состав различных документации, то есть разделов, не декомпозируемых на более частные разделы]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+global_kb_sc_model
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[SC-модель глобальной базы знаний - унифицированная семантическая модель глобальной базы знаний]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+global_kb_sense_model
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[смысловая модель глобальной базы знаний - глобальная база знаний, представленная в виде семантической сети]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+global_knowledge_base
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[глобальная база знаний - конечная информационная конструкция, являющаяся формальным представлением всех знаний, накопленных человечеством к текущему моменту]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+illustration
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[иллюстрация - sc-текст, иллюстрирующий некоторую сущность]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+local_kb_sc_model
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[sc-модель локальной базы знаний - локальная база знаний, представленная в SC-коде]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+local_kb_sense_model
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[смысловая модель локальной базы знаний - локальная база знаний, представленная в виде семантической сети]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+local_knowledge_base
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[локальная база знаний - конечная информационная конструкция, являющаяся формальным представлением всех знаний, достаточных для функционирования некоторой интеллектуальной системы и хранимых в памяти этой системы]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+non_atomic_section
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[неатомарный раздел – знак множества всевозможных неатомарных разделов, входящих в состав различных документаций, то есть разделов, которые декомпозируются на более частные разделы]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+	
+sc_sense_space
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[SC-пространство – результат интеграции всевозможных текстов SC-кода]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+section
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[раздел – это знак множества всевозможных разделов, входящих в состав различных документаций]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+sense
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[смысл – смысловое представление информации]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+sense_space
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[смысловое пространство – бесконечная семантическая сеть, включающая в себя все известные понятия (концепты) и все элементы (экземпляры) этих понятий, а также знаки всех известных структур и связей вместе с их элементами (компонентами)]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+task
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[задача – sc-текст формулировки задачи]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+section_knowledge_base
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[раздел базы знаний – специально выделенный фрагмент базы знаний, которому однозначно ставится в соответствие персона, администрирующая этот фрагмент и несущая полную персональную ответственность за его актуализацию, обновление и совершенствование]
+					(*<- lang_ru;;*);;
+			*);;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_note;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[Разделом базы знаний может быть предметная область, онтология, документация, обоснование разработки, документация. Частным видом разделов баз знаний являются сами базы знаний, которые должны удовлетворять целому набору требований, обеспечивающих их целостность. ]
+			(* <- lang_ru;; *);;
+		*);;
+	*);;
+	
+		
+nrel_annotation
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[аннотация* – это бинарное ориентированное отношение, связывающее раздел с файлом, содержащим текст аннотации к разделу]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+
+nrel_conclusion
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[заключение* – это бинарное ориентированное отношение,связывающее раздел с файлом, содержащим текст заключения к этому разделу]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+nrel_epigraph
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[эпиграф* – это бинарное ориентированное отношение, связывающее раздел с файлом, содержащим текст эпиграфа к разделу]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+nrel_introduction
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[введение* – это бинарное ориентированное отношение, связывающее раздел с файлом, содержащим текст введения к этому разделу]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+nrel_section_base_order
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[базовый порядок разделов* – это бинарное ориентированное отношение, задающее порядок следования разделов в рамках другого раздела]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+nrel_section_decomposition
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[декомпозиция раздела* – это бинарное ориентированное отношение медлу разделом и множеством его подразделов]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+rrel_key_sc_element
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[ключевой sc-элемент' – это ролевое отношение, связывающее фрагмент базы знаний с sc-элементом, являющимся ключевым в рамках этого фрагмента.]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+rrel_main_key_sc_element
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[главный ключевой sc-элемент' – это ролевое отношение, связывающее фрагмент базы знаний с sc-элементом, являющимся главным из множества ключевых в рамках этого фрагмента.]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+rrel_sample
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[образец' – это ролевое отношение, связывающее некоторую сущность с ее образцом]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;

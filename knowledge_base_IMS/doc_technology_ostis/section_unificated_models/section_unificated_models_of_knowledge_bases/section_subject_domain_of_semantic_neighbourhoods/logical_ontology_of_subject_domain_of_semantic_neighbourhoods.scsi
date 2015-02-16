@@ -1,0 +1,349 @@
+semantic_neighbourhood
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[семантическая окрестность - sc-текст, посвященный описанию некоторой сущности, знак которой является ключевым sc-элементом указанного sc-текста]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+basic_semantic_neighbourhood
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[базовая семантическая окрестность - семантическая окрестность, содержащая информацио об идентификации и пояснении или определении сущноcти]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+typical_sc_neighbourhood
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[типичная семантическая окрестность - семантическая окрестность, являющаяся типичным примером использования рассматриваемой сущности]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+comparative_analysis
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[сравнительный анализ - семантическая окрестность, содержащая сравнительный анализ двух и более сущностей]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+decomposition_description
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[описание декомпозиции - семантическая окрестность, содержащая декомпозицию указанной сущности на другие сущности]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+description_of_benefits
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[описание преимуществ - семантическая окрестность, содержащая информацию о преимуществах указанной сущности]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+description_of_gaps
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[описание недостатков - семантическая окрестность, содержащая информацию о недостатках указанной сущности]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+logic_semantic_neighbourhood
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[логическая семантическая окрестность - семантическая окрестность, содержащая семейство высказываний, описывающих свойства данного понятия]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+theoretic_set_semantic_neighbourhood
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[теоретико-множественная семантическая окрестность - семантическая окрестность, содержащая описание связей описываемого понятия с другими понятиями с помощью теоретико-множественных отношений]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+terminological_neighbourhood
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[терминологическая семантическая окрестность - семантическая окрестность, содержащая описание идентификации рассматриваемой сущности]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+general_semantic_neighbourhood
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[общая семантическая окрестность - семантическая окрестность, включающая все связи рассматриваемой сущности с другими сущностями в рамках базы знаний]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+sc_text_definition
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[sc-текст определения - семантическая окрестность, содержащая формальный текст определения рассматриваемой сущности]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+sc_note
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[sc-примечание - семантическая окрестность, содержащая примечание к рассматриваемой сущности]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+sc_comment
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[sc-комментарий - семантическая окрестность, содержащая комментарий к рассматриваемой сущности]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+sc_explanation
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[sc-пояснение - семантическая окрестность, содержащая текст пояснения к рассматриваемой сущности]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+documentation
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[документация - семантическая окрестность, представляющая собой документацию к рассматриваемой сущности]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+technical_documentation_of_system
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[техническая документация системы - семантическая окрестность, представляющая собой описание технической документации рассматриваемой системы]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+project_documentation
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[проектная документация - семантическая окрестность, включающая информацию о рассматриваемом проекте]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+documentation_of_technology
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[документация технологии - семантическая окрестность, содержащая документацию, описывающую рассматриваемой технологии]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+sc_text_statement
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[sc-текст утверждения - семантическая окрестность, содержащая текст рассматриваемого утверждения]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+sc_text_of_proof
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[sc-текст доказательства - семантическая окрестность, содержащая текст доказательства рассматриваемого утверждения]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+plan_for_solving_the_problem
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[план решения задачи - семантическая окрестность, содержащая план решения рассматриваемой задачи]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+sc_text_of_justification_for_solving_problem
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[sc-текст обоснования решения задачи - семантическая окрестность, содержащая текст обоснования решения рассматриваемой задачи]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+generalized_formulation_of_the_relevant_class_of_problems
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[обобщенная формулировка задач соответствующего класса - семантическая окрестность, содержащая обобщенную формулировку рассматриваемой задачи]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+method_of_solving_problems_of_the_relevant_class
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[способ решения задач соответствующего класса - семантическая окрестность, содержащая sc-текст обобщенного плана решения задач некоторого класса]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;

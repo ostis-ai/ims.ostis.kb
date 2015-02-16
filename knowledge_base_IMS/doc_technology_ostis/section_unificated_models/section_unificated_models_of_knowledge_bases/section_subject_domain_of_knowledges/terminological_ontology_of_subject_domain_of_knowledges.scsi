@@ -1,0 +1,260 @@
+knowledge
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[знание]
+	(* <- lang_ru;; *);
+	[knowledge]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[семантически осмысленная и целостная sc-структура]
+	(* <- lang_ru;; *);
+	[sc-знание]
+	(* <- lang_ru;; *);
+	[знание, представленное в SC-коде]
+	(* <- lang_ru;; *);;
+	
+atomic_section
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[атомарный раздел]
+	(* <- lang_ru;; *);
+	[atomic section]
+	(* <- lang_en;;	*);
+=> nrel_idtf:
+	[раздел, не имеющий подразделов]
+	(* <- lang_ru;;	*);;
+
+global_kb_sc_model
+<- sc_node_not_relation;
+=> nrel_main_idtf: 
+	[SC-модель глобальной базы знаний] 
+	(* <- lang_ru;; *);
+=> nrel_idtf: 
+	[Глобальная база знаний, представленная в SC-коде] 
+	(* <- lang_ru;; *);
+=> nrel_idtf: 
+	[Унифицированная смысловая модель глобальной базы знаний] 
+	(* <- lang_ru;; *);;
+
+	
+global_kb_sense_model
+<- sc_node_not_relation;
+=> nrel_main_idtf: 
+	[смысловая модель глобальной базы знаний] 
+	(* <- lang_ru;; *);
+=> nrel_idtf: 
+	[семантическая модель глобальной базы знаний] 
+	(* <- lang_ru;; *);;
+	
+global_knowledge_base
+<- sc_node_not_relation;
+=> nrel_main_idtf: 
+	[глобальная база знаний] 
+	(* <- lang_ru;; *);
+=> nrel_idtf: 
+	[конечная информационная конструкция, являющаяся формальным представлением всех знаний, накопленных человечеством к текущему моменту] 
+	(* <- lang_ru;; *);;
+
+illustration
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[иллюстрация] 
+	(* <- lang_ru;; *);
+	[illustration] 
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[sc-текст, иллюстрирующий некоторую сущность] 
+	(* <- lang_ru;; *);;
+	
+local_kb_sc_model
+<- sc_node_not_relation;
+=> nrel_main_idtf: 
+	[sc-модель локальной базы знаний] 
+	(* <- lang_ru;; *);
+=> nrel_idtf: 
+	[Унифицированная смысловая модель базы знаний] 
+	(* <- lang_ru;; *);;
+	
+local_kb_sense_model
+<- sc_node_not_relation;
+=> nrel_main_idtf: 
+	[смысловая модель локальной базы знаний] 
+	(* <- lang_ru;; *);;
+	
+local_knowledge_base
+<- sc_node_not_relation;
+=> nrel_main_idtf: 
+	[локальная база знаний] 
+	(* <- lang_ru;; *);
+=> nrel_idtf: 
+	[формальная модель, интегрирующая все знания, хранимые в памяти интеллектуальной системы] 
+	(* <- lang_ru;; *);;
+
+non_atomic_section
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[неатомарный раздел]
+	(* <- lang_ru;;	*);
+	[non-atomic section]
+	(* <- lang_en;;	*);
+=> nrel_idtf:
+	[раздел, имеющий подразделы]
+	(* <- lang_ru;;	*);
+	[раздел, декомпозируемый на подразделы]
+	(* <- lang_ru;;	*);;
+
+sc_sense_space
+<- sc_node_not_relation;
+=> nrel_main_idtf: 
+	[SC-пространство] 
+	(* <- lang_ru;; *);
+=> nrel_idtf: 
+	[Смысловое пространство, представленное в SC-коде] 
+	(* <- lang_ru;; *);
+	[SC-текст смыслового пространства] 
+	(* <- lang_ru;; *);
+	[Глобальный sc-текст] 
+	(* <- lang_ru;; *);
+	[Унифицированная модель смыслового универсума] 
+	(* <- lang_ru;; *);
+	[SC-универсум] 
+	(* <- lang_ru;; *);
+	[Унифицированная модель смыслового пространства] 
+	(* <- lang_ru;; *);
+	[Глобальная унифицированная семантическая сеть] 
+	(* <- lang_ru;; *);
+	[SC-модель смыслового пространства] 
+	(* <- lang_ru;; *);;
+
+section
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[раздел] (* <- lang_ru;; *);
+	[section] (* <- lang_en;; *);;
+
+	
+sense
+<- sc_node_not_relation;
+=> nrel_main_idtf: 
+	[смысл] 
+	(* <- lang_ru;; *);;
+
+sense_space
+<- sc_node_not_relation;
+=> nrel_main_idtf: 
+	[смысловое пространство] 
+	(* <- lang_ru;; *);
+=> nrel_idtf:
+	[семантическое пространство] 
+	(* <- lang_ru;; *);
+	[смысловой универсум] 
+	(* <- lang_ru;; *);
+	[смысловое пространство знаний] 
+	(* <- lang_ru;; *);;
+	
+section_knowledge_base
+<- sc_node_not_relation;
+=> nrel_main_idtf: 
+	[раздел базы знаний] 
+	(* <- lang_ru;; *);
+	[section knowledge base] 
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[sc-модель раздела базы знаний] 
+	(* <- lang_ru;; *);
+	[sc-текст раздела базы знаний]
+	(* <- lang_ru;; *);
+	[фрагмент базы знаний, совершенствование которого может осуществляться в достаточной степени независимо от других специально выделенных фрагментов базы знаний]
+	(* <- lang_ru;; *);;
+	
+	
+task
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[задача]
+	(* <- lang_ru;; *);
+	[task]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[sc-текст формулировки задачи]
+	(* <- lang_ru;; *);
+	[sc-формулировка задачи]
+	(* <- lang_ru;; *);;
+		
+
+nrel_annotation
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[аннотация*] (* <- lang_ru;; *);
+	[annotation*] (* <- lang_en;; *);;
+
+nrel_conclusion
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[заключение*] (* <- lang_ru;; *);
+	[conclusion*] (* <- lang_en;; *);;
+	
+nrel_epigraph
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[эпиграф*] (* <- lang_ru;; *);
+	[epigraph*] (* <- lang_en;; *);;
+
+nrel_introduction
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[введение*] (* <- lang_ru;; *);
+	[introduction*] (* <- lang_en;; *);;
+
+nrel_section_base_order
+<- order_relation;
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[базовый порядок разделов*]
+	(* <- lang_ru;;	*);
+	[base order of sections*]
+	(* <- lang_en;;	*);
+=> nrel_idtf:
+	[базовая последовательность разделов*]
+	(* <- lang_ru;;	*);;
+
+nrel_section_decomposition
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[декомпозиция раздела*]
+	(* <- lang_ru;;	*);
+	[decomposition of section*]
+	(* <- lang_en;;	*);;
+	
+rrel_key_sc_element
+<- sc_node_role_relation;
+=> nrel_main_idtf: 
+	[ключевой элемент']
+	(* <- lang_ru;; *);
+	[key sc-element'] 
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[быть ключевым sc-элементом заданного sc-знания']
+	(* <- lang_ru;; *);;
+
+rrel_main_key_sc_element
+<- sc_node_role_relation;
+=> nrel_main_idtf: 
+	[главный ключевой элемент']
+	(* <- lang_ru;; *);
+	[main key sc-element'] 
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[быть главным ключевым sc-элементом заданного sc-знания']
+	(* <- lang_ru;; *);;
+
+rrel_sample
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+	[образец']
+	(* <- lang_ru;; *);
+	[sample']
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[контрольный экземпляр']
+	(* <- lang_ru;; *);;

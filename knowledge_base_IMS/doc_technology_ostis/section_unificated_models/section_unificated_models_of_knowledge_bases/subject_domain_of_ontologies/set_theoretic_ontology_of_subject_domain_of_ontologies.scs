@@ -8,3 +8,18 @@ set_theoretic_ontology_of_subject_domain_of_ontologies
 	(* <- lang_en;; *);;
 	
 set_theoretic_ontology_of_subject_domain_of_ontologies = [*^"file://set_theoretic_ontology_of_subject_domain_of_ontologies.scsi"*];;
+
+rrel_key_sc_element -> (set_theoretic_ontology_of_subject_domain_of_ontologies -> ontology)
+(*
+	=> nrel_key_sc_element_base_order: (set_theoretic_ontology_of_subject_domain_of_ontologies -> metaontology)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (set_theoretic_ontology_of_subject_domain_of_ontologies -> nrel_ontology)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (set_theoretic_ontology_of_subject_domain_of_ontologies -> nrel_using_constants)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (set_theoretic_ontology_of_subject_domain_of_ontologies -> nrel_using_statements)
+	(* <- rrel_key_sc_element;; *);;
+*);;*);;*);;*);;

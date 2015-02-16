@@ -7,3 +7,51 @@ logical_ontology_of_subject_domain_of_subject_domains
 	(* <- lang_en;; *);;
 
 logical_ontology_of_subject_domain_of_subject_domains = [*^"file://logical_ontology_of_subject_domain_of_subject_domains.scsi"*];;
+
+rrel_key_sc_element -> (logical_ontology_of_subject_domain_of_subject_domains -> subject_domain)
+(*
+	=> nrel_key_sc_element_base_order: (logical_ontology_of_subject_domain_of_subject_domains -> dynamic_subject_domain)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_of_subject_domain_of_subject_domains -> primary_subject_domain)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_of_subject_domain_of_subject_domains -> secondary_subject_domain)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_of_subject_domain_of_subject_domains -> static_subject_domain)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_of_subject_domain_of_subject_domains -> nrel_particular_subject_domain)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_of_subject_domain_of_subject_domains -> nrel_private_subject_area_result_of_restricting_class_objects)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_of_subject_domain_of_subject_domains -> nrel_private_subject_area_result_narrowing_set_relations_defined_objects_they_study)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_of_subject_domain_of_subject_domains -> rrel_maximum_studied_object_class)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_of_subject_domain_of_subject_domains -> rrel_not_maximum_studied_object_class)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_of_subject_domain_of_subject_domains -> rrel_studied_relation)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_of_subject_domain_of_subject_domains -> rrel_concept_investigated_in_another_subject_domain)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_of_subject_domain_of_subject_domains -> rrel_concept_investigated_in_particular_subject_domain)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_of_subject_domain_of_subject_domains -> rrel_investigated_concept)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_of_subject_domain_of_subject_domains -> rrel_key_research_object)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_of_subject_domain_of_subject_domains -> rrel_key_sc_element_of_subject_domain)
+	(* <- rrel_key_sc_element;; *);;
+*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;

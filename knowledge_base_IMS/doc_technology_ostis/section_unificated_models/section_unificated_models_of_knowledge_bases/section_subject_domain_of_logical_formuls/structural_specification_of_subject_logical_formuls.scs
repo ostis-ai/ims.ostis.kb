@@ -1,0 +1,51 @@
+structural_specification_of_subject_logical_formuls
+<- structural_spacification;
+=> nrel_main_idtf:
+	[Структурная спецификация Предметной области логических формул]
+	(* <- lang_ru;; *);
+	[Structural specification of subject domain of logical formulas]
+	(* <- lang_en;; *);;
+
+structural_specification_of_subject_domain_of_logical_formuls = [*	
+subject_domain_of_logical_formuls
+-> rrel_maximum_studied_object_class:
+	logical_formula;
+	
+-> rrel_not_maximum_studied_object_class:
+	atomic_existence;
+	atomic_existence_and_uniqueness;
+	atomic_formula;
+	contradictory_logical_formula;
+	existence_and_uniqueness;
+	formal_theory;
+	general_validity_of_a_logical_formula;
+	impossible_logical_formula;
+	logical_operation;
+	logical_variable;
+	neutral_logical_formula;
+	non_atomic_formula;
+	propositional_variable;
+	quantifier;
+	statement;
+	tautology;
+	workable_logical_formula;
+	
+		
+-> rrel_relation:
+	negation;
+	nrel_conjunction;
+	nrel_disjunction;
+	nrel_equivalence;
+	nrel_existence;
+	rrel_free_variables;
+	nrel_generality;
+	nrel_implication;
+	nrel_strict_disjunction;
+	rrel_axiom;
+	rrel_bind_variables;
+	rrel_if;
+	rrel_then;
+	rrel_theorem;;
+	
+	
+*];;

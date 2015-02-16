@@ -1,0 +1,109 @@
+terminological_ontology_of_subject_domain_of_logical_formuls
+<- terminological_ontology;
+=> nrel_main_idtf:
+	[Терминологическая онтология Предметной области логических формул]
+	(* <- lang_ru;; *);
+	[Terminological ontology of subject domain of logical formulas]
+	(* <- lang_en;; *);;
+	
+terminological_ontology_of_subject_domain_of_logical_formuls = [*^"file://terminological_ontology_of_subject_domain_of_logical_formuls.scsi"*];;
+
+rrel_key_sc_element -> (terminological_ontology_of_subject_domain_of_logical_formuls -> logical_formula)
+(*
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_logical_formuls -> atomic_existence)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_logical_formuls -> atomic_existence_and_uniqueness)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_logical_formuls -> atomic_formula)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_logical_formuls -> contradictory_logical_formula)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_logical_formuls -> existence_and_uniqueness)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_logical_formuls -> formal_theory)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_logical_formuls -> general_validity_of_a_logical_formula)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_logical_formuls -> impossible_logical_formula)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_logical_formuls -> logical_operation)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_logical_formuls -> logical_variable)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_logical_formuls -> negation)	
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_logical_formuls -> neutral_logical_formula)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_logical_formuls -> non_atomic_formula)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_logical_formuls -> propositional_variable)	
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_logical_formuls -> quantifier)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_logical_formuls -> statement)	
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_logical_formuls -> tautology)	
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_logical_formuls -> workable_logical_formula)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_logical_formuls -> negation)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_logical_formuls -> nrel_conjunction)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_logical_formuls -> nrel_disjunction)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_logical_formuls -> nrel_equivalence)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_logical_formuls -> nrel_existence)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_logical_formuls -> rrel_free_variables)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_logical_formuls -> nrel_generality)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_logical_formuls -> nrel_implication)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_logical_formuls -> nrel_strict_disjunction)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_logical_formuls -> rrel_axiom)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_logical_formuls -> rrel_bind_variables)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_logical_formuls -> rrel_if)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_logical_formuls -> rrel_then)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_logical_formuls -> rrel_theorem)
+	(* <- rrel_key_sc_element;; *);;
+*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;
+

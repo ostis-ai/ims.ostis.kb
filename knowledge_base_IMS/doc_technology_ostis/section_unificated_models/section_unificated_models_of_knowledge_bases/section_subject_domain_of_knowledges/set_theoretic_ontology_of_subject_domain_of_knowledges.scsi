@@ -1,0 +1,71 @@
+knowledge
+=> nrel_strict_inclusion:
+	atomic_section;
+	global_kb_sc_model;
+	global_kb_sense_model;
+	global_knowledge_base;
+	illustration;
+	local_kb_sc_model;
+	local_kb_sense_model;
+	local_knowledge_base;
+	non_atomic_section;
+	sc_neighborhood;
+	sc_sense_space;
+	section;
+	sense;
+	sense_space;
+	statement;
+	subject_domain;
+	ontology;
+	logical_system_of_concepts_and_their_definitions;
+	logical_system_of_tasks_and_their_proofs;
+	sc_comparison;
+	sc_text_statement;
+	sc_text_of_proofs;
+	task;
+	plan_for_solving_the_problem;
+	sc_text_of_justification_for_solving_problem;
+	generalized_formulation_of_the_relevant_class_of_problems;
+	method_of_solving_problems_of_the_relevant_class;
+	section_knowledge_base;;
+
+
+global_kb_sc_model
+<= nrel_inclusion:  
+	global_kb_sense_model;;
+
+global_kb_sense_model
+<= nrel_inclusion: 
+	global_knowledge_base;;
+
+local_kb_sc_model
+<= nrel_inclusion: 
+	local_kb_sense_model;;
+	
+local_kb_sense_model
+<= nrel_inclusion: 
+	local_knowledge_base;;
+
+sc_sense_space
+<- sense_space;;
+
+section
+<=nrel_subdividing:
+	{
+	atomic_section;
+	non_atomic_section
+	};;
+	
+section_knowledge_base
+<= nrel_strict_inclusion:
+	knowledge_base;;
+		
+
+nrel_section_decomposition
+<- quasybinary_relation;
+<= nrel_inclusion:
+	nrel_decomposition;;
+
+rrel_main_key_sc_element
+=> nrel_inclusion: 
+	rrel_key_sc_element;;

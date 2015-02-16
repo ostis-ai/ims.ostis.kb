@@ -1,0 +1,448 @@
+logical_formula
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[логической формулой будем называть соответствующим образом оформленный текст логического языка либо фрагмент этого текста]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+atomic_existence
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[атомарное существование - это множество атомарных логических связок, являющихся множествами констант и/или переменных, все переменные, не являющиеся свободными переменными, которые связываются квантором существования.]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+atomic_existence_and_uniqueness
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[атомарное существование и единственность – ...]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+atomic_formula
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[атомарная формула – это логическая формула, не содержащая в себе других логических формул.]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+contradictory_logical_formula
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[противоречивая логическая формула – это логическая формула, принимающая на всех своих наборах значение ложь.]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+existence_and_uniqueness
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[существование и единственность – это предикат свойства или отношения для одного, и только для одного элемента области определения.]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+formal_theory
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[формальная теория – это специального вида высказывание, каждое из которых можно трактовать как априори истинное (с чьей-то точки зрения) конъюнктивное высказывание, т.е. как множество истинных высказываний, описывающих некоторую предметную область с точки зрения некоторого субъекта.]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+general_validity_of_a_logical_formula
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[общезначимая логическая формула – это логическая формула, принимающая на всех своих наборах значение истина]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+impossible_logical_formula
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[невыполнимая логическая формула – это логическая формула, не принимающая хотя бы на одном своем наборе значение истина.]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+logical_operation
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[логическая операция – это операция над высказываниями, позволяющая составлять новые высказывания путем соединения более простых.]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+logical_variable
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[логическая переменная – это переменная, принимающая только логические значения: "истина" или "ложь".]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+neutral_logical_formula
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[нейтральная логическая формула – это логическая формула, принимающая на различных наборах значение истина и ложь.]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+non_atomic_formula
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[неатомарная формула – это логическая формула, содержащая в себе другие логические формулы.]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+propositional_variable
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[пропозициональная переменная – это переменная, значениями которой являются знаки логических формул]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+quantifier 
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[квантор – это общее название для логических операций, ограничивающих область истинности какого-либо предиката и создающих высказывание.]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+statement
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[высказывание – это суждение, которое может быть истинно или ложно.]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+tautology
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[тавтология – это логическая формула, принимающая на всех своих gitнаборах одинаковые значения.]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+workable_logical_formula
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[выполнимая логическая формула – это логическая формула, принимающая хотя бы на одном своем наборе значение истина]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+
+negation
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[отрицание - это множество логических связок, отрицающих кванторы или логические связки.]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+nrel_conjunction
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[конъюнкция* - этомножество конъюнктивных логических связок, которые связывают конъюнктивно кванторы и/или логические связки]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+nrel_disjunction
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[дизъюнкция* – это множество дизъюнктивных логических связок, которые связывают дизъюнктивно кванторы и/или логические связки]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+nrel_equivalence
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[эквиваленция* - это множество логических связок эквиваленций, которые связывают логически эквивалентные кванторы и/или логические связки.]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+nrel_existence
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[существование* - это бинарное отношение, которое связывает множество переменных в рамках некоторой логической связки (или <sc_element sys_idtf = "quantifier">квантора</sc_element>) и ее составляющих, каждая пара этого отношения называется <sc_element sys_idtf = "quantifier">квантором</sc_element>. Под существованием будем понимать предикат свойства или отношения для, по крайней мере, одного элемента области определения.]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+rrel_free_variables
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[свободные переменные* - это бинарное отношение, которое связывает квантор или логическую связку с множеством свободных переменных этого квантора или логической связки.]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+nrel_generality
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[всеобщность* – это бинарное отношение, которое связывает множество переменных в рамках некоторой логической связки (или кванторы) и еѐ составляющих, каждая пара этого отношения называется квантором.Под всеобщностью будем понимать предикат свойства или отношения для всех элементов области определения.]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+nrel_implication
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[импликация* - это множество импликативных логических связок, которые связывают кванторы и/или логические связки как посылки и следствия.]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+nrel_strict_disjunction
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[строгая дизъюнкция* - это множество дизъюнктивных логических связок, которые связывают дизъюнктивно кванторы и/или логические связки.]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+rrel_axiom
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[аксиома' – это ролевое отношение, связывающее теорию с высказыванием, истинность которого недоказывается в еѐ рамках]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+rrel_bind_variables
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[связываемые переменные – это атрибутивное отношение, которое связывает квантор с переменными, которые этим квантором связываются в рамках некоторой логической связки или квантора.]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+rrel_if
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[если' - это ролевое отношение, используемое в связках импликации*, для указания посылки.]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+rrel_then
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[то' – это ролевое отношение, используемое в связках импликации*, для указанияследствия.]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+rrel_theorem
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					[теорема' – это ролевое отношение, связывающее теорию с высказыванием,истинность которого доказывается в ее рамках.]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
