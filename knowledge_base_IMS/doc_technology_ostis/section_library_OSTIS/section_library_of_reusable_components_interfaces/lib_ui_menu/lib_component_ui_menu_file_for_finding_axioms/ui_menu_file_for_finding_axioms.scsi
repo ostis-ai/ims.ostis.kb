@@ -3,8 +3,9 @@ ui_menu_file_for_finding_axioms <- ui_user_command_class_atom; ui_user_command_c
 ui_menu_file_for_finding_axioms => nrel_main_idtf: 
 	[Запрос аксиом для заданной sc-онтологии] 
 	(* <- lang_ru;; *);;
+
 ui_menu_file_for_finding_axioms => nrel_main_idtf: 
-	[Request of axioms for given ontology] 
+	[Request of axioms for given sc-ontology] 
 	(* <- lang_en;; *);;
 
 ui_menu_file_for_finding_axioms => ui_nrel_command_template:
@@ -17,10 +18,10 @@ ui_menu_file_for_finding_axioms => ui_nrel_command_template:
 	*];;
 
 ui_menu_file_for_finding_axioms => ui_nrel_command_lang_template: 
-	[Запрос аксиом для заданной онтологии: $ui_arg_1] 
+	[Запрос аксиом для заданной sc-онтологии: $ui_arg_1] 
 	(* <- lang_ru;; *);;
 
 ui_menu_file_for_finding_axioms => ui_nrel_command_lang_template: 
-	[Request of axioms for given ontology: $ui_arg_1] 
+	[Request of axioms for given sc-ontology: $ui_arg_1] 
 	(* <- lang_en;; *);;
 

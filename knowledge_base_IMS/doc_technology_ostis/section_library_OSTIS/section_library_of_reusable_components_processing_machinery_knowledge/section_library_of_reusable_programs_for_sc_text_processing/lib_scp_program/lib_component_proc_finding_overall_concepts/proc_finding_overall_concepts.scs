@@ -1,0 +1,419 @@
+scp_program -> proc_finding_overall_concepts 
+	(*	
+	-> rrel_params: .proc_finding_overall_concepts_params
+		(*
+		-> rrel_1: rrel_in: _rules;;
+                -> rrel_2: rrel_in: _rules2;;
+                -> rrel_3: rrel_in: _rules3;;
+		-> rrel_4: rrel_in: _answer;;
+		-> rrel_5: rrel_in: _el1;;
+		-> rrel_6: rrel_in: _el2;;
+		*);;
+
+        -> rrel_operators: .proc_finding_overall_concepts_operator_set 
+		(*
+		-> rrel_init: .proc_finding_overall_concepts_operator1A 
+			(*
+                   	<- call;;
+                   	-> rrel_1: rrel_fixed: rrel_scp_const: proc_equivalent_elements;;
+                   	-> rrel_2: rrel_fixed: rrel_scp_const: .proc_finding_overall_concepts_operator4F1_params
+				(*
+                        	-> rrel_1: rrel_fixed: rrel_scp_var: _rules;;
+                        	-> rrel_2: rrel_fixed: rrel_scp_var: _rules2;;
+				-> rrel_3: rrel_fixed: rrel_scp_var: _rules3;;
+                   		*);;
+                   	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
+
+                   	=> nrel_goto: .proc_finding_overall_concepts_operator1B;;
+                	*);;
+
+                -> .proc_finding_overall_concepts_operator1B 
+			(*
+                   	<- waitReturn;;
+                   	-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
+
+                   	=> nrel_goto: .proc_finding_overall_concepts_operator2A;;
+                	*);;
+
+		-> .proc_finding_overall_concepts_operator2A 
+			(*
+                  	<- searchElStr3;;
+                  	-> rrel_1: rrel_fixed: rrel_scp_var: _rules3;;
+                  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+                  	-> rrel_3: rrel_assign: rrel_scp_var: _node;;
+
+                  	=> nrel_then: .proc_finding_overall_concepts_operator2B;;
+                  	=> nrel_else: .proc_finding_overall_concepts_operator6A;;
+               		*);;
+
+               	-> .proc_finding_overall_concepts_operator2B 
+			(*
+                  	<- eraseEl;;
+                  	-> rrel_1: rrel_fixed: rrel_erase: rrel_pos_const_perm: rrel_scp_var: _arc;;
+
+                  	=> nrel_goto: .proc_finding_overall_concepts_operator2C1;;
+               		*);;
+
+		-> .proc_finding_overall_concepts_operator2C1 
+			(*
+                  	<- searchElStr5;;
+                  	-> rrel_1: rrel_assign: rrel_scp_var: _d1;;
+                  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+                  	-> rrel_3: rrel_fixed: rrel_scp_var: _node;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+                  	-> rrel_5: rrel_fixed: rrel_scp_const: rrel_relation;;
+
+                  	=> nrel_then: .proc_finding_overall_concepts_operator3D;;
+                  	=> nrel_else: .proc_finding_overall_concepts_operator2C2;;
+               		*);;
+
+		-> .proc_finding_overall_concepts_operator2C2 
+			(*
+                  	<- searchElStr5;;
+                  	-> rrel_1: rrel_assign: rrel_scp_var: _d2;;
+                  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+                  	-> rrel_3: rrel_fixed: rrel_scp_var: _node;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+                  	-> rrel_5: rrel_fixed: rrel_scp_const: rrel_studied_object_class;;
+
+                  	=> nrel_then: .proc_finding_overall_concepts_operator3D;;
+                  	=> nrel_else: .proc_finding_overall_concepts_operator2C3;;
+               		*);;
+
+		-> .proc_finding_overall_concepts_operator2C3 
+			(*
+                  	<- searchElStr5;;
+                  	-> rrel_1: rrel_assign: rrel_scp_var: _d3;;
+                  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+                  	-> rrel_3: rrel_fixed: rrel_scp_var: _node;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+                  	-> rrel_5: rrel_fixed: rrel_scp_const: rrel_maximum_studied_object_class;;
+
+                  	=> nrel_then: .proc_finding_overall_concepts_operator3D;;
+                  	=> nrel_else: .proc_finding_overall_concepts_operator2C4;;
+               		*);;
+
+		-> .proc_finding_overall_concepts_operator2C4 
+			(*
+                  	<- searchElStr3;;
+                  	-> rrel_1: rrel_fixed: rrel_scp_const: subject_domain;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+                  	-> rrel_3: rrel_fixed: rrel_scp_var: _node;;
+
+                  	=> nrel_then: .proc_finding_overall_concepts_operator3D;;
+                  	=> nrel_else: .proc_finding_overall_concepts_operator2C5;;
+               		*);;
+
+		-> .proc_finding_overall_concepts_operator2C5 
+			(*
+                  	<- ifCoin;;
+                  	-> rrel_1: rrel_fixed: rrel_scp_const: sc_illustration;;
+                  	-> rrel_2: rrel_fixed: rrel_scp_var: _node;;
+
+                  	=> nrel_then: .proc_finding_overall_concepts_operator3D;;
+                  	=> nrel_else: .proc_finding_overall_concepts_operator2C6;;
+               		*);;
+
+		-> .proc_finding_overall_concepts_operator2C6 
+			(*
+                  	<- ifCoin;;
+                  	-> rrel_1: rrel_fixed: rrel_scp_const: sc_definition;;
+                  	-> rrel_2: rrel_fixed: rrel_scp_var: _node;;
+
+                  	=> nrel_then: .proc_finding_overall_concepts_operator3D;;
+                  	=> nrel_else: .proc_finding_overall_concepts_operator2C7;;
+               		*);;
+
+		-> .proc_finding_overall_concepts_operator2C7 
+			(*
+                  	<- ifCoin;;
+                  	-> rrel_1: rrel_fixed: rrel_scp_const: sc_explanation;;
+                  	-> rrel_2: rrel_fixed: rrel_scp_var: _node;;
+
+                  	=> nrel_then: .proc_finding_overall_concepts_operator3D;;
+                  	=> nrel_else: .proc_finding_overall_concepts_operator2C8;;
+               		*);;
+
+		-> .proc_finding_overall_concepts_operator2C8 
+			(*
+                  	<- ifCoin;;
+                  	-> rrel_1: rrel_fixed: rrel_scp_const: sc_statement;;
+                  	-> rrel_2: rrel_fixed: rrel_scp_var: _node;;
+
+                  	=> nrel_then: .proc_finding_overall_concepts_operator3D;;
+                  	=> nrel_else: .proc_finding_overall_concepts_operator2C89;;
+               		*);;
+               		
+               	-> .proc_finding_overall_concepts_operator2C89 
+			(*
+                  	<- ifCoin;;
+                  	-> rrel_1: rrel_fixed: rrel_scp_const: sc_relation;;
+                  	-> rrel_2: rrel_fixed: rrel_scp_var: _node;;
+
+                  	=> nrel_then: .proc_finding_overall_concepts_operator3D;;
+                  	=> nrel_else: .proc_finding_overall_concepts_operator2C9;;
+               		*);;
+
+		-> .proc_finding_overall_concepts_operator2C9 
+			(*
+                  	<- searchElStr3;;
+                  	-> rrel_1: rrel_fixed: rrel_scp_const: languages;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+                  	-> rrel_3: rrel_fixed: rrel_scp_var: _node;;
+
+                  	=> nrel_then: .proc_finding_overall_concepts_operator3D;;
+                  	=> nrel_else: .proc_finding_overall_concepts_operator2C10;;
+               		*);;
+
+		-> .proc_finding_overall_concepts_operator2C10 
+			(*
+                  	<- ifCoin;;
+                  	-> rrel_1: rrel_fixed: rrel_scp_const: subject_domain;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: _node;;
+
+                  	=> nrel_then: .proc_finding_overall_concepts_operator3D;;
+                  	=> nrel_else: .proc_finding_overall_concepts_operator2D;;
+               		*);;
+
+		-> .proc_finding_overall_concepts_operator2D 
+			(*
+                  	<- searchSetStr3;;
+                  	-> rrel_1: rrel_assign: rrel_scp_var: _elem;;
+                  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+                  	-> rrel_3: rrel_fixed: rrel_scp_var: _node;;
+
+		  	-> rrel_set_1: rrel_assign: rrel_scp_var: _sub_dom;;
+
+                  	=> nrel_then: .proc_finding_overall_concepts_operator3A;;
+                  	=> nrel_else: .proc_finding_overall_concepts_operator_return;;
+               		*);;
+
+		-> .proc_finding_overall_concepts_operator3A 
+			(*
+                  	<- searchElStr3;;
+                  	-> rrel_1: rrel_fixed: rrel_scp_var: _sub_dom;;
+                  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+                  	-> rrel_3: rrel_assign: rrel_scp_var: _inst;;
+
+                  	=> nrel_then: .proc_finding_overall_concepts_operator3B;;
+                  	=> nrel_else: .proc_finding_overall_concepts_operator5E;;
+               		*);;
+
+		-> .proc_finding_overall_concepts_operator3B 
+			(*
+                  	<- eraseEl;;
+                  	-> rrel_1: rrel_fixed: rrel_erase: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+
+                  	=> nrel_goto: .proc_finding_overall_concepts_operator3C1;;
+               		*);;
+
+		-> .proc_finding_overall_concepts_operator3C1 
+			(*
+                  	<- searchElStr5;;
+                  	-> rrel_1: rrel_assign: rrel_scp_var: _subject_domain1;;
+                  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+                  	-> rrel_3: rrel_fixed: rrel_scp_var: _inst;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+                  	-> rrel_5: rrel_fixed: rrel_scp_const: rrel_relation;;
+
+                  	=> nrel_then: .proc_finding_overall_concepts_operator3D;;
+                  	=> nrel_else: .proc_finding_overall_concepts_operator3C2;;
+               		*);;
+
+		-> .proc_finding_overall_concepts_operator3C2 
+			(*
+                  	<- searchElStr5;;
+                  	-> rrel_1: rrel_assign: rrel_scp_var: _subject_domain2;;
+                  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+                  	-> rrel_3: rrel_fixed: rrel_scp_var: _inst;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+                  	-> rrel_5: rrel_fixed: rrel_scp_const: rrel_studied_object_class;;
+
+                  	=> nrel_then: .proc_finding_overall_concepts_operator3D;;
+                  	=> nrel_else: .proc_finding_overall_concepts_operator3C3;;
+               		*);;
+
+		-> .proc_finding_overall_concepts_operator3C3 
+			(*
+                  	<- searchElStr5;;
+                  	-> rrel_1: rrel_assign: rrel_scp_var: _subject_domain3;;
+                  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+                  	-> rrel_3: rrel_fixed: rrel_scp_var: _inst;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+                  	-> rrel_5: rrel_fixed: rrel_scp_const: rrel_maximum_studied_object_class;;
+
+                  	=> nrel_then: .proc_finding_overall_concepts_operator3D;;
+                  	=> nrel_else: .proc_finding_overall_concepts_operator3A;;
+               		*);;
+
+		-> .proc_finding_overall_concepts_operator3D 
+			(*
+                  	<- genElStr3;;
+                  	-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+                  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+                  	-> rrel_3: rrel_fixed: rrel_scp_var: _node;;
+
+                  	=> nrel_goto: .proc_finding_overall_concepts_operator4A;;
+               		*);;
+
+		-> .proc_finding_overall_concepts_operator4A 
+			(*
+                  	<- searchSetStr3;;
+                  	-> rrel_1: rrel_fixed: rrel_scp_var: _node;;
+                  	-> rrel_2: rrel_assign: rrel_scp_var: _arc2;;
+                  	-> rrel_3: rrel_fixed: rrel_scp_var: _el1;;
+
+		 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+
+                  	=> nrel_then: .proc_finding_overall_concepts_operator4B;;
+                  	=> nrel_else: .proc_finding_overall_concepts_operator4C;;
+               		*);;
+
+		-> .proc_finding_overall_concepts_operator4B 
+			(*
+                  	<- searchSetStr3;;
+                  	-> rrel_1: rrel_assign: rrel_scp_var: _rel;;
+                  	-> rrel_2: rrel_assign: rrel_scp_var: _arc3;;
+                  	-> rrel_3: rrel_fixed: rrel_scp_var: _arc2;;
+
+			-> rrel_set_1: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+
+                  	=> nrel_then: .proc_finding_overall_concepts_operator5B;;
+                  	=> nrel_else: .proc_finding_overall_concepts_operator5A;;
+               		*);;
+
+		-> .proc_finding_overall_concepts_operator4C 
+			(*
+                  	<- searchSetStr3;;
+                  	-> rrel_1: rrel_fixed: rrel_scp_var: _el1;;
+                  	-> rrel_2: rrel_assign: rrel_scp_var: _arc2;;
+                  	-> rrel_3: rrel_fixed: rrel_scp_var: _node;;
+
+		 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+
+                  	=> nrel_then: .proc_finding_overall_concepts_operator4D;;
+                  	=> nrel_else: .proc_finding_overall_concepts_operator5E;;
+               		*);;
+
+		-> .proc_finding_overall_concepts_operator4D 
+			(*
+                  	<- searchSetStr3;;
+                  	-> rrel_1: rrel_assign: rrel_scp_var: _rel;;
+                  	-> rrel_2: rrel_assign: rrel_scp_var: _arc3;;
+                  	-> rrel_3: rrel_fixed: rrel_scp_var: _arc2;;
+
+			-> rrel_set_1: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+
+                  	=> nrel_then: .proc_finding_overall_concepts_operator5D;;
+                  	=> nrel_else: .proc_finding_overall_concepts_operator5C;;
+               		*);;
+
+		-> .proc_finding_overall_concepts_operator5A 
+			(*
+                  	<- searchSetStr3;;
+                  	-> rrel_1: rrel_fixed: rrel_scp_var: _node;;
+                  	-> rrel_2: rrel_assign: rrel_scp_var: _arc2;;
+                  	-> rrel_3: rrel_fixed: rrel_scp_var: _el2;;
+
+		 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+
+                  	=> nrel_then: .proc_finding_overall_concepts_operator5E;;
+                  	=> nrel_else: .proc_finding_overall_concepts_operator_return;;
+               		*);;
+
+		-> .proc_finding_overall_concepts_operator5B 
+			(*
+                  	<- searchSetStr5;;
+                  	-> rrel_1: rrel_fixed: rrel_scp_var: _node;;
+                  	-> rrel_2: rrel_assign: rrel_scp_var: _arc2;;
+                  	-> rrel_3: rrel_fixed: rrel_scp_var: _el2;;
+		  	-> rrel_4: rrel_assign: rrel_scp_var: _arc3;;
+                  	-> rrel_5: rrel_assign: rrel_scp_var: _rel2;;
+
+		 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+		 	-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer;;
+		 	-> rrel_set_5: rrel_fixed: rrel_scp_var: _answer;;
+
+                  	=> nrel_then: .proc_finding_overall_concepts_operator5E;;
+                  	=> nrel_else: .proc_finding_overall_concepts_operator_return;;
+               		*);;
+
+		-> .proc_finding_overall_concepts_operator5C 
+			(*
+                  	<- searchSetStr3;;
+                  	-> rrel_1: rrel_fixed: rrel_scp_var: _el2;;
+                  	-> rrel_2: rrel_assign: rrel_scp_var: _arc2;;
+                  	-> rrel_3: rrel_fixed: rrel_scp_var: _node;;
+
+		 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+
+                  	=> nrel_then: .proc_finding_overall_concepts_operator5E;;
+                  	=> nrel_else: .proc_finding_overall_concepts_operator_return;;
+               		*);;
+
+		-> .proc_finding_overall_concepts_operator5D 
+			(*
+                  	<- searchSetStr5;;
+                  	-> rrel_1: rrel_fixed: rrel_scp_var: _el2;;
+                  	-> rrel_2: rrel_assign: rrel_scp_var: _arc2;;
+                  	-> rrel_3: rrel_fixed: rrel_scp_var: _node;;
+		  	-> rrel_4: rrel_assign: rrel_scp_var: _arc3;;
+                  	-> rrel_5: rrel_assign: rrel_scp_var: _rel2;;
+
+		 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+		 	-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer;;
+		 	-> rrel_set_5: rrel_fixed: rrel_scp_var: _answer;;
+
+                  	=> nrel_then: .proc_finding_overall_concepts_operator5E;;
+                  	=> nrel_else: .proc_finding_overall_concepts_operator_return;;
+               		*);;
+
+		-> .proc_finding_overall_concepts_operator5E 
+			(*
+                  	<- ifVarAssign;;
+                  	-> rrel_1: rrel_fixed: rrel_scp_var: _sub_dom;;
+
+                  	=> nrel_then: .proc_finding_overall_concepts_operator5E1;;
+		  	=> nrel_else: .proc_finding_overall_concepts_operator2A;;
+               		*);;	
+
+		-> .proc_finding_overall_concepts_operator5E1 
+			(*
+                  	<- eraseEl;;
+                  	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _sub_dom;;
+
+                  	=> nrel_goto: .proc_finding_overall_concepts_operator2A;;
+               		*);;
+
+		-> .proc_finding_overall_concepts_operator6A 
+			(*
+                  	<- eraseEl;;
+                  	-> rrel_1: rrel_fixed: rrel_erase:  rrel_scp_var: _rules;;
+
+                  	=> nrel_goto: .proc_finding_overall_concepts_operator6B;;
+               		*);;
+
+		-> .proc_finding_overall_concepts_operator6B 
+			(*
+                  	<- eraseEl;;
+                  	-> rrel_1: rrel_fixed: rrel_erase:  rrel_scp_var: _rules2;;
+
+                  	=> nrel_goto: .proc_finding_overall_concepts_operator6C;;
+               		*);;
+
+		-> .proc_finding_overall_concepts_operator6C 
+			(*
+                  	<- eraseEl;;
+                  	-> rrel_1: rrel_fixed: rrel_erase:  rrel_scp_var: _rules3;;
+
+                  	=> nrel_goto: .proc_finding_overall_concepts_operator_return;;
+               		*);;
+
+		-> .proc_finding_overall_concepts_operator_return 
+			(*
+		 	<- return;;
+			*);;
+		*);;
+	*);;

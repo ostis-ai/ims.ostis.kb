@@ -5,9 +5,9 @@ lib_component_agent_of_finding_relation
 	[Library component. sc-agent of finding relations, defined for given concept]
 	(* <- lang_en;; *);
 
-<- library_of_platform_independent_reusable_components; 
-<- library_of_atomic_reusable_components; 
-
+<- platform_independent_reusable_component_OSTIS; 
+<- atomic_reusable_component_OSTIS; 
+<- reusable_scp_agent;
 
 => nrel_attendant_component: 
 	lib_component_ui_menu_file_for_finding_relation; 

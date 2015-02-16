@@ -1,11 +1,11 @@
 ui_menu_file_for_finding_illustrations <- ui_user_command_class_atom; ui_user_command_class_view_kb;;
 
 ui_menu_file_for_finding_illustrations => nrel_main_idtf: 
-	[Запрос иллюстраций] 
+	[Запрос иллюстраций для заданного объекта] 
 	(* <- lang_ru;; *);;
 
 ui_menu_file_for_finding_illustrations => nrel_main_idtf: 
-	[Request of illustrations] 
+	[Request of illustrations for given object] 
 	(* <- lang_en;; *);;
 
 ui_menu_file_for_finding_illustrations => ui_nrel_command_template:
@@ -18,10 +18,10 @@ ui_menu_file_for_finding_illustrations => ui_nrel_command_template:
 	*];;
 
 ui_menu_file_for_finding_illustrations => ui_nrel_command_lang_template: 
-	[Запрос иллюстраций: $ui_arg_1] 
+	[Запрос иллюстраций для заданного понятия: $ui_arg_1] 
 		(* <- lang_ru;; *);;
 
 ui_menu_file_for_finding_illustrations => ui_nrel_command_lang_template: 
-	[Request of illustrations: $ui_arg_1] 
+	[Request of illustrations for given object: $ui_arg_1] 
 		(* <- lang_en;; *);;
 

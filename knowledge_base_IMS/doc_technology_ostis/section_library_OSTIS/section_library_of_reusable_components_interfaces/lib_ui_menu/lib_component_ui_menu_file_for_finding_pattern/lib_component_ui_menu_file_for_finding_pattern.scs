@@ -1,0 +1,37 @@
+lib_component_ui_menu_file_for_finding_pattern
+=> nrel_main_idtf:
+	[Компонент библиотеки. Команда пользовательского интерфейса для поиска конструкций по заданному шаблону]
+	(* <- lang_ru;; *);
+	[Library component. User interface command of finding constructions for given pattern]
+	(* <- lang_en;; *);
+
+<- platform_independent_reusable_component_OSTIS;
+<- atomic_reusable_component_OSTIS;
+<- reusable_knowledge_base_sc_model_component;
+
+<- rrel_key_sc_element:
+	... 
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Ui_Pattern.html"
+				(* <- lang_ru;; *);;
+		*);;
+	*);
+	
+<- rrel_key_sc_element:
+	... 
+	(*
+	<- sc_illustration;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://images/pattern.png";; 
+		*);;
+	*);;
+
+lib_component_ui_menu_file_for_finding_pattern = [*^"file://ui_menu_file_for_finding_pattern.scsi"*];; 

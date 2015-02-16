@@ -1,0 +1,27 @@
+ui_menu_file_for_finding_formal_statement <- ui_user_command_class_atom; ui_user_command_class_view_kb;;
+
+ui_menu_file_for_finding_formal_statement => nrel_main_idtf: 
+	[Запрос формальной записи утверждения для заданного знака утверждения] 
+	(* <- lang_ru;; *);;
+
+ui_menu_file_for_finding_formal_statement => nrel_main_idtf: 
+	[Request of formal statement record for given sign of statement] 
+	(* <- lang_en;; *);;
+
+ui_menu_file_for_finding_formal_statement => ui_nrel_command_template:
+	[*
+		question_finding_formal_statement _-> ._question_finding_formal_statement_instance
+			(*
+			_-> ui_arg_1;;				
+			*);;
+		._question_finding_formal_statement_instance _<- question;;
+	*];;
+
+ui_menu_file_for_finding_formal_statement => ui_nrel_command_lang_template: 
+	[Запрос формальной записи утверждения для заданного знака утверждения: $ui_arg_1] 
+	(* <- lang_ru;; *);;
+
+ui_menu_file_for_finding_formal_statement => ui_nrel_command_lang_template: 
+	[Request of formal statement record for given sign of statement: $ui_arg_1] 
+	(* <- lang_en;; *);;
+

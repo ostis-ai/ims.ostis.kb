@@ -1,0 +1,379 @@
+scp_program -> proc_of_finding_proof 
+	(*	
+	-> rrel_params: .proc_of_finding_proof_params 
+		(*
+		-> rrel_1: rrel_in: _element;;
+		-> rrel_2: rrel_in: _answer;;
+		*);;
+
+	-> rrel_operators: .proc_of_finding_proof_operator_set 
+		(*
+		-> rrel_init: .proc_of_finding_proof_operator1A 
+			(*
+			<- searchSetStr5;;
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _element;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _elem;;
+                	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_result;;
+	         
+                 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+		 	-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer;;
+		 	-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer;;
+
+                 	=> nrel_then: .proc_of_finding_proof_operator1B;;
+		 	=> nrel_else: .proc_of_finding_proof_operator_return;;
+			*);;
+
+		->.proc_of_finding_proof_operator1B 
+			(*
+			<- searchSetStr3;;
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _elem;;
+		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		 	-> rrel_3: rrel_assign: rrel_scp_var: _smth;;
+	         
+                 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+		 	-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer;;
+
+                 	=> nrel_goto: .proc_of_finding_proof_operator1C;;
+                 	*);;
+
+		-> .proc_of_finding_proof_operator1C
+			(*
+			<- searchSetStr5;;
+			-> rrel_1: rrel_assign: rrel_scp_var: _elem2;;
+		 	-> rrel_2: rrel_assign: rrel_const: rrel_common: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _elem;;
+                 	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		 	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_sc_text_translation;;
+	         
+                 	-> rrel_set_1: rrel_assign: rrel_scp_var: _mainset;;
+
+                 	=> nrel_then: .proc_of_finding_proof_operator2A;;
+		 	=> nrel_else: .proc_of_finding_proof_operator_return;;
+                 	*);;
+
+		-> .proc_of_finding_proof_operator2A 
+			(*
+			<- searchElStr3;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _mainset;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _translit;;
+
+			=> nrel_then: .proc_of_finding_proof_operator2B;;
+	                => nrel_else: .proc_of_finding_proof_operator2E;;
+			*);; 
+
+		-> .proc_of_finding_proof_operator2B 
+			(*
+			<- eraseEl;;
+			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc2;;
+
+                 	=> nrel_goto: .proc_of_finding_proof_operator2C;;
+		 	*);;
+
+		-> .proc_of_finding_proof_operator2C 
+			(*
+			<- genElStr3;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		 	-> rrel_3: rrel_fixed: rrel_scp_var: _translit;;
+
+                 	=> nrel_goto: .proc_of_finding_proof_operator2D;;
+		 	*);;
+
+		-> .proc_of_finding_proof_operator2D 
+			(*
+			<- searchSetStr5;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _translit;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_common: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _elem;;
+	                -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_sc_text_translation;;
+	         
+                 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+		 	-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer;;
+
+                 	=> nrel_then: .proc_of_finding_proof_operator3A;;
+			=> nrel_else: .proc_of_finding_proof_operator_return;;
+                 	*);;
+
+		-> .proc_of_finding_proof_operator2E 
+			(*
+			<- eraseEl;;
+			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _mainset;;
+
+		 	=> nrel_goto: .proc_of_finding_proof_operator4A;;
+		 	*);;
+                 
+		-> .proc_of_finding_proof_operator3A 
+			(*
+			<- searchSetStr3;;
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _translit;;
+		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		 	-> rrel_3: rrel_assign: rrel_scp_var: _opr;;
+
+                 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+                 	-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer;;
+
+	         	=> nrel_then: .proc_of_finding_proof_operator3B;;
+                 	*);;
+
+		-> .proc_of_finding_proof_operator3B 
+			(*
+			<- searchSetStr3;;
+		 	-> rrel_1: rrel_assign: rrel_scp_var: _lang;;
+		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		 	-> rrel_3: rrel_fixed: rrel_scp_var: _opr;;
+
+                 	-> rrel_set_1: rrel_assign: rrel_scp_var: _tempset;;
+
+		 	=> nrel_then: .proc_of_finding_proof_operator3C;;
+			=> nrel_else: .proc_of_finding_proof_operator_return;;
+		 	*);;  
+
+		-> .proc_of_finding_proof_operator3C 
+			(*
+			<- searchElStr3;;
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _tempset;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+		 	-> rrel_3: rrel_assign: rrel_scp_var: _lang;;
+
+		 	=> nrel_then: .proc_of_finding_proof_operator3D;;
+                 	=> nrel_else: .proc_of_finding_proof_operator3H;;
+			 *);; 
+
+		-> .proc_of_finding_proof_operator3D 
+			(*
+			<- eraseEl;;
+			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc;;
+
+                 	=> nrel_goto: .proc_of_finding_proof_operator3E;;
+		 	*);;
+
+		-> .proc_of_finding_proof_operator3E 
+			(*
+			<- searchElStr3;;
+			-> rrel_1: rrel_fixed: rrel_scp_const: languages;;
+		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		 	-> rrel_3: rrel_fixed: rrel_scp_var: _lang;;
+
+			=> nrel_then: .proc_of_finding_proof_operator3F;;
+                	=> nrel_else: .proc_of_finding_proof_operator3C;;
+		 	*);;
+
+		-> .proc_of_finding_proof_operator3F 
+			(*
+			<- genElStr3;;
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _lang;;
+               
+		  	=> nrel_goto: .proc_of_finding_proof_operator3G;;
+		  	*);;
+
+		-> .proc_of_finding_proof_operator3G 
+			(*
+			<- searchSetStr3;;
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _lang;;
+		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _opr;;
+
+                 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+
+	        	=> nrel_goto: .proc_of_finding_proof_operator3C;;
+                 	*);;
+
+		-> .proc_of_finding_proof_operator3H 
+			(*
+			<- eraseEl;;
+			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _tempset;;
+
+			=> nrel_goto: .proc_of_finding_proof_operator2A;;
+			*);;
+
+		-> .proc_of_finding_proof_operator4A 
+			(*
+		 	<- searchSetStr3;;
+			-> rrel_1: rrel_fixed: rrel_scp_const: sc_action_use_logical_statement;;
+		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		 	-> rrel_3: rrel_fixed: rrel_scp_var: _element;;
+
+                 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+
+			=> nrel_goto: .proc_of_finding_proof_operator4AB;;
+		 	*);;	
+		 	
+		 -> .proc_of_finding_proof_operator4AB 
+			(*
+		 	<- searchSetStr3;;
+			-> rrel_1: rrel_fixed: rrel_scp_const: successsfully_executed_sc_action;;
+		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		 	-> rrel_3: rrel_fixed: rrel_scp_var: _element;;
+
+                 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+
+			=> nrel_goto: .proc_of_finding_proof_operator4B;;
+		 	*);;
+		
+		-> .proc_of_finding_proof_operator4B 
+			(*
+			<- searchSetStr3;;
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: successfully_completed_action;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		 	-> rrel_3: rrel_fixed: rrel_scp_var: _element;;
+
+                 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+
+		 	=> nrel_goto: .proc_of_finding_proof_operator4C;;
+		 	*);;
+
+		-> .proc_of_finding_proof_operator4C 
+			(*
+			<- searchSetStr3;;
+		 	-> rrel_1: rrel_fixed: rrel_scp_const: sc_action_proof;;
+		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc3;;
+		 	-> rrel_3: rrel_fixed: rrel_scp_var: _element;;
+
+                 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+
+		 	=> nrel_goto: .proc_of_finding_proof_operator4D;;
+		 	*);;
+
+		-> .proc_of_finding_proof_operator4D 
+			(*
+		 	<- searchSetStr5;;
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _element;;
+		 	-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+		 	-> rrel_3: rrel_assign: rrel_scp_var: _next_element;;
+                 	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		 	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_sequence_of_actions;;
+	         
+                 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+		 	-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer;;
+
+                	=> nrel_then: .proc_of_finding_proof_operator5A;;
+			=> nrel_else: .proc_of_finding_proof_operator4E;;
+                	*);;
+
+		-> .proc_of_finding_proof_operator4E 
+			(*
+			<- searchSetStr5;;
+		 	-> rrel_1: rrel_assign: rrel_scp_var: _prev_element;;
+		 	-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+		 	-> rrel_3: rrel_fixed: rrel_scp_var: _element;;
+                 	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		 	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_sequence_of_actions;;
+	         
+                 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+		 	-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer;;
+
+                 	=> nrel_then: .proc_of_finding_proof_operator5A;;
+		 	=> nrel_else: .proc_of_finding_proof_operator_return;;
+                 	*);;
+
+		-> .proc_of_finding_proof_operator5A 
+			(*
+		 	<- searchSetStr5;;
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _element;;
+		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		 	-> rrel_3: rrel_assign: rrel_scp_var: _inst1;;
+                 	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		 	-> rrel_5: rrel_fixed: rrel_scp_const: rrel_1;;
+	         
+                 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer;;
+		 	-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer;;
+
+                 	=> nrel_then: .proc_of_finding_proof_operator5B;;
+			=> nrel_else: .proc_of_finding_proof_operator5C;;
+                 	*);;
+
+		-> .proc_of_finding_proof_operator5B 
+			(*
+			<- searchSetStr3;;
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _inst1;;
+		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		 	-> rrel_3: rrel_assign: rrel_scp_var: _elem1;;
+	         
+                 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+		 	-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer;;
+
+                 	=> nrel_goto: .proc_of_finding_proof_operator5C;;
+                 	*);;
+
+		-> .proc_of_finding_proof_operator5C 
+			(*
+			<- searchSetStr5;;
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _element;;
+		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		 	-> rrel_3: rrel_assign: rrel_scp_var: _inst2;;
+                 	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		 	-> rrel_5: rrel_fixed: rrel_scp_const: rrel_2;;
+	         
+                 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer;;
+		 	-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer;;
+
+                 	=> nrel_goto: .proc_of_finding_proof_operator5D;;
+			=> nrel_goto: .proc_of_finding_proof_operator_return;;
+                 	*);;
+
+		-> .proc_of_finding_proof_operator5D 
+			(*
+			<- searchSetStr3;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _inst2;;
+		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		 	-> rrel_3: rrel_assign: rrel_scp_var: _elem2;;
+
+                 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+		 	-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer;;
+
+		 	=> nrel_goto: .proc_of_finding_proof_operator_return;;
+                 	*);;
+
+		-> .proc_of_finding_proof_operator_return 
+			(*
+			<- return;;
+			*);;
+		*);;
+	*);;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
