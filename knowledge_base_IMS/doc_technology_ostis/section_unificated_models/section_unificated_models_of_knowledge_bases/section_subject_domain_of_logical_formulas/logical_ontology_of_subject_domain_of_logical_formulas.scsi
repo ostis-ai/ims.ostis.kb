@@ -35,7 +35,7 @@ atomic_existence_and_uniqueness
 		...
 			(*
 				-> rrel_example:
-					[атомарное существование и единственность – ...]
+					[атомарное существование и единственность – это множество атомарных логических связок, являющихся множествами констант и/или переменных, все переменные, не являющиеся свободными переменными, которые связываются квантором существования, при этом в каждый момент времени в базе знаний существует ровно одна конструкция полностью изоморфная заданному множеству]
 					(*<- lang_ru;;*);;
 			*);;
 	*);;
@@ -250,7 +250,6 @@ workable_logical_formula
 			*);;
 	*);;
 	
-
 negation
 <- rrel_key_sc_element:
 	...
@@ -263,6 +262,17 @@ negation
 					[отрицание - это множество логических связок, отрицающих кванторы или логические связки.]
 					(*<- lang_ru;;*);;
 			*);;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_sc_neighborhood;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://nl_files/explanation_for_negation.png";;			
+		*);;
 	*);;
 	
 nrel_conjunction
@@ -277,6 +287,17 @@ nrel_conjunction
 					[конъюнкция* - этомножество конъюнктивных логических связок, которые связывают конъюнктивно кванторы и/или логические связки]
 					(*<- lang_ru;;*);;
 			*);;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_sc_neighborhood;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://nl_files/explanation_for_nrel_conjunction.png";;			
+		*);;
 	*);;
 	
 nrel_disjunction
@@ -291,7 +312,19 @@ nrel_disjunction
 					[дизъюнкция* – это множество дизъюнктивных логических связок, которые связывают дизъюнктивно кванторы и/или логические связки]
 					(*<- lang_ru;;*);;
 			*);;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_sc_neighborhood;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://nl_files/explanation_for_nrel_disjunction.png";;			
+		*);;
 	*);;
+
 	
 nrel_equivalence
 <- rrel_key_sc_element:
@@ -305,6 +338,17 @@ nrel_equivalence
 					[эквиваленция* - это множество логических связок эквиваленций, которые связывают логически эквивалентные кванторы и/или логические связки.]
 					(*<- lang_ru;;*);;
 			*);;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_sc_neighborhood;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://nl_files/explanation_for_nrel_equivalence.png";;			
+		*);;
 	*);;
 	
 nrel_existence
@@ -319,7 +363,19 @@ nrel_existence
 					[существование* - это бинарное отношение, которое связывает множество переменных в рамках некоторой логической связки (или <sc_element sys_idtf = "quantifier">квантора</sc_element>) и ее составляющих, каждая пара этого отношения называется <sc_element sys_idtf = "quantifier">квантором</sc_element>. Под существованием будем понимать предикат свойства или отношения для, по крайней мере, одного элемента области определения.]
 					(*<- lang_ru;;*);;
 			*);;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_sc_neighborhood;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://nl_files/explanation_for_nrel_existence.png";;			
+		*);;
 	*);;
+	
 	
 rrel_free_variables
 <- rrel_key_sc_element:
@@ -347,6 +403,17 @@ nrel_generality
 					[всеобщность* – это бинарное отношение, которое связывает множество переменных в рамках некоторой логической связки (или кванторы) и еѐ составляющих, каждая пара этого отношения называется квантором.Под всеобщностью будем понимать предикат свойства или отношения для всех элементов области определения.]
 					(*<- lang_ru;;*);;
 			*);;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_sc_neighborhood;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://nl_files/explanation_for_nrel_generality.png";;			
+		*);;
 	*);;
 	
 nrel_implication
@@ -361,6 +428,17 @@ nrel_implication
 					[импликация* - это множество импликативных логических связок, которые связывают кванторы и/или логические связки как посылки и следствия.]
 					(*<- lang_ru;;*);;
 			*);;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_sc_neighborhood;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://nl_files/explanation_for_nrel_implication.png";;			
+		*);;
 	*);;
 	
 nrel_strict_disjunction
@@ -375,6 +453,17 @@ nrel_strict_disjunction
 					[строгая дизъюнкция* - это множество дизъюнктивных логических связок, которые связывают дизъюнктивно кванторы и/или логические связки.]
 					(*<- lang_ru;;*);;
 			*);;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_sc_neighborhood;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://nl_files/explanation_for_nrel_strict_disjunction.png";;			
+		*);;
 	*);;
 	
 rrel_axiom
@@ -389,6 +478,17 @@ rrel_axiom
 					[аксиома' – это ролевое отношение, связывающее теорию с высказыванием, истинность которого недоказывается в еѐ рамках]
 					(*<- lang_ru;;*);;
 			*);;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_sc_neighborhood;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://nl_files/explanation_for_rrel_axiom.png";;			
+		*);;
 	*);;
 	
 rrel_bind_variables
@@ -403,6 +503,17 @@ rrel_bind_variables
 					[связываемые переменные – это атрибутивное отношение, которое связывает квантор с переменными, которые этим квантором связываются в рамках некоторой логической связки или квантора.]
 					(*<- lang_ru;;*);;
 			*);;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_sc_neighborhood;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://nl_files/explanation_for_rrel_bind_variables.png";;			
+		*);;
 	*);;
 	
 rrel_if
@@ -417,6 +528,17 @@ rrel_if
 					[если' - это ролевое отношение, используемое в связках импликации*, для указания посылки.]
 					(*<- lang_ru;;*);;
 			*);;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_sc_neighborhood;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://nl_files/explanation_for_rrel_if.png";;			
+		*);;
 	*);;
 	
 rrel_then
@@ -431,6 +553,17 @@ rrel_then
 					[то' – это ролевое отношение, используемое в связках импликации*, для указанияследствия.]
 					(*<- lang_ru;;*);;
 			*);;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_sc_neighborhood;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://nl_files/explanation_for_rrel_then.png";;			
+		*);;
 	*);;
 	
 rrel_theorem
@@ -445,4 +578,15 @@ rrel_theorem
 					[теорема' – это ролевое отношение, связывающее теорию с высказыванием,истинность которого доказывается в ее рамках.]
 					(*<- lang_ru;;*);;
 			*);;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_sc_neighborhood;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://nl_files/explanation_for_rrel_theorem.png";;			
+		*);;
 	*);;

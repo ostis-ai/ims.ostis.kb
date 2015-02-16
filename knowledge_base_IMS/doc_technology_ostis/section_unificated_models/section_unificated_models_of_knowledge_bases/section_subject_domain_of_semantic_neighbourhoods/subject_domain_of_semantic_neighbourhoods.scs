@@ -1,8 +1,8 @@
-subject_domain_of_semantic_neighborhoods
+subject_domain_of_semantic_neighbourhoods
 => nrel_main_idtf:
 	[Предметная область онтологий]
 	(* <- lang_ru;;	*);
-	[Subject domain of semantic neighborhoods]
+	[Subject domain of semantic neighbourhoods]
 	(* <- lang_en;;	*);
 	
 <- subject_domain;
@@ -18,4 +18,11 @@ subject_domain_of_semantic_neighborhoods
 			[Предметная область семантических окрестностей - предметная область, объектами исследования которой являются семантические окрестности различных типов.]
 			(* <- lang_ru;; *);;
 		*);;
-	*);;
+	*);
+
+=> nrel_ontology:
+	structural_specification_of_subject_domain_of_semantic_neighbourhoods;
+	terminological_ontology_of_subject_domain_of_semantic_neighbourhoods;
+	set_theoretic_ontology_of_subject_domain_of_semantic_neighbourhoods;
+	logical_ontology_of_subject_domain_of_semantic_neighbourhoods;;
+	
