@@ -9,10 +9,10 @@ structural_specification_of_subject_domain_of_sc_elements
 structural_specification_of_subject_domain_of_sc_elements = [*
 	subject_domain_of_sc_elements
 	
-	-> rrel_maximum_studied_object_class:
+	<- rrel_maximum_studied_object_class:
 		sc_element;
 	
-	-> rrel_not_maximum_studied_object_class:
+	<- rrel_not_maximum_studied_object_class:
 		alphabet_sc_code;
 		abstract_essence;
 		abstract_terminal_essence;
@@ -70,6 +70,6 @@ structural_specification_of_subject_domain_of_sc_elements = [*
 		variable_sc_arc_of_usual_type;
 		variable_sc_arc_of_constant_accessories;
 	
-	-> rrel_studied_relation:
+	<- rrel_studied_relation:
 		nrel_synonymy;;
 	*];;
