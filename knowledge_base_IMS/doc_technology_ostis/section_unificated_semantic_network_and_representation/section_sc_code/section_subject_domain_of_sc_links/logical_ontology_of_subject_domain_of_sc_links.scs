@@ -1,0 +1,43 @@
+logical_ontology_of_subject_domain_of_sc_links
+<- logical_ontology;
+=> nrel_main_idtf:
+	[Логическая онтология Предметной области sc-ссылок]
+	(* <- lang_ru;; *);
+	[Logical ontology of subject domain of sc-links]
+	(* <- lang_en;; *);;
+
+logical_ontology_of_subject_domain_of_sc_links = [*^"file://logical_ontology_of_subject_domain_of_sc_links.scsi"*];;
+
+rrel_key_sc_element -> (logical_ontology_of_subject_domain_of_sc_links -> sc_link)
+(*
+	=> nrel_key_sc_element_base_order: (logical_ontology_of_subject_domain_of_sc_links -> image)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_of_subject_domain_of_sc_links -> internet_resource)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_of_subject_domain_of_sc_links -> lang_en)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_of_subject_domain_of_sc_links -> lang_ru)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_of_subject_domain_of_sc_links -> maximum_syntactically_equivalent_construction_class)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_of_subject_domain_of_sc_links -> natural_language)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_of_subject_domain_of_sc_links -> sc_machine_file)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_of_subject_domain_of_sc_links -> syntactically_equivalent_construction_class)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_of_subject_domain_of_sc_links -> rrel_stored_file)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_of_subject_domain_of_sc_links -> nrel_sc_text_translation)
+
+	(* <- rrel_key_sc_element;; *);;
+*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;

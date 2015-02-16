@@ -1,0 +1,156 @@
+sc_link
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+				-> rrel_example:
+					[sc-ссылка - знак информационной конструкции, внешней по отношению к sc-памяти]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+image
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+				-> rrel_example:
+					[изображение - графическая несимвольная информационная конструкция]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+
+internet_resource
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+				-> rrel_example:
+					[internet-ресурс - знак файла, являющегося ссылкой на внешний internet-ресурс]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+lang_en
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+				-> rrel_example:
+					[Английский язык - множество текстов английского языка]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+	
+lang_ru
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+				-> rrel_example:
+					[Русский язык - множество текстов русского языка]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+maximum_syntactically_equivalent_construction_class
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+				-> rrel_example:
+					[максимальный класс синтаксически эквивалентных конструкций - ...]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+
+natural_language
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+				-> rrel_example:
+					[ествественный язык - множество текстов ествественного языка]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+sc_machine_file
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+				-> rrel_example:
+					[файл sc-машины - ...]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+syntactically_equivalent_construction_class
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+				-> rrel_example:
+					[класс синтаксически эквивалентных информационных конструкций - класс синтаксически эквивалентных информационных конструкций без учета различий в форматах их кодирования, в используемых шрифтах, в форматировании и размещении]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+	
+rrel_stored_file
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+				-> rrel_example:
+					[хранимый файл' - экземпляр класса синтаксически эквивалентных информационных конструкций, хранимый в виде доступного файла]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
+
+nrel_sc_text_translation
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+				-> rrel_example:
+					[трансляция sc-текста* - отношение, связывающее ... со множеством синтаксически эквивалентных информационных конструкций. Дуга направлена в знак транслируемого sc-текста,поскольку она выходит из знака класса семантически и синтаксически эквивалентных внешних информационных конструкций, которому мог бы принадлежать и транслируемый sc-текст, если бы он был внешним.]
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
