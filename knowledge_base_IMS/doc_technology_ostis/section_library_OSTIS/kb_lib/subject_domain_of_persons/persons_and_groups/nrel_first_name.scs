@@ -1,0 +1,41 @@
+nrel_first_name
+
+=> nrel_main_idtf:
+	[личное имя*] (* <- lang_ru;; *);
+	[nrel first name*] (* <- lang_en;; *);
+
+<- binary_relation;
+
+=> nrel_idtf:
+	[имя физического лица*] (* <- lang_ru;; *);
+
+=> nrel_first_domain:
+	person;
+	
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					"file://content/explanation_for_nrel_first_name.html"
+					(*<- lang_ru;;*);;
+			*);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- typical_sc_neighborhood;;
+		<= nrel_sc_text_translation:
+		...
+		
+			(*
+				<= nrel_sctrict_inclusion: 
+					sc.g_text;;
+				-> rrel_example:
+					"file://content/nrel_first_name.png";;
+			*);;
+	*);;

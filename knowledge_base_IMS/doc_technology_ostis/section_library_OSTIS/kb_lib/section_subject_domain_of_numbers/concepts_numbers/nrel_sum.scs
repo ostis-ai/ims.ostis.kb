@@ -1,0 +1,51 @@
+nrel_sum
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[сумма*]
+	(*
+	<- lang_ru;;
+	*);
+	[sum*]
+	(*
+	<- lang_en;;
+	*);
+=> nrel_idtf:
+	[сложение*]
+	(*
+	<- lang_ru;;
+	*);
+
+<- quasybinary_relation;
+<- arithmetic_operation;
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[сумма* – это арифметическая операция, в результате которой по
+данным числам (слагаемым) находится новое число (сумма),
+обозначающее столько единиц, сколько их содержится во всех
+слагаемых.]
+		(* <- lang_ru;; *);;
+		*);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_sc_neighborhood;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		<= nrel_strict_inclusion:
+			sc.g_text;;
+			
+		-> rrel_example:
+			"file://nl_files/explanation_for_nrel_sum.png";;
+			
+		*);;
+	*);;
