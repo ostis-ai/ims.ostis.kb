@@ -1,0 +1,581 @@
+set
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+				-> rrel_example:
+					[Под множеством понимается соединение в некое целое M определённых хорошо различимых предметов m нашего созерцания или нашего мышления (которые будут называться «элементами» множества M). ]
+					(*<- lang_ru;;*);;
+			*);;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+				-> rrel_example:
+					[Под множеством мы будем понимать sc-множество, или семантически нормализованное множество, каждый элемент которого является знаком множества. Любое множество можно представить в виде sc-множества. sc-множество чаще всего с синтаксической точки зрения представляет собой связную sc-структуру. Знаки множеств sc-текста могут быть представлены не только sc-узлами любого структурного типа, но и коннекторами, т.к. они также являются знаками множеств и могут связывать различные структуры, связки отношений. ]
+					(*<- lang_ru;;*);;
+			*);;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:	
+		...
+		(*
+		-> rrel_example:
+			"file://nl_files/sc_set_definition.html";;		
+		*);;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_comment;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://nl_files/sc_code_advantages.html";;		
+		*);;	
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[Существенно подчеркнуть то, что любой текст SC-кода представляет собой множество sc-элементов, связанных между собой отношениями инцидентности sc-коннекторов с их компонентами. Таким образом, понятия текста SC-кода и множества sc-элементов являются синонимами]
+			(* <- lang_ru;; *);;
+		*);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[Заметим, что все семантические виды множеств (и связки, и классы, и структуры) могут быть компонентами связок любых теоретико-множественных отношений (включение*, объединение*, разбиение*, пересечение* и т.д.).]
+			(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+cantor_set
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[множество без кратных вхождений элементов – это класс множеств, в которых нет кратных принадлежностей (вхождений) элементов]
+			(* <- lang_ru;; *);;
+		*);;
+	*);;
+	
+countable_set
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[счетное множество - это класс бесконечных множеств, для которого существует взаимно-однозначное соответствие с натуральным рядом чисел. ]
+			(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+empty_set
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[пустое множество – это множество, которому не принадлежит ни один элемент.]
+			(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+finite_set
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[конечное множество – это множество, количество элементов которого конечно, то есть, существует неотрицательное целое число k, равное количеству элементов этого множества.]
+			(* <- lang_ru;; *);;
+		*);;
+	*);;
+	
+infinite_set
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[бесконечное sc-множество – это sc-множество, в котором для любого натурального числа n найдётся конечное подмножество из n элементов.]
+			(* <- lang_ru;; *);;
+		*);;
+	*);;
+	
+multiset
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[мультимножество - класс множеств, в котором есть кратные принадлежности (вхождения) элементов.]
+			(* <- lang_ru;; *);;
+		*);;
+	*);;
+	
+oriented_set
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[ориентированное множество – это упорядоченный конечный набор элементов длины]
+			(* <- lang_ru;; *);;
+		*);;
+	*);;
+	
+pair_set
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[sc-пара – это sc-множество, состоящее из двух элементов.]
+			(* <- lang_ru;; *);;
+		*);;
+	*);;
+	
+power_set
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[мощность множества* - бинарное отношение, связывающее множество с числом, являющимся числовой характеристикой количества элементов во множестве]
+			(* <- lang_ru;; *);;
+		*);;
+	*);;
+	
+reflexive_set
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[рефлексивное множество – это множество, элементом которого является знак самого множества.]
+			(* <- lang_ru;; *);;
+		*);;
+	*);;
+	
+triple_set
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[sc-тройка – это множество, состоящее из трех элементов.]
+			(* <- lang_ru;; *);;
+		*);;
+	*);;
+	
+singletone
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[синглетон – это множество, состоящее из одного элемента.]
+			(* <- lang_ru;; *);;
+		*);;
+	*);;
+	
+uncountable_set
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[несчетное множество - это бесконечное множество, элементы которого невозможно пронумеровать натуральными числами]
+			(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+nrel_boolean
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[булеан* - это бинарное отношение , каждая пара которго связывает некое множество si (указываемое в качестве второго компонента) и множество sj, которое является семейством всевозможных подмножеств множества si, которое выполняет роль перевого компонента компонента. Указанное направление данной упорядоченной пары выбрано для того, чтобы подчеркнуть связь отношения булеан* с отношением объединение*]
+			(* <- lang_ru;; *);;
+		*);;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_sc_neighborhood;;
+	<= nrel_sc_text_translation:
+	...
+		(*
+		<= nrel_strict_inclusion:
+			sc.g_text;;
+		-> rrel_example:
+			"file://nl_files/nrel_boolean.png";;
+		*);;
+	*);;
+	
+nrel_cartesian_product
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[декартовым произведением* множества si на множество sj является множество всевозможных упорядоченных пар, первым компонентом которых является элемент множества si, вторым компонентом является элемент множества sj.]
+			(* <- lang_ru;; *);;
+		*);;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_sc_neighborhood;;
+	<= nrel_sc_text_translation:
+	...
+		(*
+		<= nrel_strict_inclusion:
+			sc.g_text;;
+		-> rrel_example:
+			"file://nl_files/nrel_cartesian_product.png";;
+		*);;
+	*);;
+	
+nrel_combination
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[объединение* - это бинарное отношение каждая пара которого связывает некоторое множество si (указываемое в качестве второго компонента) и множество (указываемое в качестве первого компонента), являющееся семейством объединяемых множеств. Будем говорить, что Множество si является объединением Множества sj и Множества sk тогда и только тогда, когда любой элемент Множества si является элементом или Множества sj или Множества sk.]
+			(* <- lang_ru;; *);;
+		*);;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- typical_sc_neighborhood;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+			<= nrel_strict_inclusion:
+				sc.g_text;;
+			-> rrel_example:
+				"file://nl_files/nrel_combination.png";;
+			*);;
+	*);;
+
+nrel_intersection
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[пересечение* - это бинарное отношение, каждая пара которого связывает некоторое множество si (указываемое в качестве второго компонента) и множество sj, которое является семейством множеств (выполняет роль первого компонента в отношении).]
+		(* <- lang_ru;; *);;
+		*);;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- typical_sc_neighborhood;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+			<= nrel_strict_inclusion:
+				sc.g_text;;
+			-> rrel_example:
+				"file://nl_files/nrel_intersection.png";;
+			*);;
+	*);;
+
+nrel_inclusion
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[включение* – это бинарное ориентированное отношение, каждая связка которого связывает два множества. Будем говорить, что Множество si включает* в себя Множество sj в том и только том случае, если каждый элемент Множества sj является также и элементом множества si.]
+		(* <- lang_ru;; *);;
+		*);;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_sc_neighborhood;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		<= nrel_strict_inclusion:
+			sc.g_text;;
+			
+		-> rrel_example:
+			"file://nl_files/nrel_inclusion.png";;
+			
+		*);;
+	*);;
+	
+nrel_intersection_sets
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[пересекающиеся множества* - это  бинарное неориентированное отношение между двумя множествами, имеющими непустое пересечение*, т.е. имеющих хотя бы один общий элемент.]
+			(* <- lang_ru;; *);;
+		*);;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- typical_sc_neighborhood;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+			<= nrel_strict_inclusion:
+				sc.g_text;;
+			-> rrel_example:
+				"file://nl_files/nrel_intersection_sets.png";;
+			*);;
+	*);;
+	
+nrel_nonintersection_sets
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[непересекающиеся множества* - это  бинарное отношение между двумямножествами, имеющими пустое пересечение*, т.е. не имеющих общих элементов.]
+			(* <- lang_ru;; *);;
+		*);;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- typical_sc_neighborhood;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				<= nrel_strict_inclusion:
+					sc.g_text;;
+				-> rrel_example:
+				"file://nl_files/nrel_nonintersection_sets.png";;
+			*);;
+	*);;
+	
+nrel_sets_difference
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[разность множеств* - это бинарное отношение, каждая пара которого связывает Множество si (указываемое в качестве второго компонента) и ориентированную пару множеств sj и sk. Множество si является результатом разности множеств sj и sk в том, и только том случае, если любой элемент Множества si является элементом множества sj, но не является элементом множества sk.]
+			(* <- lang_ru;; *);;
+		*);;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- typical_sc_neighborhood;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+			<= nrel_strict_inclusion:
+				sc.g_text;;
+			-> rrel_example:
+				"file://nl_files/nrel_sets_difference.png";;
+			*);;
+	*);;
+	
+nrel_strict_inclusion
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[строгое включение* – это бинарное ориентированное отношение, каждая связка которого связывает два множества.Будем говорить, что Множество si строго включает* в себя Множество sj в том и только том случае, если каждый элемент Множества sj является также и элементом множества si. при этом существует хотя бы один элемент Множества si, не являющийся элементом Множества sj.]
+			(* <- lang_ru;; *);;
+		*);;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_sc_neighborhood;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		<= nrel_strict_inclusion:
+			sc.g_text;;
+		-> rrel_example:
+			"file://nl_files/nrel_strict_inclusion.png";;
+		*);;
+	*);;
+	
+nrel_nrel_subdividing
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[разбиение* - это  бинарное отношение , каждая пара которого связывает некоторое множество si (указываемое в качестве второго компонента) и множество sj которое является семейством взаимно непересекающихся множеств, при объединении которых может быть получено множество si.]
+			(* <- lang_ru;; *);;
+		*);;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- typical_sc_neighborhood;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+			<= nrel_strict_inclusion:
+				sc.g_text;;
+			-> rrel_example:
+				"file://nl_files/nrel_subdividing.png";;
+			*);;
+	*);;
+	
+nrel_symmetric_sets_difference
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[симметрическая разность множеств* - это бинарное отношение между множеством si (указываемое в качестве второго компонента) и парой множеств sj и sk (указываемой в качестве первого компонента). Множество si есть результат симментрической разности множества sj и sk в том и только том случае, когда любой элемент множества si принадлежит либо множеству sj, либо множеству sk, но не принадлежит обоим множествам одновременно.]
+			(* <- lang_ru;; *);;
+		*);;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- typical_sc_neighborhood;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				<= nrel_strict_inclusion:
+					sc.g_text;;
+				-> rrel_example:
+					"file://nl_files/nrel_symmetric_sets_difference.png";;
+			*);;
+	*);;
+	
+rrel_example
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[пример' – это ролевое отношение, связывающее некоторое sc-множество и элемент, являющийся примером этого множества.]
+		(* <- lang_ru;; *);;
+		*);;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- typical_sc_neighborhood;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+			<= nrel_strict_inclusion:
+				sc.g_text;;
+			-> rrel_example:
+				"file://nl_files/rrel_example.png";;
+			*);;
+	*);;
+	

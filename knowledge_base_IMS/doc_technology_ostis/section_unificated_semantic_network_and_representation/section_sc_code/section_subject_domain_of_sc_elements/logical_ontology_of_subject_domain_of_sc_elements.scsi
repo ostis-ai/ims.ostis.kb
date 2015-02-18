@@ -153,20 +153,6 @@ constant_essence
 			*);;
 	*);;
 
-constant_sc_tuple
-<- rrel_key_sc_element:
-	...
-	(*
-		<- sc_explanation;;
-		<= nrel_sc_text_translation:
-		...
-			(*
-				-> rrel_example:
-					[постоянная связка - ...]
-					(*<- lang_ru;;*);;
-			*);;
-	*);;
-
 constant_sc_edge
 <- rrel_key_sc_element:
 	...
@@ -305,20 +291,6 @@ material_or_quasimaterial_essence
 			(*
 				-> rrel_example:
 					[материальная или квазиматериальная сущность - sc-элемент, обозначающий материальную или квазиматериальную сущность]
-					(*<- lang_ru;;*);;
-			*);;
-	*);;
-
-non_binary_sc_tuple
-<- rrel_key_sc_element:
-	...
-	(*
-		<- sc_explanation;;
-		<= nrel_sc_text_translation:
-		...
-			(*
-				-> rrel_example:
-					[небинарная sc-связка - ...]
 					(*<- lang_ru;;*);;
 			*);;
 	*);;
@@ -692,19 +664,7 @@ temporary_essence
 			*);;
 	*);;
 
-temporary_sc_tuple
-<- rrel_key_sc_element:
-	...
-	(*
-		<- sc_explanation;;
-		<= nrel_sc_text_translation:
-		...
-			(*
-				-> rrel_example:
-					[временная sc-связка - sc-знак временно существующей связи]
-					(*<- lang_ru;;*);;
-			*);;
-	*);;
+
 
 terminal_sc_constant
 <- rrel_key_sc_element:
@@ -716,20 +676,6 @@ terminal_sc_constant
 			(*
 				-> rrel_example:
 					[терминальная sc-константа - sc-константа, не являющаяся знаком множества]
-					(*<- lang_ru;;*);;
-			*);;
-	*);;
-
-sc_tuple
-<- rrel_key_sc_element:
-	...
-	(*
-		<- sc_explanation;;
-		<= nrel_sc_text_translation:
-		...
-			(*
-				-> rrel_example:
-					[sc-связка - связка sc-элементов]
 					(*<- lang_ru;;*);;
 			*);;
 	*);;

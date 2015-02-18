@@ -117,15 +117,6 @@
 		[стационарная сущность]
 		(* <- lang_ru;; *);;
 	
-	constant_sc_tuple
-	=> nrel_main_idtf:
-		[постоянная связка]
-		(* <- lang_ru;; *);
-		[сonstant tuple]
-		(* <- lang_en;; *);
-	=> nrel_idtf:
-		[стационарная связка]
-		(* <- lang_ru;; *);;
 	
 	constant_sc_edge
 	=> nrel_main_idtf:
@@ -248,13 +239,6 @@
 		[материальная или квазиматериальная сущность]
 		(* <- lang_ru;; *);
 		[material or quasimaterial essence]
-		(* <- lang_en;; *);;
-	
-	non_binary_sc_tuple
-	=> nrel_main_idtf:
-		[небинарная sc-связка]
-		(* <- lang_ru;; *);
-		[non binary sc-tuple]
 		(* <- lang_en;; *);;
 	
 	oriented_pair
@@ -526,18 +510,6 @@
 		[процесс]
 		(* <- lang_ru;; *);;
 	
-	temporary_sc_tuple
-	=> nrel_main_idtf:
-		[временная sc-связка]
-		(* <- lang_ru;; *);
-		[temporary sc-tuple]
-		(* <- lang_en;; *);
-	=> nrel_idtf:
-		[временно существующая связь]
-		(* <- lang_ru;; *);
-		[нестационарная связка]
-		(* <- lang_ru;; *);;
-	
 	terminal_sc_constant
 		=> nrel_main_idtf:
 		[терминальная sc-константа]
@@ -553,20 +525,7 @@
 		(* <- lang_ru;; *);
 		[терминальная константная сущность]
 		(* <- lang_ru;; *);;
-	
-	sc_tuple
-	=> nrel_main_idtf:
-		[sc-связка]
-		(* <- lang_ru;; *);
-		[sc-tuple]
-		(* <- lang_en;; *);
-	=> nrel_idtf:
-		[связь между сущностями]
-		(* <- lang_ru;; *);
-		[связка]
-		(* <- lang_ru;; *);
-		[sc-знак связи]
-		(* <- lang_ru;; *);;
+		
 	
 	unfable_entity
 	=> nrel_main_idtf:
