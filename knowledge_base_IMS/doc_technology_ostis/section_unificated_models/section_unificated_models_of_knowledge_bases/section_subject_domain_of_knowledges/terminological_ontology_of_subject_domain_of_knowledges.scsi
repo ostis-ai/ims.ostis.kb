@@ -258,3 +258,19 @@ rrel_sample
 => nrel_idtf:
 	[контрольный экземпляр']
 	(* <- lang_ru;; *);;
+
+nrel_metaknowledge
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[метазнание*]
+	(* <- lang_ru;; *);
+	[metaknowledge*]
+	(* <- lang_en;; *);;
+
+sc_comparison
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[sc-сравнение*]
+	(* <- lang_ru;; *);
+	[sc-comparison*]
+	(* <- lang_en;; *);;

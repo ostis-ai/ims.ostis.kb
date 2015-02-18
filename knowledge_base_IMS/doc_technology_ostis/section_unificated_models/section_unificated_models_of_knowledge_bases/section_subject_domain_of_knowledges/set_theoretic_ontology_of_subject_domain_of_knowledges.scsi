@@ -18,7 +18,7 @@ knowledge
 	subject_domain;
 	ontology;
 	logical_system_of_concepts_and_their_definitions;
-	logical_system_of_tasks_and_their_proofs;
+	logical_system_statements_and_proofs;
 	sc_comparison;
 	sc_text_statement;
 	sc_text_of_proofs;
@@ -67,5 +67,9 @@ nrel_section_decomposition
 	nrel_decomposition;;
 
 rrel_main_key_sc_element
+<- role_relation;
 => nrel_inclusion: 
 	rrel_key_sc_element;;
+	
+nrel_metaknowledge
+<- binary_relation;;
