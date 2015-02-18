@@ -34,23 +34,23 @@ nrel_ontology
 nrel_using_constants
 <- binary_relation;
 => nrel_first_domain:
-	sc_concept;
+	concept;
 => nrel_second_domain:
 	...
 	(*
 	<= nrel_boolean:
-		sc_concept;;
+		concept;;
 	*);
 => nrel_definitional_domain: 
 	...
 	(*
 	<= nrel_combination: 
 		{
-		sc_concept;
+		concept;
 		...
 		(*
 			<= nrel_boolean:
-				sc_concept;;
+				concept;;
 		*)
 		};;
 	*);;
@@ -58,23 +58,23 @@ nrel_using_constants
 nrel_using_statements
 <- binary_relation;
 => nrel_first_domain:
-	sc_statement;
+	statement;
 => nrel_second_domain:
 	...
 	(*
 	<= nrel_boolean:
-		sc_statement;;
+		statement;;
 	*);
 => nrel_definitional_domain: 
 	...
 	(*
 	<= nrel_combination: 
 		{
-		sc_statement;
+		statement;
 		...
 		(*
 			<= nrel_boolean:
-				sc_statement;;
+				statement;;
 		*)
 		};;
 	*);;
