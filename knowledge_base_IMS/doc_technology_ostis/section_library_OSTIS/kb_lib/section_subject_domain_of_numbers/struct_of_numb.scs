@@ -1,0 +1,41 @@
+structural_specification_of_subject_domain_of_numbers
+<- structural_specification;
+=> nrel_main_idtf:
+	[Структурная спецификация Предметной области чисел]
+	(* <- lang_ru;; *);
+	[Structural specification of subject domain of numbers]
+	(* <- lang_en;; *);;
+
+structural_specification_of_subject_domain_of_numbers = [*	
+subject_domain_of_numbers
+-> rrel_maximum_studied_object_class:
+	number;
+	
+-> rrel_not_maximum_studied_object_class:
+	arithmetic_expression;
+	arithmetic_operation;
+	complex_number;
+	irrational_number;
+	natural_number;
+	negative_number;
+	number_one;
+	number_pi;
+	number_zero;
+	positive_number;
+	rational_number;
+	real_number;
+	whole_number;
+	
+		
+-> rrel_studied_relation:
+	nrel_equality;
+	nrel_greater;
+	nrel_greater_or_equal;
+	nrel_less;
+	nrel_less_or_equal;
+	nrel_multiplication;
+	nrel_pow;
+	nrel_sum;;
+	
+	
+*];;

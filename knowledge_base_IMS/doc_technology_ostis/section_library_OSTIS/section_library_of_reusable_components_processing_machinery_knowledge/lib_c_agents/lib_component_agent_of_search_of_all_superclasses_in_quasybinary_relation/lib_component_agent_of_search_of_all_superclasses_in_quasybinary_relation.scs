@@ -1,0 +1,27 @@
+lib_component_agent_of_search_of_all_superclasses_in_quasybinary_relation
+=> nrel_main_idtf:
+	[Компонент библиотеки. sc-агент поиска всех известных сущностей, являющихся общими по отношению к заданной] (* <- lang_ru;; *);
+	[Компонент библиотеки. sc-agent search all known entities which are common to the predetermined] (* <- lang_en;; *);
+
+<- library_of_platform_dependent_reusable_components; 
+<- library_of_atomic_reusable_components;
+
+=> nrel_attendant_component: 
+	lib_component_ui_menu_view_all_superclasses_in_quasybinary_relation; 
+
+-> rrel_key_sc_element: 
+	.c_realization_of_agent_of_search_of_all_superclasses_in_quasybinary_relation; 
+
+<- key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[Задачей sc-агента поиска всех надклассов в квазибинарном отношении является поиск всех элементов, являющихся вторым компонентом какой-либо бинарной ориентированной пары некоторого квазибинарного отношения, первым элементом которой является множество, элементом которого является заданный sc-элемент. После этого та же процедура поиска выполняется для каждого из найденных sc-элементов и далее рекурсивно до тех пор, пока поиск соответствующей конструкции успешен.];;
+		*);;
+	*);;
+
+

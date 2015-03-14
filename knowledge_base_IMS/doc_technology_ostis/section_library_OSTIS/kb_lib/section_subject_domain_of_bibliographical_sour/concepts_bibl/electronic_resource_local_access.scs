@@ -1,0 +1,22 @@
+electronic_resource_local_access
+
+=> nrel_main_idtf:
+	[электронный ресурс локального доступа] (* <- lang_ru;; *);
+	[electronic resource local access] (* <- lang_en;; *);
+
+<= nrel_strict_inclusion:
+	bibliographical_source;
+	electronic_resource;
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					"file://section_subject_domain_of_bibliographical_sources_content/explanation_for_electronic_resource_local_access.html"
+					(*<- lang_ru;;*);;
+			*);;
+	*);;

@@ -1,0 +1,52 @@
+sc_agent_of_finding_formal_statement
+=> nrel_main_idtf:
+	[sc-агент поиска формальной записи утверждения для заданного знака утверждения] 
+	(* <- lang_ru;; *);
+
+	[sc-agent of finding formal statement record for given sign of statement] 
+	(* <- lang_en;; *);
+
+<- abstract_sc_agent;
+
+=> nrel_primary_initiation_condition: 
+	(sc_event_add_output_arc => question_initiated);
+
+=> nrel_initiation_condition_and_result:
+	(..sc_agent_of_finding_formal_statement_condition => ..sc_agent_of_finding_formal_statement_result);
+
+<= nrel_sc_agent_key_sc_elements: 
+	{
+	question_initiated;
+	question;
+	question_finding_formal_statement
+	};
+
+=> nrel_inclusion: 
+	.platform_independent_realization_of_sc_agent_of_finding_formal_statement
+	(*
+	<- platform_independent_abstract_sc_agent;;
+	<= nrel_sc_agent_program: 
+		{
+		agent_of_finding_formal_statement;
+		proc_of_finding_formal_statement
+		};;
+	-> sc_agent_of_finding_formal_statement_scp   
+		(* <- active_sc_agent;; *);;
+	*);;
+
+..sc_agent_of_finding_formal_statement_condition
+= [*
+	question_finding_formal_statement _-> .._question;;
+	question_initiated _-> .._question;;
+	question _-> .._question;;
+	.._question _-> .._parameter;;
+*];;
+
+..sc_agent_of_finding_formal_statement_result
+= [*
+	question_finding_formal_statement _-> .._question;;
+	question_finished _-> .._question;;
+	question _-> .._question;;
+	.._question _=> nrel_answer:: .._answer;;
+	.._question _-> .._parameter;;
+*];;

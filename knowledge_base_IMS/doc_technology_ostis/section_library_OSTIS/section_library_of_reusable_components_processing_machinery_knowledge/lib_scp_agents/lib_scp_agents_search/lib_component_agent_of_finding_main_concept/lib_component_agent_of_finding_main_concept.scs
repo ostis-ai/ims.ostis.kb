@@ -1,0 +1,30 @@
+lib_component_agent_of_finding_main_concept
+=> nrel_main_idtf:
+	[Компонент библиотеки. sc-агент поиска понятий, которые определяются на основе заданного]
+	(* <- lang_ru;; *);
+	[Library component. sc-agent of finding concepts, which are defined on the base of given]
+	(* <- lang_en;; *);
+
+<- platform_independent_reusable_component_OSTIS; 
+<- atomic_reusable_component_OSTIS; 
+<- reusable_scp_agent;
+
+=> nrel_attendant_component: 
+	lib_component_ui_menu_file_for_finding_main_concept; 
+
+-> rrel_key_sc_element: 
+	.platform_independent_realization_of_sc_agent_of_finding_main_concept; 
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Agent_Main_concept.html"
+				(* <- lang_ru;; *);; 
+		*);;
+	*);;
+

@@ -1,0 +1,308 @@
+logical_formula
+<-sc_node_not_relation;
+=> nrel_main_idtf:
+	[логическая формула]
+	(* <- lang_ru;;	*);
+	[logical formula]
+	(* <- lang_en;; *);;
+
+atomic_existence
+<-sc_node_not_relation;
+=> nrel_main_idtf:
+	[атомарное существование]
+	(* <- lang_ru;;	*);
+	[atmoic existence]
+	(* <- lang_en;;	*);;
+
+atomic_existence_and_uniqueness
+<-sc_node_not_relation;
+=> nrel_main_idtf:
+	[атомарное существование и единственность]
+	(* <- lang_ru;;	*);
+	[atomic existence and uniqueness]
+	(* <- lang_en;; *);;
+
+atomic_formula
+<-sc_node_not_relation;
+=> nrel_main_idtf:
+	[атомарная формула]
+	(* <- lang_ru;;	*);
+	[atomic formula]
+	(* <- lang_en;;	*);;
+
+contradictory_logical_formula
+<-sc_node_not_relation;
+=> nrel_main_idtf:
+	[противоречивая логическая формула]
+	(* <- lang_ru;;	*);
+	[contradictory logical formula]
+	(* <- lang_en;; *);;
+
+existence_and_uniqueness
+<-sc_node_not_relation;
+=> nrel_main_idtf:
+	[существование и единственность]
+	(* <- lang_ru;;	*);
+	[existence and uniqueness]
+	(* <- lang_en;;	*);;
+
+formal_theory
+<-sc_node_not_relation;
+=> nrel_main_idtf:
+	[формальная теория]
+	(* <- lang_ru;;	*);
+	[formal_theory]
+	(* <- lang_en;;	*);;
+
+general_validity_of_a_logical_formula
+<-sc_node_not_relation;
+=> nrel_main_idtf:
+	[общезначимая логическая формула]
+	(* <- lang_ru;;	*);
+	[general validity of a logical formula]
+	(* <- lang_en;;	*);;
+
+impossible_logical_formula
+<-sc_node_not_relation;
+=> nrel_main_idtf:
+	[невыполнимая логическая формула]
+	(* <- lang_ru;;	*);
+	[impossible logical formula]
+	(* <- lang_en;;	*);;
+
+logical_operation
+<-sc_node_not_relation;
+=> nrel_main_idtf:
+	[логическая операция]
+	(* <- lang_ru;;	*);
+	[logical operation]
+	(* <- lang_en;;	*);
+=> nrel_idtf:
+	[логическая связка]
+	(* <- lang_ru;;	*);
+	[логический оператор]
+	(* <- lang_ru;;	*);
+	[пропозициональная связка]
+	(* <- lang_ru;;	*);;
+
+logical_variable
+<-sc_node_not_relation;
+=> nrel_main_idtf:
+	[логическая переменная]
+	(* <- lang_ru;;	*);
+	[logical variable]
+	(* <- lang_en;;	*);;
+
+negation
+<-sc_node_norole_relation;
+=> nrel_main_idtf:
+	[отрицание]
+	(* <- lang_ru;; *);
+	[negation]
+	(* <- lang_en;;	*);;
+
+
+neutral_logical_formula
+<-sc_node_not_relation;
+=> nrel_main_idtf:
+	[нейтральная логическая формула]
+	(* <- lang_ru;;	*);
+	[neutral logical formula]
+	(* <- lang_en;;	*);;
+
+non_atomic_formula
+<-sc_node_not_relation;
+=> nrel_main_idtf:
+	[неатомарная формула]
+	(* <- lang_ru;;	*);
+	[non atomic formula]
+	(* <- lang_en;;	*);
+=> nrel_idtf:
+	[неатомарная логическая формула]
+	(* <- lang_ru;;	*);;
+
+propositional_variable
+<-sc_node_not_relation;
+=> nrel_main_idtf:
+	[пропозициональная переменная]
+	(* <- lang_ru;;	*);
+	[propositional variable]
+	(* <- lang_en;;	*);;
+
+quantifier
+<-sc_node_not_relation;
+=> nrel_main_idtf:
+	[квантор]
+	(* <- lang_ru;;	*);
+	[quantifier]
+	(* <- lang_en;;	*);;
+
+statement
+<-sc_node_not_relation;
+=> nrel_main_idtf:
+	[высказывание]
+	(* <- lang_ru;;	*);
+	[statement]
+	(* <- lang_en;;	*);;
+
+tautology
+<-sc_node_not_relation;
+=> nrel_main_idtf:
+	[тавтология]
+	(* <- lang_ru;;	*);
+	[tautology]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[тождественно истинная формула]
+	(* <- lang_ru;;	*);;
+
+workable_logical_formula
+<-sc_node_not_relation;
+=> nrel_main_idtf:
+	[выполнимая логическая формула]
+	(* <- lang_ru;;	*);
+	[workable logical formula]
+	(* <- lang_en;;	*);;
+	
+negation
+<-sc_node_norole_relation;
+=> nrel_main_idtf:
+	[отрицание*]
+	(* <- lang_ru;;	*);
+	[negation*]
+	(* <- lang_en;;	*);;
+
+nrel_conjunction
+<-sc_node_norole_relation;
+=> nrel_main_idtf:
+	[конъюнкция*]
+	(* <- lang_ru;;	*);
+	[conjunction*]
+	(* <- lang_en;;	*);
+=> nrel_idtf:
+	[логическое и*]
+	(* <- lang_ru;;	*);
+	[логическое умножение*]
+	(* <- lang_ru;;	*);;
+
+nrel_disjunction
+<-sc_node_norole_relation;
+=> nrel_main_idtf:
+	[дизъюнкция*]
+	(* <- lang_ru;;	*);
+	[disjunction*]
+	(* <- lang_en;;	*);
+=> nrel_idtf:
+	[логическое или*]
+	(* <- lang_ru;;	*);
+	[логическое сложение*]
+	(* <- lang_ru;;	*);
+	[включающее или*]
+	(* <- lang_ru;;	*);;
+
+nrel_equivalence
+<-sc_node_norole_relation;
+=> nrel_main_idtf:
+	[эквиваленция]
+	(* <- lang_ru;;	*);
+	[equivalence]
+	(* <- lang_en;;	*);;
+
+nrel_existence
+<-sc_node_norole_relation;
+=> nrel_main_idtf:
+	[существование*]
+	(* <- lang_ru;;	*);
+	[existence*]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[квантор существования*]
+	(* <- lang_ru;; *);;
+
+rrel_free_variables
+<-sc_node_role_relation;
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+	[свободные переменные']
+	(* <- lang_ru;;	*);
+	[free variables']
+	(* <- lang_en;;	*);;
+
+nrel_generality
+<-sc_node_norole_relation;
+=> nrel_main_idtf:
+	[всеобщность*]
+	(* <- lang_ru;;	*);
+	[generality*]
+	(* <- lang_en;;	*);
+=> nrel_idtf:
+	[квантор всеобщности*]
+	(* <- lang_ru;;	*);
+	[квантор общности*]
+	(* <- lang_ru;;	*);;
+
+nrel_implication
+<-sc_node_norole_relation;
+=> nrel_main_idtf:
+	[импликация*]
+	(* <- lang_ru;;	*);
+	[implication*]
+	(* <- lang_en;;	*);
+=> nrel_idtf:
+	[логическое следование*]
+	(* <- lang_ru;;	*);;
+
+nrel_strict_disjunction
+<-sc_node_norole_relation;
+=> nrel_main_idtf:
+	[строгая дизъюнкция*]
+	(* <- lang_ru;;	*);
+	[strict disjunction*]
+	(* <- lang_en;;	*);
+=> nrel_idtf:
+	[сложение по модулю 2*]
+	(* <- lang_ru;;	*);
+	[исключающее или*]
+	(* <- lang_ru;;	*);
+	[альтернатива*]
+	(* <- lang_ru;;	*);;
+
+rrel_axiom
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+	[аксиома']
+	(* <- lang_ru;;	*);
+	[axiom']
+	(* <- lang_en;;	*);;
+
+rrel_bind_variables
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+	[связываемые переменные’]
+	(* <- lang_ru;;	*);
+	[bind variables']
+	(* <- lang_en;;	*);;
+
+rrel_if
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+	[если'] 
+	(* <- lang_ru;; *);
+	[if'] 
+	(* <- lang_en;; *);;
+	
+rrel_then
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+	[то'] 
+	(* <- lang_ru;; *);
+	[then'] 
+	(* <- lang_en;; *);;
+	
+rrel_theorem
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+	[теорема']
+	(* <- lang_ru;;	*);
+	[theorem]
+	(* <- lang_en;;	*);;

@@ -1,0 +1,96 @@
+relation
+<= nrel_subdividing:
+	{
+		binary_relation;
+		class_of_non_binary_connectives_same_capacities;
+		class_of_connectives_with_diffetent_capacities
+	};
+<= nrel_subdividing:
+	{
+	oriented_relation;
+	non_oriented_relation
+	};
+=> nrel_strict_inclusion:
+	unary_relation;
+	binary_relation;
+	role_relation;
+	ternary_relation;
+	quasybinary_relation;
+	antireflexive_relation;
+	antisymmetric_relation;
+	areflexive_relation;
+	asymmetric_relation;
+	equivalence_relation;
+	non_oriented_relation;
+	non_strict_order_relation;
+	order_relation;
+	oriented_relation;
+	quasybinary_relation;
+	reflexive_relation;
+	related_relation;
+	strict_order_relation;
+	symmetric_relation;
+	transitive_relation;;
+	
+	
+sc_tuple
+<= nrel_subdividing:
+	{
+		constant_tuple;
+		temporary_tuple
+	};
+=> nrel_strict_inclusion:
+	non_binary_tuple;;
+	
+
+nrel_arity_of_relations
+<- binary_relation;
+<- oriented_relation;;
+
+nrel_bijection
+<= nrel_strict_inclusion:
+	nrel_compliance;
+<- ternary_relation;;
+nrel_compliance
+<- ternary_relation;;
+
+nrel_composition_of_relations
+<- quasybinary_relation;;
+
+nrel_definitional_domain
+<- quasybinary_relation;;
+
+nrel_first_domain
+<- binary_relation;;
+
+nrel_full_compliance
+<= nrel_strict_inclusion:
+	nrel_compliance;
+<- ternary_relation;;
+
+nrel_functional_compliance
+<= nrel_sctrict_inclusion:
+	nrel_compliance;
+	nrel_injection;
+	nrel_surjection;
+<- ternary_relation;;
+
+nrel_injection
+<= nrel_strict_inclusion:
+	nrel_compliance;
+<- ternary_relation;;
+
+
+nrel_relation_schema
+<- quasybinary_relation;;
+
+nrel_second_domain
+<- binary_relation;;
+
+nrel_surjection
+<= nrel_strict_inclusion:
+	nrel_compliance;
+<- ternary_relation;;
+
+nrel_third_domain
+<- binary_relation;;

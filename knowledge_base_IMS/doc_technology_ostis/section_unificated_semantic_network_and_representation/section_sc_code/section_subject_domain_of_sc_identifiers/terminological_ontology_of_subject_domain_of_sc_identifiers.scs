@@ -1,0 +1,79 @@
+terminological_ontology_of_subject_domain_of_sc_identifiers
+<- terminological_ontology;
+=> nrel_main_idtf:
+	[Терминологическая онтология Предметной области sc-идентификаторов]
+	(* <- lang_ru;; *);
+	[Terminological ontology of subject domain of sc-identifiers]
+	(* <- lang_en;; *);;
+	
+terminological_ontology_of_subject_domain_of_sc_identifiers = [*^"file://terminological_ontology_of_subject_domain_of_sc_identifiers.scsi"*];;
+
+
+rrel_key_sc_element -> (terminological_ontology_of_subject_domain_of_sc_identifiers -> sc_identifier)
+(*
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_sc_identifiers -> atomic_sc_identifier)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_sc_identifiers -> non_atomic_sc_identifier)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_sc_identifiers -> line_sc_identifier)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_sc_identifiers -> non_line_sc_identifier)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_sc_identifiers -> atomic_sc_identifier_of_scs_code_1_level)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_sc_identifiers -> non_atomic_sc_identifier_of_scs_code_2_level)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_sc_identifiers -> non_atomic_sc_identifier_of_scs_and_scg_code_6_level)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_sc_identifiers -> non_role_relation_identifier)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_sc_identifiers -> role_relation_identifier)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_sc_identifiers -> sc_const_identifier)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_sc_identifiers -> sc_identifier_contour)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_sc_identifiers -> sc_identifier_link)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_sc_identifiers -> sc_identifier_operation)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_sc_identifiers -> sc_identifier_set)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_sc_identifiers -> sc_identifier_tuple)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_sc_identifiers -> sc_var_identifier)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_sc_identifiers -> system_identifier)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_sc_identifiers -> nrel_idtf)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_sc_identifiers -> nrel_main_idtf)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_sc_identifiers -> nrel_often_used_idtf)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_sc_identifiers -> nrel_system_identifier)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_sc_identifiers -> nrel_naming_rule)
+	(* <- rrel_key_sc_element;; *);;
+*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;

@@ -1,0 +1,24 @@
+lib_component_agent_of_search_of_links_of_relation_connected_with_element
+=> nrel_main_idtf:
+	[Компонент библиотеки. sc-агент поиска связок заданного отношения, компонентом которых является заданный sc-элемент] (* <- lang_ru;; *);
+	[Компонент библиотеки. sc-agent of search of links of given relation, connected with given sc-element] (* <- lang_en;; *);
+
+<- library_of_platform_dependent_reusable_components; 
+<- library_of_atomic_reusable_components;
+
+-> rrel_key_sc_element: 
+	.c_realization_of_agent_of_search_of_links_of_relation_connected_with_element; 
+
+<- key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[Задачей sc-агента поиска связок заданного отношения, компонентом которых является заданный sc-элемент, является поиск всех связок заданного отношения, компонентом которых является заданный sc-элемент. Если отношение при этом является квазибинарным, то поиск осуществляется с учетом конфигурации связок квазибинарного отношения.];;
+		*);;
+	*);;
+
+

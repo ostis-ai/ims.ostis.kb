@@ -1,0 +1,54 @@
+state_of_knowledge_base
+=> nrel_main_idtf:
+	[состояние базы знаний]
+	(* <- lang_ru;; *);
+	[state of knowledge base]
+	(* <- lang_en;; *);;
+
+current_state_of_knowledge_base
+=> nrel_main_idtf:
+	[текущее состояние базы знаний]
+	(* <- lang_ru;; *);
+	[current state of knowledge base]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[множество sc-элементов, входящих в состав текущего состояния базы знаний]
+	(* <- lang_ru;; *);
+	[Семейство текущих состояний баз знаний различных компьютерных систем]
+	(* <- lang_ru;; *);
+	[множество настоящих знаков базы знаний соответствующей системы]
+	(* <- lang_ru;; *);;
+
+past_state_of_the_knowledge_base
+=> nrel_main_idtf:
+	[прошлое состояние базы знаний]
+	(* <- lang_ru;; *);
+	[past state of knowledge base]
+	(* <- lang_en;; *);;
+
+future_state_of_the_knowledge_base
+=> nrel_main_idtf:
+	[будущее состояние базы знаний]
+	(* <- lang_ru;; *);
+	[future state of knowledge base]
+	(* <- lang_en;; *);;
+
+set_of_sc_elements_that_will_be_put_into_the_current_state_of_kb
+=> nrel_main_idtf:
+	[множество sc-элементов, которые планируется ввести в текущее состояние базы знаний]
+	(* <- lang_ru;; *);
+	[set of sc-elements that will be put into the current state of knowledge base]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[множество будущих знаков базы знаний]
+	(* <- lang_ru;; *);;
+	
+set_of_sc_elements_deleted_from_current_status_of_the_kb
+=> nrel_main_idtf:
+	[множество sc-элементов, удаленных из текущего состояния базы знаний]
+	(* <- lang_ru;; *);
+	[set of sc-elements deleted from current status of the knowledge base]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[множество удаленных знаков базы знаний]
+	(* <- lang_ru;; *);;

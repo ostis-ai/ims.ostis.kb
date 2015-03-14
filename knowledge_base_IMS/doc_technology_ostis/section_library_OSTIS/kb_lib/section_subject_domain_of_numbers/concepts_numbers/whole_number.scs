@@ -1,0 +1,32 @@
+whole_number
+=> nrel_main_idtf:
+	[целое число]
+	(*
+	<- lang_ru;;
+	*);
+	[whole number]
+	(*
+	<- lang_en;;
+	*);
+=> nrel_idtf:
+	[множество целых чисел]
+	(*
+	<- lang_ru;;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[ целое число – это подмножество множества рациональных чисел,
+получаемых объединением натуральных чисел с множеством
+чисел противоположных натуральным и нулѐм.]
+		(* <- lang_ru;; *);;
+		*);;
+	*);
+<= nrel_strict_inclusion:
+	rational_number;;

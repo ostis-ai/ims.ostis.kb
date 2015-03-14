@@ -1,0 +1,225 @@
+semantic_neighbourhood
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[семантическая окрестность]
+	(* <- lang_ru;; *);
+	[semantic neighbourhood]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[sc-окрестность]
+	(* <- lang_ru;; *);
+	[описание (спецификация) некоторой сущности, выполненное с той или иной степенью детализации и в том или ином ракурсе]
+	(* <- lang_ru;; *);;
+
+basic_semantic_neighbourhood
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[базовая семантическая окрестность]
+	(* <- lang_ru;; *);
+	[basic semantic neighbourhood]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[базовая семантическая окрестность в рамках текущего состояния базы знаний]
+	(* <- lang_ru;; *);;
+
+typical_sc_neighbourhood
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[типичная семантическая окрестность]
+	(* <- lang_ru;; *);
+	[typical_sc_neighbourhood]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[типичная sc-окрестность]
+	(* <- lang_ru;; *);;
+
+comparative_analysis
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[сравнительный анализ]
+	(* <- lang_ru;; *);
+	[comparative analysis]
+	(* <- lang_en;; *);;
+
+decomposition_description
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[описание декомпозиции]
+	(* <- lang_ru;; *);
+	[decomposition description]
+	(* <- lang_en;; *);;
+	
+description_of_benefits
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[описание преимуществ]
+	(* <- lang_ru;; *);
+	[description of benefits]
+	(* <- lang_en;; *);;
+	
+description_of_gaps
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[описание недостатков]
+	(* <- lang_ru;; *);
+	[description of gaps]
+	(* <- lang_en;; *);;
+	
+logic_semantic_neighbourhood
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[логическая семантическая окрестность]
+	(* <- lang_ru;; *);
+	[logic semantic neighbourhood]
+	(* <- lang_en;;	*);;
+
+theoretic_set_semantic_neighbourhood
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[теоретико-множественная семантическая окрестность]
+	(* <- lang_ru;;	*);
+	[theoretic set neighbourhood]
+	(* <- lang_en;;	*);;
+	
+	
+terminological_neighbourhood
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[терминологическая семантическая окрестность]
+	(* <- lang_ru;;	*);
+	[terminological neighbourhood]
+	(* <- lang_en;;	*);;
+
+general_semantic_neighbourhood
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[общая семантическая окрестность]
+	(* <- lang_ru;; *);
+	[general semantic neighbourhood]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[общая семантическая окрестность в рамках текущего состояния базы знаний]
+	(* <- lang_ru;; *);;
+
+sc_text_definition
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[sc-текст определения]
+	(* <- lang_ru;; *);
+	[sc-text definition]
+	(* <- lang_en;; *);;
+
+sc_note
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[sc-примечание]
+	(* <- lang_ru;; *);
+	[sc-note]
+	(* <- lang_en;; *);;
+
+sc_comment
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[sc-комментарий]
+	(* <- lang_ru;; *);
+	[sc-comment]
+	(* <- lang_en;; *);;
+
+sc_explanation
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[sc-пояснение]
+	(* <- lang_ru;; *);
+	[sc-explanation]
+	(* <- lang_en;; *);;
+
+documentation
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[документация]
+	(* <- lang_ru;; *);
+	[documentation]
+	(* <- lang_en;; *);;
+	
+technical_documentation_of_system
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[техническая документация системы]
+	(* <- lang_ru;; *);
+	[technical documentation of system]
+	(* <- lang_en;; *);;
+
+project_documentation
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[проектная документация]
+	(* <- lang_ru;; *);
+	[project documentation]
+	(* <- lang_en;; *);;
+
+documentation_of_technology
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[документация технологии]
+	(* <- lang_ru;; *);
+	[documentation of technology]
+	(* <- lang_en;; *);;
+
+	
+sc_text_statement
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[sc-текст утверждения]
+	(* <- lang_ru;; *);
+	[sc-text statement]
+	(* <- lang_en;; *);;
+
+sc_text_of_proof
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[sc-текст доказательства]
+	(* <- lang_ru;; *);
+	[sc_text_of_proof]
+	(* <- lang_en;; *);;
+
+plan_for_solving_the_problem
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[план решения задачи]
+	(* <- lang_ru;; *);
+	[plan for solving the problem]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[sc-текст плана решения задачи]
+	(* <- lang_ru;; *);;
+
+sc_text_of_justification_for_solving_problem
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[sc-текст обоснования решения задачи]
+	(* <- lang_ru;; *);
+	[sc-text of justification for solving problem]
+	(* <- lang_en;; *);;
+	
+generalized_formulation_of_the_relevant_class_of_problems
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[обобщенная формулировка задач соответствующего класса]
+	(* <- lang_ru;; *);
+	[generalized formulation of the relevant class of problems]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[sc-текст обобщенной формулировки задач некоторого класса]
+	(* <- lang_ru;; *);;
+
+method_of_solving_problems_of_the_relevant_class
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[способ решения задач соответствующего класса]
+	(* <- lang_ru;; *);
+	[method of solving problems of the relevant class]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[sc-текст способа решения задач]
+	(* <- lang_ru;; *);;
+	

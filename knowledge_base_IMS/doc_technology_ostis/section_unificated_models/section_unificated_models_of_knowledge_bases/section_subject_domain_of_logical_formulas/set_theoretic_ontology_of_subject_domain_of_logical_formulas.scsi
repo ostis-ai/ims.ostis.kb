@@ -1,0 +1,38 @@
+logical_formula
+<= nrel_subdividing:
+	{
+	general_validity_of_a_logical_formula;
+	contradictory_logical_formula;
+	neutral_logical_formula
+	};
+<= nrel_subdividing:
+	{
+	workable_logical_formula;
+	impossible_logical_formula
+	};
+<= nrel_subdividing:
+	{
+	atomic_formula;
+	non_atomic_formula
+	};
+=> nrel_strict_inclusion:
+	tautology;;
+	
+logical_operation
+-> negation;
+-> nrel_conjunction;
+-> nrel_disjunction;
+-> nrel_equivalence;
+-> nrel_free_variables;
+-> nrel_implication;
+-> nrel_strict_disjunction;
+=> nrel_strict_inclusion:
+	quantifier;;
+
+quantifier
+-> nrel_existence;
+-> nrel_generality;;
+
+nrel_disjunction
+=> nrel_strict_inclusion:
+	nrel_strict_disjunction;;

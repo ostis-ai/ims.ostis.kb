@@ -1,0 +1,27 @@
+ui_menu_file_for_finding_theorems <- ui_user_command_class_atom; ui_user_command_class_view_kb;;
+
+ui_menu_file_for_finding_theorems => nrel_main_idtf: 
+	[Запрос теорем для заданной онтологии] 
+	(* <- lang_ru;; *);;
+	
+ui_menu_file_for_finding_theorems => nrel_main_idtf: 
+	[Request of theorems for given ontology] 
+	(* <- lang_en;; *);;
+
+ui_menu_file_for_finding_theorems => ui_nrel_command_template:
+	[*
+		question_finding_theorems _-> ._question_finding_theorems_instance
+			(*
+			_-> ui_arg_1;;
+			*);;
+		._question_finding_theorems_instance _<- question;;
+	*];;
+
+ui_menu_file_for_finding_theorems => ui_nrel_command_lang_template: 
+	[Запрос теорем: $ui_arg_1] 
+	(* <- lang_ru;; *);;
+
+ui_menu_file_for_finding_theorems => ui_nrel_command_lang_template: 
+	[Request of theorems: $ui_arg_1] 
+	(* <- lang_en;; *);;
+

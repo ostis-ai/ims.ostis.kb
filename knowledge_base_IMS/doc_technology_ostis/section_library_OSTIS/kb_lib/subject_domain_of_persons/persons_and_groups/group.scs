@@ -1,0 +1,23 @@
+group
+
+=> nrel_main_idtf:
+	[коллектив] (* <- lang_ru;; *);
+	[group] (* <- lang_en;; *);
+
+=> nrel_idtf:
+	[авторский коллектив] (* <- lang_ru;; *);
+	[группа авторов] (* <- lang_ru;; *);
+	[команда] (* <- lang_ru;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					"file://content/explanation_for_group.html"
+					(*<- lang_ru;;*);;
+			*);;
+	*);;

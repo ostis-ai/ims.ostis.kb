@@ -1,0 +1,16 @@
+lib_ui_menu_na_view_kb_pattern
+=> nrel_main_idtf:
+	[Компонент библиотеки. Команды запросов по образцу]
+	(* <- lang_ru;; *);
+	[Library component. Commands to request patterns]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components;
+<- library_of_non_atomic_reusable_components;
+
+<= nrel_library_component_decomposition:
+	{		
+		lib_ui_menu_view_full_pattern_search
+	};;
+
+lib_ui_menu_na_view_kb_pattern = [*^"file://ui_menu_na_view_kb_pattern.scsi"*];;

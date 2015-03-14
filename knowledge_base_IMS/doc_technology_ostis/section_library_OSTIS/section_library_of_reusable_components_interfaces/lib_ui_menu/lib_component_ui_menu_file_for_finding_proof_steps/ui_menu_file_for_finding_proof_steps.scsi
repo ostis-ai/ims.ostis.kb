@@ -1,0 +1,27 @@
+ui_menu_file_for_finding_proof_steps <- ui_user_command_class_atom; ui_user_command_class_view_kb;;
+
+ui_menu_file_for_finding_proof_steps => nrel_main_idtf: 
+	[Команда поиска действий, используемых в рамках решения]
+	(* <- lang_ru;; *);;
+
+ui_menu_file_for_finding_proof_steps => nrel_main_idtf: 
+	[Command of finding actions, which are used within solution]
+	(* <- lang_en;; *);;
+
+ui_menu_file_for_finding_proof_steps => ui_nrel_command_template:
+	[*
+		question_finding_proof_steps _-> ._question_finding_proof_steps_instance
+			(*
+			_-> ui_arg_1;;
+			*);;
+		._question_finding_proof_steps_instance _<- question;;
+	*];;
+
+ui_menu_file_for_finding_proof_steps => ui_nrel_command_lang_template: 
+	[Команда поиска действий, используемых в рамках решения: $ui_arg_1] 
+	(* <- lang_ru;; *);;
+
+ui_menu_file_for_finding_proof_steps => ui_nrel_command_lang_template: 
+	[Command of finding actions, which are used within solution: $ui_arg_1] 
+	(* <- lang_en;; *);;
+
