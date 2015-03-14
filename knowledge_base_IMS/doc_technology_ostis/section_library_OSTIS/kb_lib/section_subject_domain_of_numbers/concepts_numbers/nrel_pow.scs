@@ -1,0 +1,46 @@
+nrel_pow
+<- sc_node_norole_relation;
+
+=> nrel_main_idtf:
+	[возведение в степень*]
+	(*
+	<- lang_ru;;
+	*);
+	[pow*]
+	(*
+	<- lang_en;;
+	*);
+	
+<- arithmetic_operation;
+<- ternary_relation;
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[возведение в степень* – это арифметическая операция, в результате
+которой число, называемое основанием степени, умножается само на
+себя столько раз, каков показатель степени.]
+		(* <- lang_ru;; *);;
+		*);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_sc_neighborhood;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		<= nrel_strict_inclusion:
+			sc.g_text;;
+			
+		-> rrel_example:
+			"file://nl_files/explanation_for_nrel_pow.png";;
+			
+		*);;
+	*);;

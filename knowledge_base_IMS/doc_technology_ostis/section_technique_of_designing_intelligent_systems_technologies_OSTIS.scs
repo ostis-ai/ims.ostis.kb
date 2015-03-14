@@ -1,0 +1,37 @@
+section_technique_of_designing_intelligent_systems_technologies_OSTIS
+=> nrel_main_idtf:
+	[Раздел. Методика проектирования интеллектуальных систем по Технологии OSTIS]
+	(* <- lang_ru;; *);
+	[Section. Technique of designing intelligent systems technologies OSTIS]
+	(* <- lang_en;; *);
+
+
+<= nrel_section_decomposition:
+	{
+		section_general_methodology_of_evolutionary_iterative_design_of_intelligent_systems_technologies_OSTIS
+		(*
+		=> nrel_section_base_order: 
+			section_technique_of_designing_unified_semantic_models_of_knowledge_bases;;
+		*);
+		section_technique_of_designing_unified_semantic_models_of_knowledge_bases
+		(*
+		=> nrel_section_base_order:
+		section_technique_of_designing_programs_aimed_at_treatment_of_unified_semantic_models_of_knowledge_bases;;
+		*);
+		section_technique_of_designing_programs_aimed_at_treatment_of_unified_semantic_models_of_knowledge_bases
+		(*
+		=> nrel_section_base_order:
+		section_technique_of_designing_knowledge_processing_machines;;
+		*);
+		section_technique_of_designing_knowledge_processing_machines
+		(*
+		=> nrel_section_base_order:
+		section_technique_of_designing_user_interfaces_of_intelligent_systems;;
+		*);
+		section_technique_of_designing_user_interfaces_of_intelligent_systems
+		(*
+		=> nrel_section_base_order:
+		section_technique_of_designing_various_classes_of_intelligent_systems;;
+		*);
+		section_technique_of_designing_various_classes_of_intelligent_systems
+	};;

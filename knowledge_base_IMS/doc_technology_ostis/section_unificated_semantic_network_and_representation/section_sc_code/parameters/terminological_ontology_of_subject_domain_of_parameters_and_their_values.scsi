@@ -1,0 +1,94 @@
+parameter
+=> nrel_main_idtf:
+	[параметр]
+	(* <- lang_ru;; *);
+	[parameter]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[характеристика]
+	(* <- lang_ru;; *);
+	[свойство]
+	(* <- lang_ru;; *);
+	[признак классификации сущности некоторого класса]
+	(* <- lang_ru;; *);
+	[признак классификации]
+	(* <- lang_ru;; *);;
+
+parametric_model
+=> nrel_main_idtf:
+	[параметрическая модель]
+	(* <- lang_ru;; *);
+	[parametric model]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[параметрическая модель некоторой сущности]
+	(* <- lang_ru;; *);
+	[параметрическая спецификация]
+	(* <- lang_ru;; *);;
+
+immeasurable_parameter
+=> nrel_main_idtf:
+	[неизмеряемый параметр]
+	(* <- lang_ru;; *);
+	[immeasurable parameter]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[качественный параметр]
+	(* <- lang_ru;; *);;
+
+measurable_parameter
+=> nrel_main_idtf:
+	[измеряемый параметр]
+	(* <- lang_ru;; *);
+	[measurable parameter]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[количественный параметр]
+	(* <- lang_ru;; *);;
+
+value
+=> nrel_main_idtf:
+	[величина]
+	(* <- lang_ru;; *);
+	[value]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[значение какого-либо параметра]
+	(* <- lang_ru;; *);
+	[класс сущностей, имеющих одинаковое или почти одинаковое значение какого-либо параметра]
+	(* <- lang_ru;; *);;
+	
+scale
+=> nrel_main_idtf:
+	[шкала]
+	(* <- lang_ru;; *);
+	[scale]
+	(* <- lang_en;; *);;
+
+exact_value
+=> nrel_main_idtf:
+	[точная величина']
+	(* <- lang_ru;; *);
+	[the exact value']
+	(* <- lang_en;; *);;
+	
+value_in_a_fixed_interval
+=> nrel_main_idtf:
+	[величина в фиксированном интервале']
+	(* <- lang_ru;; *);
+	[value in a fixed interval']
+	(* <- lang_en;; *);;
+
+inaccurate_value
+=> nrel_main_idtf:
+	[неточная величина]
+	(* <- lang_ru;; *);
+	[inaccurate value]
+	(* <- lang_en;; *);;
+	
+nrel_measurement_scale
+=> nrel_main_idtf:
+	[шкала измерения*]
+	(* <- lang_ru;; *);
+	[measurement scale*]
+	(* <- lang_en;; *);;

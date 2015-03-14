@@ -1,0 +1,41 @@
+nrel_patronymic_name
+
+=> nrel_main_idtf:
+	[отчество*] (* <- lang_ru;; *);
+	[patronymic name*] (* <- lang_en;; *);
+
+<- binary_relation;
+
+=> nrel_idtf:
+	[отчество физического лица*] (* <- lang_ru;; *);
+
+=> nrel_first_domain:
+	person;
+	
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					"file://content/explanation_for_nrel_patronymic_name.html"
+					(*<- lang_ru;;*);;
+			*);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- typical_sc_neighborhood;;
+		<= nrel_sc_text_translation:
+		...
+		
+			(*
+				<= nrel_sctrict_inclusion: 
+					sc.g_text;;
+				-> rrel_example:
+					"file://content/nrel_patronymic_name.png";;
+			*);;
+	*);;

@@ -1,0 +1,32 @@
+rational_number
+=> nrel_main_idtf:
+	[рациональное число]
+	(*
+	<- lang_ru;;
+	*);
+	[rational number]
+	(*
+	<- lang_en;;
+	*);
+=> nrel_idtf:
+	[множество рациональных чисел]
+	(*
+	<- lang_ru;;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[ рациональное число – это число, представляемое обыкновенной
+дробью, где числитель — целое число, а знаменатель — натуральное
+число.]
+		(* <- lang_ru;; *);;
+		*);;
+	*);
+<= nrel_strict_inclusion:
+	real_number;;

@@ -1,0 +1,28 @@
+ui_menu_file_for_finding_definitional_domain <- ui_user_command_class_atom; ui_user_command_class_view_kb;;
+
+ui_menu_file_for_finding_definitional_domain => nrel_main_idtf: 
+	[Запрос области определения отношения] 
+	(* <- lang_ru;; *);;
+
+ui_menu_file_for_finding_definitional_domain => nrel_main_idtf: 
+	[Request of definitional domain for relation] 
+	(* <- lang_en;; *);;
+
+ui_menu_file_for_finding_definitional_domain => ui_nrel_command_template:
+	[*
+		question_of_finding_definitional_domain _-> ._question_of_finding_definitional_domain_instance
+			(*
+			_-> ui_arg_1;;				
+			*);;
+		._question_of_finding_definitional_domain_instance _<- question;;
+	*];;
+
+ui_menu_file_for_finding_definitional_domain => ui_nrel_command_lang_template: 
+	[Запрос области определения отношения: $ui_arg_1] 
+	(* <- lang_ru;; *);;
+
+ui_menu_file_for_finding_definitional_domain => ui_nrel_command_lang_template: 
+	[Request of definitional domain for relation: $ui_arg_1] 
+	(* <- lang_en;; *);;
+
+

@@ -1,0 +1,28 @@
+positive_number
+=> nrel_main_idtf:
+	[положительное число]
+	(*
+	<- lang_ru;;
+	*);
+	[positive number]
+	(*
+	<- lang_en;;
+	*);
+=> nrel_idtf:
+	[множество положительных чисел]
+	(*
+	<- lang_ru;;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<- nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[положительное число – число больше нуля.]
+		(* <- lang_ru;; *);;
+		*);;
+	*);;

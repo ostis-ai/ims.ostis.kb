@@ -1,0 +1,32 @@
+section_subject_domain_of_parameters_and_their_values
+=> nrel_main_idtf:
+	[Раздел. Предметная область параметров и их значений]
+	(* <- lang_ru;; *);
+	[Section. Subject domain of parameters and their values]
+	(* <- lang_en;; *);
+
+<= nrel_section_decomposition:
+	{
+		subject_domain_of_parameters_and_their_values
+		(*
+		=> nrel_section_base_order: 
+			structural_specification_of_subject_domain_of_parameters_and_their_values;;
+		*);
+		structural_specification_of_subject_domain_of_parameters_and_their_values
+		(*
+		=> nrel_section_base_order: 
+			terminological_ontology_of_subject_domain_of_parameters_and_their_values;;
+		*);
+		terminological_ontology_of_subject_domain_of_parameters_and_their_values
+		(*
+		=> nrel_section_base_order: 
+			set_theoretic_ontology_of_subject_domain_of_parameters_and_their_values;;
+		*);
+		set_theoretic_ontology_of_subject_domain_of_parameters_and_their_values
+		(*
+		=> nrel_section_base_order: 
+			logical_ontology_of_subject_domain_of_parameters_and_their_values;;
+		*);
+		logical_ontology_of_subject_domain_of_parameters_and_their_values
+		
+	};;

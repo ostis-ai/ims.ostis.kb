@@ -1,0 +1,50 @@
+sc_agent_of_finding_proof_steps
+=> nrel_main_idtf:
+	[sc-агент поиска действий, используемых в рамках решения] 
+	(* <- lang_ru;; *);
+	[sc-agent of finding actions, which are used within solution] 
+	(* <- lang_en;; *);
+
+<- abstract_sc_agent;
+
+=> nrel_primary_initiation_condition: 
+	(sc_event_add_output_arc => question_initiated);
+
+=> nrel_initiation_condition_and_result: 
+	(..sc_agent_of_finding_proof_steps_condition => ..sc_agent_of_finding_proof_steps_result);
+
+<= nrel_sc_agent_key_sc_elements: 
+	{
+	question_initiated;
+	question;
+	question_finding_proof_steps
+	};
+
+=> nrel_inclusion: 
+	.platform_independent_realization_of_sc_agent_of_finding_proof_steps
+	(*
+	<- platform_independent_abstract_sc_agent;;
+	<= nrel_sc_agent_program: 
+		{
+		agent_of_finding_proof_steps		
+		};;
+	-> sc_agent_of_finding_proof_steps_scp   
+		(* <- active_sc_agent;; *);;
+	*);;
+
+..sc_agent_of_finding_proof_steps_condition
+= [*
+	question_finding_proof_steps _-> .._question;;
+	question_initiated _-> .._question;;
+	question _-> .._question;;
+	.._question _-> .._parameter;;
+*];;
+
+..sc_agent_of_finding_proof_steps_result
+= [*
+	question_finding_proof_steps _-> .._question;;
+	question_finished _-> .._question;;
+	question _-> .._question;;
+	.._question _=> nrel_answer:: .._answer;;
+	.._question _-> .._parameter;;
+*];;

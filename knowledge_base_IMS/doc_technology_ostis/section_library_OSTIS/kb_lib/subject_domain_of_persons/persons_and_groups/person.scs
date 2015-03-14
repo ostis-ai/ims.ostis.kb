@@ -1,0 +1,21 @@
+person
+
+=> nrel_main_idtf:
+	[физическое лицо] (* <- lang_ru;; *);
+	[person] (* <- lang_en;; *);
+
+=> nrel_idtf:
+	[персона] (* <- lang_ru;; *);
+	
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					"file://content/explanation_for_person.html"
+					(*<- lang_ru;;*);;
+			*);;
+	*);;

@@ -1,0 +1,32 @@
+section_subject_domain_of_semantic_neighbourhoods
+=> nrel_main_idtf:
+	[Раздел. Предметная область семантических окрестностей]
+	(* <- lang_ru;; *);
+	[Section. Subject domain of semantic neighbourhoods]
+	(* <- lang_en;; *);
+
+<= nrel_section_decomposition:
+	{
+		subject_domain_of_semantic_neighbourhoods
+		(*
+		=> nrel_section_base_order: 
+			structural_specification_of_subject_domain_of_semantic_neighbourhoods;;
+		*);
+		structural_specification_of_subject_domain_of_semantic_neighbourhoods
+		(*
+		=> nrel_section_base_order: 
+			terminological_ontology_of_subject_domain_of_semantic_neighbourhoods;;
+		*);
+		terminological_ontology_of_subject_domain_of_semantic_neighbourhoods
+		(*
+		=> nrel_section_base_order: 
+			set_theoretic_ontology_of_subject_domain_of_semantic_neighbourhoods;;
+		*);
+		set_theoretic_ontology_of_subject_domain_of_semantic_neighbourhoods
+		(*
+		=> nrel_section_base_order: 
+			logical_ontology_of_subject_domain_of_semantic_neighbourhoods;;
+		*);
+		logical_ontology_of_subject_domain_of_semantic_neighbourhoods
+		
+	};;

@@ -1,0 +1,57 @@
+structural_specification_of_subject_domain_of_sc_ligaments_and_relations
+<- structural_specification;
+=> nrel_main_idtf:
+	[Структурная спецификация Предметной области sc-связок и отношений]
+	(* <- lang_ru;; *);
+	[Structural specification of subject domain of sc-ligaments and relations]
+	(* <- lang_en;; *);;
+	
+structural_specification_of_subject_domain_of_sc_ligaments_and_relations = [*	
+subject_domain_of_sc_ligaments_and_relations
+
+-> rrel_maximum_studied_object_class:
+	relation;
+	sc_tuple;
+	
+-> rrel_not_maximum_studied_object_class:
+	antireflexive_relation;
+	antisymmetric_relation;
+	areflexive_relation;
+	asymmetric_relation;
+	binary_relation;
+	equivalence_relation;
+	non_oriented_relation;
+	non_strict_order_relation;
+	order_relation;
+	oriented_relation;
+	quasybinary_relation;
+	reflexive_relation;
+	related_relation;
+	role_relation;
+	strict_order_relation;
+	symmetric_relation;
+	ternary_relation;
+	transitive_relation;
+	unary_relation;
+	constant_sc_tuple;
+	temporary_sc_tuple;
+	non_binary_tuple;
+	class_of_non_binary_connectives_same_capacities;
+	class_of_connectives_with_diffetent_capacities;
+	
+-> rrel_studied_relation:
+	nrel_arity_of_relations;
+	nrel_bijection;
+	nrel_compliance;
+	nrel_composition_of_relations;
+	nrel_definitional_domain;
+	nrel_first_domain;
+	nrel_full_compliance;
+	nrel_functional_compliance;
+	nrel_injection;
+	nrel_relation_schema;
+	nrel_second_domain;
+	nrel_surjection;
+	nrel_third_domain;;
+	
+*];;

@@ -1,0 +1,44 @@
+structural_specification_of_subject_domain_of_sets
+<- structural_specification;
+=> nrel_main_idtf:
+	[Структурная спецификация Предметной области множеств]
+	(* <- lang_ru;; *);
+	[Structural specification of subject domain of sets]
+	(* <- lang_en;; *);;
+	
+structural_specification_of_subject_domain_of_sets = [*	
+subject_domain_of_sets
+
+-> rrel_maximum_studied_object_class:
+	set;
+
+-> rrel_not_maximum_studied_object_class:
+	cantor_set; 
+	countable_set; 
+	empty_set; 
+	finite_set; 
+	infinite_set; 
+	multiset; 	
+	oriented_set; 
+	pair_set; 
+	power_set; 
+	reflexive_set; 
+	triple_set; 
+	singletone; 
+	uncountable_set;
+		
+-> rrel_studied_relation:
+	nrel_boolean;
+	nrel_cartesian_product;
+	nrel_combination;
+	nrel_inclusion;
+	nrel_intersection_sets;
+	nrel_nonintersection_sets;
+	nrel_sets_difference;
+	nrel_strict_inclusion;
+	nrel_nrel_subdividing;
+	nrel_symmetric_sets_difference;
+	rrel_example;
+	nrel_intersection;;
+
+*];;

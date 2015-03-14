@@ -1,0 +1,27 @@
+subject_domain_of_ontologies
+=> nrel_main_idtf:
+	[Предметная область онтологий]
+	(* <- lang_ru;;	*);
+	[Subject domain of ontologies]
+	(* <- lang_en;;	*);
+	
+<- subject_domain;
+
+<- rrel_key_sc_element: 
+        ...
+	(*
+	<- sc_explanation;; 
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[Предметная область онтологий - предметная область, объектами исследования которой являются онтологии различных типов.]
+			(* <- lang_ru;; *);;
+		*);;
+	*);
+	
+=> nrel_ontology:
+	structural_specification_of_subject_domain_of_ontologies;
+	terminological_ontology_of_subject_domain_of_ontologies;
+	set_theoretic_ontology_of_subject_domain_of_ontologies;
+	logical_ontology_of_subject_domain_of_ontologies;;

@@ -1,0 +1,18 @@
+set_theoretic_ontology_of_subject_domain_of_sc_links
+<-theoretic_set_ontology;
+=> nrel_main_idtf:
+	[Теоретико-множественная онтология Предметной области sc-ссылок]
+	(* <- lang_ru;; *);
+	[Set theoretic ontology of subject domain of sc-links]
+	(* <- lang_en;; *);;
+	
+set_theoretic_ontology_of_subject_domain_of_sc_links = [*^"file://set_theoretic_ontology_of_subject_domain_of_sc_links.scsi"*];;
+
+rrel_key_sc_element -> (set_theoretic_ontology_of_subject_domain_of_sc_links -> sc_link)
+(*
+	=> nrel_key_sc_element_base_order: (set_theoretic_ontology_of_subject_domain_of_sc_links -> natural_language)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (set_theoretic_ontology_of_subject_domain_of_sc_links -> nrel_sc_text_translation)
+	(* <- rrel_key_sc_element;; *);;
+*);;*);;

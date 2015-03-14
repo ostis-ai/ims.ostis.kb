@@ -1,0 +1,43 @@
+sc_agent_of_search_of_decomposition
+=> nrel_main_idtf:
+	[sc-агент поиска связок декомпозиции для заданного sc-элемента] (* <- lang_ru;; *);
+	[sc-agent search ligaments decomposition for a given sc-element] (* <- lang_en;; *);
+<- abstract_sc_agent;
+=> nrel_primary_initiation_condition: (sc_event_add_output_arc => question_initiated);
+=> nrel_initiation_condition_and_result: (..sc_agent_of_search_of_decomposition_initiation_condition => ..sc_agent_of_search_of_decomposition_result);
+<= nrel_sc_agent_key_sc_elements: 
+	{
+		question_initiated;
+		question;
+		question_search_decomposition
+	};
+
+=> nrel_inclusion: 
+	.c_realization_of_agent_of_search_of_decomposition
+	(*
+		<- platform_dependent_abstract_sc_agent;;
+		<= nrel_sc_agent_program: 
+		{
+			[owner=deniskoronchik; repo=sc-machine; path= sc-kpm/search/agents/search_structure.c; syntax=cpp] (* => nrel_format: format_github_source_link;; *);
+			[owner=deniskoronchik; repo=sc-machine; path= sc-kpm/search/agents/search_structure.h; syntax=cpp] (* => nrel_format: format_github_source_link;; *)
+		};;
+		
+		-> sc_agent_of_search_of_decomposition_agent_c (* <- active_sc_agent;; *);;
+	*);;
+
+..sc_agent_of_search_of_decomposition_initiation_condition
+= [*
+	question_search_decomposition _-> .._question;;
+	question_initiated _-> .._question;;
+	question _-> .._question;;
+	.._question _-> .._parameter;;
+*];;
+
+..sc_agent_of_search_of_decomposition_result
+= [*
+	question_search_decomposition _-> .._question;;
+	question_finished _-> .._question;;
+	question _-> .._question;;
+	.._question _=> nrel_answer:: .._answer;;
+	.._question _-> .._parameter;;
+*];;
