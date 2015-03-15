@@ -480,12 +480,29 @@ rrel_type_of_sc_element
 		rrel_link
 	};;
 
+rrel_node
+	=> nrel_main_idtf:
+		[sc-узел']
+		(* <- lang_ru;; *);
+		[sc-node']
+		(* <- lang_en;; *);
+	<= nrel_subdividing: 
+	{
+		rrel_not_binary_tuple;
+		rrel_struct;
+		rrel_role_relation;
+		rrel_norole_relation;
+		rrel_not_relation;
+		rrel_abstract;
+		rrel_material
+	};;
+
 rrel_arc
 	=> nrel_main_idtf:
 		[sc-дуга']
-		(*<- lang_ru;;*);
+		(* <- lang_ru;; *);
 		[sc-arc']
-		(*<- lang_en;;*);
+		(* <- lang_en;; *);
 	<= nrel_subdividing: 
 	{
 		rrel_common;
