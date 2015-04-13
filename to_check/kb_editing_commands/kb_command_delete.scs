@@ -1,0 +1,13 @@
+kb_command_delete
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[команда удаления sc-элементов] 
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[command of sc-elements deletion] 
+	(* <- lang_en;; *);
+
+<= nrel_inclusion:
+	kb_editing_command;
+
+<- kb_editing_command_type;;
