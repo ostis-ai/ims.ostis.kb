@@ -798,7 +798,8 @@ scp_operator_atomic_type
 	-> stringToUpperCase;
 	-> stringToLowerCase;
 	-> stringSplit;
-	-> stringEndsWith;;
+	-> stringEndsWith;
+	-> stringReplace;;
 
 /*----------------------scp-operator of sc-structure generation----------------------*/
 
@@ -2321,4 +2322,25 @@ stringEndsWith
 		*);
 	<= nrel_using_example:
 		"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_img/scp_operator_example_stringEndsWith.png";;
+
+stringReplace
+	=> nrel_main_idtf:
+		[scp-оператор замены подстроки на указанную строку]
+		(*<- lang_ru;;*);
+		[scp-operator of replacing substring with specified string]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		..key_node_stringReplace
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_stringReplace
+				(*
+					-> rrel_example:
+						"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_htmls/explanation_for_stringReplace.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);
+	<=nrel_using_example:
+		"file://section_subject_domain_of_programs_for_base_programming_language_focused_on_knowledge_base_models_process_img/scp_operator_example_stringReplace.png";;
 
