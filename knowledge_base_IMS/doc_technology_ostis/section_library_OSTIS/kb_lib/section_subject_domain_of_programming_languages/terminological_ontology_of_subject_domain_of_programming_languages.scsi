@@ -1,0 +1,660 @@
+programming_language
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[язык программирования]
+	(* <- lang_ru;;	*);
+	[programming language]
+	(* <- lang_en;;	*);;
+
+programming_paradigm
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[парадигма программирования]
+	(* <- lang_ru;;	*);
+	[programming paradigm]
+	(* <- lang_en;;	*);;
+
+array_paradigm
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[матричная парадигма]
+	(* <- lang_ru;;	*);
+	[array paradigm]
+	(* <- lang_en;;	*);
+=> nrel_idtf:
+	[матричное программирование]
+	(* <- lang_ru;;	*);;
+
+concatenative_paradigm
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[конкатенативная парадигма]
+	(* <- lang_ru;;	*);
+	[concatenative paradigm]
+	(* <- lang_en;;	*);
+=> nrel_idtf:
+	[конкатенативный язык]
+	(* <- lang_ru;;	*);;
+
+concurrent_paradigm
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[параллельная парадигма]
+	(* <- lang_ru;;	*);
+	[concurrent paradigm]
+	(* <- lang_en;;	*);
+=> nrel_idtf:
+	[параллельное программирование]
+	(* <- lang_ru;;	*);;
+
+declarative_paradigm
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[декларативная парадигма]
+	(* <- lang_ru;;	*);
+	[declarative paradigm]
+	(* <- lang_en;;	*);
+=> nrel_idtf:
+	[декларативная программирование]
+	(* <- lang_ru;;	*);;
+
+esoteric_paradigm
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[эзотерическая парадигма]
+	(* <- lang_ru;;	*);
+	[esoteric paradigm]
+	(* <- lang_en;;	*);
+=> nrel_idtf:
+	[эзотерический язык программирования]
+	(* <- lang_ru;;	*);;
+
+function_level_paradigm
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[программирование на уровне функций]
+	(* <- lang_ru;;	*);
+	[function-level paradigm]
+	(* <- lang_en;;	*);
+=> nrel_idtf:
+	[комбинаторное программирование]
+	(* <- lang_ru;;	*);;
+
+functional_paradigm
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[функциональная парадигма]
+	(* <- lang_ru;;	*);
+	[functional paradigm]
+	(* <- lang_en;;	*);
+=> nrel_idtf:
+	[функциональное программирование]
+	(* <- lang_ru;;	*);;
+
+generic_paradigm
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[обобщённая парадигма]
+	(* <- lang_ru;;	*);
+	[generic paradigm]
+	(* <- lang_en;;	*);
+=> nrel_idtf:
+	[обобщённое программирование]
+	(* <- lang_ru;;	*);;
+
+imperative_paradigm
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[императивная парадигма]
+	(* <- lang_ru;;	*);
+	[imperative paradigm]
+	(* <- lang_en;;	*);
+=> nrel_idtf:
+	[императивное программирование]
+	(* <- lang_ru;;	*);;
+
+logic_paradigm
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[логическая парадигма]
+	(* <- lang_ru;;	*);
+	[logic paradigm]
+	(* <- lang_en;;	*);
+=> nrel_idtf:
+	[логическое программирование]
+	(* <- lang_ru;;	*);;
+
+message_passing_paradigm
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[парадигма обмена сообщениями]
+	(* <- lang_ru;;	*);
+	[message-passing paradigm]
+	(* <- lang_en;;	*);;
+
+metaprogramming_paradigm
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[парадигма метапрограммирования]
+	(* <- lang_ru;;	*);
+	[metaprogramming paradigm]
+	(* <- lang_en;;	*);
+=> nrel_idtf:
+	[метапрограммирование]
+	(* <- lang_ru;;	*);;
+
+non_strict_paradigm
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[нестрогое программирование]
+	(* <- lang_ru;;	*);
+	[non-strict programming]
+	(* <- lang_en;;	*);
+=> nrel_idtf:
+	[нестрогая парадигма]
+	(* <- lang_ru;;	*);;
+
+object_oriented_paradigm
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[объектно-ориентированная парадигма]
+	(* <- lang_ru;;	*);
+	[object-oriented programming]
+	(* <- lang_en;;	*);
+=> nrel_idtf:
+	[ООП]
+	(* <- lang_ru;;	*);
+=> nrel_idtf:
+	[объектно-ориентированная программирование]
+	(* <- lang_ru;;	*);;
+
+procedural_paradigm
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[процедурное программирование]
+	(* <- lang_ru;;	*);
+	[procedural programming paradigm]
+	(* <- lang_en;;	*);;
+
+prototype_based_paradigm
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[прототипное программирование]
+	(* <- lang_ru;;	*);
+	[prototype-based paradigm]
+	(* <- lang_en;;	*);;
+
+reflective_paradigm
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[рефлексивное программирование]
+	(* <- lang_ru;;	*);
+	[reflective paradigm]
+	(* <- lang_en;;	*);;
+
+scalar_paradigm
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[скалярное программирование]
+	(* <- lang_ru;;	*);
+	[scalar paradigm]
+	(* <- lang_en;;	*);;
+
+stack_oriented_paradigm
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[стек-ориентированная парадигма]
+	(* <- lang_ru;;	*);
+	[stack-oriented paradigm]
+	(* <- lang_en;;	*);;
+
+strict_paradigm
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[строгое программирование]
+	(* <- lang_ru;;	*);
+	[strict paradigm]
+	(* <- lang_en;;	*);
+=> nrel_idtf:
+	[строгая парадигма]
+	(* <- lang_ru;;	*);;
+
+structured_paradigm
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[структурное программирование]
+	(* <- lang_ru;;	*);
+	[structured paradigm]
+	(* <- lang_en;;	*);;
+
+value_level_paradigm
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[программирование на уровне значений]
+	(* <- lang_ru;;	*);
+	[value-level paradigm]
+	(* <- lang_en;;	*);;
+
+visual_paradigm
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[визуальное программирование]
+	(* <- lang_ru;;	*);
+	[visual programming]
+	(* <- lang_en;;	*);;
+
+/*******************типизация*******************/
+
+pr_typing
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[типизация данных языка]
+	(* <- lang_ru;;	*);
+	[a type system of a language]
+	(* <- lang_en;;	*);;
+
+pr_safe_typing
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[безопасная типизация]
+	(* <- lang_ru;;	*);
+	[type-safe typing]
+	(* <- lang_en;;	*);;
+
+pr_typeless_typing
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[бестиповая типизация]
+	(* <- lang_ru;;	*);
+	[typeless typing]
+	(* <- lang_en;;	*);;
+
+pr_dynamic_typing
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[динамическая типизация]
+	(* <- lang_ru;;	*);
+	[dynamic typing]
+	(* <- lang_en;;	*);;
+
+pr_weak_typing
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[нестрогая типизация]
+	(* <- lang_ru;;	*);
+	[weak typing]
+	(* <- lang_en;;	*);;
+
+pr_implicit_typing
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[нестрогая типизация]
+	(* <- lang_ru;;	*);
+	[implicit typing]
+	(* <- lang_en;;	*);;
+
+pr_nominal_typing
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[номинативная типизация]
+	(* <- lang_ru;;	*);
+	[nominal typing]
+	(* <- lang_en;;	*);;
+
+pr_static_typing
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[статическая типизация]
+	(* <- lang_ru;;	*);
+	[static typing]
+	(* <- lang_en;;	*);;
+
+pr_strong_typing
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[строгая типизация]
+	(* <- lang_ru;;	*);
+	[strong typing]
+	(* <- lang_en;;	*);;
+
+pr_structural_typing
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[структурная типизация]
+	(* <- lang_ru;;	*);
+	[structural typing]
+	(* <- lang_en;;	*);;
+
+pr_typed_typing
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[типизированная типизация]
+	(* <- lang_ru;;	*);
+	[typed typing]
+	(* <- lang_en;;	*);;
+
+pr_explicit_typing
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[явная типизация]
+	(* <- lang_ru;;	*);
+	[explicit typing]
+	(* <- lang_en;;	*);;
+
+/***************ЯП****************/
+
+pr_l_abap
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[abap]
+	(*
+		<- lang_en;;
+		<- lang_ru;;
+	*);;
+
+pr_l_ada
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[ada]
+	(*
+		<- lang_en;;
+		<- lang_ru;;
+	*);;
+
+
+pr_l_algol
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[algol]
+	(*
+		<- lang_en;;
+		<- lang_ru;;
+	*);;
+
+
+pr_l_assembler
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[assembler]
+	(*
+		<- lang_en;;
+		<- lang_ru;;
+	*);;
+
+
+pr_l_basic
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[basic]
+	(*
+		<- lang_en;;
+		<- lang_ru;;
+	*);;
+
+pr_l_brainfuck
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[brainfuck]
+	(*
+		<- lang_en;;
+		<- lang_ru;;
+	*);;
+
+pr_l_c
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[c]
+	(*
+		<- lang_en;;
+		<- lang_ru;;
+	*);;
+
+pr_l_csharp
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[c#]
+	(*
+		<- lang_en;;
+		<- lang_ru;;
+	*);
+
+=> nrel_idtf:
+	[c sharp]
+	(*
+		<- lang_en;;
+		<- lang_ru;;
+	*);;
+
+pr_l_cpp
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[c++]
+	(*
+		<- lang_en;;
+		<- lang_ru;;
+	*);;
+
+pr_l_cobol
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[cobol]
+	(*
+		<- lang_en;;
+		<- lang_ru;;
+	*);;
+
+pr_l_dart
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[dart]
+	(*
+		<- lang_en;;
+		<- lang_ru;;
+	*);;
+
+pr_l_erlang
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[erlang]
+	(*
+		<- lang_en;;
+		<- lang_ru;;
+	*);;
+
+pr_l_falcon
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[falcon]
+	(*
+		<- lang_en;;
+		<- lang_ru;;
+	*);;
+
+pr_l_fortran
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[fortran]
+	(*
+		<- lang_en;;
+		<- lang_ru;;
+	*);;
+
+pr_l_go
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[go]
+	(*
+		<- lang_en;;
+		<- lang_ru;;
+	*);;
+
+pr_l_haskell
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[haskell]
+	(*
+		<- lang_en;;
+		<- lang_ru;;
+	*);;
+
+pr_l_java
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[java]
+	(*
+		<- lang_en;;
+		<- lang_ru;;
+	*);;
+
+pr_l_k
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[k]
+	(*
+		<- lang_en;;
+		<- lang_ru;;
+	*);;
+
+pr_l_j
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[j]
+	(*
+		<- lang_en;;
+		<- lang_ru;;
+	*);;
+
+pr_l_lisp
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[lisp]
+	(*
+		<- lang_en;;
+		<- lang_ru;;
+	*);;
+
+pr_l_lua
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[lua]
+	(*
+		<- lang_en;;
+		<- lang_ru;;
+	*);;
+
+pr_l_miranda
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[miranda]
+	(*
+		<- lang_en;;
+		<- lang_ru;;
+	*);;
+
+pr_l_objective_c
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[objective-c]
+	(*
+		<- lang_en;;
+		<- lang_ru;;
+	*);;
+
+pr_l_pascal
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[pascal]
+	(*
+		<- lang_en;;
+		<- lang_ru;;
+	*);;
+
+pr_l_perl
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[perl]
+	(*
+		<- lang_en;;
+		<- lang_ru;;
+	*);;
+
+pr_l_php
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[php]
+	(*
+		<- lang_en;;
+		<- lang_ru;;
+	*);;
+
+pr_l_prolog
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[prolog]
+	(*
+		<- lang_en;;
+		<- lang_ru;;
+	*);;
+
+pr_l_python
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[python]
+	(*
+		<- lang_en;;
+		<- lang_ru;;
+	*);;
+
+pr_l_ruby
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[ruby]
+	(*
+		<- lang_en;;
+		<- lang_ru;;
+	*);;
+
+pr_l_rust
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[rust]
+	(*
+		<- lang_en;;
+		<- lang_ru;;
+	*);;
+
+pr_l_scala
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[scala]
+	(*
+		<- lang_en;;
+		<- lang_ru;;
+	*);;
+
+pr_l_smalltalk
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[smalltalk]
+	(*
+		<- lang_en;;
+		<- lang_ru;;
+	*);;
+
+pr_l_sql
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[sql]
+	(*
+		<- lang_en;;
+		<- lang_ru;;
+	*);;
+
+pr_l_tex
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[tex]
+	(*
+		<- lang_en;;
+		<- lang_ru;;
+	*);;
