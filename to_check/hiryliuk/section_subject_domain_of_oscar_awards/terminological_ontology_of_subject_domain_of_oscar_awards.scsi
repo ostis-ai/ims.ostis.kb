@@ -1,0 +1,274 @@
+oscar_award
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[премия Оскар]
+	(* <- lang_ru;;	*);
+	[Oscar award]
+	(* <- lang_en;;	*);;
+
+oscar_award_type
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[тип премии оскар]
+	(* <- lang_ru;;	*);
+	[Oscar award type*]
+	(* <- lang_en;;	*);
+=> nrel_idtf:
+	[тип премии оскар]
+	(* <- lang_ru;;	*);;
+
+oscar_award_base_type
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[основная премия Оскар]
+	(* <- lang_ru;;	*);
+	[base Oscar award]
+	(* <- lang_en;;	*);
+=> nrel_idtf:
+	[основная премия Оскар]
+	(* <- lang_ru;;	*);;
+
+oscar_award_special_type
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[специальная премия Оскар]
+	(* <- lang_ru;;	*);
+	[concatenative paradigm]
+	(* <- lang_en;;	*);
+=> nrel_idtf:
+	[специальная премия Оскар]
+	(* <- lang_ru;;	*);;
+
+/**********   -----------------   Категории премий Оскар(виды)   -------------------   ***********/
+
+oscar_award_best_picture
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[лучший фильм года]
+	(* <- lang_ru;;	*);
+	[best picture]
+	(* <- lang_en;;	*);;
+
+oscar_award_best_director
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[лучшая режиссура]
+	(* <- lang_ru;;	*);
+	[best director]
+	(* <- lang_en;;	*);;
+
+oscar_award_best_actor_in_a_leading_role
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[лучшая мужская роль]
+	(* <- lang_ru;;	*);
+	[best actor in a leading role]
+	(* <- lang_en;;	*);;
+
+oscar_award_best_actress_in_a_leading_role
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[лучшая женская роль]
+	(* <- lang_ru;;	*);
+	[best actress in a leading role]
+	(* <- lang_en;;	*);;
+
+oscar_award_best_actor_in_a_supporting_role
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[лучшая мужская роль второго плана]
+	(* <- lang_ru;;	*);
+	[best actor in a supporting role]
+	(* <- lang_en;;	*);;
+
+oscar_award_best_actress_in_a_supporting_role
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[лучшая женская роль второго плана]
+	(* <- lang_ru;;	*);
+	[best actress in a supporting role]
+	(* <- lang_en;;	*);;
+
+oscar_award_best_original_screenplay
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[лучший оригинальный сценарий]
+	(* <- lang_ru;;	*);
+	[best original screenplay]
+	(* <- lang_en;;	*);;
+
+oscar_award_best_adapted_screenplay
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[лучший сценарий-адаптация]
+	(* <- lang_ru;;	*);
+	[best adapted screenplay]
+	(* <- lang_en;;	*);;
+
+oscar_award_best_animated_feature
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[лучший анимационный полнометражный фильм]
+	(* <- lang_ru;;	*);
+	[best animated feature]
+	(* <- lang_en;;	*);;
+
+oscar_award_best_original_score
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[лучшая музыка]
+	(* <- lang_ru;;	*);
+	[best original score]
+	(* <- lang_en;;	*);;
+
+oscar_award_best_original_song
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[лучшая песня]
+	(* <- lang_ru;;	*);
+	[best original song]
+	(* <- lang_en;;	*);;
+
+oscar_award_best_foreign_language_film
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[лучший фильм на иностранном языке]
+	(* <- lang_ru;;	*);
+	[best foreign language film]
+	(* <- lang_en;;	*);;
+
+oscar_award_best_art_direction
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[лучшая работа художника-постанвщика]
+	(* <- lang_ru;;	*);
+	[best art direction]
+	(* <- lang_en;;	*);;
+
+oscar_award_best_cinematography
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[лучшая операторская работа]
+	(* <- lang_ru;;	*);
+	[best cinematography]
+	(* <- lang_en;;	*);;
+
+oscar_award_best_sound_mixing
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[лучший звук]
+	(* <- lang_ru;;	*);
+	[best sound mixing]
+	(* <- lang_en;;	*);;
+
+oscar_award_best_animated_short_film
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[лучший анимационный короткометражный фильм]
+	(* <- lang_ru;;	*);
+	[best animated short film]
+	(* <- lang_en;;	*);;
+
+oscar_award_best_live_action_short_film
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[лучший художественный короткометражный фильм]
+	(* <- lang_ru;;	*);
+	[best live action short film]
+	(* <- lang_en;;	*);;
+
+oscar_award_best_film_editing
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[лучший монтаж]
+	(* <- lang_ru;;	*);
+	[best film editing]
+	(* <- lang_en;;	*);;
+
+oscar_award_best_visual_effects
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[лучшие визуальные эффекты]
+	(* <- lang_ru;;	*);
+	[best visual effects]
+	(* <- lang_en;;	*);;
+
+oscar_award_best_documentary_feature
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[лучший документальный полнометражный фильм]
+	(* <- lang_ru;;	*);
+	[best documentary film]
+	(* <- lang_en;;	*);;
+
+oscar_award_best_documentary_short_subject
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[лучший документальный короткометражный фильм]
+	(* <- lang_ru;;	*);
+	[best documentary short film]
+	(* <- lang_en;;	*);;
+
+oscar_award_best_costume_design
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[лучший дизайн костюмов]
+	(* <- lang_ru;;	*);
+	[best costume design]
+	(* <- lang_en;;	*);;
+
+oscar_award_best_sound_editing
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[лучший звуковой монтаж]
+	(* <- lang_ru;;	*);
+	[best sound editing]
+	(* <- lang_en;;	*);;
+
+oscar_award_best_makeup
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[лучший грим]
+	(* <- lang_ru;;	*);
+	[best makeup]
+	(* <- lang_en;;	*);;
+
+oscar_award_honorary_oscar
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[почётный оскар]
+	(* <- lang_ru;;	*);
+	[honourable oscar]
+	(* <- lang_en;;	*);;
+
+oscar_award_scientific_and_technical
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[оскар за научные и технические достижения]
+	(* <- lang_ru;;	*);
+	[scientific and technical oscar award]
+	(* <- lang_en;;	*);;
+
+oscar_award_gordon_e_sawyer
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[оскар имени Гордона Сойера]
+	(* <- lang_ru;;	*);
+	[oscar award by name Gordon E.Sawyer]
+	(* <- lang_en;;	*);;
+
+oscar_award_jean_hersholt_humanitarian_award
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[гуманитарный оскар имени Джина Хершолта]
+	(* <- lang_ru;;	*);
+	[oscar humanitarian award by name Jean Hersholt]
+	(* <- lang_en;;	*);;
+
+oscar_award_irving_g_thalberg_memorial_award
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[мемориальный оскар имени Ирвинга Тальберга]
+	(* <- lang_ru;;	*);
+	[oscar memorial award by name Irving G.Thalberg]
+	(* <- lang_en;;	*);;

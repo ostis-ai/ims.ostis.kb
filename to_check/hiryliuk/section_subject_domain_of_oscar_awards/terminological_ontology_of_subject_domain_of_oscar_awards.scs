@@ -1,0 +1,115 @@
+terminological_ontology_of_subject_domain_of_oscar_awards
+<- terminological_ontology;
+=> nrel_main_idtf:
+	[Терминологическая онтология Предметной области премий Оскар]
+	(* <- lang_ru;; *);
+	[Terminological ontology of subject domain of Oscar awards]
+	(* <- lang_en;; *);;
+	
+terminological_ontology_of_subject_domain_of_oscar_awards = [*^"file://terminological_ontology_of_subject_domain_of_oscar_awards.scsi"*];;
+
+rrel_key_sc_element -> (terminological_ontology_of_subject_domain_of_oscar_awards -> oscar_award)
+(*
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_oscar_awards -> oscar_award_type)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_oscar_awards -> oscar_award_base_type)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_oscar_awards -> oscar_award_special_type)
+	
+	/********************************************************************************/
+	/************    ----------------- Categories ------------------    *************/
+	/*******************************************************************************/
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_oscar_awards -> oscar_award_best_picture)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_oscar_awards -> oscar_award_best_director)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_oscar_awards -> oscar_award_best_actor_in_a_leading_role)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_oscar_awards -> oscar_award_best_actress_in_a_leading_role)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_oscar_awards -> oscar_award_best_actor_in_a_supporting_role)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_oscar_awards -> oscar_award_best_actress_in_a_supporting_role)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_oscar_awards -> oscar_award_best_original_screenplay)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_oscar_awards -> oscar_award_best_adapted_screenplay)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_oscar_awards -> oscar_award_best_animated_feature)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_oscar_awards -> oscar_award_best_original_score)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_oscar_awards -> oscar_award_best_original_song)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_oscar_awards -> oscar_award_best_foreign_language_film)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_oscar_awards -> oscar_award_best_art_direction)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_oscar_awards -> oscar_award_best_cinematography)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_oscar_awards -> oscar_award_best_sound_mixing)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_oscar_awards -> oscar_award_best_animated_short_film)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_oscar_awards -> oscar_award_best_live_action_short_film)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_oscar_awards -> oscar_award_best_film_editing)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_oscar_awards -> oscar_award_best_visual_effects)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_oscar_awards -> oscar_award_best_documentary_feature)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_oscar_awards -> oscar_award_best_documentary_short_subject)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_oscar_awards -> oscar_award_best_costume_design)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_oscar_awards -> oscar_award_best_sound_editing)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_oscar_awards -> oscar_award_best_makeup)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_oscar_awards -> oscar_award_honorary_oscar)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_oscar_awards -> oscar_award_scientific_and_technical)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_oscar_awards -> oscar_award_gordon_e_sawyer)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_oscar_awards -> oscar_award_jean_hersholt_humanitarian_award)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (terminological_ontology_of_subject_domain_of_oscar_awards -> oscar_award_irving_g_thalberg_memorial_award)
+	(* <- rrel_key_sc_element;; *);;
+*);;*);;*);;
+*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;
+*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;
+*);;*);;*);;*);;*);;*);;*);;*);;*);;
