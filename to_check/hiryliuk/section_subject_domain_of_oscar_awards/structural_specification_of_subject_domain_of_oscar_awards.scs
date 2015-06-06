@@ -1,0 +1,50 @@
+structural_specification_of_subject_domain_of_oscar_awards
+<- structural_spacification;
+=> nrel_main_idtf:
+	[Структурная спецификация Предметной области премий Оскар]
+	(* <- lang_ru;; *);
+	[Structural specification of subject domain of Oscar awards]
+	(* <- lang_en;; *);;
+
+structural_specification_of_subject_domain_of_oscar_awards = [*	
+subject_domain_of_oscar_awards
+-> rrel_maximum_studied_object_class:
+	oscar_award;
+	
+-> rrel_not_maximum_studied_object_class:
+	oscar_award_type;
+	oscar_award_base_type;
+	oscar_award_special_type;
+	
+	oscar_award_best_picture;
+	oscar_award_best_director;
+	oscar_award_best_actor_in_a_leading_role;
+	oscar_award_best_actress_in_a_leading_role;
+	oscar_award_best_actor_in_a_supporting_role;
+	oscar_award_best_actress_in_a_supporting_role;
+	oscar_award_best_original_screenplay;
+	oscar_award_best_adapted_screenplay;
+	oscar_award_best_animated_feature;
+	oscar_award_best_original_score;
+	oscar_award_best_original_song;
+	oscar_award_best_foreign_language_film;
+	oscar_award_best_art_direction;
+	oscar_award_best_cinematography;
+	oscar_award_best_sound_mixing;
+	oscar_award_best_animated_short_film;
+	oscar_award_best_live_action_short_film;
+	oscar_award_best_film_editing;
+	oscar_award_best_visual_effects;
+	oscar_award_best_documentary_feature;
+	oscar_award_best_documentary_short_subject;
+	oscar_award_best_costume_design;
+	oscar_award_best_sound_editing;
+	oscar_award_best_makeup;
+	
+	oscar_award_honorary_oscar;
+	oscar_award_scientific_and_technical;
+	oscar_award_gordon_e_sawyer;
+	oscar_award_jean_hersholt_humanitarian_award;
+	oscar_award_irving_g_thalberg_memorial_award;;
+	
+*];;
