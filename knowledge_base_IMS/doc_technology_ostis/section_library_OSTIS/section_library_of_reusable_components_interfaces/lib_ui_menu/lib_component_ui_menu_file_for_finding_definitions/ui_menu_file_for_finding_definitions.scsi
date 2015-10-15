@@ -1,10 +1,18 @@
 ui_menu_file_for_finding_definitions <- ui_user_command_class_atom; ui_user_command_class_view_kb;;
 
-ui_menu_file_for_finding_definitions => nrel_main_idtf: 
+ui_menu_file_for_finding_definitions 
+=> nrel_main_idtf: 
+	[Каково определение/пояснение указываемого понятия?] 
+	(* <- lang_ru;; *);
+=> nrel_idtf: 
 	[Запрос определения/пояснения для заданного понятия] 
 	(* <- lang_ru;; *);;
 
-ui_menu_file_for_finding_definitions => nrel_main_idtf: 
+ui_menu_file_for_finding_definitions 
+=> nrel_main_idtf: 
+	[What is definition/explanation for given concept?] 
+	(* <- lang_en;; *);
+=> nrel_idtf: 
 	[Request of definition/explanation for given concept] 
 	(* <- lang_en;; *);;
 
@@ -18,10 +26,10 @@ ui_menu_file_for_finding_definitions => ui_nrel_command_template:
 	*];;
 
 ui_menu_file_for_finding_definitions => ui_nrel_command_lang_template: 
-	[Запрос определения/пояснения для заданного понятия: $ui_arg_1] 
+	[Каково определение/пояснение понятия $ui_arg_1] 
 	(* <- lang_ru;; *);;
 
 ui_menu_file_for_finding_definitions => ui_nrel_command_lang_template: 
-	[Request of definition/explanation for given concept: $ui_arg_1] 
+	[What is definition/explanation for concept of $ui_arg_1] 
 	(* <- lang_en;; *);;
 

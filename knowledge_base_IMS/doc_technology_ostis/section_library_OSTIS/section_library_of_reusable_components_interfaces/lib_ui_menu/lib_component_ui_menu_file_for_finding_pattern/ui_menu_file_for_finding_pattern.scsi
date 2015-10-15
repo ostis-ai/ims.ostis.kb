@@ -1,11 +1,19 @@
 ui_menu_file_for_finding_pattern <- ui_user_command_class_atom; ui_user_command_class_view_kb;;
 
-ui_menu_file_for_finding_pattern => nrel_main_idtf: 
-	[Запрос всех конструкций, изоморфных заданному образцу] 
+ui_menu_file_for_finding_pattern 
+=> nrel_main_idtf: 
+	[Какие структуры удовлетворяют указываемому образцу?] 
+	(* <- lang_ru;; *);
+=> nrel_idtf: 
+	[Запрос всех конструкций, удовлетворяющих заданному образцу] 
 	(* <- lang_ru;; *);;
 
-ui_menu_file_for_finding_pattern => nrel_main_idtf: 
-	[Request of all constructions isomorfic to given pattern] 
+ui_menu_file_for_finding_pattern 
+=> nrel_main_idtf: 
+	[Which constructions meet the given pattern?] 
+	(* <- lang_en;; *);
+=> nrel_idtf: 
+	[Request of all constructions which meet the given pattern] 
 	(* <- lang_en;; *);;
 
 ui_menu_file_for_finding_pattern => ui_nrel_command_template:
@@ -18,9 +26,9 @@ ui_menu_file_for_finding_pattern => ui_nrel_command_template:
 	*];;
 
 ui_menu_file_for_finding_pattern => ui_nrel_command_lang_template: 
-	[Запрос конструкций для заданного шаблона: $ui_arg_1] 
+	[Какие структуры удовлетворяют образцу $ui_arg_1] 
 	(* <- lang_ru;; *);;
 
 ui_menu_file_for_finding_pattern => ui_nrel_command_lang_template: 
-	[Request of constructions for given pattern: $ui_arg_1] 
+	[Which constructions meet the pattern $ui_arg_1] 
 	(* <- lang_en;; *);;

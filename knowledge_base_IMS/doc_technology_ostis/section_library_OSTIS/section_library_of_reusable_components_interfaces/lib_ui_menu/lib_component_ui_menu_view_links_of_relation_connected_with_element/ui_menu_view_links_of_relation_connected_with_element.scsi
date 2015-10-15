@@ -1,8 +1,20 @@
 ui_menu_view_links_of_relation_connected_with_element <- ui_user_command_class_atom; ui_user_command_class_view_kb;;
 
-ui_menu_view_links_of_relation_connected_with_element => nrel_main_idtf: [Запрос связок заданного отношения, в которые входит заданный sc-элемент] (* <- lang_ru;; *);;
+ui_menu_view_links_of_relation_connected_with_element 
+=> nrel_main_idtf: 
+	[С какими элементами указываемая сущность связана указываемым отношением?] 
+	(* <- lang_ru;; *);
+=> nrel_idtf: 
+	[Запрос связок заданного отношения, в которые входит заданный sc-элемент] 
+	(* <- lang_ru;; *);;
 
-ui_menu_view_links_of_relation_connected_with_element => nrel_main_idtf: [Request of relation links, connected with given sc-element] (* <- lang_en;; *);;
+ui_menu_view_links_of_relation_connected_with_element 
+=> nrel_main_idtf: 
+	[With which elements is given entity linked with given relation?] 
+	(* <- lang_en;; *);
+=> nrel_idtf: 
+	[Request of relation links, connected with given sc-element] 
+	(* <- lang_en;; *);;
 
 ui_menu_view_links_of_relation_connected_with_element => ui_nrel_command_template:
 	[*
@@ -14,5 +26,5 @@ ui_menu_view_links_of_relation_connected_with_element => ui_nrel_command_templat
 		._question_search_links_of_relation_connected_with_element_instance _<- question;;
 	*];;
 
-ui_menu_view_links_of_relation_connected_with_element => ui_nrel_command_lang_template: [Запрос связок заданного отношения, в которые входит заданный sc-элемент: $ui_arg_1] (* <- lang_ru;; *);;
-ui_menu_view_links_of_relation_connected_with_element => ui_nrel_command_lang_template: [Request of relation links, connected with given sc-element: $ui_arg_1] (* <- lang_en;; *);;
+ui_menu_view_links_of_relation_connected_with_element => ui_nrel_command_lang_template: [С какими элементами сущность $ui_arg_1 связана отношением $ui_arg_2] (* <- lang_ru;; *);;
+ui_menu_view_links_of_relation_connected_with_element => ui_nrel_command_lang_template: [With which elements is $ui_arg_1 linked with relation $ui_arg_2] (* <- lang_en;; *);;

@@ -1,7 +1,27 @@
 ui_menu_view_full_semantic_neighborhood <- ui_user_command_class_atom; ui_user_command_class_view_kb;;
 
-ui_menu_view_full_semantic_neighborhood => nrel_main_idtf: [Запрос полной семантической окрестности] (* <- lang_ru;; *);;
-ui_menu_view_full_semantic_neighborhood => nrel_main_idtf: [Request of full semantic neighborhood] (* <- lang_en;; *);;
+ui_menu_view_full_semantic_neighborhood 
+=> nrel_main_idtf: 
+	[Что это такое?] 
+	(* <- lang_ru;; *);
+=> nrel_idtf: 
+	[Запрос полной семантической окрестности] 
+	(* <- lang_ru;; *);
+=> nrel_idtf: 
+	[Что такое указываемая сушность?] 
+	(* <- lang_ru;; *);;
+
+
+ui_menu_view_full_semantic_neighborhood 
+=> nrel_main_idtf: 
+	[What is that?] 
+	(* <- lang_en;; *);
+=> nrel_idtf: 
+	[Request of full semantic neighborhood] 
+	(* <- lang_en;; *);
+=> nrel_idtf: 
+	[What is given entity?] 
+	(* <- lang_en;; *);;
 
 ui_menu_view_full_semantic_neighborhood => ui_nrel_command_template:
 	[*
@@ -12,5 +32,5 @@ ui_menu_view_full_semantic_neighborhood => ui_nrel_command_template:
 		._question_search_full_semantic_neighborhood_instance _<- question;;
 	*];;
 
-ui_menu_view_full_semantic_neighborhood => ui_nrel_command_lang_template: [Запрос полной семантической окрестности: $ui_arg_1] (* <- lang_ru;; *);;
-ui_menu_view_full_semantic_neighborhood => ui_nrel_command_lang_template: [Request of full semantic neighborhood: $ui_arg_1] (* <- lang_en;; *);;
+ui_menu_view_full_semantic_neighborhood => ui_nrel_command_lang_template: [Что такое $ui_arg_1] (* <- lang_ru;; *);;
+ui_menu_view_full_semantic_neighborhood => ui_nrel_command_lang_template: [What is $ui_arg_1] (* <- lang_en;; *);;

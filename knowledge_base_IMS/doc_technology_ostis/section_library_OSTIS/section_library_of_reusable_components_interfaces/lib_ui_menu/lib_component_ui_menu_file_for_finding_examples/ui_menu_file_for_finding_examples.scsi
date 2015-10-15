@@ -1,10 +1,18 @@
 ui_menu_file_for_finding_examples <- ui_user_command_class_atom; ui_user_command_class_view_kb;;
 
-ui_menu_file_for_finding_examples => nrel_main_idtf: 
+ui_menu_file_for_finding_examples 
+=> nrel_main_idtf: 
+	[Какие примеры соответствуют указываемому понятию?] 
+	(* <- lang_ru;; *);
+=> nrel_idtf: 
 	[Запрос примеров для заданного понятия] 
 	(* <- lang_ru;; *);;
 
-ui_menu_file_for_finding_examples => nrel_main_idtf: 
+ui_menu_file_for_finding_examples 
+=> nrel_main_idtf: 
+	[Which examples correspond to given concept?] 
+	(* <- lang_en;; *);
+=> nrel_main_idtf: 
 	[Request of examples for the given concept] 
 	(* <- lang_en;; *);;
 
@@ -18,11 +26,11 @@ ui_menu_file_for_finding_examples => ui_nrel_command_template:
 	*];;
 
 ui_menu_file_for_finding_examples => ui_nrel_command_lang_template: 
-	[Запрос примеров для заданного понятия: $ui_arg_1] 
+	[Какие примеры соответствуют понятию $ui_arg_1] 
 	(* <- lang_ru;; *);;
 
 ui_menu_file_for_finding_examples => ui_nrel_command_lang_template: 
-	[Request of examples for the given concept: $ui_arg_1] 
+	[Which examples correspond to concept of $ui_arg_1] 
 	(* <- lang_en;; *);;
 
 

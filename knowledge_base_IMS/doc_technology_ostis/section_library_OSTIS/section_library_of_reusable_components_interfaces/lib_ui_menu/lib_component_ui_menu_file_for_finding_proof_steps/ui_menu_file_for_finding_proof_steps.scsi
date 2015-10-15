@@ -1,11 +1,19 @@
 ui_menu_file_for_finding_proof_steps <- ui_user_command_class_atom; ui_user_command_class_view_kb;;
 
-ui_menu_file_for_finding_proof_steps => nrel_main_idtf: 
-	[Команда поиска действий, используемых в рамках решения]
+ui_menu_file_for_finding_proof_steps 
+=> nrel_main_idtf: 
+	[Какие действия были выполнены для выполнения указанного действия?]
+	(* <- lang_ru;; *);
+=> nrel_idtf: 
+	[Команда поиска действий, выполненных для выполнения указываемого действия]
 	(* <- lang_ru;; *);;
 
-ui_menu_file_for_finding_proof_steps => nrel_main_idtf: 
-	[Command of finding actions, which are used within solution]
+ui_menu_file_for_finding_proof_steps 
+=> nrel_main_idtf: 
+	[Which actions were performed to perform given action?]
+	(* <- lang_en;; *);
+=> nrel_idtf: 
+	[Command of finding actions, which were performed to perform given action]
 	(* <- lang_en;; *);;
 
 ui_menu_file_for_finding_proof_steps => ui_nrel_command_template:
@@ -18,10 +26,10 @@ ui_menu_file_for_finding_proof_steps => ui_nrel_command_template:
 	*];;
 
 ui_menu_file_for_finding_proof_steps => ui_nrel_command_lang_template: 
-	[Команда поиска действий, используемых в рамках решения: $ui_arg_1] 
+	[Какие действия были выполнены для выполнения действия $ui_arg_1] 
 	(* <- lang_ru;; *);;
 
 ui_menu_file_for_finding_proof_steps => ui_nrel_command_lang_template: 
-	[Command of finding actions, which are used within solution: $ui_arg_1] 
+	[Which actions were performed to perform action $ui_arg_1] 
 	(* <- lang_en;; *);;
 

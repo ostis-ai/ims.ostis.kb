@@ -1,10 +1,18 @@
 ui_menu_file_for_finding_solution <- ui_user_command_class_atom; ui_user_command_class_view_kb;;
 
-ui_menu_file_for_finding_solution => nrel_main_idtf: 
+ui_menu_file_for_finding_solution 
+=> nrel_main_idtf: 
+	[Как выглядит sc-текст решения указываемой задачи?] 
+	(* <- lang_ru;; *);
+=> nrel_idtf: 
 	[Запрос sc-текста решения задачи] 
 	(* <- lang_ru;; *);;
 
-ui_menu_file_for_finding_solution => nrel_main_idtf: 
+ui_menu_file_for_finding_solution 
+=> nrel_main_idtf: 
+	[What is the sc-text of solution for the given task?] 
+	(* <- lang_en;; *);
+=> nrel_idtf: 
 	[Request of solution sc-text for the task] 
 	(* <- lang_en;; *);;
 
@@ -18,10 +26,10 @@ ui_menu_file_for_finding_solution => ui_nrel_command_template:
 	*];;
 
 ui_menu_file_for_finding_solution => ui_nrel_command_lang_template: 
-	[Запрос sc-текста решения задачи: $ui_arg_1] 
+	[Как выглядит sc-текст решения задачи $ui_arg_1] 
 	(* <- lang_ru;; *);;
 
 ui_menu_file_for_finding_solution => ui_nrel_command_lang_template: 
-	[Request of solution sc-text for the task: $ui_arg_1] 
+	[What is the sc-text of solution for the task $ui_arg_1] 
 	(* <- lang_en;; *);;
 

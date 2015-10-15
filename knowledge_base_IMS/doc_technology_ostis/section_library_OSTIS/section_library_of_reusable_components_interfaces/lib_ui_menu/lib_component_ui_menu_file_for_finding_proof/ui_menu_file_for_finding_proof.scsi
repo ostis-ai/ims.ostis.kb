@@ -1,10 +1,18 @@
 ui_menu_file_for_finding_proof <- ui_user_command_class_atom; ui_user_command_class_view_kb;;
 
-ui_menu_file_for_finding_proof => nrel_main_idtf: 
+ui_menu_file_for_finding_proof 
+=> nrel_main_idtf: 
+	[Как выглядит текст доказательства указываемого утверждения?]
+	(* <- lang_ru;; *);
+=> nrel_idtf: 
 	[Запрос sc-текста доказательства для заданного утверждения]
 	(* <- lang_ru;; *);;
 
-ui_menu_file_for_finding_proof => nrel_main_idtf: 
+ui_menu_file_for_finding_proof 
+=> nrel_main_idtf: 
+	[What is proof sc-text for given statement?]
+	(* <- lang_en;; *);
+=> nrel_idtf: 
 	[Request of proof sc-text for given statement]
 	(* <- lang_en;; *);;
 
@@ -18,10 +26,10 @@ ui_menu_file_for_finding_proof => ui_nrel_command_template:
 	*];;
 
 ui_menu_file_for_finding_proof => ui_nrel_command_lang_template: 
-	[Запрос sc-текста доказательства для заданного утверждения: $ui_arg_1] 
+	[Как выглядит текст доказательства утверждения $ui_arg_1] 
 	(* <- lang_ru;; *);;
 
 ui_menu_file_for_finding_proof => ui_nrel_command_lang_template: 
-	[Request of proof sc-text for given statement: $ui_arg_1] 
+	[What is proof sc-text for statement $ui_arg_1] 
 	(* <- lang_en;; *);;
 
