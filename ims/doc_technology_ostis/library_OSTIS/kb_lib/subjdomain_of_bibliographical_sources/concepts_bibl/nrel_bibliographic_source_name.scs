@@ -1,0 +1,21 @@
+nrel_bibliographic_source_name
+
+=> nrel_main_idtf:
+	[название библиографического источника*] (* <- lang_ru;; *);
+	[bibliographic source name*] (* <- lang_en;; *);
+
+<- binary_relation;
+<- oriented_relation;
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					"file://content/explanation_for_nrel_bibliographic_source_name.html"
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
