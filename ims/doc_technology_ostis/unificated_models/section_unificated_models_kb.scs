@@ -1,0 +1,60 @@
+section_unificated_models_kb
+=> nrel_main_idtf:
+	[Раздел. Унифицированные семантические модели баз знаний]
+	(* <- lang_ru;; *);
+	[Section. Unificated semantic models of knowledge bases]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[Раздел. sc-модель базы знаний]
+	(* <- lang_ru;; *);
+
+<= nrel_section_decomposition:
+	{
+		section_structure_of_knowledge_base_model
+		(*
+		=> nrel_section_base_order: 
+			section_subjdomain_knowledges;;
+		*);
+		section_subjdomain_knowledges
+		(*
+		=> nrel_section_base_order: 
+			section_subjdomain_semantic_neighbourhoods;;
+		*);
+		section_subjdomain_semantic_neighbourhoods
+		(*
+		=> nrel_section_base_order: 
+			section_subjdomain_subjdomains;;
+		*);
+		section_subjdomain_subjdomains
+		(*
+		=> nrel_section_base_order: 
+			section_subjdomain_ontologies;;
+		*);
+		section_subjdomain_ontologies
+		(*
+		=> nrel_section_base_order: 
+			section_subjdomain_logical_formulas;;
+		*);
+		section_subjdomain_logical_formulas
+		(*
+		=> nrel_section_base_order: 
+			section_subjdomain_dynamic_models_subjdomains;;
+		*);
+		section_subjdomain_dynamic_models_subjdomains		
+		(*
+		=> nrel_section_base_order: 
+			section_subjdomain_kb_state_changes;;
+		*);
+		section_subjdomain_kb_state_changes
+		(*
+		=> nrel_section_base_order: 
+			section_subjdomain_actions_in_dynamic_subject_domains;;
+		*);
+		section_subjdomain_actions_in_dynamic_subject_domains
+		(*
+		=> nrel_section_base_order: 
+			section_subjdomain_actions_tochange_kb_state;;
+		*);
+		section_subjdomain_actions_tochange_kb_state		
+	};;

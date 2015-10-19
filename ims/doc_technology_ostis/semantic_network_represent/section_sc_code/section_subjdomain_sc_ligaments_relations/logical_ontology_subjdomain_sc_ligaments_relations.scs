@@ -1,0 +1,120 @@
+logical_ontology_subjdomain_sc_ligaments_relations
+<- logical_ontology;
+=> nrel_main_idtf:
+	[Логическая онтология Предметной области sc-связок и отношений]
+	(* <- lang_ru;; *);
+	[Logical ontology of subject domain of sc-ligaments and relations]
+	(* <- lang_en;; *);;
+
+logical_ontology_subjdomain_sc_ligaments_relations = [*^"file://logical_ontology_subjdomain_sc_ligaments_relations.scsi"*];;
+
+rrel_key_sc_element -> (logical_ontology_subjdomain_sc_ligaments_relations -> relation)
+(*
+	=> nrel_key_sc_element_base_order: (logical_ontology_subjdomain_sc_ligaments_relations -> sc_tuple)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_subjdomain_sc_ligaments_relations -> antireflexive_relation)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_subjdomain_sc_ligaments_relations -> antisymmetric_relation)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_subjdomain_sc_ligaments_relations -> areflexive_relation)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_subjdomain_sc_ligaments_relations -> asymmetric_relation)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_subjdomain_sc_ligaments_relations -> binary_relation)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_subjdomain_sc_ligaments_relations -> equivalence_relation)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_subjdomain_sc_ligaments_relations -> non_oriented_relation)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_subjdomain_sc_ligaments_relations -> non_strict_order_relation)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_subjdomain_sc_ligaments_relations -> order_relation)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_subjdomain_sc_ligaments_relations -> oriented_relation)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_subjdomain_sc_ligaments_relations -> quasybinary_relation)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_subjdomain_sc_ligaments_relations -> reflexive_relation)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_subjdomain_sc_ligaments_relations -> related_relation)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_subjdomain_sc_ligaments_relations -> role_relation)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_subjdomain_sc_ligaments_relations -> strict_order_relation)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_subjdomain_sc_ligaments_relations -> symmetric_relation)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_subjdomain_sc_ligaments_relations -> ternary_relation)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_subjdomain_sc_ligaments_relations -> transitive_relation)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_subjdomain_sc_ligaments_relations -> unary_relation)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_subjdomain_sc_ligaments_relations -> constant_sc_tuple)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_subjdomain_sc_ligaments_relations -> temporary_sc_tuple)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_subjdomain_sc_ligaments_relations -> non_binary_sc_tuple)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_subjdomain_sc_ligaments_relations -> nrel_arity_of_relations)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_subjdomain_sc_ligaments_relations -> nrel_bijection)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_subjdomain_sc_ligaments_relations -> nrel_compliance)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_subjdomain_sc_ligaments_relations -> nrel_composition_of_relations)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_subjdomain_sc_ligaments_relations -> nrel_definitional_domain)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_subjdomain_sc_ligaments_relations -> nrel_first_domain)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_subjdomain_sc_ligaments_relations -> nrel_full_compliance)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_subjdomain_sc_ligaments_relations -> nrel_functional_compliance)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_subjdomain_sc_ligaments_relations -> nrel_injection)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_subjdomain_sc_ligaments_relations -> nrel_relation_schema)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_subjdomain_sc_ligaments_relations -> nrel_second_domain)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_subjdomain_sc_ligaments_relations -> nrel_surjection)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (logical_ontology_subjdomain_sc_ligaments_relations -> nrel_third_domain)
+	(* <- rrel_key_sc_element;; *);;
+*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;

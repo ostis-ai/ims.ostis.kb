@@ -1,0 +1,55 @@
+nrel_scp_program_key_sc_elements
+<- quasybinary_relation;
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[ключевые sc-элементы scp-программы*]
+	(*
+	<- lang_ru;;
+	*);
+	[scp-program key sc-elements*]
+	(*
+	<- lang_en;;
+	*);
+	<- rrel_key_sc_element:
+		..key_node_nrel_scp_program_key_sc_elements
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_nrel_scp_program_key_sc_elements
+			(*
+			-> rrel_example:
+				"file://content_html/explanation_for_nrel_scp_program_key_sc_elements.html"
+				(*
+				<- sc_machine_file;;
+				<- lang_ru;;
+				*);;
+			*);;
+		*);;
+
+sc_description_of_scp_program
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[sc-описание scp-программы]
+	(*
+	<- lang_ru;;
+	*);
+	[sc-description of scp-program]
+	(*
+	<- lang_en;;
+	*);
+	<- rrel_key_sc_element:
+		..key_node_sc_description_of_scp_program
+		(*
+		<- sc_note;;
+		<= nrel_sc_text_translation:	
+			..translation_sc_description_of_scp_program
+			(*
+			-> rrel_example:
+				"file://content_html/explanation_for_sc_description_of_scp_program.html"
+				(*
+				<- sc_machine_file;;
+				<- lang_ru;;
+				*);;
+			*);;
+		*);;
+
