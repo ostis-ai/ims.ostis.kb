@@ -1,0 +1,21 @@
+normative_legal_act
+
+=> nrel_main_idtf:
+	[нормативный правовой акт] (* <- lang_ru;; *);
+	[normative legal act] (* <- lang_en;; *);
+
+<= nrel_strict_inclusion:
+	bibliographical_source;
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					"file://content/explanation_for_normative_legal_act.html"
+					(*<- lang_ru;;*);;
+			*);;
+	*);;

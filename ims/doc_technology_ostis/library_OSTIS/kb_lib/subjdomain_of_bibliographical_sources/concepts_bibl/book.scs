@@ -1,0 +1,21 @@
+book
+
+=> nrel_main_idtf:
+	[книга] (* <- lang_ru;; *);
+	[book] (* <- lang_en;; *);
+
+<= nrel_strict_inclusion:
+	bibliographical_source;
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					"file://content/explanation_for_book.html"
+					(*<- lang_ru;;*);;
+			*);;
+	*);;

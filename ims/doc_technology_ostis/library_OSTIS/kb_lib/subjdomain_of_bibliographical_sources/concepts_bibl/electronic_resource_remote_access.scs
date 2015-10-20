@@ -1,0 +1,22 @@
+electronic_resource_remote_access
+
+=> nrel_main_idtf:
+	[электронный ресурс удаленного доступа] (* <- lang_ru;; *);
+	[electronic resource remote access] (* <- lang_en;; *);
+
+<= nrel_strict_inclusion:
+	bibliographical_source;
+	electronic_resource;
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+			(*
+				-> rrel_example:
+					"file://content/explanation_for_electronic_resource_remote_access.html"
+					(*<- lang_ru;;*);;
+			*);;
+	*);;
