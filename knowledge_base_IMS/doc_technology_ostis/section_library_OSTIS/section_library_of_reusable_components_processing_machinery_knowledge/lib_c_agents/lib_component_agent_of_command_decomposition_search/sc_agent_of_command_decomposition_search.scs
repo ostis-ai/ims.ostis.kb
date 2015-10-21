@@ -22,15 +22,16 @@ sc_agent_of_command_decomposition_search
 	};
 
 => nrel_inclusion: 
-	.platform_independent_realization_of_sc_agent_of_command_decomposition_search
+	.c_realization_of_of_command_decomposition_search
 	(*
-	<- platform_independent_abstract_sc_agent;;
-	<= nrel_sc_agent_program: 
+		<- platform_dependent_abstract_sc_agent;;
+		/*<= nrel_sc_agent_program: 
 		{
-		agent_of_command_decomposition_search
-		};;
-	-> sc_agent_of_command_decomposition_search_scp   
-		(* <- active_sc_agent;;	*);;
+			[owner=deniskoronchik; repo=sc-machine; path= sc-kpm/search/agents/search_identifiers.c; syntax=cpp] (* => nrel_format: format_github_source_link;; *);
+			[owner=deniskoronchik; repo=sc-machine; path= sc-kpm/search/agents/search_identifiers.h; syntax=cpp] (* => nrel_format: format_github_source_link;; *)
+		};;*/
+		
+		-> sc_agent_of_command_decomposition_search_c (* <- active_sc_agent;; *);;
 	*);;
 
 ..sc_agent_of_command_decomposition_search_condition
