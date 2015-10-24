@@ -18,18 +18,18 @@ sc_agent_of_command_decomposition_search
 	{
 	question_initiated;
 	question;
-	question_command_decomposition_search
+	question_search_command_decomposition
 	};
 
 => nrel_inclusion: 
 	.c_realization_of_of_command_decomposition_search
 	(*
 		<- platform_dependent_abstract_sc_agent;;
-		/*<= nrel_sc_agent_program: 
+		<= nrel_sc_agent_program: 
 		{
-			[owner=deniskoronchik; repo=sc-machine; path= sc-kpm/search/agents/search_identifiers.c; syntax=cpp] (* => nrel_format: format_github_source_link;; *);
-			[owner=deniskoronchik; repo=sc-machine; path= sc-kpm/search/agents/search_identifiers.h; syntax=cpp] (* => nrel_format: format_github_source_link;; *)
-		};;*/
+			[owner=deniskoronchik; repo=sc-machine; path= ; syntax=cpp] (* => nrel_format: format_github_source_link;; *);
+			[owner=deniskoronchik; repo=sc-machine; path= ; syntax=cpp] (* => nrel_format: format_github_source_link;; *)
+		};;
 		
 		-> sc_agent_of_command_decomposition_search_c (* <- active_sc_agent;; *);;
 	*);;
