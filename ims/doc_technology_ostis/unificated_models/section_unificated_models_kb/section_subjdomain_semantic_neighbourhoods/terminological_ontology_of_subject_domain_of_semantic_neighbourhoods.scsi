@@ -22,12 +22,12 @@ basic_semantic_neighbourhood
 	[базовая семантическая окрестность в рамках текущего состояния базы знаний]
 	(* <- lang_ru;; *);;
 
-typical_sc_neighbourhood
+typical_semantic_neighbourhood
 <- sc_node_not_relation;
 => nrel_main_idtf:
 	[типичная семантическая окрестность]
 	(* <- lang_ru;; *);
-	[typical_sc_neighbourhood]
+	[typical_semantic_neighbourhood]
 	(* <- lang_en;; *);
 => nrel_idtf:
 	[типичная sc-окрестность]
