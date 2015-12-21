@@ -1,0 +1,36 @@
+section_library_of_typical_subsystems_of_computer_systems
+=> nrel_main_idtf:
+	[Раздел. Библиотека типовых подсистем компьютерных систем, разрабатываемых по Технологии OSTIS]
+	(* <- lang_ru;; *);
+	[Section. Library of typical subsystems of computer systems designed with OSTIS]
+	(* <- lang_en;; *);
+
+<= nrel_section_decomposition:
+	{
+	section_concept_of_typical_subsystem_ostis
+	(*
+	=> nrel_section_base_order: 
+		section_core_and_extensions_of_ostis_systems_core;;
+	*);
+	section_core_and_extensions_of_ostis_systems_core
+	(*
+	=> nrel_section_base_order: 
+		section_library_advisory_educational_subsystems;;
+	*);
+	section_library_advisory_educational_subsystems
+	(*
+	=> nrel_section_base_order: 
+		section_library_subsystems_advisory_services_training_component_developers_ostis;;
+	*);
+	section_library_subsystems_advisory_services_training_component_developers_ostis
+	(*
+	=> nrel_section_base_order: 
+			section_library_subsystems_information_support_design_automation_ostis;;
+	*);
+	section_library_subsystems_information_support_design_automation_ostis	
+	(*
+	=> nrel_section_base_order: 
+			section_library_subsystems_information_support_design_management_automation_ostis;;
+	*);
+	section_library_subsystems_information_support_design_management_automation_ostis
+	};;

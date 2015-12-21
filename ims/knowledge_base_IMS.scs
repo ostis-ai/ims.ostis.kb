@@ -8,7 +8,7 @@ knowledge_base_IMS
 
 <= nrel_section_decomposition:
 	{
-        	doc_technology_ostis
+        section_OSTIS_technology
 		(*
 		=> nrel_section_base_order: 
 			context_technology_OSTIS_and_Metasystem_IMS_in_the_Global_knowledge_base;;
@@ -16,19 +16,23 @@ knowledge_base_IMS
 		context_technology_OSTIS_and_Metasystem_IMS_in_the_Global_knowledge_base
 		(*
 		=> nrel_section_base_order: 
+			section_project_OSTIS_perspectives_current_state_history_of_evolution_and_use;;
+		*);
+		section_project_OSTIS_perspectives_current_state_history_of_evolution_and_use
+		(*
+		=> nrel_section_base_order: 
 			doc_IMS;;
 		*);
 		doc_IMS
 		(*
 		=> nrel_section_base_order: 
-			history_of_development_IMS;;
+			history_and_current_processes_of_use_IMS;;
 		*);
-		history_of_development_IMS
+		history_and_current_processes_of_use_IMS
 		(*
 		=> nrel_section_base_order: 
-			doc_project_IMS	;;
+			section_project_IMS_history_and_development_programme;;
 		*);
-		doc_project_IMS
-	};
-
-<- ui_start_sc_element;;
+		section_project_IMS_history_and_development_programme
+		
+	};;

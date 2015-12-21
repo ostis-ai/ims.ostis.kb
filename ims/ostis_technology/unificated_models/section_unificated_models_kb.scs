@@ -1,0 +1,43 @@
+section_unificated_models_kb
+
+=> nrel_main_idtf:
+	[Раздел. Унифицированные логико-семантические модели (sc-модели) баз знаний]
+	(* <- lang_ru;; *);
+	[Section. Unified logical semantic models (sc-models) of knowledge bases]
+	(* <- lang_en;; *);
+
+<= nrel_section_decomposition:
+	{
+		section_structure_of_knowledge_base_model
+		(*
+		=> nrel_section_base_order: 
+			section_subjdomain_knowledge;;
+		*);
+		section_subjdomain_knowledge
+		(*
+		=> nrel_section_base_order: 
+			section_subjdomain_semantic_neighbourhoods;;
+		*);
+		section_subjdomain_semantic_neighbourhoods
+		(*
+		=> nrel_section_base_order: 
+			section_subjdomain_subjdomains;;
+		*);
+		section_subjdomain_subjdomains
+		(*
+		=> nrel_section_base_order: 
+			section_subjdomain_ontologies;;
+		*);
+		section_subjdomain_ontologies
+		(*
+		=> nrel_section_base_order: 
+			section_subjdomain_logical_formulas_and_ontologies;;
+		*);
+		section_subjdomain_logical_formulas_and_ontologies
+		(*
+		=> nrel_section_base_order: 
+			section_body_typical_kb_fragments;;
+		*);
+		section_body_typical_kb_fragments
+		
+	};;

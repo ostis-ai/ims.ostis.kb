@@ -1,0 +1,67 @@
+section_sc_code
+=> nrel_main_idtf:
+	[Раздел. SC-код - базовый язык внутреннего смыслового представления знаний]
+	(* <- lang_ru;; *);
+	[Section. SC-code - basic language of internal semantic representation of knowledge]
+	(* <- lang_en;; *);
+
+<= nrel_section_decomposition:
+	{
+		justification_of_development_sc_code
+		(*
+		=> nrel_section_base_order: 
+			section_subjdomain_entities;;
+		*);
+		section_subjdomain_entities
+		(*
+		=> nrel_section_base_order: 
+			section_subdomain_sets;;
+		*);
+		section_subdomain_sets
+		(*
+		=> nrel_section_base_order: 
+			section_subjdomain_ligaments_relations;;
+		*);
+		section_subjdomain_ligaments_relations
+		(*
+		=> nrel_section_base_order: 
+			section_subjdomain_parameters_and_values;;
+		*);
+		section_subjdomain_parameters_and_values
+		(*
+		=> nrel_section_base_order: 
+			section_subjdomain_structures;;
+		*);
+		section_subjdomain_structures
+		(*
+		=> nrel_section_base_order: 
+			section_subjdomain_numbers_and_numeric_structures;;
+		*);
+		section_subjdomain_numbers_and_numeric_structures
+		(*
+		=> nrel_section_base_order: 
+			section_subjdomain_informational_structures_not_sc_code;;
+		*);
+		section_subjdomain_informational_structures_not_sc_code
+		(*
+		=> nrel_section_base_order: 
+			section_subjdomain_signs_not_sc_code;;
+		*);
+		section_subjdomain_signs_not_sc_code
+		(*
+		=> nrel_section_base_order: 
+			section_subjdomain_temporary_entities;;
+		*);
+		section_subjdomain_temporary_entities
+		(*
+		=> nrel_section_base_order: 
+			section_subjdomain_spatial_entites_and_forms;;
+		*);
+		section_subjdomain_spatial_entites_and_forms
+		(*
+		=> nrel_section_base_order: 
+			section_subjdomain_actions_and_tasks;;
+		*);
+		section_subjdomain_actions_and_tasks
+		
+	};;

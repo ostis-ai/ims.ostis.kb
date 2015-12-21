@@ -5,19 +5,6 @@ doc_IMS
 	[Documentation. IMS]
 	(* <- lang_en;; *);
 	
-=> nrel_idtf:
-	[Документация. Метасистема IMS]
-	(* <- lang_ru;; *);
-=> nrel_idtf:
-	[Раздел. IMS.OSTIS]
-	(* <- lang_ru;; *);
-=> nrel_idtf:
-	[Раздел. Полное описание Метасистемы IMS.OSTIS]
-	(* <- lang_ru;; *);
-=> nrel_idtf:
-	[Документация. Интеллектуальная метасистема, построенная по Технологии OSTIS и ориентированная на комплексную поддержку проектирования интеллектуальных систем на основе Технологии OSTIS]
-	(* <- lang_ru;; *);
-	
 <= nrel_section_decomposition:
 	{
 		justification_of_development_IMS
@@ -43,22 +30,22 @@ doc_IMS
 		structure_IMS_user_interface
 		(*
 		=> nrel_section_base_order: 
-			section_the_IMS_for_advisory_services_and_end_user_training_IMS;;
+			section_subsystem_advisory_services_and_end_user_training_IMS;;
 		*);
-		section_the_IMS_for_advisory_services_and_end_user_training_IMS
+		section_subsystem_advisory_services_and_end_user_training_IMS
 		(*
 		=> nrel_section_base_order: 
-			section_the_IMS_for_design_automation_IMS;;
+			section_subsystem_of_design_automation_IMS;;
 		*);
-		section_the_IMS_for_design_automation_IMS
+		section_subsystem_of_design_automation_IMS
 		(*
 		=> nrel_section_base_order: 
-			section_the_IMS_to_design_management_IMS;;
+			section_subsystem_of_design_management_IMS;;
 		*);
-		section_the_IMS_to_design_management_IMS
+		section_subsystem_of_design_management_IMS
 		(*
 		=> nrel_section_base_order: 
-			section_the_IMS_for_information_security_management_IMS;;
+			section_subsystem_of_information_security_management_IMS;;
 		*);
-		section_the_IMS_for_information_security_management_IMS
+		section_subsystem_of_information_security_management_IMS
 	};;

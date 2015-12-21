@@ -1,0 +1,72 @@
+section_scs_code
+=> nrel_main_idtf:
+	[Раздел. SCs-код - линейная визуализация текстов SC-кода]
+	(* <- lang_ru;; *);
+	[Section. SCs-code - linear visualization of SC-code texts]
+	(* <- lang_en;; *);
+	
+<= nrel_section_decomposition:
+	{
+	justification_of_development_scs_code
+	(*
+	=> nrel_section_base_order: 
+		section_scs_code_core;;
+	*);
+	section_scs_code_core
+	(*
+	=> nrel_section_base_order: 
+		section_scs_code_extension_1;;
+	*);
+	section_scs_code_extension_1
+	(*
+	=> nrel_section_base_order: 
+		section_scs_code_extension_2;;
+	*);
+	section_scs_code_extension_2
+	(*
+	=> nrel_section_base_order: 
+		section_scs_code_extension_3;;
+	*);
+	section_scs_code_extension_3
+	(*
+	=> nrel_section_base_order: 
+		section_scs_code_extension_4;;
+	*);
+	section_scs_code_extension_4
+	(*
+	=> nrel_section_base_order: 
+		section_scs_code_extension_5;;
+	*);
+	section_scs_code_extension_5
+	(*
+	=> nrel_section_base_order: 
+		section_scs_code_extension_6;;
+	*);
+	section_scs_code_extension_6
+	(*
+	=> nrel_section_base_order: 
+		section_scs_code_base_connectors;;
+	*);
+	section_scs_code_base_connectors
+	(*
+	=> nrel_section_base_order: 
+		section_scs_code_additional_connectors;;
+	*);
+	section_scs_code_additional_connectors
+	(*
+	=> nrel_section_base_order: 
+		section_scs_code_special_connectors;;
+	*);
+	section_scs_code_special_connectors
+	(*
+	=> nrel_section_base_order: 
+		section_scs_non_connector_separators;;
+	*);
+	section_scs_non_connector_separators
+	(*
+	=> nrel_section_base_order: 
+		section_scs_code_perspectives_of_development;;
+	*);
+	section_scs_code_perspectives_of_development
+	
+	};;

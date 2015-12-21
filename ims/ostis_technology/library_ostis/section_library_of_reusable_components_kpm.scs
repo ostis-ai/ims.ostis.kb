@@ -1,0 +1,26 @@
+section_library_of_reusable_components_kpm
+=> nrel_main_idtf:
+	[Раздел. Библиотека многократно используемых компонентов абстрактных sc-машин]
+	(* <- lang_ru;; *);
+	[Section. Library of reusable components of abstract sc-machines]
+	(* <- lang_en;; *);
+
+<= nrel_section_decomposition:
+	{
+	section_concept_of_reusable_component_kpm
+	(*
+	=> nrel_section_base_order: 
+		section_core_and_extensions_of_abstract_sc_machine;;
+	*);
+	section_core_and_extensions_of_abstract_sc_machine
+	(*
+	=> nrel_section_base_order: 
+		section_library_of_reusable_sc_agents;;
+	*);
+	section_library_of_reusable_sc_agents
+	(*
+	=> nrel_section_base_order: 
+		section_library_of_reusable_programs_for_sc_text_processing;;
+	*);
+	section_library_of_reusable_programs_for_sc_text_processing
+	};;

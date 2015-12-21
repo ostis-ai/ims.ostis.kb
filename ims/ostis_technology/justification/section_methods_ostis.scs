@@ -1,0 +1,42 @@
+section_methods_ostis
+
+=> nrel_main_idtf:
+	[Раздел. Методы, используемые в Технологии OSTIS]
+	(* <- lang_ru;; *);
+	[Section. Methods which are used in OSTIS technology]
+	(* <- lang_en;; *);
+
+<= nrel_section_decomposition:
+	{
+		section_mutual_independence_sc_models_and_interpretation_platforms_design
+		(*
+		=> nrel_section_base_order: 
+			section_component_design_technique_based_on_constantly_updated_library_of_reusable_components_compatible_computer_systems;;
+		*);
+		section_component_design_technique_based_on_constantly_updated_library_of_reusable_components_compatible_computer_systems
+		(*
+		=> nrel_section_base_order: 
+			section_technique_of_designing_computer_systems_knowledge_bases_in_context_of_global_knowledge_base;;
+		*);
+		section_technique_of_designing_computer_systems_knowledge_bases_in_context_of_global_knowledge_base
+		(*
+		=> nrel_section_base_order: 
+			section_methodology_evolutionary_design_of_intelligent_systems;;
+		*);
+		section_methodology_evolutionary_design_of_intelligent_systems
+		(*
+		=> nrel_section_base_order: 
+			section_accessibility_and_openness_of_ostis;;
+		*);
+		section_accessibility_and_openness_of_ostis
+		(*
+		=> nrel_section_base_order: 
+			section_combination_design_development_ostis_by_experience_accumulation_and_arrangement;;
+		*);
+		section_combination_design_development_ostis_by_experience_accumulation_and_arrangement
+		(*
+		=> nrel_section_base_order: 
+			section_general_technique_of_design_ostis_systems;;
+		*);
+		section_general_technique_of_design_ostis_systems
+	};;

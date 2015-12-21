@@ -1,0 +1,21 @@
+rrel_key_sc_element
+<- sc_node_role_relation;
+=> nrel_main_idtf: 
+	[ключевой элемент']
+	(* <- lang_ru;; *);
+	[key sc-element'] 
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[быть ключевым sc-элементом заданного sc-знания']
+	(* <- lang_ru;; *);;
+
+rrel_main_key_sc_element
+<- sc_node_role_relation;
+=> nrel_main_idtf: 
+	[главный ключевой элемент']
+	(* <- lang_ru;; *);
+	[main key sc-element'] 
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[быть главным ключевым sc-элементом заданного sc-знания']
+	(* <- lang_ru;; *);;

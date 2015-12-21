@@ -1,0 +1,28 @@
+section_semantic_represent_info_in_sys_memory
+
+=> nrel_main_idtf:
+	[Раздел. Смысловое представление информации в памяти компьютерных систем]
+	(* <- lang_ru;; *);
+	[Section. Semantic representation of information in the memory of computer systems]
+	(* <- lang_en;; *);
+
+<= nrel_section_decomposition:
+	{
+		section_principles_of_semantic_represent_info_in_memory
+		(*
+		=> nrel_section_base_order: 
+			section_clarifying_of_semantic_web_concept;;
+		*);
+		section_clarifying_of_semantic_web_concept
+		(*
+		=> nrel_section_base_order: 
+			section_semantic_network_as_extened_graph_structure;;
+		*);
+		section_semantic_network_as_extened_graph_structure
+		(*
+		=> nrel_section_base_order: 
+			section_advantages_of_the_semantic_info_representation;;
+		*);
+		section_advantages_of_the_semantic_info_representation
+		
+	};;
