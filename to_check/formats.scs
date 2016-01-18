@@ -190,3 +190,7 @@ format_pdf
 	*);
 => nrel_mimetype:
 	[application/pdf];;
+
+binary_types
+<- sc_node_not_relation;
+-> binary_float; binary_int8; binary_int16; binary_int32; binary_int64;;
