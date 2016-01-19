@@ -1,0 +1,1710 @@
+subjdomain_temporary_entity
+
+=> nrel_main_idtf:
+	[Предметная область временных сущностей]
+	(* <- lang_ru;; *);
+	[Subject domain of temporary entity]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[Предметная область темпоральных связей и отношений]
+	(* <- lang_ru;; *);
+
+<- subject_domain;
+
+-> rrel_maximum_studied_object_class:
+	entity;
+-> rrel_studied_object_class:
+	...;;
+
+	
+	
+
+temporary_entity
+
+=> nrel_main_idtf:
+	[временная сущность]
+	(* <- lang_ru;; *);
+	[temporary entity]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[временно существующая сущность]
+	(* <- lang_ru;; *);
+	[нестационарная сущность]
+	(* <- lang_ru;; *);
+	[сущность, имеющая и/или начало, и/или конец своего существования]
+	(* <- lang_ru;; *);
+	[sc-элемент, являющийся знаком некоторой временно существующей сущности]
+	(* <- lang_ru;; *);
+	[сущность, обладающая темпоральными характеристиками (длительностью, начальным моментом, конечным моментом и т.д]
+	(* <- lang_ru;; *);
+
+
+<= nrel_subdividing:
+	last_entity;
+	real_entity;
+	future_entity;
+
+<= nrel_subdividing:
+	temporary_connection;
+	situation;
+	process;
+	material_entity;
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> [Следует отличать:
+		<ul>
+		<li>временный характер сущности, обозначаемой sc-элементом;</li>
+		<li>временный характер существования самого sc-элемента в рамках sc-памяти;</li>
+		В ходе обработки информации каждый sc-элемент может быть удален из sc-памяти.
+
+<ul>
+<li>равновеликость геометрических фигур (по длине, площади, объему – в зависимости от размерности этих фигур);</li>
+<li>иметь одинаковый цвет (быть эквивалентными по цвету);</li>
+<li>эквивалентность, по вкусу, запаху, твердости и т.д.</li>
+</ul> В ходе обработки информации каждый sc-элемент может быть удален из sc-памяти.
+			]
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+			*);;
+		*);;
+	*);;
+	
+	
+	
+	
+	
+	
+last_entity
+
+=> nrel_main_idtf:
+	[прошлая сущность]
+	(* <- lang_ru;; *);
+	[last entity]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[сущность, существовавшая в прошлом времени]
+	(* <- lang_ru;; *);
+	[сущность прошлого времени]
+	(* <- lang_ru;; *);
+	[сущность, завершившая свое существование]
+	(* <- lang_ru;; *);;
+	
+	
+	
+
+real_entity
+
+=> nrel_main_idtf:
+	[настоящая сущность]
+	(* <- lang_ru;; *);
+	[real entity]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[сущность, существующая в текущий момент времени]
+	(* <- lang_ru;; *);
+	[сущность, существующая сейчас]
+	(* <- lang_ru;; *);
+	[сущность настоящего времени]
+	(* <- lang_ru;; *);;
+
+
+	
+	
+
+future_entity
+
+=> nrel_main_idtf:
+	[будущая сущность]
+	(* <- lang_ru;; *);
+	[future entity]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[возможно будущая сущность]
+	(* <- lang_ru;; *);
+	[прогнозируемая временная сущность]
+	(* <- lang_ru;; *);
+	[временная сущность, которая может существовать в будущем]
+	(* <- lang_ru;; *);
+	[сущность, которая может или должна начать свое существование в будущем времени]
+	(* <- lang_ru;; *);
+
+=> nrel_strict_inclusion:
+	initiated_action;
+	
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> [Каждой <b>будущей сущности</b> можно поставить в соответствие вероятность ее возникновения.]
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+			*);;
+		*);;
+	*);;
+	
+	
+	
+	
+	
+	
+temporary_connection
+
+=> nrel_main_idtf:
+	[временная связь]
+	(* <- lang_ru;; *);
+	[temporary connection]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[нестационарная связь]
+	(* <- lang_ru;; *);
+	[временно существующая связь]
+	(* <- lang_ru;; *);
+
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> [Каждая <b>временная связь</b> представляет собой связку, принадлежащую множеству временных сущностей.
+
+	Понятие <b>временной связи</b> не следует путать с понятием темпоральной связи, которая сама является постоянной сущностью, описывающей то, как связаны во времени некоторые временные сущности.
+	]
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+			*);;
+		*);;
+	*);;
+	
+	
+	
+	
+	
+situation
+
+=> nrel_main_idtf:
+	[ситуация]
+	(* <- lang_ru;; *);
+	[situation]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[состояние]
+	(* <- lang_ru;; *);
+	[временная структура]
+	(* <- lang_ru;; *);
+	[временно существующая структура]
+	(* <- lang_ru;; *);
+	[квазистационарная структура]
+	(* <- lang_ru;; *);
+	[состояние некоторой динамической системы, описываемое с некоторой степенью детализации (подробности)]
+	(* <- lang_ru;; *);
+	[квазистационарная структура, существующая временно (в течение некоторого отрезка времени)]
+	(* <- lang_ru;; *);
+
+<= nrel_strict_inclusion:
+	structure;
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> [Под ситуацией понимается структура, содержащая, по крайней мере, один элемент, который является временной сущностью. Наличие в рамках ситуации нескольких временных сущностей говорит о том, что существует момент времени (в прошлом, настоящем или будущем), в который все они существуют одновременно.]
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+			*);;
+		*);;
+	*);;
+	
+	
+	
+	
+	
+process
+=> nrel_main_idtf:
+	[процесс]
+	(* <- lang_ru;; *);
+	[process]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[процесс преобразования некоторой временной сущности из одного состояния в другое]
+	(* <- lang_ru;; *);
+	[процесс перехода от одной ситуации к другой]
+	(* <- lang_ru;; *);
+	[переходный процесс]
+	(* <- lang_ru;; *);
+	[абстрактный процесс]
+	(* <- lang_ru;; *);
+	[информационная модель некоторых преобразований]
+	(* <- lang_ru;; *);
+	[динамическая sc-модель]
+	(* <- lang_ru;; *);
+	[динамическая структура]
+	(* <- lang_ru;; *);
+
+<= nrel_strict_inclusion:
+	structure;
+	
+<= nrel_subdividing:
+	process_in_sc_memory;
+	process_in_the_environment_ostis_system;
+	
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> [
+		Каждый <b>процесс</b> определяется (задается) либо возникновением или исчезновением связей, связывающих заданную временную сущность с другими сущностями, либо возникновением или исчезновением связей, связывающих части указанной временной сущности с другими сущностями. 
+
+		Многим <b>процессам</b> можно поставить в соответствие ситуацию, которая является его начальной ситуацией* и ситуацию, которая является его конечной ситуацией*, то есть указать ситуации, переход между которыми осуществляется в ходе <b>процесса</b>.
+
+		При этом знаки тех временных сущностей, с которыми связаны изменения, описываемые некоторым <b>процессом</b>, входят в данный <b>процесс</b> как элементы и, при необходимости уточняются дополнительными ролевыми отношениями.
+		]
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+			*);;
+		*);;
+	*);;
+
+
+	
+	
+process_in_sc_memory
+
+=> nrel_main_idtf:
+	[процесс в sc-памяти]
+	(* <- lang_ru;; *);
+	[process in sc-memory]
+	(* <- lang_en;; *);;
+	
+	
+	
+	
+process_in_the_environment_ostis_system
+
+=> nrel_main_idtf:
+	[процесс во внешней среде ostis-системы]
+	(* <- lang_ru;; *);
+	[process in the environment ostis system]
+	(* <- lang_en;; *);;
+	
+	
+
+
+material_entity
+
+=> nrel_main_idtf:
+	[материальная сущность]
+	(* <- lang_ru;; *);
+	[material entity]
+	(* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> [Каждой <b>материальной сущности</b> можно поставить в соответствие различные процессы, описывающие ее преобразование из одного состояния в другое.]
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+			*);;
+		*);;
+	*);;
+	
+	
+
+
+
+impact
+
+=> nrel_main_idtf:
+	[воздействие]
+	(* <- lang_ru;; *);
+	[impact]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[процесс, осуществляющийся на основе (в результате) воздействия одной сущности на другую]
+	(* <- lang_ru;; *);
+
+=> nrel_strict_inclusion:
+	action;
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> [Каждому <b>воздействию</b> может быть поставлена в соответствие (1) некоторая воздействующая сущность*, т.е. сущность, осуществляющая <b>воздействие</b> (в частности, это может быть некоторое физическое поле), и (2) некоторый объект воздействия*, т.е. сущность, на которую воздействие направлено. Если <b>воздействие</b> связано с материальной сущностью, то его объектом воздействия является либо сама эта материальная сущность, либо некоторая ее пространственная часть.]
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+			*);;
+		*);;
+	*);;
+	
+	
+	
+
+nrel_affecting_entity
+
+<- sc_node_norole_relation;
+
+=> nrel_main_idtf:
+	[воздействующая сущность*]
+	(* <- lang_ru;; *);
+	[affecting entity*]
+	(* <- lang_en;; *);;
+	
+	
+	
+
+
+nrel_object_of_impact
+	
+<- sc_node_norole_relation;
+
+=> nrel_main_idtf:
+	[объект воздействия*]
+	(* <- lang_ru;; *);
+	[object of impact*]
+	(* <- lang_en;; *);;	
+	
+	
+
+
+nrel_initial_situation
+
+<- sc_node_norole_relation;
+
+=> nrel_main_idtf:
+	[начальная ситуация*]
+	(* <- lang_ru;; *);
+	[the initial situation*]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[начальная ситуация процесса*]
+	(* <- lang_ru;; *);
+	[исходная ситуация*]
+	(* <- lang_ru;; *);
+	
+<- rrel_binary_relation;
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> [Связки отношения <b>начальная ситуация*</b> связывают некоторый процесс и некоторую ситуацию, являющуюся начальной для этого процесса, и, как правило, изменяемой в течение выполнения этого процесса.
+
+			<p>Первым компонентом каждой связки отношения <b>начальная ситуация*</b> является знак процесса, вторым – знак начальной ситуации.</p>
+			]
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+			*);;
+		*);;
+	*);;
+
+	
+	
+	
+
+nrel_typical_situation
+
+<- sc_node_norole_relation;
+
+=> nrel_main_idtf:
+	[причинная ситуация*]
+	(* <- lang_ru;; *);
+	[typical situation]
+	(* <- lang_en;; *);
+
+<- rrel_binary_relation;
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> [Под причинной ситуацией понимается такая начальная ситуация*, которая обладает достаточной полнотой для однозначного задания инициируемого процесса.]
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+			*);;
+		*);;
+	*);;
+
+
+
+	
+	
+nrel_final_situation
+
+<- sc_node_norole_relation;
+
+=> nrel_main_idtf:
+	[конечная ситуация*]
+	(* <- lang_ru;; *);
+	[final situation*]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[конечная ситуация процесса*]
+	(* <- lang_ru;; *);
+	[результирующая ситуация*]
+	(* <- lang_ru;; *);
+
+<- rrel_binary_relation;	
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> [
+			Связки отношения <b>конечная ситуация*</b> связывают некоторый процесс и некоторую ситуацию, ставшую результатом выполнения этого процесса, то есть его следствием.
+
+			Первым компонентом каждой связки отношения <b>конечная ситуация*</b> является знак процесса, вторым – знак конечной ситуации.
+
+			]
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+			*);;
+		*);;
+	*);;
+	
+	
+	
+	
+	
+nrel_event
+
+<- sc_node_norole_relation;
+
+=> nrel_main_idtf:
+	[событие*]
+	(* <- lang_ru;; *);
+	[event*]
+	(* <- lang_en;; *);
+
+<- rrel_binary_relation;
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> [
+		Связки отношения <b>событие*</b> связывают знак процесса и ориентированную пару, первым компонентом которой является знак начальной ситуации* данного процесса, вторым компонентом – знак конечной ситуации* данного процесса.
+		]
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+			*);;
+		*);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_semantic_neighbourhood;;
+	<= nrel_sc_text_translation:
+	...
+		(*
+		<= nrel_strict_inclusion:
+			sc.g_text;;
+		-> rrel_example:
+			"file://nl_files/event.png";;
+		*);;
+	*);;
+	
+	
+	
+	
+	
+relation
+
+<= nrel_subdividing:
+	class_of_temporary_connections;
+	class_of_constant_connections;
+	class_of_temporary_and_constant_connections;;
+	
+
+
+
+class_of_temporary_connections
+
+=> nrel_main_idtf:
+	[класс временных связей]
+	(* <- lang_ru;; *);
+	[class of temporary connections]
+	(* <- lang_en;; *);
+	
+=> nrel_idtf:
+	[отношение, все связки которого являются нестационарными]
+	(* <- lang_ru;; *);
+	
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> [
+			В общем случае класс <b>временных связей</b> не является ситуативным множеством, поскольку факт принадлежности некоторой временной связи такому классу следует считать постоянным, а не временным, поскольку временность/постоянство связи и ее семантический тип, задаваемый классом (отношением), это принципиально разные параметры (характеристики, признаки) любой связи.
+			]
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+			*);;
+		*);;
+	*);;
+	
+	
+
+
+class_of_constant_connections
+
+=> nrel_main_idtf:
+	[класс постоянных связей]
+	(* <- lang_ru;; *);
+	[class of constant connections]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[отношение, все связки которого являются стационарными]
+	(* <- lang_ru;; *);;
+	
+	
+	
+	
+class_of_temporary_and_constant_connections
+
+=> nrel_main_idtf:
+	[класс временных и постоянных связей]
+	(* <- lang_ru;; *);
+	[class of temporary and constant_connections]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[отношение, некоторые (но не все) связки которого являются нестационарными]
+	(* <- lang_ru;; *);;
+	
+	
+	
+	
+set
+
+<= nrel_subdividing:
+	situational_set;
+	non_situational_set;
+	partial_situational_set;;
+	
+	
+	
+	
+situational_set
+
+=> nrel_main_idtf:
+	[ситуативное множество]
+	(* <- lang_ru;; *);
+	[situational set]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[полностью ситуативное множество]
+	(* <- lang_ru;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> [
+		Под <b>ситуативным множеством</b> понимается постоянное множество, у которого все выходящие из него связи принадлежности являются временными сущностями.
+
+		В частности, ситуативное множество может использоваться как вспомогательная динамическая структура, которая содержит элементы некоторых структур, обрабатываемые в данный момент, например, это может быть копия некоторого множества, из которой постепенно удаляются элементы по мере их просмотра и обработки. В случае, когда такая структура содержит всего один элемент, ее можно считать указателем на данный элемент, при этом в разные моменты времени это могут быть разные элементы.
+		]
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+			*);;
+		*);;
+	*);;
+	
+	
+	
+	
+	
+non_situational_set
+
+=> nrel_main_idtf:
+	[неситуативное множество]
+	(* <- lang_ru;; *);
+	[non situational set]
+	(* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> [
+		Под <b>неситуативным множеством</b> понимается постоянное множество, у которого все выходящие из него связи принадлежности являются постоянными сущностями.
+			]
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+			*);;
+		*);;
+	*);;
+	
+	
+	
+	
+	
+partial_situational_set
+
+=> nrel_main_idtf:
+	[частично ситуативное множество]
+	(* <- lang_ru;; *);
+	[partial situational set]
+	(* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> [
+		Под <b>частично ситуативным множеством</b> понимается постоянное множество, у которого некоторые (но не все) выходящие из него связи принадлежности являются временными сущностями.
+			]
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+			*);;
+		*);;
+	*);;
+
+
+	
+	
+
+temporal_connection
+
+=> nrel_main_idtf:
+	[темпоральная связь]
+	(* <- lang_ru;; *);
+	[temporal connection]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[постоянная связь, описывающая связь во времени между временными сущностями]
+	(* <- lang_ru;; *);;
+	
+	
+	
+	
+temporal_relation	
+	
+=> nrel_main_idtf:
+	[темпоральное отношение]
+	(* <- lang_ru;; *);
+	[temporal relation]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[класс темпоральных связей]
+	(* <- lang_ru;; *);
+	[отношение, задающее темпоральные связи между временными сущностями]
+	(* <- lang_ru;; *);
+	
+<= nrel_collection_of_subsets:
+	temporal_connection;
+	
+-> nrel_temporal_inclusion;
+-> nrel_temporal_union;
+-> nrel_temporal_decomposition;
+-> nrel_temporal_adjacency;
+-> nrel_temporal_sequence_with_gap;
+-> nrel_temporal_sequence_with_intersection;;
+
+
+
+
+
+nrel_temporal_inclusion
+
+<- sc_node_norole_relation;
+
+=> nrel_main_idtf:
+	[темпоральное включение*]
+	(* <- lang_ru;; *);
+	[temporal inclusion*]
+	(* <- lang_en;; *);
+
+
+=> nrel_inclusion:
+	nrel_temporal_part;
+	nrel_temporal_inclusion_without_matching_initial_and_final_moments;
+	nrel_temporal_concurrence;
+	nrel_temporal_inclusion_with_matching_initial_moments;
+	nrel_temporal_inclusion_without_matching_final_moments;
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> [
+		Связки отношения <b>темпоральное включение*</b> связывают две временные сущности, период существования одной из которых полностью включается в период существования второй.
+		Первым компонентом каждой связки отношения <b>темпоральное включение*</b> является знак временной сущности, длительность существования которой больше.
+
+			]
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+			*);;
+		*);;
+	*);;
+
+	
+	
+	
+	
+nrel_temporal_part
+
+<- sc_node_norole_relation;
+
+=> nrel_main_idtf:
+	[темпоральная часть*]
+	(* <- lang_ru;; *);
+	[temporal_part*]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[этап (период) заданной временной сущности*]
+	(* <- lang_ru;; *);
+	[этап процесса существования временной сущности*]
+	(* <- lang_ru;; *);
+
+=> nrel_inclusion:
+	nrel_first_stage;
+	nrel_final_stage;
+	nrel_intermediate_stage;
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> [Связки отношения <b>темпоральная часть*</b> связывают две временные сущности, одна из которых является частью другой, например, действие и одно из его поддействий. Соответственно, период существования одной из этих сущностей всегда будет включаться в период существования другой (большей).
+
+			<p>В отличие от более общего отношения темпоральное включение*, связки которого могут связывать любые временные сущности, связки отношения <b>темпоральное включение*</b> связывают только временные сущности, одна из которых является частью другой.</p>
+			]
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+			*);;
+		*);;
+	*);
+	
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_semantic_neighbourhood;;
+	<= nrel_sc_text_translation:
+	...
+		(*
+		<= nrel_strict_inclusion:
+			sc.g_text;;
+		-> rrel_example:
+			"file://nl_files/nrel_temporal_part.png";;
+		*);;
+	*);
+	
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_semantic_neighbourhood;;
+	<= nrel_sc_text_translation:
+	...
+		(*
+		<= nrel_strict_inclusion:
+			sc.g_text;;
+		-> rrel_example:
+			"file://nl_files/nrel_temporal_part_second.png";;
+		*);;
+	*);;
+	
+	
+	
+nrel_first_stage
+
+<- sc_node_norole_relation;
+
+=> nrel_main_idtf:
+	[начальный этап*]
+	(* <- lang_ru;; *);
+	[first stage*]
+	(* <- lang_en;; *);;
+	
+	
+	
+	
+	
+nrel_final_stage
+
+<- sc_node_norole_relation;
+
+=> nrel_main_idtf:
+	[конечный этап*]
+	(* <- lang_ru;; *);
+	[final stage*]
+	(* <- lang_en;; *);;
+
+	
+	
+	
+
+nrel_intermediate_stage
+
+<- sc_node_norole_relation;
+
+=> nrel_main_idtf:
+	[промежуточный этап*]
+	(* <- lang_ru;; *);
+	[intermediate_stage*]
+	(* <- lang_en;; *);;
+	
+	
+	
+	
+nrel_temporal_inclusion_without_coincidence_of_the_initial_and_final_moments
+	
+<- sc_node_norole_relation;
+
+=> nrel_main_idtf:
+	[темпоральное включение без совпадения начальных и конечных моментов*]
+	(* <- lang_ru;; *);
+	[temporal inclusion without coincidence of the initial and final moments*]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[строгое темпоральное включение*]
+	(* <- lang_ru;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_semantic_neighbourhood;;
+	<= nrel_sc_text_translation:
+	...
+		(*
+		<= nrel_strict_inclusion:
+			sc.g_text;;
+		-> rrel_example:
+			"file://nl_files/nrel_temporal_inclusion_without_coincidence_of_the_initial_and_final_moments.png";;
+		*);;
+	*);
+	
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_semantic_neighbourhood;;
+	<= nrel_sc_text_translation:
+	...
+		(*
+		<= nrel_strict_inclusion:
+			sc.g_text;;
+		-> rrel_example:
+			"file://nl_files/nrel_temporal_inclusion_without_coincidence_of_the_initial_and_final_moments_second.png";;
+		*);;
+	*);;
+	
+	
+	
+	
+	
+nrel_temporal_inclusion_with_coincidence_of_the_initial_moments
+
+<- sc_node_norole_relation;
+
+=> nrel_main_idtf:
+	[темпоральное включение с совпадением начальных моментов*]
+	(* <- lang_ru;; *);
+	[temporal inclusion with coincidence of the initial moments*]
+	(* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_semantic_neighbourhood;;
+	<= nrel_sc_text_translation:
+	...
+		(*
+		<= nrel_strict_inclusion:
+			sc.g_text;;
+		-> rrel_example:
+			"file://nl_files/nrel_temporal_inclusion_with_coincidence_of_the_initial_moments.png";;
+		*);;
+	*);
+	
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_semantic_neighbourhood;;
+	<= nrel_sc_text_translation:
+	...
+		(*
+		<= nrel_strict_inclusion:
+			sc.g_text;;
+		-> rrel_example:
+			"file://nl_files/nrel_temporal_inclusion_with_coincidence_of_the_initial_moments_second.png";;
+		*);;
+	*);;
+	
+	
+	
+	
+	
+nrel_temporal_inclusion_with_coincidence_of_the_final_moments
+
+<- sc_node_norole_relation;
+
+=> nrel_main_idtf:
+	[темпоральное включение с совпадением конечных моментов*]
+	(* <- lang_ru;; *);
+	[temporal inclusion with coincidence of the final moments*]
+	(* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_semantic_neighbourhood;;
+	<= nrel_sc_text_translation:
+	...
+		(*
+		<= nrel_strict_inclusion:
+			sc.g_text;;
+		-> rrel_example:
+			"file://nl_files/nrel_temporal_inclusion_with_coincidence_of_the_final_moments.png";;
+		*);;
+	*);
+	
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_semantic_neighbourhood;;
+	<= nrel_sc_text_translation:
+	...
+		(*
+		<= nrel_strict_inclusion:
+			sc.g_text;;
+		-> rrel_example:
+			"file://nl_files/nrel_temporal_inclusion_with_coincidence_of_the_final_moments_second.png";;
+		*);;
+	*);;
+	
+	
+	
+
+nrel_temporal_concurrence
+
+<- sc_node_norole_relation;
+
+=> nrel_main_idtf:
+	[темпоральное совпадение*]
+	(* <- lang_ru;; *);
+	[temporal concurrence*]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[совпадение начала и завершения*]
+	(* <- lang_ru;; *);;
+	
+	
+	
+	
+nrel_temporal_union
+
+<- sc_node_norole_relation;
+
+=> nrel_main_idtf:
+	[темпоральное объединение*]
+	(* <- lang_ru;; *);
+	[temporal union*]
+	(* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_semantic_neighbourhood;;
+	<= nrel_sc_text_translation:
+	...
+		(*
+		<= nrel_strict_inclusion:
+			sc.g_text;;
+		-> rrel_example:
+			"file://nl_files/nrel_temporal_union.png";;
+		*);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_semantic_neighbourhood;;
+	<= nrel_sc_text_translation:
+	...
+		(*
+		<= nrel_strict_inclusion:
+			sc.g_text;;
+		-> rrel_example:
+			"file://nl_files/nrel_temporal_union_second.png";;
+		*);;
+	*);;
+	
+	
+	
+
+	
+nrel_temporal_decomposition
+
+<- sc_node_norole_relation;
+
+=> nrel_main_idtf:
+	[темпоральная декомпозиция*]
+	(* <- lang_ru;; *);
+	[temporal decomposition]
+	(* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_semantic_neighbourhood;;
+	<= nrel_sc_text_translation:
+	...
+		(*
+		<= nrel_strict_inclusion:
+			sc.g_text;;
+		-> rrel_example:
+			"file://nl_files/nrel_temporal_decomposition.png";;
+		*);;
+	*);
+	
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_semantic_neighbourhood;;
+	<= nrel_sc_text_translation:
+	...
+		(*
+		<= nrel_strict_inclusion:
+			sc.g_text;;
+		-> rrel_example:
+			"file://nl_files/nrel_temporal_decomposition_second.png";;
+		*);;
+	*);;
+	
+	
+	
+	
+	
+nrel_temporal_adjacency	
+	
+<- sc_node_norole_relation;
+
+=> nrel_main_idtf:
+	[темпоральная смежность*]
+	(* <- lang_ru;; *);
+	[temporal adjacency*]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[строгая темпоральная последовательность (без темпорального промежутка)*]
+	(* <- lang_ru;; *);
+	[темпоральная последовательность без промежутка*]
+	(* <- lang_ru;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_semantic_neighbourhood;;
+	<= nrel_sc_text_translation:
+	...
+		(*
+		<= nrel_strict_inclusion:
+			sc.g_text;;
+		-> rrel_example:
+			"file://nl_files/nrel_temporal_adjacency.png";;
+		*);;
+	*);
+	
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_semantic_neighbourhood;;
+	<= nrel_sc_text_translation:
+	...
+		(*
+		<= nrel_strict_inclusion:
+			sc.g_text;;
+		-> rrel_example:
+			"file://nl_files/nrel_temporal_adjacency_second.png";;
+		*);;
+	*);;
+	
+	
+	
+	
+	
+nrel_temporal_sequence_with_gap
+	
+<- sc_node_norole_relation;
+
+=> nrel_main_idtf:
+	[темпоральная последовательность с промежутком*]
+	(* <- lang_ru;; *);
+	[temporal sequence with gap*]
+	(* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_semantic_neighbourhood;;
+	<= nrel_sc_text_translation:
+	...
+		(*
+		<= nrel_strict_inclusion:
+			sc.g_text;;
+		-> rrel_example:
+			"file://nl_files/nrel_temporal_sequence_with_gap.png";;
+		*);;
+	*);
+	
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_semantic_neighbourhood;;
+	<= nrel_sc_text_translation:
+	...
+		(*
+		<= nrel_strict_inclusion:
+			sc.g_text;;
+		-> rrel_example:
+			"file://nl_files/nrel_temporal_sequence_with_gap_second.png";;
+		*);;
+	*);;
+	
+	
+	
+
+	
+
+nrel_temporal_sequence_with_intersection
+	
+<- sc_node_norole_relation;
+
+=> nrel_main_idtf:
+	[темпоральная последовательность с пересечением*]
+	(* <- lang_ru;; *);
+	[temporal sequence with intersection*]
+	(* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_semantic_neighbourhood;;
+	<= nrel_sc_text_translation:
+	...
+		(*
+		<= nrel_strict_inclusion:
+			sc.g_text;;
+		-> rrel_example:
+			"file://nl_files/nrel_temporal_sequence_with_intersection.png";;
+		*);;
+	*);
+	
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_semantic_neighbourhood;;
+	<= nrel_sc_text_translation:
+	...
+		(*
+		<= nrel_strict_inclusion:
+			sc.g_text;;
+		-> rrel_example:
+			"file://nl_files/nrel_temporal_sequence_with_intersection_second.png";;
+		*);;
+	*);;
+	
+	
+	
+	
+	
+begin
+
+=> nrel_main_idtf:
+	[начало]
+	(* <- lang_ru;; *);
+	[begin]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[класс одновременно начавшихся сущностей]
+	(* <- lang_ru;; *);
+
+<- parameter;
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> [
+			Каждый элемент множества <b>начало</b> представляет собой класс временных сущностей, у которых совпадает момент начала их существования. Конкретное значение данного параметра может быть как точной величиной, так и неточной величиной или интервальной величиной.
+			]
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+			*);;
+		*);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> [
+			В данном примере ki обозначает класс сущностей, начавших свое существование 19 февраля 2015 года по григорианскому календарю. Конкретные примеры таких сущностей – bi и bj. ti обозначает временную точку григорианского календаря, соответствующую 19 февраля 2015 года.
+			]
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+			*);;
+		*);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_semantic_neighbourhood;;
+	<= nrel_sc_text_translation:
+	...
+		(*
+		<= nrel_strict_inclusion:
+			sc.g_text;;
+		-> rrel_example:
+			"file://nl_files/begin.png";;
+		*);;
+	*);;
+	
+	
+	
+	
+	
+
+completion
+
+=> nrel_main_idtf:
+	[завершение]
+	(* <- lang_ru;; *);
+	[completion]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[конец]
+	(* <- lang_ru;; *);
+	[класс одновременно завершившихся сущностей]
+	(* <- lang_ru;; *);
+
+<- parameter;
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> [
+			Каждый элемент множества <b>завершение</b> представляет собой класс временных сущностей, у которых совпадает конечный момент их существования (момент завершения существования). Конкретное значение данного параметра может быть как точной величиной, так и неточной величиной или интервальной величиной.
+			]
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+			*);;
+		*);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> [
+			В данном примере ki обозначает класс сущностей, завершивших свое существование 21 февраля 2015 года по григорианскому календарю. Конкретные примеры таких сущностей – bi и bj. ti обозначает временную точку григорианского календаря, соответствующую 21 февраля 2015 года.
+			]
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+			*);;
+		*);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_semantic_neighbourhood;;
+	<= nrel_sc_text_translation:
+	...
+		(*
+		<= nrel_strict_inclusion:
+			sc.g_text;;
+		-> rrel_example:
+			"file://nl_files/completion.png";;
+		*);;
+	*);;
+	
+	
+	
+	
+	
+	
+duration
+
+=> nrel_main_idtf:
+	[длительность]
+	(* <- lang_ru;; *);
+	[duration]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[класс временных сущностей, имеющих одинаковую длительность]
+	(* <- lang_ru;; *);
+
+<- parameter;
+-> millennium;
+-> century;
+-> year;
+-> month;
+-> day;
+-> hour;
+-> minute;
+-> second;
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> [
+			Каждый элемент множества <b>длительность</b> представляет собой класс временных сущностей, у которых совпадает длительность их существования. Конкретное значение данного параметра может быть как точной величиной, так и неточной величиной или интервальной величиной.
+			]
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+			*);;
+		*);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> [
+			В данном примере ki обозначает класс сущностей, существовавших в течение 2 месяцев. Конкретный пример такой сущности – bi.
+			]
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+			*);;
+		*);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- typical_semantic_neighbourhood;;
+	<= nrel_sc_text_translation:
+	...
+		(*
+		<= nrel_strict_inclusion:
+			sc.g_text;;
+		-> rrel_example:
+			"file://nl_files/duration.png";;
+		*);;
+	*);;
+	
+	
+	
+
+
+millennium
+
+=> nrel_main_idtf:
+	[тысячелетие]
+	(* <- lang_ru;; *);
+	[millennium]
+	(* <- lang_en;; *);;
+
+	
+	
+	
+	
+century
+
+=> nrel_main_idtf:
+	[век]
+	(* <- lang_ru;; *);
+	[century]
+	(* <- lang_en;; *);;
+	
+	
+	
+	
+
+year
+
+=> nrel_main_idtf:
+	[год]
+	(* <- lang_ru;; *);
+	[year]
+	(* <- lang_en;; *);;
+	
+	
+	
+	
+	
+month
+
+=> nrel_main_idtf:
+	[месяц]
+	(* <- lang_ru;; *);
+	[month]
+	(* <- lang_en;; *);;
+	
+	
+	
+	
+
+day
+
+=> nrel_main_idtf:
+	[день]
+	(* <- lang_ru;; *);
+	[day]
+	(* <- lang_en;; *);;
+	
+	
+	
+	
+	
+hour
+
+=> nrel_main_idtf:
+	[час]
+	(* <- lang_ru;; *);
+	[hour]
+	(* <- lang_en;; *);;
+	
+	
+	
+	
+	
+minute
+
+=> nrel_main_idtf:
+	[минута]
+	(* <- lang_ru;; *);
+	[minute]
+	(* <- lang_en;; *);;
+	
+	
+	
+	
+second
+
+=> nrel_main_idtf:
+	[секунда]
+	(* <- lang_ru;; *);
+	[second]
+	(* <- lang_en;; *);;
+	
+	
+	
+	
+	
+number_of_millennium
+
+<- sc_node_role_relation;
+
+=> nrel_main_idtf:
+	[номер тысячелетия']
+	(* <- lang_ru;; *);
+	[number of millennium']
+	(* <- lang_en;; *);;
+	
+	
+	
+	
+number_of_century
+
+<- sc_node_role_relation;
+
+=> nrel_main_idtf:
+	[номер века']
+	(* <- lang_ru;; *);
+	[number of century']
+	(* <- lang_en;; *);;
+	
+	
+	
+	
+	
+number_of_year
+
+<- sc_node_role_relation;
+
+=> nrel_main_idtf:
+	[номер года']
+	(* <- lang_ru;; *);
+	[number of year']
+	(* <- lang_en;; *);;
+	
+	
+	
+	
+number_of_month_in_year
+
+<- sc_node_role_relation;
+
+=> nrel_main_idtf:
+	[номер месяца в году']
+	(* <- lang_ru;; *);
+	[number of month in year']
+	(* <- lang_en;; *);;
+	
+	
+	
+	
+
+number_of_day_in_month
+
+<- sc_node_role_relation;
+
+=> nrel_main_idtf:
+	[номер месяца в году']
+	(* <- lang_ru;; *);
+	[number of day in month']
+	(* <- lang_en;; *);;
+	
+	
+	
+	
+
+number_of_hour_in_day
+
+<- sc_node_role_relation;
+
+=> nrel_main_idtf:
+	[номер часа в дне']
+	(* <- lang_ru;; *);
+	[number of hour in day']
+	(* <- lang_en;; *);;
+	
+	
+	
+	
+	
+number_of_minute_in_hour
+
+<- sc_node_role_relation;
+
+=> nrel_main_idtf:
+	[номер минуты в часе']
+	(* <- lang_ru;; *);
+	[number of minute in hour']
+	(* <- lang_en;; *);;
+	
+	
+	
+	
+number_of_second_in_minute
+
+<- sc_node_role_relation;
+
+=> nrel_main_idtf:
+	[номер секунды в минуте']
+	(* <- lang_ru;; *);
+	[number of second in minute']
+	(* <- lang_en;; *);;
