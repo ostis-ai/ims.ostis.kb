@@ -5,3 +5,7 @@ section_subjdomain_persons
 	(* <- lang_ru;; *);
 	[Section. Subject domain of persons]
 	(* <- lang_en;; *);;
+
+section_subjdomain_persons = [*^"file://section_subjdomain_persons.scsi"*];;
+
+rrel_key_sc_element -> (section_subjdomain_persons -> subjdomain_persons);;

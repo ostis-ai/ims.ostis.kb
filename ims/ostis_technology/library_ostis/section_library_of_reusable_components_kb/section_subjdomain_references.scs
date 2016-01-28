@@ -5,3 +5,7 @@ section_subjdomain_references
 	(* <- lang_ru;; *);
 	[Section. Subject domain of references]
 	(* <- lang_en;; *);;
+	
+section_subjdomain_references = [*^"file://section_subjdomain_references.scsi"*];;
+
+rrel_key_sc_element -> (section_subjdomain_references -> subjdomain_references);;

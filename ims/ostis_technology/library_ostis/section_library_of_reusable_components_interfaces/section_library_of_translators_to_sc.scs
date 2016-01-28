@@ -5,3 +5,7 @@ section_library_of_translators_to_sc
 	(* <- lang_ru;; *);
 	[Section. Library of translators to sc-memory]
 	(* <- lang_en;; *);;
+
+section_library_of_translators_to_sc = [*^"file://section_library_of_translators_to_sc.scsi"*];;
+
+rrel_key_sc_element -> (section_library_of_translators_to_sc -> library_of_translators_to_sc);;

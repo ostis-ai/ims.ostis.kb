@@ -5,3 +5,7 @@ section_subjdomain_docs
 	(* <- lang_ru;; *);
 	[Section. Subject domain of documents]
 	(* <- lang_en;; *);;
+
+section_subjdomain_docs = [*^"file://section_subjdomain_docs.scsi"*];;
+
+rrel_key_sc_element -> (section_subjdomain_docs -> subjdomain_docs);;

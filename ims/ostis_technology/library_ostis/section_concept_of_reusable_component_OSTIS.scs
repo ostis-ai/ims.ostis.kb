@@ -4,4 +4,10 @@ section_concept_of_reusable_component_OSTIS
 	[Раздел. Понятие многократно используемого компонента OSTIS]
 	(* <- lang_ru;; *);
 	[Section. Concept of reusable component OSTIS]	
-	(* <- lang_en;; *);;
+	(* <- lang_en;; *);
+
+<- atomic_section;;
+
+section_concept_of_reusable_component_OSTIS = [*^"file://section_concept_of_reusable_component_OSTIS/section_concept_of_reusable_component_OSTIS.scsi"*];;
+
+rrel_key_sc_element -> (section_concept_of_reusable_component_OSTIS -> library_of_reusable_component_OSTIS);;

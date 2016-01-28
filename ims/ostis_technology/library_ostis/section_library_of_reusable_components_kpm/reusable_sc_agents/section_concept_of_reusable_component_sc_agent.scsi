@@ -1,0 +1,35 @@
+library_of_reusable_abstract_sc_agents
+=> nrel_main_idtf:
+	[Библиотека многократно используемых абстрактных sc-агентов]
+	(* <- lang_ru;; *);
+	[Library of reusable abstract sc-agents]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[многократно используемый абстрактный sc-агент]
+	(* <- lang_ru;; *);
+
+<= nrel_subdividing:
+	{
+	kpm_agent_library_of_information_search;
+	kpm_agent_library_of_knowledge_integration_into_base;
+	kpm_agent_library_of_ontology_alignment;
+	kpm_agent_library_of_solution_planning_for_formulated_tasks;
+	kpm_agent_library_of_logical_inference;
+	kpm_agent_library_of_garbage_collection;
+	kpm_agent_library_of_coordination;
+	kpm_agent_library_of_high_level_languages_interpreters
+	};
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:	
+		...
+		(*
+		-> rrel_example:
+			"file://nl_files/library_of_reusable_abstract_sc_agents.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);;

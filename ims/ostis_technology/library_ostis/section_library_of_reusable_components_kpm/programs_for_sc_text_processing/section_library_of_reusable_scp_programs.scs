@@ -1,6 +1,11 @@
 section_library_of_reusable_scp_programs
+<- atomic_section;
 => nrel_main_idtf:
 	[Раздел. Библиотека многократно используемых scp-программ]
 	(* <- lang_ru;; *);
 	[Section. Library of reusable scp-programs]
 	(* <- lang_en;; *);;
+
+section_library_of_reusable_scp_programs = [*^"file://section_library_of_reusable_scp_programs.scsi"*];;
+
+rrel_key_sc_element -> (section_library_of_reusable_scp_programs -> library_of_reusable_scp_programs);;
