@@ -10,4 +10,14 @@ section_concept_of_reusable_component_OSTIS
 
 section_concept_of_reusable_component_OSTIS = [*^"file://section_concept_of_reusable_component_OSTIS/section_concept_of_reusable_component_OSTIS.scsi"*];;
 
-rrel_key_sc_element -> (section_concept_of_reusable_component_OSTIS -> library_of_reusable_component_OSTIS);;
+section_concept_of_reusable_component_OSTIS 
+-> rrel_key_sc_element: 
+	library_of_reusable_component_OSTIS;
+	pattern_of_typical_component_ostis;
+	library_of_atomic_reusable_components;
+	library_of_non_atomic_reusable_components;
+	library_of_platform_dependent_reusable_components;
+	library_of_platform_independent_reusable_components;
+	nrel_attendant_component;
+	nrel_subsidiary_sc_system;
+	nrel_library_component_decomposition;;
