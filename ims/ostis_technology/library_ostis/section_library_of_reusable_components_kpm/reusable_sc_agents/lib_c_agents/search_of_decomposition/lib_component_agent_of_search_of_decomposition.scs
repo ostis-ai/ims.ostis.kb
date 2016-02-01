@@ -1,0 +1,27 @@
+lib_component_agent_of_search_of_decomposition
+=> nrel_main_idtf:
+	[Компонент библиотеки. sc-агент поиска связок декомпозиции для заданного sc-элемента] (* <- lang_ru;; *);
+	[Компонент библиотеки. sc-agent search ligaments decomposition for a given sc-element] (* <- lang_en;; *);
+
+<- library_of_platform_dependent_reusable_components; 
+<- library_of_atomic_reusable_components;
+
+=> nrel_attendant_component: 
+	lib_component_ui_menu_view_decomposition; 
+
+-> rrel_key_sc_element: 
+	.c_realization_of_agent_of_search_of_decomposition; 
+
+<- key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[Задачей sc-агента поиска декомпозиции заданного sc-элемента является поиск всех sc-элементов, на которые декомпозируется заданный sc-элемент при помощи связок отношений, принадлежащих классу отношение декомпозиции. Если на указанных sc-элементах задано отношение порядка, то его связки также добавляются во множество, являющееся результатом выполнения действия поиска декомпозиции заданного sc-элемента. При этом учитываются декомпозиция только на один уровень.];;
+		*);;
+	*);;
+
+

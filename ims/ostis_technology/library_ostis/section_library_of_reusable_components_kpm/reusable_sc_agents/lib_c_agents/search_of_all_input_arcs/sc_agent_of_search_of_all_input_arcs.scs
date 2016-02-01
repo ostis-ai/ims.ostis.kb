@@ -1,0 +1,43 @@
+sc_agent_of_search_of_all_input_arcs
+=> nrel_main_idtf:
+	[sc-агент поиска всех входящих константных позитивных стационарных sc-дуг принадлежности] (* <- lang_ru;; *);
+	[sc-agent of search of all input constant positive permanent accessory sc-arcs] (* <- lang_en;; *);
+<- abstract_sc_agent;
+=> nrel_primary_initiation_condition: (sc_event_add_output_arc => question_initiated);
+=> nrel_initiation_condition_and_result: (..sc_agent_of_search_of_all_input_arcs_initiation_condition => ..sc_agent_of_search_of_all_input_arcs_result);
+<= nrel_sc_agent_key_sc_elements: 
+	{
+		question_initiated;
+		question;
+		question_search_all_input_const_pos_arcs
+	};
+
+=> nrel_inclusion: 
+	.c_realization_of_agent_of_search_of_all_input_arcs
+	(*
+		<- platform_dependent_abstract_sc_agent;;
+		<= nrel_sc_agent_program: 
+		{
+			[owner=deniskoronchik; repo=sc-machine; path= sc-kpm/search/agents/search_input_arcs.c; syntax=cpp] (* => nrel_format: format_github_source_link;; *);
+			[owner=deniskoronchik; repo=sc-machine; path= sc-kpm/search/agents/search_input_arcs.h; syntax=cpp] (* => nrel_format: format_github_source_link;; *)
+		};;
+		
+		-> sc_agent_of_search_of_all_input_arcs_c (* <- active_sc_agent;; *);;
+	*);;
+
+..sc_agent_of_search_of_all_input_arcs_initiation_condition
+= [*
+	question_search_all_input_const_pos_arcs _-> .._question;;
+	question_initiated _-> .._question;;
+	question _-> .._question;;
+	.._question _-> .._parameter;;
+*];;
+
+..sc_agent_of_search_of_all_input_arcs_result
+= [*
+	question_search_all_input_const_pos_arcs _-> .._question;;
+	question_finished _-> .._question;;
+	question _-> .._question;;
+	.._question _=> nrel_answer:: .._answer;;
+	.._question _-> .._parameter;;
+*];;

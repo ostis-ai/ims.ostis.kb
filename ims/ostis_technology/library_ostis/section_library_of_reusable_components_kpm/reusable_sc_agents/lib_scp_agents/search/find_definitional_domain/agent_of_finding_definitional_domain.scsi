@@ -1,0 +1,327 @@
+agent_of_finding_definitional_domain
+=> nrel_main_idtf:
+	[агентная scp-программа поиска области определения отношения] (* <- lang_ru;; *);
+	[agent scp-program of finding definitional_domain for relation] (* <- lang_en;; *);
+	<- agent_scp_program;;
+
+scp_program -> agent_of_finding_definitional_domain 
+	(*
+	-> rrel_params: .agent_of_finding_definitional_domain_params 
+		(*
+		-> rrel_1: rrel_in: _event;;
+		-> rrel_2: rrel_in: _input_arc;;
+		*);;
+
+	-> rrel_operators: .agent_of_finding_definitional_domain_operator_set 
+		(*
+		-> rrel_init: .agent_of_finding_definitional_domain_operator1 
+			(*
+			<- searchElStr3;;
+			-> rrel_1: rrel_assign: rrel_scp_var: _temp;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: _input_arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _quest;;
+
+			=> nrel_goto: .agent_of_finding_definitional_domain_operator2;;
+			*);;
+
+		-> .agent_of_finding_definitional_domain_operator2 
+			(*
+			<- searchElStr3;;
+			-> rrel_1: rrel_fixed: rrel_scp_const: question_of_finding_definitional_domain;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+
+			=> nrel_then: .agent_of_finding_definitional_domain_operator3A;;
+			=> nrel_else: .agent_of_finding_definitional_domain_operator_return;;
+			*);;
+
+		-> .agent_of_finding_definitional_domain_operator3A 
+			(*
+			<- searchElStr3;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _param;;
+
+			=> nrel_then: .agent_of_finding_definitional_domain_operator3B;;
+			=> nrel_else: .agent_of_finding_definitional_domain_operator_return;;
+			*);;
+
+		-> .agent_of_finding_definitional_domain_operator3B 
+			(*
+		 	<- genEl;;
+		 	-> rrel_1: rrel_assign: rrel_const: rrel_node: rrel_scp_var: _answer;;
+
+		 	=> nrel_goto: .agent_of_finding_definitional_domain_operator4A;;
+		 	*);;
+
+		-> .agent_of_finding_definitional_domain_operator4A
+			(*
+			<- searchSetStr5;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _param;;
+		 	-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+		 	-> rrel_3: rrel_assign: rrel_scp_var: _node1;;
+                 	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		 	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_first_domain;;
+
+                 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+                 	-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer;;
+		 	-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer;;
+
+                 	=> nrel_then: .agent_of_finding_definitional_domain_operator4B;;
+		 	=> nrel_else: .agent_of_finding_definitional_domain_operator_return;;
+                 	*);;   
+
+		-> .agent_of_finding_definitional_domain_operator4B
+			(*
+		 	<- searchSetStr5;;
+		 	-> rrel_1: rrel_assign: rrel_scp_var: _comb1;;
+		 	-> rrel_2: rrel_assign: rrel_const: rrel_common: rrel_scp_var: _arc1;;
+		 	-> rrel_3: rrel_fixed: rrel_scp_var: _node1;;
+                 	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		 	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_combination;;
+	         
+			-> rrel_set_1: rrel_fixed: rrel_scp_var: _answer;;
+             	 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+		 	-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer;;
+
+                 	=> nrel_then: .agent_of_finding_definitional_domain_operator4C;;
+                 	=> nrel_else: .agent_of_finding_definitional_domain_operator5A;;
+                 	*);;
+
+		-> .agent_of_finding_definitional_domain_operator4C
+			(*
+		 	<- searchSetStr3;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _comb1;;
+		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		 	-> rrel_3: rrel_assign: rrel_scp_var: _inst1;;
+                 
+                 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+                 	-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer;;
+
+                 	=> nrel_then: .agent_of_finding_definitional_domain_operator5A;;
+		 	=> nrel_else: .agent_of_finding_definitional_domain_operator_return;;
+                 	*);;		
+		
+		-> .agent_of_finding_definitional_domain_operator5A
+			(*
+		 	<- searchSetStr5;;
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _param;;
+		 	-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+		 	-> rrel_3: rrel_assign: rrel_scp_var: _node2;;
+                 	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		 	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_second_domain;;
+
+             	 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+                 	-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer;;
+		 	-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer;;
+
+                 	=> nrel_then: .agent_of_finding_definitional_domain_operator5B;;
+                 	=> nrel_else: .agent_of_finding_definitional_domain_operator_return;;
+                 	*);;
+
+		-> .agent_of_finding_definitional_domain_operator5B
+			(*
+		 	<- searchSetStr5;;
+		 	-> rrel_1: rrel_assign: rrel_scp_var: _comb2;;
+		 	-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+		 	-> rrel_3: rrel_fixed: rrel_scp_var: _node2;;
+                 	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		 	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_combination;;
+	         
+			-> rrel_set_1: rrel_fixed: rrel_scp_var: _answer;;
+             	 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+		 	-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer;;
+
+                 	=> nrel_then: .agent_of_finding_definitional_domain_operator5C;;
+                 	=> nrel_else: .agent_of_finding_definitional_domain_operator6A;;
+                 	*);;
+
+		-> .agent_of_finding_definitional_domain_operator5C
+			(*
+		 	<- searchSetStr3;;
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _comb2;;
+		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		 	-> rrel_3: rrel_assign: rrel_scp_var: _inst2;;
+                 
+                 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+		 	-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer;;
+
+                 	=> nrel_then: .agent_of_finding_definitional_domain_operator6A;;
+		 	=> nrel_else: .agent_of_finding_definitional_domain_operator_return;;
+                 	*);;
+
+		-> .agent_of_finding_definitional_domain_operator6A
+			(*
+		 	<- searchSetStr5;;
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _param;;
+		 	-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+		 	-> rrel_3: rrel_assign: rrel_scp_var: _node3;;
+                 	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		 	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_third_domain;;
+
+                 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+                 	-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer;;
+		 	-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer;;
+
+                 	=> nrel_then: .agent_of_finding_definitional_domain_operator6B;;
+		 	=> nrel_else: .agent_of_finding_definitional_domain_operator7A;;
+                 	*);;
+
+                 -> .agent_of_finding_definitional_domain_operator6B
+			(*
+		 	<- searchSetStr5;;
+		 	-> rrel_1: rrel_assign: rrel_scp_var: _comb3;;
+		 	-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+		 	-> rrel_3: rrel_fixed: rrel_scp_var: _node3;;
+                 	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		 	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_combination;;
+	         
+             	 	-> rrel_set_1: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+		 	-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer;;
+
+                 	=> nrel_then: .agent_of_finding_definitional_domain_operator6C;;
+                 	=> nrel_else: .agent_of_finding_definitional_domain_operator7A;;
+                 	*);;
+
+		-> .agent_of_finding_definitional_domain_operator6C
+			(*
+		 	<- searchSetStr3;;
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _comb3;;
+		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		 	-> rrel_3: rrel_assign: rrel_scp_var: _inst3;;
+                 
+                 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+		 	-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer;;
+
+                 	=> nrel_then: .agent_of_finding_definitional_domain_operator7A;;
+		 	=> nrel_else: .agent_of_finding_definitional_domain_operator_return;;
+                 	*);;
+
+		-> .agent_of_finding_definitional_domain_operator7A
+			(*
+		 	<- searchSetStr5;;
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _param;;
+		 	-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+		 	-> rrel_3: rrel_assign: rrel_scp_var: _node4;;
+                 	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		 	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_definitional_domain;;
+
+                 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+                 	-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer;;
+		 	-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer;;
+
+                 	=> nrel_then: .agent_of_finding_definitional_domain_operator7B;;
+		 	=> nrel_else: .agent_of_finding_definitional_domain_operator_return;;
+                 	*);;
+
+		-> .agent_of_finding_definitional_domain_operator7B
+			(*
+		 	<- searchSetStr5;;
+		 	-> rrel_1: rrel_assign: rrel_scp_var: _comb4;;
+		 	-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+		 	-> rrel_3: rrel_fixed: rrel_scp_var: _node4;;
+                 	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		 	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_combination;;
+
+                 	-> rrel_set_1: rrel_fixed: rrel_scp_var: _answer;;
+		 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+		 	-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer;;
+
+                 	=> nrel_then: .agent_of_finding_definitional_domain_operator7C;;
+		 	=> nrel_else: .agent_of_finding_definitional_domain_operator_return;;
+                 	*);;
+
+		-> .agent_of_finding_definitional_domain_operator7C 
+			(*
+		  	<- searchSetStr3;;
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _comb4;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc5;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _inst4;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+
+		  	=> nrel_then: .agent_of_finding_definitional_domain_operator7D;;
+			=> nrel_else: .agent_of_finding_definitional_domain_operator_return;;
+		 	*);;
+
+		-> .agent_of_finding_definitional_domain_operator7D 
+			(*
+		 	<- genElStr3;;
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		 	-> rrel_3: rrel_fixed: rrel_scp_var: _param;;
+
+                 	=> nrel_goto: .agent_of_finding_definitional_domain_operator7E;;
+		 	*);;
+
+		-> .agent_of_finding_definitional_domain_operator7E 
+			(*
+		 	<- genElStr3;;
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		 	-> rrel_3: rrel_fixed: rrel_scp_const: nrel_first_domain;;
+
+                 	=> nrel_goto: .agent_of_finding_definitional_domain_operator7H;;
+		 	*);;
+
+		-> .agent_of_finding_definitional_domain_operator7H 
+			(*
+		 	<- genElStr3;;
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc3;;
+		 	-> rrel_3: rrel_fixed: rrel_scp_const: nrel_second_domain;;
+
+                 	=> nrel_goto: .agent_of_finding_definitional_domain_operator7K;;
+		 	*);;
+
+		 -> .agent_of_finding_definitional_domain_operator7K 
+			(*
+		 	<- genElStr3;;
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		 	-> rrel_3: rrel_fixed: rrel_scp_const: nrel_third_domain;;
+
+                 	=> nrel_goto: .agent_of_finding_definitional_domain_operator7L;;
+		 	*);;
+
+		-> .agent_of_finding_definitional_domain_operator7L 
+			(*
+		 	<- genElStr3;;
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		 	-> rrel_3: rrel_fixed: rrel_scp_const: nrel_definitional_domain;;
+
+                 	=> nrel_goto: .agent_of_finding_definitional_domain_operator7M;;
+		 	*);;
+	
+		-> .agent_of_finding_definitional_domain_operator7M 
+			(*
+		 	<- genElStr3;;
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc3;;
+		 	-> rrel_3: rrel_fixed: rrel_scp_const: nrel_combination;;
+
+                 	=> nrel_goto: .agent_of_finding_definitional_domain_operator_gen_answer;;
+		 	*);;
+
+		-> .agent_of_finding_definitional_domain_operator_gen_answer 
+			(*
+		  	<- genElStr5;;
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+		  	-> rrel_2: rrel_assign: rrel_const: rrel_common: rrel_scp_var: _arc;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _answer;;
+		  	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		  	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_answer;;
+
+		  	=> nrel_goto: .agent_of_finding_definitional_domain_operator_return;;
+			*);;    
+
+		 -> .agent_of_finding_definitional_domain_operator_return 
+			(*
+		  	<- return;;
+			*);;
+		*);;
+	*);;
+
+
