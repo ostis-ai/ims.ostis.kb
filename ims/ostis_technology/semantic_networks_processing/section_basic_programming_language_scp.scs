@@ -20,7 +20,20 @@ new_scp_operator
 		<- lang_en;;
 		*);
 	<- rrel_key_sc_element:
-		...;;
+		...;
+	<= nrel_subdividing: 
+	{
+		new_scp_operator_of_sc_structure_generation;
+		new_scp_operator_of_structure_associative_search;
+		new_scp_operator_of_sc_structure_deleting;
+		new_scp_operator_of_conditions_check;
+		new_scp_operator_of_scp_operand_value_control;
+		new_scp_operator_of_scp_process_control;
+		new_scp_operator_of_event_control;
+		new_scp_operator_of_file_content_process;
+		new_scp_operator_of_information_output_to_consol;
+		new_scp_operator_of_lock_management
+	};;
 
 new_scp_operator_of_sc_structure_generation
 	=> nrel_main_idtf:
@@ -29,7 +42,14 @@ new_scp_operator_of_sc_structure_generation
 		[scp-operator of structure generation]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...;
+		<= nrel_subdividing: 
+	{
+		new_genEl;
+		new_genElStr3;
+		new_genElStr5;
+		new_sys_gen
+	};;
 
 new_sys_gen
 	=> nrel_main_idtf:
@@ -74,7 +94,15 @@ new_scp_operator_of_structure_associative_search
 		[scp-operator of structure associative search]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...;
+	<= nrel_subdividing: 
+	{
+		new_searchElStr3;
+		new_searchElStr5;
+		new_searchSetStr3;
+		new_searchSetStr5;
+		new_sys_search
+	};;
 
 new_sys_search
 	=> nrel_main_idtf:
@@ -128,7 +156,15 @@ new_scp_operator_of_sc_structure_deleting
 		[scp-operator of structure deleting]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...;
+	<= nrel_subdividing: 
+	{
+		new_eraseEl;
+		new_eraseElStr3;
+		new_eraseElStr5;
+		new_eraseSetStr3;
+		new_eraseSetStr5
+	};;
 
 new_eraseEl
 	=> nrel_main_idtf:
@@ -183,7 +219,16 @@ new_scp_operator_of_conditions_check
 		[scp-operator of conditions check]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...;
+	<= nrel_subdividing: 
+	{
+		new_ifType;
+		new_ifVarAssign;
+		new_ifFormCont;
+		new_ifCoin;
+		new_ifEq;
+		new_ifGr
+	};;
 
 new_ifType
 	=> nrel_main_idtf:
@@ -246,7 +291,12 @@ new_scp_operator_of_scp_operand_value_control
 		[scp-operator of scp-operand value control]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...;
+	<= nrel_subdividing: 
+	{
+		new_varAssign;
+		new_varErase
+	};;
 
 new_varAssign
 	=> nrel_main_idtf:
@@ -273,7 +323,15 @@ new_scp_operator_of_scp_process_control
 		[scp-operator of scp-process control]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...;
+	<= nrel_subdividing: 
+	{
+		new_call;
+		new_waitReturn;
+		new_waitReturnSet;
+		new_return;
+		new_scp_operators_conjunction
+	};;
 
 new_call
 	=> nrel_main_idtf:
@@ -311,6 +369,7 @@ new_return
 	<- rrel_key_sc_element:
 		...;;
 
+/*syncronize*/
 new_scp_operators_conjunction
 	=> nrel_main_idtf:
 		[конъюнкция предшествующих scp-операторов]
@@ -327,7 +386,11 @@ new_scp_operator_of_event_control
 		[scp-operator of event control]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...;
+	<= nrel_subdividing: 
+	{
+		new_sys_wait
+	};;
 
 new_sys_wait
 	=> nrel_main_idtf:
@@ -345,7 +408,38 @@ new_scp_operator_of_file_content_process
 		[scp-operator of file content process]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...;
+	<= nrel_subdividing: 
+	{
+		new_contAdd;
+		new_contSub;
+		new_contMult;
+		new_contDiv;
+		new_contPow;
+		new_contLn;
+		new_contSin;
+		new_contCos;
+		new_contTg;
+		new_contASin;
+		new_contACos;
+		new_contATg;
+		new_contDivInt;
+		new_contDivRem;
+		new_contAssign;	
+		new_contErase
+		new_stringLen;
+		new_contStringConcat;
+		new_stringSub;
+		new_stringStartsWith;
+		new_stringIfEq;
+		new_stringIfGr;
+		new_stringToUpperCase;
+		new_stringToLowerCase;
+		new_stringSplit;
+		new_stringEndsWith;
+		new_stringReplace;
+		new_stringSlice
+	};;
 
 new_contAdd
 	=> nrel_main_idtf:
@@ -491,82 +585,96 @@ new_contErase
 	<- rrel_key_sc_element:
 		...;;
 
-new_contUpperCase
+new_stringToUpperCase
 	=> nrel_main_idtf:
 		[scp-оператор перевода в верхний регистр строкового содержимого файла]
 		(*<- lang_ru;;*);
 	<- rrel_key_sc_element:
 		...;;
 
-new_contLowerCase
+new_stringToLowerCase
 	=> nrel_main_idtf:
 		[scp-оператор перевода в нижний регистр строкового содержимого файла]
 		(*<- lang_ru;;*);
 	<- rrel_key_sc_element:
 		...;;
 
-new_contReplace
+new_stringReplace
 	=> nrel_main_idtf:
 		[scp-оператор замены определенной части строкового содержимого файла на содержимое указанного файла]
 		(*<- lang_ru;;*);
 	<- rrel_key_sc_element:
 		...;;
 
-new_contEndWhith
+new_stringEndsWith
 	=> nrel_main_idtf:
 		[scp-оператор проверки совпадения конца строкового содержимого файла со строковом содержимым другой файла]
 		(*<- lang_ru;;*);
 	<- rrel_key_sc_element:
 		...;;
 
-new_contStartWith
+new_stringStartsWith
 	=> nrel_main_idtf:
 		[scp-оператор проверки совпадения начальной части строкового содержимого файла со строковом содержимым другой файла]
 		(*<- lang_ru;;*);
 	<- rrel_key_sc_element:
 		...;;
 
-new_contCut
+new_stringSlice
 	=> nrel_main_idtf:
 		[scp-оператор получения части строкового содержимого файла по индексам]
 		(*<- lang_ru;;*);
 	<- rrel_key_sc_element:
 		...;;
 
-new_contFind
+new_stringSub
 	=> nrel_main_idtf:
 		[scp-оператор поиска строкового содержимого файла в строковом содержимом другой файла]
 		(*<- lang_ru;;*);
 	<- rrel_key_sc_element:
 		...;;
 
-new_contLen
+new_stringLen
 	=> nrel_main_idtf:
 		[scp-оператор вычисления длины строкового содержимого файла]
 		(*<- lang_ru;;*);
 	<- rrel_key_sc_element:
 		...;;
 
-new_contSplit
+new_stringSplit
 	=> nrel_main_idtf:
 		[scp-оператор разбиения строки на подстроки]
 		(*<- lang_ru;;*);
 	<- rrel_key_sc_element:
 		...;;
 
-new_contStringGr
+new_stringIfGr
 	=> nrel_main_idtf:
 		[scp-оператор лексикографического сравнения строковых содержимых файлов]
 		(*<- lang_ru;;*);
 	<- rrel_key_sc_element:
 		...;;
 
-new_contStringEq
+new_stringIfEq
 	=> nrel_main_idtf:
 		[scp-оператор проверки равенства строковых содержимых файлов]
 		(*<- lang_ru;;*);
 	<- rrel_key_sc_element:
 		...;;
+
+new_stringIfEq
+	=> nrel_main_idtf:
+		[scp-оператор проверки равенства строковых содержимых файлов]
+		(*<- lang_ru;;*);
+	<- rrel_key_sc_element:
+		...;;
+
+new_contStringConcat
+	=> nrel_main_idtf:
+		[scp-оператор конкатенации строковых содержимых файлов]
+		(*<- lang_ru;;*);
+	<- rrel_key_sc_element:
+		...;
 
 new_scp_operator_of_information_output_to_consol
 	=> nrel_main_idtf:
@@ -575,7 +683,13 @@ new_scp_operator_of_information_output_to_consol
 		[scp-operator of information output to consol]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...;
+	<= nrel_subdividing: 
+	{
+		new_print;
+		new_printNl;
+		new_printEl
+	};;
 
 new_print
 	=> nrel_main_idtf:
@@ -609,7 +723,19 @@ new_scp_operator_of_lock_management
 		[scp-оператор управления блокировками]
 		(*<- lang_ru;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...;
+	<= nrel_subdividing: 
+	{
+		new_unlockProc;
+		new_unlockEl;
+		new_lockEl;
+		new_lockElEdit;
+		new_lockElRemove;
+		new_unlockElStr;
+		new_lockElStr;
+		new_lockElStrEdit;
+		new_lockElStrRemove
+	};;
 
 new_unlockProc
 	=> nrel_main_idtf:
