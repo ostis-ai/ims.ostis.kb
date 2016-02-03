@@ -19,8 +19,20 @@ new_scp_operator
 		(*
 		<- lang_en;;
 		*);
+		
 	<- rrel_key_sc_element:
-		...;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_scp_operator.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);
+
 	<= nrel_subdividing: 
 	{
 		new_scp_operator_of_sc_structure_generation;
@@ -42,7 +54,17 @@ new_scp_operator_of_sc_structure_generation
 		[scp-operator of structure generation]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_scp_operator_of_sc_structure_generation.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);
 		<= nrel_subdividing: 
 	{
 		new_genEl;
@@ -58,7 +80,17 @@ new_sys_gen
 		[scp-operator of  structure generation by pattern]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_sys_gen.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_genElStr5
 	=> nrel_main_idtf:
@@ -67,7 +99,17 @@ new_genElStr5
 		[scp-operator of five-element structure generation]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_genElStr5.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_genElStr3
 	=> nrel_main_idtf:
@@ -76,7 +118,17 @@ new_genElStr3
 		[scp-operator of three-element structure generation]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_genElStr3.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_genEl
 	=> nrel_main_idtf:
@@ -85,7 +137,17 @@ new_genEl
 		[scp-operator of one-element structure generation]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_genEl.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_scp_operator_of_structure_associative_search
 	=> nrel_main_idtf:
@@ -94,7 +156,17 @@ new_scp_operator_of_structure_associative_search
 		[scp-operator of structure associative search]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_scp_operator_of_structure_associative_search.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);
 	<= nrel_subdividing: 
 	{
 		new_searchElStr3;
@@ -111,7 +183,17 @@ new_sys_search
 		[scp-operator of structure search by pattern]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_sys_search.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_searchSetStr5
 	=> nrel_main_idtf:
@@ -120,7 +202,17 @@ new_searchSetStr5
 		[scp-operator of five-element structure search with set creation]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_searchSetStr5.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_searchSetStr3
 	=> nrel_main_idtf:
@@ -129,7 +221,17 @@ new_searchSetStr3
 		[scp-operator of three-element structure search with set creation]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_searchSetStr3.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_searchElStr5
 	=> nrel_main_idtf:
@@ -138,7 +240,17 @@ new_searchElStr5
 		[scp-operator of five-element structure search]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_searchElStr5.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_searchElStr3
 	=> nrel_main_idtf:
@@ -147,7 +259,17 @@ new_searchElStr3
 		[scp-operator of three-element structure search]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_searchElStr3.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_scp_operator_of_sc_structure_deleting
 	=> nrel_main_idtf:
@@ -156,7 +278,17 @@ new_scp_operator_of_sc_structure_deleting
 		[scp-operator of structure deleting]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_scp_operator_of_sc_structure_deleting.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);
 	<= nrel_subdividing: 
 	{
 		new_eraseEl;
@@ -173,7 +305,17 @@ new_eraseEl
 		[scp-operator of one-element structure deleting]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_eraseEl.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_eraseElStr3
 	=> nrel_main_idtf:
@@ -182,7 +324,17 @@ new_eraseElStr3
 		[scp-operator of three-element structure deleting]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_eraseElStr3.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_eraseElStr5
 	=> nrel_main_idtf:
@@ -191,7 +343,17 @@ new_eraseElStr5
 		[scp-operator of five-element structure deleting]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_eraseElStr5.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_eraseSetStr3
 	=> nrel_main_idtf:
@@ -200,7 +362,17 @@ new_eraseSetStr3
 		[scp-operator of three-element structure set deleting]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_eraseSetStr3.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 /*под вопросом существования*/
 new_eraseSetStr5
@@ -210,7 +382,17 @@ new_eraseSetStr5
 		[scp-operator of five-element structure set deleting]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_eraseSetStr5.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_scp_operator_of_conditions_check
 	=> nrel_main_idtf:
@@ -219,7 +401,17 @@ new_scp_operator_of_conditions_check
 		[scp-operator of conditions check]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_scp_operator_of_conditions_check.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);
 	<= nrel_subdividing: 
 	{
 		new_ifType;
@@ -237,7 +429,17 @@ new_ifType
 		[scp-operator of sc-element type check]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_ifType.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_ifVarAssign
 	=> nrel_main_idtf:
@@ -246,7 +448,17 @@ new_ifVarAssign
 		[scp-operator of check is variable assigned]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_ifVarAssign.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_ifFormCont
 	=> nrel_main_idtf:
@@ -255,7 +467,17 @@ new_ifFormCont
 		[scp-operator of check is file content exist]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_ifFormCont.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_ifCoin
 	=> nrel_main_idtf:
@@ -264,7 +486,17 @@ new_ifCoin
 		[scp-operator of check of coincidence of values of operands]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_ifCoin.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_ifEq
 	=> nrel_main_idtf:
@@ -273,7 +505,17 @@ new_ifEq
 		[scp-operator of check of equality of numerical contents of files]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_ifEq.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_ifGr
 	=> nrel_main_idtf:
@@ -282,7 +524,17 @@ new_ifGr
 		[scp-operator of comparison of numerical contents of files]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_ifGr.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_scp_operator_of_scp_operand_value_control
 	=> nrel_main_idtf:
@@ -291,7 +543,17 @@ new_scp_operator_of_scp_operand_value_control
 		[scp-operator of scp-operand value control]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_scp_operator_of_scp_operand_value_control.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);
 	<= nrel_subdividing: 
 	{
 		new_varAssign;
@@ -305,7 +567,17 @@ new_varAssign
 		[scp-operator of assign value to scp-variable]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_varAssign.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_varErase
 	=> nrel_main_idtf:
@@ -314,7 +586,17 @@ new_varErase
 		[scp-operator of scp-variable value erasing]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_varErase.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_scp_operator_of_scp_process_control
 	=> nrel_main_idtf:
@@ -323,7 +605,17 @@ new_scp_operator_of_scp_process_control
 		[scp-operator of scp-process control]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_scp_operator_of_scp_process_control.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);
 	<= nrel_subdividing: 
 	{
 		new_call;
@@ -340,7 +632,17 @@ new_call
 		[scp-operator of an asynchronous call of the subprogramme]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_call.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_waitReturn
 	=> nrel_main_idtf:
@@ -349,7 +651,17 @@ new_waitReturn
 		[scp-operator of waiting of completion of scp-program]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_waitReturn.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_waitReturnSet
 	=> nrel_main_idtf:
@@ -358,7 +670,17 @@ new_waitReturnSet
 		[scp-operator of waiting of completion of set of scp-programs]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_waitReturnSet.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_return
 	=> nrel_main_idtf:
@@ -367,7 +689,17 @@ new_return
 		[scp-operator of completion of scp-program]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_return.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 /*syncronize*/
 new_scp_operators_conjunction
@@ -377,7 +709,17 @@ new_scp_operators_conjunction
 		[conjunction of previous scp-operators]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_scp_operators_conjunction.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_scp_operator_of_event_control
 	=> nrel_main_idtf:
@@ -386,7 +728,17 @@ new_scp_operator_of_event_control
 		[scp-operator of event control]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_scp_operator_of_event_control.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);
 	<= nrel_subdividing: 
 	{
 		new_sys_wait
@@ -399,7 +751,17 @@ new_sys_wait
 		[scp-operator of event waiting]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_sys_wait.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_scp_operator_of_file_content_process
 	=> nrel_main_idtf:
@@ -408,7 +770,17 @@ new_scp_operator_of_file_content_process
 		[scp-operator of file content process]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_scp_operator_of_file_content_process.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);
 	<= nrel_subdividing: 
 	{
 		new_contAdd;
@@ -448,7 +820,17 @@ new_contAdd
 		[scp-operator of comparison of numerical contents of files]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_contAdd.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_contSub
 	=> nrel_main_idtf:
@@ -457,7 +839,17 @@ new_contSub
 		[scp-operator of addition of numerical contents of files]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_contSub.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_contMult
 	=> nrel_main_idtf:
@@ -466,7 +858,17 @@ new_contMult
 		[scp-operator of multiplication of numerical contents of files]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_contMult.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_contDiv
 	=> nrel_main_idtf:
@@ -475,7 +877,17 @@ new_contDiv
 		[scp-operator of division of numerical contents of files]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_contDiv.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_contPow
 	=> nrel_main_idtf:
@@ -484,7 +896,17 @@ new_contPow
 		[scp-operator of raising of numerical contents of file to power exponent]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_contPow.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_contLn
 	=> nrel_main_idtf:
@@ -493,7 +915,17 @@ new_contLn
 		[scp-operator of computation of a logarithm of numerical contents of the file]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_contLn.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_contSin
 	=> nrel_main_idtf:
@@ -502,7 +934,17 @@ new_contSin
 		[scp-operator of computation of a Sin of numerical contents of the file]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_contSin.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_contCos
 	=> nrel_main_idtf:
@@ -511,7 +953,17 @@ new_contCos
 		[scp-operator of computation of a Cos of numerical contents of the file]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_contCos.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_contTg
 	=> nrel_main_idtf:
@@ -520,7 +972,17 @@ new_contTg
 		[scp-operator of computation of a Tg of numerical contents of the file]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_contTg.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_contASin
 	=> nrel_main_idtf:
@@ -529,7 +991,17 @@ new_contASin
 		[scp-operator of computation of a arcSin of numerical contents of the file]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_contASin.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_contACos
 	=> nrel_main_idtf:
@@ -538,7 +1010,17 @@ new_contACos
 		[scp-operator of computation of a arcCos of numerical contents of the file]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_contACos.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_contATg
 	=> nrel_main_idtf:
@@ -547,7 +1029,17 @@ new_contATg
 		[scp-operator of computation of a arcTg of numerical contents of the file]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_contATg.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_contDivInt
 	=> nrel_main_idtf:
@@ -556,7 +1048,17 @@ new_contDivInt
 		[scp-operator of getting integer part from division of numerical contents of files]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_contDivInt.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_contDivRem
 	=> nrel_main_idtf:
@@ -565,7 +1067,17 @@ new_contDivRem
 		[scp-operator of getting of remainder from division of numerical contents of files]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_contDivRem.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_contAssign
 	=> nrel_main_idtf:
@@ -574,7 +1086,17 @@ new_contAssign
 		[scp-operator of copying of contents of the file]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_contAssign.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_contErase
 	=> nrel_main_idtf:
@@ -583,98 +1105,238 @@ new_contErase
 		[scp-operator of erasing of contents of the file]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_contErase.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_stringToUpperCase
 	=> nrel_main_idtf:
 		[scp-оператор перевода в верхний регистр строкового содержимого файла]
 		(*<- lang_ru;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_stringToUpperCase.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_stringToLowerCase
 	=> nrel_main_idtf:
 		[scp-оператор перевода в нижний регистр строкового содержимого файла]
 		(*<- lang_ru;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_stringToLowerCase.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_stringReplace
 	=> nrel_main_idtf:
 		[scp-оператор замены определенной части строкового содержимого файла на содержимое указанного файла]
 		(*<- lang_ru;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_stringReplace.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_stringEndsWith
 	=> nrel_main_idtf:
 		[scp-оператор проверки совпадения конца строкового содержимого файла со строковом содержимым другой файла]
 		(*<- lang_ru;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_stringEndsWith.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_stringStartsWith
 	=> nrel_main_idtf:
 		[scp-оператор проверки совпадения начальной части строкового содержимого файла со строковом содержимым другой файла]
 		(*<- lang_ru;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_stringStartsWith.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_stringSlice
 	=> nrel_main_idtf:
 		[scp-оператор получения части строкового содержимого файла по индексам]
 		(*<- lang_ru;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_stringSlice.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_stringSub
 	=> nrel_main_idtf:
 		[scp-оператор поиска строкового содержимого файла в строковом содержимом другой файла]
 		(*<- lang_ru;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_stringSub.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_stringLen
 	=> nrel_main_idtf:
 		[scp-оператор вычисления длины строкового содержимого файла]
 		(*<- lang_ru;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_stringLen.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_stringSplit
 	=> nrel_main_idtf:
 		[scp-оператор разбиения строки на подстроки]
 		(*<- lang_ru;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_stringSplit.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_stringIfGr
 	=> nrel_main_idtf:
 		[scp-оператор лексикографического сравнения строковых содержимых файлов]
 		(*<- lang_ru;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_stringIfGr.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_stringIfEq
 	=> nrel_main_idtf:
 		[scp-оператор проверки равенства строковых содержимых файлов]
 		(*<- lang_ru;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_stringIfEq.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_stringIfEq
 	=> nrel_main_idtf:
 		[scp-оператор проверки равенства строковых содержимых файлов]
 		(*<- lang_ru;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_stringIfEq.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_contStringConcat
 	=> nrel_main_idtf:
 		[scp-оператор конкатенации строковых содержимых файлов]
 		(*<- lang_ru;;*);
 	<- rrel_key_sc_element:
-		...;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_contStringConcat.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);
 
 new_scp_operator_of_information_output_to_consol
 	=> nrel_main_idtf:
@@ -683,7 +1345,17 @@ new_scp_operator_of_information_output_to_consol
 		[scp-operator of information output to consol]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_scp_operator_of_information_output_to_consol.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);
 	<= nrel_subdividing: 
 	{
 		new_print;
@@ -698,7 +1370,17 @@ new_print
 		[scp-operator of print content of file to consol]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_print.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_printNl
 	=> nrel_main_idtf:
@@ -707,7 +1389,17 @@ new_printNl
 		[scp-operator of print content of file to consol followed by a carriage return character and a newline character]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_printNl.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_printEl
 	=> nrel_main_idtf:
@@ -716,14 +1408,34 @@ new_printEl
 		[scp-operator of printout of semantic neighborhood of a sc-element]
 		(*<- lang_en;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_printEl.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_scp_operator_of_lock_management
 	=> nrel_main_idtf:
 		[scp-оператор управления блокировками]
 		(*<- lang_ru;;*);
 	<- rrel_key_sc_element:
-		...;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_scp_operator_of_lock_management.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);
 	<= nrel_subdividing: 
 	{
 		new_unlockProc;
@@ -742,59 +1454,149 @@ new_unlockProc
 		[scp-оператор снятия всех блокировок данного scp-процесса]
 		(*<- lang_ru;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_unlockProc.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_unlockEl
 	=> nrel_main_idtf:
 		[scp-оператор снятия блокировки с sc-элемента]
 		(*<- lang_ru;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_unlockEl.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_lockEl
 	=> nrel_main_idtf:
 		[scp-оператор установки полной блокировки на sc-элемент]
 		(*<- lang_ru;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_lockEl.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_lockElEdit
 	=> nrel_main_idtf:
 		[scp-оператор установки блокировки на изменение sc-элемента]
 		(*<- lang_ru;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_lockElEdit.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_lockElRemove
 	=> nrel_main_idtf:
 		[scp-оператор установки блокировки на удаление sc-элемент]
 		(*<- lang_ru;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_lockElRemove.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_unlockElStr
 	=> nrel_main_idtf:
 		[scp-оператор снятия блокировки со структуры]
 		(*<- lang_ru;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_unlockElStr.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_lockElStr
 	=> nrel_main_idtf:
 		[scp-оператор установки полной блокировки на структуру]
 		(*<- lang_ru;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_lockElStr.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_lockElStrEdit
 	=> nrscp-оператор установки блокировки на изменение структуры]
 		(*<- lang_ru;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_lockElStrEdit.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 new_lockElStrRemove
 	=> nrel_main_idtf:
 		[scp-оператор установки блокировки на удаление структуры]
 		(*<- lang_ru;;*);
 	<- rrel_key_sc_element:
-		...;;
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://htmls/new_lockElStrRemove.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
