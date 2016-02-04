@@ -379,7 +379,6 @@ new_eraseSetStr3
 				*);;
 		*);;
 
-/*под вопросом существования*/
 new_eraseSetStr5
 	=> nrel_main_idtf:
 		[scp-оператор удаления множества элементов пятиэлементной структуры]
@@ -803,7 +802,7 @@ new_scp_operator_of_file_content_process
 		new_contDivInt;
 		new_contDivRem;
 		new_contAssign;	
-		new_contErase
+		new_contErase;
 		new_stringLen;
 		new_contStringConcat;
 		new_stringSub;
@@ -1619,9 +1618,9 @@ scp_operator_atomic_type
 			<= nrel_sc_text_translation:	
 				...
 				(*
-					-> rrel_example:
-						[Под атомарным типом scp-оператора понимается такой подкласс класса scp-операторов, который больше не разбивается на подклассы.]
-						(*<- lang_ru;;*);;
+				-> rrel_example:
+					"file://content_html/scp_operator_atomic_type.html"
+						(* <- lang_ru;; *);; 
 				*);;
 		*);;
 
@@ -1636,11 +1635,11 @@ rrel_init
 		rrel_1;
 
 	<- rrel_key_sc_element:
-		..key_node_rrel_init
+		...
 		(*
 			<- sc_explanation;;
 			<= nrel_sc_text_translation:	
-				..translation_rrel_init
+				...
 				(*
 					-> rrel_example:
 						"file://content_html/explanation_for_rrel_init.html"
@@ -1648,4 +1647,372 @@ rrel_init
 				*);;
 		*);;
 
-		
+rrel_param
+	=> nrel_main_idtf:
+		[параметр scp-программы']
+		(*<- lang_ru;;*);
+
+	<= nrel_inclusion:
+		rrel_argument_of_action;
+
+	<= nrel_subdividing: 
+	{
+		rrel_in;
+		rrel_out
+	};
+
+	<- rrel_key_sc_element:
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				...
+				(*
+					-> rrel_example:
+						"file://content_html/explanation_for_rrel_param.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+rrel_in
+	=> nrel_main_idtf:
+		[in-параметр']
+		(*<- lang_ru;;*);
+		[in-parameter']
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				...
+				(*
+					-> rrel_example:
+						"file://content_html/explanation_for_rrel_in.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+rrel_out
+	=> nrel_main_idtf:
+		[out-параметр']
+		(*<- lang_ru;;*);
+		[out-parameter']
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				...
+				(*
+					-> rrel_example:
+						"file://content_html/explanation_for_rrel_out.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+rrel_scp_operand
+	=> nrel_main_idtf:
+		[scp-операнда']
+		(*<- lang_ru;;*);
+		[scp-operand']
+		(*<- lang_en;;*);
+
+	<-role_relation;
+	<-minor_concept;
+
+	<- rrel_key_sc_element:
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				...
+				(*
+					-> rrel_example:
+						"file://content_html/explanation_for_rrel_scp_operand.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);
+
+	<= nrel_inclusion:
+		rrel_argument_of_action;
+
+	<= nrel_subdividing: 
+	{
+		rrel_scp_const;
+		rrel_scp_var
+	};
+
+	<= nrel_subdividing: 
+	{
+		rrel_fixed;
+		rrel_assign
+	};
+
+	<= nrel_subdividing: 
+	{
+		rrel_const;
+		rrel_var
+	};
+
+	=> nrel_inclusion:
+		rrel_set;
+		rrel_erase;
+		rrel_type_of_sc_element;;
+
+rrel_scp_const
+	=> nrel_main_idtf:
+		[scp-константа']
+		(*<- lang_ru;;*);
+		[scp-constant']
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				...
+				(*
+					-> rrel_example:
+						"file://content_html/explanation_for_rrel_scp_const.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+rrel_scp_var
+	=> nrel_main_idtf:
+		[scp-переменная']
+		(*<- lang_ru;;*);
+		[scp-variable']
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				...
+				(*
+					-> rrel_example:
+						"file://content_html/explanation_for_rrel_scp_var.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+rrel_fixed
+	=> nrel_main_idtf:
+		[scp-операнд с заданным значением']
+		(*<- lang_ru;;*);
+		[scp-operand with fixed value']
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				...
+				(*
+					-> rrel_example:
+						"file://content_html/explanation_for_rrel_fixed.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+rrel_assign
+	=> nrel_main_idtf:
+		[scp-операнд со свободным значением']
+		(*<- lang_ru;;*);
+		[scp-operand with assign value']
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				...
+				(*
+					-> rrel_example:
+						"file://content_html/explanation_for_rrel_assign.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+rrel_set
+	=> nrel_main_idtf:
+		[формируемое множество']
+		(*<- lang_ru;;*);
+		[created set']
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				...
+				(*
+					-> rrel_example:
+						"file://content_html/explanation_for_rrel_set.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);
+	=> nrel_subdividing:
+	{
+        rrel_set_1;
+        rrel_set_2;
+        rrel_set_3;
+        rrel_set_4;
+        rrel_set_5
+    };;
+
+
+rrel_erase
+	=> nrel_main_idtf:
+		[удаляемый sc-элемент']
+		(*<- lang_ru;;*);
+		[deleted sc-element']
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				...
+				(*
+					-> rrel_example:
+						"file://content_html/explanation_for_rrel_erase.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+rrel_type_of_sc_element
+	=> nrel_main_idtf:
+		[тип sc-элемента']
+		(*<- lang_ru;;*);
+		[type of sc-element']
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				...
+				(*
+					-> rrel_example:
+						"file://content_html/explanation_for_rrel_type_of_sc_element.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);
+	<= nrel_subdividing: 
+	{
+		rrel_node;
+		rrel_arc;
+		rrel_edge;
+		rrel_file
+	};;
+
+rrel_node
+	<= nrel_subdividing: 
+	{
+		rrel_struct;
+		rrel_relation;
+		rrel_class
+	};;
+
+rrel_relation
+	=> nrel_inclusion:
+		rrel_role_relation;;
+
+rrel_arc
+	<= nrel_subdividing: 
+	{
+		rrel_common;
+		rrel_access
+	};;
+
+rrel_access
+	<= nrel_subdividing: 
+	{
+		rrel_pos;
+		rrel_neg;
+		rrel_fuz
+	};
+	<= nrel_subdividing: 
+	{
+		rrel_temp;
+		rrel_perm
+	};;
+
+nrel_goto
+	=> nrel_main_idtf:
+		[следующий оператор*]
+		(*<- lang_ru;;*);
+		[next operator*]
+		(*<- lang_en;;*);
+
+	<= nrel_inclusion:
+		nrel_sequence_of_actions;
+
+	<- rrel_key_sc_element:
+		..key_node_nrel_goto
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_nrel_goto
+				(*
+					-> rrel_example:
+						"file://content_html/explanation_for_nrel_goto.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);
+
+	<= nrel_subdividing: 
+	{
+		nrel_then;
+		nrel_else
+	};;
+
+nrel_then
+	=> nrel_main_idtf:
+		[следующий оператор при успешном выполнении*]
+		(*<- lang_ru;;*);
+		[next operator if current is successfully executed']
+		(*<- lang_en;;*);
+
+	<= nrel_inclusion:
+		nrel_sequence_of_actions_positive_result;
+
+	<- rrel_key_sc_element:
+		..key_node_nrel_then
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_nrel_then
+				(*
+					-> rrel_example:
+						"file://content_html/explanation_for_nrel_then.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+nrel_else
+	=> nrel_main_idtf:
+		[следующий оператор при безуспешном выполнении*]
+		(*<- lang_ru;;*);
+		[next operator if current is unsuccessfully executed']
+		(*<- lang_en;;*);
+
+	<= nrel_inclusion:
+		nrel_sequence_of_actions_negative_result;
+
+	<- rrel_key_sc_element:
+		..key_node_nrel_else
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				..translation_nrel_else
+				(*
+					-> rrel_example:
+						"file://content_html/explanation_for_nrel_else.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
