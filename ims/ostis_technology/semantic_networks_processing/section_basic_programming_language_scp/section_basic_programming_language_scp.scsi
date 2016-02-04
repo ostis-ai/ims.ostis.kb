@@ -95,7 +95,15 @@ new_sys_gen
 					"file://content_html/new_sys_gen.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
+		*);
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_sys_gen1.png";
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_sys_gen2.png";
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_sys_gen3.png";
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_sys_gen4.png";;
 
 new_genElStr5
 	=> nrel_main_idtf:
@@ -114,7 +122,13 @@ new_genElStr5
 					"file://content_html/new_genElStr5.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
+		*);
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_genElStr51.png";
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_genElStr52.png";
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_genElStr53.png";;
 
 new_genElStr3
 	=> nrel_main_idtf:
@@ -133,7 +147,21 @@ new_genElStr3
 					"file://content_html/new_genElStr3.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
+		*);
+	-> rrel_example:
+		..scp_operator_example_genElStr3 (*
+			-> rrel_1: rrel_fixed: rrel_scp_var: .._set_genElStr3;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: .._arc1_genElStr3;;
+			-> rrel_3: rrel_assign: rrel_scp_var: .._element_genElStr3;;
+
+			=> nrel_goto: ..scp_operator_example_goto_genElStr3;;
+		*);
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_genElStr31.png";
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_genElStr32.png";
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_genElStr33.png";;
 
 new_genEl
 	=> nrel_main_idtf:
@@ -152,7 +180,18 @@ new_genEl
 					"file://content_html/new_genEl.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
+		*);
+	-> rrel_example:
+		..scp_operator_example_genEl (*
+			-> rrel_1: rrel_assign: rrel_const: rrel_node: rrel_scp_var: .._elem1_genEl;;
+			=> nrel_goto: ..scp_operator_example_goto_genEl;;
+		*);
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_genEl1.png";
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_genEl2.png";
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_genEl3.png";;
 
 new_scp_operator_of_structure_associative_search
 	=> nrel_main_idtf:
@@ -198,7 +237,11 @@ new_sys_search
 					"file://content_html/new_sys_search.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
+		*);
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_sys_search1.png";
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_sys_search2.png";;
 
 new_searchSetStr5
 	=> nrel_main_idtf:
@@ -236,7 +279,9 @@ new_searchSetStr3
 					"file://content_html/new_searchSetStr3.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
+		*);
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_searchElStr31.png";;
 
 new_searchElStr5
 	=> nrel_main_idtf:
@@ -320,7 +365,13 @@ new_eraseEl
 					"file://content_html/new_eraseEl.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
+		*);
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_eraseEl1.png";
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_eraseEl2.png";
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_eraseEl3.png";;
 
 new_eraseElStr3
 	=> nrel_main_idtf:
@@ -339,7 +390,11 @@ new_eraseElStr3
 					"file://content_html/new_eraseElStr3.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
+		*);
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_eraseElStr31.png";
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_eraseElStr32.png";;
 
 new_eraseElStr5
 	=> nrel_main_idtf:
@@ -358,7 +413,9 @@ new_eraseElStr5
 					"file://content_html/new_eraseElStr5.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
+		*)
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_eraseElStr51.png";;
 
 new_eraseSetStr3
 	=> nrel_main_idtf:
@@ -377,7 +434,13 @@ new_eraseSetStr3
 					"file://content_html/new_eraseSetStr3.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
+		*);
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_eraseSetStr31.png";
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_eraseSetStr32.png";
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_eraseSetStr33.png";;
 
 new_eraseSetStr5
 	=> nrel_main_idtf:
@@ -396,7 +459,10 @@ new_eraseSetStr5
 					"file://content_html/new_eraseSetStr5.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_eraseSetStr51.png";
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_eraseSetStr52.png";;
 
 new_scp_operator_of_conditions_check
 	=> nrel_main_idtf:
@@ -443,7 +509,13 @@ new_ifType
 					"file://content_html/new_ifType.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
+		*);
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_ifType1.png";
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_ifType2.png";
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_ifType3.png";;
 
 new_ifVarAssign
 	=> nrel_main_idtf:
@@ -462,7 +534,11 @@ new_ifVarAssign
 					"file://content_html/new_ifVarAssign.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
+		*);
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_ifVarAssign1.png";
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_ifVarAssign2.png";;
 
 new_ifFormCont
 	=> nrel_main_idtf:
@@ -500,7 +576,11 @@ new_ifCoin
 					"file://content_html/new_ifCoin.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
+		*);
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_ifCoin1.png";
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_ifCoin2.png";;
 
 new_ifEq
 	=> nrel_main_idtf:
@@ -519,7 +599,13 @@ new_ifEq
 					"file://content_html/new_ifEq.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
+		*);
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_ifEq1.png";
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_ifEq2.png";
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_ifEq3.png";;
 
 new_ifGr
 	=> nrel_main_idtf:
@@ -538,7 +624,11 @@ new_ifGr
 					"file://content_html/new_ifGr.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
+		*);
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_ifGr1.png";
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_ifGr2.png";;
 
 new_scp_operator_of_scp_operand_value_control
 	=> nrel_main_idtf:
@@ -581,7 +671,11 @@ new_varAssign
 					"file://content_html/new_varAssign.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
+		*);
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_varAssign1.png";
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_varAssign2.png";;
 
 new_varErase
 	=> nrel_main_idtf:
@@ -600,7 +694,11 @@ new_varErase
 					"file://content_html/new_varErase.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
+		*);
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_varErase1.png";
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_varErase2.png";;
 
 new_scp_operator_of_scp_process_control
 	=> nrel_main_idtf:
@@ -646,7 +744,9 @@ new_call
 					"file://content_html/new_call.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
+		*);
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_call.png";;
 
 new_waitReturn
 	=> nrel_main_idtf:
@@ -665,7 +765,9 @@ new_waitReturn
 					"file://content_html/new_waitReturn.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
+		*);
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_waitReturn.png";;
 
 new_waitReturnSet
 	=> nrel_main_idtf:
@@ -684,7 +786,9 @@ new_waitReturnSet
 					"file://content_html/new_waitReturnSet.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
+		*);
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_waitReturnSet.png";;
 
 new_return
 	=> nrel_main_idtf:
@@ -765,7 +869,9 @@ new_sys_wait
 					"file://content_html/new_sys_wait.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
+		*);
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_sys_wait.png";;
 
 new_scp_operator_of_file_content_process
 	=> nrel_main_idtf:
@@ -834,7 +940,9 @@ new_contAdd
 					"file://content_html/new_contAdd.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
+		*);
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_contAdd.png";;
 
 new_contSub
 	=> nrel_main_idtf:
@@ -853,7 +961,8 @@ new_contSub
 					"file://content_html/new_contSub.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_contSub.png";;
 
 new_contMult
 	=> nrel_main_idtf:
@@ -872,7 +981,9 @@ new_contMult
 					"file://content_html/new_contMult.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
+		*);
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_contMult.png";;
 
 new_contDiv
 	=> nrel_main_idtf:
@@ -891,7 +1002,9 @@ new_contDiv
 					"file://content_html/new_contDiv.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
+		*);
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_contDiv.png";;
 
 new_contPow
 	=> nrel_main_idtf:
@@ -910,7 +1023,9 @@ new_contPow
 					"file://content_html/new_contPow.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
+		*);
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_contPow.png";;
 
 new_contLn
 	=> nrel_main_idtf:
@@ -929,7 +1044,9 @@ new_contLn
 					"file://content_html/new_contLn.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
+		*);
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_contLn.png";;
 
 new_contSin
 	=> nrel_main_idtf:
@@ -949,6 +1066,9 @@ new_contSin
 						(* <- lang_ru;; *);; 
 				*);;
 		*);;
+		*);
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_contSin.png";;
 
 new_contCos
 	=> nrel_main_idtf:
@@ -967,8 +1087,9 @@ new_contCos
 					"file://content_html/new_contCos.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
-
+		*);
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_contCos.png";;
 new_contTg
 	=> nrel_main_idtf:
 		[scp-оператор вычисления тангенса числового содержимого файла]
@@ -986,7 +1107,9 @@ new_contTg
 					"file://content_html/new_contTg.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
+		*);
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_contTg.png";;
 
 new_contASin
 	=> nrel_main_idtf:
@@ -1005,7 +1128,9 @@ new_contASin
 					"file://content_html/new_contASin.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
+		*);
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_contASin.png";;
 
 new_contACos
 	=> nrel_main_idtf:
@@ -1024,7 +1149,9 @@ new_contACos
 					"file://content_html/new_contACos.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
+		*);
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_contACos.png";;
 
 new_contATg
 	=> nrel_main_idtf:
@@ -1043,7 +1170,9 @@ new_contATg
 					"file://content_html/new_contATg.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
+		*);
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_contATg.png";;
 
 new_contDivInt
 	=> nrel_main_idtf:
@@ -1100,7 +1229,11 @@ new_contAssign
 					"file://content_html/new_contAssign.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
+		*);
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_contAssign_1.png";
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_contAssign_2.png";;
 
 new_contErase
 	=> nrel_main_idtf:
@@ -1119,7 +1252,9 @@ new_contErase
 					"file://content_html/new_contErase.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
+		*);
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_contErase_2.png";;
 
 new_stringToUpperCase
 	=> nrel_main_idtf:
@@ -1136,7 +1271,9 @@ new_stringToUpperCase
 					"file://content_html/new_stringToUpperCase.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
+		*);
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_stringToUpperCase.png";;
 
 new_stringToLowerCase
 	=> nrel_main_idtf:
@@ -1153,7 +1290,9 @@ new_stringToLowerCase
 					"file://content_html/new_stringToLowerCase.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
+		*);
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_stringToLowerCase.png";;
 
 new_stringReplace
 	=> nrel_main_idtf:
@@ -1170,7 +1309,9 @@ new_stringReplace
 					"file://content_html/new_stringReplace.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
+		*);
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_stringReplace.png";;
 
 new_stringEndsWith
 	=> nrel_main_idtf:
@@ -1187,7 +1328,9 @@ new_stringEndsWith
 					"file://content_html/new_stringEndsWith.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
+		*);
+	<= nrel_using_example:
+		"file://content_images/scp_operator_example_stringEndsWith.png";;
 
 new_stringStartsWith
 	=> nrel_main_idtf:
@@ -1204,7 +1347,9 @@ new_stringStartsWith
 					"file://content_html/new_stringStartsWith.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
+		*);
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_stringStartsWith.png";;
 
 new_stringSlice
 	=> nrel_main_idtf:
@@ -1221,7 +1366,9 @@ new_stringSlice
 					"file://content_html/new_stringSlice.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
+		*);
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_stringSlice.png";;
 
 new_stringSub
 	=> nrel_main_idtf:
@@ -1238,7 +1385,9 @@ new_stringSub
 					"file://content_html/new_stringSub.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
+		*);
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_stringSub.png";;
 
 new_stringLen
 	=> nrel_main_idtf:
@@ -1255,7 +1404,9 @@ new_stringLen
 					"file://content_html/new_stringLen.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
+		*);
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_stringLen.png";;
 
 new_stringSplit
 	=> nrel_main_idtf:
@@ -1272,7 +1423,9 @@ new_stringSplit
 					"file://content_html/new_stringSplit.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
+		*);
+	<= nrel_using_example:
+		"file://content_images/scp_operator_example_stringSplit.png";;
 
 new_stringIfGr
 	=> nrel_main_idtf:
@@ -1289,7 +1442,9 @@ new_stringIfGr
 					"file://content_html/new_stringIfGr.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
+		*);
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_stringIfGr.png";;
 
 new_stringIfEq
 	=> nrel_main_idtf:
@@ -1306,25 +1461,10 @@ new_stringIfEq
 					"file://content_html/new_stringIfEq.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
-
-new_stringIfEq
-	=> nrel_main_idtf:
-		[scp-оператор проверки равенства строковых содержимых файлов]
-		(*<- lang_ru;;*);
-	<- rrel_key_sc_element:
-		...
-		(*
-			<- sc_explanation;;
-			<= nrel_sc_text_translation:
-				...
-				(*
-				-> rrel_example:
-					"file://content_html/new_stringIfEq.html"
-						(* <- lang_ru;; *);; 
-				*);;
-		*);;
-
+		*);
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_stringIfEq.png";;
+		
 new_contStringConcat
 	=> nrel_main_idtf:
 		[scp-оператор конкатенации строковых содержимых файлов]
@@ -1341,6 +1481,8 @@ new_contStringConcat
 						(* <- lang_ru;; *);; 
 				*);;
 		*);
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_contStringConcat.png";;
 
 new_scp_operator_of_information_output_to_consol
 	=> nrel_main_idtf:
@@ -1384,7 +1526,11 @@ new_print
 					"file://content_html/new_print.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
+		*);
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_print1.png";
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_print2.png";;
 
 new_printNl
 	=> nrel_main_idtf:
@@ -1403,7 +1549,11 @@ new_printNl
 					"file://content_html/new_printNl.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
+		*);
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_printNl1.png";
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_printNl2.png";;
 
 new_printEl
 	=> nrel_main_idtf:
@@ -1422,7 +1572,9 @@ new_printEl
 					"file://content_html/new_printEl.html"
 						(* <- lang_ru;; *);; 
 				*);;
-		*);;
+		*);
+	<=nrel_using_example:
+		"file://content_images/scp_operator_example_printEl1.png";;
 
 new_scp_operator_of_lock_management
 	=> nrel_main_idtf:
