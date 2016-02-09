@@ -32,6 +32,7 @@ subject_domain_of_subject_domains
 		
 
 subject_domain
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[предметная область]
 	(* <- lang_ru;; *);
@@ -76,6 +77,7 @@ subject_domain
 		};;
 	
 stationary_subject_domain
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[стационарная предметная область]
 	(* <- lang_ru;; *);
@@ -103,6 +105,7 @@ stationary_subject_domain
 
 
 non_stationary_subject_domain
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[нестационарная предметная область]
 	(* <- lang_ru;; *);
@@ -131,6 +134,7 @@ non_stationary_subject_domain
 	
 	
 rrel_concept_subject_domain
+<- sc_node_role_relation;
 => nrel_main_idtf:
 	[понятие предметной области']
 	(* <- lang_ru;; *);
@@ -165,6 +169,7 @@ rrel_concept_subject_domain
 
 	
 concept
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[понятие]
 	(* <- lang_ru;; *);
@@ -195,6 +200,7 @@ concept
 	
 
 rrel_explored_concept
+<- sc_node_role_relation;
 => nrel_main_idtf:
 	[исследуемое понятие']
 	(* <- lang_ru;; *);
@@ -242,6 +248,7 @@ rrel_explored_concept
 	*);;	
 	
 rrel_maximum_studied_object_class
+<- sc_node_role_relation;
 => nrel_main_idtf:
 	[максимальный класс объектов исследования']
 	(* <- lang_ru;; *);
@@ -268,6 +275,7 @@ rrel_maximum_studied_object_class
 	
 	
 rrel_not_maximum_studied_object_class
+<- sc_node_role_relation;
 => nrel_main_idtf:
 	[немаксимальный класс объектов исследования']
 	(* <- lang_ru;; *);
@@ -294,6 +302,7 @@ rrel_not_maximum_studied_object_class
 	
 	
 rrel_explored_primary_elements_class
+<- sc_node_role_relation;
 => nrel_main_idtf:
 	[исследуемый класс первичных элементов']
 	(* <- lang_ru;; *);
@@ -317,6 +326,7 @@ rrel_explored_primary_elements_class
 	*);;
 	
 rrel_explored_relation
+<- sc_node_role_relation;
 => nrel_main_idtf:
 	[исследуемое отношение']
 	(* <- lang_ru;; *);
@@ -343,6 +353,7 @@ rrel_explored_relation
 	
 	
 rrel_explored_structures_class
+<- sc_node_role_relation;
 => nrel_main_idtf:
 	[класс исследуемых структур']
 	(* <- lang_ru;; *);
@@ -369,6 +380,7 @@ rrel_explored_structures_class
 	
 	
 rrel_explored_in_subject_subdomain_concept
+<- sc_node_role_relation;
 => nrel_main_idtf:
 	[понятие, исследуемое в предметной подобласти']
 	(* <- lang_ru;; *);
@@ -402,6 +414,7 @@ rrel_explored_in_subject_subdomain_concept
 
 
 rrel_explored_general_subject_domain_concept
+<- sc_node_role_relation;
 => nrel_main_idtf:
 	[понятие, исследуемое в более общей предметной области']
 	(* <- lang_ru;; *);
@@ -428,6 +441,7 @@ rrel_explored_general_subject_domain_concept
 	*);;
 
 rrel_explored_non_related_subject_domain_concept
+<- sc_node_role_relation;
 => nrel_main_idtf:
 	[понятие, исследуемое в неродственной предметной области']
 	(* <- lang_ru;; *);
@@ -454,6 +468,7 @@ rrel_explored_non_related_subject_domain_concept
 	*);;
 	
 nrel_private_subject_domain
+<- sc_node_norole_relation;
 => nrel_main_idtf:
 	[частная предметная область*]
 	(* <- lang_ru;; *);
@@ -496,6 +511,7 @@ nrel_private_subject_domain
 	
 	
 nrel_primary_elements_class_private_subject_domain
+<- sc_node_norole_relation;
 => nrel_main_idtf:
 	[частная предметная область по классу первичных элементов*]
 	(* <- lang_ru;; *);
@@ -508,6 +524,7 @@ nrel_primary_elements_class_private_subject_domain
 	
 	
 nrel_explored_relations_class_private_subject_domain
+<- sc_node_norole_relation;
 => nrel_main_idtf:
 	[частная предметная область по исследуемым отношениям*]
 	(* <- lang_ru;; *);
@@ -521,6 +538,7 @@ nrel_explored_relations_class_private_subject_domain
 	(* <- lang_ru;; *);;
 	
 nrel_non_related_subject_domain
+<- sc_node_norole_relation;
 => nrel_main_idtf:
 	[неродственные предметные области*]
 	(* <- lang_ru;; *);
@@ -549,6 +567,7 @@ nrel_non_related_subject_domain
 	
 
 sc_lang
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[sc-язык]
 	(* <- lang_ru;; *);
@@ -576,6 +595,7 @@ sc_lang
 	*);;
 
 sc_lang_and_appropriate_subject_domain
+<- sc_node_norole_relation;
 => nrel_main_idtf:
 	[sc-язык и соответствующая предметная область*]
 	(* <- lang_ru;; *);

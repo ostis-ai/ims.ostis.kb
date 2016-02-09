@@ -21,7 +21,7 @@ subjdomain_temporary_entity
 	
 
 temporary_entity
-
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[временная сущность]
 	(* <- lang_ru;; *);
@@ -71,7 +71,7 @@ temporary_entity
 	
 	
 last_entity
-
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[прошлая сущность]
 	(* <- lang_ru;; *);
@@ -90,7 +90,7 @@ last_entity
 	
 
 real_entity
-
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[настоящая сущность]
 	(* <- lang_ru;; *);
@@ -110,7 +110,7 @@ real_entity
 	
 
 future_entity
-
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[будущая сущность]
 	(* <- lang_ru;; *);
@@ -149,7 +149,7 @@ future_entity
 	
 	
 temporary_connection
-
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[временная связь]
 	(* <- lang_ru;; *);
@@ -181,7 +181,7 @@ temporary_connection
 	
 	
 situation
-
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[ситуация]
 	(* <- lang_ru;; *);
@@ -223,6 +223,7 @@ situation
 	
 	
 process
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[процесс]
 	(* <- lang_ru;; *);
@@ -269,7 +270,7 @@ process
 	
 	
 process_in_sc_memory
-
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[процесс в sc-памяти]
 	(* <- lang_ru;; *);
@@ -280,7 +281,7 @@ process_in_sc_memory
 	
 	
 process_in_the_environment_ostis_system
-
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[процесс во внешней среде ostis-системы]
 	(* <- lang_ru;; *);
@@ -291,7 +292,7 @@ process_in_the_environment_ostis_system
 
 
 material_entity
-
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[материальная сущность]
 	(* <- lang_ru;; *);
@@ -316,7 +317,7 @@ material_entity
 
 
 impact
-
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[воздействие]
 	(* <- lang_ru;; *);
@@ -526,7 +527,7 @@ relation
 
 
 class_of_temporary_connections
-
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[класс временных связей]
 	(* <- lang_ru;; *);
@@ -554,7 +555,7 @@ class_of_temporary_connections
 
 
 class_of_constant_connections
-
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[класс постоянных связей]
 	(* <- lang_ru;; *);
@@ -569,7 +570,7 @@ class_of_constant_connections
 	
 	
 class_of_temporary_and_constant_connections
-
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[класс временных и постоянных связей]
 	(* <- lang_ru;; *);
@@ -594,7 +595,7 @@ set
 	
 	
 situational_set
-
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[ситуативное множество]
 	(* <- lang_ru;; *);
@@ -623,7 +624,7 @@ situational_set
 	
 	
 non_situational_set
-
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[неситуативное множество]
 	(* <- lang_ru;; *);
@@ -648,7 +649,7 @@ non_situational_set
 	
 	
 partial_situational_set
-
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[частично ситуативное множество]
 	(* <- lang_ru;; *);
@@ -673,7 +674,7 @@ partial_situational_set
 	
 
 temporal_connection
-
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[темпоральная связь]
 	(* <- lang_ru;; *);
@@ -688,7 +689,7 @@ temporal_connection
 	
 	
 temporal_relation	
-	
+<- sc_node_not_relation;	
 => nrel_main_idtf:
 	[темпоральное отношение]
 	(* <- lang_ru;; *);
@@ -1220,7 +1221,7 @@ nrel_temporal_sequence_with_intersection
 	
 	
 begin
-
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[начало]
 	(* <- lang_ru;; *);
@@ -1279,7 +1280,7 @@ begin
 	
 
 completion
-
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[завершение]
 	(* <- lang_ru;; *);
@@ -1340,7 +1341,7 @@ completion
 	
 	
 duration
-
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[длительность]
 	(* <- lang_ru;; *);
@@ -1406,7 +1407,7 @@ duration
 
 
 millennium
-
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[тысячелетие]
 	(* <- lang_ru;; *);
@@ -1418,7 +1419,7 @@ millennium
 	
 	
 century
-
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[век]
 	(* <- lang_ru;; *);
@@ -1430,7 +1431,7 @@ century
 	
 
 year
-
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[год]
 	(* <- lang_ru;; *);
@@ -1442,7 +1443,7 @@ year
 	
 	
 month
-
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[месяц]
 	(* <- lang_ru;; *);
@@ -1454,7 +1455,7 @@ month
 	
 
 day
-
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[день]
 	(* <- lang_ru;; *);
@@ -1466,7 +1467,7 @@ day
 	
 	
 hour
-
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[час]
 	(* <- lang_ru;; *);
@@ -1478,7 +1479,7 @@ hour
 	
 	
 minute
-
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[минута]
 	(* <- lang_ru;; *);
@@ -1489,7 +1490,7 @@ minute
 	
 	
 second
-
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[секунда]
 	(* <- lang_ru;; *);

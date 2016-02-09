@@ -19,7 +19,7 @@ subjdomain_parameters_and_values
 
 
 parameter
-
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[параметр]
 	(* <- lang_ru;; *);
@@ -83,7 +83,7 @@ parameter
 
 
 nrel_param_definitional_domain
-
+<- sc_node_norole_relation;
 => nrel_main_idtf:
 	[область определения параметра*]
 	(* <- lang_ru;; *);
@@ -101,7 +101,7 @@ nrel_param_definitional_domain
 
 
 measurable_parameter
-
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[измеряемый параметр]
 	(* <- lang_ru;; *);
@@ -131,7 +131,7 @@ measurable_parameter
 
 
 immeasurable_parameter
-
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[неизмеряемый параметр]
 	(* <- lang_ru;; *);
@@ -145,7 +145,7 @@ immeasurable_parameter
 
 
 level_class_equivalence
-
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[уровень класса эквивалентности]
 	(* <- lang_ru;; *);
@@ -186,7 +186,7 @@ level_class_equivalence
 	*);;
 
 value
-
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[величина]
 	(* <- lang_ru;; *);
@@ -221,7 +221,7 @@ value
 
 
 exact_value
-
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[точная величина]
 	(* <- lang_ru;; *);
@@ -281,7 +281,7 @@ exact_value
 	*);;
 
 inaccurate_value
-
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[неточная величина]
 	(* <- lang_ru;; *);
@@ -341,7 +341,7 @@ inaccurate_value
 	*);;
 
 interval_value
-
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[интервальная величина]
 	(* <- lang_ru;; *);
@@ -400,7 +400,7 @@ interval_value
 
 
 rrel_standard
-
+<- sc_node_role_relation;
 => nrel_main_idtf:
 	[эталон']
 	(* <- lang_ru;; *);
@@ -428,7 +428,7 @@ rrel_standard
 
 
 nrel_measurement
-
+<- sc_node_norole_relation;
 => nrel_main_idtf:
 	[измерение*]
 	(* <- lang_ru;; *);
@@ -461,7 +461,7 @@ nrel_measurement
 	*);;
 
 nrel_accuracy
-
+<- sc_node_norole_relation;
 => nrel_main_idtf:
 	[точность*]
 	(* <- lang_ru;; *);
@@ -491,7 +491,7 @@ nrel_accuracy
 
 
 parametric_model
-
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[параметрическая модель]
 	(* <- lang_ru;; *);
@@ -523,7 +523,7 @@ parametric_model
 	*);;
 	
 nrel_measure
-
+<- sc_node_norole_relation;
 => nrel_main_idtf:
 	[единица измерения*]
 	(* <- lang_ru;; *);
@@ -547,7 +547,7 @@ nrel_measure
 
 
 measurement_of_fixed_measure
-
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[измерение с фиксированной единицей измерения]
 	(* <- lang_ru;; *);
@@ -571,7 +571,7 @@ measurement_of_fixed_measure
 	*);;
 
 scale
-
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[измерение по шкале]
 	(* <- lang_ru;; *);
@@ -629,7 +629,7 @@ scale
 
 
 nrel_zero_mark
-
+<- sc_node_norole_relation;
 => nrel_main_idtf:
 	[нулевая отметка*]
 	(* <- lang_ru;; *);
@@ -658,7 +658,7 @@ nrel_zero_mark
 	*);;
 
 action_measurement
-
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[действие. измерение]
 	(* <- lang_ru;; *);
@@ -678,7 +678,7 @@ action_measurement
 
 
 task_measurement
-
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[задача. измерение]
 	(* <- lang_ru;; *);
