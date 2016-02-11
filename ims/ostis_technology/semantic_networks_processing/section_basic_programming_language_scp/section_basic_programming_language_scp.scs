@@ -14,7 +14,15 @@ section_basic_programming_language_scp = [*^"file://section_basic_programming_la
 
 rrel_key_sc_element -> (section_basic_programming_language_scp -> basic_programming_language_scp)
 (*
+	=> nrel_key_sc_element_base_order: (section_basic_programming_language_scp -> scp_program)
+(*
+	<- rrel_key_sc_element;;
+
 	=> nrel_key_sc_element_base_order: (section_basic_programming_language_scp -> new_scp_operator)
+(*
+	<- rrel_key_sc_element;;
+
+	=> nrel_key_sc_element_base_order: (section_basic_programming_language_scp -> scp_process)
 (*
 	<- rrel_key_sc_element;;
 
@@ -309,15 +317,8 @@ rrel_key_sc_element -> (section_basic_programming_language_scp -> basic_programm
 	=> nrel_key_sc_element_base_order: (section_basic_programming_language_scp -> rrel_access)
 (*
 	<- rrel_key_sc_element;;
-	=> nrel_key_sc_element_base_order: (section_basic_programming_language_scp -> nrel_goto)
-(*
-	<- rrel_key_sc_element;;
-	=> nrel_key_sc_element_base_order: (section_basic_programming_language_scp -> nrel_then)
-(*
-	<- rrel_key_sc_element;;
-	=> nrel_key_sc_element_base_order: (section_basic_programming_language_scp -> nrel_else)
-(*
-	<- rrel_key_sc_element;;
+
+*);;*);;*);;*);;*);;*);;*);;*);;*);;
 *);;*);;*);;*);;*);;*);;*);;*);;*);;*);;
 *);;*);;*);;*);;*);;*);;*);;*);;*);;*);;
 *);;*);;*);;*);;*);;*);;*);;*);;*);;*);;
@@ -326,6 +327,4 @@ rrel_key_sc_element -> (section_basic_programming_language_scp -> basic_programm
 *);;*);;*);;*);;*);;*);;*);;*);;*);;*);;
 *);;*);;*);;*);;*);;*);;*);;*);;*);;*);;
 *);;*);;*);;*);;*);;*);;*);;*);;*);;*);;
-*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;
-*);;*);;*);;*);;*);;*);;*);;
-*);;*);;
+*);;*);;*);;*);;*);;*);;*);;*);;*);;

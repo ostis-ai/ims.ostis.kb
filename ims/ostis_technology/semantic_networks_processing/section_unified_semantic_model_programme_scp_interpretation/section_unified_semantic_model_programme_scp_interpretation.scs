@@ -22,4 +22,13 @@ section_unified_semantic_model_programme_scp_interpretation
 						"file://content_html/summary_for_section_unified_semantic_model_programme_scp_interpretation.html"
 						(*<- lang_ru;;*);;
 				*);;
-		*);
+		*);;
+
+section_unified_semantic_model_programme_scp_interpretation = [*^"file://section_unified_semantic_model_programme_scp_interpretation.scsi"*];;
+
+rrel_key_sc_element -> (section_unified_semantic_model_programme_scp_interpretation -> unified_semantic_model_programme_scp_interpretation)
+(*
+	=> nrel_key_sc_element_base_order: (section_unified_semantic_model_programme_scp_interpretation -> abstract_scp_machine)
+(*
+	<- rrel_key_sc_element;;
+*);;*);;

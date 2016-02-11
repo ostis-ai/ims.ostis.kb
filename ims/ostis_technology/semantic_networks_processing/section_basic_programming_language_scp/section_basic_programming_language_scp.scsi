@@ -1,18 +1,107 @@
 basic_programming_language_scp
-=> nrel_main_idtf:
-	[Предметная область действий и спецификаций действий абстрактной scp-машины - базовый язык программирования SCP, ориентированный на обработку текстов SC-кода]
-	(*
-	<- lang_ru;;
-	*);
-	[Subject domain of actions and action specifications of abstract scp-machine - base programming language SCP oriented on SC-code texts processing]
-	(*
-	<- lang_en;;
-	*);
-	
-<-subject_domain;
+	=> nrel_main_idtf:
+		[Предметная область действий и спецификаций действий абстрактной scp-машины - базовый язык программирования SCP, ориентированный на обработку текстов SC-кода]
+		(*
+		<- lang_ru;;
+		*);
+		[Subject domain of actions and action specifications of abstract scp-machine - base programming language SCP oriented on SC-code texts processing]
+		(*
+		<- lang_en;;
+		*);
+		
+	<-subject_domain;
 
--> rrel_maximum_studied_object_class: 
-	scp_program;;
+	-> rrel_maximum_studied_object_class: 
+		scp_program;;
+
+scp_program
+	=> nrel_main_idtf:
+		[scp-программа]
+		(*
+		<- lang_ru;;
+		*);
+		[scp-program]
+		(*
+		<- lang_en;;
+		*);
+	<= nrel_inclusion:
+		program_in_sc_memory;
+		
+	=> nrel_idtf:
+		[Язык SCP]
+		(*
+		<- lang_ru;;
+		*);
+	<- rrel_key_sc_element:
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://content_html/explanation_for_scp_program.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
+
+agent_scp_program
+	=> nrel_main_idtf:
+		[агентная scp-программа]
+		(*
+		<- lang_ru;;
+		*);
+		[agent scp-program]
+		(*
+		<- lang_en;;
+		*);
+	<= nrel_inclusion:
+		scp_program;
+		
+	=> nrel_idtf:
+		[Язык SCP]
+		(*
+		<- lang_ru;;
+		*);
+	<- rrel_key_sc_element:
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://content_html/explanation_for_agent_scp_program.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
+
+scp_process
+	<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[scp-процесс]
+		(*<- lang_ru;;*);
+		[scp-process]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:	
+				...
+				(*
+					-> rrel_example:
+						"file://content_html/explanation_for_scp_process.html"
+						(*<- lang_ru;;*);;
+								*);;
+			<= nrel_sc_text_translation:
+				...
+				(*
+					-> rrel_example:
+						"file://content_html/explanation_for_scp_process_en.html"
+						(*<- lang_en;;*);;
+				*);;
+		*);;
 
 new_scp_operator
 	=> nrel_main_idtf:
@@ -2093,78 +2182,3 @@ rrel_access
 		rrel_temp;
 		rrel_perm
 	};;
-
-nrel_goto
-	=> nrel_main_idtf:
-		[следующий оператор*]
-		(*<- lang_ru;;*);
-		[next operator*]
-		(*<- lang_en;;*);
-
-	<= nrel_inclusion:
-		nrel_sequence_of_actions;
-
-	<- rrel_key_sc_element:
-		..key_node_nrel_goto
-		(*
-			<- sc_explanation;;
-			<= nrel_sc_text_translation:	
-				..translation_nrel_goto
-				(*
-					-> rrel_example:
-						"file://content_html/explanation_for_nrel_goto.html"
-						(*<- lang_ru;;*);;
-				*);;
-		*);
-
-	<= nrel_subdividing: 
-	{
-		nrel_then;
-		nrel_else
-	};;
-
-nrel_then
-	=> nrel_main_idtf:
-		[следующий оператор при успешном выполнении*]
-		(*<- lang_ru;;*);
-		[next operator if current is successfully executed']
-		(*<- lang_en;;*);
-
-	<= nrel_inclusion:
-		nrel_sequence_of_actions_positive_result;
-
-	<- rrel_key_sc_element:
-		..key_node_nrel_then
-		(*
-			<- sc_explanation;;
-			<= nrel_sc_text_translation:	
-				..translation_nrel_then
-				(*
-					-> rrel_example:
-						"file://content_html/explanation_for_nrel_then.html"
-						(*<- lang_ru;;*);;
-				*);;
-		*);;
-
-nrel_else
-	=> nrel_main_idtf:
-		[следующий оператор при безуспешном выполнении*]
-		(*<- lang_ru;;*);
-		[next operator if current is unsuccessfully executed']
-		(*<- lang_en;;*);
-
-	<= nrel_inclusion:
-		nrel_sequence_of_actions_negative_result;
-
-	<- rrel_key_sc_element:
-		..key_node_nrel_else
-		(*
-			<- sc_explanation;;
-			<= nrel_sc_text_translation:	
-				..translation_nrel_else
-				(*
-					-> rrel_example:
-						"file://content_html/explanation_for_nrel_else.html"
-						(*<- lang_ru;;*);;
-				*);;
-		*);;
