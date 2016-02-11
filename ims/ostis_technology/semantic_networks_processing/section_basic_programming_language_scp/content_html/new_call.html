@@ -1,6 +1,6 @@
 <p>
 Операторы класса 
-<b><sc_element sys_idtf  = "call">scp-оператор асинхронного вызова подпрограммы</sc_element></b> описывают действие вызова подпрограммы, то есть создания уникального 
+<b><sc_element sys_idtf  = "new_call">scp-оператор асинхронного вызова подпрограммы</sc_element></b> описывают действие вызова подпрограммы, то есть создания уникального 
 <sc_element sys_idtf  = "scp_process">scp-процесса</sc_element>, соответствующего указанной 
 <sc_element sys_idtf  = "scp_program">scp-программе</sc_element>. Вызов является асинхронным, то есть выполнение дочернего 
 <sc_element sys_idtf  = "scp_process">scp-процесса</sc_element> начинается сразу же после его создания, параллельно с родительским 
@@ -28,7 +28,7 @@
 <sc_element sys_idtf  = "scp_process">scp-процесс</sc_element> существует в 
 <sc_element sys_idtf  = "sc_memory">sc-памяти</sc_element> до того момента как был выполнен один из операторов ожидания завершения 
 <sc_element sys_idtf  = "scp_process">scp-процессов</sc_element>. В связи с этим при помощи соответствующих 
-<sc_element sys_idtf  = "scp_operator">scp-операторов</sc_element> необходимо обеспечить в конечном итоге ожидание завершения всех созданных во время выполнения 
+<sc_element sys_idtf  = "new_scp_operator">scp-операторов</sc_element> необходимо обеспечить в конечном итоге ожидание завершения всех созданных во время выполнения 
 <sc_element sys_idtf  = "scp_program">scp-программы</sc_element> 
 <sc_element sys_idtf  = "scp_process">scp-процессов</sc_element> (необязательно одновременно и необязательно в рамках одной 
 <sc_element sys_idtf  = "scp_program">scp-программы</sc_element>). Нарушение данного правила ведет к засорению 
