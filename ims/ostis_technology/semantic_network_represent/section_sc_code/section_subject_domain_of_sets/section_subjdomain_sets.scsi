@@ -55,7 +55,7 @@ set
 };
 <= nrel_subdividing:
 {
-	tuple;
+	sheaf;
 	class
 	(*
 		=> nrel_idtf:
@@ -509,6 +509,14 @@ set_of_primary_essences
 		*);;
 	*);;
 
+sc_node_not_relation -> class_of_primary_essences;;
+class_of_primary_essences
+=> nrel_main_idtf:
+	[класс первичных сущностей]
+	(* <- lang_ru;; *); 
+	[class of primary essences]
+	(* <- lang_en;; *);;
+
 sc_node_not_relation -> set_of_sets;;
 set_of_sets
 => nrel_main_idtf:
@@ -634,6 +642,14 @@ unformed_set
 			(* <- lang_ru;; *);;
 		*);;
 	*);;
+
+sc_node_not_relation -> contextual_set;;
+contextual_set
+=> nrel_main_idtf:
+	[ситуативное множество]
+	(* <- lang_ru;; *); 
+	[contextual set]
+	(* <- lang_en;; *);;
 
 sc_node_not_relation -> empty_set;;
 empty_set
@@ -791,6 +807,14 @@ triple_set
 			(* <- lang_ru;; *);;
 		*);;
 	*);;
+
+sc_node_not_relation -> non_oriented_set;;
+non_oriented_set
+=> nrel_main_idtf:
+	[неориентированное множество]
+	(* <- lang_ru;; *); 
+	[non-oriented set]
+	(* <- lang_en;; *);;
 
 sc_node_not_relation -> oriented_set;;
 oriented_set
