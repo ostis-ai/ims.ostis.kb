@@ -4,7 +4,7 @@ section_semantic_network_represent
 	(* <- lang_ru;; *);
 	[Section. Unificated semantic networks and any kinds of their representations]
 	(* <- lang_en;; *);
-
+<- non_atomic_section;
 <= nrel_section_decomposition:
 	{
 		section_sc_code
@@ -20,4 +20,8 @@ section_semantic_network_represent
 			section_scn_code;; 
 		*);
 		section_scn_code
+		(* => nrel_section_base_order: 
+			section_separators_hedges_used_to_visualize_sc_code_texts;; 
+		*);
+		section_separators_hedges_used_to_visualize_sc_code_texts
 	};;
