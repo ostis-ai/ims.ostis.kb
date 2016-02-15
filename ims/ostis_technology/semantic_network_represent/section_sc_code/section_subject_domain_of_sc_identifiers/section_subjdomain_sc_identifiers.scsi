@@ -307,6 +307,7 @@ sc_identifier_operation
 
 nrel_idtf
 <- sc_node_norole_relation;
+<- identification_relation;
 => nrel_main_idtf:
 	[идентификатор*]
 	(* <- lang_ru;; *);
@@ -329,6 +330,7 @@ nrel_idtf
 
 nrel_main_idtf
 <- sc_node_norole_relation;
+<- identification_relation;
 => nrel_main_idtf:
 	[основной идентификатор*]
 	(* <- lang_ru;; *);
@@ -350,6 +352,7 @@ nrel_main_idtf
 
 nrel_system_identifier
 <- sc_node_norole_relation;
+<- identification_relation;
 => nrel_main_idtf:
 	[системный идентификатор*]
 	(* <- lang_ru;; *);
@@ -390,3 +393,12 @@ system_sc_identifier
 				(* <- lang_ru;; *);;
 		*);;
 	*);;
+
+identification_relation
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[отношение идентификации]
+	(* <- lang_ru;; *);
+	[identification relation]
+	(* <- lang_en;; *);;
+
