@@ -1,0 +1,67 @@
+section_subjdomain_entities
+
+=> nrel_main_idtf:
+	[Раздел. Предметная область sc-элементов]
+	(* <- lang_ru;; *);
+	[Section. Specialization sc-elements]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[Раздел. Предметная область сущностей]
+	(* <- lang_ru;; *);
+
+<- atomic_section;
+
+<= nrel_introduction:
+	...
+		(*
+			<= nrel_sc_text_translation:
+				...
+					(*
+					-> rrel_example:
+						"file://nl_files/introduction_for_section_subjdomain_entities.html"
+						(* <- lang_ru;; *);;
+					*);;
+		*);;
+
+section_subjdomain_entities = [*^"file://section_subjdomain_entities.scsi"*];;		
+
+section_subjdomain_entities
+-> rrel_key_sc_element:
+	subjdomain_entities;
+	sc_element;
+	sc_constant;
+	fictional_entity;
+	unfabled_essence;
+	sc_terminal_constant;
+	material_or_quasi_material_substance;
+	material_essence;
+	quasi_material_substance;
+	sc_variable;
+	sc_variable_second_order;
+	abstract_entity;
+	permanent_essence;
+	temporary_entity;
+	sc_node;
+	sc_connector;
+	sc_edge;
+	sc_arc_common;
+	sc_arc_membership;
+	sc_arc_not_belong;
+	sc_arc_indistinct_membership;
+	sc_arc_constant_stationary_membership;
+	sc_code_alphabet;
+	nrel_synonymy;;
+
+/*lang
+<- sc_not_node_role_relation;
+
+=> nrel_main_idtf:
+	[язык]
+	(* <- lang_ru;; *);
+	[language]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[множество знаковых конструкций, удовлетворяющих общим для этого множества синтаксическим и семантическим правилам]
+	(* <- lang_ru;; *);;*/
