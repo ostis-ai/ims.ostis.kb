@@ -4,4 +4,14 @@ section_structure_ostis_kpm
 	[Раздел. Структура абстрактной машины обработки знаний ostis-системы]
 	(* <- lang_ru;; *);
 	[Section. Structure of abstract knowledge processing machine of ostis-system]
-	(* <- lang_en;; *);;
+	(* <- lang_en;; *);
+
+<- atomic_section;;
+
+section_structure_ostis_kpm = [*^"file://section_structure_ostis_kpm.scsi"*];;
+
+section_structure_ostis_kpm 
+-> rrel_key_sc_element:
+	sc_model_of_processing_machine_knowledge;
+	sc_memory;
+	maximum_abstract_sc_agent;;
