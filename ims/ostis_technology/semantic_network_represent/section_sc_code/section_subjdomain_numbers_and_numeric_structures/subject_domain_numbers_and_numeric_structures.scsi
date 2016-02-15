@@ -148,7 +148,7 @@ real_number
 {
 	positive_number;
 	negative_number;
-	number_zero
+	..zero_singleton
 };
 <- rrel_key_sc_element:
 	...
@@ -162,6 +162,8 @@ real_number
 					(* <- lang_ru;;	*);;
 			*);;
 		*);;
+
+..zero_singleton -> number_zero;;
 
 complex_number
 <- sc_node_not_relation;
