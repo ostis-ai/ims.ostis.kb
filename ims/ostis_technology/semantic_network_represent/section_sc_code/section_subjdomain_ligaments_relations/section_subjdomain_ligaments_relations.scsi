@@ -224,7 +224,7 @@ relation
 <= nrel_subdividing:
 	{
 		binary_relation;
-		non_binary_relation
+		nonbinary_relation
 	};
 <= nrel_subdividing:
 	{
@@ -276,7 +276,7 @@ class_of_sheaves_with_different_cardinality
 => nrel_idtf:
 	[отношение нефиксированной арности]
 	(* <- lang_ru;; *);
-<= nrel_strict_inclusion: non_binary_relation;
+<= nrel_strict_inclusion: nonbinary_relation;
 <- rrel_key_sc_element:
 	...
 		(*
@@ -429,7 +429,7 @@ ternary_relation
 			*);;
 		*);;
 
-non_binary_relation
+nonbinary_relation
 <- sc_node_not_relation;
 => nrel_main_idtf:
 	[небинарное отношение]
@@ -444,7 +444,7 @@ non_binary_relation
 			...
 			(*
 			-> rrel_example:
-					"file://nl_files/explanation_for_non_binary_relation.html"			
+					"file://nl_files/explanation_for_nonbinary_relation.html"			
 					(* <- lang_ru;;	*);;
 			*);;
 		*);;
@@ -866,7 +866,7 @@ norole_relation
 	(* <- lang_en;; *);
 <= nrel_subdividing:
 	{
-		non_binary_relation;
+		nonbinary_relation;
 		norole_binary_relation
 	};
 <- rrel_key_sc_element:
