@@ -240,6 +240,9 @@ rrel_key_sc_element -> (section_basic_programming_language_scp -> basic_programm
 	=> nrel_key_sc_element_base_order: (section_basic_programming_language_scp -> scp_operator_of_lock_managementProc)
 (*
 	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_basic_programming_language_scp -> unlockProc)
+(*
+	<- rrel_key_sc_element;;
 	=> nrel_key_sc_element_base_order: (section_basic_programming_language_scp -> unlockEl)
 (*
 	<- rrel_key_sc_element;;
@@ -318,7 +321,7 @@ rrel_key_sc_element -> (section_basic_programming_language_scp -> basic_programm
 (*
 	<- rrel_key_sc_element;;
 
-*);;*);;*);;*);;*);;*);;*);;*);;*);;
+*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;
 *);;*);;*);;*);;*);;*);;*);;*);;*);;*);;
 *);;*);;*);;*);;*);;*);;*);;*);;*);;*);;
 *);;*);;*);;*);;*);;*);;*);;*);;*);;*);;
