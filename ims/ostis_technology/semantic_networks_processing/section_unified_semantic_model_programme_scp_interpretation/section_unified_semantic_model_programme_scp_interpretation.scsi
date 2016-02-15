@@ -1,0 +1,84 @@
+unified_semantic_model_programme_scp_interpretation
+	=> nrel_main_idtf:
+		[Предметная область агентов абстрактной scp-машины и соответствующих им микропрограмм – унифицированная логико-семантическая модель интерпретации программ языка программирования SCP]
+		(*<- lang_ru;;*);
+		[abstract scp-machine]
+		(*<- lang_en;;*);
+
+	<-subject_domain;
+
+	-> rrel_maximum_studied_object_class: 
+		abstract_scp_machine;;
+
+abstract_scp_machine
+	<- abstract_sc_agent;
+	=> nrel_main_idtf:
+		[абстрактная scp-машина]
+		(*<- lang_ru;;*);
+		[abstract scp-machine]
+		(*<- lang_en;;*);
+	=> nrel_idtf:
+		[формальная модель операционной семантики Языка SCP]
+		(*<- lang_ru;;*);
+		[the formal model of operational semantics of SCP Language ]
+		(*<- lang_en;;*);
+		[sc-модель операционной семантики Языка SCP]
+		(*<- lang_ru;;*);
+		[sc-model of operational semantics of Language SCP]
+		(*<- lang_en;;*);
+		[унифицированная логико-семантическая модель машины интерпретации программ базового языка программирования, ориентированного на обработку sc-моделей баз знаний]
+		(*<- lang_ru;;*);
+		[the unified logiko-semantic model of the machine interpretation of programs of a host language of programming, ориентированного на обработку sc-моделей баз знаний]
+		(*<- lang_en;;*);
+		[класс sc-агентов, обеcпечивающих интерпретацию scp-программ в sc-памяти]
+		(*<- lang_ru;;*);
+		[class of sc-agents, describing the interpretation  of scp-programs in sc-memory]
+		(*<- lang_en;;*);
+	<- rrel_key_sc_element:
+		...
+		(*
+			<- sc_explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+					-> rrel_example:
+						"file://content_html/explanation_for_abstract_scp_machine.html"
+						(*<- lang_ru;;*);;
+				*);;
+			<= nrel_sc_text_translation:
+				...
+				(*
+					-> rrel_example:
+						"file://content_html/explanation_for_abstract_scp_machine_en.html"
+						(*<- lang_en;;*);;
+				*);;
+		*);
+	<= nrel_abstract_sc_agent_decomposition:
+	{
+		sc_agent_of_scp_program_insertion_to_sc_memory
+		(*
+			=> nrel_abstract_sc_agent_base_order: 
+				sc_agent_of_scp_process_creation;;
+		*);
+		sc_agent_of_scp_process_creation
+		(*
+			=> nrel_abstract_sc_agent_base_order: 
+				sc_agent_of_scp_operator_interpretation;;
+		*);
+		sc_agent_of_scp_operator_interpretation
+		(*
+			=> nrel_abstract_sc_agent_base_order: 
+				sc_agent_of_synchronization_of_scp_program_interpretation_process;;
+		*);
+		sc_agent_of_synchronization_of_scp_program_interpretation_process
+		(*
+			=> nrel_abstract_sc_agent_base_order: 
+				sc_agent_of_scp_process_destruction;;
+		*);
+		sc_agent_of_scp_process_destruction
+		(*
+			=> nrel_abstract_sc_agent_base_order:  
+				sc_agent_of_synchronization_of_events_in_sc_memory_and_its_realization;;
+		*);
+		sc_agent_of_synchronization_of_events_in_sc_memory_and_its_realization
+	};;
