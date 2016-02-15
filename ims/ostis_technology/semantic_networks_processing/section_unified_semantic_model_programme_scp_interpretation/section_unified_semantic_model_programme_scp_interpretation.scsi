@@ -540,619 +540,619 @@ sc_agent_of_scp_operator_interpretation
 	{
 		sc_agent_of_genEl_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора генерации одноэлементной sc-конструкции]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_genElStr3_operator_interpretation;;
 		*);
 		sc_agent_of_genElStr3_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора генерации пятиэлементной конструкции]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_genElStr5_operator_interpretation;;
 		*);
 		sc_agent_of_genElStr5_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора генерации трехэлементной конструкции]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_sys_gen_operator_interpretation;;
 		*);
 		sc_agent_of_sys_gen_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора генерации конструкции по произвольному образцу]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_searchElStr3_operator_interpretation;;
 		*);
 		sc_agent_of_searchElStr3_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора поиска трехэлементной конструкции]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_searchElStr5_operator_interpretation;;
 		*);
 		sc_agent_of_searchElStr5_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора поиска пятиэлементной конструкции]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_searchSetStr3_operator_interpretation;;
 		*);
 		sc_agent_of_searchSetStr3_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора поиска трехэлементной конструкции с формированием множеств]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_searchSetStr5_operator_interpretation;;
 		*);
 		sc_agent_of_searchSetStr5_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора поиска пятиэлементной конструкции с формированием множеств]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_sys_search_operator_interpretation;;
 		*);
 		sc_agent_of_sys_search_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора поиска конструкции по произвольному образцу]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_eraseEl_operator_interpretation;;
 		*);
 		sc_agent_of_eraseEl_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора удаления одноэлементной конструкции]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_eraseElStr3_operator_interpretation;;
 		*);
 		sc_agent_of_eraseElStr3_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора удаления трехэлементной конструкции]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_eraseElStr5_operator_interpretation;;
 		*);
 		sc_agent_of_eraseElStr5_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора удаления пятиэлементной конструкции]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_eraseSetStr3_operator_interpretation;;
 		*);
 		sc_agent_of_eraseSetStr3_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора удаления множества элементов трехэлементной конструкции]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_eraseSetStr5_operator_interpretation;;
 		*);
 		sc_agent_of_eraseSetStr5_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора удаления множества элементов пятиэлементной конструкции]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_ifType_operator_interpretation;;
 		*);
 		sc_agent_of_ifType_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора проверки типа sc-элемента]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_ifVarAssign_operator_interpretation;;
 		*);
 		sc_agent_of_ifVarAssign_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора проверки наличия значения у переменной]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_ifFormCont_operator_interpretation;;
 		*);
 		sc_agent_of_ifFormCont_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора проверки наличия содержимого у файла]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_ifCoin_operator_interpretation;;
 		*);
 		sc_agent_of_ifCoin_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора проверки совпадения значений операндов]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_ifEq_operator_interpretation;;
 		*);
 		sc_agent_of_ifEq_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора проверки равенства числовых содержимых файлов]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_ifGr_operator_interpretation;;
 		*);
 		sc_agent_of_ifGr_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора сравнения числовых содержимых файлов]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_contAdd_operator_interpretation;;
 		*);
 		sc_agent_of_contAdd_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора сложения числовых содержимых файлов]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_contSub_operator_interpretation;;
 		*);
 		sc_agent_of_contSub_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора вычитания числовых содержимых файлов]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_contMult_operator_interpretation;;
 		*);
 		sc_agent_of_contMult_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора умножения числовых содержимых файлов]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_contDiv_operator_interpretation;;
 		*);
 		sc_agent_of_contDiv_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора деления числовых содержимых файлов]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_contPow_operator_interpretation;;
 		*);
 		sc_agent_of_contPow_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора возведения числового содержимого файла в степень]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_contLn_operator_interpretation;;
 		*);
 		sc_agent_of_contLn_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора вычисления логарифма числового содержимого файла]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_contSin_operator_interpretation;;
 		*);
 		sc_agent_of_contSin_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора вычисления синуса числового содержимого файла]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_contCos_operator_interpretation;;
 		*);
 		sc_agent_of_contCos_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора вычисления косинуса числового содержимого файла]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_contTg_operator_interpretation;;
 		*);
 		sc_agent_of_contTg_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора вычисления тангенса числового содержимого файла]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_contASin_operator_interpretation;;
 		*);
 		sc_agent_of_contASin_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора вычисления арксинуса числового содержимого файла]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_contACos_operator_interpretation;;
 		*);
 		sc_agent_of_contACos_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора вычисления арккосинуса числового содержимого файла]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_contATg_operator_interpretation;;
 		*);
 		sc_agent_of_contATg_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора вычисления арктангенса числового содержимого файла]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_contAssign_operator_interpretation;;
 		*);
 		sc_agent_of_contAssign_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора копирования содержимого файла]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_contErase_operator_interpretation;;
 		*);
 		sc_agent_of_contErase_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора удаления содержимого файла]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_contDivRem_operator_interpretation;;
 		*);
 		sc_agent_of_contDivRem_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора нахождения остатка от деления числовых содержимых файлов]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_contDivInt_operator_interpretation;;
 		*);
 		sc_agent_of_contDivInt_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора нахождения целой части от деления числовых содержимых файлов]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_sys_set_event_handler_operator_interpretation;;
 		*);
 		sc_agent_of_sys_set_event_handler_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-операторов]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_sys_wait_operator_interpretation;;
 		*);
 		sc_agent_of_sys_wait_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора ожидания события]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_call_operator_interpretation;;
 		*);
 		sc_agent_of_call_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора асинхронного вызова подпрограммы]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_waitReturn_operator_interpretation;;
 		*);
 		sc_agent_of_waitReturn_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора ожидания завершения выполнения scp-программы]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_waitReturnSet_operator_interpretation;;
 		*);
 		sc_agent_of_waitReturnSet_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора ожидания завершения выполнения множества scp-программ]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_return_operator_interpretation;;
 		*);
 		sc_agent_of_return_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора завершения выполнения программы]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_syncronize_operator_interpretation;;
 		*);
 		sc_agent_of_syncronize_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора конъюнкция предшествующих scp-оператораов]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_varAssign_operator_interpretation;;
 		*);
 		sc_agent_of_varAssign_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора присваивания значения переменной]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_varErase_operator_interpretation;;
 		*);
 		sc_agent_of_varErase_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора удаления значения переменной]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_stringLen_operator_interpretation;;
 		*);
 		sc_agent_of_stringLen_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора вычисления длины строкового содержимого файла]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_contStringConcat_operator_interpretation;;
 		*);
 		sc_agent_of_contStringConcat_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора удаления значения переменной]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_stringSub_operator_interpretation;;
 		*);
 		sc_agent_of_stringSub_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора поиска строкового содержимого файла в строковом содержимом другой файла]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_stringStartsWith_operator_interpretation;;
 		*);
 		sc_agent_of_stringStartsWith_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора проверки совпадения начальной части строкового содержимого файла со строковом содержимым другой файла]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_stringIfEq_operator_interpretation;;
 		*);
 		sc_agent_of_stringIfEq_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора проверки равенства строковых содержимых файлов]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_stringIfGr_operator_interpretation;;
 		*);
 		sc_agent_of_stringIfGr_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора лексикографического сравнения строковых содержимых файлов]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_stringToUpperCase_operator_interpretation;;
 		*);
 		sc_agent_of_stringToUpperCase_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
-				sc-агент интерпретации scp-оператора перевода в верхний регистр строкового содержимого файла]
-				(*<- lang_ru;;*);
+				[sc-агент интерпретации scp-оператора перевода в верхний регистр строкового содержимого файла]
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_stringToLowerCase_operator_interpretation;;
 		*);
 		sc_agent_of_stringToLowerCase_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора перевода в нижний регистр строкового содержимого файла]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_stringSplit_operator_interpretation;;
 		*);
 		sc_agent_of_stringSplit_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора разбиения строки на подстроки]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_stringEndsWith_operator_interpretation;;
 		*);
 		sc_agent_of_stringEndsWith_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора проверки совпадения конца строкового содержимого файла со строковом содержимым другой файла]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_stringReplace_operator_interpretation;;
 		*);
 		sc_agent_of_stringReplace_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора замены определенной части строкового содержимого файла на содержимое указанной файла]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_stringSlice_operator_interpretation;;
 		*);
 		sc_agent_of_stringSlice_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора получения части строкового содержимого файла по индексам]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_unlockProc_operator_interpretation;;
 		*);
 		sc_agent_of_unlockProc_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора снятия всех блокировок данного scp-процесса]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_lockEl_operator_interpretation;;
 		*);
 		sc_agent_of_unlockEl_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора снятия блокировки с sc-элемента]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_lockEl_operator_interpretation;;
 		*);
 		sc_agent_of_lockEl_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора установки полной блокировки на sc-элемент]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_lockElEdit_operator_interpretation;;
 		*);
 		sc_agent_of_lockElEdit_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора установки блокировки на изменение sc-элемента]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_lockElRemove_operator_interpretation;;
 		*);
 		sc_agent_of_lockElRemove_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
-				sc-агент интерпретации scp-оператора установки блокировки на удаление sc-элемента]
-				(*<- lang_ru;;*);
+				[sc-агент интерпретации scp-оператора установки блокировки на удаление sc-элемента]
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_unlockElStr_operator_interpretation;;
 		*);
 		sc_agent_of_unlockElStr_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора снятия блокировки со структуры]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_lockElStr_operator_interpretation;;
 		*);
 		sc_agent_of_lockElStre_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора установки полной блокировки на структуру]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_lockElStrEdit_operator_interpretation;;
 		*);
 		sc_agent_of_lockElStrEdit_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора установки блокировки на изменение структуры]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_lockElStrRemove_operator_interpretation;;
 		*);
 		sc_agent_of_lockElStrRemove_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора установки блокировки на удаление структуры]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_print_operator_interpretation;;
 		*);
 		sc_agent_of_print_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора вывода содержимого файла]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_printNl_operator_interpretation;;
 		*);
 		sc_agent_of_printNl_operator_interpretation
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора вывода содержимого файла с переходом на новую строку]
-				(*<- lang_ru;;*);
+				(*<- lang_ru;;*);;
 			=> nrel_abstract_sc_agent_base_order: 
 				sc_agent_of_printEl_operator_interpretation;;
 		*);
 		sc_agent_of_printEl_operator_interpretation	
 		(*
-			<- sc_node_not_relation;
+			<- sc_node_not_relation;;
 			=> nrel_main_idtf:
 				[sc-агент интерпретации scp-оператора распечатки семантической окрестности sc-элемента]
 				(*<- lang_ru;;*);;
