@@ -5,7 +5,7 @@ section_unificated_models_kb
 	(* <- lang_ru;; *);
 	[Section. Unified logical semantic models (sc-models) of knowledge bases]
 	(* <- lang_en;; *);
-
+<- non_atomic_section;
 <= nrel_section_decomposition:
 	{
 		section_structure_of_knowledge_base_model
@@ -36,8 +36,17 @@ section_unificated_models_kb
 		section_subjdomain_logical_formulas_and_ontologies
 		(*
 		=> nrel_section_base_order: 
+			section_subjdomain_tasks_classes_tasks_ways_of_solving_task_ontologies;;
+		*);
+		section_subjdomain_tasks_classes_tasks_ways_of_solving_task_ontologies
+		(*
+		=> nrel_section_base_order: 
+			section_multisubject_concepts;;
+		*);
+		section_multisubject_concepts
+		(*
+		=> nrel_section_base_order: 
 			section_body_typical_kb_fragments;;
 		*);
 		section_body_typical_kb_fragments
-		
 	};;

@@ -4,4 +4,19 @@ section_set_of_techniques_intelligent_systems_design
 	[Раздел. Семейство методик комплексного проектирования различных классов интеллектуальных систем]
 	(* <- lang_ru;; *);
 	[Section. Set of techniques for complex design of different classes of intelligent systems]
-	(* <- lang_en;; *);;
+	(* <- lang_en;; *);
+<- non_atomic_section;
+<= nrel_section_decomposition:
+	{
+		section_complex_technique_component_design_of_iis
+		(*
+		=> nrel_section_base_order:
+			section_complex_technique_component_design_of_help_systems;;
+		*);
+		section_complex_technique_component_design_of_help_systems
+		(*
+		=> nrel_section_base_order:
+			section_complex_technique_component_design_of_training_systems;;
+		*);
+		section_complex_technique_component_design_of_training_systems
+	};;

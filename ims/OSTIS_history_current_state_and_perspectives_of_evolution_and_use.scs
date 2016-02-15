@@ -5,7 +5,7 @@ section_project_OSTIS_perspectives_current_state_history_of_evolution_and_use
 	(* <- lang_ru;; *);
 	[Section. Project OSTIS. History, current state and perspectives of evolution and use of OSTIS technology]
 	(* <- lang_en;; *);
-
+<- non_atomic_section;
 <= nrel_section_decomposition:
 	{
 		section_objects_and_features_of_the_project_OSTIS
@@ -29,6 +29,11 @@ section_project_OSTIS_perspectives_current_state_history_of_evolution_and_use
 			section_main_results_OSTIS;;
 		*);
 		section_main_results_OSTIS
+(*
+		=> nrel_section_base_order: 
+			section_methodology_of_teaching_designing_ostis_systems;;
+		*);
+		section_methodology_of_teaching_designing_ostis_systems
 		(*
 		=> nrel_section_base_order: 
 			section_planned_directions_of_further_development_of_the_project_OSTIS;;
@@ -39,6 +44,4 @@ section_project_OSTIS_perspectives_current_state_history_of_evolution_and_use
 			section_perspectives_ostis_use;;
 		*);
 		section_perspectives_ostis_use
-
-		
 	};;
