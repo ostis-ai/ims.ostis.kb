@@ -1,0 +1,22 @@
+sc_memory
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[sc-память] 
+	(* <- lang_ru;; *);
+	[sc-memory] 
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[абстрактная sc-память] 
+	(* <- lang_ru;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_sc_memory.html" 
+				(* <- lang_ru;; *);;
+		*);;
+	*);;
