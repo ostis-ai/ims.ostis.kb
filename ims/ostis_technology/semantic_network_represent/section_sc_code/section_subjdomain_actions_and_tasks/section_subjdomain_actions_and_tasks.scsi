@@ -1010,7 +1010,7 @@ task
 	;
 	
 => nrel_inclusion:	
-	question;
+	task_question;
 	command;;
 
 	
@@ -1097,7 +1097,7 @@ class_of_tasks
 	*);;	
 
 
-question
+task_question
 <- sc_node_not_relation;
 => nrel_main_idtf:
 	[вопрос]
