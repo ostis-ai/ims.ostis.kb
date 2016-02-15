@@ -43,7 +43,7 @@ rrel_key_sc_element -> (section_subjdomain_actions_and_tasks -> subject_domain_o
 	=> nrel_key_sc_element_base_order: (section_subjdomain_actions_and_tasks -> receptor_action_ostis_system)
 (*
 	<- rrel_key_sc_element;;
-	=> nrel_key_sc_element_base_order: (section_subjdomain_actions_and_tasks -> initiated_action )
+	=> nrel_key_sc_element_base_order: (section_subjdomain_actions_and_tasks -> question_initiated )
 (*
 	<- rrel_key_sc_element;;
 	=> nrel_key_sc_element_base_order: (section_subjdomain_actions_and_tasks -> performed_action)
@@ -58,13 +58,13 @@ rrel_key_sc_element -> (section_subjdomain_actions_and_tasks -> subject_domain_o
 	=> nrel_key_sc_element_base_order: (section_subjdomain_actions_and_tasks -> planned_action)
 (*
 	<- rrel_key_sc_element;;
-	=> nrel_key_sc_element_base_order: (section_subjdomain_actions_and_tasks -> completed_action)
+	=> nrel_key_sc_element_base_order: (section_subjdomain_actions_and_tasks -> question_finished)
 (*
 	<- rrel_key_sc_element;;
-	=> nrel_key_sc_element_base_order: (section_subjdomain_actions_and_tasks -> successfully_completed_action)
+	=> nrel_key_sc_element_base_order: (section_subjdomain_actions_and_tasks -> question_finished_successfully)
 (*
 	<- rrel_key_sc_element;;
-	=> nrel_key_sc_element_base_order: (section_subjdomain_actions_and_tasks -> unsuccessfully_completed_action)
+	=> nrel_key_sc_element_base_order: (section_subjdomain_actions_and_tasks -> question_finished_unsuccessfully)
 (*
 	<- rrel_key_sc_element;;
 	=> nrel_key_sc_element_base_order: (section_subjdomain_actions_and_tasks -> priority_actions)

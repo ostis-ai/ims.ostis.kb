@@ -70,7 +70,7 @@ question
 
 <= nrel_subdividing: 	
 	{ 
-	initiated_action
+	question_initiated
 	(*
 	=> nrel_inclusion:
 		performed_action
@@ -81,7 +81,7 @@ question
 		*);;
 	*);
 	planned_action;
-	completed_action
+	question_finished
 	(*
 	=> nrel_idtf:
 		[прошлое действие]
@@ -218,7 +218,7 @@ receptor_action_ostis_system
 	[receptor action of OSTIS system]
 	(* <- lang_en;; *);;
 
-initiated_action
+question_initiated
 <- sc_node_not_relation; 
 => nrel_main_idtf:
 	[инициированное действие]
@@ -240,7 +240,7 @@ initiated_action
 		...
 		(*
 		-> rrel_example:
-				"file://content_html/explanation_for_initiated_action.html"
+				"file://content_html/explanation_for_question_initiated.html"
 			(*
 			<- lang_ru;;
 			*);;
@@ -365,7 +365,7 @@ planned_action
 	*);;
 
 
-completed_action
+question_finished
 <- sc_node_not_relation;
 => nrel_main_idtf:
 	[выполненное действие]
@@ -381,8 +381,8 @@ completed_action
 
 => nrel_subdividing:
 	{
-		successfully_completed_action;
-		unsuccessfully_completed_action
+		question_finished_successfully;
+		question_finished_unsuccessfully
 	};
 
 <= nrel_inclusion:	
@@ -396,7 +396,7 @@ completed_action
 		...
 		(*
 		-> rrel_example:
-				"file://content_html/explanation_for_completed_action.html"
+				"file://content_html/explanation_for_question_finished.html"
 			(*
 			<- lang_ru;;
 			*);;
@@ -404,7 +404,7 @@ completed_action
 	*);;	
 
 
-successfully_completed_action
+question_finished_successfully
 <- sc_node_not_relation;
 => nrel_main_idtf:
 	[успешно выполненное действие]
@@ -420,7 +420,7 @@ successfully_completed_action
 		...
 		(*
 			-> rrel_example:
-				"file://content_html/explanation_for_successfully_completed_action.html"
+				"file://content_html/explanation_for_question_finished_successfully.html"
 			(*
 			<- lang_ru;;
 			*);;
@@ -428,7 +428,7 @@ successfully_completed_action
 	*);;		
 	
 	
-unsuccessfully_completed_action
+question_finished_unsuccessfully
 <- sc_node_not_relation;
 => nrel_main_idtf:
 	[безуспешно выполненное действие]
@@ -444,7 +444,7 @@ unsuccessfully_completed_action
 		...
 		(*
 			-> rrel_example:
-				"file://content_html/explanation_unsuccessfully_completed_action.html"
+				"file://content_html/explanation_for_question_finished_unsuccessfully.html"
 			(*
 			<- lang_ru;;
 			*);;
