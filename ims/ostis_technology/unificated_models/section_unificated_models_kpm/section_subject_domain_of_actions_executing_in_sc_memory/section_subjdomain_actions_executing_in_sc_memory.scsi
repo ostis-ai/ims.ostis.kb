@@ -84,13 +84,13 @@ action_in_sc_memory_initiated_by_question
 				=> nrel_inclusion: 
 					action_to_determine_positivity_or_negativity_of_designated_sc_arc_of_belonging_or_not_belonging;;
 			*);
-			action_to_form_semantic_neighbourhood
+			action_to_form_semantic_neighborhood
 			(*
 				=> nrel_inclusion:
 				{
-					action_to_form_full_semantic_neighbourhood_of_designated_entity;
-					action_to_form_basic_semantic_neighbourhood_of_designated_entity;
-					action_to_form_local_semantic_neighbourhood_of_designated_entity
+					action_to_form_full_semantic_neighborhood_of_designated_entity;
+					action_to_form_basic_semantic_neighborhood_of_designated_entity;
+					action_to_form_local_semantic_neighborhood_of_designated_entity
 				};;
 			*);
 			action_to_form_structure_describing_connections_between_designated_entities
@@ -177,7 +177,7 @@ action_to_determine_positivity_or_negativity_of_designated_sc_arc_of_belonging_o
 	[action. to determine positivity or negativity of designated sc arc of belonging or not belonging]
 	(* <- lang_en;; *);;
 
-action_to_form_semantic_neighbourhood
+action_to_form_semantic_neighborhood
 <- sc_node_not_relation;
 => nrel_main_idtf:
 	[действие. сформировать семантическую окрестность]
@@ -185,7 +185,7 @@ action_to_form_semantic_neighbourhood
 	[action. to form semantic neighbourhood]
 	(* <- lang_en;; *);;
 
-action_to_form_full_semantic_neighbourhood_of_designated_entity
+action_to_form_full_semantic_neighborhood_of_designated_entity
 <- sc_node_not_relation;
 => nrel_main_idtf:
 	[действие. сформировать полную семантическую окрестность указываемой сущности]
@@ -193,7 +193,7 @@ action_to_form_full_semantic_neighbourhood_of_designated_entity
 	[action. to form full semantic neighbourhood of designated entity]
 	(* <- lang_en;; *);;
 
-action_to_form_basic_semantic_neighbourhood_of_designated_entity
+action_to_form_basic_semantic_neighborhood_of_designated_entity
 <- sc_node_not_relation;
 => nrel_main_idtf:
 	[действие. сформировать базовую семантическую окрестность указываемой сущности]
@@ -201,7 +201,7 @@ action_to_form_basic_semantic_neighbourhood_of_designated_entity
 	[action. to form basic semantic neighbourhood of designated entity]
 	(* <- lang_en;; *);;
 
-action_to_form_local_semantic_neighbourhood_of_designated_entity
+action_to_form_local_semantic_neighborhood_of_designated_entity
 <- sc_node_not_relation;
 => nrel_main_idtf:
 	[действие. сформировать частную семантическую окрестность указываемой сущности]
