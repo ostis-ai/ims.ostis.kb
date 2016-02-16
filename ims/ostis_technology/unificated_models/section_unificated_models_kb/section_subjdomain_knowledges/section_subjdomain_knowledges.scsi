@@ -24,14 +24,11 @@ knowledge
 	(* <- lang_ru;; *);
 <= nrel_inclusion: structure;
 => nrel_inclusion:
-{
-	semantic_neighbourhood;
-	comparison;
+	semantic_neighborhood;
 	descriptive_knowledge;
 	section;
 	subject_domain;
-	ontology
-};
+	ontology;
 <- rrel_key_sc_element:
 	...
 	(*
@@ -92,7 +89,7 @@ section
 	section_description_of_principles;
 	section_documentation;
 	section_description_of_subject_domain;
-	section_description_of_semantic_neighbourhood;
+	section_description_of_semantic_neighborhood;
 	section_theory_of_subject_domain
 	(*
 		=> nrel_main_idtf:
@@ -211,8 +208,8 @@ section_description_of_subject_domain
 		*);;
 	*);;
 
-sc_node_not_relation -> section_description_of_semantic_neighbourhood;;
-section_description_of_semantic_neighbourhood
+sc_node_not_relation -> section_description_of_semantic_neighborhood;;
+section_description_of_semantic_neighborhood
 => nrel_main_idtf:
 	[раздел-описание семантической окрестности]
 	(* <- lang_ru;; *);
@@ -226,7 +223,7 @@ section_description_of_semantic_neighbourhood
 		...
 		(*
 		-> rrel_example:
-				"file://content_html/explanation_for_description_of_semantic_neighbourhood_section.html"
+				"file://content_html/explanation_for_description_of_semantic_neighborhood_section.html"
 			(* <- lang_ru;;	*);;
 		*);;
 	*);;
@@ -423,7 +420,6 @@ rrel_main_key_sc_element
 => nrel_idtf:
 	[быть ключевым sc-элементом заданного sc-знания']
 	(* <- lang_ru;; *);
-<= nrel_inclusion: rrel_key_sc_element;
 <- rrel_key_sc_element:
 	...
 	(*
