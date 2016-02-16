@@ -5,13 +5,45 @@ subjdomain_entities
 	(* <- lang_ru;; *);
 	[Subject domain of sc-elements]
 	(* <- lang_en;; *);
-
 => nrel_idtf:
 	[Предметная область сущностей]
 	(* <- lang_ru;; *);
 
 -> rrel_maximum_studied_object_class:
-	sc_element;;
+	sc_element;
+-> rrel_not_maximum_studied_object_class:
+	sc_constant;
+	fictional_entity;
+	unfabled_essence;
+	sc_terminal_constant;
+	material_or_quasi_material_substance;
+	material_essence;
+	quasi_material_substance;
+	sc_variable;
+	sc_variable_second_order;
+	abstract_entity;
+	permanent_essence;
+	temporary_entity;
+	sc_node;
+	sc_connector;
+	sc_edge;
+	sc_arc_common;
+	sc_arc_membership;
+	sc_arc_not_belong;
+	sc_arc_indistinct_membership;
+	sc_arc_constant_stationary_membership;
+	sc_code_alphabet;
+-> rrel_explored_relation: 
+	nrel_synonymy;
+
+=> nrel_primary_elements_class_private_subject_domain: subject_domain_of_actions;
+=> nrel_primary_elements_class_private_subject_domain: subjdomain_informational_structures_not_sc_code;
+=> nrel_primary_elements_class_private_subject_domain: subject_domain_numbers_and_numeric_structures;
+=> nrel_primary_elements_class_private_subject_domain: subject_domain_of_structures;
+=> nrel_primary_elements_class_private_subject_domain: subjdomain_parameters_and_values;
+=> nrel_primary_elements_class_private_subject_domain: subjdomain_temporary_entity;
+=> nrel_primary_elements_class_private_subject_domain: subject_domain_of_sc_identifiers;
+=> nrel_primary_elements_class_private_subject_domain: subject_domain_of_sets;;
 
 sc_element 
 <- sc_node_not_relation;
