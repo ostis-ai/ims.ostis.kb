@@ -33,18 +33,18 @@
 		<sc_element sys_idtf = "scp_process">scp-процесса</sc_element>, вся конструкция, сгенерированная на основе некоторой 
 		<sc_element sys_idtf = "scp_program">scp-программы</sc_element> (весь текст 
 		<sc_element sys_idtf = "scp_process">scp-процесса</sc_element>) должны быть добавлены в 
-		<sc_element sys_idtf = "new_lockElStr">полную блокировку</sc_element>, соответствующую данному 
+		<sc_element sys_idtf = "lockElStr">полную блокировку</sc_element>, соответствующую данному 
 		<sc_element sys_idtf = "scp_process">scp-процессу</sc_element>.
 	</li>
 	<li>
 		Все конструкции, сгенерированные в процессе выполнения 
 		<sc_element sys_idtf = "scp_process">scp-процесса</sc_element>, автоматически попадают в 
-		<sc_element sys_idtf = "new_lockElStr">полную блокировку</sc_element>, соответствующую данному 
+		<sc_element sys_idtf = "lockElStr">полную блокировку</sc_element>, соответствующую данному 
 		<sc_element sys_idtf = "scp_process">scp-процессу</sc_element>. Дополнительно следует отметить, что знак самой этой структуры и вся метаинформация о ней также включаются в эту структуру.
 	</li>
 	<li>
 		При необходимости можно вручную разблокировать или заблокировать некоторую конструкцию каким-либо типом блокировки, используя соответствующие scp-операторы класса 
-		<sc_element sys_idtf = "new_scp_operator_of_lock_managementProc">scp-оператор управления блокировками</sc_element>.
+		<sc_element sys_idtf = "scp_operator_of_lock_managementProc">scp-оператор управления блокировками</sc_element>.
 	</li>
 	<li>
 		После завершения выполнения некоторого scp-процесса его текст как правило, удаляется из 

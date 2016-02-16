@@ -1,0 +1,64 @@
+<p>
+Каждая связка отношения 
+<b><sc_element sys_idtf  = "nrel_template_of_scp_process_creation">шаблон создания scp-процесса*</sc_element></b> связывает 
+<sc_element sys_idtf  = "sc_node">sc-узел</sc_element>, обозначающий 
+<sc_element sys_idtf  = "scp_program">scp-программу</sc_element>, и множество, содержащее все 
+<sc_element sys_idtf  = "sc_element">sc-элементы</sc_element>, для которых при создании 
+<sc_element sys_idtf  = "scp_process">scp-процесса</sc_element> будут сгенерированы их уникальные копии, за исключением 
+<sc_element sys_idtf  = "sc_element">sc-элементов</sc_element>, попавших в одно из множеств, являющихся вторым элементом соответствующих связок отношений 
+<sc_element sys_idtf  = "nrel_scp_program_var">переменные scp-программы*</sc_element>, 
+<sc_element sys_idtf  = "nrel_scp_program_copied_const">копируемые константы scp-программы*</sc_element>. Элементами данного множества являются как 
+<sc_element sys_idtf  = "sc_connector">sc-коннекторы</sc_element>, так и 
+<sc_element sys_idtf  = "sc_node">sc-узлы</sc_element>. При этом возможна ситуация, когда 
+<sc_element sys_idtf  = "sc_connector">sc-коннектор</sc_element> является элементом данного множества, а инцидентный ему 
+<sc_element sys_idtf  = "sc_node">sc-узел</sc_element> элементом данного множества не является. Примером такой ситуации является включение в данное множество 
+<sc_element sys_idtf  = "sc_arc">sc-дуги</sc_element>, соединяющей некоторый 
+<sc_element sys_idtf  = "scp_operator">scp-оператор</sc_element> с операндом, являющимся 
+<sc_element sys_idtf  = "rrel_scp_const">scp-константой'</sc_element>.
+</p>
+<p>
+В 
+<b><sc_element sys_idtf  = "nrel_template_of_scp_process_creation">шаблон создания scp-процесса*</sc_element></b> попадают:
+</p>
+<ol>
+<li>
+<sc_element sys_idtf  = "sc_node">sc-узел</sc_element>, обозначающий множество 
+<sc_element sys_idtf  = "scp_operator">scp-операторов</sc_element> заданной 
+<sc_element sys_idtf  = "scp_program">scp-программы</sc_element>;
+</li>
+<li>
+<sc_element sys_idtf  = "sc_node">sc-узлы</sc_element>, обозначающие 
+<sc_element sys_idtf  = "scp_operator">scp-операторы</sc_element> заданной 
+<sc_element sys_idtf  = "scp_program">scp-программы</sc_element>;
+</li>
+<li>
+связки отношения 
+<sc_element sys_idtf  = "nrel_goto">следующий оператор*</sc_element> и более частных;
+</li>
+<li>
+все элементы множеств, являющихся вторым и третьим операндами 
+<sc_element sys_idtf  = "sys_gen">scp-операторов генерации sc-конструкции по произвольному образцу</sc_element> и 
+<sc_element sys_idtf  = "sys_search">scp-операторов поиска sc-конструкции по произвольному образцу</sc_element>;
+</li>
+<li>
+все исходящие 
+<sc_element sys_idtf  = "rrel_access">sc-дуги принадлежности</sc_element>, инцидентные перечисленным выше 
+<sc_element sys_idtf  = "sc_element">sc-элементам</sc_element>, а также 
+<sc_element sys_idtf  = "sc_element">sc-элементам</sc_element>, попавшим во множество 
+<sc_element sys_idtf  = "nrel_scp_program_copied_const">копируемых scp-констант*</sc_element>;
+</li>
+<li>
+все входящие 
+<sc_element sys_idtf  = "rrel_access">sc-дуги принадлежности</sc_element>, инцидентные перечисленным выше 
+<sc_element sys_idtf  = "rrel_access">sc-дугам принадлежности</sc_element>;
+</li>
+<li>
+все 
+<sc_element sys_idtf  = "rrel_access">sc-дуги принадлежности</sc_element>, связывающие 
+<sc_element sys_idtf  = "sc_node">sc-узлы</sc_element>, обозначающие 
+<sc_element sys_idtf  = "scp_operator">scp-операторы</sc_element> заданной 
+<sc_element sys_idtf  = "scp_program">scp-программы</sc_element> и ключевые 
+<sc_element sys_idtf  = "sc_node">sc-узлы</sc_element>, обозначающие классы 
+<sc_element sys_idtf  = "scp_operator">scp-операторов</sc_element>.
+</li>
+</ol>
