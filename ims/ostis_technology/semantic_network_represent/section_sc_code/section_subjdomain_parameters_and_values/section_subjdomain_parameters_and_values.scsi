@@ -70,7 +70,7 @@ parameter
 <- rrel_key_sc_element:
 	...
 	(*
-	<- typical_semantic_neighborhood;;
+	<- typical_semantic_neighbourhood;;
 	<= nrel_sc_text_translation:
 	...
 		(*
@@ -174,7 +174,7 @@ level_class_equivalence
 <- rrel_key_sc_element:
 	...
 	(*
-	<- typical_semantic_neighborhood;;
+	<- typical_semantic_neighbourhood;;
 	<= nrel_sc_text_translation:
 	...
 		(*
@@ -254,7 +254,7 @@ exact_value
 <- rrel_key_sc_element:
 	...
 	(*
-	<- typical_semantic_neighborhood;;
+	<- typical_semantic_neighbourhood;;
 	<= nrel_sc_text_translation:
 	...
 		(*
@@ -314,7 +314,7 @@ inaccurate_value
 <- rrel_key_sc_element:
 	...
 	(*
-	<- typical_semantic_neighborhood;;
+	<- typical_semantic_neighbourhood;;
 	<= nrel_sc_text_translation:
 	...
 		(*
@@ -372,7 +372,7 @@ interval_value
 <- rrel_key_sc_element:
 	...
 	(*
-	<- typical_semantic_neighborhood;;
+	<- typical_semantic_neighbourhood;;
 	<= nrel_sc_text_translation:
 	...
 		(*
@@ -601,7 +601,7 @@ scale
 <- rrel_key_sc_element:
 	...
 	(*
-	<- typical_semantic_neighborhood;;
+	<- typical_semantic_neighbourhood;;
 	<= nrel_sc_text_translation:
 	...
 		(*
@@ -693,3 +693,274 @@ task_measurement
 
 <= nrel_inclusion:
 	task;;
+
+banch
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[связка]
+	(* <- lang_ru;; *);
+	[banch]
+	(* <- lang_en;; *);;
+
+quantitative_parameter
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[количественный параметр]
+	(* <- lang_ru;; *);
+	[quantitative parameter]
+	(* <- lang_en;; *);;
+
+arithmetical_expression_values
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[арифметическое выражение на величинах]
+	(* <- lang_ru;; *);
+	[arithmetical expression values]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://nl_files/arithmetical_expression_values.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
+
+relation
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[отношение]
+	(* <- lang_ru;; *);
+	[relation]
+	(* <- lang_en;; *);;
+
+arithmetic_operation_on_the_values_for_values
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[арифметическое выражение на величинах на величинах]
+	(* <- lang_ru;; *);
+	[arithmetical expression values]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://nl_files/arithmetic_operation_on_the_values_for_values.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
+arithmetic_operation_on_the_values_for_values<= nrel_family_of_subsets: arithmetical_expression_values;;
+
+nrel_sum_of_quantities
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[сумма величин*]
+	(* <- lang_ru;; *);
+	[sum of quantities]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[сложение величин*]	
+	(* <- lang_ru;; *);;
+
+arithmetic_operation_on_the_values
+=> nrel_main_idtf:
+	[арифметическая операция на величинах]
+	(* <- lang_ru;; *);
+	[arithmetic operation on the values]
+	(* <- lang_en;; *);;
+
+arithmetic_operation_sum
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[арифметическая операция сумма*]
+	(* <- lang_ru;; *);
+	[arithmetic operation sum]
+	(* <- lang_en;; *);;
+
+nrel_sum_of_quantities
+<- sc_node_norole_relation; 
+<- arithmetic_operation_on_the_values;
+<- kvazibinary_relation;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://nl_files/nrel_sum_of_quantities.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
+
+arithmetic_operation_composition
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[арифметическая операция произведение*]
+	(* <- lang_ru;; *);
+	[arithmetic operation composition]
+	(* <- lang_en;; *);;
+
+nrel_composition_of_quantities
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[произведение величин*]
+	(* <- lang_ru;; *);
+	[scomposition of quantities]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[умножение величин*]	
+	(* <- lang_ru;; *);
+<- arithmetic_operation_on_the_values;
+<- kvazibinary_relation;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://nl_files/nrel_composition_of_quantities.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
+
+arithmetic_operation_pow
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[арифметической операции возведение в степень*]
+	(* <- lang_ru;; *);
+	[arithmetic operation pow]
+	(* <- lang_en;; *);;
+
+nrel_pow_of_quantities
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[возведение величин в степень*]
+	(* <- lang_ru;; *);
+	[pow of quantities]
+	(* <- lang_en;; *);
+<- arithmetic_operation_on_the_values;
+<- ternary_relation;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://nl_files/nrel_pow_of_quantities.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
+
+arithmetic_operation_large
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[арифметическая операция больше*]
+	(* <- lang_ru;; *);
+	[arithmetic operation large]
+	(* <- lang_en;; *);;
+
+value
+=> nrel_main_idtf:
+	[значение]
+	(* <- lang_ru;; *);
+	[value]
+	(* <- lang_en;; *);;
+
+nrel_measure
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[единица измерения*]
+	(* <- lang_ru;; *);
+	[measure]
+	(* <- lang_en;; *);;
+
+nrel_large_quantitie
+=> nrel_main_idtf:
+	[большая величина*]
+	(* <- lang_ru;; *);
+	[large quantitie]
+	(* <- lang_en;; *);
+<- arithmetic_operation_on_the_values;
+<- binary_relation;
+<- sc_node_norole_relation;
+<- strict_order_relation;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://nl_files/nrel_large_quantitie.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
+
+arithmetic_operation_equation
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[арифметическая операция равенство*]
+	(* <- lang_ru;; *);
+	[arithmetic operation equation]
+	(* <- lang_en;; *);;
+
+nrel_equal_of_quantities
+=> nrel_main_idtf:
+	[равенство величин*]
+	(* <- lang_ru;; *);
+	[equal of quantities]
+	(* <- lang_en;; *);
+<- binary_relation;
+<- arithmetic_operation_on_the_values;
+<- sc_node_norole_relation;
+<- equivalence_relation;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://nl_files/nrel_equal_of_quantities.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
+
+nrel_greater_or_equal_quantitie
+=> nrel_main_idtf:
+	[большая или равная величина*]
+	(* <- lang_ru;; *);
+	[greater or equal quantitie]
+	(* <- lang_en;; *);
+<- sc_node_norole_relation;
+<- arithmetic_operation_on_the_values;
+<- binary_relation;
+<- decent_order_relation;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- sc_explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://nl_files/nrel_greater_or_equal_quantitie.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
