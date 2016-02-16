@@ -2190,13 +2190,38 @@ rrel_set
 						(*<- lang_ru;;*);;
 				*);;
 		*);
-	=> nrel_subdividing:
+	<= nrel_subdividing:
 	{
-        rrel_set_1;
-        rrel_set_2;
-        rrel_set_3;
-        rrel_set_4;
+        rrel_set_1
+		(*
+			=> nrel_main_idtf:
+				[формируемое множество 1']
+				(*<- lang_ru;;*);;
+		*);
+        rrel_set_2
+		(*
+			=> nrel_main_idtf:
+				[формируемое множество 2']
+				(*<- lang_ru;;*);;
+		*);
+        rrel_set_3
+		(*
+			=> nrel_main_idtf:
+				[формируемое множество 3']
+				(*<- lang_ru;;*);;
+		*);
+        rrel_set_4
+		(*
+			=> nrel_main_idtf:
+				[формируемое множество 4']
+				(*<- lang_ru;;*);;
+		*);
         rrel_set_5
+		(*
+			=> nrel_main_idtf:
+				[формируемое множество 5']
+				(*<- lang_ru;;*);;
+		*)
     };;
 
 
@@ -2241,38 +2266,128 @@ rrel_type_of_sc_element
 	{
 		rrel_node;
 		rrel_arc;
-		rrel_edge;
+		rrel_edge
+		(*
+			=> nrel_main_idtf:
+				[sc-ребро']
+				(*<- lang_ru;;*);
+				[sc-edge']
+				(*<- lang_en;;*);;
+		*);
 		rrel_file
+		(*
+			=> nrel_main_idtf:
+				[файл']
+				(*<- lang_ru;;*);
+				[file']
+				(*<- lang_en;;*);;
+		*)
 	};;
 
 rrel_node
+	=> nrel_main_idtf:
+		[sc-узел']
+		(*<- lang_ru;;*);
+		[sc-node']
+		(*<- lang_en;;*);
 	<= nrel_subdividing: 
 	{
-		rrel_struct;
+		rrel_struct
+		(*
+			=> nrel_main_idtf:
+				[структура']
+				(*<- lang_ru;;*);
+				[structure']
+				(*<- lang_en;;*);;
+		*);
 		rrel_relation;
 		rrel_class
+		(*
+			=> nrel_main_idtf:
+				[класс']
+				(*<- lang_ru;;*);
+				[class']
+				(*<- lang_en;;*);;
+		*)
 	};;
 
 rrel_relation
+	=> nrel_main_idtf:
+		[отношение']
+		(*<- lang_ru;;*);
+		[relation']
+		(*<- lang_en;;*);
 	=> nrel_inclusion:
 		rrel_role_relation;;
 
 rrel_arc
+	=> nrel_main_idtf:
+		[sc-дуга']
+		(*<- lang_ru;;*);
+		[sc-arc']
+		(*<- lang_en;;*);
 	<= nrel_subdividing: 
 	{
-		rrel_common;
+		rrel_common
+		(*
+			=> nrel_main_idtf:
+				[sc-дуга общего вида']
+				(*<- lang_ru;;*);
+				[common sc-arc']
+				(*<- lang_en;;*);;
+		*);
 		rrel_access
 	};;
 
 rrel_access
+	=> nrel_main_idtf:
+		[sc-дуга принадлежности']
+		(*<- lang_ru;;*);
+		[access sc-arc']
+		(*<- lang_en;;*);
 	<= nrel_subdividing: 
 	{
-		rrel_pos;
-		rrel_neg;
+		rrel_pos
+		(*
+			=> nrel_main_idtf:
+				[позитивная sc-дуга принадлежности'']
+				(*<- lang_ru;;*);
+				[positive access sc-arc']
+				(*<- lang_en;;*);;
+		*);
+		rrel_neg
+		(*
+			=> nrel_main_idtf:
+				[негативная sc-дуга принадлежности']
+				(*<- lang_ru;;*);
+				[negative access sc-arc']
+				(*<- lang_en;;*);;
+		*);
 		rrel_fuz
+		(*
+			=> nrel_main_idtf:
+				[нечеткая sc-дуга принадлежности']
+				(*<- lang_ru;;*);
+				[fuzzy access sc-arc']
+				(*<- lang_en;;*);;
+		*)
 	};
 	<= nrel_subdividing: 
 	{
-		rrel_temp;
+		rrel_temp
+		(*
+			=> nrel_main_idtf:
+				[временная sc-дуга принадлежности']
+				(*<- lang_ru;;*);
+				[temporary access sc-arc']
+				(*<- lang_en;;*);;
+		*);
 		rrel_perm
+		(*
+			=> nrel_main_idtf:
+				[постоянная sc-дуга принадлежности']
+				(*<- lang_ru;;*);
+				[permanent access sc-arc']
+				(*<- lang_en;;*);;
+		*)
 	};;
