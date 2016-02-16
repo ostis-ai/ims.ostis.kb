@@ -1,0 +1,46 @@
+<p> Для описания способов решения <i><sc_element sys_idtf  = "task">задач</sc_element></i> в рамках <i><sc_element sys_idtf  = "technology_OSTIS">проекта OSTIS</sc_element></i> используются <i><sc_element sys_idtf  = "graph_programming_language">графовые языки программирования</sc_element></i>, ориентированные на обработку унифицированных <i><sc_element sys_idtf  = "semantic_network">семантических сетей</sc_element></i> и программы которых являются <i><sc_element sys_idtf  = "semantic_network">семантическими сетями</sc_element></i>. Базовым языком является SCP (Semantic Code Programming), тексты языка SCP называются <i><sc_element sys_idtf  = "scp_program">scp-программами</sc_element></i>. Программы, разработанные на данных языках, оказывают влияние на производительность <i><sc_element sys_idtf  = "intelligent_system">интеллектуальной системы</sc_element></i> в целом. Поэтому возникает необходимость выработки таких методик, которые позволят проектировать эффективные программы, а также облегчить их разработку, модифицируемость и сопровождение. <br> 
+Методика проектирования программ, ориентированных на обработку унифицированных <i><sc_element sys_idtf  = "semantic_network">семантических сетей</sc_element></i>, рассматривается как набор процедур или инструкций по проектированию программ на базовом языке программирования <i><sc_element sys_idtf  = "technology_OSTIS">технологии OSTIS</sc_element></i>. Методика проектирования программ включает следующие компоненты: <br>
+<ul>
+<li> этапы проектирования программ, ориентированных на обработку унифицированных <i><sc_element sys_idtf  = "semantic_network">семантических сетей</sc_element></i>; </li>
+<li> базовые концепции проектирования программ, ориентированных на обработку унифицированных <i><sc_element sys_idtf  = "semantic_network">семантических сетей</sc_element></i>; </li>
+<li> инструментальные и организационные средства. </li>
+</ul>
+Можно выделить следующие этапы проектирования программ,  ориентированных на обработку унифицированных <i><sc_element sys_idtf  = "semantic_network">семантических сетей</sc_element></i>: <br>
+<ol>
+<li> Определение <i><sc_element sys_idtf  = "task">задачи</sc_element></i> и исследование ее реализуемости. </li>
+<li> Формирование, анализ и спецификация требований. </li>
+<li> Проектирование <i><sc_element sys_idtf  = "sc_model">семантической модели</sc_element></i> решения <i><sc_element sys_idtf  = "task">задачи</sc_element></i>. Если необходимо, то производится декомпозиция <i><sc_element sys_idtf  = "task">задачи</sc_element></i> на подзадачи. </li>
+<li> Разработка текста <i><sc_element sys_idtf  = "scp_program">scp-программы</sc_element></i>. Если была проведена декомпозиция <i><sc_element sys_idtf  = "task">задачи</sc_element></i>, то разработка текста для каждой подзадачи. </li>
+<li> Тестирование программы. </li>
+<li> Верификация программы. </li>
+<li> Оформление документации программы. </li>
+</ol>
+Прохождение всех этапов не является обязательным и зависит от сложности реализуемой задачи. Обязательным является формирование требований в том или ином виде, разработка текста <i><sc_element sys_idtf  = "scp_program">scp-программы</sc_element></i>, тестирование и верификация. В случае сложной <i><sc_element sys_idtf  = "task">задачи</sc_element></i> рекомендуется придерживаться принципа итеративного процесса проектирования, что дает возможность выполнять этапы несколько раз. На каждой итерации получается прототип, который позволяет проанализировать правильность решения <i><sc_element sys_idtf  = "task">задачи</sc_element></i>. <br>
+Базовые концепции проектирования программ, ориентированных на обработку унифицированных <i><sc_element sys_idtf  = "semantic_network">семантических сетей</sc_element></i>, включают <i><sc_element sys_idtf  = "section">разделы</sc_element></i>, посвященные общим понятиям и решению конкретных <i><sc_element sys_idtf  = "task">задач</sc_element></i> при проектировании программ. Каждый <i><sc_element sys_idtf  = "section">раздел</sc_element></i> можно рассматривать как частную методику. Набор частных методик, используемых при проектировании программы, зависит от специфических особенностей реализуемой <i><sc_element sys_idtf  = "task">задачи</sc_element></i>. На данный момент выделены следующие <i><sc_element sys_idtf  = "section">разделы</sc_element></i>: <br>
+<ul>
+<li> способы представления <i><sc_element sys_idtf  = "knowledge">знаний</sc_element></i>, обрабатываемых <i><sc_element sys_idtf  = "scp_program">scp-программами</sc_element></i>; </li>
+<li> разработка текстов <i><sc_element sys_idtf  = "scp_program">scp-программ</sc_element></i>: </li>
+<ul>
+<li> порядок выполнения <i><sc_element sys_idtf  = "new_scp_operator">scp-операторов</sc_element></i>; </li>
+<li> циклическое выполнение <i><sc_element sys_idtf  = "new_scp_operator">scp-операторов</sc_element></i>; </li>
+<li> рекурсивное выполнение <i><sc_element sys_idtf  = "scp_program">scp-программ</sc_element></i>; </li>
+</ul>
+<li> порядок одновременного выполнения нескольких <i><sc_element sys_idtf  = "scp_program">scp-программ</sc_element></i>: </li>
+<ul>
+<li> реализация параллельного выполнения <i><sc_element sys_idtf  = "scp_program">scp-программ</sc_element></i> в <i><sc_element sys_idtf  = "sc_memory">sc-памяти</sc_element></i>; </li>
+<li> разработка текстов распараллеливающихся <i><sc_element sys_idtf  = "scp_program">scp-программ</sc_element></i>; </li>
+</ul>
+<li> порядок проектирования многократно используемых компонентов (ip-компонентов); </li>
+<li> наиболее часто допускаемые <i><sc_element sys_idtf  = "nrel_error">ошибки</sc_element></i>; </li>
+<li> требования и рекомендации по оформлению и документированию программ, ориентированных на обработку унифицированных <i><sc_element sys_idtf  = "semantic_network">семантических сетей</sc_element></i>. </li>
+</ul>
+Инструментами, используемыми для проектирования <i><sc_element sys_idtf  = "scp_program">scp-программ</sc_element></i>, являются средства проектирования программ и среда существования программ. К средствам проектирования программ относятся: <br>
+<ul>
+<li> множество <i><sc_element sys_idtf  = "sc_lang">sc-языков</sc_element></i>; </li>
+<li> <i><sc_element sys_idtf  = "graph_programming_language">графовый язык программирования</sc_element></i> SCP; </li>
+<li> редактор sc-текстов; </li>
+<li> интерпретатор <i><sc_element sys_idtf  = "scp_program">scp-программ</sc_element></i>; </li>
+<li> отладчик <i><sc_element sys_idtf  = "scp_program">scp-программ</sc_element></i>; </li>
+<li> help-система для информационного обслуживания и обучения. </li>
+</ul>
+</p>
