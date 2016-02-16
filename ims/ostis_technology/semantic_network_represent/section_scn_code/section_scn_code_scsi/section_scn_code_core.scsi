@@ -1,0 +1,36 @@
+scn_code_core => nrel_main_idtf: 
+	[SCn-код. Ядро] (* <- lang_ru;; *);
+	[SCn-code core] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	...scn_code_core_explanation
+	(*
+	<- sc_explanation;;
+	
+<= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://scn_code_htmls/scn_code_core_text1.html" 
+				(*
+				<- lang_ru;;
+				*);;
+			*);;
+                <= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://scn_code_htmls/scn_code_core_text1_en.html" 
+				(*
+				<- lang_en;;
+				*);;
+			*);;
+		*);
+
+
+
+
+-> rrel_example:
+		"file://images/scn_text_example_1_1.png";
+-> rrel_example:
+		"file://images/scn_text_example_1_2.png";;
