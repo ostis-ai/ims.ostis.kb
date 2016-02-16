@@ -1,14 +1,5 @@
-sc_structure
-	<- sc_node_not_relation;
-	=> nrel_main_idtf:
-		[sc-конструкция]
-		(*<- lang_ru;;*);
-		[sc-structure]
-		(*<- lang_en;;*);
-	=> nrel_idtf:
-		[структура]
-		(*<- lang_ru;;*);
-	<- rrel_key_sc_element:
+structure
+<- rrel_key_sc_element:
 		...
 		(*
 			<- sc_explanation;;
@@ -16,17 +7,17 @@ sc_structure
 				...
 				(*
 					-> rrel_example:
-						"file://content_html/explanation_for_sc_structure.html"
+						"file://content_html/explanation_for_structure.html"
 						(*<- lang_ru;;*);;
 				*);;
 		*);
 	<= nrel_subdividing: 
 	{
-		standard_sc_structure;
-		non_standard_sc_structure
+		standard_structure;
+		non_standard_structure
 	};;
 
-standard_sc_structure
+standard_structure
 	<- sc_node_not_relation;
 	=> nrel_main_idtf:
 		[sc-конструкция стандартного вида]
@@ -41,7 +32,7 @@ standard_sc_structure
 				...
 				(*
 					-> rrel_example:
-						"file://content_html/explanation_for_standard_sc_structure.html"
+						"file://content_html/explanation_for_standard_structure.html"
 						(*<- lang_ru;;*);;
 				*);;
 		*);
@@ -148,7 +139,7 @@ sc_5_el_str
 		*);;
 	*);;
 
-non_standard_sc_structure
+non_standard_structure
 	<- sc_node_not_relation;
 	=> nrel_main_idtf:
 		[sc-конструкция нестандартного вида]
@@ -163,7 +154,7 @@ non_standard_sc_structure
 				...
 				(*
 					-> rrel_example:
-						"file://content_html/explanation_for_non_standard_sc_structure.html"
+						"file://content_html/explanation_for_non_standard_structure.html"
 						(*<- lang_ru;;*);;
 				*);;
 		*);
@@ -176,6 +167,6 @@ non_standard_sc_structure
 		...
 		(*
 		-> rrel_example:
-			"file://content_images/non_standard_sc_structure.png";; 
+			"file://content_images/non_standard_structure.png";; 
 		*);;
 	*);;

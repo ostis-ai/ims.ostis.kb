@@ -129,9 +129,9 @@ scp_operator
 
 	<= nrel_subdividing: 
 	{
-		scp_operator_of_sc_structure_generation;
+		scp_operator_of_structure_generation;
 		scp_operator_of_structure_associative_search;
-		scp_operator_of_sc_structure_deleting;
+		scp_operator_of_structure_deleting;
 		scp_operator_of_conditions_check;
 		scp_operator_of_scp_operand_value_control;
 		scp_operator_of_scp_process_control;
@@ -141,7 +141,7 @@ scp_operator
 		scp_operator_of_lock_management
 	};;
 
-scp_operator_of_sc_structure_generation
+scp_operator_of_structure_generation
 	=> nrel_main_idtf:
 		[scp-оператор генерации конструкций]
 		(*<- lang_ru;;*);
@@ -155,7 +155,7 @@ scp_operator_of_sc_structure_generation
 				...
 				(*
 				-> rrel_example:
-					"file://content_html/scp_operator_of_sc_structure_generation.html"
+					"file://content_html/scp_operator_of_structure_generation.html"
 						(* <- lang_ru;; *);; 
 				*);;
 		*);
@@ -417,7 +417,7 @@ searchElStr3
 				*);;
 		*);;
 
-scp_operator_of_sc_structure_deleting
+scp_operator_of_structure_deleting
 	=> nrel_main_idtf:
 		[scp-оператор удаления структуры]
 		(*<- lang_ru;;*);
@@ -431,7 +431,7 @@ scp_operator_of_sc_structure_deleting
 				...
 				(*
 				-> rrel_example:
-					"file://content_html/scp_operator_of_sc_structure_deleting.html"
+					"file://content_html/scp_operator_of_structure_deleting.html"
 						(* <- lang_ru;; *);; 
 				*);;
 		*);
