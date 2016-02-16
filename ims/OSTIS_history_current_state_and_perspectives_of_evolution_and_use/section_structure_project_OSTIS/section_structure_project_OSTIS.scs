@@ -1,15 +1,43 @@
 section_structure_project_OSTIS
-
 => nrel_main_idtf:
 	[Раздел. Структура Проекта OSTIS]
 	(* <- lang_ru;; *);
 	[Section. Structure Project OSTIS]
 	(* <- lang_en;; *);;
 
-section_structure_project_OSTIS<= nrel_sc_text_translation:
- ...
- (*
- -> rrel_example:
-   "file://nl_files/section_structure_project_OSTIS.html"
-	(* <- lang_ru;;	*);;
- *);;
+non_atomic_section -> section_structure_project_OSTIS;;
+
+section_structure_project_OSTIS = [*^"file://section_structure_project_OSTIS.scsi"*];;
+
+section_structure_project_OSTIS
+	-> rrel_key_sc_element:
+		family_applied_ostis_systems_not_related_information_support;
+		nrel_subproject;
+		nrel_family_subprojects;
+		project_ostis;
+		project_IMS;
+		project_Conf_OSTIS;
+		project_IIT_Dep;
+		project_IIT_Dep.system;
+		project_Conf_OSTIS.system;
+		project_geometry.system;
+		project_numerical_models.system;
+		project_belarus_geography.system;
+		project_minsk_history.system;
+		project_traffic_laws.system;
+		project_intelligent_assistant.system;
+		project_enterprise_management.system;
+		project_smart_home.system;;
+
+section_structure_project_OSTIS
+=> nrel_introduction:
+	...
+(*
+	<= nrel_sc_text_translation:
+	 ...
+	 (*
+	 -> rrel_example:
+	   "file://nl_files/section_structure_project_OSTIS.html"
+		(* <- lang_ru;;	*);;
+	 *);;
+*);;
