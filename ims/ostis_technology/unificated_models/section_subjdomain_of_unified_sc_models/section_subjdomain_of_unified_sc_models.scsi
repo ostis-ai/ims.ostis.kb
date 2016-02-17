@@ -10,7 +10,12 @@ subjdomain_of_unified_sc_models
 	[Subject domain of sc-model of computer systems]
 	(* <- lang_en;; *);
 <- subject_domain;
--> rrel_maximum_studied_object_class: sc_model_computer_systems;;
+-> rrel_maximum_studied_object_class: sc_model_computer_systems;
+-> rrel_not_maximum_studied_object_class:
+	sc_model_of_knowledge_base;
+	sc_model_of_processing_machine_knowledge;
+	sc_model_computer_system_interface;
+	sc_model;;
 
 sc_model_computer_systems <= nrel_basic_decomposition:
 	{

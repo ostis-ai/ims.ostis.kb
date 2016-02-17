@@ -3,10 +3,34 @@ subject_domain_of_abstract_sc_agents
 => nrel_main_idtf:
 	[Предметная область абстрактных агентов, работающих над унифицированной семантической памятью] 
 	(* <- lang_ru;; *);
-	[subject domain of abstract sc-agents]	
+	[Subject domain of abstract sc-agents]	
 	(* <- lang_en;; *);
 <- subject_domain;
+=> nrel_primary_elements_class_private_subject_domain: basic_programming_language_scp;
+=> nrel_primary_elements_class_private_subject_domain: unified_semantic_model_programme_scp_interpretation;
 -> rrel_maximum_studied_object_class: abstract_sc_agent;
+-> rrel_not_maximum_studied_object_class:
+	non_atomic_abstract_sc_agent;
+	atomic_abstract_sc_agent;
+	platform_independent_abstract_sc_agent;
+	platform_dependent_abstract_sc_agent;
+	inside_abstract_sc_agent;
+	effector_abstract_sc_agent;
+	receptor_abstract_sc_agent;
+	sc_agent;
+	active_sc_agent;
+	sc_description_of_sc_agent_behavior;
+	lock_type;
+	total_lock;
+	lock_for_any_change;
+	lock_for_deleting;
+-> rrel_explored_relation: 
+	nrel_abstract_sc_agent_decomposition;
+	nrel_sc_agent_key_sc_elements;
+	nrel_sc_agent_program;
+	nrel_primary_initiation_condition;
+	nrel_initiation_condition_and_result;
+	nrel_lock;
 -> rrel_studied_object_class: ...;;
 
 abstract_sc_agent

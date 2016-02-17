@@ -1,18 +1,113 @@
 basic_programming_language_scp
 	=> nrel_main_idtf:
-		[Предметная область действий и спецификаций действий абстрактной scp-машины - базовый язык программирования SCP, ориентированный на обработку текстов SC-кода]
-		(*
-		<- lang_ru;;
-		*);
-		[Subject domain of actions and action specifications of abstract scp-machine - base programming language SCP oriented on SC-code texts processing]
-		(*
-		<- lang_en;;
-		*);
+	[Предметная область действий и спецификаций действий абстрактной scp-машины - базовый язык программирования SCP, ориентированный на обработку текстов SC-кода]
+	(* <- lang_ru;; *);
+	[Subject domain of actions and action specifications of abstract scp-machine - base programming language SCP oriented on SC-code texts processing]
+	(* <- lang_en;; *);
 		
-	<-subject_domain;
+<- subject_domain;
 
-	-> rrel_maximum_studied_object_class: 
-		scp_program;;
+-> rrel_not_maximum_studied_object_class:
+	scp_operator;
+	scp_process;
+	scp_operator_of_structure_generation;
+	sys_gen;
+	genElStr5;
+	genElStr3;
+	genEl;
+	scp_operator_of_structure_associative_search;
+	searchElStr3;
+	searchElStr5;
+	searchSetStr3;
+	searchSetStr5;
+	sys_search;
+	scp_operator_of_structure_deleting;
+	eraseEl;
+	eraseElStr3;
+	eraseElStr5;
+	eraseSetStr3;
+	eraseSetStr5;
+	scp_operator_of_conditions_check;
+	ifType;
+	ifVarAssign;
+	ifFormCont;
+	ifCoin;
+	ifEq;
+	ifGr;
+	scp_operator_of_scp_operand_value_control;
+	varAssign;
+	varErase;
+	scp_operator_of_scp_process_control;
+	call;
+	waitReturn;
+	waitReturnSet;
+	return;
+	scp_operators_conjunction;
+	scp_operator_of_event_control;
+	sys_wait;
+	scp_operator_of_file_content_process;
+	contAdd;
+	contSub;
+	contMult;
+	contDiv;
+	contPow;
+	contLn;
+	contSin;
+	contCos;
+	contTg;
+	contASin;
+	contACos;
+	contATg;
+	contDivInt;
+	contDivRem;
+	contAssign;
+	contErase;
+	stringLen;
+	contStringConcat;
+	stringSub;
+	stringStartsWith;
+	stringIfEq;
+	stringIfGr;
+	stringToUpperCase;
+	stringToLowerCase;
+	stringSplit;
+	stringEndsWith;
+	stringReplace;
+	stringSlice;
+	scp_operator_of_information_output_to_consol;
+	print;
+	printNl;
+	printEl;
+	scp_operator_of_lock_managementProc;
+	unlockProc;
+	unlockEl;
+	lockEl;
+	lockElEdit;
+	lockElRemove;
+	unlockElStr;
+	lockElStr;
+	lockElStrEdit;
+	lockElStrRemove;
+	scp_operator_atomic_type;
+-> rrel_explored_relation:
+	rrel_init;
+	rrel_param;
+	rrel_in;
+	rrel_out;
+	rrel_scp_operand;
+	rrel_scp_const;
+	rrel_scp_var;
+	rrel_fixed;
+	rrel_assign;
+	rrel_set;
+	rrel_erase;
+	rrel_type_of_sc_element;
+	rrel_node;
+	rrel_relation;
+	rrel_arc;
+	rrel_access;
+-> rrel_maximum_studied_object_class: 
+	scp_program;;
 
 scp_program
 	=> nrel_main_idtf:

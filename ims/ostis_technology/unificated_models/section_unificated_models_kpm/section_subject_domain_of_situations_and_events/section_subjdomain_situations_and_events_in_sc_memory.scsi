@@ -27,10 +27,39 @@ subject_domain_situations_and_events_in_sc_memory
 	(* <- lang_ru;; *);
 	
 <- subject_domain;
-
+<= nrel_primary_elements_class_private_subject_domain: subjdomain_temporary_entity;
 -> rrel_maximum_studied_object_class:
 		situation;
-		event;;
+		event;
+-> rrel_not_maximum_studied_object_class:
+	sc_element;
+	present_sc_element;
+	logically_removed_sc_element;
+	number;
+	non_calculated_number;
+	calculated_number;
+	concept;
+	main_concept;
+	auxiliary_concept;
+	main_to_auxilary_concept;
+	auxiliary_to_main_concept;
+	specified_essence;
+	not_enough_specified_essence;
+	enough_specified_essence;
+	average_specified_essence;
+	structure;
+	file;
+-> rrel_explored_relation: 
+	nrel_situation_in_sc_memory;
+	nrel_elementary_situation_in_sc_memory;
+	nrel_add_sc_arc_coming_out_of_given_sc_element_situation;
+	nrel_add_sc_arc_coming_in_given_sc_element_situation;
+	nrel_add_sc_edge_incident_to_given_sc_element_situation;
+	nrel_remove_sc_arc_coming_out_from_given_sc_element_situation;
+	nrel_remove_sc_arc_coming_in_given_sc_element_situation;
+	nrel_remove_sc_edge_incident_to_given_sc_element_situation;
+	nrel_remove_sc_element_situation;
+	nrel_change_fole_content_situation;;
 		
 sc_element
 => nrel_main_idtf:

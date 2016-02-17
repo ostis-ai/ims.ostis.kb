@@ -27,9 +27,29 @@ subject_domain_of_subject_domains
 
 <- reflexive_set;
 
--> rrel_maximum_studied_object_class: 
-		subject_domain;;
-		
+-> rrel_maximum_studied_object_class:
+	subject_domain;
+-> rrel_not_maximum_studied_object_class:
+	stationary_subject_domain;
+	non_stationary_subject_domain;
+	concept;
+	sc_lang;
+-> rrel_explored_relation:
+	rrel_concept_subject_domain;
+	rrel_explored_concept;
+	rrel_maximum_studied_object_class;
+	rrel_not_maximum_studied_object_class;
+	rrel_explored_primary_elements_class;
+	rrel_explored_relation;
+	rrel_explored_structures_class;
+	rrel_explored_in_subject_subdomain_concept;
+	rrel_explored_general_subject_domain_concept;
+	rrel_explored_non_related_subject_domain_concept;
+	nrel_private_subject_domain;
+	nrel_primary_elements_class_private_subject_domain;
+	nrel_explored_relations_class_private_subject_domain;
+	nrel_non_related_subject_domain;
+	sc_lang_and_appropriate_subject_domain;;
 
 subject_domain
 <- sc_node_not_relation;
