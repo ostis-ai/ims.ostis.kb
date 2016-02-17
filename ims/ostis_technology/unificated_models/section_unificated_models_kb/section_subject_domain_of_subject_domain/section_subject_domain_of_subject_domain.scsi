@@ -169,7 +169,7 @@ rrel_concept_subject_domain
 		rrel_explored_non_related_subject_domain_concept
 		};
 
-<- non_essential_concept;
+<- minor_concept;
 
 <- rrel_key_sc_element:
 	...
@@ -507,7 +507,7 @@ nrel_private_subject_domain
 
 <- oriented_relation;
 
-<- non_role_relation;
+<- norole_relation;
 
 => nrel_strict_inclusion:
 		nrel_primary_elements_class_private_subject_domain;
