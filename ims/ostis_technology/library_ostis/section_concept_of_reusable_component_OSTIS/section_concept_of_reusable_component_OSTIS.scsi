@@ -145,14 +145,6 @@ nrel_attendant_component
 	[attendant component*]
 	(* <- lang_en;; *);;
 
-nrel_subsidiary_sc_system
-<- sc_node_norole_relation;
-=> nrel_main_idtf:
-	[дочерняя sc-система*] 
-	(* <- lang_ru;; *);
-	[subsidiary sc-system*]
-	(* <- lang_en;; *);;
-
 nrel_library_component_decomposition
 <- sc_node_norole_relation;
 <- decomposition_relation;
