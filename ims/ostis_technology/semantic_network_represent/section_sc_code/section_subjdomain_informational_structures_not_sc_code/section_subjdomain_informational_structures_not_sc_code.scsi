@@ -5,8 +5,20 @@ subjdomain_informational_structures_not_sc_code
 	(* <- lang_ru;; *);
 	[Subjdomain informational structures not sc-code]
 	(* <- lang_en;; *);
+<- subject_domain;
 
-	<- subject_domain;;
+-> rrel_maximum_studied_object_class: 
+	file;
+-> rrel_not_maximum_studied_object_class:
+	lang_external;
+	languages;
+	lang_ru;
+	lang_en;
+	image;
+	class_of_syntactically_equivalent_information_structures;
+	maximum_class_of_syntactically_equivalent_information_structures;
+-> rrel_explored_relation:
+	nrel_sc_text_translation;;
 
 file <- sc_node_not_relation;
 

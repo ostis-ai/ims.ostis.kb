@@ -2,13 +2,81 @@ subject_domain_of_actions
 => nrel_main_idtf:
 	[Предметная область действий]
 	(* <- lang_ru;; *);
-	[subject domain of actions]
+	[Subject domain of actions]
 	(* <- lang_en;; *);
-
-<-subject_domain;
+<- subject_domain;
 
 -> rrel_maximum_studied_object_class: 
-	question;;
+	question;
+-> rrel_not_maximum_studied_object_class:
+	information_action;
+	behavioral_action;
+	effector_action;
+	receptor_action;
+	action_in_sc_memory;
+	action_in_the_external_environment_ostis_system;
+	effector_action_ostis_system;
+	receptor_action_ostis_system;
+	question_initiated;
+	performed_action;
+	active_action;
+	deferred_action;
+	planned_action;
+	question_finished;
+	question_finished_successfully;
+	question_finished_unsuccessfully;
+	priority_actions;
+	subject;
+	internal_subject_ostis_system;
+	external_subject_ostis_system_interaction;
+	external_subject_ostis_system_without_interaction;
+	actions_class;
+	atomic_actions_class;
+	non_atomic_actions_class;
+	task;
+	procedural_formulation_of_task;
+	declarative_formulation_of_task;
+	class_of_tasks;
+	task_question;
+	command;
+	command_class;
+	command_class_without_arguments;
+	command_class_with_one_argument;
+	command_class_with_two_arguments;
+	command_class_with_random_arguments_number;
+	atomic_command_class;
+	non_atomic_command_class;
+	plan;
+	program;
+	program_in_sc_memory;
+	protocol;
+	decision;
+-> rrel_explored_relation:
+	rrel_action_with_very_high_priority;
+	rrel_action_with_high_priority;
+	rrel_action_with_medium_priority;
+	rrel_action_with_low_priority;
+	rrel_action_with_very_low_priority;
+	nrel_decomposition_of_action;
+	nrel_private_action;
+	nrel_sequence_of_actions;
+	nrel_conjunction_of_previous_actions;
+	nrel_condition_control;
+	nrel_sequence_of_actions_positive_result;
+	nrel_sequence_of_actions_negative_result;
+	nrel_result;
+	nrel_performer;
+	nrel_customer;
+	nrel_initiator;
+	nrel_object;
+	nrel_context_of_action;
+	rrel_argument_of_action;
+	rrel_first_action_argument;
+	rrel_second_section_argument;
+	rrel_third_section_argument;
+	nrel_class_of_arguments;
+	nrel_first_argument_class;
+	nrel_second_argument_class;;
 
 question
 <- sc_node_not_relation;

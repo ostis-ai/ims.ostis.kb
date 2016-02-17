@@ -7,8 +7,23 @@ subject_domain_of_sc_identifiers
 	(* <- lang_en;; *);
 <- subject_domain;
 -> rrel_maximum_studied_object_class: sc_identifier;
+-> rrel_not_maximum_studied_object_class:
+	string_sc_identifier;
+	non_string_sc_identifier;
+	atomic_sc_identifier;
+	non_atomic_sc_identifier;
+	sc_identifier_contour;
+	sc_identifier_file;
+	sc_identifier_set;
+	sc_identifier_tuple_set;
+	sc_identifier_operation;
+	system_sc_identifier;
+	identification_relation;
 -> rrel_studied_object_class: ...;
--> rrel_explored_relation: ...;;
+-> rrel_explored_relation: 
+	nrel_idtf;
+	nrel_main_idtf;
+	nrel_system_identifier;;
 
 sc_identifier
 <- sc_node_not_relation;

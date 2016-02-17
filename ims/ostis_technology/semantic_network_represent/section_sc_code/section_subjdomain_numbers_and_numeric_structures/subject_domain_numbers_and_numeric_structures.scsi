@@ -4,8 +4,40 @@ subject_domain_numbers_and_numeric_structures
 	(* <- lang_ru;; *);
 	[Subject domain of numbers and numeric structures]
 	(* <- lang_en;; *);
-<- subject_domain;;
+<- subject_domain;
 
+-> rrel_maximum_studied_object_class:
+	number;
+	numeric_structure;
+-> rrel_not_maximum_studied_object_class:
+	natural_number;
+	integer;
+	rational_number;
+	irrational_number;
+	real_number;
+	complex_number;
+	negative_number;
+	positive_number;
+	arithmetic_expression;
+	arithmetic_operation;
+	number_pi;
+	number_zero;
+	number_one;
+	imaginary_unit;
+	numeral_system;
+	decimal_numeral_system;
+	binary_numeral_system;
+	hexadecimal_numeral_system;
+-> rrel_explored_relation:
+	nrel_opposite_numbers;
+	nrel_modulus;
+	nrel_sum_of_numbers;
+	nrel_multiplication_of_numbers;
+	nrel_pow_numbers;
+	nrel_be_more;
+	nrel_equal_numbers;
+	nrel_more_or_equal;;
+	
 number
 <- sc_node_not_relation;
 => nrel_main_idtf:

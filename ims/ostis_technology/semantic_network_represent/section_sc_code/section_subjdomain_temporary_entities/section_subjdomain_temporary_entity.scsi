@@ -14,11 +14,70 @@ subjdomain_temporary_entity
 
 -> rrel_maximum_studied_object_class:
 	temporary_entity;
+-> rrel_not_maximum_studied_object_class:
+	last_entity;
+	real_entity;
+	future_entity;
+	temporary_connection;
+	situation;
+	process;
+	process_in_sc_memory;
+	process_in_the_environment_ostis_system;
+	material_entity;
+	impact;
+	relation;
+	class_of_temporary_connections;
+	class_of_constant_connections;
+	class_of_temporary_and_constant_connections;
+	set;
+	situational_set;
+	non_situational_set;
+	partial_situational_set;
+	temporal_connection;
+	temporal_relation;
+	begin;
+	completion;
+	duration;
+	millennium;
+	century;
+	year;
+	month;
+	day;
+	hour;
+	minute;
+	second;
+-> rrel_explored_relation:
+	number_of_millennium;
+	nrel_affecting_entity;
+	nrel_object_of_impact;
+	nrel_initial_situation;
+	nrel_typical_situation;
+	nrel_final_situation;
+	nrel_event;
+	nrel_temporal_inclusion;
+	nrel_temporal_part;
+	nrel_first_stage;
+	nrel_final_stage;
+	nrel_intermediate_stage;
+	nrel_temporal_inclusion_without_coincidence_of_the_initial_and_final_moments;
+	nrel_temporal_inclusion_with_coincidence_of_the_initial_moments;
+	nrel_temporal_inclusion_with_coincidence_of_the_final_moments;
+	nrel_temporal_concurrence;
+	nrel_temporal_union;
+	nrel_temporal_decomposition;
+	nrel_temporal_adjacency;
+	nrel_temporal_sequence_with_gap;
+	nrel_temporal_sequence_with_intersection;
+	number_of_century;
+	number_of_year;
+	number_of_month_in_year;
+	number_of_day_in_month;
+	number_of_hour_in_day;
+	number_of_minute_in_hour;
+	number_of_second_in_minute;
+
 -> rrel_studied_object_class:
 	...;;
-
-	
-	
 
 temporary_entity
 <- sc_node_not_relation;
