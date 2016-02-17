@@ -3,5 +3,14 @@ section_rules_of_designing_models_administrator_hierarchy
 	[Раздел. Правила разработки sc-моделей баз знаний согласно методике, предполагающей взаимодействие всех разработчиков с семантической памятью и наличием иерархии администраторов]
 	(* <- lang_ru;; *);
 	[Section. Design rules for knowledge base sc-models according to the methods referred to the interconnection of all the developers with semantic memory and to the presence of the administrator hierarchy]
-	(* <- lang_en;; *);
-<- atomic_section;;
+	(* <- lang_en;; *);;
+	section_rules_of_designing_models_administrator_hierarchy
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/rules.html"
+			(*<- lang_ru;;*);;
+			
+		*);;
+	
