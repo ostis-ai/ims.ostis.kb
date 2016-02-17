@@ -6,7 +6,26 @@ subject_domain_of_semantic_neighborhoods
 	[Subject domain of semantic neighbourhoods]
 	(* <- lang_en;; *);
 <- subject_domain;
--> rrel_maximum_studied_object_class: semantic_neighborhood;;
+-> rrel_maximum_studied_object_class: semantic_neighborhood;
+-> rrel_not_maximum_studied_object_class:
+	semantic_neighborhood_by_incident_connector;
+	semantic_neighborhood_by_outgoing_arcs;
+	semantic_neighborhood_by_outgoing_arcs_access;
+	semantic_neighborhood_by_incoming_arcs;
+	semantic_neighborhood_by_incoming_arcs_access;
+	full_semantic_neighborhood;
+	basic_semantic_neighborhood;
+	specialized_semantic_neighborhood;
+	explanation;
+	note;
+	identify_instances_rule;
+	terminological_neighbourhood;
+	theoretic_set_semantic_neighborhood;
+	decomposition_description;
+	logic_semantic_neighborhood;
+	description_of_a_typical_instance;
+	comparative_analysis;
+	figure;;
 
 semantic_neighborhood
 <- sc_node_not_relation;
