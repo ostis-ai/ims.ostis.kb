@@ -769,10 +769,6 @@ temporal_relation
 -> nrel_temporal_sequence_with_gap;
 -> nrel_temporal_sequence_with_intersection;;
 
-
-
-
-
 nrel_temporal_inclusion
 
 <- sc_node_norole_relation;
@@ -785,10 +781,10 @@ nrel_temporal_inclusion
 
 => nrel_inclusion:
 	nrel_temporal_part;
-	nrel_temporal_inclusion_without_matching_initial_and_final_moments;
+	nrel_temporal_inclusion_without_coincidence_of_the_initial_and_final_moments;
 	nrel_temporal_concurrence;
-	nrel_temporal_inclusion_with_matching_initial_moments;
-	nrel_temporal_inclusion_without_matching_final_moments;
+	nrel_temporal_inclusion_with_coincidence_of_the_initial_moments;
+	nrel_temporal_inclusion_with_coincidence_of_the_final_moments;
 
 <- rrel_key_sc_element:
 	...
@@ -802,10 +798,6 @@ nrel_temporal_inclusion
 			(* <- lang_ru;; *);;
 		*);;
 	*);;
-
-	
-	
-	
 	
 nrel_temporal_part
 
@@ -865,10 +857,6 @@ nrel_temporal_part
 		*);;
 	*);;
 	
-	
-	
-	
-	
 nrel_first_stage
 
 <- sc_node_norole_relation;
@@ -878,10 +866,6 @@ nrel_first_stage
 	(* <- lang_ru;; *);
 	[first stage*]
 	(* <- lang_en;; *);;
-	
-	
-	
-	
 	
 nrel_final_stage
 
@@ -985,11 +969,7 @@ nrel_temporal_inclusion_with_coincidence_of_the_initial_moments
 			"file://nl_files/nrel_temporal_inclusion_with_coincidence_of_the_initial_moments_second.png";;
 		*);;
 	*);;
-	
-	
-	
-	
-	
+		
 nrel_temporal_inclusion_with_coincidence_of_the_final_moments
 
 <- sc_node_norole_relation;
