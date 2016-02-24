@@ -41,7 +41,7 @@ section_subject_domain_ligaments_relations
 	tolerance_relation;
 	equivalence_relation;
 	role_relation;
-	numeric_attribute;
+	order_role_relation;
 	norole_relation;
 	norole_binary_relation;
 	arity;
@@ -880,7 +880,7 @@ role_relation
 	(* <- lang_ru;; *);
 <= nrel_set_of_subsets: nrel_access;
 <= nrel_strict_inclusion: binary_relation;
-=> nrel_strict_inclusion: numeric_attribute;
+=> nrel_strict_inclusion: order_role_relation;
 <- rrel_key_sc_element:
 	...
 		(*
@@ -902,7 +902,7 @@ nrel_access
 	[access*]
 	(* <- lang_en;; *);;
 
-numeric_attribute
+order_role_relation
 <- sc_node_not_relation;
 => nrel_main_idtf:
 	[числовой атрибут]
@@ -924,10 +924,81 @@ numeric_attribute
 			...
 			(*
 			-> rrel_example:
-					"file://nl_files/explanation_for_numeric_attribute.html"			
+					"file://nl_files/explanation_for_order_role_relation.html"			
 					(* <- lang_ru;;	*);;
 			*);;
 		*);;
+
+rrel_1
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+	[1']
+	(* <- lang_ru;; *);
+	[1']
+	(* <- lang_en;; *);;
+rrel_2
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+	[2']
+	(* <- lang_ru;; *);
+	[2']
+	(* <- lang_en;; *);;
+rrel_3
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+	[3']
+	(* <- lang_ru;; *);
+	[3']
+	(* <- lang_en;; *);;
+rrel_4
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+	[4']
+	(* <- lang_ru;; *);
+	[4']
+	(* <- lang_en;; *);;
+rrel_5
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+	[5']
+	(* <- lang_ru;; *);
+	[5']
+	(* <- lang_en;; *);;
+rrel_6
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+	[6']
+	(* <- lang_ru;; *);
+	[6']
+	(* <- lang_en;; *);;
+rrel_7
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+	[7']
+	(* <- lang_ru;; *);
+	[7']
+	(* <- lang_en;; *);;
+rrel_8
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+	[8']
+	(* <- lang_ru;; *);
+	[8']
+	(* <- lang_en;; *);;
+rrel_9
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+	[9']
+	(* <- lang_ru;; *);
+	[9']
+	(* <- lang_en;; *);;
+rrel_10
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+	[10']
+	(* <- lang_ru;; *);
+	[10']
+	(* <- lang_en;; *);;
 
 norole_relation
 <- sc_node_not_relation;
