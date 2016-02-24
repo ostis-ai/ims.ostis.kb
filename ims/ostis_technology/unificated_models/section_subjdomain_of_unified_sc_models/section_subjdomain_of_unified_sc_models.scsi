@@ -17,7 +17,13 @@ subjdomain_of_unified_sc_models
 	sc_model_computer_system_interface;
 	sc_model;;
 
-sc_model_computer_systems <= nrel_basic_decomposition:
+sc_model_computer_systems
+=> nrel_main_idtf:
+	[sc-модель компьютерной системы]
+	(* <- lang_ru;; *);
+	[sc-model of computer system]
+	(* <- lang_en;; *);
+<= nrel_basic_decomposition:
 	{
 	sc_model_of_knowledge_base;
 	sc_model_of_processing_machine_knowledge;
@@ -48,3 +54,10 @@ sc_model
 				(* <- lang_ru;;	*);;
 			*);;
 	*);;
+
+sc_model_computer_system_interface
+=> nrel_main_idtf:
+	[sc-модель интерфейс компьютерной системы]
+	(* <- lang_ru;; *);
+	[sc-model of computer system interface]
+	(* <- lang_en;; *);;

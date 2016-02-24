@@ -101,15 +101,19 @@ temporary_entity
 
 
 <= nrel_subdividing:
+	{
 	last_entity;
 	real_entity;
-	future_entity;
+	future_entity
+	};
 
 <= nrel_subdividing:
+	{
 	temporary_connection;
 	situation;
 	process;
-	material_entity;
+	material_entity
+	};
 
 <- rrel_key_sc_element:
 	...
@@ -309,8 +313,10 @@ process
 	structure;
 	
 <= nrel_subdividing:
+	{
 	process_in_sc_memory;
-	process_in_the_environment_ostis_system;
+	process_in_the_environment_ostis_system
+	};
 	
 <- rrel_key_sc_element:
 	...
@@ -325,19 +331,13 @@ process
 		*);;
 	*);;
 
-
-	
-	
 process_in_sc_memory
 <- sc_node_not_relation;
 => nrel_main_idtf:
 	[процесс в sc-памяти]
 	(* <- lang_ru;; *);
 	[process in sc-memory]
-	(* <- lang_en;; *);;
-	
-	
-	
+	(* <- lang_en;; *);;	
 	
 process_in_the_environment_ostis_system
 <- sc_node_not_relation;
@@ -576,12 +576,11 @@ nrel_event
 relation
 
 <= nrel_subdividing:
+	{
 	class_of_temporary_connections;
 	class_of_constant_connections;
-	class_of_temporary_and_constant_connections;;
-	
-
-
+	class_of_temporary_and_constant_connections
+	};;
 
 class_of_temporary_connections
 <- sc_node_not_relation;
@@ -638,18 +637,13 @@ class_of_temporary_and_constant_connections
 	[отношение, некоторые (но не все) связки которого являются нестационарными]
 	(* <- lang_ru;; *);;
 	
-	
-	
-	
 set
-
 <= nrel_subdividing:
+	{
 	situational_set;
 	non_situational_set;
-	partial_situational_set;;
-	
-	
-	
+	partial_situational_set
+	};;
 	
 situational_set
 <- sc_node_not_relation;
