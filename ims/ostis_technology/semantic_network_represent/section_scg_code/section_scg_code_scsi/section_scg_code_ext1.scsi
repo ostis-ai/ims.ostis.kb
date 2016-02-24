@@ -40,10 +40,9 @@ scg_code_ext1 => nrel_main_idtf:
 				"file://files/core_triangle_struct.png"
 				(*
 				<-lang_ru;;
-				<- rrel_key_sc_element:
+				=> nrel_comment:
 					...scg_code_ext1_comment1
 					(*
-					<- sc_comment;;
 					<- rrel_key_sc_element:
 						...scg_ext1_illustration2
 						(*
@@ -100,18 +99,15 @@ scg_code_ext1 => nrel_main_idtf:
 -> rrel_example:
 	"file://files/ext1_triangle_ABC.png"
 	(*
-	<- rrel_key_sc_element:
+	=> nrel_comment:
 		...scg_code_ext1_comment2
 		(*
-		<- sc_comment;;
-		<- rrel_key_sc_element:
+		=> nrel_comment:
 			...scg_code_ext1_comment3
 			(*
-			<- sc_comment;;
-			<- rrel_key_sc_element:
+			=> nrel_comment:
 				...scg_code_ext1_comment4
 				(*
-					<- sc_comment;;
 				<= nrel_sc_text_translation:
 					...translation_scg_code_ext1_comment4
 					(*
@@ -138,10 +134,9 @@ scg_code_ext1 => nrel_main_idtf:
 		*);;
 	*);
 
-<- rrel_key_sc_element:
+=> nrel_comment:
 		...scg_code_ext1_comment5
 		(*
-		<- sc_comment;;
 		<= nrel_sc_text_translation:
 			...translation_scg_code_ext1_comment5
 			(*
@@ -154,10 +149,9 @@ scg_code_ext1 => nrel_main_idtf:
 -> rrel_example:
 	"file://files/ext1_moon.png"
 	(*
-	<- rrel_key_sc_element:
+	=> nrel_comment:
 		...scg_code_ext1_comment6
 		(*
-		<- sc_comment;;
 		<= nrel_sc_text_translation:
 			...translation_scg_code_ext1_comment6
 			(*
@@ -166,14 +160,12 @@ scg_code_ext1 => nrel_main_idtf:
 				(* <- lang_ru;; *);;
 			*);;
 		*);;
-	<- rrel_key_sc_element:
+	=> nrel_comment:
 		...scg_code_ext1_comment7
 		(*
-		<- sc_comment;;
-		<- rrel_key_sc_element:
+		=> nrel_comment:
 			...scg_code_ext1_comment8
 			(*
-				<- sc_comment;;
 			<= nrel_sc_text_translation:
 				...translation_scg_code_ext1_comment8
 				(*
