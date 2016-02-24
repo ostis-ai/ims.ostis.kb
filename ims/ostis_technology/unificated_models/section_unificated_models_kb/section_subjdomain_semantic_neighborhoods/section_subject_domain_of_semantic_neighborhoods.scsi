@@ -25,7 +25,7 @@ subject_domain_of_semantic_neighborhoods
 	logic_semantic_neighborhood;
 	description_of_a_typical_instance;
 	comparative_analysis;
-	figure;;
+	illustration;;
 
 semantic_neighborhood
 <- sc_node_not_relation;
@@ -450,12 +450,12 @@ comparative_analysis
 		*);;
 	*);;
 
-figure
+illustration
 <- sc_node_not_relation;
 => nrel_main_idtf:
 	[иллюстрация]
 	(* <- lang_ru;; *);
-	[figure]
+	[illustration]
 	(* <- lang_en;; *);
 <= nrel_strict_inclusion: specialized_semantic_neighborhood;
 <- rrel_key_sc_element:
@@ -466,7 +466,7 @@ figure
 		...
 		(*
 		-> rrel_example:
-			"file://nl_files/figure.html"
+			"file://nl_files/illustration.html"
 			(* <- lang_ru;; *);;
 		*);;
 	*);;
