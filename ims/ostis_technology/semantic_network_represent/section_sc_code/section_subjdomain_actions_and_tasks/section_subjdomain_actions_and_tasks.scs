@@ -112,7 +112,7 @@ rrel_key_sc_element -> (section_subjdomain_actions_and_tasks -> subject_domain_o
 	=> nrel_key_sc_element_base_order: (section_subjdomain_actions_and_tasks -> nrel_private_action)
 (*
 	<- rrel_key_sc_element;;
-	=> nrel_key_sc_element_base_order: (section_subjdomain_actions_and_tasks -> nrel_sequence_of_actions)
+	=> nrel_key_sc_element_base_order: (section_subjdomain_actions_and_tasks -> nrel_goto)
 (*
 	<- rrel_key_sc_element;;
 	=> nrel_key_sc_element_base_order: (section_subjdomain_actions_and_tasks -> nrel_conjunction_of_previous_actions)
@@ -121,10 +121,10 @@ rrel_key_sc_element -> (section_subjdomain_actions_and_tasks -> subject_domain_o
 	=> nrel_key_sc_element_base_order: (section_subjdomain_actions_and_tasks -> nrel_condition_control)
 (*
 	<- rrel_key_sc_element;;
-	=> nrel_key_sc_element_base_order: (section_subjdomain_actions_and_tasks -> nrel_sequence_of_actions_positive_result)
+	=> nrel_key_sc_element_base_order: (section_subjdomain_actions_and_tasks -> nrel_then)
 (*
 	<- rrel_key_sc_element;;
-	=> nrel_key_sc_element_base_order: (section_subjdomain_actions_and_tasks -> nrel_sequence_of_actions_negative_result)
+	=> nrel_key_sc_element_base_order: (section_subjdomain_actions_and_tasks -> nrel_else)
 (*
 	<- rrel_key_sc_element;;
 	=> nrel_key_sc_element_base_order: (section_subjdomain_actions_and_tasks -> nrel_result)

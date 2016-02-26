@@ -247,7 +247,7 @@ scp_program -> proc_of_finding_proof
 		 	-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
 		 	-> rrel_3: rrel_assign: rrel_scp_var: _next_element;;
                  	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
-		 	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_sequence_of_actions;;
+		 	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_goto;;
 	         
                  	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
 		 	-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer;;
@@ -263,7 +263,7 @@ scp_program -> proc_of_finding_proof
 		 	-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
 		 	-> rrel_3: rrel_fixed: rrel_scp_var: _element;;
                  	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
-		 	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_sequence_of_actions;;
+		 	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_goto;;
 	         
                  	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
 		 	-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer;;
