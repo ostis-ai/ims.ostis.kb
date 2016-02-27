@@ -114,7 +114,7 @@ scp_program -> agent_of_finding_proof
 		 	-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
 		 	-> rrel_3: rrel_fixed: rrel_scp_var: _elem;;
                  	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
-		 	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_decomposition_of_sc_action;;
+		 	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_decomposition_of_action;;
 	         
                  	-> rrel_set_1: rrel_fixed: rrel_scp_var: _answer;;
 		 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
@@ -298,7 +298,7 @@ scp_program -> agent_of_finding_proof
 			<- genElStr3;;
 		  	-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
 		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-		  	-> rrel_3: rrel_fixed: rrel_scp_const: nrel_decomposition_of_sc_action;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_const: nrel_decomposition_of_action;;
 
 		  	=> nrel_goto: .agent_of_finding_proof_operator6K;;
 			*);; 
