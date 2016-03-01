@@ -4,7 +4,7 @@ section_subjdomain_actions_and_tasks
 	(* <- lang_ru;; *);
 
 => nrel_idtf:
-	[Раздел. Семантическая теория действий (деятельности) и соответсвтующих им задач]
+	[Раздел. Семантическая теория действий (деятельности) и соответствующих им задач]
 	(* <- lang_ru;; *);
 => nrel_idtf:
 	[Раздел. sc-модель предметной области действий и ее онтологий]
@@ -127,6 +127,9 @@ rrel_key_sc_element -> (section_subjdomain_actions_and_tasks -> subject_domain_o
 	=> nrel_key_sc_element_base_order: (section_subjdomain_actions_and_tasks -> nrel_else)
 (*
 	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_base_order: (section_subjdomain_actions_and_tasks -> nrel_error)
+(*
+	<- rrel_key_sc_element;;
 	=> nrel_key_sc_element_base_order: (section_subjdomain_actions_and_tasks -> nrel_result)
 (*
 	<- rrel_key_sc_element;;
@@ -219,4 +222,4 @@ rrel_key_sc_element -> (section_subjdomain_actions_and_tasks -> subject_domain_o
 	<- rrel_key_sc_element;;
 	=> nrel_key_sc_element_base_order: (section_subjdomain_actions_and_tasks -> nrel_second_argument_class)
 	(* <- rrel_key_sc_element;; *);;
-*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;
+*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;

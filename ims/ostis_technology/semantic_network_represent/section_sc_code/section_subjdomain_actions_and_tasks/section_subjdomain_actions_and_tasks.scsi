@@ -608,7 +608,7 @@ subject
 	(* <- lang_ru;; *);	
 
 <= nrel_inclusion:
-	I_own;
+	Myself;
 	internal_subject_ostis_system;
 	external_subject_ostis_system_interaction;
 	external_subject_ostis_system_without_interaction;;
@@ -846,7 +846,7 @@ nrel_goto
 	(* <- lang_en;; *);	
 
 <- order_relation;
-	
+
 <- rrel_key_sc_element:
 	...
 	(*
@@ -861,10 +861,10 @@ nrel_goto
 			*);;
 		*);;
 	*);
-
-<= nrel_inclusion:
+=> nrel_inclusion:
 	nrel_then;
-	nrel_else;;
+	nrel_else;
+	nrel_error;;
 
 nrel_conjunction_of_previous_actions
 <- sc_node_norole_relation;
@@ -983,6 +983,30 @@ nrel_else
 			(*
 			<- lang_ru;;
 			*);;
+		*);;
+	*);;
+
+nrel_error
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[последовательность действий в случае ошибки*]
+	(* <- lang_ru;; *);
+	[sequence of actions in case of error*]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[error*]
+	(* <- lang_en;; *);
+<- order_relation;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_nrel_error.html"
+			(* <- lang_ru;; *);;
 		*);;
 	*);;
 
