@@ -23,7 +23,8 @@ subject_domain_of_sc_identifiers
 -> rrel_explored_relation: 
 	nrel_idtf;
 	nrel_main_idtf;
-	nrel_system_identifier;;
+	nrel_system_identifier;
+	nrel_external_sc_identifiers_sequence;;
 
 sc_identifier
 <- sc_node_not_relation;
@@ -417,3 +418,23 @@ identification_relation
 	[identification relation]
 	(* <- lang_en;; *);;
 
+nrel_external_sc_identifiers_sequence
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[последовательность внешних идентификаторов*]
+	(* <- lang_ru;; *);
+	[external sc identifiers sequence]
+	(* <- lang_en;; *);
+<- strict_order_relation;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_external_sc_identifiers_sequence.html" 
+				(* <- lang_ru;; *);;
+		*);;
+	*);;
