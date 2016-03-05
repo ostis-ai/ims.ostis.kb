@@ -768,7 +768,7 @@ strict_order_relation
 => nrel_main_idtf:
 	[отношение строгого порядка]
 	(* <- lang_ru;; *);
-	[strict orde relation]
+	[strict order relation]
 	(* <- lang_en;; *);
 <- rrel_key_sc_element:
 	...
@@ -890,6 +890,18 @@ role_relation
 			(*
 			-> rrel_example:
 					"file://nl_files/explanation_for_role_relation.html"			
+					(* <- lang_ru;;	*);;
+			*);;
+		*);
+<- rrel_key_sc_element:
+	...
+		(*
+			<- identify_instances_rule;;
+			<= nrel_sc_text_translation:
+			...
+			(*
+			-> rrel_example:
+					"file://nl_files/rule_for_role_relation.html"			
 					(* <- lang_ru;;	*);;
 			*);;
 		*);;
@@ -1021,6 +1033,18 @@ norole_relation
 			(*
 			-> rrel_example:
 					"file://nl_files/explanation_for_norole_relation.html"			
+					(* <- lang_ru;;	*);;
+			*);;
+		*);
+<- rrel_key_sc_element:
+	...
+		(*
+			<- identify_instances_rule;;
+			<= nrel_sc_text_translation:
+			...
+			(*
+			-> rrel_example:
+					"file://nl_files/rule_for_norole_relation.html"			
 					(* <- lang_ru;;	*);;
 			*);;
 		*);;
