@@ -81,7 +81,19 @@ sc_element
 	{
 		sc_connector;
 		sc_node
-	};;
+	};
+<- rrel_key_sc_element:
+	...
+		(*
+			<- identify_instances_rule;;
+			<= nrel_sc_text_translation:
+				...
+					(*
+					-> rrel_example:
+						"file://nl_files/rule_for_sc_element.html"
+						(* <- lang_ru;; *);;
+					*);;
+		*);;
 
 
 sc_constant
@@ -306,7 +318,19 @@ sc_variable
 => nrel_inclusion:
 	sc_variable_first_order;
 	sc_variable_second_order;
-	sc_variable_mixed_order;;
+	sc_variable_mixed_order;
+<- rrel_key_sc_element:
+	...
+		(*
+			<- identify_instances_rule;;
+			<= nrel_sc_text_translation:
+				...
+					(*
+					-> rrel_example:
+						"file://nl_files/rule_for_sc_variable.html"
+						(* <- lang_ru;; *);;
+					*);;
+		*);;
 
 sc_variable_first_order
 <- sc_node_not_relation;

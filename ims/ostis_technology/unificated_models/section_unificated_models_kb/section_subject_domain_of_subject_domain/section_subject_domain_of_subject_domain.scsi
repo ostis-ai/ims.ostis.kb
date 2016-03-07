@@ -18,10 +18,7 @@ subject_domain_of_subject_domains
 		(*
 		-> rrel_example:
 					"file://content_html/explanation_for_subject_domain_of_subject_domains.html"
-			(*
-			<- lang_ru;;
-			=> nrel_format: format_html;;
-			*);;
+			(* <- lang_ru;; *);;
 		*);;
 	*);
 
@@ -145,10 +142,7 @@ non_stationary_subject_domain
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_non_stationary_subject_domain.html"
-			(*
-			<- lang_ru;;
-			=> nrel_format: format_html;;
-			*);;
+			(* <- lang_ru;; *);;
 		*);;
 	*);;
 	
@@ -180,10 +174,7 @@ rrel_concept_subject_domain
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_rrel_concept_subject_domain.html"
-			(*
-			<- lang_ru;;
-			=> nrel_format: format_html;;
-			*);;
+			(* <- lang_ru;; *);;
 		*);;
 	*);;	
 
@@ -211,12 +202,21 @@ concept
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_concept.html"
-			(*
-			<- lang_ru;;
-			=> nrel_format: format_html;;
-			*);;
+			(* <- lang_ru;; *);;
 		*);;
-	*);;	
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- identify_instances_rule;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/rule_for_concept.html"
+			(* <- lang_ru;; *);;
+		*);;
+	*);;
 	
 
 rrel_explored_concept
@@ -260,10 +260,7 @@ rrel_explored_concept
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_rrel_explored_concept.html"
-			(*
-			<- lang_ru;;
-			=> nrel_format: format_html;;
-			*);;
+			(* <- lang_ru;; *);;
 		*);;
 	*);;	
 	
@@ -286,10 +283,7 @@ rrel_maximum_studied_object_class
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_rrel_maximum_studied_object_class.html"
-			(*
-			<- lang_ru;;
-			=> nrel_format: format_html;;
-			*);;
+			(* <- lang_ru;; *);;
 		*);;
 	*);;
 	
@@ -313,10 +307,7 @@ rrel_not_maximum_studied_object_class
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_rrel_not_maximum_studied_object_class.html"
-			(*
-			<- lang_ru;;
-			=> nrel_format: format_html;;
-			*);;
+			(* <- lang_ru;; *);;
 		*);;
 	*);;
 	
@@ -338,10 +329,7 @@ rrel_explored_primary_elements_class
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_rrel_explored_primary_elements_class.html"
-			(*
-			<- lang_ru;;
-			=> nrel_format: format_html;;
-			*);;
+			(* <- lang_ru;; *);;
 		*);;
 	*);;
 	
@@ -364,10 +352,7 @@ rrel_explored_relation
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_rrel_explored_relation.html"
-			(*
-			<- lang_ru;;
-			=> nrel_format: format_html;;
-			*);;
+			(* <- lang_ru;; *);;
 		*);;
 	*);;
 	
@@ -391,10 +376,7 @@ rrel_explored_structures_class
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_rrel_explored_structures_class.html"
-			(*
-			<- lang_ru;;
-			=> nrel_format: format_html;;
-			*);;
+			(* <- lang_ru;; *);;
 		*);;
 	*);;
 	
@@ -425,10 +407,7 @@ rrel_explored_in_subject_subdomain_concept
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_rrel_explored_in_subject_subdomain_concept.html"
-			(*
-			<- lang_ru;;
-			=> nrel_format: format_html;;
-			*);;
+			(* <- lang_ru;; *);;
 		*);;
 	*);;	
 
@@ -453,10 +432,7 @@ rrel_explored_general_subject_domain_concept
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_rrel_explored_general_subject_domain_concept.html"
-			(*
-			<- lang_ru;;
-			=> nrel_format: format_html;;
-			*);;
+			(* <- lang_ru;; *);;
 		*);;
 	*);;
 
@@ -480,10 +456,7 @@ rrel_explored_non_related_subject_domain_concept
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_rrel_explored_non_related_subject_domain_concept.html"
-			(*
-			<- lang_ru;;
-			=> nrel_format: format_html;;
-			*);;
+			(* <- lang_ru;; *);;
 		*);;
 	*);;
 	
@@ -522,10 +495,7 @@ nrel_private_subject_domain
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_nrel_private_subject_domain.html"
-			(*
-			<- lang_ru;;
-			=> nrel_format: format_html;;
-			*);;
+			(* <- lang_ru;; *);;
 		*);;
 	*);;
 	
@@ -580,10 +550,7 @@ nrel_non_related_subject_domain
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_nrel_non_related_subject_domain.html"
-			(*
-			<- lang_ru;;
-			=> nrel_format: format_html;;
-			*);;
+			(* <- lang_ru;; *);;
 		*);;
 	*);;
 	
@@ -609,10 +576,7 @@ sc_lang
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_sc_lang.html"
-			(*
-			<- lang_ru;;
-			=> nrel_format: format_html;;
-			*);;
+			(* <- lang_ru;; *);;
 		*);;
 	*);;
 
@@ -635,10 +599,7 @@ sc_lang_and_appropriate_subject_domain
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_sc_lang_and_appropriate_subject_domain.html"
-			(*
-			<- lang_ru;;
-			=> nrel_format: format_html;;
-			*);;
+			(* <- lang_ru;; *);;
 		*);;
 	*);
 	
