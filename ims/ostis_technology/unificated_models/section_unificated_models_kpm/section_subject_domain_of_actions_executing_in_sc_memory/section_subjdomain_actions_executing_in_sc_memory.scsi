@@ -680,9 +680,9 @@ action_of_interpreting_program_stored_in_sc_memory
 	[action of interpreting program stored in sc-memory]
 	(* <- lang_en;; *);
 => nrel_inclusion: 
-	action_of_interpreting_scp_program;;
+	question_scp_interpretation_request;;
 
-action_of_interpreting_scp_program
+question_scp_interpretation_request
 <- sc_node_not_relation;
 => nrel_main_idtf:
 	[действие интерпретации scp-программы]
