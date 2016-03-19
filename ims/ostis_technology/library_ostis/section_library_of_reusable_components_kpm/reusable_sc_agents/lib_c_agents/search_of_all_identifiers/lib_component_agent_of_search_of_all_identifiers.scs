@@ -23,3 +23,13 @@ lib_component_agent_of_search_of_all_identifiers
 			[Задачей sc-агента поиска всех идентификаторов заданного sc-элемента является поиск всех исходящих из заданного sc-элемента бинарных ориентированных пар, принадлежащих некоторому отношению идентификации.];;
 		*);;
 	*);;
+
+question_search_all_identifiers
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+ 	[действие. найти все идентификаторы]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[action. to find all identifiers]
+	(* <- lang_en;;	*);;
+
