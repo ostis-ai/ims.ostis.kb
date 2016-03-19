@@ -28,3 +28,11 @@ lib_component_agent_of_finding_axioms
 		*);;
 	*);;
 
+question_find_axioms
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. найти аксиомы]
+	(* <- lang_ru;; *);
+	[action. to find axioms]
+	(* <- lang_en;; *);;
+

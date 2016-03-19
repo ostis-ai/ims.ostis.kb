@@ -28,3 +28,11 @@ lib_component_agent_of_finding_definitions
 		*);;
 	*);;
 
+question_find_definitions
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+ 	[действие. найти определения]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[action. to find definitions]
+	(* <- lang_en;;	*);;
