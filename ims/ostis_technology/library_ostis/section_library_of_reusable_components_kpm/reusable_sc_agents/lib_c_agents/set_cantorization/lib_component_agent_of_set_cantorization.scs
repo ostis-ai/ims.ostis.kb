@@ -1,0 +1,31 @@
+lib_component_agent_of_set_cantorization
+=> nrel_main_idtf:
+	[Компонент библиотеки. sc-агент канторизации множества] (* <- lang_ru;; *);
+	[Компонент библиотеки. sc-agent of set cantorization] (* <- lang_en;; *);
+
+<- library_of_platform_dependent_reusable_components; 
+<- library_of_atomic_reusable_components;
+
+-> rrel_key_sc_element: 
+	.c_realization_of_agent_of_set_cantorization; 
+
+<- key_sc_element:
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[Задачей sc-агента канторизации множества является канторизация заданного множества.];;
+		*);;
+	*);;
+
+question_set_cantorization
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. канторизировать множество]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[action. to cantorize set]
+	(* <- lang_en;;	*);;
