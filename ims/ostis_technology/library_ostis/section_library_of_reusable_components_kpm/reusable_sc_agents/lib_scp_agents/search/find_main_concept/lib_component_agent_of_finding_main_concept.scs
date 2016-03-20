@@ -28,3 +28,11 @@ lib_component_agent_of_finding_main_concept
 		*);;
 	*);;
 
+question_find_main_concept
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+ 	[действие. найти понятия, котрые определяются на основе заданного]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[action. to find concepts, which are defined on the base of given]
+	(* <- lang_en;;	*);;

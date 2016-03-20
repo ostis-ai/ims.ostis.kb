@@ -28,3 +28,11 @@ lib_component_agent_of_finding_key_concepts
 		*);;
 	*);;
 
+question_find_key_concepts
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+ 	[действие. найти ключевые sc-элементы]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[action. to find key sc-elements]
+	(* <- lang_en;;	*);;

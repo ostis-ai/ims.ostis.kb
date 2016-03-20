@@ -28,3 +28,11 @@ lib_component_agent_of_finding_constants
 		*);;
 	*);;
 
+question_find_constants
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+ 	[действие. найти понятия, через которые определяется заданное понятие]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[action. to find concepts, on base of which given concept is defined]
+	(* <- lang_en;;	*);;
