@@ -29,6 +29,7 @@ subject_domain_of_ontologies
 	nrel_using_statements;;
 
 ontology
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[онтология]
 	(* <- lang_ru;; *);
@@ -83,6 +84,7 @@ ontology
 
 
 nrel_ontology
+<- sc_node_norole_relation;
 => nrel_main_idtf:
 	[онтология*]
 	(* <- lang_ru;; *);
@@ -121,6 +123,7 @@ nrel_ontology
 	
 	
 integrated_ontology
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[интегрированная онтология]
 	(* <- lang_ru;; *);
@@ -145,6 +148,7 @@ integrated_ontology
 
 
 structural_specification
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[структурная спецификация]
 	(* <- lang_ru;; *);
@@ -169,6 +173,7 @@ structural_specification
 
 
 theoretic_set_ontology
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[теоретико-множественная онтология]
 	(* <- lang_ru;; *);
@@ -193,6 +198,7 @@ theoretic_set_ontology
 
 
 logical_ontology
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[логическая онтология]
 	(* <- lang_ru;; *);
@@ -217,6 +223,7 @@ logical_ontology
 
 
 logical_hiererchy_of_concept
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[логическая иерархия понятий]
 	(* <- lang_ru;; *);
@@ -245,6 +252,7 @@ logical_hiererchy_of_concept
 	
 
 nrel_using_constants
+<- sc_node_norole_relation;
 => nrel_main_idtf:
 	[используемые константы*]
 	(* <- lang_ru;; *);
@@ -271,6 +279,7 @@ nrel_using_constants
 
 
 logical_hiererchy_of_statement
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[логическая иерархия высказываний]
 	(* <- lang_ru;; *);
@@ -303,6 +312,7 @@ logical_hiererchy_of_statement
 
 
 nrel_using_statements
+<- sc_node_norole_relation;
 => nrel_main_idtf:
 	[используемые утверждения*]
 	(* <- lang_ru;; *);
@@ -332,6 +342,7 @@ nrel_using_statements
 
 
 terminological_ontology
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[терминологическая онтология]
 	(* <- lang_ru;; *);
@@ -356,6 +367,7 @@ terminological_ontology
 
 
 ontology_of_tasks_and_solutions_of_tasks
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[онтология задач и решений задач]
 	(* <- lang_ru;; *);
@@ -380,6 +392,7 @@ ontology_of_tasks_and_solutions_of_tasks
 	
 
 ontology_classes_of_tasks_and_ways_of_solving_tasks
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[онтология классов задач и способов решений задач]
 	(* <- lang_ru;; *);

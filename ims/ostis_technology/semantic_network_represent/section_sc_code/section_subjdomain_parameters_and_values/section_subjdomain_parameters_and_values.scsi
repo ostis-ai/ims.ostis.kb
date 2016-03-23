@@ -775,6 +775,7 @@ nrel_sum_of_quantities
 	(* <- lang_ru;; *);;
 
 arithmetic_operation_on_the_values
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[арифметическая операция на величинах]
 	(* <- lang_ru;; *);
@@ -790,7 +791,6 @@ arithmetic_operation_sum
 	(* <- lang_en;; *);;
 
 nrel_sum_of_quantities
-<- sc_node_norole_relation; 
 <- arithmetic_operation_on_the_values;
 <- quasybinary_relation;
 <- rrel_key_sc_element:
@@ -878,6 +878,7 @@ arithmetic_operation_large
 	(* <- lang_en;; *);;
 
 value
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[значение]
 	(* <- lang_ru;; *);

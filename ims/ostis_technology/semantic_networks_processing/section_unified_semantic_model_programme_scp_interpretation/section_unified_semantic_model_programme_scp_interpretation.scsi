@@ -33,6 +33,7 @@ unified_semantic_model_programme_scp_interpretation
 	nrel_template_of_scp_process_creation;;
 
 abstract_scp_machine
+<- sc_node_not_relation;
 	<- abstract_sc_agent;
 	=> nrel_main_idtf:
 		[абстрактная scp-машина]
@@ -103,7 +104,9 @@ abstract_scp_machine
 				sc_agent_of_synchronization_of_events_in_sc_memory_and_its_realization;;
 		*);
 		sc_agent_of_synchronization_of_events_in_sc_memory_and_its_realization
-	};;sc_agent_of_scp_program_insertion_to_sc_memory
+	};;
+
+sc_agent_of_scp_program_insertion_to_sc_memory
 	<- sc_node_not_relation;
 	<- abstract_sc_agent;
 	=> nrel_main_idtf:
@@ -411,7 +414,7 @@ nrel_template_of_scp_process_creation
 		*);;
 
 scp_program
-
+<- sc_node_not_relation;
 	=> nrel_inclusion:
 		formed_scp_program;
 		prepared_scp_program;
