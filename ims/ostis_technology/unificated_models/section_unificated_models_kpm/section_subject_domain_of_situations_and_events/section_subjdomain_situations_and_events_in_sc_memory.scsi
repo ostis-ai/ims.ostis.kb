@@ -61,6 +61,7 @@ subject_domain_situations_and_events_in_sc_memory
 	nrel_change_fole_content_situation;;
 		
 sc_element
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[sc-элемент]
 	(* <- lang_ru;; *);
@@ -74,6 +75,7 @@ sc_element
 	};;
 	
 present_sc_element
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[настоящий sc-элемент]
 	(* <- lang_ru;; *);
@@ -84,6 +86,7 @@ present_sc_element
 	
 	
 logically_removed_sc_element
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[логически удаленный sc-элемент]
 	(* <- lang_ru;; *);
@@ -93,12 +96,6 @@ logically_removed_sc_element
 <- situational_set;;
 
 number
-=> nrel_main_idtf:
-	[число]
-	(* <- lang_ru;; *);
-	[number]
-	(* <- lang_en;; *);
-
 <= nrel_subdividing: 
 	{  
 		non_calculated_number;
@@ -106,6 +103,7 @@ number
 	};;
 	
 non_calculated_number
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[невычисленное число]
 	(* <- lang_ru;; *);
@@ -115,6 +113,7 @@ non_calculated_number
 <- situational_set;;
 
 calculated_number
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[вычисленное число]
 	(* <- lang_ru;; *);
@@ -131,6 +130,7 @@ concept
 	};;
 	
 main_concept
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[основное понятие]
 	(* <- lang_ru;; *);
@@ -160,6 +160,7 @@ main_concept
 	*);;	
 	
 auxiliary_concept
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[неосновное понятие]
 	(* <- lang_ru;; *);
@@ -209,6 +210,7 @@ auxiliary_concept
 	*);;
 	
 main_to_auxilary_concept
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[понятие, переходящее из основного в неосновное]
 	(* <- lang_ru;; *);
@@ -218,6 +220,7 @@ main_to_auxilary_concept
 <- situational_set;;
 	
 auxiliary_to_main_concept
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[понятие, переходящее из неоснового в основное]
 	(* <- lang_ru;; *);
@@ -243,6 +246,7 @@ auxiliary_to_main_concept
 	*);;
 
 specified_essence
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[специфицированная сущность]
 	(* <- lang_ru;; *);
@@ -257,6 +261,7 @@ specified_essence
 	};;
 	
 not_enough_specified_essence
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[недостаточно специфицированная сущность]
 	(* <- lang_ru;; *);
@@ -265,6 +270,7 @@ not_enough_specified_essence
 	
 	
 enough_specified_essence
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[достаточно специфицированная сущность]
 	(* <- lang_ru;; *);
@@ -289,6 +295,7 @@ enough_specified_essence
 	
 	
 average_specified_essence
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[средне специфицированная сущность]
 	(* <- lang_ru;; *);
@@ -311,6 +318,7 @@ structure
 	
 
 formed_structure
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[сформированная структура]
 	(* <- lang_ru;; *);
@@ -319,6 +327,7 @@ formed_structure
 
 
 unformed_structure
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[несформированная структура]
 	(* <- lang_ru;; *);
@@ -327,6 +336,7 @@ unformed_structure
 
 
 not_enough_formed_structure
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[недостаточно сформированная структура]
 	(* <- lang_ru;; *);
@@ -334,6 +344,7 @@ not_enough_formed_structure
 	(* <- lang_en;; *);;
 
 enough_formed_structure
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[достаточно сформированная структура]
 	(* <- lang_ru;; *);
@@ -341,6 +352,7 @@ enough_formed_structure
 	(* <- lang_en;; *);;
 
 structure_with_average_formation_level
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[структура, имеющая средний уровень сформированности]
 	(* <- lang_ru;; *);
@@ -348,12 +360,6 @@ structure_with_average_formation_level
 	(* <- lang_en;; *);;
 		
 file
-=> nrel_main_idtf:
-	[файл]
-	(* <- lang_ru;; *);
-	[file]
-	(* <- lang_en;; *);
-
 <= nrel_subdividing: 
 	{  
 		not_enough_formed_internal_file;
@@ -362,6 +368,7 @@ file
 	};;
 
 not_enough_formed_internal_file
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[недостаточно сформированный файл]
 	(* <- lang_ru;; *);
@@ -369,6 +376,7 @@ not_enough_formed_internal_file
 	(* <- lang_en;; *);;
 
 enough_formed_internal_file
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[достаточно сформированный файл]
 	(* <- lang_ru;; *);
@@ -376,6 +384,7 @@ enough_formed_internal_file
 	(* <- lang_en;; *);;
 
 internal_file_with_average_formation_level
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[файл, имеющий средний уровень сформированности]
 	(* <- lang_ru;; *);
@@ -383,6 +392,7 @@ internal_file_with_average_formation_level
 	(* <- lang_en;; *);;
 	
 nrel_situation_in_sc_memory
+<- sc_node_norole_relation;
 => nrel_main_idtf:
 	[событие в sc-памяти*]
 	(* <- lang_ru;; *);
@@ -393,6 +403,7 @@ nrel_situation_in_sc_memory
 		nrel_situation;;
 		
 nrel_elementary_situation_in_sc_memory
+<- sc_node_norole_relation;
 => nrel_main_idtf:
 	[элементарное событие в sc-памяти*]
 	(* <- lang_ru;; *);
@@ -433,6 +444,7 @@ nrel_elementary_situation_in_sc_memory
 	};;
 
 nrel_add_sc_arc_coming_out_of_given_sc_element_situation
+<- sc_node_norole_relation;
 => nrel_main_idtf:
 	[событие добавления sc-дуги, выходящей из заданного sc-элемента*]
 	(* <- lang_ru;; *);
@@ -441,6 +453,7 @@ nrel_add_sc_arc_coming_out_of_given_sc_element_situation
 
 	
 nrel_add_sc_arc_coming_in_given_sc_element_situation
+<- sc_node_norole_relation;
 => nrel_main_idtf:
 	[событие добавления sc-дуги, входящей в заданный sc-элемент*]
 	(* <- lang_ru;; *);
@@ -449,6 +462,7 @@ nrel_add_sc_arc_coming_in_given_sc_element_situation
 	
 	
 nrel_add_sc_edge_incident_to_given_sc_element_situation
+<- sc_node_norole_relation;
 => nrel_main_idtf:
 	[событие добавления sc-ребра, инцидентного заданному sc-элементу*]
 	(* <- lang_ru;; *);
@@ -457,6 +471,7 @@ nrel_add_sc_edge_incident_to_given_sc_element_situation
 	
 	
 nrel_remove_sc_arc_coming_out_from_given_sc_element_situation
+<- sc_node_norole_relation;
 => nrel_main_idtf:
 	[событие удаления sc-дуги, выходящей из заданного sc-элемента*]
 	(* <- lang_ru;; *);
@@ -465,6 +480,7 @@ nrel_remove_sc_arc_coming_out_from_given_sc_element_situation
 	
 	
 nrel_remove_sc_arc_coming_in_given_sc_element_situation
+<- sc_node_norole_relation;
 => nrel_main_idtf:
 	[событие удаления sc-дуги, входящей в заданный sc-элемент*]
 	(* <- lang_ru;; *);
@@ -473,6 +489,7 @@ nrel_remove_sc_arc_coming_in_given_sc_element_situation
 	
 	
 nrel_remove_sc_edge_incident_to_given_sc_element_situation
+<- sc_node_norole_relation;
 => nrel_main_idtf:
 	[событие удаления sc-ребра, инцидентного заданному sc-элементу*]
 	(* <- lang_ru;; *);
@@ -481,6 +498,7 @@ nrel_remove_sc_edge_incident_to_given_sc_element_situation
 	
 	
 nrel_remove_sc_element_situation
+<- sc_node_norole_relation;
 => nrel_main_idtf:
 	[событие удаления sc-элемента*]
 	(* <- lang_ru;; *);
@@ -489,6 +507,7 @@ nrel_remove_sc_element_situation
 	
 	
 nrel_change_fole_content_situation	
+<- sc_node_norole_relation;
 => nrel_main_idtf:
 	[событие изменения содержимого файла*]
 	(* <- lang_ru;; *);

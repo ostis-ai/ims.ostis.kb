@@ -18,6 +18,7 @@ subjdomain_of_unified_sc_models
 	sc_model;;
 
 sc_model_computer_systems
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[sc-модель компьютерной системы]
 	(* <- lang_ru;; *);
@@ -37,6 +38,7 @@ sc_model => nrel_inclusion:
 	sc_model_computer_system_interface;;
 
 sc_model
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[sc-модель]
 	(* <- lang_ru;; *);
@@ -56,6 +58,7 @@ sc_model
 	*);;
 
 sc_model_computer_system_interface
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[sc-модель интерфейс компьютерной системы]
 	(* <- lang_ru;; *);

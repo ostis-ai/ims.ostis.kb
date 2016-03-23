@@ -462,6 +462,7 @@ sc_edge
 	};;
 
 constant_sc_edge
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[константное sc-ребро]
 	(* <- lang_ru;; *);
@@ -469,6 +470,7 @@ constant_sc_edge
 	(* <- lang_en;; *);;
 
 variable_sc_edge
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[переменное sc-ребро]
 	(* <- lang_ru;; *);
