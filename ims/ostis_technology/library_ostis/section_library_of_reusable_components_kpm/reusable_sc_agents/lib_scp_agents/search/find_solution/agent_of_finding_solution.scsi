@@ -50,7 +50,7 @@ scp_program -> agent_of_finding_solution
 		-> .agent_of_finding_solution_operator2B 
 			(*
 			<- genEl;;
-			-> rrel_1: rrel_assign: rrel_const: rrel_node: rrel_scp_var: _answer;;
+			-> rrel_1: rrel_assign: rrel_const: rrel_node: rrel_scp_var: _answer_finding_solution;;
 
 			=> nrel_goto: .agent_of_finding_solution_operator3A;;
 			*);;
@@ -58,7 +58,7 @@ scp_program -> agent_of_finding_solution
 		-> .agent_of_finding_solution_operator3A
 			(*
 			<- genElStr3;;
-			-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_finding_solution;;
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
 			-> rrel_3: rrel_fixed: rrel_scp_var: _param;;
 
@@ -74,9 +74,9 @@ scp_program -> agent_of_finding_solution
 			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
 			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_1;;
 
-			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
-			-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer;;
-			-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_finding_solution;;
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer_finding_solution;;
+			-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_finding_solution;;
 			
 			=> nrel_goto: .agent_of_finding_solution_operator4A;;
 			*);;
@@ -88,8 +88,8 @@ scp_program -> agent_of_finding_solution
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
 			-> rrel_3: rrel_assign: rrel_scp_var: _per;;
 
-			-> rrel_set_3: rrel_scp_var: rrel_fixed: _answer;;
-			-> rrel_set_2: rrel_scp_var: rrel_fixed: _answer;;
+			-> rrel_set_3: rrel_scp_var: rrel_fixed: _answer_finding_solution;;
+			-> rrel_set_2: rrel_scp_var: rrel_fixed: _answer_finding_solution;;
 						
 			=> nrel_goto: .agent_of_finding_solution_operator4B;;
 			*);;
@@ -103,12 +103,50 @@ scp_program -> agent_of_finding_solution
 			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;			
 			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_2;;
 			
-			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
-			-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer;;	
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer_finding_solution;;
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_finding_solution;;
+			-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_finding_solution;;	
 			
+			=> nrel_then: .agent_of_finding_solution_operator4C;;
+			=> nrel_else: .agent_of_finding_solution_operator_return;;
+			*);;
+
+		-> .agent_of_finding_solution_operator4C
+			(*
+			<- searchElStr3;;
+			-> rrel_1: rrel_fixed: rrel_scp_const: concept_quantity;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _node;;
+						
+			=> nrel_then: .agent_of_finding_solution_operator5A;;
+			=> nrel_else: .agent_of_finding_solution_operator4D;;
+			*);;
+
+		-> .agent_of_finding_solution_operator4D
+			(*
+			<- searchElStr3;;
+			-> rrel_1: rrel_fixed: rrel_scp_const: atomic_existence;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _node;;
+						
+			=> nrel_then: .agent_of_finding_solution_operator4F;;
+			=> nrel_else: .agent_of_finding_solution_operator_return;;
+			*);;
+
+		-> .agent_of_finding_solution_operator4F
+			(*
+			<- searchSetStr3;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _node;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _something;;
+						
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_finding_solution;; 
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer_finding_solution;;
+
 			=> nrel_then: .agent_of_finding_solution_operator5A;;
 			=> nrel_else: .agent_of_finding_solution_operator_return;;
 			*);;
+
 
 		-> .agent_of_finding_solution_operator5A
 			(*
@@ -122,7 +160,7 @@ scp_program -> agent_of_finding_solution
 			-> rrel_set_1: rrel_assign: rrel_scp_var: _time_set;;
 						
 			=> nrel_then: .agent_of_finding_solution_operator5B;;
-			=> nrel_else: .agent_of_finding_solution_operator_return;;
+			=> nrel_else: .agent_of_finding_solution_operator9A;;
 			*);;
 
 		-> .agent_of_finding_solution_operator5B
@@ -143,7 +181,7 @@ scp_program -> agent_of_finding_solution
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
 			-> rrel_3: rrel_fixed: rrel_scp_var: _elem;;
 
-			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;; 
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_finding_solution;; 
 
 			=> nrel_then: .agent_of_finding_solution_operator5C1;;
 			=> nrel_else: .agent_of_finding_solution_operator5D1;;
@@ -156,7 +194,7 @@ scp_program -> agent_of_finding_solution
 			-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_finding_solution_operator5A_params
 				(*
 				-> rrel_1: rrel_fixed: rrel_scp_var: _elem;;
-				-> rrel_2: rrel_fixed: rrel_scp_var: _answer;;				
+				-> rrel_2: rrel_fixed: rrel_scp_var: _answer_finding_solution;;				
 				*);;
 			-> rrel_3: rrel_assign: rrel_scp_var: _descr;;
 
@@ -178,7 +216,7 @@ scp_program -> agent_of_finding_solution
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
 			-> rrel_3: rrel_fixed: rrel_scp_var: _elem;;
 
-			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_finding_solution;;
 			
 			=> nrel_then: .agent_of_finding_solution_operator6A1;;
 			=> nrel_else: .agent_of_finding_solution_operator7C;;
@@ -191,7 +229,7 @@ scp_program -> agent_of_finding_solution
 			-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_finding_solution_operator5A_params
 				(*
 				-> rrel_1: rrel_fixed: rrel_scp_var: _elem;;
-				-> rrel_2: rrel_fixed: rrel_scp_var: _answer;;				
+				-> rrel_2: rrel_fixed: rrel_scp_var: _answer_finding_solution;;				
 				*);;
 			-> rrel_3: rrel_assign: rrel_scp_var: _descr;;
 
@@ -215,8 +253,8 @@ scp_program -> agent_of_finding_solution
 			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
 			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_key_sc_element;;
 
-			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
-			-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_finding_solution;;
+			-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_finding_solution;;
 
 			=> nrel_then: .agent_of_finding_solution_operator7B;;
 			=> nrel_else: .agent_of_finding_solution_operator_return;; 
@@ -225,7 +263,7 @@ scp_program -> agent_of_finding_solution
 		-> .agent_of_finding_solution_operator7B
 			(*
 			<- genElStr3;;
-			-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_finding_solution;;
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc_new;;
 			-> rrel_3: rrel_fixed: rrel_scp_var: _elem;;
 
@@ -243,7 +281,7 @@ scp_program -> agent_of_finding_solution
 		-> .agent_of_finding_solution_operator8A1
 			(*
 			<- genElStr3;;
-			-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_finding_solution;;
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc_new;;
 			-> rrel_3: rrel_fixed: rrel_scp_const: illustration;;
 
@@ -253,7 +291,7 @@ scp_program -> agent_of_finding_solution
 		-> .agent_of_finding_solution_operator8A2
 			(*
 			<- genElStr3;;
-			-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_finding_solution;;
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc_new;;
 			-> rrel_3: rrel_fixed: rrel_scp_const: explanation;;
 
@@ -263,7 +301,7 @@ scp_program -> agent_of_finding_solution
 		-> .agent_of_finding_solution_operator8A3
 			(*
 			<- genElStr3;;
-			-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_finding_solution;;
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc_new;;
 			-> rrel_3: rrel_fixed: rrel_scp_const: rrel_key_sc_element;;
 
@@ -287,9 +325,9 @@ scp_program -> agent_of_finding_solution
 			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
 			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_solution;;
 
-			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
-			-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer;;
-			-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_finding_solution;;
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer_finding_solution;;
+			-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_finding_solution;;
  			
 			=> nrel_then: .agent_of_finding_solution_operator9B;;
 			=> nrel_else: .agent_of_finding_solution_operator_return;;
@@ -298,7 +336,7 @@ scp_program -> agent_of_finding_solution
 		-> .agent_of_finding_solution_operator9B
 			(*
 			<- genElStr3;;
-			-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_finding_solution;;
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc_new;;
 			-> rrel_3: rrel_fixed: rrel_scp_const: nrel_solution;;
 
@@ -312,7 +350,7 @@ scp_program -> agent_of_finding_solution
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
 			-> rrel_3: rrel_fixed: rrel_scp_var: _node;;
 			
-			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_finding_solution;;
  
 			=> nrel_goto: .agent_of_finding_solution_operator10A;;		
 			*);;
@@ -360,23 +398,22 @@ scp_program -> agent_of_finding_solution
 			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
 			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_decomposition_of_action;; 
 
-			-> rrel_set_1: rrel_fixed: rrel_scp_var: _answer;;
- 			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
- 			-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_set_1: rrel_fixed: rrel_scp_var: _answer_finding_solution;;
+ 			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_finding_solution;;
+ 			-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_finding_solution;;
  			
-			=> nrel_then: .agent_of_finding_solution_operator11C;;
+			=> nrel_then: .agent_of_finding_solution_operator11C2;;
 			=> nrel_else: .agent_of_finding_solution_operator_return;;
 			*);;
 
-		-> .agent_of_finding_solution_operator11C
+		-> .agent_of_finding_solution_operator11C2
 			(*
 			<- searchSetStr3;;
 			-> rrel_1: rrel_fixed: rrel_scp_var: _sol_decom;;
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
 			-> rrel_3: rrel_assign: rrel_scp_var: _node;;
-		
-			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;			
-			-> rrel_set_3: rrel_assign: rrel_scp_var: _time_action_set;;
+				
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_finding_solution;;
 
 			=> nrel_then: .agent_of_finding_solution_operator11D;;
 			=> nrel_else: .agent_of_finding_solution_operator_return;;
@@ -384,13 +421,35 @@ scp_program -> agent_of_finding_solution
 
 		-> .agent_of_finding_solution_operator11D
 			(*
+			<- searchSetStr3;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _sol_decom;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _node;;
+				
+			-> rrel_set_3: rrel_assign: rrel_scp_var: _time_action_set;;
+
+			=> nrel_then: .agent_of_finding_solution_operator11D1;;
+			=> nrel_else: .agent_of_finding_solution_operator_return;;
+			*);;
+
+		-> .agent_of_finding_solution_operator11D1
+			(*
 			<- searchElStr3;;
 			-> rrel_1: rrel_fixed: rrel_scp_var: _time_action_set;;
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc_will;;
-			-> rrel_3: rrel_assign: rrel_scp_var: _node_under_watch;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _node2;;
 			
-			=> nrel_then: .agent_of_finding_solution_operator11E;;
+			=> nrel_then: .agent_of_finding_solution_operator11E1;;
 			=> nrel_else: .agent_of_finding_solution_operator10B;;
+			*);;
+		
+		-> .agent_of_finding_solution_operator11E1
+			(*
+			<- eraseEl;;
+			-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _arc_will;;
+			
+			=> nrel_goto: .agent_of_finding_solution_operator11E;;
+		
 			*);;
 
 		-> .agent_of_finding_solution_operator11E
@@ -398,11 +457,27 @@ scp_program -> agent_of_finding_solution
 			<- searchSetStr5;;
 			-> rrel_1: rrel_fixed: rrel_scp_var: _sol_decom;;
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
-			-> rrel_3: rrel_fixed: rrel_scp_var: _node_under_watch;;
-			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _node2;;
+			-> rrel_4: rrel_assign: rrel_const: rrel_scp_var: rrel_pos_const_perm: _arc2;;
 			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_1;; 
 
-			-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_finding_solution;;
+
+			=> nrel_goto: .agent_of_finding_solution_operator11F1;;
+			*);;
+
+		-> .agent_of_finding_solution_operator11F1
+			(*
+			<- searchSetStr5;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _node2;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _atrib;;
+			-> rrel_4: rrel_assign: rrel_const: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_assign: rrel_scp_var: rrel_role_relation: _qwerty;; 
+
+			-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_finding_solution;;
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_finding_solution;;
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer_finding_solution;;
 
 			=> nrel_goto: .agent_of_finding_solution_operator11F;;
 			*);;
@@ -410,29 +485,21 @@ scp_program -> agent_of_finding_solution
 		-> .agent_of_finding_solution_operator11F
 			(*
 			<- genElStr3;;
-			-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
-			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc_new;;
-			-> rrel_3: rrel_fixed: rrel_scp_var: _node_under_watch;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_finding_solution;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_scp_var: rrel_pos_const_perm: _arc_new;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _node2;;
 
 			=> nrel_goto: .agent_of_finding_solution_operator11H;;
 			*);;
-	
-		-> .agent_of_finding_solution_operator11H
-			(*
-			<- eraseEl;;
-			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_pos_const_perm: rrel_erase: _arc_will;;
-
-			=> nrel_goto: .agent_of_finding_solution_operator11K1;;
-			*);;
 		
-		-> .agent_of_finding_solution_operator11K1
+		-> .agent_of_finding_solution_operator11H
 			(*
 			<- call;;
 			-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_finding_proof;;
 			-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_finding_solution_operator11K1_params
 				(*
-				-> rrel_1: rrel_fixed: rrel_scp_var: _node_under_watch;;
-				-> rrel_2: rrel_fixed: rrel_scp_var: _answer;;				
+				-> rrel_1: rrel_fixed: rrel_scp_var: _node2;;
+				-> rrel_2: rrel_fixed: rrel_scp_var: _answer_finding_solution;;				
 				*);;
 			-> rrel_3: rrel_assign: rrel_scp_var: _descr;;
 						
@@ -444,13 +511,13 @@ scp_program -> agent_of_finding_solution
 			<- waitReturn;;
 			-> rrel_1: rrel_fixed: rrel_scp_var: _descr;;
 			
-			=> nrel_goto: .agent_of_finding_solution_operator11D;; 
+			=> nrel_goto: .agent_of_finding_solution_operator11D1;; 
 			*);;
 
 		-> .agent_of_finding_solution_operator12A
 			(*
 			<- genElStr3;;
-			-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_finding_solution;;
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc_new;;
 			-> rrel_3: rrel_fixed: rrel_scp_const: nrel_decomposition_of_action;;
 
@@ -460,7 +527,7 @@ scp_program -> agent_of_finding_solution
 		-> .agent_of_finding_solution_operator12B
 			(*
 			<- genElStr3;;
-			-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_finding_solution;;
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc_new;;
 			-> rrel_3: rrel_fixed: rrel_scp_const: rrel_1;;
 
@@ -470,7 +537,7 @@ scp_program -> agent_of_finding_solution
 		-> .agent_of_finding_solution_operator12C
 			(*
 			<- genElStr3;;
-			-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_finding_solution;;
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc_new;;
 			-> rrel_3: rrel_fixed: rrel_scp_const: rrel_2;;
 
@@ -480,7 +547,7 @@ scp_program -> agent_of_finding_solution
 		-> .agent_of_finding_solution_operator12D
 			(*
 			<- genElStr3;;
-			-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_finding_solution;;
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc_new;;
 			-> rrel_3: rrel_fixed: rrel_scp_const: sc_action_use_logical_statement;;
 
@@ -490,7 +557,7 @@ scp_program -> agent_of_finding_solution
 		-> .agent_of_finding_solution_operator12E
 			(*
 			<- genElStr3;;
-			-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_finding_solution;;
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc_new;;
 			-> rrel_3: rrel_fixed: rrel_scp_const: nrel_result;;
 
@@ -500,7 +567,7 @@ scp_program -> agent_of_finding_solution
 		-> .agent_of_finding_solution_operator12F
 			(*
 			<- genElStr3;;
-			-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_finding_solution;;
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc_new;;
 			-> rrel_3: rrel_fixed: rrel_scp_const: nrel_sc_text_translation;;
 
@@ -510,9 +577,9 @@ scp_program -> agent_of_finding_solution
 		-> .agent_of_finding_solution_operator12G
 			(*
 			<- genElStr3;;
-			-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_finding_solution;;
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc_new;;
-			-> rrel_3: rrel_fixed: rrel_scp_const: nrel_goto;;
+			-> rrel_3: rrel_fixed: rrel_scp_const: nrel_sequence_of_actions;;
 
 			=> nrel_goto: .agent_of_finding_solution_operator12K;;
 			*);;
@@ -520,7 +587,7 @@ scp_program -> agent_of_finding_solution
 		-> .agent_of_finding_solution_operator12K
 			(*
 			<- genElStr3;;
-			-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_finding_solution;;
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc_new;;
 			-> rrel_3: rrel_fixed: rrel_scp_const: successfully_executed_sc_action;;
 
@@ -540,15 +607,15 @@ scp_program -> agent_of_finding_solution
 			<- eraseEl;;
 			-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _time_action_set;;
 			
-			=> nrel_goto: .agent_of_finding_solution_operator_gen_answer;;
+			=> nrel_goto: .agent_of_finding_solution_operator_gen_answer_finding_solution;;
 			*);;
 
-		-> .agent_of_finding_solution_operator_gen_answer 
+		-> .agent_of_finding_solution_operator_gen_answer_finding_solution 
 			(*
 			<- genElStr5;;
 		  	-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
 		  	-> rrel_2: rrel_assign: rrel_const: rrel_common: rrel_scp_var: _arc;;
-		  	-> rrel_3: rrel_fixed: rrel_scp_var: _answer;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _answer_finding_solution;;
 		  	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
 		  	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_answer;;
 
