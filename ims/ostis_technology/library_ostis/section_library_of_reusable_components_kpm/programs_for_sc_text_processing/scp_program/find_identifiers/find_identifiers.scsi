@@ -2,7 +2,7 @@ scp_program -> proc_of_finding_identifier
 	(*	
 	-> rrel_params: .proc_of_finding_identifier_params (*
 		-> rrel_1: rrel_in: _elem;;
-		-> rrel_2: rrel_in: _answer;;
+		-> rrel_2: rrel_in: _answer_proc_of_finding_identifier;;
 	*);;
 
        -> rrel_operators: .proc_of_finding_identifier_operator_set 
@@ -44,7 +44,7 @@ scp_program -> proc_of_finding_identifier
 		-> .proc_of_finding_identifier_operator1D 
 			(*
 			<- genElStr3;;
-		 	-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_identifier;;
 		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
 		 	-> rrel_3: rrel_fixed: rrel_scp_var: _idtf;;
 
@@ -60,8 +60,8 @@ scp_program -> proc_of_finding_identifier
                  	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
 		 	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_main_idtf;;
 	         
-                 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
-		 	-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer;;
+                 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_identifier;;
+		 	-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_identifier;;
 
                  	=> nrel_then: .proc_of_finding_identifier_operator2B;;
 			=> nrel_else: .proc_of_finding_identifier_operator_return;;
@@ -113,7 +113,7 @@ scp_program -> proc_of_finding_identifier
 		-> .proc_of_finding_identifier_operator3D 
 			(*
 		 	<- genElStr3;;
-		 	-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_identifier;;
 		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
 		 	-> rrel_3: rrel_fixed: rrel_scp_var: _lang2;;
                
@@ -127,7 +127,7 @@ scp_program -> proc_of_finding_identifier
 		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
 		 	-> rrel_3: rrel_fixed: rrel_scp_var: _idtf;;
 
-                 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+                 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_identifier;;
 
 	         	=> nrel_then: .proc_of_finding_identifier_operator3A;;
 			=> nrel_else: .proc_of_finding_identifier_operator_return;;
@@ -136,7 +136,7 @@ scp_program -> proc_of_finding_identifier
 		-> .proc_of_finding_identifier_operator4 
 			(*
 		 	<- genElStr3;;
-		 	-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_identifier;;
 		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
 		 	-> rrel_3: rrel_fixed: rrel_scp_const: nrel_main_idtf;;
 

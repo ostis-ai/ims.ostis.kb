@@ -5,7 +5,7 @@ scp_program -> proc_finding_overall_concepts
 		-> rrel_1: rrel_in: _rules;;
                 -> rrel_2: rrel_in: _rules2;;
                 -> rrel_3: rrel_in: _rules3;;
-		-> rrel_4: rrel_in: _answer;;
+		-> rrel_4: rrel_in: _answer_proc_finding_overall_concepts;;
 		-> rrel_5: rrel_in: _el1;;
 		-> rrel_6: rrel_in: _el2;;
 		*);;
@@ -249,7 +249,7 @@ scp_program -> proc_finding_overall_concepts
 		-> .proc_finding_overall_concepts_operator3D 
 			(*
                   	<- genElStr3;;
-                  	-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+                  	-> rrel_1: rrel_fixed: rrel_scp_var: _answer_proc_finding_overall_concepts;;
                   	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
                   	-> rrel_3: rrel_fixed: rrel_scp_var: _node;;
 
@@ -263,7 +263,7 @@ scp_program -> proc_finding_overall_concepts
                   	-> rrel_2: rrel_assign: rrel_scp_var: _arc2;;
                   	-> rrel_3: rrel_fixed: rrel_scp_var: _el1;;
 
-		 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+		 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_proc_finding_overall_concepts;;
 
                   	=> nrel_then: .proc_finding_overall_concepts_operator4B;;
                   	=> nrel_else: .proc_finding_overall_concepts_operator4C;;
@@ -276,8 +276,8 @@ scp_program -> proc_finding_overall_concepts
                   	-> rrel_2: rrel_assign: rrel_scp_var: _arc3;;
                   	-> rrel_3: rrel_fixed: rrel_scp_var: _arc2;;
 
-			-> rrel_set_1: rrel_fixed: rrel_scp_var: _answer;;
-			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_set_1: rrel_fixed: rrel_scp_var: _answer_proc_finding_overall_concepts;;
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_proc_finding_overall_concepts;;
 
                   	=> nrel_then: .proc_finding_overall_concepts_operator5B;;
                   	=> nrel_else: .proc_finding_overall_concepts_operator5A;;
@@ -290,7 +290,7 @@ scp_program -> proc_finding_overall_concepts
                   	-> rrel_2: rrel_assign: rrel_scp_var: _arc2;;
                   	-> rrel_3: rrel_fixed: rrel_scp_var: _node;;
 
-		 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+		 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_proc_finding_overall_concepts;;
 
                   	=> nrel_then: .proc_finding_overall_concepts_operator4D;;
                   	=> nrel_else: .proc_finding_overall_concepts_operator5E;;
@@ -303,8 +303,8 @@ scp_program -> proc_finding_overall_concepts
                   	-> rrel_2: rrel_assign: rrel_scp_var: _arc3;;
                   	-> rrel_3: rrel_fixed: rrel_scp_var: _arc2;;
 
-			-> rrel_set_1: rrel_fixed: rrel_scp_var: _answer;;
-			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_set_1: rrel_fixed: rrel_scp_var: _answer_proc_finding_overall_concepts;;
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_proc_finding_overall_concepts;;
 
                   	=> nrel_then: .proc_finding_overall_concepts_operator5D;;
                   	=> nrel_else: .proc_finding_overall_concepts_operator5C;;
@@ -317,7 +317,7 @@ scp_program -> proc_finding_overall_concepts
                   	-> rrel_2: rrel_assign: rrel_scp_var: _arc2;;
                   	-> rrel_3: rrel_fixed: rrel_scp_var: _el2;;
 
-		 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+		 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_proc_finding_overall_concepts;;
 
                   	=> nrel_then: .proc_finding_overall_concepts_operator5E;;
                   	=> nrel_else: .proc_finding_overall_concepts_operator_return;;
@@ -332,9 +332,9 @@ scp_program -> proc_finding_overall_concepts
 		  	-> rrel_4: rrel_assign: rrel_scp_var: _arc3;;
                   	-> rrel_5: rrel_assign: rrel_scp_var: _rel2;;
 
-		 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
-		 	-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer;;
-		 	-> rrel_set_5: rrel_fixed: rrel_scp_var: _answer;;
+		 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_proc_finding_overall_concepts;;
+		 	-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_proc_finding_overall_concepts;;
+		 	-> rrel_set_5: rrel_fixed: rrel_scp_var: _answer_proc_finding_overall_concepts;;
 
                   	=> nrel_then: .proc_finding_overall_concepts_operator5E;;
                   	=> nrel_else: .proc_finding_overall_concepts_operator_return;;
@@ -347,7 +347,7 @@ scp_program -> proc_finding_overall_concepts
                   	-> rrel_2: rrel_assign: rrel_scp_var: _arc2;;
                   	-> rrel_3: rrel_fixed: rrel_scp_var: _node;;
 
-		 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+		 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_proc_finding_overall_concepts;;
 
                   	=> nrel_then: .proc_finding_overall_concepts_operator5E;;
                   	=> nrel_else: .proc_finding_overall_concepts_operator_return;;
@@ -362,9 +362,9 @@ scp_program -> proc_finding_overall_concepts
 		  	-> rrel_4: rrel_assign: rrel_scp_var: _arc3;;
                   	-> rrel_5: rrel_assign: rrel_scp_var: _rel2;;
 
-		 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
-		 	-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer;;
-		 	-> rrel_set_5: rrel_fixed: rrel_scp_var: _answer;;
+		 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_proc_finding_overall_concepts;;
+		 	-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_proc_finding_overall_concepts;;
+		 	-> rrel_set_5: rrel_fixed: rrel_scp_var: _answer_proc_finding_overall_concepts;;
 
                   	=> nrel_then: .proc_finding_overall_concepts_operator5E;;
                   	=> nrel_else: .proc_finding_overall_concepts_operator_return;;

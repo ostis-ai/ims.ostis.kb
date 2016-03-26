@@ -4,7 +4,7 @@ scp_program -> proc_equivalent_elements
 		(*
 		-> rrel_1: rrel_in: _param;;
                 -> rrel_2: rrel_in: _param2;;
-		-> rrel_3: rrel_in: _answer;;
+		-> rrel_3: rrel_in: _answer_proc_equivalent_elements;;
 		*);;
 	
 	-> rrel_operators: .proc_equivalent_elements_operator_set 
@@ -76,7 +76,7 @@ scp_program -> proc_equivalent_elements
 		-> .proc_equivalent_elements_operator1H 
 			(*
                   	<- genElStr3;;
-		  	-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _answer_proc_equivalent_elements;;
 		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc12;;
 		  	-> rrel_3: rrel_fixed: rrel_scp_var: _general;;
              
