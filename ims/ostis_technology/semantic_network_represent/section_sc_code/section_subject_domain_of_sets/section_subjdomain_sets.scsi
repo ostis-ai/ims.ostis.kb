@@ -149,12 +149,10 @@ set
 	non_oriented_set
 };
 => nrel_strict_inclusion:
-{
 	empty_set;
 	singletone;
 	pair_set;
-	triple_set
-};
+	triple_set;
 <- rrel_key_sc_element:
 	...
 	(*
@@ -996,6 +994,7 @@ nrel_strict_inclusion
 <= nrel_strict_inclusion: nrel_inclusion;
 <- binary_relation;
 <- oriented_relation;
+<- taxonomy_relation;
 => nrel_definitional_domain: set;
 <- rrel_key_sc_element:
 	...
