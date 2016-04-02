@@ -26,6 +26,7 @@ subject_domain_of_actions
 	question_finished;
 	question_finished_successfully;
 	question_finished_unsuccessfully;
+	question_finished_with_error;
 	priority_actions;
 	subject;
 	internal_subject_ostis_system;
@@ -168,9 +169,7 @@ question
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_action.html"
-			(*
-			<- lang_ru;;
-			*);;
+			(* <- lang_ru;;	*);;
 		*);;
 	*);
 	
@@ -183,9 +182,7 @@ question
 		(*
 		-> rrel_example:
 				"file://content_html/identify_instances_rule_for_action.html"
-			(*
-			<- lang_ru;;
-			*);;
+			(* <- lang_ru;;	*);;
 		*);;
 	*);;	
 
@@ -208,9 +205,7 @@ information_action
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_information_action.html"
-			(*
-			<- lang_ru;;
-			*);;
+			(* <- lang_ru;;	*);;
 		*);;
 	*);;
 	
@@ -232,9 +227,7 @@ behavioral_action
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_behavioral_action.html"
-			(*
-			<- lang_ru;;
-			*);;
+			(* <- lang_ru;;	*);;
 		*);;
 	*);;
 	
@@ -310,9 +303,7 @@ question_initiated
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_question_initiated.html"
-			(*
-			<- lang_ru;;
-			*);;
+			(* <- lang_ru;; *);;
 		*);;
 	*);;
 	
@@ -345,9 +336,7 @@ performed_action
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_performed_action.html"
-			(*
-			<- lang_ru;;
-			*);;
+			(* <- lang_ru;; *);;
 		*);;
 	*);;	
 
@@ -369,9 +358,7 @@ active_action
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_active_action.html"
-			(*
-			<- lang_ru;;
-			*);;
+			(* <- lang_ru;; *);;
 		*);;
 	*);;		
 
@@ -399,9 +386,7 @@ deferred_action
 		(*
 			-> rrel_example:
 				"file://content_html/explanation_for_deferred_action.html"
-			(*
-			<- lang_ru;;
-			*);;
+			(* <- lang_ru;;	*);;
 		*);;
 	*);;		
 
@@ -427,9 +412,7 @@ planned_action
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_planned_action.html"
-			(*
-			<- lang_ru;;
-			*);;
+			(* <- lang_ru;;	*);;
 		*);;
 	*);;
 
@@ -466,9 +449,7 @@ question_finished
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_question_finished.html"
-			(*
-			<- lang_ru;;
-			*);;
+			(* <- lang_ru;;	*);;
 		*);;
 	*);;	
 
@@ -490,9 +471,7 @@ question_finished_successfully
 		(*
 			-> rrel_example:
 				"file://content_html/explanation_for_question_finished_successfully.html"
-			(*
-			<- lang_ru;;
-			*);;
+			(* <- lang_ru;; *);;
 		*);;
 	*);;		
 	
@@ -514,12 +493,30 @@ question_finished_unsuccessfully
 		(*
 			-> rrel_example:
 				"file://content_html/explanation_for_question_finished_unsuccessfully.html"
-			(*
-			<- lang_ru;;
-			*);;
+			(* <- lang_ru;;	*);;
 		*);;
-	*);;		
-		
+	*);
+=> nrel_inclusion: question_finished_with_error;;
+
+question_finished_with_error
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие, выполненное с ошибкой]
+	(* <- lang_ru;; *);
+	[action performed with error]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+			-> rrel_example:
+				"file://content_html/explanation_for_question_finished_with_error.html"
+			(* <- lang_ru;; *);;
+		*);;
+	*);;
 	
 priority_actions
 <- sc_node_not_relation;	
@@ -544,9 +541,7 @@ priority_actions
 		(*
 			-> rrel_example:
 				"file://content_html/explanation_for_priority_actions.html"
-			(*
-			<- lang_ru;;
-			*);;
+			(* <- lang_ru;;	*);;
 		*);;
 	*);;			
 	
@@ -638,9 +633,7 @@ internal_subject_ostis_system
 		(*
 			-> rrel_example:
 				"file://content_html/explanation_for_internal_subject_ostis_system.html"
-			(*
-			<- lang_ru;;
-			*);;
+			(* <- lang_ru;; *);;
 		*);;
 	*);;	
 
@@ -662,9 +655,7 @@ external_subject_ostis_system_interaction
 		(*
 			-> rrel_example:
 				"file://content_html/explanation_for_external_subject_ostis_system_interaction.html"
-			(*
-			<- lang_ru;;
-			*);;
+			(* <- lang_ru;; *);;
 		*);;
 	*);;	
 
@@ -706,9 +697,7 @@ actions_class
 		(*
 			-> rrel_example:
 				"file://content_html/identify_instances_rule_for_actions_class.html"
-			(*
-			<- lang_ru;;
-			*);;
+			(* <- lang_ru;;	*);;
 		*);;
 	*);;	
 	
@@ -731,9 +720,7 @@ atomic_actions_class
 		(*
 			-> rrel_example:
 				"file://content_html/explanation_for_atomic_actions_class.html"
-			(*
-			<- lang_ru;;
-			*);;
+			(* <- lang_ru;;	*);;
 		*);;
 	*);;	
 	
@@ -755,9 +742,7 @@ non_atomic_actions_class
 		(*
 			-> rrel_example:
 				"file://content_html/explanation_non_atomic_actions_class.html"
-			(*
-			<- lang_ru;;
-			*);;
+			(* <- lang_ru;;	*);;
 		*);;
 	*);;	
 		
@@ -782,9 +767,7 @@ nrel_decomposition_of_action
 		(*
 			-> rrel_example:
 				"file://content_html/explanation_for_nrel_decomposition_of_action.html"
-			(*
-			<- lang_ru;;
-			*);;
+			(* <- lang_ru;;	*);;
 		*);;
 	*);
 
@@ -815,9 +798,7 @@ nrel_private_action
 		(*
 			-> rrel_example:
 				"file://content_html/explanation_for_private_action.html"
-			(*
-			<- lang_ru;;
-			*);;
+			(* <- lang_ru;;	*);;
 		*);;
 	*);
 
@@ -853,9 +834,7 @@ nrel_goto
 		(*
 			-> rrel_example:
 				"file://content_html/explanation_for_nrel_goto.html"
-			(*
-			<- lang_ru;;
-			*);;
+			(* <- lang_ru;;	*);;
 		*);;
 	*);
 => nrel_inclusion:
@@ -887,9 +866,7 @@ nrel_conjunction_of_previous_actions
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_nrel_conjunction_of_previous_actions.html"
-			(*
-			<- lang_ru;;
-			*);;
+			(* <- lang_ru;; *);;
 		*);;
 	*);;
 
@@ -919,9 +896,7 @@ nrel_condition_control
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_nrel_condition_control.html"
-			(*
-			<- lang_ru;;
-			*);;
+			(* <- lang_ru;;	*);;
 		*);;
 	*);;	
 	
@@ -948,9 +923,7 @@ nrel_then
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_nrel_then.html"
-			(*
-			<- lang_ru;;
-			*);;
+			(* <- lang_ru;;	*);;
 		*);;
 	*);;
 	
@@ -977,9 +950,7 @@ nrel_else
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_nrel_else.html"
-			(*
-			<- lang_ru;;
-			*);;
+			(* <- lang_ru;;	*);;
 		*);;
 	*);;
 
@@ -1028,9 +999,7 @@ nrel_result
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_nrel_result.html"
-			(*
-			<- lang_ru;;
-			*);;
+			(* <- lang_ru;;	*);;
 		*);;
 	*);;	
 	
@@ -1069,9 +1038,7 @@ task
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_task.html"
-			(*
-			<- lang_ru;;
-			*);;
+			(* <- lang_ru;;	*);;
 		*);;
 	*);	
 	
@@ -1084,9 +1051,7 @@ task
 		(*
 		-> rrel_example:
 				"file://content_html/identify_instances_rule_for_task.html"
-			(*
-			<- lang_ru;;
-			*);;
+			(* <- lang_ru;;	*);;
 		*);;
 	*);	
 	
@@ -1124,9 +1089,7 @@ procedural_formulation_of_task
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_procedural_formulation_of_task.html"
-			(*
-			<- lang_ru;;
-			*);;
+			(* <- lang_ru;;	*);;
 		*);;
 	*);;
 
@@ -1152,9 +1115,7 @@ declarative_formulation_of_task
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_declarative_formulation_of_task.html"
-			(*
-			<- lang_ru;;
-			*);;
+			(* <- lang_ru;;	*);;
 		*);;
 	*);;
 
@@ -1179,9 +1140,7 @@ class_of_tasks
 		(*
 		-> rrel_example:
 				"file://content_html/identify_instances_rule_for_class_of_tasks.html"
-			(*
-			<- lang_ru;;
-			*);;
+			(* <- lang_ru;;	*);;
 		*);;
 	*);;	
 
@@ -1221,9 +1180,7 @@ command
 		(*
 		-> rrel_example:
 				"file://content_html/identify_instances_rule_for_command.html"
-			(*
-			<- lang_ru;;
-			*);;
+			(* <- lang_ru;;	*);;
 		*);;
 	*);;	
 	
@@ -1260,9 +1217,7 @@ command_class
 		(*
 		-> rrel_example:
 				"file://content_html/identify_instances_rulen_for_command_class.html"
-			(*
-			<- lang_ru;;
-			*);;
+			(* <- lang_ru;;	*);;
 		*);;
 	*);
 
@@ -1337,9 +1292,7 @@ atomic_command_class
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_atomic_command_class.html"
-			(*
-			<- lang_ru;;
-			*);;
+			(* <- lang_ru;;	*);;
 		*);;
 	*);;
 	
@@ -1360,9 +1313,7 @@ non_atomic_command_class
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_non_atomic_command_class.html"
-			(*
-			<- lang_ru;;
-			*);;
+			(* <- lang_ru;;	*);;
 		*);;
 	*);;
 
@@ -1389,9 +1340,7 @@ plan
 		(*
 			-> rrel_example:
 				"file://content_html/explanation_for_plan.html"
-			(*
-			<- lang_ru;;
-			*);;
+			(* <- lang_ru;;	*);;
 		*);;
 	*);;
 
@@ -1433,9 +1382,7 @@ program
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_program.html"
-			(*
-			<- lang_ru;;
-			*);;
+			(* <- lang_ru;;	*);;
 		*);;
 	*);;	
 
@@ -1464,9 +1411,7 @@ protocol
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_protocol.html"
-			(*
-			<- lang_ru;;
-			*);;
+			(* <- lang_ru;;	*);;
 		*);;
 	*);;	
 
@@ -1488,9 +1433,7 @@ decision
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_decision.html"
-			(*
-			<- lang_ru;;
-			*);;
+			(* <- lang_ru;;	*);;
 		*);;
 	*);;	
 
@@ -1511,9 +1454,7 @@ nrel_performer
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_nrel_performer.html"
-			(*
-			<- lang_ru;;
-			*);;
+			(* <- lang_ru;;	*);;
 		*);;
 	*);;	
 	
@@ -1534,9 +1475,7 @@ nrel_customer
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_nrel_customer.html"
-			(*
-			<- lang_ru;;
-			*);;
+			(* <- lang_ru;;	*);;
 		*);;
 	*);;		
 
@@ -1557,9 +1496,7 @@ nrel_initiator
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_nrel_initiator.html"
-			(*
-			<- lang_ru;;
-			*);;
+			(* <- lang_ru;;	*);;
 		*);;
 	*);;
 
@@ -1580,9 +1517,7 @@ nrel_object
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_nrel_object.html"
-			(*
-			<- lang_ru;;
-			*);;
+			(* <- lang_ru;; *);;
 		*);;
 	*);;		
 	
@@ -1615,9 +1550,7 @@ nrel_context_of_action
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_nrel_context_of_action.html"
-			(*
-			<- lang_ru;;
-			*);;
+			(* <- lang_ru;;	*);;
 		*);;
 	*);;
 
@@ -1638,9 +1571,7 @@ rrel_argument_of_action
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_rrel_argument_of_action.html"
-			(*
-			<- lang_ru;;
-			*);;
+			(* <- lang_ru;;	*);;
 		*);;
 	*);
 
@@ -1702,9 +1633,7 @@ nrel_class_of_arguments
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_nrel_class_of_arguments.html"
-			(*
-			<- lang_ru;;
-			*);;
+			(* <- lang_ru;;	*);;
 		*);;
 	*);;
 	
