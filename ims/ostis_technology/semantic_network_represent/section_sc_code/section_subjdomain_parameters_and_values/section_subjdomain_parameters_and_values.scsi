@@ -775,7 +775,6 @@ nrel_sum_of_quantities
 	(* <- lang_ru;; *);;
 
 arithmetic_operation_on_the_values
-<- sc_node_not_relation;
 => nrel_main_idtf:
 	[арифметическая операция на величинах]
 	(* <- lang_ru;; *);
@@ -791,6 +790,7 @@ arithmetic_operation_sum
 	(* <- lang_en;; *);;
 
 nrel_sum_of_quantities
+<- sc_node_norole_relation; 
 <- arithmetic_operation_on_the_values;
 <- quasybinary_relation;
 <- rrel_key_sc_element:
@@ -837,6 +837,30 @@ nrel_composition_of_quantities
 				"file://nl_files/nrel_composition_of_quantities.html"
 				(* <- lang_ru;;	*);;
 			*);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- description_of_a_typical_instance;;
+	<= nrel_sc_text_translation:
+	...
+		(*
+		-> rrel_example:
+			"file://nl_files/composition.png";;
+		*);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- description_of_a_typical_instance;;
+	<= nrel_sc_text_translation:
+	...
+		(*
+		-> rrel_example:
+			"file://nl_files/composition2.png";;
+		*);;
 	*);;
 
 arithmetic_operation_pow
@@ -867,7 +891,32 @@ nrel_pow_of_quantities
 				"file://nl_files/nrel_pow_of_quantities.html"
 				(* <- lang_ru;;	*);;
 			*);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- description_of_a_typical_instance;;
+	<= nrel_sc_text_translation:
+	...
+		(*
+		-> rrel_example:
+			"file://nl_files/pow.png";;
+		*);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- description_of_a_typical_instance;;
+	<= nrel_sc_text_translation:
+	...
+		(*
+		-> rrel_example:
+			"file://nl_files/pow2.png";;
+		*);;
 	*);;
+
 
 arithmetic_operation_large
 <- sc_node_norole_relation;
@@ -878,7 +927,6 @@ arithmetic_operation_large
 	(* <- lang_en;; *);;
 
 value
-<- sc_node_not_relation;
 => nrel_main_idtf:
 	[значение]
 	(* <- lang_ru;; *);
