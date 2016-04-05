@@ -4,7 +4,7 @@ scp_program -> proc_of_finding_connections
 		(*
 		-> rrel_1: rrel_in: _el1;;
                 -> rrel_2: rrel_in: _el2;;
-                -> rrel_3: rrel_in: _answer;;
+                -> rrel_3: rrel_in: _answer_proc_of_finding_connections;;
 		*);;
 
 	-> rrel_operators: .proc_of_finding_connections_operator_set
@@ -12,7 +12,7 @@ scp_program -> proc_of_finding_connections
 		-> rrel_init: .proc_of_finding_connections_operator1A 
 			(*
                   	<- genElStr3;;
-                  	-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+                  	-> rrel_1: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_connections;;
                   	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
                   	-> rrel_3: rrel_fixed: rrel_scp_var: _el1;;
 
@@ -22,7 +22,7 @@ scp_program -> proc_of_finding_connections
                -> .proc_of_finding_connections_operator1B 
 			(*
                   	<- genElStr3;;
-                  	-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+                  	-> rrel_1: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_connections;;
                   	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
                   	-> rrel_3: rrel_fixed: rrel_scp_var: _el2;;
 
@@ -73,7 +73,7 @@ scp_program -> proc_of_finding_connections
 				-> rrel_1: rrel_fixed: rrel_scp_var: _el1;;
                                 -> rrel_2: rrel_fixed: rrel_scp_var: _el2;;
                                 -> rrel_3: rrel_fixed: rrel_scp_var: _arc_set1;;
-				-> rrel_4: rrel_fixed: rrel_scp_var: _answer;;
+				-> rrel_4: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_connections;;
                                 *);;
 		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
 
@@ -110,7 +110,7 @@ scp_program -> proc_of_finding_connections
 				-> rrel_1: rrel_fixed: rrel_scp_var: _el1;;
                                 -> rrel_2: rrel_fixed: rrel_scp_var: _el2;;
                                 -> rrel_3: rrel_fixed: rrel_scp_var: _arc_set2;;
-				-> rrel_4: rrel_fixed: rrel_scp_var: _answer;;
+				-> rrel_4: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_connections;;
 				*);;
 		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr2;;
 
@@ -134,9 +134,9 @@ scp_program -> proc_of_finding_connections
                  	-> rrel_4: rrel_assign: rrel_scp_var: _arc33;;
 		 	-> rrel_5: rrel_fixed: rrel_scp_var: _el2;;
 
-                 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
-                 	-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer;;
-                 	-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer;;
+                 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_connections;;
+                 	-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_connections;;
+                 	-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_connections;;
 
                  	=> nrel_then: .proc_of_finding_connections_operator3E;;
                  	=> nrel_else: .proc_of_finding_connections_operator3B;;
@@ -151,9 +151,9 @@ scp_program -> proc_of_finding_connections
                  	-> rrel_4: rrel_assign: rrel_scp_var: _arc33;;
 		 	-> rrel_5: rrel_fixed: rrel_scp_var: _el1;;
 
-                 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
-                 	-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer;;
-                 	-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer;;
+                 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_connections;;
+                 	-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_connections;;
+                 	-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_connections;;
 
                  	=> nrel_then: .proc_of_finding_connections_operator3E;;
                  	=> nrel_else: .proc_of_finding_connections_operator3C;;
@@ -168,9 +168,9 @@ scp_program -> proc_of_finding_connections
                  	-> rrel_4: rrel_assign: rrel_scp_var: _arc33;;
 		 	-> rrel_5: rrel_fixed: rrel_scp_var: _el2;;
 
-                 	-> rrel_set_1: rrel_fixed: rrel_scp_var: _answer;;
-                 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
-                 	-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer;;
+                 	-> rrel_set_1: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_connections;;
+                 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_connections;;
+                 	-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_connections;;
 
                  	=> nrel_then: .proc_of_finding_connections_operator3F;;
                  	=> nrel_else: .proc_of_finding_connections_operator3D;;
@@ -185,9 +185,9 @@ scp_program -> proc_of_finding_connections
                  	-> rrel_4: rrel_assign: rrel_scp_var: _arc2;;
 		 	-> rrel_5: rrel_fixed: rrel_scp_var: _el1;;
 
-                 	-> rrel_set_1: rrel_fixed: rrel_scp_var: _answer;;
-                 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
-                 	-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer;;
+                 	-> rrel_set_1: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_connections;;
+                 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_connections;;
+                 	-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_connections;;
 
                  	=> nrel_then: .proc_of_finding_connections_operator3F;;
                  	=> nrel_else: .proc_of_finding_connections_operator7D;;
@@ -200,8 +200,8 @@ scp_program -> proc_of_finding_connections
 		 	-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
 		 	-> rrel_3: rrel_assign: rrel_scp_var: _node1;;
 
-                 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
-                 	-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer;;
+                 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_connections;;
+                 	-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_connections;;
 
                  	=> nrel_goto: .proc_of_finding_connections_operator7D;;
                  	*);; 
@@ -213,8 +213,8 @@ scp_program -> proc_of_finding_connections
 		 	-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
 		 	-> rrel_3: rrel_assign: rrel_scp_var: _node1;;
 
-                 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
-                 	-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer;;
+                 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_connections;;
+                 	-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_connections;;
 
                  	=> nrel_goto: .proc_of_finding_connections_operator7D;;
                  	*);;
@@ -292,7 +292,7 @@ scp_program -> proc_of_finding_connections
                         	-> rrel_1: rrel_fixed: rrel_scp_var: _rules;;
                         	-> rrel_2: rrel_fixed: rrel_scp_var: _rules2;;
 				-> rrel_3: rrel_fixed: rrel_scp_var: _rules3;;
-				-> rrel_4: rrel_fixed: rrel_scp_var: _answer;;
+				-> rrel_4: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_connections;;
 				-> rrel_5: rrel_fixed: rrel_scp_var: _el1;;
 				-> rrel_6: rrel_fixed: rrel_scp_var: _el2;;
                    		*);;
@@ -318,7 +318,7 @@ scp_program -> proc_of_finding_connections
                         	-> rrel_1: rrel_fixed: rrel_scp_var: _rules;;
                         	-> rrel_2: rrel_fixed: rrel_scp_var: _rules2;;
 				-> rrel_3: rrel_fixed: rrel_scp_var: _rules3;;
-				-> rrel_4: rrel_fixed: rrel_scp_var: _answer;;
+				-> rrel_4: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_connections;;
 				-> rrel_5: rrel_fixed: rrel_scp_var: _el1;;
 				-> rrel_6: rrel_fixed: rrel_scp_var: _el2;;
                    		*);;
@@ -350,7 +350,7 @@ scp_program -> proc_of_finding_connections
 								      -> ... (* -> rrel_1: rrel_fixed: rrel_scp_const: _v2;;
                                                                                 -> rrel_2: rrel_fixed: rrel_scp_var: _el2;; *);;
                                                             	    *);;
-                 	-> rrel_4: rrel_fixed: rrel_scp_var: _answer;;
+                 	-> rrel_4: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_connections;;
 
                  	=> nrel_goto: .proc_of_finding_connections_operator7B;;
                		*);;
@@ -368,7 +368,7 @@ scp_program -> proc_of_finding_connections
  								      -> ... (* -> rrel_1: rrel_fixed: rrel_scp_const: _v3;;
                                                                                 -> rrel_2: rrel_fixed: rrel_scp_var: _el2;; *);;
                                                             	    *);;
-                 	-> rrel_4: rrel_fixed: rrel_scp_var: _answer;;
+                 	-> rrel_4: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_connections;;
 
                  	=> nrel_then: .proc_of_finding_connections_operator8A;;
                  	=> nrel_else: .proc_of_finding_connections_operator7C;;
@@ -387,7 +387,7 @@ scp_program -> proc_of_finding_connections
  								      -> ... (* -> rrel_1: rrel_fixed: rrel_scp_const: _v3;;
                                                                                 -> rrel_2: rrel_fixed: rrel_scp_var: _el1;; *);;
                                                                     *);;
-                 	-> rrel_4: rrel_fixed: rrel_scp_var: _answer;;
+                 	-> rrel_4: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_connections;;
 
                  	=> nrel_goto: .proc_of_finding_connections_operator8A;;
 		 	*);;
@@ -405,7 +405,7 @@ scp_program -> proc_of_finding_connections
  								      -> ... (* -> rrel_1: rrel_fixed: rrel_scp_const: _nrel;;
                                                                                 -> rrel_2: rrel_fixed: rrel_scp_var: _el2;; *);;
                                                                     *);;
-                 	-> rrel_4: rrel_fixed: rrel_scp_var: _answer;;
+                 	-> rrel_4: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_connections;;
 
                  	=> nrel_then: .proc_of_finding_connections_operator8B;;
                  	=> nrel_else: .proc_of_finding_connections_operator7E;;
@@ -424,7 +424,7 @@ scp_program -> proc_of_finding_connections
  								      -> ... (* -> rrel_1: rrel_fixed: rrel_scp_const: _nrel;;
                                                                                 -> rrel_2: rrel_fixed: rrel_scp_var: _el1;; *);;
                                                                     *);;
-                 	-> rrel_4: rrel_fixed: rrel_scp_var: _answer;;
+                 	-> rrel_4: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_connections;;
 
                  	=> nrel_goto: .proc_of_finding_connections_operator8B;;
 		 	*);;
@@ -441,7 +441,7 @@ scp_program -> proc_of_finding_connections
  								      -> ... (* -> rrel_1: rrel_fixed: rrel_scp_const: _v2;;
                                                                                 -> rrel_2: rrel_fixed: rrel_scp_var: _el2;; *);;
                                                                     *);;
-                 	-> rrel_4: rrel_fixed: rrel_scp_var: _answer;;
+                 	-> rrel_4: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_connections;;
 
                  	=> nrel_goto: .proc_of_finding_connections_operator_return;;
                		*);;
@@ -458,7 +458,7 @@ scp_program -> proc_of_finding_connections
  								-> ... (* -> rrel_1: rrel_fixed: rrel_scp_const: _nrel;;
                                                                          -> rrel_2: rrel_fixed: rrel_scp_var: _el2;; *);;
                                                             *);;
-                 	-> rrel_4: rrel_fixed: rrel_scp_var: _answer;;
+                 	-> rrel_4: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_connections;;
 
                  	=> nrel_then: .proc_of_finding_connections_operator_return;;
                  	=> nrel_else: .proc_of_finding_connections_operator8C;;
@@ -476,7 +476,7 @@ scp_program -> proc_of_finding_connections
  								      -> ... (* -> rrel_1: rrel_fixed: rrel_scp_const: _nrel;;
                                                                                 -> rrel_2: rrel_fixed: rrel_scp_var: _el1;; *);;
                                                                     *);;
-                 	-> rrel_4: rrel_fixed: rrel_scp_var: _answer;;
+                 	-> rrel_4: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_connections;;
 
                  	=> nrel_goto: .proc_of_finding_connections_operator_return;;
 		 	*);;
