@@ -244,7 +244,6 @@ value
 			*);;
 	*);;
 
-
 exact_value
 <- sc_node_not_relation;
 => nrel_main_idtf:
@@ -781,14 +780,6 @@ arithmetic_operation_on_the_values
 	[arithmetic operation on the values]
 	(* <- lang_en;; *);;
 
-arithmetic_operation_sum
-<- sc_node_norole_relation;
-=> nrel_main_idtf:
-	[арифметическая операция сумма*]
-	(* <- lang_ru;; *);
-	[arithmetic operation sum]
-	(* <- lang_en;; *);;
-
 nrel_sum_of_quantities
 <- sc_node_norole_relation; 
 <- arithmetic_operation_on_the_values;
@@ -805,14 +796,6 @@ nrel_sum_of_quantities
 				(* <- lang_ru;;	*);;
 			*);;
 	*);;
-
-arithmetic_operation_composition
-<- sc_node_norole_relation;
-=> nrel_main_idtf:
-	[арифметическая операция произведение*]
-	(* <- lang_ru;; *);
-	[arithmetic operation composition]
-	(* <- lang_en;; *);;
 
 nrel_composition_of_quantities
 <- sc_node_norole_relation;
@@ -863,14 +846,6 @@ nrel_composition_of_quantities
 		*);;
 	*);;
 
-arithmetic_operation_pow
-<- sc_node_norole_relation;
-=> nrel_main_idtf:
-	[арифметической операции возведение в степень*]
-	(* <- lang_ru;; *);
-	[arithmetic operation pow]
-	(* <- lang_en;; *);;
-
 nrel_pow_of_quantities
 <- sc_node_norole_relation;
 => nrel_main_idtf:
@@ -917,15 +892,6 @@ nrel_pow_of_quantities
 		*);;
 	*);;
 
-
-arithmetic_operation_large
-<- sc_node_norole_relation;
-=> nrel_main_idtf:
-	[арифметическая операция больше*]
-	(* <- lang_ru;; *);
-	[arithmetic operation large]
-	(* <- lang_en;; *);;
-
 value
 => nrel_main_idtf:
 	[значение]
@@ -963,14 +929,6 @@ nrel_large_quantitie
 				(* <- lang_ru;;	*);;
 			*);;
 	*);;
-
-arithmetic_operation_equation
-<- sc_node_norole_relation;
-=> nrel_main_idtf:
-	[арифметическая операция равенство*]
-	(* <- lang_ru;; *);
-	[arithmetic operation equation]
-	(* <- lang_en;; *);;
 
 nrel_equal_of_quantities
 => nrel_main_idtf:
