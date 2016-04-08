@@ -1,13 +1,13 @@
 lib_component_ui_menu_file_for_rejection_verification_result_of_offer
 => nrel_main_idtf:
-	[Компонент библиотеки. Действие. Отклонение результатов верификации предложения]
+	[Компонент библиотеки. Действие. Отклонить результаты верификации предложения]
 	(* <- lang_ru;; *);
-	[Library component. Action. Rejection the verification result of offer]
+	[Library component. Action. To reject the verification result of offer]
 	(* <- lang_en;; *);
 
-<- platform_independent_reusable_component_OSTIS;
-<- atomic_reusable_component_OSTIS;
-<- reusable_knowledge_base_sc_model_component;
+<- library_of_platform_independent_reusable_components;
+<- library_of_atomic_reusable_components;
+<- library_of_reusable_components_of_knowledge_bases;
 
 <- rrel_key_sc_element:
 	... 
