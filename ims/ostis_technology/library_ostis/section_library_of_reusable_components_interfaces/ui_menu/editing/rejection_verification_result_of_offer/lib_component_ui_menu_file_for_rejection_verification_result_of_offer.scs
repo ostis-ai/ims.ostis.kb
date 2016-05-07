@@ -1,0 +1,25 @@
+lib_component_ui_menu_file_for_rejection_verification_result_of_offer
+=> nrel_main_idtf:
+	[Компонент библиотеки. Действие. Отклонить результаты верификации предложения]
+	(* <- lang_ru;; *);
+	[Library component. Action. To reject the verification result of offer]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components;
+<- library_of_atomic_reusable_components;
+<- library_of_reusable_components_of_knowledge_bases;
+
+<- rrel_key_sc_element:
+	... 
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Ui_rejection_verification_result_of_offer.html"
+				(* <- lang_ru;; *);;
+		*);;
+	*);;
+	
+lib_component_ui_menu_file_for_rejection_verification_result_of_offer = [*^"file://ui_rejection_verification_result_of_offer.scsi"*];; 
