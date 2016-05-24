@@ -657,7 +657,6 @@ formed_set
 	(* <- lang_ru;; *); 
 	[formed set]
 	(* <- lang_en;; *);
-<- contextual_set;
 <- rrel_key_sc_element:
 	...
 	(*
@@ -678,7 +677,6 @@ unformed_set
 	(* <- lang_ru;; *); 
 	[unformed set]
 	(* <- lang_en;; *);
-<- contextual_set;
 <- rrel_key_sc_element:
 	...
 	(*
@@ -691,14 +689,6 @@ unformed_set
 			(* <- lang_ru;; *);;
 		*);;
 	*);;
-
-sc_node_not_relation -> contextual_set;;
-contextual_set
-=> nrel_main_idtf:
-	[ситуативное множество]
-	(* <- lang_ru;; *); 
-	[contextual set]
-	(* <- lang_en;; *);;
 
 sc_node_not_relation -> empty_set;;
 empty_set
