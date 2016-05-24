@@ -705,14 +705,6 @@ task_measurement
 <= nrel_inclusion:
 	task;;
 
-quantitative_parameter
-<- sc_node_not_relation;
-=> nrel_main_idtf:
-	[количественный параметр]
-	(* <- lang_ru;; *);
-	[quantitative parameter]
-	(* <- lang_en;; *);;
-
 arithmetical_expression_values
 <- sc_node_not_relation;
 => nrel_main_idtf:
@@ -733,18 +725,10 @@ arithmetical_expression_values
 			*);;
 	*);;
 
-relation
-<- sc_node_not_relation;
-=> nrel_main_idtf:
-	[отношение]
-	(* <- lang_ru;; *);
-	[relation]
-	(* <- lang_en;; *);;
-
 arithmetic_operation_on_the_values_for_values
 <- sc_node_not_relation;
 => nrel_main_idtf:
-	[арифметическое выражение на величинах на величинах]
+	[арифметическое выражение на величинах]
 	(* <- lang_ru;; *);
 	[arithmetical expression values]
 	(* <- lang_en;; *);
@@ -891,21 +875,6 @@ nrel_pow_of_quantities
 			"file://nl_files/pow2.png";;
 		*);;
 	*);;
-
-value
-=> nrel_main_idtf:
-	[значение]
-	(* <- lang_ru;; *);
-	[value]
-	(* <- lang_en;; *);;
-
-nrel_measure
-<- sc_node_norole_relation;
-=> nrel_main_idtf:
-	[единица измерения*]
-	(* <- lang_ru;; *);
-	[measure]
-	(* <- lang_en;; *);;
 
 nrel_large_quantitie
 => nrel_main_idtf:
