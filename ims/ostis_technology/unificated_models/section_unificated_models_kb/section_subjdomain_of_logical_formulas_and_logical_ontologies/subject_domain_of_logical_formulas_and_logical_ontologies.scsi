@@ -320,6 +320,9 @@ statement <- sc_node_not_relation;
 => nrel_idtf:
 	[текст логической формулы] (* <- lang_ru;; *);
 
+<= nrel_inclusion: 
+	semantic_neighborhood;
+
 <- rrel_key_sc_element:
 	...
 	(*
