@@ -318,11 +318,11 @@ performed_action
 	
 <- minor_concept;	
 
-=> nrel_subdividing:
-			{
-			active_action;
-			deferred_action
-			};
+<= nrel_subdividing:
+	{
+	active_action;
+	deferred_action
+	};
 
 <= nrel_inclusion:	
 	real_entity;
@@ -431,7 +431,7 @@ question_finished
 	
 <- minor_concept;	
 
-=> nrel_subdividing:
+<= nrel_subdividing:
 	{
 		question_finished_successfully;
 		question_finished_unsuccessfully
