@@ -5,43 +5,7 @@ sc_model_of_processing_machine_knowledge
 	(* <- lang_ru;; *);
 	[sc-model of processing machine knowledge]
 	(* <- lang_en;; *);
-
-=> nrel_idtf:
-	[sc-модель обработки знаний]
-	(* <- lang_ru;; *);
-	[sc-машина]
-	(* <- lang_ru;; *);
-
-<= nrel_basic_decomposition:
-{
-	maximum_abstract_sc_agent;
-	sc_memory
-};;
-
-
-sc_memory
-<- sc_node_not_relation;
-=> nrel_main_idtf:
-	[sc-память]
-	(* <- lang_ru;; *);
-	[sc-memory]
-	(* <- lang_en;; *);
-
-=>nrel_idtf:
-	[абстрактная sc-память]
-	(* <- lang_ru;; *);;
-
-maximum_abstract_sc_agent
-<- sc_node_not_relation;
-
-=> nrel_main_idtf:
-	[максимальный абстрактный sc-агент]
-	(* <- lang_ru;;*);
-	[maximum abstract sc-agent]
-	(* <- lang_en;;*);
-
-<= nrel_inclusion: non_atomic_abstract_sc_agent;
-
+<= nrel_strict_inclusion: non_atomic_abstract_sc_agent;
 <- rrel_key_sc_element:
 	...
 		(*
@@ -50,12 +14,7 @@ maximum_abstract_sc_agent
 				...
 					(*
 					-> rrel_example:
-						"file://nl_files/explanation_for_maximum_abstract_sc_agent.html"
+						"file://nl_files/explanation_for_sc_model_of_kpm.html"
 						(* <- lang_ru;; *);;
 					*);;
 		*);;
-
-
-
-
-
