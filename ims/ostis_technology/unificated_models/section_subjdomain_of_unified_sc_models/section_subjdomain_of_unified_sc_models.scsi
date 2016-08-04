@@ -18,6 +18,7 @@ subjdomain_of_unified_sc_models
 	sc_model;;
 
 sc_model_computer_systems
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[sc-модель компьютерной системы]
 	(* <- lang_ru;; *);
@@ -25,19 +26,51 @@ sc_model_computer_systems
 	(* <- lang_en;; *);
 <= nrel_basic_decomposition:
 	{
+	sc_memory;
 	sc_model_of_knowledge_base;
 	sc_model_of_processing_machine_knowledge;
 	sc_model_computer_system_interface
 	};;
 
-set => nrel_nrel_inclusion: sc_model;;
-sc_model => nrel_inclusion: 
+sc_memory
+=> nrel_main_idtf:
+	[sc-память]
+	(* <- lang_ru;; *);
+	[sc-memory]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[абстрактная sc-память]
+	(* <- lang_ru;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://nl_files/explanation_for_sc_memory.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
+
+sc_model_computer_system_interface
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[sc-модель интерфейс компьютерной системы]
+	(* <- lang_ru;; *);
+	[sc-model of computer system interface]
+	(* <- lang_en;; *);;
+
+set => nrel_strict_inclusion: sc_model;;
+sc_model => nrel_strict_inclusion: 
 	sc_model_computer_systems;
 	sc_model_of_knowledge_base;
 	sc_model_of_processing_machine_knowledge;
 	sc_model_computer_system_interface;;
 
 sc_model
+<- sc_node_not_relation;
 => nrel_main_idtf:
 	[sc-модель]
 	(* <- lang_ru;; *);
@@ -55,10 +88,3 @@ sc_model
 				(* <- lang_ru;;	*);;
 			*);;
 	*);;
-
-sc_model_computer_system_interface
-=> nrel_main_idtf:
-	[sc-модель интерфейс компьютерной системы]
-	(* <- lang_ru;; *);
-	[sc-model of computer system interface]
-	(* <- lang_en;; *);;
