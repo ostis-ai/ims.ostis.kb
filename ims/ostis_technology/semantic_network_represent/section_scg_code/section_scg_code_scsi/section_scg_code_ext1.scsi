@@ -1,0 +1,185 @@
+scg_code_ext1 => nrel_main_idtf: 
+	[SCg-код. Расш1] (* <- lang_ru;; *);
+	[SCg-code extension 1] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	..scg_code_ext1_explanation1
+	(*
+	<- explanation;;
+        <= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://scg_code_htmls/scg_code_ext1_text1.html"
+				(*
+				<- lang_ru;;
+				*);;
+			*);;
+                <= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://scg_code_htmls/scg_code_ext1_text1_en.html"
+				(*
+				<- lang_en;;
+				*);;
+			*);;
+		*);
+
+
+	
+
+<- rrel_key_sc_element:
+			..scg_ext1_illustration1
+			(*
+			<- illustration;;
+			<= nrel_sc_text_translation:	
+				...translation_scg_ext1_illustration1_ru
+				(*
+				-> rrel_example:
+				"file://files/core_triangle_struct.png"
+				(*
+				<-lang_ru;;
+				=> nrel_comment:
+					..scg_code_ext1_comment1
+					(*
+					<- rrel_key_sc_element:
+						..scg_ext1_illustration2
+						(*
+						<- illustration;;
+						<= nrel_sc_text_translation:	
+							...translation_scg_ext1_illustration2_ru
+							(*
+							-> rrel_example:
+								"file://files/ext1_triangle_struct.png"
+								(*<-lang_ru;;*);;
+							*);;
+						*);;
+
+<= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://scg_code_htmls/scg_code_ext1_text2.html"
+				(*
+				<- lang_ru;;
+				*);;
+			*);;
+                <= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://scg_code_htmls/scg_code_ext1_text2_en.html"
+				(*
+				<- lang_en;;
+			
+
+		
+ 
+		*);;
+	*);;
+	*);;
+	*);;
+	*);;
+*);
+
+<- rrel_key_sc_element:
+	..scg_code_ext1_explanation1
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:	
+		...translation_scg_code_ext1_explanation1
+		(*
+		-> rrel_example:
+			"file://files/ext1_table.png"
+		(* <- lang_ru;; *);;
+		*);;
+	*);
+
+-> rrel_example:
+	"file://files/ext1_triangle_ABC.png"
+	(*
+	=> nrel_comment:
+		..scg_code_ext1_comment2
+		(*
+		=> nrel_comment:
+			..scg_code_ext1_comment3
+			(*
+			=> nrel_comment:
+				..scg_code_ext1_comment4
+				(*
+				<= nrel_sc_text_translation:
+					...translation_scg_code_ext1_comment4
+					(*
+					-> rrel_example:
+						[Имеется треугольник с вершинами в точках A, B и C (запись с помощью ядра SCg-кода).]
+						(* <- lang_ru;; *);;
+					*);;
+				*);;
+			<= nrel_sc_text_translation:
+				...translation_scg_code_ext1_comment3
+				(*
+				-> rrel_example:
+					"file://files/core_triangle_ABC.png"
+					(* <- lang_ru;; *);;
+				*);;
+			*);;
+		<= nrel_sc_text_translation:
+			...translation_scg_code_ext1_comment2
+			(*
+			-> rrel_example:
+				[Имеется треугольник с вершинами в точках A, B и C (запись с использованием первого расширения SCg-кода).]
+				(* <- lang_ru;; *);;
+			*);;
+		*);;
+	*);
+
+=> nrel_comment:
+		..scg_code_ext1_comment5
+		(*
+		<= nrel_sc_text_translation:
+			...translation_scg_code_ext1_comment5
+			(*
+			-> rrel_example:
+				[Из примеров видно, что первое расширение SCg-кода значительно сокращает количество элементов, присутствующих на экране. Это, в свою очередь, позволяет повысить читабельность sc.g-текстов.]
+				(* <- lang_ru;; *);;
+			*);;
+		*);
+
+-> rrel_example:
+	"file://files/ext1_moon.png"
+	(*
+	=> nrel_comment:
+		..scg_code_ext1_comment6
+		(*
+		<= nrel_sc_text_translation:
+			...translation_scg_code_ext1_comment6
+			(*
+			-> rrel_example:
+				[Луна вращается вокруг планеты "Земля" (запись с использованием первого расширения SCg-кода).]
+				(* <- lang_ru;; *);;
+			*);;
+		*);;
+	=> nrel_comment:
+		..scg_code_ext1_comment7
+		(*
+		=> nrel_comment:
+			..scg_code_ext1_comment8
+			(*
+			<= nrel_sc_text_translation:
+				...translation_scg_code_ext1_comment8
+				(*
+				-> rrel_example:
+					[Луна вращается вокруг планеты "Земля" (запись с помощью ядра SCg-кода).]
+					(* <- lang_ru;; *);;
+				*);;
+			*);;
+		<= nrel_sc_text_translation:
+			...translation_scg_code_ext1_comment7
+			(*
+			-> rrel_example:
+				"file://files/core_moon.png"
+				(* <- lang_ru;; *);;
+			*);;
+		*);;
+	*);;

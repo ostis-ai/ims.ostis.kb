@@ -1,0 +1,46 @@
+section_subjdomain_parameters_and_values
+
+=> nrel_main_idtf:
+	[Раздел. Предметная область параметров и величин]
+	(* <- lang_ru;; *);
+	[Section. Subject domain of parameters and values]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[Раздел. sc-модель предметной области параметров и величин]
+	(* <- lang_ru;; *);
+
+<- atomic_section;;
+
+section_subjdomain_parameters_and_values = [*^"file://section_subjdomain_parameters_and_values.scsi"*];;
+
+section_subjdomain_parameters_and_values 
+-> rrel_key_sc_element:
+	subjdomain_parameters_and_values;
+	parameter;
+	nrel_param_definitional_domain;
+	measurable_parameter;
+	immeasurable_parameter;
+	level_class_equivalence;
+	value;
+	exact_value;
+	inaccurate_value;
+	interval_value;
+	rrel_standard;
+	nrel_measurement;
+	nrel_accuracy;
+	parametric_model;
+	nrel_measure;
+	measurement_of_fixed_measure;
+	scale;
+	nrel_zero_mark;
+	action_measurement;
+	task_measurement;
+	arithmetical_expression_values;
+	arithmetic_operation_on_the_values_for_values;
+	nrel_sum_of_quantities;
+	nrel_composition_of_quantities;
+	nrel_pow_of_quantities;
+	nrel_large_quantitie;
+	nrel_equal_of_quantities;
+	nrel_greater_or_equal_quantitie;;

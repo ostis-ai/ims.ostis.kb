@@ -1,0 +1,27 @@
+section_semantic_networks_processing
+=> nrel_main_idtf:
+	[Раздел. Базовая унифицированная модель обработки текстов SC-кода - абстрактная scp-машина]
+	(* <- lang_ru;; *);
+	[Section. Basic unified model of SC-code texts processing - abstract scp-machine]
+	(* <- lang_en;; *);
+	
+<= nrel_section_decomposition:
+	{
+		section_justification_basic_model_of_sc_code_processing
+		(*
+		=> nrel_section_base_order: 
+			section_basic_programming_language_scp;;
+		*);
+		section_basic_programming_language_scp
+		(*
+		=> nrel_section_base_order: 
+			section_unified_semantic_model_programme_scp_interpretation;;
+		*);
+		section_unified_semantic_model_programme_scp_interpretation
+		(*
+		=> nrel_section_base_order: 
+			section_scp_perspectives_of_development;;
+		*);
+		section_scp_perspectives_of_development
+		
+	};;

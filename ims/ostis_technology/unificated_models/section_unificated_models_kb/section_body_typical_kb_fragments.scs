@@ -1,0 +1,28 @@
+section_body_typical_kb_fragments
+
+=> nrel_main_idtf:
+	[Раздел. Корпус типовых фрагментов баз знаний]
+	(* <- lang_ru;; *);
+	[Section. Body of typical database fragments]
+	(* <- lang_en;; *);
+	
+<= nrel_section_decomposition:
+	{
+		section_body_typical_kb_fragments_russian
+		(*
+		=> nrel_section_base_order: 
+			section_body_typical_kb_fragments_scg;;
+		*);
+		section_body_typical_kb_fragments_scg
+		(*
+		=> nrel_section_base_order: 
+			section_body_typical_kb_fragments_scn;;
+		*);
+		section_body_typical_kb_fragments_scn
+		(*
+		=> nrel_section_base_order: 
+			section_body_typical_kb_fragments_scs;;
+		*);
+		section_body_typical_kb_fragments_scs
+		
+	};;

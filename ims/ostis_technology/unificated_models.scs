@@ -1,0 +1,31 @@
+section_unificated_models
+=> nrel_main_idtf:
+	[Раздел. Унифицированные логико-семантические модели (sc-модели) компьютерных систем]
+	(* <- lang_ru;; *);
+	[Section. Unified semantic models (sc-models) of computer systems]
+	(* <- lang_en;; *);
+
+<= nrel_section_decomposition:
+	{
+		section_principles_of_computer_system_models
+		(*
+		=> nrel_section_base_order: 
+			section_subjdomain_of_unified_sc_models;;
+		*);
+		section_subjdomain_of_unified_sc_models
+		(*
+		=> nrel_section_base_order: 
+			section_unificated_models_kb;;
+		*);
+		section_unificated_models_kb
+		(*
+		=> nrel_section_base_order: 
+			section_unificated_models_kpm;;
+		*);
+		section_unificated_models_kpm
+		(*
+		=> nrel_section_base_order: 
+			section_unificated_models_interface;;
+		*);
+		section_unificated_models_interface
+	};;

@@ -1,0 +1,38 @@
+lib_component_agent_of_finding_theorems
+=> nrel_main_idtf:
+	[Компонент библиотеки. sc-агент поиска теорем заданной sc-онтологии]
+	(* <- lang_ru;; *);
+	[Library component. sc-agent of theorems for given sc-ontology search]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components; 
+<- library_of_atomic_reusable_components; 
+
+
+=> nrel_attendant_component: 
+	lib_component_ui_menu_file_for_finding_theorems; 
+
+-> rrel_key_sc_element: 
+	.platform_independent_realization_of_sc_agent_of_finding_theorems; 
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Agent_Theorem.html"
+				(* <- lang_ru;; *);; 
+		*);;
+	*);;
+
+question_find_theorems
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+ 	[действие. найти теоремы]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[action. to find theorems]
+	(* <- lang_en;;	*);;

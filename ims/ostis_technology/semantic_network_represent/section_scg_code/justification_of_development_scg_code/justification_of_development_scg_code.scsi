@@ -1,0 +1,25 @@
+scg_code
+
+=> nrel_main_idtf:
+	[Язык SCg] (* <- lang_ru;; *);
+	[sc.g-текст] (* <- lang_ru;; *);
+
+
+<- rrel_key_sc_element:
+			...
+			(*
+				<- explanation;;
+				<= nrel_sc_text_translation:	
+				...
+				(*
+					-> rrel_example:
+					"file://nl_files/explanation_for_scg_code.html"
+					(* <- lang_ru;;	*);;
+				*);;
+			*);;
+
+scg_element
+=> nrel_main_idtf:
+	[sc.g-элемент] (* <- lang_ru;; *);;
+
+
