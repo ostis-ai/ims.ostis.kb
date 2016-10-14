@@ -4,7 +4,8 @@ section_scn_code_core
 	[Раздел. SCn-код. Ядро]
 	(* <- lang_ru;; *);
 	[Partition. SCn-code. Core]
-	(* <- lang_en;; *);;
+	(* <- lang_en;; *);
+<- not_enough_formed_structure;;
 
 section_scn_code_core = [*^"file://section_scn_code_scsi/section_scn_code_core.scsi"*];;
 section_scn_code_core -> rrel_key_sc_element: scn_code_core;;

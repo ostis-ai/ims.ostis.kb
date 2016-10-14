@@ -1,5 +1,4 @@
 section_subject_domain_of_semantic_neighborhoods
-<- sc_node_not_relation;
 => nrel_main_idtf:
 	[Раздел. Предметная область семантических окрестностей]
 	(* <- lang_ru;; *);
@@ -10,7 +9,8 @@ section_subject_domain_of_semantic_neighborhoods
 	(* <- lang_ru;; *);
 -> rrel_key_sc_element:
 	subject_domain_of_semantic_neighborhoods;
-<- atomic_section;;
+<- atomic_section;
+<- not_enough_formed_structure;;
 
 section_subject_domain_of_semantic_neighborhoods = [*^"file://section_subject_domain_of_semantic_neighborhoods.scsi"*];;
 
