@@ -3,7 +3,8 @@ section_subjdomain_actions_executing_in_sc_memory
 => nrel_main_idtf:
 	[Раздел. Предметная область действий, выполняемых в абстрактной унифицированной семантической памяти]
 	(* <- lang_ru;; *);
-<- atomic_section;;
+<- atomic_section;
+<- not_enough_formed_structure;;
 
 section_subjdomain_actions_executing_in_sc_memory = [*^"file://section_subjdomain_actions_executing_in_sc_memory.scsi"*];;
 
