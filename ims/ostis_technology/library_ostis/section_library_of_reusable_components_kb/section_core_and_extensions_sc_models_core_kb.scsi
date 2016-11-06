@@ -2,5 +2,41 @@ core_and_extensions_sc_models_core_kb
 => nrel_main_idtf:
 	[Ядро и расширения ядра sc-моделей баз знаний]
 	(* <- lang_ru;; *);
-	[Core and extensions os knowledge bases sc-models core]
+	[Core and extensions of knowledge bases sc-models core]
 	(* <- lang_en;; *);;
+
+core_and_extensions_sc_models_core_kb
+ => nrel_inclusion:section_subjdomain_entities;
+ => nrel_inclusion:section_subjdomain_sets;
+ => nrel_inclusion:section_subjdomain_ligaments_relations;
+ => nrel_inclusion:section_subjdomain_parameters_and_values;
+ => nrel_inclusion:section_subject_domain_of_structures;
+ => nrel_inclusion:section_basic_programming_language_scp;
+ => nrel_inclusion:section_subjdomain_numbers_and_numeric_structures;
+ => nrel_inclusion:section_subjdomain_informational_structures_not_sc_code;
+ => nrel_inclusion:section_subjdomain_sc_identifiers  ;
+ => nrel_inclusion:section_subjdomain_temporary_entity; 
+ => nrel_inclusion:section_subjdomain_actions_and_tasks;
+ => nrel_inclusion:section_scg_code;
+ => nrel_inclusion:section_scs_code; 
+ => nrel_inclusion:section_scn_code;
+ => nrel_inclusion:section_unified_semantic_model_programme_scp_interpretation;
+ => nrel_inclusion:section_subjdomain_of_unified_sc_models;
+ => nrel_inclusion:section_structure_of_knowledge_base_model;
+ => nrel_inclusion:section_subjdomain_knowledges;
+ => nrel_inclusion:section_subject_domain_of_semantic_neighborhoods;
+ => nrel_inclusion:section_subjdomain_of_subject_domain;
+ => nrel_inclusion:section_subjdomain_of_ontologies;
+ => nrel_inclusion:section_subjdomain_of_logical_formulas_and_logical_ontologies;
+ => nrel_inclusion:section_subjdomain_tasks_classes_tasks_ways_of_solving_task_ontologies;
+ => nrel_inclusion:section_interdisciplinary_concepts;
+ => nrel_inclusion:section_structure_ostis_kpm;
+ => nrel_inclusion:section_subjdomain_of_situations_and_events_in_sc_memory;
+ => nrel_inclusion:section_subjdomain_actions_executing_in_sc_memory;
+ => nrel_inclusion:section_subject_domain_of_sc_agents;
+ => nrel_inclusion:section_structure_ui_unified_model;
+ => nrel_inclusion:section_core_of_semantic_model_of_user_interface;
+ => nrel_inclusion:section_subjdomain_ostis_system_messages;;
+ 
+ core_and_extensions_sc_models_core_kb <- sc_node_struct;
+<- not_enough_formed_structure;;
