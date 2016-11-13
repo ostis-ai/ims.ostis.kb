@@ -1,0 +1,49 @@
+sc_agent_formation_suggestion_edit_kb
+=> nrel_main_idtf:	
+	[sc-агент формирования предложения по редактированию базы знаний] (* <- lang_ru;; *);
+	[sc-agent of the formation of proposals for editing the knowledge base] (* <- lang_en;; *);
+	
+<- abstract_sc_agent;
+
+=> nrel_primary_initiation_condition: 
+	(sc_event_add_output_arc => question_initiated);
+	
+=> nrel_initiation_condition_and_result: 
+	(..sc_agent_formation_suggestion_edit_kb_condition => ..sc_agent_formation_suggestion_edit_kb_result);
+	
+<= nrel_sc_agent_key_sc_elements: 
+	{
+	question_initiated;
+	question;
+	action_to_form_a_proposal_for_editing_the_knowledge_base
+	};
+	
+=> nrel_inclusion: 
+	.platform_independent_realization_of_sc_agent_formation_suggestion_edit_kb
+	(*
+	<- platform_independent_abstract_sc_agent;;
+	<= nrel_sc_agent_program: 
+		{
+		agent_formation_suggestion_edit_kb
+		};;
+		
+	-> sc_agent_formation_suggestion_edit_kb_scp 
+		(* <- active_sc_agent;; *);;
+	*);;
+
+..sc_agent_formation_suggestion_edit_kb_condition
+= [*
+	action_to_form_a_proposal_for_editing_the_knowledge_base _-> .._question;;
+	question_initiated _-> .._question;;
+	question _-> .._question;;
+	.._question _-> .._parameter1;;
+*];;
+
+..sc_agent_formation_suggestion_edit_kb_result
+= [*
+	action_to_form_a_proposal_for_editing_the_knowledge_base _-> .._question;;
+	question_finished _-> .._question;;
+	question _-> .._question;;
+	.._question _-> .._parameter1;;
+	
+*];;
