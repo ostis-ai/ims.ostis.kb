@@ -1,0 +1,36 @@
+IMS_knowledge_processing_machine 
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[Машина обработки знаний IMS](* <- lang_ru;; *);
+	[IMS knowledge processing machine](* <- lang_en;; *);
+<- abstract_sc_agent;
+<= nrel_abstract_sc_agent_decomposition:
+	{
+		sc_agent_of_finding_definitions;
+		sc_agent_of_finding_proof;
+		sc_agent_of_search_of_links_of_relation_connected_with_element;
+		sc_agent_of_finding_solution;
+		sc_agent_of_search_of_full_semantic_neighborhood;
+		sc_agent_of_finding_constants;
+		sc_agent_of_search_of_all_subclasses_in_quasybinary_relation;
+		sc_agent_of_finding_theorems;
+		sc_agent_of_search_of_all_output_arcs_with_rel;
+		sc_agent_of_finding_proof_steps;
+		sc_agent_of_search_of_decomposition;
+		sc_agent_of_finding_pattern;
+		sc_agent_of_search_of_all_output_arcs;
+		sc_agent_of_finding_key_concepts;
+		sc_agent_of_search_of_all_input_arcs_with_rel;
+		sc_agent_of_finding_examples;
+		sc_agent_of_search_of_all_input_arcs;
+		sc_agent_of_search_of_all_identifiers;
+		sc_agent_of_finding_formal_statement;
+		sc_agent_of_finding_illustrations;
+		sc_agent_of_command_decomposition_search;
+		sc_agent_of_finding_main_concept;
+		sc_agent_of_finding_definitional_domain;
+		sc_agent_for_finding_relation;
+		sc_agent_of_finding_statements;
+		sc_agent_of_search_of_all_superclasses_in_quasybinary_relation;
+		sc_agent_of_finding_axioms
+	};;
