@@ -1,0 +1,89 @@
+scp_program -> proc_of_cardinality_calculation
+	(*
+  	-> rrel_params: .proc_of_cardinality_calculation_params 
+		(*
+		-> rrel_1: rrel_in: _set;;
+		-> rrel_2: rrel_in: _result_cardinality;;
+    	*);;
+
+	-> rrel_operators: .proc_of_cardinality_calculation_operator_set
+    	(*
+    	-> rrel_init: .proc_of_cardinality_calculation_operator_assign_zero 
+	    	(*
+			<- contAssign;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _result_cardinality;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [0];;
+
+			=> nrel_goto: .proc_of_cardinality_calculation_operator_gen_set_all_elements;;
+			*);;
+
+		-> .proc_of_cardinality_calculation_operator_gen_set_all_elements
+			(*
+			<- genEl;;
+
+			-> rrel_1: rrel_assign: rrel_node: rrel_scp_var: _all_elements;; 
+
+			=> nrel_goto: .proc_of_cardinality_calculation_operator_add_all_elem_to_temp_set;;
+			*);;		
+
+		-> .proc_of_cardinality_calculation_operator_add_all_elem_to_temp_set 
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _set;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _element;;
+
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _all_elements;;
+
+			=> nrel_goto: .proc_of_cardinality_calculation_operator_all_elements_loop_enter;;
+			*);;
+
+		-> .proc_of_cardinality_calculation_operator_all_elements_loop_enter
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _all_elements;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _element;;
+
+			=> nrel_then: .proc_of_cardinality_calculation_operator_loop_arc_erase;;
+			=> nrel_else: .proc_of_cardinality_calculation_operator_erase_temp_set;;
+			*);;
+
+		-> .proc_of_cardinality_calculation_operator_loop_arc_erase
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _arc1;;
+
+			=> nrel_goto: .proc_of_cardinality_calculation_operator_increase;;
+			*);;
+
+		-> .proc_of_cardinality_calculation_operator_increase 
+			(*
+	        <- contAdd;;
+
+	        -> rrel_1: rrel_fixed: rrel_scp_var: _result_cardinality;;
+	        -> rrel_2: rrel_fixed: rrel_scp_var: _result_cardinality;;
+			-> rrel_3: rrel_fixed: rrel_scp_const: [1];;
+	         		
+	        => nrel_goto: .proc_of_cardinality_calculation_operator_all_elements_loop_enter;;
+			*);;
+
+		-> .proc_of_cardinality_calculation_operator_erase_temp_set
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _all_elements;;
+
+			=> nrel_goto: .proc_of_cardinality_calculation_operator_return;;
+			*);;	
+
+		-> .proc_of_cardinality_calculation_operator_return 
+			(*
+			<- return;;
+			*);;
+		*);;
+	*);;
