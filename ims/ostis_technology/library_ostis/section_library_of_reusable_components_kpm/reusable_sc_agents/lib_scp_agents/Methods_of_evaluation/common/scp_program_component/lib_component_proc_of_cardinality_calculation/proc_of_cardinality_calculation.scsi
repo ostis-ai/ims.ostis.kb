@@ -7,9 +7,9 @@ scp_program -> proc_of_cardinality_calculation
     	*);;
 
 	-> rrel_operators: .proc_of_cardinality_calculation_operator_set
-    	(*
-    	-> rrel_init: .proc_of_cardinality_calculation_operator_assign_zero 
-	    	(*
+    		(*
+    		-> rrel_init: .proc_of_cardinality_calculation_operator_assign_zero 
+	    		(*
 			<- contAssign;;
 
 			-> rrel_1: rrel_fixed: rrel_scp_var: _result_cardinality;;
@@ -63,13 +63,13 @@ scp_program -> proc_of_cardinality_calculation
 
 		-> .proc_of_cardinality_calculation_operator_increase 
 			(*
-	        <- contAdd;;
+	        	<- contAdd;;
 
-	        -> rrel_1: rrel_fixed: rrel_scp_var: _result_cardinality;;
-	        -> rrel_2: rrel_fixed: rrel_scp_var: _result_cardinality;;
+	        	-> rrel_1: rrel_fixed: rrel_scp_var: _result_cardinality;;
+		        -> rrel_2: rrel_fixed: rrel_scp_var: _result_cardinality;;
 			-> rrel_3: rrel_fixed: rrel_scp_const: [1];;
 	         		
-	        => nrel_goto: .proc_of_cardinality_calculation_operator_all_elements_loop_enter;;
+	        	=> nrel_goto: .proc_of_cardinality_calculation_operator_all_elements_loop_enter;;
 			*);;
 
 		-> .proc_of_cardinality_calculation_operator_erase_temp_set

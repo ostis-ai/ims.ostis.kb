@@ -4,11 +4,11 @@ scp_program -> proc_of_calculation_median
 		(*
 		-> rrel_1: rrel_in: _input_values;;
 		-> rrel_2: rrel_in: _median_value;;
-    	*);;
+    		*);;
 
 	-> rrel_operators: .proc_of_calculation_median_operator_set
     	(*
-    	-> rrel_init: .proc_of_calculation_median_operator_sort_input_values
+    		-> rrel_init: .proc_of_calculation_median_operator_sort_input_values
 			(*
 		  	<- call;;
 
@@ -32,7 +32,7 @@ scp_program -> proc_of_calculation_median
 			*);;			
 
 		-> .proc_of_calculation_median_operator_D1_gen_index 
-	    	(*
+	    		(*
 			<- contAssign;;
 
 			-> rrel_1: rrel_assign: rrel_scp_var: _index;;
@@ -42,7 +42,7 @@ scp_program -> proc_of_calculation_median
 			*);;
 
 		-> .proc_of_calculation_median_operator_D1_gen_result_value 
-	    	(*
+	    		(*
 			<- contAssign;;
 
 			-> rrel_1: rrel_fixed: rrel_scp_var: _median_value;;
@@ -66,17 +66,17 @@ scp_program -> proc_of_calculation_median
 
 		-> .proc_of_calculation_median_operator_D3 
 			(*
-	        <- contDiv;;
+	        	<- contDiv;;
 
-	        -> rrel_1: rrel_assign: rrel_scp_var: _middle_of_list;;
-	        -> rrel_2: rrel_fixed: rrel_scp_var: _length;;
+		        -> rrel_1: rrel_assign: rrel_scp_var: _middle_of_list;;
+		        -> rrel_2: rrel_fixed: rrel_scp_var: _length;;
 			-> rrel_3: rrel_fixed: rrel_scp_const: [2];;
 	         		
-	        => nrel_goto: .proc_of_calculation_median_operator_D4;;
+		        => nrel_goto: .proc_of_calculation_median_operator_D4;;
 			*);;	
 
 		-> .proc_of_calculation_median_operator_D4
-    		(*
+    			(*
 			<- searchElStr5;;
 
 			-> rrel_1: rrel_fixed: rrel_scp_var: _input_values;;
@@ -85,12 +85,12 @@ scp_program -> proc_of_calculation_median
 			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
 			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_first;;
 
-        	=> nrel_then: .proc_of_calculation_median_operator_D5;;
-        	=> nrel_else: .proc_of_calculation_median_operator_return;;
-        	*);;
+        		=> nrel_then: .proc_of_calculation_median_operator_D5;;
+	        	=> nrel_else: .proc_of_calculation_median_operator_return;;
+        		*);;
 
 		-> .proc_of_calculation_median_operator_D5
-	    	(*
+	    		(*
 			<- ifGr;;
 
 			-> rrel_1: rrel_fixed: rrel_scp_var: _middle_of_list;;
@@ -115,13 +115,13 @@ scp_program -> proc_of_calculation_median
 
 		-> .proc_of_calculation_median_operator_D7 
 			(*
-	        <- contAdd;;
+	        	<- contAdd;;
 
-	        -> rrel_1: rrel_fixed: rrel_scp_var: _index;;
-	        -> rrel_2: rrel_fixed: rrel_scp_var: _index;;
+	        	-> rrel_1: rrel_fixed: rrel_scp_var: _index;;
+	        	-> rrel_2: rrel_fixed: rrel_scp_var: _index;;
 			-> rrel_3: rrel_fixed: rrel_scp_const: [1];;
 	         		
-	        => nrel_goto: .proc_of_calculation_median_operator_D8;;
+	        	=> nrel_goto: .proc_of_calculation_median_operator_D8;;
 			*);;	
 
 		-> .proc_of_calculation_median_operator_D8
@@ -146,7 +146,7 @@ scp_program -> proc_of_calculation_median
 			*);;
 
 		-> .proc_of_calculation_median_operator_D9_is_even_value
-	    	(*
+	    		(*
 			<- ifEq;;
 
 			-> rrel_1: rrel_fixed: rrel_scp_var: _is_even;;
@@ -156,7 +156,7 @@ scp_program -> proc_of_calculation_median
 			=> nrel_else: .proc_of_calculation_median_operator_D10_uneven_length;;
 			*);;
 
-	    -> .proc_of_calculation_median_operator_D10_uneven_length
+	    	-> .proc_of_calculation_median_operator_D10_uneven_length
 			(*
 			<- contAssign;;
 
@@ -181,24 +181,24 @@ scp_program -> proc_of_calculation_median
 
 		-> .proc_of_calculation_median_operator_D12_even_length 
 			(*
-	        <- contAdd;;
+	        	<- contAdd;;
 
-	        -> rrel_1: rrel_assign: rrel_scp_var: _sum_of_elem;;
-	        -> rrel_2: rrel_fixed: rrel_scp_var: _next_elem;;
+	        	-> rrel_1: rrel_assign: rrel_scp_var: _sum_of_elem;;
+	        	-> rrel_2: rrel_fixed: rrel_scp_var: _next_elem;;
 			-> rrel_3: rrel_fixed: rrel_scp_var: _first_elem;;
 	         		
-	        => nrel_goto: .proc_of_calculation_median_operator_D13_even_length;;
+	        	=> nrel_goto: .proc_of_calculation_median_operator_D13_even_length;;
 			*);;
 
 		-> .proc_of_calculation_median_operator_D13_even_length 
 			(*
-	        <- contDiv;;
+	        	<- contDiv;;
 
-	        -> rrel_1: rrel_fixed: rrel_scp_var: _median_value;;
-	        -> rrel_2: rrel_fixed: rrel_scp_var: _sum_of_elem;;
+	        	-> rrel_1: rrel_fixed: rrel_scp_var: _median_value;;
+	        	-> rrel_2: rrel_fixed: rrel_scp_var: _sum_of_elem;;
 			-> rrel_3: rrel_fixed: rrel_scp_const: [2];;
 	         		
-	        => nrel_goto: .proc_of_calculation_median_operator_return;;
+	        	=> nrel_goto: .proc_of_calculation_median_operator_return;;
 			*);;			
 
 		-> .proc_of_calculation_median_operator_return 
