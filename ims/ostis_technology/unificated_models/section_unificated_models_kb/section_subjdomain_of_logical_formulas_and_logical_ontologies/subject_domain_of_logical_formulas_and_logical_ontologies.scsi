@@ -636,8 +636,8 @@ rrel_then <- sc_node_role_relation;
 
 nrel_equivalence <- sc_node_norole_relation;
 => nrel_main_idtf:
-	[эквиваленция] (* <- lang_ru;; *);
-	[equivalence] (* <- lang_en;; *);
+	[эквиваленция*] (* <- lang_ru;; *);
+	[equivalence*] (* <- lang_en;; *);
 
 <- logical_operation;
 
@@ -932,11 +932,11 @@ unique_existence <- sc_node_norole_relation;
 
 nrel_existence <- sc_node_norole_relation;
 => nrel_main_idtf:
-	[неатомарное существование*] (* <- lang_ru;; *);
-	[non atomic existence*] (* <- lang_en;; *);
+	[существование*] (* <- lang_ru;; *);
+	[existence*] (* <- lang_en;; *);
 
 => nrel_idtf:
-	[квантор неатомарного существования*] (* <- lang_ru;; *);
+	[квантор существования*] (* <- lang_ru;; *);
 
 
 <- quantifier;
