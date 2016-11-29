@@ -1,0 +1,359 @@
+scp_program -> proc_of_finding_all_ontology_vertex_degrees
+	(*
+  	-> rrel_params: .proc_of_finding_all_ontology_vertex_degrees_params 
+		(*
+		-> rrel_1: rrel_in: _set_of_vertexes;;
+		-> rrel_2: rrel_in: _ontology;;
+		-> rrel_3: rrel_in: _vertex_degrees;;
+    	*);;
+
+	-> rrel_operators: .proc_of_finding_all_ontology_vertex_degrees_operator_set
+    		(*
+    		-> rrel_init: .proc_of_finding_all_ontology_vertex_degrees_operator_add_all_elem_to_temp_set 
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_vertexes;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _vertex;;
+
+			-> rrel_set_3: rrel_assign: rrel_scp_var: _all_vertexes;;
+
+			=> nrel_goto: .proc_of_finding_all_ontology_vertex_degrees_operator_all_elements_loop_enter;;
+			*);;
+
+		-> .proc_of_finding_all_ontology_vertex_degrees_operator_all_elements_loop_enter
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _all_vertexes;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _vertex;;
+
+			=> nrel_then: .proc_of_finding_all_ontology_vertex_degrees_operator_loop_arc_erase;;
+			=> nrel_else: .proc_of_finding_all_ontology_vertex_degrees_operator_erase_temp_set;;
+			*);;
+
+		-> .proc_of_finding_all_ontology_vertex_degrees_operator_loop_arc_erase
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _arc1;;
+
+			=> nrel_goto: .proc_of_finding_all_ontology_vertex_degrees_operator_gen_set_all_arcs_of_vertex;;
+			*);;
+
+		-> .proc_of_finding_all_ontology_vertex_degrees_operator_gen_set_all_arcs_of_vertex
+			(*
+			<- genEl;;
+
+			-> rrel_1: rrel_assign: rrel_node: rrel_scp_var: _all_arcs_of_vertex;; 
+
+			=> nrel_goto: .proc_of_finding_all_ontology_vertex_degrees_operator_gen_set_all_arcs_of_vertex_temp;;
+			*);;
+
+		-> .proc_of_finding_all_ontology_vertex_degrees_operator_gen_set_all_arcs_of_vertex_temp
+			(*
+			<- genEl;;
+
+			-> rrel_1: rrel_assign: rrel_node: rrel_scp_var: _all_arcs_of_vertex_temp;; 
+
+			=> nrel_goto: .proc_of_finding_all_ontology_vertex_degrees_operator_add_input_arcs_to_temp_set;;
+			*);;		
+
+		-> .proc_of_finding_all_ontology_vertex_degrees_operator_add_input_arcs_to_temp_set 
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _node;;
+			-> rrel_2: rrel_assign: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _vertex;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _all_arcs_of_vertex_temp;;
+
+			=> nrel_goto: .proc_of_finding_all_ontology_vertex_degrees_operator_add_output_arcs_to_temp_set;;
+			*);;	
+
+		-> .proc_of_finding_all_ontology_vertex_degrees_operator_add_output_arcs_to_temp_set 
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _vertex;;
+			-> rrel_2: rrel_assign: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _node;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _all_arcs_of_vertex_temp;;
+
+			=> nrel_goto: .proc_of_finding_all_ontology_vertex_degrees_operator_erase_not_ontology_arc_1_loop_enter;;
+			*);;
+
+		-> .proc_of_finding_all_ontology_vertex_degrees_operator_erase_not_ontology_arc_1_loop_enter
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _all_arcs_of_vertex_temp;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _concrete_arc;;
+
+			=> nrel_then: .proc_of_finding_all_ontology_vertex_degrees_operator_erase_not_ontology_arc_2_loop_arc_erase;;
+			=> nrel_else: .proc_of_finding_all_ontology_vertex_degrees_erase_all_arcs_of_vertex_temp;;
+			*);;
+
+		-> .proc_of_finding_all_ontology_vertex_degrees_operator_erase_not_ontology_arc_2_loop_arc_erase
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _arc1;;
+
+			=> nrel_goto: .proc_of_finding_all_ontology_vertex_degrees_operator_erase_not_ontology_arc_2_1;;
+			*);;
+
+		-> .proc_of_finding_all_ontology_vertex_degrees_operator_erase_not_ontology_arc_2_1
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: rrel_norole_relation: _relation;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _concrete_arc;;
+
+			=> nrel_then: .proc_of_finding_all_ontology_vertex_degrees_operator_erase_not_ontology_arc_2_2;;
+			=> nrel_else: .proc_of_finding_all_ontology_vertex_degrees_operator_erase_not_ontology_arc_3;;
+			*);;
+
+		-> .proc_of_finding_all_ontology_vertex_degrees_operator_erase_not_ontology_arc_2_2
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: quasybinary_relation;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _relation;;
+
+			=> nrel_then: .proc_of_finding_all_ontology_vertex_degrees_operator_erase_not_ontology_arc_2_3;;
+			=> nrel_else: .proc_of_finding_all_ontology_vertex_degrees_operator_erase_not_ontology_arc_3;;
+			*);;
+
+		-> .proc_of_finding_all_ontology_vertex_degrees_operator_erase_not_ontology_arc_2_3
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _element1;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: _concrete_arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _element2;;
+
+			=> nrel_goto: .proc_of_finding_all_ontology_vertex_degrees_operator_erase_not_ontology_arc_2_4;;
+			*);;	
+
+		-> .proc_of_finding_all_ontology_vertex_degrees_operator_erase_not_ontology_arc_2_4
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _element1;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _element2;;
+
+			-> rrel_set_2: rrel_assign: rrel_scp_var: _set_of_tuples_arcs;;
+
+			=> nrel_goto: .proc_of_finding_all_ontology_vertex_degrees_operator_erase_not_ontology_arc_2_5_loop_enter;;
+			*);;	
+
+		-> .proc_of_finding_all_ontology_vertex_degrees_operator_erase_not_ontology_arc_2_5_loop_enter
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_tuples_arcs;;
+			-> rrel_2: rrel_assign: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _some_arc;;
+
+			=> nrel_then: .proc_of_finding_all_ontology_vertex_degrees_operator_erase_not_ontology_arc_2_6_loop_arc_erase;;
+			=> nrel_else: .proc_of_finding_all_ontology_vertex_degrees_erase_set_of_tuples_arcs;;
+			*);;	
+
+		-> .proc_of_finding_all_ontology_vertex_degrees_operator_erase_not_ontology_arc_2_6_loop_arc_erase
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _arc1;;
+
+			=> nrel_goto: .proc_of_finding_all_ontology_vertex_degrees_operator_erase_not_ontology_arc_2_7;;
+			*);;
+
+		-> .proc_of_finding_all_ontology_vertex_degrees_operator_erase_not_ontology_arc_2_7
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _element1;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: _some_arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _element2;;
+
+			=> nrel_then: .proc_of_finding_all_ontology_vertex_degrees_operator_erase_not_ontology_arc_2_8;;
+			=> nrel_else: .proc_of_finding_all_ontology_vertex_degrees_operator_erase_not_ontology_arc_2_5_loop_enter;;
+			*);;
+
+		-> .proc_of_finding_all_ontology_vertex_degrees_operator_erase_not_ontology_arc_2_8
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _ontology;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _element1;;
+
+			=> nrel_then: .proc_of_finding_all_ontology_vertex_degrees_operator_erase_not_ontology_arc_2_9;;
+			=> nrel_else: .proc_of_finding_all_ontology_vertex_degrees_operator_erase_not_ontology_arc_2_5_loop_enter;;
+			*);;
+
+		-> .proc_of_finding_all_ontology_vertex_degrees_operator_erase_not_ontology_arc_2_9
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _ontology;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _element2;;
+
+			=> nrel_then: .proc_of_finding_all_ontology_vertex_degrees_operator_erase_not_ontology_arc_2_10;;
+			=> nrel_else: .proc_of_finding_all_ontology_vertex_degrees_operator_erase_not_ontology_arc_2_5_loop_enter;;
+			*);;				
+
+		-> .proc_of_finding_all_ontology_vertex_degrees_operator_erase_not_ontology_arc_2_10
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _all_arcs_of_vertex;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _some_arc;;
+
+			=> nrel_goto: .proc_of_finding_all_ontology_vertex_degrees_operator_erase_not_ontology_arc_2_5_loop_enter;;
+			*);;		
+
+		-> .proc_of_finding_all_ontology_vertex_degrees_erase_set_of_tuples_arcs
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _set_of_tuples_arcs;;
+
+			=> nrel_goto: .proc_of_finding_all_ontology_vertex_degrees_operator_erase_not_ontology_arc_1_loop_enter;;
+			*);;		
+
+		-> .proc_of_finding_all_ontology_vertex_degrees_operator_erase_not_ontology_arc_3
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _element1;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: _concrete_arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _element2;;
+
+			=> nrel_then: .proc_of_finding_all_ontology_vertex_degrees_operator_erase_not_ontology_arc_4;;
+			=> nrel_else: .proc_of_finding_all_ontology_vertex_degrees_operator_erase_not_ontology_arc_1_loop_enter;;
+			*);;
+
+		-> .proc_of_finding_all_ontology_vertex_degrees_operator_erase_not_ontology_arc_4
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _ontology;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _element1;;
+
+			=> nrel_then: .proc_of_finding_all_ontology_vertex_degrees_operator_erase_not_ontology_arc_5;;
+			=> nrel_else: .proc_of_finding_all_ontology_vertex_degrees_operator_erase_not_ontology_arc_1_loop_enter;;
+			*);;
+
+		-> .proc_of_finding_all_ontology_vertex_degrees_operator_erase_not_ontology_arc_5
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _ontology;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _element2;;
+
+			=> nrel_then: .proc_of_finding_all_ontology_vertex_degrees_operator_erase_not_ontology_arc_6;;
+			=> nrel_else: .proc_of_finding_all_ontology_vertex_degrees_operator_erase_not_ontology_arc_1_loop_enter;;
+			*);;				
+
+		-> .proc_of_finding_all_ontology_vertex_degrees_operator_erase_not_ontology_arc_6
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _all_arcs_of_vertex;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _concrete_arc;;
+
+			=> nrel_goto: .proc_of_finding_all_ontology_vertex_degrees_operator_erase_not_ontology_arc_1_loop_enter;;
+			*);;	
+
+		-> .proc_of_finding_all_ontology_vertex_degrees_erase_all_arcs_of_vertex_temp
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _all_arcs_of_vertex_temp;;
+
+			=> nrel_goto: .proc_of_finding_all_ontology_vertex_degrees_operator_gen_vertex_degree;;
+			*);;
+
+		-> .proc_of_finding_all_ontology_vertex_degrees_operator_gen_vertex_degree
+			(*
+			<- genEl;;
+
+			-> rrel_1: rrel_assign: rrel_node: rrel_scp_var: rrel_link: _vertex_degree;; 
+
+			=> nrel_goto: .proc_of_finding_all_ontology_vertex_degrees_operator_call_proc_of_cardinality_colculation;;
+			*);;		
+
+		-> .proc_of_finding_all_ontology_vertex_degrees_operator_call_proc_of_cardinality_colculation
+			(*
+		  	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_cardinality_calculation;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .proc_of_finding_all_ontology_vertex_degrees_operator_call_proc_of_cardinality_colculation_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _all_arcs_of_vertex;;
+				-> rrel_2: rrel_fixed: rrel_scp_var: _vertex_degree;;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .proc_of_finding_all_ontology_vertex_degrees_operator_waitreturn_proc_of_cardinality_colculation;;
+			*);;
+
+		-> .proc_of_finding_all_ontology_vertex_degrees_operator_waitreturn_proc_of_cardinality_colculation
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .proc_of_finding_all_ontology_vertex_degrees_operator_add_vertex_degree_to_set;;
+			*);;	
+
+		-> .proc_of_finding_all_ontology_vertex_degrees_operator_add_vertex_degree_to_set
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _vertex_degrees;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _vertex_degree;;
+
+			=> nrel_goto: .proc_of_finding_all_ontology_vertex_degrees_erase_all_arcs_of_vertex;;
+			*);;	
+
+		-> .proc_of_finding_all_ontology_vertex_degrees_erase_all_arcs_of_vertex
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _all_arcs_of_vertex;;
+
+			=> nrel_goto: .proc_of_finding_all_ontology_vertex_degrees_operator_all_elements_loop_enter;;
+			*);;
+
+		-> .proc_of_finding_all_ontology_vertex_degrees_operator_erase_temp_set
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _all_vertexes;;
+
+			=> nrel_goto: .proc_of_finding_all_ontology_vertex_degrees_operator_return;;
+			*);;
+
+		-> .proc_of_finding_all_ontology_vertex_degrees_operator_return 
+			(*
+			<- return;;
+			*);;
+		*);;
+	*);;
