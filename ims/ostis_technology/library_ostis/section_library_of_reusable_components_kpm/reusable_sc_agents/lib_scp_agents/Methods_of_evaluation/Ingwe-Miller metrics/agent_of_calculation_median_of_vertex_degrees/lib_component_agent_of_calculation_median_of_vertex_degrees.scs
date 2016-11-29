@@ -27,3 +27,10 @@ lib_component_agent_of_calculation_median_of_vertex_degrees
 		*);;
 	*);;
 
+action_to_calculate_median_of_vertex_degrees
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. вычислить медиану степени вершины онтологии]
+	(* <- lang_ru;; *);
+	[action. to calculate median of vertex degrees]
+	(* <- lang_en;; *);;
