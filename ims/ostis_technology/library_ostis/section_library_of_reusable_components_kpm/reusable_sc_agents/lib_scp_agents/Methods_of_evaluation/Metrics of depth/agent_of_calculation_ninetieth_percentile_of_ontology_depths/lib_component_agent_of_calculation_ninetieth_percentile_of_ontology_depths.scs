@@ -26,3 +26,11 @@ lib_component_agent_of_calculation_ninetieth_percentile_of_ontology_depths
 				(* <- lang_ru;; *);; 
 		*);;
 	*);;
+
+action_to_calculate_ninetieth_percentile_of_ontology_depths
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. подсчитать 90-ую процентиль глубины онтологии]
+ 	(* <- lang_ru;; *);
+ 	[action. calculate ninetieth percentile of ontology depths]
+ 	(* <- lang_en;; *);;	

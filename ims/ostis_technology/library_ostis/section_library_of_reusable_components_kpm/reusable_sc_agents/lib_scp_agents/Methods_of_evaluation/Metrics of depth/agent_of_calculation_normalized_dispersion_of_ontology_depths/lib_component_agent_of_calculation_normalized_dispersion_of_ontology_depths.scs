@@ -27,3 +27,10 @@ lib_component_agent_of_calculation_normalized_dispersion_of_ontology_depths
 		*);;
 	*);;
 
+action_to_calculate_normalized_dispersion_of_ontology_depths
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. подсчитать дисперсию глубины онтологии по отношению к средней глубине]
+ 	(* <- lang_ru;; *);
+ 	[action. calculate dispersion of ontology depths divided by average depth]
+ 	(* <- lang_en;; *);;

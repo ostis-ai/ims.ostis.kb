@@ -17,7 +17,7 @@ lib_component_agent_of_calculation_absolute_ontology_depths
 <- rrel_key_sc_element: 
 	...
 	(*
-	<- sc_explanation;;
+	<- explanation;;
 	<= nrel_sc_text_translation:
 		...
 		(*
@@ -27,3 +27,10 @@ lib_component_agent_of_calculation_absolute_ontology_depths
 		*);;
 	*);;
 
+action_to_calculate_absolute_ontology_depths
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. подсчитать абсолютную глубину онтологии]
+ 	(* <- lang_ru;; *);
+ 	[action. calculate absolute ontology depth]
+ 	(* <- lang_en;; *);;
