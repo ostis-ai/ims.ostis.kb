@@ -5,11 +5,11 @@ scp_program -> proc_of_finding_vertexes_of_lower_level
 		-> rrel_1: rrel_in: _current_node;;
 		-> rrel_2: rrel_in: _ontology;;
 		-> rrel_3: rrel_in: _vertexes_of_lower_level;;
-    	*);;
+    		*);;
 
 	-> rrel_operators: .proc_of_finding_vertexes_of_lower_level_operator_set
-    	(*
-    	-> rrel_init: .proc_of_finding_vertexes_of_lower_level_operator_gen_uncheck_lower_level_vertexes
+    		(*
+    		-> rrel_init: .proc_of_finding_vertexes_of_lower_level_operator_gen_uncheck_lower_level_vertexes
 			(*
 		  	<- genEl;;
 
@@ -31,7 +31,7 @@ scp_program -> proc_of_finding_vertexes_of_lower_level
 			=> nrel_goto: .proc_of_finding_vertexes_of_lower_level_operator_get_all_taxonomy_relation;;
 			*);;	
 
-    	-> .proc_of_finding_vertexes_of_lower_level_operator_get_all_taxonomy_relation 
+    		-> .proc_of_finding_vertexes_of_lower_level_operator_get_all_taxonomy_relation 
 			(*
 			<- searchSetStr3;;
 

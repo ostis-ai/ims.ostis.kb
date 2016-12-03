@@ -5,11 +5,11 @@ scp_program -> proc_of_finding_all_start_vertexes
 		-> rrel_1: rrel_in: _set_of_vertexes;;
 		-> rrel_2: rrel_in: _ontology;;
 		-> rrel_3: rrel_in: _all_start_vertexes;;
-    	*);;
+    		*);;
 
 	-> rrel_operators: .proc_of_finding_all_start_vertexes_operator_set
-    	(*
-    	-> rrel_init: .proc_of_finding_all_start_vertexes_operator_add_all_vertexes_to_temp_set 
+    		(*
+    		-> rrel_init: .proc_of_finding_all_start_vertexes_operator_add_all_vertexes_to_temp_set 
 			(*
 			<- searchSetStr3;;
 
@@ -23,7 +23,7 @@ scp_program -> proc_of_finding_all_start_vertexes
 			=> nrel_else: .proc_of_finding_all_start_vertexes_operator_return;;
 			*);;
 
-    	-> .proc_of_finding_all_start_vertexes_operator_get_all_taxonomy_relation 
+    		-> .proc_of_finding_all_start_vertexes_operator_get_all_taxonomy_relation 
 			(*
 			<- searchSetStr3;;
 
@@ -37,7 +37,7 @@ scp_program -> proc_of_finding_all_start_vertexes
 			=> nrel_else: .proc_of_finding_all_start_vertexes_operator_E2_erase_all_taxonomy_relation_temp_set;;
 			*);;
 
-    	-> .proc_of_finding_all_start_vertexes_operator_A1_loop_enter
+    		-> .proc_of_finding_all_start_vertexes_operator_A1_loop_enter
 			(*
 			<- searchElStr3;;
 
@@ -58,7 +58,7 @@ scp_program -> proc_of_finding_all_start_vertexes
 		  	=> nrel_goto: .proc_of_finding_all_start_vertexes_operator_A3_get_all_relations;;
 			*);;	
 
-    	-> .proc_of_finding_all_start_vertexes_operator_A3_get_all_relations 
+    		-> .proc_of_finding_all_start_vertexes_operator_A3_get_all_relations 
 			(*
 			<- searchSetStr5;;
 
