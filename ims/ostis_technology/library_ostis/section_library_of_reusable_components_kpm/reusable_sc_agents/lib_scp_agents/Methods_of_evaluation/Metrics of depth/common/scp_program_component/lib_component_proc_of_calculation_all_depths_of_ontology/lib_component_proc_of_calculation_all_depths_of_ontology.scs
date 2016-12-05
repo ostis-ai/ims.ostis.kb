@@ -25,3 +25,10 @@ lib_component_proc_of_calculation_all_depths_of_ontology
 
 lib_component_proc_of_calculation_all_depths_of_ontology = [*^"file://proc_of_calculation_all_depths_of_ontology.scsi"*];;
 
+action_to_calculate_average_value_of_all_depths
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. вычислить среднее значение всех глубин онтологии]
+	(* <- lang_ru;; *);
+	[action. to calculate average value of all depths]
+	(* <- lang_en;; *);;
