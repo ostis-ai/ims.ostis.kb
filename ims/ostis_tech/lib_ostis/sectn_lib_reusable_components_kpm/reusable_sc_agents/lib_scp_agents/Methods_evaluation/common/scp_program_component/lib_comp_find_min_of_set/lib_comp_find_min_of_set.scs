@@ -1,0 +1,27 @@
+lib_component_proc_of_finding_min_value_of_set
+=> nrel_main_idtf:
+	[Компонент библиотеки. scp-программа поиска минимального значения из множества]
+	(* <- lang_ru;; *);
+	[Library component. scp-program of finding min value of set]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components;
+
+-> rrel_key_sc_element: 
+	proc_of_finding_min_value_of_set;
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/find_min_of_set.html" 
+				(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+lib_component_proc_of_finding_min_value_of_set = [*^"file://proc_find_min_of_set.scsi"*];;
+
