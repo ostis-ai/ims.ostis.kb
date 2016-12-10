@@ -37,7 +37,7 @@ scp_program -> agent_of_calculation_number_of_sections
 			=> nrel_else: .agent_of_calculation_number_of_sections_operator_return;;
 			*);;
 
-        -> .agent_of_calculation_number_of_sections_operator_gen_all_sections
+        	-> .agent_of_calculation_number_of_sections_operator_gen_all_sections
 			(*
 			<- genEl;;
 
@@ -46,8 +46,8 @@ scp_program -> agent_of_calculation_number_of_sections
 			=> nrel_goto: .agent_of_calculation_number_of_sections_operator1C2;;
 			*);;	
 
-    	-> .agent_of_calculation_number_of_sections_operator1C2
-    		(*
+	    	-> .agent_of_calculation_number_of_sections_operator1C2
+    			(*
 			<- searchSetStr3;;
 
 			-> rrel_1: rrel_fixed: rrel_scp_const: atomic_section;;
@@ -56,11 +56,11 @@ scp_program -> agent_of_calculation_number_of_sections
 
 			-> rrel_set_3: rrel_fixed: rrel_scp_var: _all_sections;;
 
-        	=> nrel_goto: .agent_of_calculation_number_of_sections_operator1C3;;
-        	*);;
+        		=> nrel_goto: .agent_of_calculation_number_of_sections_operator1C3;;
+        		*);;
 
-        -> .agent_of_calculation_number_of_sections_operator1C3
-    		(*
+        	-> .agent_of_calculation_number_of_sections_operator1C3
+    			(*
 			<- searchSetStr3;;
 
 			-> rrel_1: rrel_fixed: rrel_scp_const: non_atomic_section;;
@@ -69,11 +69,11 @@ scp_program -> agent_of_calculation_number_of_sections
 
 			-> rrel_set_3: rrel_fixed: rrel_scp_var: _all_sections;;
 
-        	=> nrel_goto: .agent_of_calculation_number_of_sections_operator1C4;;
-        	*);;
+        		=> nrel_goto: .agent_of_calculation_number_of_sections_operator1C4;;
+        		*);;
 
-        -> .agent_of_calculation_number_of_sections_operator1C4
-    		(*
+        	-> .agent_of_calculation_number_of_sections_operator1C4
+    			(*
 			<- searchSetStr3;;
 
 			-> rrel_1: rrel_fixed: rrel_scp_const: section;;
@@ -82,10 +82,10 @@ scp_program -> agent_of_calculation_number_of_sections
 
 			-> rrel_set_3: rrel_fixed: rrel_scp_var: _all_sections;;
 
-        	=> nrel_goto: .agent_of_calculation_number_of_sections_operator_gen_result_value_set;;
-        	*);;
+        		=> nrel_goto: .agent_of_calculation_number_of_sections_operator_gen_result_value_set;;
+        		*);;
 
-        -> .agent_of_calculation_number_of_sections_operator_gen_result_value_set
+        	-> .agent_of_calculation_number_of_sections_operator_gen_result_value_set
 			(*
 			<- genEl;;
 

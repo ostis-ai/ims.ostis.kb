@@ -37,7 +37,7 @@ scp_program -> agent_of_calculation_number_of_subject_domains
 			=> nrel_else: .agent_of_calculation_number_of_subject_domains_operator_return;;
 			*);;
 
-        -> .agent_of_calculation_number_of_subject_domains_operator_gen_all_subject_domains
+        	-> .agent_of_calculation_number_of_subject_domains_operator_gen_all_subject_domains
 			(*
 			<- genEl;;
 
@@ -46,8 +46,8 @@ scp_program -> agent_of_calculation_number_of_subject_domains
 			=> nrel_goto: .agent_of_calculation_number_of_subject_domains_operator1C2;;
 			*);;	
 
-    	-> .agent_of_calculation_number_of_subject_domains_operator1C2
-    		(*
+    		-> .agent_of_calculation_number_of_subject_domains_operator1C2
+    			(*
 			<- searchSetStr3;;
 
 			-> rrel_1: rrel_fixed: rrel_scp_const: subject_domain;;
@@ -56,10 +56,10 @@ scp_program -> agent_of_calculation_number_of_subject_domains
 
 			-> rrel_set_3: rrel_fixed: rrel_scp_var: _all_subject_domains;;
 
-        	=> nrel_goto: .agent_of_calculation_number_of_subject_domains_operator_gen_result_value_set;;
-        	*);;
+	        	=> nrel_goto: .agent_of_calculation_number_of_subject_domains_operator_gen_result_value_set;;
+        		*);;
 
-        -> .agent_of_calculation_number_of_subject_domains_operator_gen_result_value_set
+       	 	-> .agent_of_calculation_number_of_subject_domains_operator_gen_result_value_set
 			(*
 			<- genEl;;
 
