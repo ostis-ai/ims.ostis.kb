@@ -1,0 +1,34 @@
+lib_component_proc_of_calculation_all_depths_of_ontology
+=> nrel_main_idtf:
+	[Компонент библиотеки. scp-программа подсчета всех глубин онтологии]
+	(* <- lang_ru;; *);
+	[Library component. scp-program of calculation all ontology's depths]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components;
+
+-> rrel_key_sc_element: 
+	proc_of_calculation_all_depths_of_ontology;
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/calc_all_dep.html" 
+				(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+lib_component_proc_of_calculation_all_depths_of_ontology = [*^"file://proc_calc_all_dep.scsi"*];;
+
+action_to_calculate_average_value_of_all_depths
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. вычислить среднее значение всех глубин онтологии]
+	(* <- lang_ru;; *);
+	[action. to calculate average value of all depths]
+	(* <- lang_en;; *);;

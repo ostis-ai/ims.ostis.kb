@@ -1,0 +1,26 @@
+sc_node_not_relation -> ostis_system;;
+
+ostis_system 
+=> nrel_main_idtf:
+	[ostis-система]
+	(* <- lang_ru;; *);
+	[ostis-system]	
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[компьютерная система, разрабатываемая по Технологии OSTIS]
+	(* <- lang_ru;; *);
+	
+
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://html/compet_advant_and_benefits_syst_OSTIS.html"
+			(*<- lang_ru;;*);;
+		*);;
+	*);;
