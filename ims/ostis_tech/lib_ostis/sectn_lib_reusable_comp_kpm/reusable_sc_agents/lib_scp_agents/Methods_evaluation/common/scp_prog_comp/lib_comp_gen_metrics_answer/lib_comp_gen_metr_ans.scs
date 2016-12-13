@@ -1,0 +1,27 @@
+lib_component_proc_of_generation_of_metrics_answer
+=> nrel_main_idtf:
+	[Компонент библиотеки. scp-программа генерации ответа для агентов оценки качества]
+	(* <- lang_ru;; *);
+	[Library component. scp-program of generation of metrics answer]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components;
+
+-> rrel_key_sc_element: 
+	proc_of_generation_of_metrics_answer;
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/gen_metr_ans.html" 
+				(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+lib_component_proc_of_generation_of_metrics_answer = [*^"file://proc_gen_metr_ans.scsi"*];;
+

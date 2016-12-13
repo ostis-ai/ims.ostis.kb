@@ -1,0 +1,27 @@
+lib_component_proc_of_finding_all_start_vertexes
+=> nrel_main_idtf:
+	[Компонент библиотеки. scp-программа поиска всех стартовых вершин]
+	(* <- lang_ru;; *);
+	[Library component. scp-program of finding all start vertexes]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components;
+
+-> rrel_key_sc_element: 
+	proc_of_finding_all_start_vertexes;
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/find_all_start_v.html" 
+				(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+lib_component_proc_of_finding_all_start_vertexes = [*^"file://proc_find_all_start_v.scsi"*];;
+

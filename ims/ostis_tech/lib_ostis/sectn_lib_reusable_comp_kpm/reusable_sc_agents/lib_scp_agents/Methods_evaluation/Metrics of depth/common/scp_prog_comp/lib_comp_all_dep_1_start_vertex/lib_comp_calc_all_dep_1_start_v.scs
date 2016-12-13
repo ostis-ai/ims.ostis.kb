@@ -1,0 +1,27 @@
+lib_component_proc_of_calculation_all_depths_of_ontology_with_one_start_vertex
+=> nrel_main_idtf:
+	[Компонент библиотеки. scp-программа подсчета всех глубин онтологии относительно одной стартовой вершины]
+	(* <- lang_ru;; *);
+	[Library component. scp-program of calculation all ontology's depths with one start vertex]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components;
+
+-> rrel_key_sc_element: 
+	proc_of_calculation_all_depths_of_ontology_with_one_start_vertex;
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/calc_all_dep_1_start_v.html" 
+				(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+lib_component_proc_of_calculation_all_depths_of_ontology_with_one_start_vertex = [*^"file://proc_calc_all_dep_1_start_v.scsi"*];;
+
