@@ -5,9 +5,11 @@ lib_component_agent_of_checking_cycle_existence_of_ordering_relation
 	[Library component. sc-agent of checking of cycle for a given order relation]
 	(* <- lang_en;; *);
 
-<- platform_independent_reusable_component_OSTIS; 
-<- atomic_reusable_component_OSTIS; 
-<- reusable_scp_agent;
+<- library_of_platform_independent_reusable_components;
+<- library_of_atomic_reusable_components;
+
+=> nrel_attendant_component:
+	lib_ui_menu_file_for_checking_cycle_existence_of_ordering_relation;
 
 -> rrel_key_sc_element: 
 	.platform_independent_realization_of_sc_agent_of_checking_cycle_existence_of_ordering_relation;
@@ -31,5 +33,5 @@ action_of_checking_cycle_existence_of_ordering_relation
 	[действие. проверить наличие циклов в любом отношении порядка]
 	(* <- lang_ru;; *);
 => nrel_main_idtf:
-	[action. check cycles existence for anyone orders strict]
+	[action. check cycles existence for any order relation]
 	(* <- lang_en;; *);;

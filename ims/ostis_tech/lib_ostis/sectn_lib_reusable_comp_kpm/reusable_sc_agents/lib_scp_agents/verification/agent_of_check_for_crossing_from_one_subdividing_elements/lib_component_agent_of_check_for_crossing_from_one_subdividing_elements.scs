@@ -5,9 +5,11 @@ lib_component_agent_of_check_for_crossing_from_one_subdividing_elements
 	[Library component. sc-agent of check for crossing from one subdividing elements]
 	(* <- lang_en;; *);
 
-<- platform_independent_reusable_component_OSTIS; 
-<- atomic_reusable_component_OSTIS; 
-<- reusable_scp_agent;
+<- library_of_platform_independent_reusable_components;
+<- library_of_atomic_reusable_components;
+
+=> nrel_attendant_component:
+	lib_ui_menu_file_for_check_for_crossing_from_one_subdividing_elements;
 
 -> rrel_key_sc_element: 
 	.platform_independent_realization_of_sc_agent_of_check_for_crossing_from_one_subdividing_elements;
@@ -31,5 +33,5 @@ action_of_check_for_crossing_from_one_subdividing_elements
 	[действие. проверить наличие непустого пересечения у элементов одного разбиения]
 	(* <- lang_ru;; *);
 => nrel_main_idtf:
-	[action. check for crossing from one partition elements]
+	[action. check for crossing of elements from one subdividing]
 	(* <- lang_en;; *);;

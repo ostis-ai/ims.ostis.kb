@@ -5,9 +5,8 @@ lib_component_agent_def_using_constants_checker
 	[Library component. sc-agent of checking availability of using constants of concept with definition]
 	(* <- lang_en;; *);
 
-<- platform_independent_reusable_component_OSTIS; 
-<- atomic_reusable_component_OSTIS; 
-<- reusable_scp_agent;
+<- library_of_platform_independent_reusable_components;
+<- library_of_atomic_reusable_components;
 
 => nrel_attendant_component: 
 	lib_component_ui_def_using_constants_checker; 
@@ -28,3 +27,10 @@ lib_component_agent_def_using_constants_checker
 		*);;
 	*);;
 
+action_def_using_constants_checker
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. проверить наличие используемых констант у понятий, имеющих определение]
+	(* <- lang_ru;; *);
+	[action. to check availability of using constants of concepts with definition]
+	(* <- lang_en;; *);;
