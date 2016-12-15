@@ -5,9 +5,8 @@ lib_component_agent_of_def_contains_checker
 	[Library component. sc-agent of checking availability of concept definitions]
 	(* <- lang_en;; *);
 
-<- platform_independent_reusable_component_OSTIS; 
-<- atomic_reusable_component_OSTIS; 
-<- reusable_scp_agent;
+<- library_of_platform_independent_reusable_components;
+<- library_of_atomic_reusable_components;
 
 => nrel_attendant_component: 
 	lib_component_ui_menu_file_for_def_contains_checker; 
@@ -28,3 +27,10 @@ lib_component_agent_of_def_contains_checker
 		*);;
 	*);;
 
+action_concept_def_contains_checker
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. проверить наличие определения у понятия]
+	(* <- lang_ru;; *);
+	[action. to check availability of concept definition]
+	(* <- lang_en;; *);;
