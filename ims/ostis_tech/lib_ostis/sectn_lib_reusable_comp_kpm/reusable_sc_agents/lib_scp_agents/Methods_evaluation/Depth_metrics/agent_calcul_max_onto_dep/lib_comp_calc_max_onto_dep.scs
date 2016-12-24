@@ -1,0 +1,36 @@
+lib_component_agent_of_calculation_max_value_of_ontology_depths
+=> nrel_main_idtf:
+	[Компонент библиотеки. sc-агент подсчета максимальной глубины онтологии]
+	(* <- lang_ru;; *);
+	[Library component. sc-agent of calculation max value of ontology depths]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components; 
+<- library_of_atomic_reusable_components; 
+
+=> nrel_attendant_component: 
+	lib_component_ui_menu_file_for_calculation_max_value_of_ontology_depths; 
+
+-> rrel_key_sc_element: 
+	.platform_independent_realization_of_sc_agent_of_calculation_max_value_of_ontology_depths; 
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/calc_max_onto_dep.html"
+				(* <- lang_ru;; *);; 
+		*);;
+	*);;
+
+action_to_calculate_max_value_of_ontology_depths
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. подсчитать максимальную глубину онтологии]
+ 	(* <- lang_ru;; *);
+ 	[action. calculate max value of ontology depths]
+ 	(* <- lang_en;; *);;

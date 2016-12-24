@@ -1,0 +1,29 @@
+lib_component_agent_of_administrator_approval_proposals_for_editing_kb
+=> nrel_main_idtf:
+	[Компонент библиотеки. sc-агент утверждения администратором предложения по редактированию базы знаний]
+	(* <- lang_ru;; *);
+	[Library component. sc-agent of administrator approval of proposals for editing the knowledge base]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components; 
+<- library_of_atomic_reusable_components; 
+
+=> nrel_attendant_component: 
+	lib_component_ui_menu_file_for_administrator_approval_proposals_for_editing_kb; 
+
+-> rrel_key_sc_element: 
+	.platform_independent_realization_of_sc_agent_of_administrator_approval_proposals_for_editing_kb; 
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/admin_appr.html"
+				(* <- lang_ru;; *);; 
+		*);;
+	*);;
+

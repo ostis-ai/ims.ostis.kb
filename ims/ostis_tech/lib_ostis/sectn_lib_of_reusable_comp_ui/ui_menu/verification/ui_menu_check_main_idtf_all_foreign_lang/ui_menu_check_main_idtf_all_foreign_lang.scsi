@@ -1,0 +1,16 @@
+ui_menu_file_for_check_the_main_idtf_for_all_foreign_lang <- ui_user_command_class_atom; ui_user_command_class_view_kb;
+
+=> nrel_main_idtf: [Проверить наличие основных идентификаторов сущности для всех внешних языков] (* <- lang_ru;;*);
+=> nrel_main_idtf: [Сheck the main identifier of the entity for all external languages] (* <- lang_en;;*);;
+ui_menu_file_for_check_the_main_idtf_for_all_foreign_lang => ui_nrel_command_template:
+	[*
+		action_check_the_main_idtf_for_all_foreign_lang _-> ._action_check_the_main_idtf_for_all_foreign_lang_instance
+			(*
+			_-> ui_arg_1;;
+			*);;
+		._action_check_the_main_idtf_for_all_foreign_lang_instance _<- question;;
+	*];;
+
+ui_menu_file_for_check_the_main_idtf_for_all_foreign_lang => ui_nrel_command_lang_template: [Проверить наличие основных идентификаторов на всех внешних языках системы у: $ui_arg_1] (* <- lang_ru;;*);;
+ui_menu_file_for_check_the_main_idtf_for_all_foreign_lang => ui_nrel_command_lang_template: [Check the main identifiers on any external system languages in: $ui_arg_1] (* <- lang_en;;*);;
+

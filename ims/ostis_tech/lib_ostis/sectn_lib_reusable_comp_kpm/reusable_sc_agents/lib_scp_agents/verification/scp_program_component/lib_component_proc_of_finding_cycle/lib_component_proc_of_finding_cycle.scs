@@ -1,0 +1,27 @@
+lib_component_proc_of_finding_cycle
+=> nrel_main_idtf:
+	[Компонент библиотеки. scp-программа проверки наличия циклов у отношения порядка]
+	(* <- lang_ru;; *);
+	[Library component. scp-program of checking cycles existence for given order relation]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components;
+
+-> rrel_key_sc_element: 
+	proc_of_finding_cycle;
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Proc_Of_Finding_Cycle.html" 
+				(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+lib_component_proc_of_finding_cycle = [*^"file://proc_of_finding_cycle.scsi"*];;
+

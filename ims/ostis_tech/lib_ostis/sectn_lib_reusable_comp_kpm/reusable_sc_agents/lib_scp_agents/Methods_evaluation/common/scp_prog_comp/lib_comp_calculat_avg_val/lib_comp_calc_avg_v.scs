@@ -1,0 +1,27 @@
+lib_component_proc_of_calculation_average_value
+=> nrel_main_idtf:
+	[Компонент библиотеки. scp-программа подсчета среднего значения]
+	(* <- lang_ru;; *);
+	[Library component. scp-program of calculation average value]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components;
+
+-> rrel_key_sc_element: 
+	proc_of_calculation_average_value;
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/calc_avg_v.html" 
+				(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+lib_component_proc_of_calculation_average_value = [*^"file://proc_calc_avg_v.scsi"*];;
+
