@@ -1,0 +1,33 @@
+lib_component_agent_of_finding_all_proposals_of_author
+=> nrel_main_idtf:
+	[Компонент библиотеки. sc-агент поиска всех предложений разработчикa]
+	(* <- lang_ru;; *);
+	[Library component. sc-agent of finding all proposals of author]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components; 
+<- library_of_atomic_reusable_components;
+
+-> rrel_key_sc_element: 
+	.platform_independent_realization_of_sc_agent_of_finding_all_proposals_of_author;
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Agent_of_finding_all_proposals_of_author.html"
+				(* <- lang_ru;; *);; 
+		*);;
+	*);;
+
+action_of_finding_all_proposals_of_author
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. найти все предложения разработчика]
+ 	(* <- lang_ru;; *);
+ 	[action. find all all proposals of author]
+ 	(* <- lang_en;; *);;
