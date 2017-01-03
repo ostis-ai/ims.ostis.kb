@@ -1,0 +1,33 @@
+lib_component_agent_of_finding_approved_proposals_by_user
+=> nrel_main_idtf:
+	[Компонент библиотеки. sc-агент поиска всех утвержденных предложений конкретным пользователем]
+	(* <- lang_ru;; *);
+	[Library component. sc-agent of finding approved proposals by user]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components; 
+<- library_of_atomic_reusable_components;
+
+-> rrel_key_sc_element: 
+	.platform_independent_realization_of_sc_agent_of_finding_approved_proposals_by_user;
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Agent_of_finding_approved_proposals_by_user.html"
+				(* <- lang_ru;; *);; 
+		*);;
+	*);;
+
+action_of_finding_approved_proposals_by_user
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. найти утвержденных предложений конкретным пользователем]
+ 	(* <- lang_ru;; *);
+ 	[action. find all approved proposals by user]
+ 	(* <- lang_en;; *);;
