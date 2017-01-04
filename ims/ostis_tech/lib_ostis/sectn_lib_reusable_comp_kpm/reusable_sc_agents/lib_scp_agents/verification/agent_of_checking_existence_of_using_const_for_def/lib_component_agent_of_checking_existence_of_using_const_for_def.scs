@@ -1,18 +1,19 @@
-lib_component_agent_def_using_constants_checker
+lib_component_agent_of_checking_existence_of_using_const_for_def
 => nrel_main_idtf:
 	[Компонент библиотеки. sc-агент проверки наличия используемых констант у понятий, имеющих определение]
 	(* <- lang_ru;; *);
 	[Library component. sc-agent of checking availability of using constants of concept with definition]
 	(* <- lang_en;; *);
 
-<- library_of_platform_independent_reusable_components;
+
+<- library_of_platform_independent_reusable_components; 
 <- library_of_atomic_reusable_components;
 
 => nrel_attendant_component: 
-	lib_component_ui_def_using_constants_checker; 
+	lib_component_ui_menu_file_for_checking_existence_of_using_const_for_def; 
 
 -> rrel_key_sc_element: 
-	.platform_independent_realization_of_sc_agent_def_using_constants_checker; 
+	.platform_independent_realization_of_sc_agent_of_checking_existence_of_using_const_for_def; 
 
 <- rrel_key_sc_element: 
 	...
@@ -22,15 +23,15 @@ lib_component_agent_def_using_constants_checker
 		...
 		(*
 		-> rrel_example:
-			"file://htmls/Agent_Using_Constants_Checker.html"
+			"file://htmls/Agent_of_checking_existence_of_using_const_for_def.html"
 				(* <- lang_ru;; *);; 
 		*);;
 	*);;
 
-action_def_using_constants_checker
+action_to_check_existence_of_using_const_for_def
 <- sc_node_not_relation;
 => nrel_main_idtf:
 	[действие. проверить наличие используемых констант у понятий, имеющих определение]
-	(* <- lang_ru;; *);
-	[action. to check availability of using constants of concepts with definition]
-	(* <- lang_en;; *);;
+ 	(* <- lang_ru;; *);
+ 	[action. check availability of using constants of concept with definition]
+ 	(* <- lang_en;; *);;
