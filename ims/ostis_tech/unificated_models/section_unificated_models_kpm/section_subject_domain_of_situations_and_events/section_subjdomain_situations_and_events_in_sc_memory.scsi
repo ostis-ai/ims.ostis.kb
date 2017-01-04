@@ -51,14 +51,14 @@ subject_domain_situations_and_events_in_sc_memory
 -> rrel_explored_relation: 
 	nrel_situation_in_sc_memory;
 	nrel_elementary_situation_in_sc_memory;
-	nrel_add_sc_arc_coming_out_of_given_sc_element_situation;
+	sc_event_add_output_arc;
 	nrel_add_sc_arc_coming_in_given_sc_element_situation;
 	nrel_add_sc_edge_incident_to_given_sc_element_situation;
-	nrel_remove_sc_arc_coming_out_from_given_sc_element_situation;
-	nrel_remove_sc_arc_coming_in_given_sc_element_situation;
+	sc_event_remove_output_arc;
+	sc_event_remove_input_arc;
 	nrel_remove_sc_edge_incident_to_given_sc_element_situation;
-	nrel_remove_sc_element_situation;
-	nrel_change_fole_content_situation;;
+	sc_event_remove_element;
+	sc_event_content_changed;;
 		
 sc_element
 <- sc_node_not_relation;
@@ -433,17 +433,17 @@ nrel_elementary_situation_in_sc_memory
 
 <= nrel_subdividing: 
 	{  
-		nrel_add_sc_arc_coming_out_of_given_sc_element_situation;
+		sc_event_add_output_arc;
 		nrel_add_sc_arc_coming_in_given_sc_element_situation;
 		nrel_add_sc_edge_incident_to_given_sc_element_situation;
-		nrel_remove_sc_arc_coming_out_from_given_sc_element_situation;
-		nrel_remove_sc_arc_coming_in_given_sc_element_situation;
+		sc_event_remove_output_arc;
+		sc_event_remove_input_arc;
 		nrel_remove_sc_edge_incident_to_given_sc_element_situation;
-		nrel_remove_sc_element_situation;
-		nrel_change_fole_content_situation
+		sc_event_remove_element;
+		sc_event_content_changed
 	};;
 
-nrel_add_sc_arc_coming_out_of_given_sc_element_situation
+sc_event_add_output_arc
 <- sc_node_norole_relation;
 => nrel_main_idtf:
 	[событие добавления sc-дуги, выходящей из заданного sc-элемента*]
@@ -470,7 +470,7 @@ nrel_add_sc_edge_incident_to_given_sc_element_situation
 	(* <- lang_en;; *);;
 	
 	
-nrel_remove_sc_arc_coming_out_from_given_sc_element_situation
+sc_event_remove_output_arc
 <- sc_node_norole_relation;
 => nrel_main_idtf:
 	[событие удаления sc-дуги, выходящей из заданного sc-элемента*]
@@ -479,7 +479,7 @@ nrel_remove_sc_arc_coming_out_from_given_sc_element_situation
 	(* <- lang_en;; *);;
 	
 	
-nrel_remove_sc_arc_coming_in_given_sc_element_situation
+sc_event_remove_input_arc
 <- sc_node_norole_relation;
 => nrel_main_idtf:
 	[событие удаления sc-дуги, входящей в заданный sc-элемент*]
@@ -497,7 +497,7 @@ nrel_remove_sc_edge_incident_to_given_sc_element_situation
 	(* <- lang_en;; *);;
 	
 	
-nrel_remove_sc_element_situation
+sc_event_remove_element
 <- sc_node_norole_relation;
 => nrel_main_idtf:
 	[событие удаления sc-элемента*]
@@ -506,7 +506,7 @@ nrel_remove_sc_element_situation
 	(* <- lang_en;; *);;
 	
 	
-nrel_change_fole_content_situation	
+sc_event_content_changed	
 <- sc_node_norole_relation;
 => nrel_main_idtf:
 	[событие изменения содержимого файла*]
