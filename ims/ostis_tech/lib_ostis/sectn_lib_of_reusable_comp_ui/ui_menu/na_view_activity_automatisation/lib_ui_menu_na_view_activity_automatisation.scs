@@ -1,0 +1,21 @@
+lib_ui_menu_na_view_activity_automatisation
+=> nrel_main_idtf:
+	[Компонент библиотеки. Команды СПБЗ]
+	(* <- lang_ru;; *);
+	[Library component. Commands of EEKB]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components;
+<- library_of_non_atomic_reusable_components;
+
+<= nrel_library_component_decomposition:
+	{		
+		lib_ui_menu_na_view_for_admin;
+		lib_ui_menu_na_view_for_developer;
+		lib_ui_menu_na_view_for_expert;
+		lib_ui_menu_na_view_for_manager;
+		lib_ui_menu_na_view_kb_classification_agents;
+		lib_ui_menu_na_view_drafts
+	};;
+
+lib_ui_menu_na_view_activity_automatisation = [*^"file://ui_menu_na_view_activity_automatisation.scsi"*];;
