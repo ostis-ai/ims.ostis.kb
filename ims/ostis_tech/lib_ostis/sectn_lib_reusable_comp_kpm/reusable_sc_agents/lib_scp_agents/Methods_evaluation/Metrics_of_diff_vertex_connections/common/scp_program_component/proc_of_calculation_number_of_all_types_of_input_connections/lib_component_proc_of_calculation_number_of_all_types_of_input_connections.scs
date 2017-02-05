@@ -1,0 +1,27 @@
+lib_component_proc_of_calculation_number_of_all_types_of_input_connections
+=> nrel_main_idtf:
+	[Компонент библиотеки. scp-программа вычисления различных типов входящих связей всех вершин онтологии]
+	(* <- lang_ru;; *);
+	[Library component. scp-program of calculation number of all types of input connections]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components;
+
+-> rrel_key_sc_element: 
+	proc_of_calculation_number_of_all_types_of_input_connections;
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/proc_of_calculation_number_of_all_types_of_input_connections.html" 
+				(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+lib_component_proc_of_calculation_number_of_all_types_of_input_connections = [*^"file://proc_of_calculation_number_of_all_types_of_input_connections.scsi"*];;
+
