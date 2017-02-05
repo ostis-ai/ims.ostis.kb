@@ -1,0 +1,342 @@
+agent_of_finding_drafts_developed_by_specific_developer
+=> nrel_main_idtf:
+	[агентная scp-программа поиска черновиков, разработанных конкретным разработчиком] (* <- lang_ru;; *);
+	[agent scp-program of finding drafts developed by specific developer] (* <- lang_en;; *);
+	<- agent_scp_program;;
+
+scp_program -> agent_of_finding_drafts_developed_by_specific_developer
+	(*
+	-> rrel_params: .agent_of_finding_drafts_developed_by_specific_developer_params 
+		(*
+		-> rrel_1: rrel_in: _event;;
+		-> rrel_2: rrel_in: _input_arc;;
+		*);;
+
+	-> rrel_operators: .agent_of_finding_drafts_developed_by_specific_developer_operator_set 
+		(*
+		-> rrel_init: .agent_of_finding_drafts_developed_by_specific_developer_operator1A
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _temp;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: _input_arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _quest;;
+
+			=> nrel_goto: .agent_of_finding_drafts_developed_by_specific_developer_operator1B;;
+			*);;
+                 
+		-> .agent_of_finding_drafts_developed_by_specific_developer_operator1B
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: action_to_find_drafts_developed_by_specific_developer;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+
+			=> nrel_then: .agent_of_finding_drafts_developed_by_specific_developer_operator1C;;
+			=> nrel_else: .agent_of_finding_drafts_developed_by_specific_developer_operator_return;;
+			*);;
+
+		-> .agent_of_finding_drafts_developed_by_specific_developer_operator1C
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _user;;
+
+			=> nrel_then: .agent_of_finding_drafts_developed_by_specific_developer_operator1C_check_is_user;;
+			=> nrel_else: .agent_of_finding_drafts_developed_by_specific_developer_operator_return;;
+			*);;
+
+		-> .agent_of_finding_drafts_developed_by_specific_developer_operator1C_check_is_user
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: ui_user;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _user;;
+
+			=> nrel_then: .agent_of_finding_drafts_developed_by_specific_developer_operator_gen_set_1;;
+			=> nrel_else: .agent_of_finding_drafts_developed_by_specific_developer_operator_call_proc_of_adding_validating_message;;
+			*);;
+
+		-> .agent_of_finding_drafts_developed_by_specific_developer_operator_gen_set_1
+			(*
+			<- genEl;;
+
+			-> rrel_1: rrel_assign: rrel_node: rrel_scp_var: _possible_drafts;; 
+
+			=> nrel_goto: .agent_of_finding_drafts_developed_by_specific_developer_operator_fill;;
+			*);;
+
+		-> .agent_of_finding_drafts_developed_by_specific_developer_operator_fill
+    			(*
+			<- searchSetStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _user;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _draft;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_authors;;
+
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _possible_drafts;;
+
+        		=> nrel_goto: .agent_of_finding_drafts_developed_by_specific_developer_operator_gen_answer;;
+			*);;
+		
+		-> .agent_of_finding_drafts_developed_by_specific_developer_operator_gen_answer
+			(*
+			<- genEl;;
+
+			-> rrel_1: rrel_assign: rrel_node: rrel_const: rrel_scp_var: _answer_of_finding_drafts;; 
+
+			=> nrel_goto: .agent_of_finding_drafts_developed_by_specific_developer_operator_gen_is;;
+			*);;
+		
+		-> .agent_of_finding_drafts_developed_by_specific_developer_operator_gen_is
+			(*
+			<- contAssign;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _is_exist_draft;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [0];;
+		
+			=> nrel_goto: .agent_of_finding_drafts_developed_by_specific_developer_operator_find_draft;; 
+			*);;
+		
+		-> .agent_of_finding_drafts_developed_by_specific_developer_operator_find_draft
+    			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _possible_drafts;;
+			-> rrel_2: rrel_assign: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _draft;;
+
+			=> nrel_then: .agent_of_finding_drafts_developed_by_specific_developer_operator_delete_arc;;  
+			=> nrel_else: .agent_of_finding_drafts_developed_by_specific_developer_operator_prov;;
+			*);;
+
+		-> .agent_of_finding_drafts_developed_by_specific_developer_operator_delete_arc
+    			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc1;; 
+
+			=> nrel_goto: .agent_of_finding_drafts_developed_by_specific_developer_operator_check_is_draft;;
+			*);;
+
+		-> .agent_of_finding_drafts_developed_by_specific_developer_operator_check_is_draft
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: draft;;
+			-> rrel_2: rrel_assign: rrel_scp_var: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _draft;;
+
+			=> nrel_then: .agent_of_finding_drafts_developed_by_specific_developer_operator_plus;;   
+			=> nrel_else: .agent_of_finding_drafts_developed_by_specific_developer_operator_find_draft;;  
+			*);;
+
+		-> .agent_of_finding_drafts_developed_by_specific_developer_operator_plus
+    			(*
+			<- contAssign;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _is_exist_draft;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [1];;
+		
+			=> nrel_goto: .agent_of_finding_drafts_developed_by_specific_developer_operator_add_1;;
+			*);;
+
+		-> .agent_of_finding_drafts_developed_by_specific_developer_operator_add_1
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_finding_drafts;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _arc;;
+
+			=> nrel_goto: .agent_of_finding_drafts_developed_by_specific_developer_operator_add_2;; 
+			*);;
+
+		-> .agent_of_finding_drafts_developed_by_specific_developer_operator_add_2
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_finding_drafts;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _draft;;
+
+			=> nrel_goto: .agent_of_finding_drafts_developed_by_specific_developer_operator_add_3;; 
+			*);;
+
+		-> .agent_of_finding_drafts_developed_by_specific_developer_operator_add_3
+			(*
+			<- searchSetStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _user;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _draft;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_authors;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_of_finding_drafts;;
+			-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_of_finding_drafts;;
+
+        		=> nrel_goto: .agent_of_finding_drafts_developed_by_specific_developer_operator_find_draft;;
+			*);;
+		
+		-> .agent_of_finding_drafts_developed_by_specific_developer_operator_prov
+			(*
+			<- ifEq;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _is_exist_draft;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [0];;
+		
+			=> nrel_then: .agent_of_finding_drafts_developed_by_specific_developer_operator_call_proc_of_adding_validating_message_1;;   
+			=> nrel_else: .agent_of_finding_drafts_developed_by_specific_developer_operator_del;;  
+			*);;
+
+		-> .agent_of_finding_drafts_developed_by_specific_developer_operator_del
+    			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _possible_drafts;; 
+
+			=> nrel_goto: .agent_of_finding_drafts_developed_by_specific_developer_operator_add_4;;
+			*);;
+			
+
+		-> .agent_of_finding_drafts_developed_by_specific_developer_operator_add_4
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_finding_drafts;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_const: draft;;
+
+			=> nrel_goto: .agent_of_finding_drafts_developed_by_specific_developer_operator_add_5;; 
+			*);;
+
+		-> .agent_of_finding_drafts_developed_by_specific_developer_operator_add_5
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_finding_drafts;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_const: nrel_authors;;
+
+			=> nrel_goto: .agent_of_finding_drafts_developed_by_specific_developer_operator_add_6;; 
+			*);;
+
+		-> .agent_of_finding_drafts_developed_by_specific_developer_operator_add_6
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_finding_drafts;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _user;;
+
+			=> nrel_goto: .agent_of_finding_drafts_developed_by_specific_developer_operator_make_answer;; 
+			*);;
+
+		-> .agent_of_finding_drafts_developed_by_specific_developer_operator_make_answer
+			(*
+			<- genElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_const: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _answer_of_finding_drafts;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_const: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_answer;; 
+			
+			=> nrel_goto: .agent_of_finding_drafts_developed_by_specific_developer_operator_successfully_finished_question;;
+			*);;
+
+		-> .agent_of_finding_drafts_developed_by_specific_developer_operator_successfully_finished_question
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: question_finished_successfully;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+
+			=> nrel_goto: .agent_of_finding_drafts_developed_by_specific_developer_operator_return;; 
+			*);;
+
+/**************************************************************************Wrong Parametrs************************************************************/
+
+		-> .agent_of_finding_drafts_developed_by_specific_developer_operator_call_proc_of_adding_validating_message 
+			(*
+		  	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_validating_message;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_searching_drafts_developed_by_specific_developer_operator_call_proc_of_adding_validating_message_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+				-> rrel_2: rrel_fixed: rrel_scp_const: [Wrong first parameter!It must be user!];;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .agent_of_finding_drafts_developed_by_specific_developer_operator_waitreturn_proc_of_adding_validating_message;;
+			*);;
+
+		-> .agent_of_finding_drafts_developed_by_specific_developer_operator_waitreturn_proc_of_adding_validating_message
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .agent_of_finding_drafts_developed_by_specific_developer_operator_unsuccessfully_finished_question;;
+			*);;
+
+		-> .agent_of_finding_drafts_developed_by_specific_developer_operator_unsuccessfully_finished_question
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: question_finished_unsuccessfully;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+
+			=> nrel_goto: .agent_of_finding_drafts_developed_by_specific_developer_operator_return;; 
+			*);;
+		
+		-> .agent_of_finding_drafts_developed_by_specific_developer_operator_call_proc_of_adding_validating_message_1
+			(*
+		  	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_validating_message;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_finding_drafts_developed_by_specific_developer_operator_call_proc_of_adding_validating_message_1_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+				-> rrel_2: rrel_fixed: rrel_scp_const: [There is no drafts developed by this user.];;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr2;;
+
+		  	=> nrel_goto: .agent_of_finding_drafts_developed_by_specific_developer_operator_waitreturn_proc_of_adding_validating_message_1;;
+			*);;
+
+		-> .agent_of_finding_drafts_developed_by_specific_developer_operator_waitreturn_proc_of_adding_validating_message_1
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr2;;
+
+		  	=> nrel_goto: .agent_of_finding_drafts_developed_by_specific_developer_operator_del_1;;
+			*);;
+	
+		-> .agent_of_finding_drafts_developed_by_specific_developer_operator_del_1
+    			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _possible_drafts;; 
+
+			=> nrel_goto: .agent_of_finding_drafts_developed_by_specific_developer_operator_return;;
+			*);;
+		
+
+		-> .agent_of_finding_drafts_developed_by_specific_developer_operator_return
+			(*
+			<- return;;
+			*);;
+		*);;
+	*);;

@@ -1,0 +1,36 @@
+lib_component_agent_of_finding_drafts_developed_by_specific_developer
+=> nrel_main_idtf:
+	[Компонент библиотеки. sc-агент поиска черновиков, разработанных конкретным разработчиком]
+	(* <- lang_ru;; *);
+	[Library component. sc-agent of finding drafts developed by specific developer]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components; 
+<- library_of_atomic_reusable_components; 
+
+=> nrel_attendant_component: 
+	lib_component_ui_menu_file_for_finding_drafts_developed_by_specific_developer; 
+
+-> rrel_key_sc_element: 
+	.platform_independent_realization_of_sc_agent_of_finding_drafts_developed_by_specific_developer; 
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Agent_of_finding_drafts_developed_by_specific_developer.html"
+				(* <- lang_ru;; *);; 
+		*);;
+	*);;
+
+action_to_find_drafts_developed_by_specific_developer
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. найти черновики, разработанные конкретным разработчиком]
+ 	(* <- lang_ru;; *);
+ 	[action. find drafts developed by specific developer]
+ 	(* <- lang_en;; *);; 
