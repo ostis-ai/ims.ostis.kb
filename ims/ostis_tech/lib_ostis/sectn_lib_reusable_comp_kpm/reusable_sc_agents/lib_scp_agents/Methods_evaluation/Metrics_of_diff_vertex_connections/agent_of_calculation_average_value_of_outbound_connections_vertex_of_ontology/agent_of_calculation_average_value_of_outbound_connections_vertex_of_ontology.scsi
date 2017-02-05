@@ -99,7 +99,7 @@ scp_program -> agent_of_calculation_average_value_of_outbound_connections_vertex
         		=> nrel_goto: .agent_of_calculation_average_value_of_outbound_connections_vertex_of_ontology_operator1C3;;
         		*);;
 
-        	-> .agent_of_calculation_average_value_of_outbound_connections_vertex_of_ontology_operator1C3
+       	 -> .agent_of_calculation_average_value_of_outbound_connections_vertex_of_ontology_operator1C3
     			(*
 			<- searchSetStr5;;
 
@@ -129,11 +129,11 @@ scp_program -> agent_of_calculation_average_value_of_outbound_connections_vertex
         		=> nrel_goto: .agent_of_calculation_average_value_of_outbound_connections_vertex_of_ontology_operator_gen_set;;
         		*);;
 
-		 -> .agent_of_calculation_average_value_of_outbound_connections_vertex_of_ontology_operator_gen_set
+	 	-> .agent_of_calculation_average_value_of_outbound_connections_vertex_of_ontology_operator_gen_set
 			(*
 			<- genEl;;
 
-			-> rrel_1: rrel_assign: rrel_node: rrel_scp_var: _result_set;; 
+			-> rrel_1: rrel_assign: rrel_node: rrel_scp_var: _set_of_vertexes_number;; 
 
 			=> nrel_goto: .agent_of_calculation_average_value_of_outbound_connections_vertex_of_ontology_operator_find_number_of_connections;;
 			*);;
@@ -147,7 +147,7 @@ scp_program -> agent_of_calculation_average_value_of_outbound_connections_vertex
 				(*
 				-> rrel_1: rrel_fixed: rrel_scp_var: _ontology;;
 				-> rrel_2: rrel_fixed: rrel_scp_var: _all_vertexes_of_ontology;;
-				-> rrel_3: rrel_fixed: rrel_scp_var: _result_set;;
+				-> rrel_3: rrel_fixed: rrel_scp_var: _set_of_vertexes_number;;
 				*);;
 		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
 
@@ -156,6 +156,7 @@ scp_program -> agent_of_calculation_average_value_of_outbound_connections_vertex
 		
 		-> .agent_of_calculation_average_value_of_outbound_connections_vertex_of_ontology_operator_find_number_of_connections_waitreturn
 			(*
+			
 			<- waitReturn;;
 
 		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
@@ -172,6 +173,7 @@ scp_program -> agent_of_calculation_average_value_of_outbound_connections_vertex
 			=> nrel_goto: .agent_of_calculation_average_value_of_outbound_connections_vertex_of_ontology_operator_make_result;;
 			*);;
 
+			
 		-> .agent_of_calculation_average_value_of_outbound_connections_vertex_of_ontology_operator_make_result
 			(*
 			<- call;;
@@ -179,7 +181,7 @@ scp_program -> agent_of_calculation_average_value_of_outbound_connections_vertex
 		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_calculation_average_value;;
 		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_calculation_average_value_of_outbound_connections_vertex_of_ontology_operator_make_result_params 
 				(*
-				-> rrel_1: rrel_fixed: rrel_scp_var: _result_set;;
+				-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_vertexes_number;;
 				-> rrel_2: rrel_fixed: rrel_scp_var: _result;;
 				*);;
 		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr2;;
@@ -189,6 +191,7 @@ scp_program -> agent_of_calculation_average_value_of_outbound_connections_vertex
 
 		-> .agent_of_calculation_average_value_of_outbound_connections_vertex_of_ontology_operator_make_result_waitreturn
 			(*
+			
 			<- waitReturn;;
 
 		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr2;;
@@ -262,7 +265,7 @@ scp_program -> agent_of_calculation_average_value_of_outbound_connections_vertex
 		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_calculation_average_value_of_outbound_connections_vertex_of_ontology_operator_call_proc_of_adding_validating_message_params 
 				(*
 				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
-				-> rrel_2: rrel_fixed: rrel_scp_const: [Wrong first parameter! It must be ontology.];;
+				-> rrel_2: rrel_fixed: rrel_scp_const: [Wrong first parameter!It must be ontology];;
 				*);;
 		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr4;;
 

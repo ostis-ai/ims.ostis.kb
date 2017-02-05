@@ -1,6 +1,6 @@
 lib_component_agent_of_calculation_average_value_of_outbound_connections_vertex_of_ontology
 => nrel_main_idtf:
-	[Компонент библиотеки. sc-агент вычисления среднего числа типов различных исходящих связей вершины онтологии]
+	[Компонент библиотеки. sc-агент вычисления среднего числа различных типов исходящих связей вершины онтологии]
 	(* <- lang_ru;; *);
 	[Library component. sc-agent of calculation the average value of different types of outbound connections of ontology vertexes]
 	(* <- lang_en;; *);
@@ -27,10 +27,3 @@ lib_component_agent_of_calculation_average_value_of_outbound_connections_vertex_
 		*);;
 	*);;
 
-action_to_calculate_average_value_of_outbound_connections_vertex_of_ontology
-<- sc_node_not_relation;
-=> nrel_main_idtf:
-	[действие. вычислить среднее число различных типов исходящих связей вершины онтологии]
-	(* <- lang_ru;; *);
-	[action. to calculate average value of different types of outbound connections of vertex of ontology]
-	(* <- lang_en;; *);;
