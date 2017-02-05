@@ -1,0 +1,49 @@
+sc_agent_of_calculation_number_of_all_types_of_input_connections_of_vertex
+=> nrel_main_idtf:
+	[sc-агент подсчета среднего числа различных типов входящих связей вершины онтологии] (* <- lang_ru;; *);
+	[sc-agent of calculation number of all types of input connections of vertex] (* <- lang_en;; *);
+
+<- abstract_sc_agent;
+
+=> nrel_primary_initiation_condition: 
+	(sc_event_add_output_arc => question_initiated);
+
+=> nrel_initiation_condition_and_result: 
+	(..sc_agent_of_calculation_number_of_all_types_of_input_connections_of_vertex_condition => ..sc_agent_of_calculation_number_of_all_types_of_input_connections_of_vertex_result);
+
+<= nrel_sc_agent_key_sc_elements: 
+	{
+	question_initiated;
+	question;
+	action_to_calculate_number_of_all_types_of_input_connections_of_vertex
+	};
+
+=> nrel_inclusion: 
+	.platform_independent_realization_of_sc_agent_of_calculation_number_of_all_types_of_input_connections_of_vertex
+	(*
+	<- platform_independent_abstract_sc_agent;;
+	<= nrel_sc_agent_program: 
+		{
+		agent_of_calculation_number_of_all_types_of_input_connections_of_vertex
+		};;
+
+	-> sc_agent_of_calculation_number_of_all_types_of_input_connections_of_vertex_scp    
+		(* <- active_sc_agent;; *);;  
+	*);;
+
+..sc_agent_of_calculation_number_of_all_types_of_input_connections_of_vertex_condition
+= [*
+	action_to_calculate_average_value_of_input_connections_of_vertex _-> .._question;;
+	question_initiated _-> .._question;;
+	question _-> .._question;;
+	.._question _-> .._parameter;;
+*];;
+
+..sc_agent_of_calculation_number_of_all_types_of_input_connections_of_vertex_result
+= [*
+	action_to_calculate_average_value_of_input_connections_of_vertex _-> .._question;;
+	question_finished _-> .._question;;
+	question _-> .._question;;
+	.._question _=> nrel_answer:: .._answer;;
+	.._question _-> .._parameter;;
+*];;

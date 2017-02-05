@@ -1,0 +1,38 @@
+lib_component_agent_of_finding_connection_between_entity_and_alternative_of_specification
+=> nrel_main_idtf:
+	[Компонент библиотеки. sc-агент нахождения связи между сущностью и альтернативой спецификации]
+	(* <- lang_ru;; *);
+	[Library component. sc-agent of finding connection between entity and alternative of specification]
+	(* <- lang_en;; *);
+
+<- platform_independent_reusable_component_OSTIS; 
+<- atomic_reusable_component_OSTIS; 
+<- reusable_scp_agent;
+=> nrel_attendant_component: lib_ui_menu_file_for_finding_connection_between_entity_and_alternative_of_specification; 
+
+-> rrel_key_sc_element: 
+	.platform_independent_realization_of_sc_agent_of_finding_connection_between_entity_and_alternative_of_specification;
+
+	<- rrel_key_sc_element: 
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Agent_Of_Finding_Connection_Between_Entity_And_Alternative_Of_Specification.html"
+				(* <- lang_ru;; *);; 
+		*);;
+	*);;
+
+
+sc_node_not_relation -> action_of_finding_connection_between_entity_and_alternative_of_specification;;
+
+action_of_finding_connection_between_entity_and_alternative_of_specification => nrel_main_idtf:
+	[действие. найти связь между сущностью и альтернативой спецификации]
+		(*<- lang_ru;;*);;
+action_of_finding_connection_between_entity_and_alternative_of_specification => nrel_main_idtf:
+	[action. find connection between entity and alternative of specification]
+		(* <- lang_en;; *);;
+

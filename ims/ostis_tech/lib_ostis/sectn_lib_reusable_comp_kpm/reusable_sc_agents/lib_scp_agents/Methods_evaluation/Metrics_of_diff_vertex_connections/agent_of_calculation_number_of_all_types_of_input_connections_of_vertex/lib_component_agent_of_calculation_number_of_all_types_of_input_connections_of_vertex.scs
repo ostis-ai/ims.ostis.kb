@@ -1,0 +1,36 @@
+lib_component_agent_of_calculation_number_of_all_types_of_input_connections_of_vertex
+=> nrel_main_idtf:
+	[Компонент библиотеки. sc-агент подсчета среднего числа различных типов входящих связей вершины онтологии]
+	(* <- lang_ru;; *);
+	[Library component. sc-agent of calculation number of all types of input connections of vertex]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components; 
+<- library_of_atomic_reusable_components; 
+
+=> nrel_attendant_component: 
+	lib_component_ui_menu_file_for_calculation_number_of_all_types_of_input_connections_of_vertex; 
+
+-> rrel_key_sc_element: 
+	.platform_independent_realization_of_sc_agent_of_calculation_number_of_all_types_of_input_connections_of_vertex; 
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Agent_of_calculation_number_of_all_types_of_input_connections_of_vertex.html"
+				(* <- lang_ru;; *);; 
+		*);;
+	*);;
+
+action_to_calculate_average_value_of_input_connections_of_vertex
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. вычислить среднее значение количества различных типов входящих связей вершины онтологии]
+ 	(* <- lang_ru;; *);
+ 	[action. calculate average value of input connections of vertex]
+ 	(* <- lang_en;; *);; 
