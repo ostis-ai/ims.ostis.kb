@@ -1,0 +1,36 @@
+lib_component_agent_of_removing_elements_of_the_struct
+=> nrel_main_idtf:
+	[Компонент библиотеки. sc-агент удаления элементов структуры]
+	(* <- lang_ru;; *);
+	[Library component. sc-agent of removing elements of the struct]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components; 
+<- library_of_atomic_reusable_components; 
+
+=> nrel_attendant_component: 
+	lib_component_ui_menu_file_for_removing_elements_of_the_struct; 
+
+-> rrel_key_sc_element: 
+	.platform_independent_realization_of_sc_agent_of_removing_elements_of_the_struct;
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Agent_of_removing_elements_of_the_struct.html"
+				(* <- lang_ru;; *);; 
+		*);;
+	*);;
+
+action_to_removing_elements_of_the_struct <- sc_node_not_relation;;
+
+action_to_removing_elements_of_the_struct => nrel_main_idtf: 
+	[действие. удалить элементы структуры] 
+	(* <- lang_ru;; *);
+	[action. remove elements of the struct] 
+	(* <- lang_en;; *);;
