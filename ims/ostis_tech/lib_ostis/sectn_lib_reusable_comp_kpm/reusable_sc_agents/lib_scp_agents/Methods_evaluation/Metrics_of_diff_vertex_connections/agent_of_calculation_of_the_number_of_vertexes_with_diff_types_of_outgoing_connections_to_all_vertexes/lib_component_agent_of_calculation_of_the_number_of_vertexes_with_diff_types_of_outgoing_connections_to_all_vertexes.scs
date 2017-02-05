@@ -1,0 +1,36 @@
+lib_component_agent_of_calculation_of_the_number_of_vertexes_with_diff_types_of_outgoing_connections_to_all_vertexes
+=> nrel_main_idtf:
+	[Компонент библиотеки. sc-агент подсчёта количества вершин с разными типами исходящих связей по отношению ко всем вершинам онтологии]
+	(* <- lang_ru;; *);
+	[Library component. sc-agent of calculation of the number of vertexes with diff types of outgoing connections to all the vertexes of the ontology]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components; 
+<- library_of_atomic_reusable_components; 
+
+=> nrel_attendant_component: 
+	lib_component_ui_menu_file_for_calculation_of_the_number_of_vertexes_with_diff_types_of_outgoing_connections_to_all_vertexes; 
+
+-> rrel_key_sc_element: 
+	.platform_independent_realization_of_sc_agent_of_calculation_of_the_number_of_vertexes_with_diff_types_of_outgoing_connections_to_all_vertexes; 
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Agent_calculation_of_the_number_of_vertexes_with_diff_types_of_outgoing_connections.html"
+				(* <- lang_ru;; *);; 
+		*);;
+	*);;
+
+action_to_calculate_the_number_of_vertexes_with_diff_types_of_outgoing_connections_to_all_the_vertexes_of_the_ontology
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. вычислить количество вершин с разными типами исходящих связей по отношению ко всем вершинам онтологии]
+ 	(* <- lang_ru;; *);
+ 	[action. the number of vertexes with diff types of outgoing connections to all the vertexes of the ontology]
+ 	(* <- lang_en;; *);;
