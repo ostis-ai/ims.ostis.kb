@@ -3,7 +3,13 @@ ui_menu_na_kb_verification <- ui_user_command_class_noatom;
 => nrel_main_idtf: [Commands for knowledge base verification] (* <- lang_en;; *);
 <= nrel_ui_commands_decomposition:
 {
-	ui_menu_check_translation
+	ui_menu_file_for_checking_cycle_existence_of_ordering_relation;
+	ui_menu_file_for_checking_cycle_existence_of_ordering_relation_in_given_domain;
+	ui_menu_file_for_check_for_crossing_from_one_subdividing_elements;
+	ui_menu_file_for_checking_existence_of_max_studied_object_class;
+	ui_menu_file_for_check_the_main_idtf_for_all_foreign_lang;
+	ui_menu_file_for_checking_concept_def_existence;
+	ui_menu_file_for_checking_existence_of_using_const_for_def
 };;
 
 

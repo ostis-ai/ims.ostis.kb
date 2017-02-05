@@ -1,0 +1,39 @@
+scp_program -> proc_of_adding_action_sign_to_history_of_the_development
+	(*
+  	-> rrel_params: .proc_of_adding_action_sign_to_history_of_the_development_params 
+		(*
+		-> rrel_1: rrel_in: _action_sign;;
+    	*);;
+
+	-> rrel_operators: .proc_of_adding_action_sign_to_history_of_the_development_operator_set
+    	(*
+    	-> rrel_init: .proc_of_adding_action_sign_to_history_of_the_development_operator_call_base_adding
+			(*
+		  	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_action_sign_base;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .proc_of_adding_action_sign_to_history_of_the_development_operator_call_base_adding_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _action_sign;;
+				-> rrel_2: rrel_fixed: rrel_scp_const: history_of_the_development_of_computer_system;;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .proc_of_adding_action_sign_to_history_of_the_development_operator_waitreturn_base_adding;;
+			*);;
+
+		-> .proc_of_adding_action_sign_to_history_of_the_development_operator_waitreturn_base_adding
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .proc_of_adding_action_sign_to_history_of_the_development_operator_return;;
+			*);;	
+			
+		-> .proc_of_adding_action_sign_to_history_of_the_development_operator_return 
+			(*
+			<- return;;
+			*);;
+		*);;
+	*);;

@@ -88,8 +88,8 @@ scp_program -> agent_of_administrator_approval_proposals_for_editing_kb
         		*);;
 
 		-> .agent_of_administrator_approval_proposals_for_editing_kb_operator1F
-    			(*
-			<- searchElStr5;;
+    		(*
+			<- searchSetStr5;;
 
 			-> rrel_1: rrel_assign: rrel_scp_var: _project;;
 			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
@@ -97,9 +97,11 @@ scp_program -> agent_of_administrator_approval_proposals_for_editing_kb
 			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
 			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_administrator;;
 
-        		=> nrel_then: .agent_of_administrator_approval_proposals_for_editing_kb_operator1G;;
+			-> rrel_set_1: rrel_assign: rrel_scp_var: _projects;;	
+
+        	=> nrel_then: .agent_of_administrator_approval_proposals_for_editing_kb_operator1G;;
 			=> nrel_else: .agent_of_administrator_approval_proposals_for_editing_kb_operator_return;;
-        		*);;
+        	*);;
 
 		-> .agent_of_administrator_approval_proposals_for_editing_kb_operator1G
 			(*
@@ -192,7 +194,7 @@ scp_program -> agent_of_administrator_approval_proposals_for_editing_kb
 
 			-> rrel_1: rrel_fixed: rrel_scp_const: question_initiated;; 
 			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_const: rrel_scp_var: _arc1;;
-			-> rrel_3: rrel_fixed: rrel_scp_var: _maybe_question;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _maybe_questions;;
 
 			=> nrel_goto: .agent_of_administrator_approval_proposals_for_editing_kb_operator2A;;
 			*);;
@@ -226,10 +228,56 @@ scp_program -> agent_of_administrator_approval_proposals_for_editing_kb
 			-> rrel_2: rrel_assign: rrel_const: rrel_pos_const_perm: rrel_scp_var: _arc1;;
 			-> rrel_3: rrel_fixed: rrel_scp_var: _sign_of_action;;
 
-			=> nrel_goto: .agent_of_administrator_approval_proposals_for_editing_kb_operator3C;;
+			=> nrel_goto: .agent_of_administrator_approval_proposals_for_editing_kb_operator_call_removing;;
 			*);;
 
-		-> .agent_of_administrator_approval_proposals_for_editing_kb_operator3C
+		-> .agent_of_administrator_approval_proposals_for_editing_kb_operator_call_removing
+			(*
+		  	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_removing_action_sign_from_current_processes;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_administrator_approval_proposals_for_editing_kb_operator_call_removing_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _sign_of_action;;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .agent_of_administrator_approval_proposals_for_editing_kb_operator_waitreturn_removing;;
+			*);;
+
+		-> .agent_of_administrator_approval_proposals_for_editing_kb_operator_waitreturn_removing
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .agent_of_administrator_approval_proposals_for_editing_kb_operator_call_adding;;
+			*);;	
+
+		-> .agent_of_administrator_approval_proposals_for_editing_kb_operator_call_adding
+			(*
+		  	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_action_sign_to_history_of_the_development;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_administrator_approval_proposals_for_editing_kb_operator_call_adding_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _sign_of_action;;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr2;;
+
+		  	=> nrel_goto: .agent_of_administrator_approval_proposals_for_editing_kb_operator_waitreturn_adding;;
+			*);;
+
+		-> .agent_of_administrator_approval_proposals_for_editing_kb_operator_waitreturn_adding
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr2;;
+
+		  	=> nrel_goto: .agent_of_administrator_approval_proposals_for_editing_kb_operator_gen_answer_node;;
+			*);;
+
+		-> .agent_of_administrator_approval_proposals_for_editing_kb_operator_gen_answer_node
 			(*
 			<- genEl;;
 
@@ -260,14 +308,14 @@ scp_program -> agent_of_administrator_approval_proposals_for_editing_kb
 		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
 		  	-> rrel_3: rrel_fixed: rrel_scp_const: action_to_consider_new_project_task;;
 
-		  	=> nrel_goto: .agent_of_administrator_approval_proposals_for_editing_kb_operator3E1;;
+		  	=> nrel_goto: .agent_of_administrator_approval_proposals_for_editing_kb_operator_call_add_to_plan;;
 			*);;
 
 		-> .agent_of_administrator_approval_proposals_for_editing_kb_operator3D3
 			(*
 			<- searchSetStr3;;
 
-			-> rrel_1: rrel_fixed: rrel_scp_const: action_to_consider_new_project_task;;
+			-> rrel_1: rrel_fixed: rrel_scp_const: action_to_consider_proposal_for_editing_knowledge_base;;
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
 			-> rrel_3: rrel_fixed: rrel_scp_var: _sign_of_action;;
 
@@ -277,16 +325,100 @@ scp_program -> agent_of_administrator_approval_proposals_for_editing_kb
 			=> nrel_else: .agent_of_administrator_approval_proposals_for_editing_kb_operator3E1;;
 			*);;
 
+		-> .agent_of_administrator_approval_proposals_for_editing_kb_operator_call_add_to_plan
+			(*
+		  	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_action_sign_to_development_plan;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_administrator_approval_proposals_for_editing_kb_operator_call_add_to_plan_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _maybe_questions;;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr3;;
+
+		  	=> nrel_goto: .agent_of_administrator_approval_proposals_for_editing_kb_operator_waitreturn_adding_to_plan;;
+			*);;
+
+		-> .agent_of_administrator_approval_proposals_for_editing_kb_operator_waitreturn_adding_to_plan
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr3;;
+
+		  	=> nrel_goto: .agent_of_administrator_approval_proposals_for_editing_kb_operator3E1;;
+			*);;				
+
 		-> .agent_of_administrator_approval_proposals_for_editing_kb_operator3D4
 			(*
 		  	<- genElStr3;;
 
 		  	-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_administrator_approval_proposals_for_editing_kb;;
 		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-		  	-> rrel_3: rrel_fixed: rrel_scp_const: action_to_consider_new_project_task;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_const: action_to_consider_proposal_for_editing_knowledge_base;;
+
+		  	=> nrel_goto: .agent_of_administrator_approval_proposals_for_editing_kb_operator_get_proposal_for_hist;;
+			*);;
+
+		-> .agent_of_administrator_approval_proposals_for_editing_kb_operator_get_proposal_for_hist
+			(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _sign_of_action;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _proposal;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_proposal;;
+
+			=> nrel_goto: .agent_of_administrator_approval_proposals_for_editing_kb_operator_get_object;;
+			*);;	
+
+		-> .agent_of_administrator_approval_proposals_for_editing_kb_operator_get_object
+			(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _sign_of_action;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _target_section;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_object;;
+
+			=> nrel_then: .agent_of_administrator_approval_proposals_for_editing_kb_operator_call_add_to_substantive_part;;
+			=> nrel_else: .agent_formation_suggestion_edit_kb_operator_assign_target;;
+			*);;	
+
+		-> .agent_formation_suggestion_edit_kb_operator_assign_target 
+			(*
+			<- varAssign;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _target_section;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: substantive_part_of_the_knowledge_base;;
+
+			=> nrel_goto: .agent_formation_suggestion_edit_kb_operator_gen_proposer_relation;;
+			*);;	
+
+		-> .agent_of_administrator_approval_proposals_for_editing_kb_operator_call_add_to_substantive_part
+			(*
+		  	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_proposal_content_to_substantive_part_of_kb;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_administrator_approval_proposals_for_editing_kb_operator_call_add_to_substantive_part_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _proposal;;
+				-> rrel_2: rrel_fixed: rrel_scp_var: _target_section;;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr4;;
+
+		  	=> nrel_goto: .agent_of_administrator_approval_proposals_for_editing_kb_operator_waitreturn_adding_to_substantive_part;;
+			*);;
+
+		-> .agent_of_administrator_approval_proposals_for_editing_kb_operator_waitreturn_adding_to_substantive_part
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr4;;
 
 		  	=> nrel_goto: .agent_of_administrator_approval_proposals_for_editing_kb_operator3E1;;
-			*);;
+			*);;	
 
 		-> .agent_of_administrator_approval_proposals_for_editing_kb_operator3E1
 			(*

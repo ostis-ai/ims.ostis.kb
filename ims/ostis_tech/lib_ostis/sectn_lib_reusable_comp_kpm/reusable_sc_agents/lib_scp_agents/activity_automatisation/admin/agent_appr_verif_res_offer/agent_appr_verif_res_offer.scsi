@@ -118,10 +118,10 @@ scp_program -> agent_approval_verification_result_of_offer
 			=> nrel_else: .agent_approval_verification_result_of_offer_gen_question_finished_unsuccessfully;;
 			*);;
 
-
 		-> .agent_approval_verification_result_of_offer_operator1_gen_act
 			(*
 			<- genEl;;
+
 			-> rrel_1: rrel_assign: rrel_const: rrel_node: rrel_scp_var: _act_modify_offer_by_editing_the_kb;;
 
 			=> nrel_goto: .agent_approval_verification_result_of_offer_operator_gen_act_modify_offer_by_editing_the_kb_action_class;;
@@ -166,7 +166,6 @@ scp_program -> agent_approval_verification_result_of_offer
 			=> nrel_else: .agent_approval_verification_result_of_offer_gen_question_finished_unsuccessfully;;
 			*);;
 
-
 		-> .agent_approval_verification_result_of_offer_operator_find_act_by_subact_relation
 			(*
 			<- searchElStr5;;
@@ -181,7 +180,6 @@ scp_program -> agent_approval_verification_result_of_offer
 			=> nrel_else: .agent_approval_verification_result_of_offer_gen_question_finished_unsuccessfully;;
 			*);;
 
-		
 		-> .agent_approval_verification_result_of_offer_operator_find_real_entity_arc
 			(*
 			<- searchElStr3;;
@@ -213,7 +211,6 @@ scp_program -> agent_approval_verification_result_of_offer
 			=> nrel_goto: .agent_approval_verification_result_of_offer_operator_find_question_init_arc;; 
 			*);;
 
-
 		-> .agent_approval_verification_result_of_offer_operator_find_question_init_arc
 			(*
 			<- searchElStr3;;
@@ -234,7 +231,6 @@ scp_program -> agent_approval_verification_result_of_offer
 			=> nrel_goto: .agent_approval_verification_result_of_offer_operator_add_all_verificated_struct_to_set;;
 			*);;
 
-		
 		-> .agent_approval_verification_result_of_offer_operator_add_all_verificated_struct_to_set
 			(*
 			<- searchSetStr5;;
@@ -264,7 +260,7 @@ scp_program -> agent_approval_verification_result_of_offer
 			*);;
 		
 		-> .agent_approval_verification_result_of_offer_operator1G_delete_arc_of_verificate_structes_set_loop 
-		    	(*
+		    (*
 			<- eraseEl;;
 
 			-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _arc1;;
@@ -284,8 +280,6 @@ scp_program -> agent_approval_verification_result_of_offer
 			=> nrel_else: .agent_approval_verification_result_of_offer_operator1_gen_target_of_act;;
 			*);;
 
-
-
 		-> .agent_approval_verification_result_of_offer_operator1_gen_target_of_act
 			(*
 			<- genElStr5;;
@@ -298,7 +292,6 @@ scp_program -> agent_approval_verification_result_of_offer
 
 			=> nrel_goto: .agent_approval_verification_result_of_offer_operator1_gen_act_initiator;; 
 			*);;
-
 
 		-> .agent_approval_verification_result_of_offer_operator1_gen_act_initiator
 			(*
@@ -313,7 +306,6 @@ scp_program -> agent_approval_verification_result_of_offer
 			=> nrel_goto: .agent_approval_verification_result_of_offer_operator_find_author_of_offer;; 
 			*);;
 
-
 		-> .agent_approval_verification_result_of_offer_operator_find_author_of_offer
 			(*
 			<- searchElStr5;;
@@ -327,7 +319,6 @@ scp_program -> agent_approval_verification_result_of_offer
 			=> nrel_then: .agent_approval_verification_result_of_offer_operator1_gen_act_performer;;
 			=> nrel_else: .agent_approval_verification_result_of_offer_gen_question_finished_unsuccessfully;;
 			*);;
-		
 
 		-> .agent_approval_verification_result_of_offer_operator1_gen_act_performer
 			(*
@@ -342,7 +333,6 @@ scp_program -> agent_approval_verification_result_of_offer
 			=> nrel_goto: .agent_approval_verification_result_of_offer_operator1_approve_act;; 
 			*);; 
 
-
 		-> .agent_approval_verification_result_of_offer_operator1_approve_act
 			(*
 			<- genElStr5;;
@@ -356,7 +346,6 @@ scp_program -> agent_approval_verification_result_of_offer
 			=> nrel_goto: .agent_approval_verification_result_of_offer_operator1_gen_sequencing_of_two_acts;; 
 			*);; 
 
-
 		-> .agent_approval_verification_result_of_offer_operator1_gen_sequencing_of_two_acts
 			(*
 			<- genElStr5;;
@@ -369,7 +358,6 @@ scp_program -> agent_approval_verification_result_of_offer
 
 			=> nrel_goto: .agent_approval_verification_result_of_offer_operator1_mark_previous_act_as_past_entity;; 
 			*);; 		
-
 
 		-> .agent_approval_verification_result_of_offer_operator1_mark_previous_act_as_past_entity
 			(*
@@ -401,7 +389,6 @@ scp_program -> agent_approval_verification_result_of_offer
 			=> nrel_goto: .agent_approval_verification_result_of_offer_operator1_mark_new_act_as_initiate_entity;;
 			*);;
 
-
 		-> .agent_approval_verification_result_of_offer_operator1_mark_new_act_as_initiate_entity
 			(*
 			<- genElStr3;;
@@ -410,10 +397,54 @@ scp_program -> agent_approval_verification_result_of_offer
 			-> rrel_2: rrel_assign: rrel_const: rrel_pos_const_perm: rrel_scp_var: _arc1;;
 		  	-> rrel_3: rrel_fixed: rrel_scp_var: _act_modify_offer_by_editing_the_kb;;
 
-			=> nrel_goto: .agent_approval_verification_result_of_offer_operator_gen_answer1_node;; 
+			=> nrel_goto: .agent_approval_verification_result_of_offer_operator_call_removing;; 
 			*);; 
 			
+		-> .agent_approval_verification_result_of_offer_operator_call_removing
+			(*
+		  	<- call;;
 
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_removing_action_sign_from_current_processes;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_approval_verification_result_of_offer_operator_call_removing_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _act_param;;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .agent_approval_verification_result_of_offer_operator_waitreturn_removing;;
+			*);;
+
+		-> .agent_approval_verification_result_of_offer_operator_waitreturn_removing
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .agent_approval_verification_result_of_offer_operator_call_adding;;
+			*);;	
+
+		-> .agent_approval_verification_result_of_offer_operator_call_adding
+			(*
+		  	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_action_sign_to_history_of_the_development;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_approval_verification_result_of_offer_operator_call_adding_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _act_param;;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr2;;
+
+		  	=> nrel_goto: .agent_approval_verification_result_of_offer_operator_waitreturn_adding;;
+			*);;
+
+		-> .agent_approval_verification_result_of_offer_operator_waitreturn_adding
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr2;;
+
+		  	=> nrel_goto: .agent_approval_verification_result_of_offer_operator_gen_answer1_node;;
+			*);;
 		
 
 //****************************************************UI Answer*********************************************************************/

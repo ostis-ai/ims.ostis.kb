@@ -122,9 +122,54 @@ scp_program -> agent_rejection_verification_result_of_offer
 		  	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
 		  	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_rejected;;
 
-			=> nrel_goto: .agent_rejection_verification_result_of_offer_operator_gen_answer_node;; 
+			=> nrel_goto: .agent_rejection_verification_result_of_offer_operator_call_removing;; 
 			*);; 
 		
+		-> .agent_rejection_verification_result_of_offer_operator_call_removing
+			(*
+		  	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_removing_action_sign_from_current_processes;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_rejection_verification_result_of_offer_operator_call_removing_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _act_param;;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .agent_rejection_verification_result_of_offer_operator_waitreturn_removing;;
+			*);;
+
+		-> .agent_rejection_verification_result_of_offer_operator_waitreturn_removing
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .agent_rejection_verification_result_of_offer_operator_call_adding;;
+			*);;	
+
+		-> .agent_rejection_verification_result_of_offer_operator_call_adding
+			(*
+		  	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_action_sign_to_history_of_the_development;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_rejection_verification_result_of_offer_operator_call_adding_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _act_param;;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr2;;
+
+		  	=> nrel_goto: .agent_rejection_verification_result_of_offer_operator_waitreturn_adding;;
+			*);;
+
+		-> .agent_rejection_verification_result_of_offer_operator_waitreturn_adding
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr2;;
+
+		  	=> nrel_goto: .agent_rejection_verification_result_of_offer_operator_gen_answer_node;;
+			*);;	
 
 //**********************************************************UI Answer********************************************************/
 		
