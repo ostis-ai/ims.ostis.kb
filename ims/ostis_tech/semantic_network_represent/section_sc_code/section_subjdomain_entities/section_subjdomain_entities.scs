@@ -3,7 +3,7 @@ section_subjdomain_entities
 => nrel_main_idtf:
 	[Раздел. Предметная область sc-элементов]
 	(* <- lang_ru;; *);
-	[Section. Specialization sc-elements]
+	[Section. Subject domain of sc-elements]
 	(* <- lang_en;; *);
 
 => nrel_idtf:
@@ -32,24 +32,29 @@ section_subjdomain_entities
 	sc_element;
 	sc_constant;
 	fictional_entity;
-	unfabled_essence;
+	unfabled_entity;
 	sc_terminal_constant;
-	material_or_quasi_material_substance;
-	material_essence;
-	quasi_material_substance;
+	material_or_quasi_material_entity;
+	material_entity;
+	quasi_material_entity;
+	abstract_entity_terminal;
 	sc_variable;
+	sc_variable_first_order;
 	sc_variable_second_order;
+	sc_variable_mixed_order;
 	abstract_entity;
-	permanent_essence;
+	permanent_entity;
 	temporary_entity;
 	sc_node;
 	sc_connector;
 	sc_edge;
+	sc_arc;
 	sc_arc_common;
+	sc_arc_membership_or_nonmembership;
 	sc_arc_membership;
-	sc_arc_not_belong;
-	sc_arc_indistinct_membership;
-	sc_arc_constant_stationary_membership;
+	sc_arc_nonmembership;
+	sc_arc_fuzzy_membership;
+	sc_arc_constant_permanent_membership;
 	sc_code_alphabet;
 	nrel_synonymy;;
 
