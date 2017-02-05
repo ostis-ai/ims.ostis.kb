@@ -1,0 +1,36 @@
+lib_component_agent_of_calculation_number_of_class_instances
+=> nrel_main_idtf:
+	[Компонент библиотеки. sc-агент подсчета количества элементов класса]
+	(* <- lang_ru;; *);
+	[Library component. sc-agent of calculation number of class instances]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components; 
+<- library_of_atomic_reusable_components; 
+
+=> nrel_attendant_component: 
+	lib_component_ui_menu_file_for_calculation_number_of_class_instances; 
+
+-> rrel_key_sc_element: 
+	.platform_independent_realization_of_sc_agent_of_calculation_number_of_class_instances;
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Agent_of_calculation_number_of_class_instances.html"
+				(* <- lang_ru;; *);; 
+		*);;
+	*);;
+
+action_to_calculate_number_of_class_instances
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. вычислить количество элементов класса]
+ 	(* <- lang_ru;; *);
+ 	[action. calculate number of class instances]
+ 	(* <- lang_en;; *);; 
