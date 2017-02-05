@@ -1,0 +1,52 @@
+sc_agent_of_changing_main_identifier
+=> nrel_main_idtf:
+	[sc-агент замены основного идентификатора sc-элемента на указанный файл] (* <- lang_ru;; *);
+	[sc-agent of change main identifier sc-element on specified file] (* <- lang_en;; *);
+	
+<- abstract_sc_agent;
+
+=> nrel_primary_initiation_condition: 
+	(sc_event_add_output_arc => question_initiated);
+	
+=> nrel_initiation_condition_and_result: 
+	(..sc_agent_of_changing_main_identifier_condition => ..sc_agent_of_changing_main_identifier_result);
+	
+<= nrel_sc_agent_key_sc_elements: 
+	{
+	question_initiated;
+	question;
+	action_to_change_main_identifier
+	};
+
+
+=> nrel_inclusion: 
+	.platform_independent_realization_of_sc_agent_of_changing_main_identifier
+	(*
+	<- platform_independent_abstract_sc_agent;;
+	<= nrel_sc_agent_program: 
+		{
+		agent_of_changing_main_identifier
+		};;
+		
+	-> sc_agent_of_changing_main_identifier_scp
+		(* <- active_sc_agent;; *);;
+	*);;
+
+..sc_agent_of_changing_main_identifier_condition
+= [*
+	action_to_change_main_identifier _-> .._question;;
+	question_initiated _-> .._question;;
+	question _-> .._question;;
+	.._question _-> rrel_1:: .._param1;;
+	.._question _-> rrel_2:: .._param2;;
+*];;
+
+..sc_agent_of_changing_main_identifier_result
+= [*
+	action_to_change_main_identifier _-> .._question;;
+	question_finished _-> .._question;;
+	question _-> .._question;;
+	.._question _=> nrel_answer:: .._answer;;
+	.._question _-> rrel_1:: .._param1;;
+	.._question _-> rrel_2:: .._param2;;
+*];;
