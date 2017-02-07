@@ -1,0 +1,25 @@
+lib_component_proc_of_validation_input_param_for_verification_agents
+=> nrel_main_idtf:
+	[Компонент библиотеки. scp-программа проверки входных параметров sc-агентов верификации базы знаний] 
+	(* <- lang_ru;; *);
+	[Library component. scp-program of checking inputs param of verifications sc-agents]
+	(* <- lang_en;; *);
+
+<- platform_independent_reusable_component_OSTIS;
+<- reusable_scp_program;
+
+-> rrel_key_sc_element: 
+	proc_of_validation_input_param_for_verification_agents.scs;
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/proc_of_validation_input_param_for_verification_agents.html" 
+				(* <- lang_ru;; *);;
+		*);;
+	*);;
