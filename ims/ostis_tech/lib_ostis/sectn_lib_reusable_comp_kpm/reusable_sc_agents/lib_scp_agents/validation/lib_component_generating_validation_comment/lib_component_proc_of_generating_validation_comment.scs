@@ -1,0 +1,25 @@
+lib_component_proc_of_generating_validation_comment
+=> nrel_main_idtf:
+	[Компонент библиотеки. scp-программа создания комментария об ошибке валидации]
+	(* <- lang_ru;; *);
+	[Library component. scp-program of creating comment of validation error]
+	(* <- lang_en;; *);
+
+<- platform_independent_reusable_component_OSTIS;
+<- reusable_scp_program;
+
+-> rrel_key_sc_element: 
+	proc_of_generating_validation_comment.scs;
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/proc_of_generating_validation_comment.html" 
+				(* <- lang_ru;; *);;
+		*);;
+	*);;
