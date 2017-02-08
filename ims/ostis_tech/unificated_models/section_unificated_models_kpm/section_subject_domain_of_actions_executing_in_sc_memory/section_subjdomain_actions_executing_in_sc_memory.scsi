@@ -81,7 +81,7 @@ action_in_sc_memory_initiated_by_question
 	(*
 		=> nrel_inclusion:
 		{
-			action_to_verify_given_structure
+			act_verify_the_desired_structure
 			(* 
 				=> nrel_inclusion:
 				{
@@ -140,12 +140,12 @@ action_to_form_given_structure
 	[action. to form given structure]
 	(* <- lang_en;; *);;
 
-action_to_verify_given_structure
+act_verify_the_desired_structure
 <- sc_node_not_relation;
 => nrel_main_idtf:
 	[действие. верифицировать заданную структуру]
 	(* <- lang_ru;; *);
-	[action. to verify given structure]
+	[action. to verify the desired structure]
 	(* <- lang_en;; *);;
 
 action_to_determine_truth_or_falsity_of_designated_logical_statement
