@@ -55,8 +55,19 @@ scp_program -> agent_of_finding_all_initiated_signs
 
 		 	-> rrel_1: rrel_assign: rrel_node: rrel_scp_var: rrel_const: _answer_of_finding_all_initiated_signs;;
 
-		 	=> nrel_goto: .agent_of_finding_all_initiated_signs_operator1D_gen_set_of_init_action;;
+		 	=> nrel_goto: .agent_of_finding_all_initiated_signs_operator_add_param_to_answer_1D_1;;
 		 	*);; 
+
+		-> .agent_of_finding_all_initiated_signs_operator_add_param_to_answer_1D_1 
+			(*
+		  	<- genElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_finding_all_initiated_signs;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_const: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _param;;
+
+		  	=> nrel_goto: .agent_of_finding_all_initiated_signs_operator1D_gen_set_of_init_action;;
+			*);;	
 
 		-> .agent_of_finding_all_initiated_signs_operator1D_gen_set_of_init_action
                  	(*
@@ -117,7 +128,7 @@ scp_program -> agent_of_finding_all_initiated_signs
 
 		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _set_of_signs_of_action;;
 
-		 	=> nrel_goto: .agent_of_finding_all_initiated_signs_operator2A_check_answer_content;;
+		 	=> nrel_goto: .agent_of_finding_all_initiated_signs_operator2A_init_actions_set_loop_enter;;
 		 	*);; 
 
 		-> .agent_of_finding_all_initiated_signs_operator2B 
@@ -227,7 +238,6 @@ scp_program -> agent_of_finding_all_initiated_signs
 		  	=> nrel_goto: .agent_of_finding_all_initiated_signs_operator2D_add_some_sign_node_to_answer;;
 			*);;
 
-
 		-> .agent_of_finding_all_initiated_signs_operator2D_add_some_sign_node_to_answer
 			(*
 		  	<- genElStr3;;
@@ -262,30 +272,6 @@ scp_program -> agent_of_finding_all_initiated_signs
 
 		  	=> nrel_goto: .agent_of_finding_all_initiated_signs_operator2A;;
 			*);; 
-
-
-		-> .agent_of_finding_all_initiated_signs_operator2A_check_answer_content 
-			(*
-		  	<- searchElStr3;;
-
-		  	-> rrel_1: rrel_fixed: rrel_scp_var: _init_actions_set;;
-		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-		  	-> rrel_3: rrel_assign: rrel_scp_var: rrel_node: _some_sign;;
-
-		  	=> nrel_then: .agent_of_finding_all_initiated_signs_operator1E;;
-		  	=> nrel_else: .agent_of_finding_all_initiated_signs_operator3B;;
-			*);;
-
-		-> .agent_of_finding_all_initiated_signs_operator1E 
-			(*
-		  	<- genElStr3;;
-
-		  	-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_finding_all_initiated_signs;;
-		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_const: rrel_scp_var: _arc1;;
-		  	-> rrel_3: rrel_fixed: rrel_scp_var: _param;;
-
-		  	=> nrel_goto: .agent_of_finding_all_initiated_signs_operator2A_init_actions_set_loop_enter;;
-			*);;
 
 		-> .agent_of_finding_all_initiated_signs_operator2A_init_actions_set_loop_enter 
 			(*
@@ -525,7 +511,6 @@ scp_program -> agent_of_finding_all_initiated_signs
 
 		  	=> nrel_goto: .agent_of_finding_all_initiated_signs_operator2A_erase_init_actions_set;;
 			*);;
-
 
 		-> .agent_of_finding_all_initiated_signs_operator2A_erase_init_actions_set 
                  	(*
