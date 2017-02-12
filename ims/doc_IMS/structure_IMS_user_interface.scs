@@ -4,4 +4,8 @@ structure_IMS_user_interface
 	(* <- lang_ru;; *);
 	[Documentation. IMS user interface]
 	(* <- lang_en;; *);
-<- unformed_structure;;
+<- not_enough_formed_structure;
+-> rrel_key_sc_element:
+	IMS_user_interface;;
+
+structure_IMS_user_interface = [*^"file://structure_IMS_user_interface.scsi"*];;
