@@ -33,8 +33,8 @@ subject_domain_of_actions
 	external_subject_ostis_system_interaction;
 	external_subject_ostis_system_without_interaction;
 	actions_class;
-	atomic_actions_class;
-	non_atomic_actions_class;
+	independent_actions_class;
+	non_independent_actions_class;
 	task;
 	procedural_formulation_of_task;
 	declarative_formulation_of_task;
@@ -61,6 +61,7 @@ subject_domain_of_actions
 	rrel_action_with_very_low_priority;
 	nrel_decomposition_of_action;
 	nrel_private_action;
+	nrel_abstract_sub_action;
 	nrel_goto;
 	nrel_conjunction_of_previous_actions;
 	nrel_condition_control;
@@ -145,7 +146,7 @@ question
 	=> nrel_inclusion:
 		performed_action
 		(*
-		=> nrel_main_idtf:
+		=> nrel_idtf:
 			[настоящее действие]
 			(* <- lang_ru;; *);;
 		*);;
@@ -602,7 +603,7 @@ subject
 	[агент деятельности]
 	(* <- lang_ru;; *);	
 
-<= nrel_inclusion:
+=> nrel_inclusion:
 	Myself;
 	internal_subject_ostis_system;
 	external_subject_ostis_system_interaction;
@@ -621,7 +622,7 @@ internal_subject_ostis_system
 	[субъект, входящий в состав той ostis-системы, в базе знаний которой он описывается]
 	(* <- lang_ru;; *);	
 	
-<= nrel_inclusion:
+=> nrel_inclusion:
 		sc_agent;
 	
 <- rrel_key_sc_element:
@@ -683,11 +684,13 @@ actions_class
 	
 <= nrel_set_of_subsets:
 		question;
-		
-<= nrel_decomposition:
-		atomic_actions_class;
-		non_atomic_actions_class;
-	
+
+<= nrel_subdividing:
+{
+	independent_actions_class;
+	non_independent_actions_class
+};	
+
 <- rrel_key_sc_element:
 	...
 	(*
@@ -701,16 +704,13 @@ actions_class
 		*);;
 	*);;	
 	
-	
-atomic_actions_class
+independent_actions_class
 <- sc_node_not_relation;
 => nrel_main_idtf:
-	[атомарный класс действий]
+	[класс автономных действий]
 	(* <- lang_ru;; *);
-	[atomic actions class]
+	[independent actions class]
 	(* <- lang_en;; *);
-
-	
 <- rrel_key_sc_element:
 	...
 	(*
@@ -719,33 +719,19 @@ atomic_actions_class
 		...
 		(*
 			-> rrel_example:
-				"file://content_html/explanation_for_atomic_actions_class.html"
+				"file://content_html/expl_independent_actions_class.html"
 			(* <- lang_ru;;	*);;
 		*);;
-	*);;	
-	
-	
-non_atomic_actions_class
+	*);;
+
+non_independent_actions_class
 <- sc_node_not_relation;
 => nrel_main_idtf:
-	[неатомарный класс действий]
+	[класс неавтономных действий]
 	(* <- lang_ru;; *);
-	[non atomic actions class]
-	(* <- lang_en;; *);
-	
-<- rrel_key_sc_element:
-	...
-	(*
-		<- explanation;;
-		<= nrel_sc_text_translation:
-		...		
-		(*
-			-> rrel_example:
-				"file://content_html/explanation_non_atomic_actions_class.html"
-			(* <- lang_ru;;	*);;
-		*);;
-	*);;	
-		
+	[non-independent actions class]
+	(* <- lang_en;; *);;		
+
 nrel_decomposition_of_action
 <- sc_node_norole_relation;
 => nrel_main_idtf:
@@ -804,6 +790,17 @@ nrel_private_action
 
 <= nrel_inclusion:
 	nrel_temporal_part;;
+
+nrel_abstract_sub_action
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[абстрактное поддействие*]
+	(* <- lang_ru;; *);
+	[abstract sub-action*]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[класс действий, частных для каждого из действий, принадлежащих некоторому классу*]
+	(* <- lang_ru;; *);;
 
 nrel_goto
 <- sc_node_norole_relation;
@@ -1060,8 +1057,7 @@ task
 
 => nrel_inclusion:	
 	procedural_formulation_of_task;
-	declarative_formulation_of_task
-	;
+	declarative_formulation_of_task;
 	
 => nrel_inclusion:	
 	task_question;
@@ -1575,11 +1571,10 @@ rrel_argument_of_action
 		*);;
 	*);
 
-<= nrel_inclusion:
+=> nrel_inclusion:
 	rrel_first_action_argument;
 	rrel_second_section_argument;
-	rrel_third_section_argument
-	;;
+	rrel_third_section_argument;;
 
 rrel_first_action_argument
 <- sc_node_role_relation;
@@ -1619,10 +1614,9 @@ nrel_class_of_arguments
 	[быть классом sc-элементов, экземпляры которого являются аргументами для заданного класса команд*]
 	(* <- lang_ru;; *);
 	
-<= nrel_inclusion:
+=> nrel_inclusion:
 	nrel_first_argument_class;
-	nrel_second_argument_class
-	;
+	nrel_second_argument_class;
 	
 <- rrel_key_sc_element:
 	...
