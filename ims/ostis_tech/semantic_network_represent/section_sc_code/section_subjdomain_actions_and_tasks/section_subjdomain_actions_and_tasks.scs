@@ -103,16 +103,19 @@ rrel_key_sc_element -> (section_subjdomain_actions_and_tasks -> subject_domain_o
 	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> actions_class)
 (*
 	<- rrel_key_sc_element;;
-	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> atomic_actions_class)
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> independent_actions_class)
 (*
 	<- rrel_key_sc_element;;
-	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> non_atomic_actions_class)
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> non_independent_actions_class)
 (*
 	<- rrel_key_sc_element;;
 	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> nrel_decomposition_of_action)
 (*
 	<- rrel_key_sc_element;;
 	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> nrel_private_action)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> nrel_abstract_sub_action)
 (*
 	<- rrel_key_sc_element;;
 	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> nrel_goto)
@@ -225,4 +228,4 @@ rrel_key_sc_element -> (section_subjdomain_actions_and_tasks -> subject_domain_o
 	<- rrel_key_sc_element;;
 	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> nrel_second_argument_class)
 	(* <- rrel_key_sc_element;; *);;
-*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;
+*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;

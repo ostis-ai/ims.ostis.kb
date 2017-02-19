@@ -47,7 +47,7 @@ subjdomain_temporary_entity
 	minute;
 	second;
 -> rrel_explored_relation:
-	number_of_millennium;
+	rrel_number_of_millennium;
 	nrel_affecting_entity;
 	nrel_object_of_impact;
 	nrel_initial_situation;
@@ -68,16 +68,14 @@ subjdomain_temporary_entity
 	nrel_temporal_adjacency;
 	nrel_temporal_sequence_with_gap;
 	nrel_temporal_sequence_with_intersection;
-	number_of_century;
-	number_of_year;
-	number_of_month_in_year;
-	number_of_day_in_month;
-	number_of_hour_in_day;
-	number_of_minute_in_hour;
-	number_of_second_in_minute;
-
--> rrel_studied_object_class:
-	...;;
+	rrel_number_of_century;
+	rrel_number_of_year;
+	rrel_number_of_month_in_year;
+	rrel_number_of_day_in_month;
+	rrel_number_of_hour_in_day;
+	rrel_number_of_minute_in_hour;
+	rrel_number_of_second_in_minute;
+	rrel_last_added_sc_element;;
 
 temporary_entity
 <- sc_node_not_relation;
@@ -96,7 +94,7 @@ temporary_entity
 	(* <- lang_ru;; *);
 	[sc-элемент, являющийся знаком некоторой временно существующей сущности]
 	(* <- lang_ru;; *);
-	[сущность, обладающая темпоральными характеристиками (длительностью, начальным моментом, конечным моментом и т.д]
+	[сущность, обладающая темпоральными характеристиками (длительностью, начальным моментом, конечным моментом и т.д)]
 	(* <- lang_ru;; *);
 
 
@@ -128,11 +126,7 @@ temporary_entity
 		*);;
 	*);;
 	
-	
-	
-	
-	
-	
+
 last_entity
 <- sc_node_not_relation;
 => nrel_main_idtf:
@@ -148,9 +142,7 @@ last_entity
 	(* <- lang_ru;; *);
 	[сущность, завершившая свое существование]
 	(* <- lang_ru;; *);;
-	
-	
-	
+
 
 real_entity
 <- sc_node_not_relation;
@@ -168,9 +160,6 @@ real_entity
 	[сущность настоящего времени]
 	(* <- lang_ru;; *);;
 
-
-	
-	
 
 future_entity
 <- sc_node_not_relation;
@@ -205,11 +194,7 @@ future_entity
 			(* <- lang_ru;; *);;
 		*);;
 	*);;
-	
-	
-	
-	
-	
+
 	
 temporary_connection
 <- sc_node_not_relation;
@@ -238,9 +223,6 @@ temporary_connection
 			(* <- lang_ru;; *);;
 		*);;
 	*);;
-	
-	
-	
 	
 	
 situation
@@ -282,9 +264,6 @@ situation
 	*);;
 	
 	
-	
-	
-	
 process
 <- sc_node_not_relation;
 => nrel_main_idtf:
@@ -308,6 +287,9 @@ process
 	(* <- lang_ru;; *);
 	[динамическая структура]
 	(* <- lang_ru;; *);
+
+=> nrel_strict_inclusion:
+	impact;
 
 <= nrel_strict_inclusion:
 	structure;
@@ -348,8 +330,6 @@ process_in_the_environment_ostis_system
 	(* <- lang_en;; *);;
 	
 	
-
-
 material_entity
 <- sc_node_not_relation;
 => nrel_main_idtf:
@@ -370,9 +350,6 @@ material_entity
 			(* <- lang_ru;; *);;
 		*);;
 	*);;
-	
-	
-
 
 
 impact
@@ -403,8 +380,6 @@ impact
 		*);;
 	*);;
 	
-	
-	
 
 nrel_affecting_entity
 
@@ -416,9 +391,6 @@ nrel_affecting_entity
 	[affecting entity*]
 	(* <- lang_en;; *);;
 	
-	
-	
-
 
 nrel_object_of_impact
 	
@@ -429,8 +401,6 @@ nrel_object_of_impact
 	(* <- lang_ru;; *);
 	[object of impact*]
 	(* <- lang_en;; *);;	
-	
-	
 
 
 nrel_initial_situation
@@ -463,9 +433,6 @@ nrel_initial_situation
 			(* <- lang_ru;; *);;
 		*);;
 	*);;
-
-	
-	
 	
 
 nrel_typical_situation
@@ -480,6 +447,9 @@ nrel_typical_situation
 
 <- binary_relation;
 
+<= nrel_strict_inclusion:
+	nrel_initial_situation;
+
 <- rrel_key_sc_element:
 	...
 	(*
@@ -493,9 +463,6 @@ nrel_typical_situation
 		*);;
 	*);;
 
-
-
-	
 	
 nrel_final_situation
 
@@ -527,9 +494,6 @@ nrel_final_situation
 			(* <- lang_ru;; *);;
 		*);;
 	*);;
-	
-	
-	
 	
 	
 nrel_event
@@ -570,9 +534,6 @@ nrel_event
 	*);;
 	
 	
-	
-	
-	
 relation
 
 <= nrel_subdividing:
@@ -606,8 +567,6 @@ class_of_temporary_connections
 			(* <- lang_ru;; *);;
 		*);;
 	*);;
-	
-	
 
 
 class_of_constant_connections
@@ -621,8 +580,6 @@ class_of_constant_connections
 => nrel_idtf:
 	[отношение, все связки которого являются стационарными]
 	(* <- lang_ru;; *);;
-	
-	
 	
 	
 class_of_temporary_and_constant_connections
@@ -669,11 +626,16 @@ situational_set
 			(* <- lang_ru;; *);;
 		*);;
 	*);;
-	
-	
-	
-	
-	
+
+rrel_last_added_sc_element
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+	[последний добавленный sc-элемент']
+	(* <- lang_ru;; *);
+	[last added sc-element']
+	(* <- lang_en;; *);
+<- role_relation;;
+
 non_situational_set
 <- sc_node_not_relation;
 => nrel_main_idtf:
@@ -694,10 +656,7 @@ non_situational_set
 			(* <- lang_ru;; *);;
 		*);;
 	*);;
-	
-	
-	
-	
+
 	
 partial_situational_set
 <- sc_node_not_relation;
@@ -719,9 +678,6 @@ partial_situational_set
 			(* <- lang_ru;; *);;
 		*);;
 	*);;
-
-
-	
 	
 
 temporal_connection
@@ -735,8 +691,6 @@ temporal_connection
 => nrel_idtf:
 	[постоянная связь, описывающая связь во времени между временными сущностями]
 	(* <- lang_ru;; *);;
-	
-	
 	
 	
 temporal_relation	
@@ -753,7 +707,7 @@ temporal_relation
 	[отношение, задающее темпоральные связи между временными сущностями]
 	(* <- lang_ru;; *);
 	
-<= nrel_collection_of_subsets:
+<= nrel_set_of_subsets:
 	temporal_connection;
 	
 -> nrel_temporal_inclusion;
@@ -870,9 +824,6 @@ nrel_final_stage
 	(* <- lang_ru;; *);
 	[final stage*]
 	(* <- lang_en;; *);;
-
-	
-	
 	
 
 nrel_intermediate_stage
@@ -884,9 +835,7 @@ nrel_intermediate_stage
 	(* <- lang_ru;; *);
 	[intermediate_stage*]
 	(* <- lang_en;; *);;
-	
-	
-	
+
 	
 nrel_temporal_inclusion_without_coincidence_of_the_initial_and_final_moments
 	
@@ -925,9 +874,6 @@ nrel_temporal_inclusion_without_coincidence_of_the_initial_and_final_moments
 			"file://nl_files/nrel_temporal_inclusion_without_coincidence_of_the_initial_and_final_moments_second.png";;
 		*);;
 	*);;
-	
-	
-	
 	
 	
 nrel_temporal_inclusion_with_coincidence_of_the_initial_moments
@@ -997,9 +943,7 @@ nrel_temporal_inclusion_with_coincidence_of_the_final_moments
 			"file://nl_files/nrel_temporal_inclusion_with_coincidence_of_the_final_moments_second.png";;
 		*);;
 	*);;
-	
-	
-	
+
 
 nrel_temporal_concurrence
 
@@ -1014,9 +958,7 @@ nrel_temporal_concurrence
 => nrel_idtf:
 	[совпадение начала и завершения*]
 	(* <- lang_ru;; *);;
-	
-	
-	
+
 	
 nrel_temporal_union
 
@@ -1051,9 +993,6 @@ nrel_temporal_union
 			"file://nl_files/nrel_temporal_union_second.png";;
 		*);;
 	*);;
-	
-	
-	
 
 	
 nrel_temporal_decomposition
@@ -1089,10 +1028,7 @@ nrel_temporal_decomposition
 			"file://nl_files/nrel_temporal_decomposition_second.png";;
 		*);;
 	*);;
-	
-	
-	
-	
+
 	
 nrel_temporal_adjacency	
 	
@@ -1133,10 +1069,7 @@ nrel_temporal_adjacency
 			"file://nl_files/nrel_temporal_adjacency_second.png";;
 		*);;
 	*);;
-	
-	
-	
-	
+
 	
 nrel_temporal_sequence_with_gap
 	
@@ -1171,11 +1104,7 @@ nrel_temporal_sequence_with_gap
 			"file://nl_files/nrel_temporal_sequence_with_gap_second.png";;
 		*);;
 	*);;
-	
-	
-	
 
-	
 
 nrel_temporal_sequence_with_intersection
 	
@@ -1211,10 +1140,7 @@ nrel_temporal_sequence_with_intersection
 		*);;
 	*);;
 	
-	
-	
-	
-	
+
 begin
 <- sc_node_not_relation;
 => nrel_main_idtf:
@@ -1266,10 +1192,6 @@ begin
 			"file://nl_files/begin.png";;
 		*);;
 	*);;
-	
-	
-	
-	
 	
 
 completion
@@ -1325,11 +1247,7 @@ completion
 			"file://nl_files/completion.png";;
 		*);;
 	*);;
-	
-	
-	
-	
-	
+
 	
 duration
 <- sc_node_not_relation;
@@ -1390,10 +1308,6 @@ duration
 			"file://nl_files/duration.png";;
 		*);;
 	*);;
-	
-	
-	
-
 
 millennium
 <- sc_node_not_relation;
@@ -1403,10 +1317,6 @@ millennium
 	[millennium]
 	(* <- lang_en;; *);;
 
-	
-	
-	
-	
 century
 <- sc_node_not_relation;
 => nrel_main_idtf:
@@ -1414,10 +1324,6 @@ century
 	(* <- lang_ru;; *);
 	[century]
 	(* <- lang_en;; *);;
-	
-	
-	
-	
 
 year
 <- sc_node_not_relation;
@@ -1427,10 +1333,6 @@ year
 	[year]
 	(* <- lang_en;; *);;
 	
-	
-	
-	
-	
 month
 <- sc_node_not_relation;
 => nrel_main_idtf:
@@ -1438,10 +1340,6 @@ month
 	(* <- lang_ru;; *);
 	[month]
 	(* <- lang_en;; *);;
-	
-	
-	
-	
 
 day
 <- sc_node_not_relation;
@@ -1451,10 +1349,6 @@ day
 	[day]
 	(* <- lang_en;; *);;
 	
-	
-	
-	
-	
 hour
 <- sc_node_not_relation;
 => nrel_main_idtf:
@@ -1462,10 +1356,6 @@ hour
 	(* <- lang_ru;; *);
 	[hour]
 	(* <- lang_en;; *);;
-	
-	
-	
-	
 	
 minute
 <- sc_node_not_relation;
@@ -1475,9 +1365,6 @@ minute
 	[minute]
 	(* <- lang_en;; *);;
 	
-	
-	
-	
 second
 <- sc_node_not_relation;
 => nrel_main_idtf:
@@ -1486,11 +1373,7 @@ second
 	[second]
 	(* <- lang_en;; *);;
 	
-	
-	
-	
-	
-number_of_millennium
+rrel_number_of_millennium
 
 <- sc_node_role_relation;
 
@@ -1499,11 +1382,9 @@ number_of_millennium
 	(* <- lang_ru;; *);
 	[number of millennium']
 	(* <- lang_en;; *);;
+
 	
-	
-	
-	
-number_of_century
+rrel_number_of_century
 
 <- sc_node_role_relation;
 
@@ -1513,11 +1394,7 @@ number_of_century
 	[number of century']
 	(* <- lang_en;; *);;
 	
-	
-	
-	
-	
-number_of_year
+rrel_number_of_year
 
 <- sc_node_role_relation;
 
@@ -1527,10 +1404,7 @@ number_of_year
 	[number of year']
 	(* <- lang_en;; *);;
 	
-	
-	
-	
-number_of_month_in_year
+rrel_number_of_month_in_year
 
 <- sc_node_role_relation;
 
@@ -1539,12 +1413,8 @@ number_of_month_in_year
 	(* <- lang_ru;; *);
 	[number of month in year']
 	(* <- lang_en;; *);;
-	
-	
-	
-	
 
-number_of_day_in_month
+rrel_number_of_day_in_month
 
 <- sc_node_role_relation;
 
@@ -1553,12 +1423,8 @@ number_of_day_in_month
 	(* <- lang_ru;; *);
 	[number of day in month']
 	(* <- lang_en;; *);;
-	
-	
-	
-	
 
-number_of_hour_in_day
+rrel_number_of_hour_in_day
 
 <- sc_node_role_relation;
 
@@ -1568,11 +1434,7 @@ number_of_hour_in_day
 	[number of hour in day']
 	(* <- lang_en;; *);;
 	
-	
-	
-	
-	
-number_of_minute_in_hour
+rrel_number_of_minute_in_hour
 
 <- sc_node_role_relation;
 
@@ -1582,10 +1444,7 @@ number_of_minute_in_hour
 	[number of minute in hour']
 	(* <- lang_en;; *);;
 	
-	
-	
-	
-number_of_second_in_minute
+rrel_number_of_second_in_minute
 
 <- sc_node_role_relation;
 
