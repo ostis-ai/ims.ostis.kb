@@ -15,7 +15,7 @@ sc_agent_of_finding_pattern
 	{
 	question_initiated;
 	question;
-	question_of_finding_pattern
+	action_search_structure_which_is_isomorphic_to_given_pattern
 	};
 
 => nrel_inclusion: 
@@ -33,7 +33,7 @@ sc_agent_of_finding_pattern
 
 ..sc_agent_of_finding_pattern_condition
 = [*
-	question_of_finding_pattern _-> .._question;;
+	action_search_structure_which_is_isomorphic_to_given_pattern _-> .._question;;
 	question_initiated _-> .._question;;
 	question _-> .._question;;
 	.._question _-> .._parameter;;
@@ -41,7 +41,7 @@ sc_agent_of_finding_pattern
 
 ..sc_agent_of_finding_pattern_result
 = [*
-	question_of_finding_pattern _-> .._question;;
+	action_search_structure_which_is_isomorphic_to_given_pattern _-> .._question;;
 	question_finished _-> .._question;;
 	question _-> .._question;;
 	.._question _=> nrel_answer:: .._answer;;

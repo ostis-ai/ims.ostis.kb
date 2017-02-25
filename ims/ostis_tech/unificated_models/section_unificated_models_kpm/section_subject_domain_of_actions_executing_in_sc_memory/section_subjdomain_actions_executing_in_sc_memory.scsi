@@ -17,8 +17,7 @@ subject_domain_of_actions_executing_in_sc_memory
 	action_of_ostis_system_mode_setting;
 	action_of_editing_file_stored_in_sc_memory;
 	action_of_interpreting_program_stored_in_sc_memory;
-	task_solved_in_sc_memory;
--> rrel_studied_object_class: ...;;
+	task_solved_in_sc_memory;;
 
 action_in_sc_memory
 <- sc_node_not_relation;
@@ -56,13 +55,11 @@ action_in_sc_memory
 		*);;
 	*);
 => nrel_inclusion:
-{
 	action_in_sc_memory_initiated_by_question;
 	action_of_editing_kb;
 	action_of_ostis_system_mode_setting;
 	action_of_editing_file_stored_in_sc_memory;
-	action_of_interpreting_program_stored_in_sc_memory
-};;
+	action_of_interpreting_program_stored_in_sc_memory;;
 
 action_in_sc_memory_initiated_by_question
 <- sc_node_not_relation;
@@ -75,20 +72,16 @@ action_in_sc_memory_initiated_by_question
 	[действие, направленное на формирование ответа на поставленный вопрос]
 	(* <- lang_ru;; *);
 => nrel_inclusion:
-{
 	action_to_form_given_file;
 	action_to_form_given_structure
 	(*
 		=> nrel_inclusion:
-		{
 			act_verify_the_desired_structure
 			(* 
 				=> nrel_inclusion:
-				{
 					action_to_determine_truth_or_falsity_of_designated_logical_statement;
 					action_to_determine_correctness_or_incorrectness_of_designated_structure;
-					action_to_form_structure_describing_incorrectnesses_existing_in_designated_structure
-				};;
+					action_to_form_structure_describing_incorrectnesses_existing_in_designated_structure;;
 			*);
 			action_to_determine_type_of_given_sc_element
 			(*
@@ -98,19 +91,15 @@ action_in_sc_memory_initiated_by_question
 			action_to_form_semantic_neighborhood
 			(*
 				=> nrel_inclusion:
-				{
 					action_to_form_full_semantic_neighborhood_of_designated_entity;
 					action_to_form_basic_semantic_neighborhood_of_designated_entity;
-					action_to_form_local_semantic_neighborhood_of_designated_entity
-				};;
+					action_to_form_local_semantic_neighborhood_of_designated_entity;;
 			*);
 			action_to_form_structure_describing_connections_between_designated_entities
 			(*
 				=> nrel_inclusion:
-				{
 					action_to_form_structure_describing_similarities_of_designated_entities;
-					action_to_form_structure_describing_differences_of_designated_entities
-				};;
+					action_to_form_structure_describing_differences_of_designated_entities;;
 			*);
 			action_to_form_structure_describing_method_of_designated_task_solution;
 			action_to_form_plan_of_answer_to_selected_question_generation;
@@ -119,10 +108,8 @@ action_in_sc_memory_initiated_by_question
 			action_to_verify_argumentation_of_designated_solution_correctness;
 			action_one_of_arguments_of_that_is_some_generalized_structure;
 			action_aimed_at_determination_of_designated_entity_temporal_characteristics;
-			action_aimed_at_determination_of_designated_entity_extensive_characteristics
-		};;
-	*)
-};;
+			action_aimed_at_determination_of_designated_entity_extensive_characteristics;;
+	*);;
 
 action_to_form_given_file
 <- sc_node_not_relation;
@@ -319,7 +306,7 @@ action_of_editing_kb
 	[действие редактирования базы знаний ostis-системы]
 	(* <- lang_ru;; *);
 => nrel_inclusion:
-{
+	action_to_reverse_sc_arc_direction;
 	action_to_correct_mistakes_in_given_structure;
 	action_to_modify_selected_structure_in_accord_with_selected_rule;
 	action_to_identify_two_selected_sc_elements;
@@ -327,19 +314,16 @@ action_of_editing_kb
 	action_of_generation_sc_elements
 	(*
 		=> nrel_inclusion:
-		{
 			action_of_generation_one_of_arguments_of_that_is_some_generalized_structure
 			(*
 				=> nrel_inclusion:
-					action_to_generate_structure_that_is_isomorphic_to_designated_pattern;;
+					action_search_structure_which_is_isomorphic_to_given_pattern;;
 			*);
 			action_to_generate_sc_element_of_selected_type
 			(* 
 				=> nrel_inclusion:
-				{
 					action_to_generate_sc_connector_of_selected_type;
-					action_to_generate_sc_node_of_selected_type
-				};;
+					action_to_generate_sc_node_of_selected_type;;
 			*);
 			action_to_generate_structure_containing_selected_sc_elements;
 			action_to_generate_file_with_selected_content;
@@ -348,25 +332,19 @@ action_of_editing_kb
 			action_to_translate_designated_file_content_to_sc_memory;
 			action_to_integrate_selected_structure_into_current_state_of_kb;
 			action_to_generate_structure_describing_evolutionary_history_of_ostis_system;
-			action_to_generate_structure_describing_performance_history_of_ostis_system
-		};;
+			action_to_generate_structure_describing_performance_history_of_ostis_system;;
 	*);
 	action_of_deleting_sc_elements
 	(*
 		=> nrel_inclusion:
-		{
 			action_to_delete_selected_sc_elements
 			(*
 				=> nrel_inclusion:
-				{
 					action_to_delete_selected_sc_element;
-					action_to_delete_sc_elements_that_are_contained_in_selected_structure_and_that_arent_keynodes_of_any_sc_agents
-				};;
+					action_to_delete_sc_elements_that_are_contained_in_selected_structure_and_that_arent_keynodes_of_any_sc_agents;;
 			*);
-			action_to_exclude_selected_sc_elements_from_client_side_of_knowledge_base
-		};;
-	*)
-};;
+			action_to_exclude_selected_sc_elements_from_client_side_of_knowledge_base;;
+	*);;
 
 action_to_correct_mistakes_in_given_structure
 <- sc_node_not_relation;
@@ -457,12 +435,12 @@ action_of_generation_one_of_arguments_of_that_is_some_generalized_structure
 	[action of generation one of arguments of that is some generalized structure]
 	(* <- lang_en;; *);;
 
-action_to_generate_structure_that_is_isomorphic_to_designated_pattern
+action_search_structure_which_is_isomorphic_to_given_pattern
 <- sc_node_not_relation;
 => nrel_main_idtf:
-	[действие. сгенерировать структуру, изоморфную указываемому образцу]
+	[действие. найти структуру, изоморфную указываемому образцу]
 	(* <- lang_ru;; *);
-	[action. to generate structure that is isomorphic to designated pattern]
+	[action. to search for structure which is isomorphic to given pattern]
 	(* <- lang_en;; *);;
 
 action_to_generate_sc_element_of_selected_type
@@ -590,20 +568,20 @@ action_of_deleting_sc_elements
 	[action of deleting sc-elements]
 	(* <- lang_en;; *);;
 
-action_to_delete_selected_sc_elements
-<- sc_node_not_relation;
-=> nrel_main_idtf:
-	[действие. удалить указанные sc-элементы]
-	(* <- lang_ru;; *);
-	[action. to delete selected sc-elements]
-	(* <- lang_en;; *);;
-
 action_to_delete_selected_sc_element
 <- sc_node_not_relation;
 => nrel_main_idtf:
 	[действие. удалить указанный sc-элемент]
 	(* <- lang_ru;; *);
 	[action. to delete selected sc-element]
+	(* <- lang_en;; *);;
+
+action_to_delete_selected_sc_elements
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. удалить указанные sc-элементы]
+	(* <- lang_ru;; *);
+	[action. to delete selected sc-elements]
 	(* <- lang_en;; *);
 <= nrel_subdividing:
 {
@@ -660,7 +638,7 @@ action_of_ostis_system_mode_setting
 => nrel_main_idtf:
 	[действие установки режима ostis-системы]
 	(* <- lang_ru;; *);
-	[action of ostis system mode setting]
+	[action of ostis-system mode setting]
 	(* <- lang_en;; *);;
 
 action_of_editing_file_stored_in_sc_memory
