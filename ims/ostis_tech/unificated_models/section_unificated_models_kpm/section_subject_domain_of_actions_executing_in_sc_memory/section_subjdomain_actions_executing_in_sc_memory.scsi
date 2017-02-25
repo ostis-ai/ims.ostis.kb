@@ -317,7 +317,7 @@ action_of_editing_kb
 			action_of_generation_one_of_arguments_of_that_is_some_generalized_structure
 			(*
 				=> nrel_inclusion:
-					action_to_generate_structure_that_is_isomorphic_to_designated_pattern;;
+					action_search_structure_which_is_isomorphic_to_given_pattern;;
 			*);
 			action_to_generate_sc_element_of_selected_type
 			(* 
@@ -435,12 +435,12 @@ action_of_generation_one_of_arguments_of_that_is_some_generalized_structure
 	[action of generation one of arguments of that is some generalized structure]
 	(* <- lang_en;; *);;
 
-action_to_generate_structure_that_is_isomorphic_to_designated_pattern
+action_search_structure_which_is_isomorphic_to_given_pattern
 <- sc_node_not_relation;
 => nrel_main_idtf:
-	[действие. сгенерировать структуру, изоморфную указываемому образцу]
+	[действие. найти структуру, изоморфную указываемому образцу]
 	(* <- lang_ru;; *);
-	[action. to generate structure that is isomorphic to designated pattern]
+	[action. to search for structure which is isomorphic to given pattern]
 	(* <- lang_en;; *);;
 
 action_to_generate_sc_element_of_selected_type
