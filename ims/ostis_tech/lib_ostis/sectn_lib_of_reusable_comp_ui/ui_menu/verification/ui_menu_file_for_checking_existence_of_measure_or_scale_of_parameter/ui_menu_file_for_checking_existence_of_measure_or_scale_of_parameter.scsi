@@ -1,0 +1,23 @@
+ui_menu_file_for_checking_existence_of_measure_or_scale_of_parameter <- ui_user_command_class_atom; ui_user_command_class_view_kb; ui_one_argument_command_class;;
+
+ui_menu_file_for_checking_existence_of_measure_or_scale_of_parameter => nrel_main_idtf: 
+	[Проверить наличие единицы измерения или шкалы у параметра] 
+	(* <- lang_ru;; *);
+	[Check existence of measure or scale of parameter]
+	(* <- lang_en;; *);;
+	
+ui_menu_file_for_checking_existence_of_measure_or_scale_of_parameter => ui_nrel_command_template:
+	[*
+		action_to_check_existence_of_measure_or_scale_of_parameter _-> ._action_to_check_existence_of_measure_or_scale_of_parameter_instance
+			(*
+			_-> ui_arg_1;;	
+			*);;
+		._action_to_check_existence_of_measure_or_scale_of_parameter_instance _<- question;;
+	*];;
+
+ui_menu_file_for_checking_existence_of_measure_or_scale_of_parameter => ui_nrel_command_lang_template: 
+	[Проверить наличие единицы измерения или шкалы у параметра: $ui_arg_1] 
+	(* <- lang_ru;; *);
+	[Check existence of measure or scale of parameter: $ui_arg_1] 
+	(* <- lang_en;; *);;
+
