@@ -1,0 +1,36 @@
+lib_component_agent_of_verification_compliance_of_sheaf_pow_with_relation_arity
+=> nrel_main_idtf:
+	[Компонент библиотеки. sc-агент проверки на соответствие мощности связок арности отношения]
+	(* <- lang_ru;; *);
+	[Library component. sc-agent of checking sheafs on relation arity mapping]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components; 
+<- library_of_atomic_reusable_components; 
+
+=> nrel_attendant_component: 
+	lib_component_ui_menu_file_for_verification_compliance_of_sheaf_pow_with_relation_arity; 
+
+-> rrel_key_sc_element: 
+	.platform_independent_realization_of_sc_agent_of_verification_compliance_of_sheaf_pow_with_relation_arity;
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Agent_of_verification_compliance_of_sheaf_pow_with_relation_arity.html"
+				(* <- lang_ru;; *);; 
+		*);;
+	*);;
+
+action_of_verification_compliance_of_sheaf_pow_with_relation_arity <- sc_node_not_relation;;
+
+action_of_verification_compliance_of_sheaf_pow_with_relation_arity => nrel_main_idtf: 
+	[действие. проверить на соответствие мощности связок арности отношения] 
+	(* <- lang_ru;; *);
+	[action. test compliance of power cords arity relations] 
+	(* <- lang_en;; *);;
