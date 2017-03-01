@@ -1,0 +1,37 @@
+lib_component_agent_of_finding_initiated_action_for_a_specific_performer
+=> nrel_main_idtf:
+	[Компонент библиотеки. Sc-агент поиска действий, закреплённых за конкретным исполнителем]
+	(* <- lang_ru;; *);
+	[Library component. Sc-agent of finding actions assigned for a specific performer]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components; 
+<- library_of_atomic_reusable_components; 
+
+=> nrel_attendant_component: 
+	lib_component_ui_menu_for_agent_of_finding_initiated_action_for_a_specific_performer;
+
+-> rrel_key_sc_element: 
+	.platform_independent_realization_of_sc_agent_of_finding_initiated_action_for_a_specific_performer; 
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/agent_of_finding_initiated_action_for_a_specific_performer.html"
+				(* <- lang_ru;; *);; 
+		*);;
+	*);;
+
+action_of_finding_initiated_action_for_a_specific_performer
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. найти действия, закреплённые за конкретным исполнителем]
+		(*<- lang_ru;;*);
+=> nrel_main_idtf:
+	[action. find actions assigned for a specific performer]
+		(* <- lang_en;; *);;
