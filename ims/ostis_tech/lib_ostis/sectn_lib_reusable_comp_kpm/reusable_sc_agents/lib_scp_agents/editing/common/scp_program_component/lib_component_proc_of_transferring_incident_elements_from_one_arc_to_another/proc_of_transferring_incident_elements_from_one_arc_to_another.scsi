@@ -1,0 +1,653 @@
+scp_program-> proc_of_transferring_incident_elements_from_one_arc_to_another
+	(*
+	-> rrel_params: .proc_of_transferring_incident_elements_from_one_arc_to_another_param
+		(*
+		-> rrel_1: rrel_in: _param;;
+		-> rrel_2: rrel_in: _result_arc;;
+		*);;
+
+	-> rrel_operators: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_set
+		(*
+		-> rrel_init: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_gen_set_of_input_arcs
+			(*
+			<- genEl;;
+
+			-> rrel_1: rrel_assign: rrel_node: rrel_scp_var: _set_of_arcs;; 
+
+			=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_gen_set_of_possible_sections;;
+			*);;
+
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_gen_set_of_possible_sections
+			(*
+			<- genEl;;
+
+			-> rrel_1: rrel_assign: rrel_node: rrel_scp_var: _possible_sections;; 
+
+			=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_gen_set_of_sections;;
+			*);;
+
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_gen_set_of_sections
+			(*
+			<- genEl;;
+
+			-> rrel_1: rrel_assign: rrel_node: rrel_scp_var: _sections;; 
+
+			=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_fill_set_of_input_arcs_1;;
+			*);;
+
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_fill_set_of_input_arcs_1
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _elem;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _param;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _set_of_arcs;;
+
+        		=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_fill_set_of_input_arcs_2;;
+        		*);;
+
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_fill_set_of_input_arcs_2
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _elem;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _param;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _set_of_arcs;;
+
+        		=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_fill_set_of_input_arcs_3;;
+        		*);;
+		
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_fill_set_of_input_arcs_3
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _elem;;
+			-> rrel_2: rrel_assign: rrel_edge: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _param;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _set_of_arcs;;
+
+        		=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_input_arc;; 
+        		*);;
+
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_input_arc
+			(*
+		  	<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_arcs;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _found_arc;;
+
+		  	=> nrel_then: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_erase_from_set;;
+		  	=> nrel_else: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_fill_set_of_output_arcs_1;; 
+			*);;
+
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_erase_from_set
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc;; 
+
+			=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_system;;
+			*);;
+
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_system
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: system_element;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _found_arc;;
+
+        		=> nrel_then: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_input_arc;; 
+			=> nrel_else: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_fill_possible_sections;;
+        		*);;
+		
+
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_fill_possible_sections
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: rrel_struct: _elem;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _found_arc;;
+
+			-> rrel_set_1: rrel_fixed: rrel_scp_var: _possible_sections;;
+
+        		=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_sections;;
+        		*);;
+
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_sections
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _possible_sections;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _section;;
+
+        		=> nrel_then: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_erase_possible_section;;  
+			=> nrel_else: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_any_section;; 
+        		*);;
+
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_erase_possible_section
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc1;; 
+
+			=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_section;; 
+			*);;
+
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_section
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: section;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _section;;
+
+        		=> nrel_then: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_section_is_found;; 
+			=> nrel_else: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_sections;;
+        		*);;
+	
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_section_is_found
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _sections;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _new_arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _section;;
+
+			=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_sections;; 
+			*);;
+
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_any_section
+			(*
+		  	<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _sections;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _section;;
+
+		  	=> nrel_then: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_elem;;   
+			=> nrel_else: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_input_arc;;  
+			*);;
+		
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_elem
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _elem;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: _found_arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _par;;
+
+        		=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_pos_const_perm;;
+        		*);;
+
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_pos_const_perm
+			(*
+			<- ifType;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_pos_const_perm: _found_arc;;
+
+			=> nrel_then: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_exist_pos_const_perm;;
+			=> nrel_else: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_common_arc;;
+			*);;
+
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_common_arc
+			(*
+			<- ifType;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_common: _found_arc;;
+
+			=> nrel_then: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_exist_common;;
+			=> nrel_else: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_exist_edge_1;; 
+			*);;
+
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_exist_pos_const_perm
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _elem;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _new_arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _result_arc;;
+
+			=> nrel_then: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_input_arc;;
+			=> nrel_else: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_gen_pos_const_perm;; 
+			*);;
+
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_gen_pos_const_perm
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _elem;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_pos_const_perm: rrel_scp_var: _new_arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _result_arc;;
+
+			=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_all_sections;; 
+			*);;
+
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_exist_common
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _elem;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _new_arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _result_arc;;
+
+			=> nrel_then: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_input_arc;;
+			=> nrel_else: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_gen_common;; 
+			*);;
+		
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_gen_common
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _elem;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_const: rrel_scp_var: _new_arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _result_arc;;
+
+			=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_all_sections;; 
+			*);;
+
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_exist_edge_1
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _elem;;
+			-> rrel_2: rrel_assign: rrel_edge: rrel_scp_var: _new_arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _result_arc;;
+
+			=> nrel_then: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_input_arc;;
+			=> nrel_else: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_gen_edge;; 
+			*);;
+
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_gen_edge
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _elem;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_edge: rrel_scp_var: _new_arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _result_arc;;
+
+			=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_all_sections;; 
+			*);;
+
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_all_sections
+			(*
+		  	<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _sections;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _section;;
+
+		  	=> nrel_then: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_delete_section;;
+			=> nrel_else: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_call_proc_of_transferring_incident_elements_from_one_arc_to_another;;
+			*);;
+
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_delete_section
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc;; 
+
+			=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_add_section;; 
+			*);;
+		
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_add_section
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _section;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _new_arc;;
+
+			=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_all_sections;; 
+			*);;
+
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_call_proc_of_transferring_incident_elements_from_one_arc_to_another
+			(*
+		  	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_transferring_incident_elements_from_one_arc_to_another;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_call_proc_of_transferring_incident_elements_from_one_arc_to_another_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _found_arc;;
+				-> rrel_2: rrel_fixed: rrel_scp_var: _new_arc;;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr_1;;
+
+		  	=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_waitreturn_proc_of_transferring_incident_elements_from_one_arc_to_another;;
+			*);;
+
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_waitreturn_proc_of_transferring_incident_elements_from_one_arc_to_another
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr_1;;
+
+		  	=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_input_arc;;
+			*);;
+		
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_fill_set_of_output_arcs_1
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _param;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _elem;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _set_of_arcs;;
+
+        		=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_fill_set_of_output_arcs_2;;
+        		*);;
+
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_fill_set_of_output_arcs_2
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _param;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _elem;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _set_of_arcs;;
+
+        		=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_fill_set_of_output_arcs_3;;
+        		*);;
+		
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_fill_set_of_output_arcs_3
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _param;;
+			-> rrel_2: rrel_assign: rrel_edge: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _elem;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _set_of_arcs;;
+
+        		=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_output_arc;; 
+        		*);;
+
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_output_arc
+			(*
+		  	<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_arcs;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _found_arc;;
+
+		  	=> nrel_then: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_erase_from_set_of_arcs;;
+		  	=> nrel_else: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_del_temp_set;; 
+			*);;
+
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_erase_from_set_of_arcs
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc;; 
+
+			=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_fill_possible_sections_1;;
+			*);;
+
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_fill_possible_sections_1
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: rrel_struct: _elem;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _found_arc;;
+
+			-> rrel_set_1: rrel_fixed: rrel_scp_var: _possible_sections;;
+
+        		=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_sections_1;;
+        		*);;
+
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_sections_1
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _possible_sections;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _section;;
+
+        		=> nrel_then: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_erase_section;; 
+			=> nrel_else: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_any_section_exist;; 
+        		*);;
+
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_erase_section
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc1;; 
+
+			=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_check_is_section;; 
+			*);;
+
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_check_is_section
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: section;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _section;;
+
+        		=> nrel_then: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_section_has_found;; 
+			=> nrel_else: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_sections_1;; 
+        		*);;
+	
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_section_has_found
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _sections;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _new_arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _section;;
+
+			=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_sections_1;; 
+			*);;
+
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_any_section_exist
+			(*
+		  	<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _sections;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _section;;
+
+		  	=> nrel_then: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_element;;  
+			=> nrel_else: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_output_arc;; 
+			*);;
+		
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_element
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _par;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: _found_arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _elem;;
+
+        		=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_pos_const_perm_arc;;  
+        		*);;
+
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_pos_const_perm_arc
+			(*
+			<- ifType;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_pos_const_perm: _found_arc;;
+
+			=> nrel_then: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_exist_pos_const_perm_arc;; 
+			=> nrel_else: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_it_common_arc;; 
+			*);;
+
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_it_common_arc
+			(*
+			<- ifType;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_common: _found_arc;;
+
+			=> nrel_then: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_exist_common_arc;;
+			=> nrel_else: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_exist_edge;; 
+			*);;
+
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_exist_pos_const_perm_arc
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _result_arc;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _new_arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _elem;;
+
+			=> nrel_then: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_output_arc;;
+			=> nrel_else: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_gen_pos_const_perm_arc;; 
+			*);;
+
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_gen_pos_const_perm_arc
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _result_arc;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_pos_const_perm: rrel_scp_var: _new_arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _elem;;
+
+			=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_all_sections_of_arc;;  
+			*);;
+
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_exist_common_arc
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _result_arc;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _new_arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _elem;;
+
+			=> nrel_then: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_output_arc;;
+			=> nrel_else: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_gen_common_arc;; 
+			*);;
+		
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_gen_common_arc
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _result_arc;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_common: rrel_scp_var: _new_arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _elem;;
+
+			=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_all_sections_of_arc;;  
+			*);;
+
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_exist_edge
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _result_arc;;
+			-> rrel_2: rrel_assign: rrel_edge: rrel_scp_var: _new_arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _elem;;
+
+			=> nrel_then: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_output_arc;;
+			=> nrel_else: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_gen_new_edge;; 
+			*);;
+
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_gen_new_edge
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _result_arc;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_edge: rrel_scp_var: _new_arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _elem;;
+
+			=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_all_sections_of_arc;;  
+			*);;
+
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_all_sections_of_arc
+			(*
+		  	<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _sections;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _section;;
+
+		  	=> nrel_then: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_delete_sect;;
+			=> nrel_else: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_call_proc_of_transferring_incident_elements_from_one_arc_to_another_1;;  
+			*);;
+
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_delete_sect
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc;; 
+
+			=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_add;; 
+			*);;
+		
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_add
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _section;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _new_arc;;
+
+			=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_all_sections_of_arc;; 
+			*);;
+
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_call_proc_of_transferring_incident_elements_from_one_arc_to_another_1 
+			(*
+		  	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_transferring_incident_elements_from_one_arc_to_another;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_call_proc_of_transferring_incident_elements_from_one_arc_to_another_1_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _found_arc;;
+				-> rrel_2: rrel_fixed: rrel_scp_var: _new_arc;;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr_2;;
+
+		  	=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_waitreturn_proc_of_transferring_incident_elements_from_one_arc_to_another_1;;
+			*);;
+
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_waitreturn_proc_of_transferring_incident_elements_from_one_arc_to_another_1
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr_2;;
+
+		  	=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_output_arc;;
+			*);;
+
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_del_temp_set
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _set_of_arcs;; 
+
+			=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_del_possible_sections;;
+			*);;
+
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_del_possible_sections
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _possible_sections;; 
+
+			=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_del_sections;;
+			*);;
+
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_del_sections
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _sections;; 
+
+			=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_return;;
+			*);;
+
+		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_return
+			(*
+			<- return;;
+			*);;
+		*);;
+	*);;
