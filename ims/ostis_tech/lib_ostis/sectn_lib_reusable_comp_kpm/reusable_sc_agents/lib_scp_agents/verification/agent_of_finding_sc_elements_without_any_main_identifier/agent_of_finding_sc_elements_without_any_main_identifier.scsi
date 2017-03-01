@@ -1,0 +1,178 @@
+agent_of_finding_sc_elements_without_any_main_identifier
+=> nrel_main_idtf:
+	[агентная scp-программа поиска sc-элементов, имеющих системный идентификатор, но не имеющих ни одного основного] (* <- lang_ru;; *);
+	[agent scp-program of finding sc-elemnts with system identifier but without any main identifier] (* <- lang_en;; *);
+	<- agent_scp_program;;
+
+scp_program -> agent_of_finding_sc_elements_without_any_main_identifier 
+	(*
+	-> rrel_params: .agent_of_finding_sc_elements_without_any_main_identifier_params 
+		(*
+		-> rrel_1: rrel_in: _event;;
+		-> rrel_2: rrel_in: _input_arc;;
+		*);;
+
+	-> rrel_operators: .agent_of_finding_sc_elements_without_any_main_identifier_operator_set 
+		(*
+		-> rrel_init: .agent_of_finding_sc_elements_without_any_main_identifier_operatorA1 
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _temp;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: _input_arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _quest;;
+
+			=> nrel_goto: .agent_of_finding_sc_elements_without_any_main_identifier_operatorA2;;
+			*);;
+
+		-> .agent_of_finding_sc_elements_without_any_main_identifier_operatorA2 
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: action_to_find_sc_elements_without_any_main_identifier;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+
+		  	=> nrel_then: .agent_of_finding_sc_elements_without_any_main_identifier_operatorA3;;
+		  	=> nrel_else: .agent_of_finding_sc_elements_without_any_main_identifier_operator_return;;
+			*);;
+		
+		-> .agent_of_finding_sc_elements_without_any_main_identifier_operatorA3
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _param;;
+
+		  	=> nrel_then: .agent_of_finding_sc_elements_without_any_main_identifier_operatorA4;;
+		  	=> nrel_else: .agent_of_finding_sc_elements_without_any_main_identifier_operator_return;;
+			*);;
+
+		-> .agent_of_finding_sc_elements_without_any_main_identifier_operatorA4
+			(*
+			<- ifType;;
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_struct: _param;;
+
+			=> nrel_then: .agent_of_finding_sc_elements_without_any_main_identifier_operatorB1;;
+		  	=> nrel_else: .agent_of_finding_sc_elements_without_any_main_identifier_operator_return;;
+			*);;
+
+		-> .agent_of_finding_sc_elements_without_any_main_identifier_operatorB1
+			(*
+		  	<- genEl;;
+
+		  	-> rrel_1: rrel_assign: rrel_node: rrel_const: rrel_struct: rrel_scp_var: _set1;; 
+
+		  	=> nrel_goto: .agent_of_finding_sc_elements_without_any_main_identifier_operatorB2;;
+			*);;
+
+		-> .agent_of_finding_sc_elements_without_any_main_identifier_operatorB2
+			(*
+		  	<- searchSetStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _param;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _node1;;
+
+		  	-> rrel_set_3: rrel_assign: rrel_scp_var: _set2;;
+
+		  	=> nrel_then: .agent_of_finding_sc_elements_without_any_main_identifier_operatorB3;;
+		  	=> nrel_else: .agent_of_finding_sc_elements_without_any_main_identifier_operator_return;;
+			*);;
+
+		-> .agent_of_finding_sc_elements_without_any_main_identifier_operatorB3
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _set2;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _node2;;
+
+		  	=> nrel_then: .agent_of_finding_sc_elements_without_any_main_identifier_operatorB4;;
+		  	=> nrel_else: .agent_of_finding_sc_elements_without_any_main_identifier_operatorC1;;
+			*);;
+
+		-> .agent_of_finding_sc_elements_without_any_main_identifier_operatorB4
+			(*
+		  	<- searchElStr5;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _node2;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc2;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _node3;;
+		  	-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc4;;
+		  	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_system_identifier;;
+
+		  	=> nrel_then: .agent_of_finding_sc_elements_without_any_main_identifier_operatorB5;;
+		  	=> nrel_else: .agent_of_finding_sc_elements_without_any_main_identifier_operatorB7;;
+			*);;
+
+		-> .agent_of_finding_sc_elements_without_any_main_identifier_operatorB5
+			(*
+		  	<- searchElStr5;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _node2;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc3;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _node4;;
+		  	-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc4;;
+		  	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_main_idtf;;
+
+		   	=> nrel_then: .agent_of_finding_sc_elements_without_any_main_identifier_operatorB7;;
+		  	=> nrel_else: .agent_of_finding_sc_elements_without_any_main_identifier_operatorB6;;  
+			*);;
+
+		-> .agent_of_finding_sc_elements_without_any_main_identifier_operatorB6
+			(*
+		  	<- genElStr5;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _set1;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc5;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _node2;;
+		  	-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc4;;
+		  	-> rrel_5: rrel_fixed: rrel_scp_const: rrel_key_sc_element;;
+
+			=> nrel_goto: .agent_of_finding_sc_elements_without_any_main_identifier_operatorB7;;  
+			*);;
+
+		-> .agent_of_finding_sc_elements_without_any_main_identifier_operatorB7
+			(*
+		 	<- eraseEl;;
+
+		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc1;;
+
+		 	=> nrel_goto: .agent_of_finding_sc_elements_without_any_main_identifier_operatorB3;;
+		 	*);;
+
+		-> .agent_of_finding_sc_elements_without_any_main_identifier_operatorC1
+			(*
+			<- call;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_generation_of_verification_answer;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_finding_sc_elements_without_any_main_identifier_operatorC1_params
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+				-> rrel_2: rrel_fixed: rrel_scp_const: action_to_find_sc_elements_without_any_main_identifier;;
+				-> rrel_3: rrel_fixed: rrel_scp_var: _set1;;
+				-> rrel_4: rrel_fixed: rrel_scp_const: struct_of_elements_without_main_identifiers;;
+				*);;
+			-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
+
+			=> nrel_goto: .agent_of_finding_sc_elements_without_any_main_identifier_operatorC2;;
+			*);;
+
+		-> .agent_of_finding_sc_elements_without_any_main_identifier_operatorC2
+			(*
+			<- waitReturn;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
+
+			=> nrel_goto: .agent_of_finding_sc_elements_without_any_main_identifier_operator_return;;
+			*);;
+		
+		-> .agent_of_finding_sc_elements_without_any_main_identifier_operator_return 
+			(*
+		  	<- return;;
+			*);;
+		*);;
+	*);;
