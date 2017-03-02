@@ -131,23 +131,22 @@ binary_sheaf
 	(* <- lang_ru;; *);
 	[binary sheaf]
 	(* <- lang_en;; *);
-<= nrel_subdividing: 
+<= nrel_subdividing:
+{
+	sc_connector;
+	non_atomic_binary_sheaf
+}; 
+-> rrel_key_sc_element:
 	...
 	(*
-		-> sc_connector;;
-		-> non_atomic_binary_sheaf;;
-		-> rrel_key_sc_element:
-			...
-			(*
-				<- note;;
-				<= nrel_sc_text_translation:
-				...
-				(*
-				-> rrel_example:
-						"file://nl_files/note_for_binary_sheaf.html"			
-					(* <- lang_ru;;	*);;
-				*);;
-			*);;
+		<- note;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://nl_files/note_for_binary_sheaf.html"			
+			(* <- lang_ru;;	*);;
+		*);;
 	*);;
 
 sc_connector
@@ -220,7 +219,7 @@ non_oriented_sheaf
 		(* <- lang_ru;; *);
 	[non oriented sheaf]
 	(* <- lang_en;; *);
-<= nrel_strict_inclusion: non_oriented_set;
+=> nrel_strict_inclusion: non_oriented_set;
 <- rrel_key_sc_element:
 	...
 		(*
@@ -265,13 +264,10 @@ relation
 => nrel_idtf:
 	[класс связей]
 	(* <- lang_ru;; *);
-=> nrel_idtf:
 	[класс sc-связок]
 	(* <- lang_ru;; *);
-=> nrel_idtf:
 	[множество отношений]
 	(* <- lang_ru;; *);
-=> nrel_idtf:
 	[Множество всевозможных отношений]
 	(* <- lang_ru;; *);
 <- rrel_key_sc_element:
@@ -348,7 +344,7 @@ class_of_sheaves_with_different_cardinality
 	(* <- lang_ru;; *);
 	[класс связок разной мощности]
 	(* <- lang_ru;; *);
-<= nrel_strict_inclusion: nonbinary_relation;
+=> nrel_strict_inclusion: nonbinary_relation;
 <- rrel_key_sc_element:
 	...
 		(*
@@ -372,10 +368,8 @@ unary_relation
 => nrel_idtf:
 	[отношение арности один]
 	(* <- lang_ru;; *);
-=> nrel_idtf:
 	[одноместное отношение]
 	(* <- lang_ru;; *);
-=> nrel_idtf:
 	[множество синглетонов]
 	(* <- lang_ru;; *);
 <- rrel_key_sc_element:
@@ -401,7 +395,6 @@ binary_relation
 => nrel_idtf:
 	[отношение арности два]
 	(* <- lang_ru;; *);
-=> nrel_idtf:
 	[двухместное отношение]
 	(* <- lang_ru;; *);
 => nrel_strict_inclusion: quasybinary_relation;
@@ -485,7 +478,6 @@ ternary_relation
 => nrel_idtf:
 	[отношение арности три]
 	(* <- lang_ru;; *);
-=> nrel_idtf:
 	[трехместное отношение]
 	(* <- lang_ru;; *);
 <- rrel_key_sc_element:
@@ -724,7 +716,7 @@ related_relation
 	(* <- lang_ru;; *);
 	[related relation]
 	(* <- lang_en;; *);
-=> nrel_strict_inclusion: binary_relation;
+<= nrel_strict_inclusion: binary_relation;
 <- rrel_key_sc_element:
 	...
 		(*
@@ -869,16 +861,13 @@ role_relation
 => nrel_idtf:
 	[атрибут]
 	(* <- lang_ru;; *);
-=> nrel_idtf:
 	[атрибутивное отношение]
 	(* <- lang_ru;; *);
-=> nrel_idtf:
 	[отношение, которое задает роль элементов в рамках некоторого множества]
 	(* <- lang_ru;; *);
-=> nrel_idtf:
 	[отношение, являющееся подмножеством отношения принадлежности]
 	(* <- lang_ru;; *);
-<= nrel_set_of_subsets: nrel_access;
+<= nrel_set_of_subsets: nrel_belonging;
 <= nrel_strict_inclusion: binary_relation;
 => nrel_strict_inclusion: order_role_relation;
 <- rrel_key_sc_element:
@@ -906,14 +895,6 @@ role_relation
 			*);;
 		*);;
 
-nrel_access
-<- sc_node_norole_relation;
-=> nrel_main_idtf:
-	[принадлежность*]
-	(* <- lang_ru;; *);
-	[access*]
-	(* <- lang_en;; *);;
-
 order_role_relation
 <- sc_node_not_relation;
 => nrel_main_idtf:
@@ -924,7 +905,6 @@ order_role_relation
 => nrel_idtf:
 	[порядковый номер]
 	(* <- lang_ru;; *);
-=> nrel_idtf:
 	[номер компонента ориентированной связки]
 	(* <- lang_ru;; *);
 -> rrel_1; rrel_2; rrel_3; rrel_4; rrel_5; rrel_6; rrel_7; rrel_8; rrel_9; rrel_10; 	
@@ -1302,9 +1282,7 @@ nrel_quotient_set
 	[quotient set*] (* <- lang_en;; *);
 => nrel_idtf:
 	[быть фактор-множеством*] (* <- lang_ru;; *);
-=> nrel_idtf:
 	[множество всевозможных максимальных множеств из попарно эквивалентных элементов*] (* <- lang_ru;; *);
-=> nrel_idtf:
 	[множество всевозможных классов эквивалентности для заданного отношения эквивалентности*] (*<- lang_ru;;*);
 <- binary_relation;
 <- rrel_key_sc_element:
@@ -1358,12 +1336,6 @@ decomposition_relation
 -> nrel_subdividing;
 -> nrel_section_decomposition;
 -> nrel_decomposition_of_abstract_object;;
-
-nrel_decomposition_of_abstract_object
-<- sc_node_norole_relation;
-=> nrel_main_idtf:
-	[декомпозиция абстрактного объекта*] (* <- lang_ru;; *);
-	[decomposition of abstract object*] (* <- lang_en;; *);;
 
 integration_relation
 <- sc_node_not_relation;
@@ -1434,14 +1406,16 @@ nrel_mapping_between_non_intersecting_sets
 nrel_mapping_between_strict_intersecting_sets
 <- sc_node_norole_relation;
 => nrel_main_idtf:
-	[соответствие между пересекающимися множествами*] (* <- lang_ru;; *);
+	[соответствие между строго пересекающимися множествами*] (* <- lang_ru;; *);
 	[mapping between strict intersecting sets*] (* <- lang_en;; *);;
 
 nrel_mapping_input_and_output_sets_of_which_coincide
 <- sc_node_norole_relation;
 => nrel_main_idtf:
-	[соответствие между непересекающимися множествами*] (* <- lang_ru;; *);
-	[mapping input and output sets of which coincide*] (* <- lang_en;; *);;
+	[соответствие, область отправления и область прибытия которого совпадают*] 
+	(* <- lang_ru;; *);
+	[mapping input and output sets of which coincide*] 
+	(* <- lang_en;; *);;
 
 nrel_relation_of_mapping
 <- sc_node_norole_relation;
@@ -1481,10 +1455,8 @@ rrel_input_set
 	[input set'] (* <- lang_en;; *);
 => nrel_idtf:
 	[область отправления соответствия'] (* <- lang_ru;; *);
-=> nrel_idtf:
 	[первый компонент пары в отношении соответствия'] (* <- lang_ru;; *);
-=> nrel_idtf:
-	[область отправления'] (* <- lang_ru;; *);//'
+	[область определения соответствия'] (* <- lang_ru;; *);
 <- role_relation;
 <- rrel_key_sc_element:
 	...
@@ -1518,7 +1490,6 @@ rrel_output_set
 	[output set'] (* <- lang_en;; *);
 => nrel_idtf:
 	[область прибытия соответствия'] (* <- lang_ru;; *);
-=> nrel_idtf:
 	[область значений соответствия'] (* <- lang_ru;; *);
 <- role_relation;
 <- rrel_key_sc_element:
@@ -1553,7 +1524,7 @@ rrel_image_of_mapping
 	[образ'] (* <- lang_ru;; *);
 	[image of mapping'] (* <- lang_en;; *);
 => nrel_idtf:
-	[образ соответствия'] (* <- lang_ru;; *);//'
+	[образ соответствия'] (* <- lang_ru;; *);
 <- rrel_key_sc_element:
 	...
 	(*
@@ -1587,7 +1558,6 @@ rrel_preimage_of_mapping
 	[preimage of mapping'] (* <- lang_en;; *);
 => nrel_idtf:
 	[прообраз соответствия'] (* <- lang_ru;; *);
-=> nrel_idtf:
 	[inverse image'] (* <- lang_en;; *);
 <- rrel_key_sc_element:
 	...
@@ -1621,8 +1591,7 @@ nrel_total_mapping
 	[total mapping] (* <- lang_en;; *);
 => nrel_idtf:
 	[полное соответствие*] (* <- lang_ru;; *);
-=> nrel_idtf:
-	[наличие всюду определенного соответствия*] (* <- lang_en;; *);
+	[наличие всюду определенного соответствия*] (* <- lang_ru;; *);
 <- rrel_key_sc_element:
 	...
 	(*
@@ -1711,7 +1680,6 @@ nrel_surjection
 	[surjection*] (* <- lang_en;; *);
 => nrel_idtf:
 	[наличие сюръективного соответствия*] (* <- lang_ru;; *);
-=> nrel_idtf:
 	[сюръекция*] (* <- lang_ru;; *);
 <- rrel_key_sc_element:
 	...
@@ -1801,9 +1769,7 @@ nrel_functional_mapping
 	[functional mapping*] (* <- lang_en;; *);
 => nrel_idtf:
 	[наличие однозначного соответствия*] (* <- lang_ru;; *);
-=> nrel_idtf:
 	[функциональное соответветствие*] (* <- lang_ru;; *);
-=> nrel_idtf:
 	[функция*] (* <- lang_ru;; *);
 <- rrel_key_sc_element:
 	...
@@ -2024,13 +1990,9 @@ nrel_set_of_combinations
 	[set of combinations*] (* <- lang_en;; *);
 => nrel_idtf:
 	[множество всевозможных сочетаний*] (* <- lang_ru;; *);
-=> nrel_idtf:
 	[множество всевозможных сочетаний заданной арности из элементов заданного множества*] (* <- lang_ru;; *);
-=> nrel_idtf:
 	[множество всех неориентированных связок заданной арности*] (* <- lang_ru;; *);
-=> nrel_idtf:
 	[множество всех подмножеств заданной мощности*] (* <- lang_ru;; *);
-=> nrel_idtf:
 	[семейство всевозможных сочетаний*] (* <- lang_ru;; *);
 <- rrel_key_sc_element:
 	...
