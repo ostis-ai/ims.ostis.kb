@@ -7,7 +7,6 @@ section_subject_domain_of_sc_agents
 	(* <- lang_ru;; *);
 <- atomic_section;
 <- not_enough_formed_structure;
-
 => nrel_introduction:
 	...
 	(*
@@ -48,6 +47,21 @@ rrel_key_sc_element -> (section_subject_domain_of_sc_agents -> subject_domain_of
 	=> nrel_key_sc_element_order: (section_subject_domain_of_sc_agents -> receptor_abstract_sc_agent)	
 (*
 	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_sc_agents -> abstract_sc_agent_is_not_implemented_on_the_scp_language)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_sc_agents -> abstract_sc_agent_implemented_on_the_scp_language)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_sc_agents -> abstract_sc_agent_of_interpretation_of_scp_program)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_sc_agents -> abstract_program_sc_agent)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_sc_agents -> abstract_sc_metaagent)
+(*
+	<- rrel_key_sc_element;;
 	=> nrel_key_sc_element_order: (section_subject_domain_of_sc_agents -> nrel_abstract_sc_agent_decomposition)
 (*
 	<- rrel_key_sc_element;;
@@ -72,6 +86,9 @@ rrel_key_sc_element -> (section_subject_domain_of_sc_agents -> subject_domain_of
 	=> nrel_key_sc_element_order: (section_subject_domain_of_sc_agents -> sc_description_of_sc_agent_behavior)
 (*
 	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_sc_agents -> process_in_sc_memory)
+(*
+	<- rrel_key_sc_element;;
 	=> nrel_key_sc_element_order: (section_subject_domain_of_sc_agents -> nrel_lock)
 (*
 	<- rrel_key_sc_element;;
@@ -85,5 +102,8 @@ rrel_key_sc_element -> (section_subject_domain_of_sc_agents -> subject_domain_of
 (*
 	<- rrel_key_sc_element;;
 	=> nrel_key_sc_element_order: (section_subject_domain_of_sc_agents -> lock_for_deleting)
-	(* <- rrel_key_sc_element;; *);;
-*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);; 
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_sc_agents -> abstract_program_sc_agent_implemented_on_the_scp_language)
+(* <- rrel_key_sc_element;; *);;
+*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;
