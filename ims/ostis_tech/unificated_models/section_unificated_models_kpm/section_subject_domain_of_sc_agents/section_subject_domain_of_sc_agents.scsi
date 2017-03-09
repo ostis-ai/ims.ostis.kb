@@ -50,10 +50,11 @@ abstract_sc_agent
 		[abstract sc-agent]
 		(* <- lang_en;; *);
 		<- rrel_key_sc_element:
-			..key_node_abstract_sc_agent
+			...
 			(*
-			<= nrel_sc_text_translation:	
-				..translation_abstract_sc_agent
+				<- explanation;;
+				<= nrel_sc_text_translation:	
+				...
 				(*
 				-> rrel_example:
 					"file://content_html/explanation_for_abstract_sc_agent.html"
@@ -67,8 +68,8 @@ abstract_sc_agent
 		};
 	<= nrel_subdividing:
 		{
-			inside_abstract_sc_agent ;
-			effector_abstract_sc_agent ;
+			inside_abstract_sc_agent;
+			effector_abstract_sc_agent;
 			receptor_abstract_sc_agent 
 		};
 	<= nrel_subdividing: 
@@ -79,7 +80,7 @@ abstract_sc_agent
 	<= nrel_subdividing: 
 		{
 			abstract_sc_agent_of_interpretation_of_scp_program;
-			abstract_program_sc_agent ;
+			abstract_program_sc_agent;
 			abstract_sc_metaagent
 		};
 	<= nrel_subdividing:
