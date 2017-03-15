@@ -80,6 +80,11 @@ nrel_whole_part
 	(* <- lang_ru;; *);
 	[whole-part]
 	(* <- lang_en;; *);
+=> nrel_idtf:
+	[часть*]
+	(* <- lang_ru;; *);
+	[part*]
+	(* <- lang_en;; *);
 <- order_relation;
 <- rrel_key_sc_element:
 	...
@@ -93,6 +98,28 @@ nrel_whole_part
 				(* <- lang_ru;; *);;
 		*);;
 	*);;
+
+nrel_abstract_part
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[абстрактная часть*]
+	(* <- lang_ru;; *);
+	[abstract part*]
+	(* <- lang_en;; *);
+<- order_relation;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_abstract_part.html"
+				(* <- lang_ru;; *);;
+		*);;
+	*);;
+
 
 taxonomy_relation
 <- sc_node_not_relation;
