@@ -69,6 +69,7 @@ subject_domain_of_actions
 	nrel_else;
 	nrel_result;
 	nrel_performer;
+	nrel_executing_actions_class;
 	nrel_customer;
 	nrel_initiator;
 	nrel_object;
@@ -1453,6 +1454,30 @@ nrel_performer
 			(* <- lang_ru;;	*);;
 		*);;
 	*);;	
+
+nrel_executing_actions_class
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[класс выполняемых действий*]
+	(* <- lang_ru;; *);
+	[class of executing actions*]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[класс действий, выполняемых классом субъектов*]
+	(* <- lang_ru;; *);
+	
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_nrel_executing_actions_class.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);;
 	
 nrel_customer
 <- sc_node_norole_relation;
