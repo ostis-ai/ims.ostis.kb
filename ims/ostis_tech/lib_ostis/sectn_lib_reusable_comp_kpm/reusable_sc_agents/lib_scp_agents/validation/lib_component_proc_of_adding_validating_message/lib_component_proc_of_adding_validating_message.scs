@@ -5,16 +5,15 @@ lib_component_proc_of_adding_validating_message
 	[Library component. scp-program of adding validation message]
 	(* <- lang_en;; *);
 
-<- platform_independent_reusable_component_OSTIS;
-<- reusable_scp_program;
+<- library_of_platform_independent_reusable_components;
 
 -> rrel_key_sc_element: 
-	proc_of_adding_validating_message.scs;
+	proc_of_adding_validating_message;
 
 <- rrel_key_sc_element: 
 	...
 	(*
-	<- sc_explanation;;
+	<- explanation;;
 	<= nrel_sc_text_translation:
 		...
 		(*
@@ -23,3 +22,5 @@ lib_component_proc_of_adding_validating_message
 				(* <- lang_ru;; *);;
 		*);;
 	*);;
+
+lib_component_proc_of_adding_validating_message = [*^"file://proc_of_adding_validating_message.scsi"*];;
