@@ -996,9 +996,8 @@ logical_formula_and_uniqueness <- sc_node_not_relation;
 	[logical formula and uniqueness] (* <- lang_en;; *);
 
 <- logical_formula;
-<- unique_existence;
-
-
+<= nrel_inclusion:
+	unique_existence;
 <- rrel_key_sc_element:
 	...
 	(*
