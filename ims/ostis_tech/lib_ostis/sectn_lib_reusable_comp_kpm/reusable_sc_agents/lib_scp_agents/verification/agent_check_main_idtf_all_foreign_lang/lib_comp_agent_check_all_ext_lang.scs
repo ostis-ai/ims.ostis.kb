@@ -1,8 +1,8 @@
 lib_component_agent_of_checking_the_main_idtf_for_all_foreign_lang
 => nrel_main_idtf:
-	[Компонент библиотеки. sc-агент проверки наличия основных идентификаторов сущности для всех внешних языков]
+	[Компонент библиотеки. sc-агент проверки наличия основных идентификаторов sc-элементов в рамках заданной структуры для всех внешних языков]
 	(* <- lang_ru;; *);
-	[Library component. sc-agent of сhecking the main identifier of the entity for all external languages]
+	[Library component. sc-agent of сhecking existence of main identifiers for sc-elements within the given structure for all external languages]
 	(* <- lang_en;; *);
 
 <- library_of_platform_independent_reusable_components; 
@@ -30,8 +30,8 @@ lib_component_agent_of_checking_the_main_idtf_for_all_foreign_lang
 action_check_the_main_idtf_for_all_foreign_lang 
 <- sc_node_not_relation;
 => nrel_main_idtf:
-	[действие. проверить наличие основных идентификаторов сущности для всех внешних языков]
+	[действие. проверить наличие основных идентификаторов sc-элементов в рамках заданной структуры для всех внешних языков]
 	(* <- lang_ru;; *);
 => nrel_main_idtf:
-	[action. сheck the main identifier of the entity for all external languages]
+	[action. сheck existence of main identifiers for sc-elements within the given structure for all external languages]
 	(* <- lang_en;; *);;
