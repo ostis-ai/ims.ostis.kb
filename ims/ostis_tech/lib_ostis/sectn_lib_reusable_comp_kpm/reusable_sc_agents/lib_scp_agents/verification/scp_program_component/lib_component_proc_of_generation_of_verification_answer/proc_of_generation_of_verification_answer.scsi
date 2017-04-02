@@ -6,7 +6,7 @@ scp_program -> proc_of_generation_of_verification_answer
 		-> rrel_2: rrel_in: _action_class;;
 		-> rrel_3: rrel_in: _incorrect_struct;;
 		-> rrel_4: rrel_in: _incorrect_struct_class;;
-    	*);;
+    		*);;
 
 	-> rrel_operators: .proc_of_generation_of_verification_answer_operator_set
     		(*
@@ -22,7 +22,7 @@ scp_program -> proc_of_generation_of_verification_answer
 			=> nrel_else: .proc_of_generation_of_verification_answer_operator_call_success_execute;;
 			*);;
 
-    	-> .proc_of_generation_of_verification_answer_operator_F1
+    		-> .proc_of_generation_of_verification_answer_operator_F1
 			(*
 			<- genEl;;
 
