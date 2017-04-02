@@ -1,8 +1,8 @@
 lib_component_agent_of_checking_concept_def_existence
 => nrel_main_idtf:
-	[Компонент библиотеки. sc-агент проверки наличия определения или пояснения у понятий]
+	[Компонент библиотеки. sc-агент проверки наличия определений или пояснений у понятий, имеющихся в рамках заданной структуры]
 	(* <- lang_ru;; *);
-	[Library component. sc-agent of checking availability of concept definitions or explanation]
+	[Library component. sc-agent of checking definitions or explanations existence for concepts within the given structure]
 	(* <- lang_en;; *);
 
 <- library_of_platform_independent_reusable_components; 
@@ -30,7 +30,7 @@ lib_component_agent_of_checking_concept_def_existence
 action_to_check_concept_def_existence
 <- sc_node_not_relation;
 => nrel_main_idtf:
-	[действие. проверить наличие определения или пояснения у понятий]
+	[действие. проверить наличие определений или пояснений у понятий, имеющихся в рамках заданной структуры]
  	(* <- lang_ru;; *);
- 	[action. check availability of concept definitions or explanation]
+ 	[action. check definitions or explanations existence for concepts within the given structure]
  	(* <- lang_en;; *);;
