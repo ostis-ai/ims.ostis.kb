@@ -231,7 +231,7 @@ scp_program -> agent_of_checking_concept_def_existence
 		    	(*
 			<- ifVarAssign;;
 
-			-> rrel_1: rrel_fixed: rrel_scp_var: _concepts;;
+			-> rrel_1: rrel_scp_var: _concepts;;
 
 			=> nrel_then: .agent_of_checking_concept_def_existence_operator_erase_temp_set_2;;
 			=> nrel_else: .agent_of_checking_concept_def_existence_operator_temp_set_3_is_not_null;;
@@ -250,7 +250,7 @@ scp_program -> agent_of_checking_concept_def_existence
 		    	(*
 			<- ifVarAssign;;
 
-			-> rrel_1: rrel_fixed: rrel_scp_var: _def_set;;
+			-> rrel_1: rrel_scp_var: _def_set;;
 
 			=> nrel_then: .agent_of_checking_concept_def_existence_operator_erase_temp_set_3;;
 			=> nrel_else: .agent_of_checking_concept_def_existence_operator_return;;
