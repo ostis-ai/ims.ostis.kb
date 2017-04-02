@@ -10,7 +10,19 @@ scp_program -> proc_of_generation_of_verification_answer
 
 	-> rrel_operators: .proc_of_generation_of_verification_answer_operator_set
     		(*
-    		-> rrel_init: .proc_of_generation_of_verification_answer_operator_F1
+    		-> rrel_init: .proc_of_generation_of_verification_answer_operator_F0
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _incorrect_struct;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _node;;
+
+			=> nrel_then: .proc_of_generation_of_verification_answer_operator_F1;;
+			=> nrel_else: .proc_of_generation_of_verification_answer_operator_call_success_execute;;
+			*);;
+
+    	-> .proc_of_generation_of_verification_answer_operator_F1
 			(*
 			<- genEl;;
 
@@ -274,6 +286,30 @@ scp_program -> proc_of_generation_of_verification_answer
 
 			=> nrel_goto: .proc_of_generation_of_verification_answer_operator_return;;
 			*);;
+
+		-> .proc_of_generation_of_verification_answer_operator_call_success_execute 
+			(*
+		  	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_general_action_comment;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .proc_of_generation_of_verification_answer_operator_call_success_execute_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+				-> rrel_2: rrel_fixed: rrel_scp_const: [Problematic knowledge base fragments are not found.];;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr10;;
+
+		  	=> nrel_goto: .proc_of_generation_of_verification_answer_operator_waitreturn_success_execution;;
+			*);;
+
+		-> .proc_of_generation_of_verification_answer_operator_waitreturn_success_execution
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr10;;
+
+		  	=> nrel_goto: .proc_of_generation_of_verification_answer_operator_return;;
+			*);;	
 
 		-> .proc_of_generation_of_verification_answer_operator_return 
 			(*

@@ -115,7 +115,7 @@ scp_program -> agent_of_checking_concept_def_existence
 			-> rrel_3: rrel_assign: rrel_scp_var: _concept;;
 
 			=> nrel_then: .agent_of_checking_concept_def_existence_operator1G_loop1;;
-			=> nrel_else: .agent_of_checking_concept_def_existence_operator1G_is_empty_incorrect_structure;;
+			=> nrel_else: .agent_of_checking_concept_def_existence_operator_gen_verification_answer;;
 			*);;
 
 		-> .agent_of_checking_concept_def_existence_operator1G_loop1 
@@ -200,18 +200,6 @@ scp_program -> agent_of_checking_concept_def_existence
 
 			=> nrel_goto: .agent_of_checking_concept_def_existence_operator1G_loop_enter;;
 			*);;
-
-		-> .agent_of_checking_concept_def_existence_operator1G_is_empty_incorrect_structure
-			(*
-			<- searchElStr3;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _incorrect_structure;;
-			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
-			-> rrel_3: rrel_assign: rrel_scp_var: _node;;
-
-			=> nrel_goto: .agent_of_checking_concept_def_existence_operator_gen_verification_answer;;
-			=> nrel_else: .agent_of_checking_concept_def_existence_operator_call_success_execute;;
-			*);;	
 
 		-> .agent_of_checking_concept_def_existence_operator_gen_verification_answer
 			(*
@@ -299,31 +287,7 @@ scp_program -> agent_of_checking_concept_def_existence
 		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
 
 		  	=> nrel_goto: .agent_of_checking_concept_def_existence_operator_return;;
-			*);; 
-
-		-> .agent_of_checking_concept_def_existence_operator_call_success_execute 
-			(*
-		  	<- call;;
-
-		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_general_action_comment;;
-		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_checking_concept_def_existence_operator_call_success_execute_params 
-				(*
-				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
-				-> rrel_2: rrel_fixed: rrel_scp_const: [Problematic knowledge base fragments are not found.];;
-				*);;
-		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr2;;
-
-		  	=> nrel_goto: .agent_of_checking_concept_def_existence_operator_waitreturn_success_execution;;
-			*);;
-
-		-> .agent_of_checking_concept_def_existence_operator_waitreturn_success_execution
-			(*
-		  	<- waitReturn;;
-
-		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr2;;
-
-		  	=> nrel_goto: .agent_of_checking_concept_def_existence_operator_temp_set_2_is_not_null;;
-			*);;	
+			*);; 	
 
 		-> .agent_of_checking_concept_def_existence_operator_return 
 			(*
