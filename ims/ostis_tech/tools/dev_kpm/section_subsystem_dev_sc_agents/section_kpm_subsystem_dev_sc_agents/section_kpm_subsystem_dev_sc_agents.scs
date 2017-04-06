@@ -1,0 +1,15 @@
+section_kpm_subsystem_dev_sc_agents
+	=> nrel_main_idtf:
+	[Раздел. Машина обработки знаний подсистемы поддержки проектирования sc-агентов]
+	(* <- lang_ru;; *);
+	[Section. Knowledge processing machine of subsystem of support the sc-agents designing]
+	(* <- lang_en;; *);
+	<- not_enough_formed_structure;;
+
+section_kpm_subsystem_dev_sc_agents = [*^"file://section_kpm_subsystem_dev_sc_agents.scsi"*];;
+
+section_kpm_subsystem_dev_sc_agents
+   -> rrel_key_sc_element:
+	kpm_subsystem_dev_sc_agents;
+	abstract_sc_agent_sc_agents_verification;
+	abstract_sc_metaagent_sc_agents_teams_debug;;

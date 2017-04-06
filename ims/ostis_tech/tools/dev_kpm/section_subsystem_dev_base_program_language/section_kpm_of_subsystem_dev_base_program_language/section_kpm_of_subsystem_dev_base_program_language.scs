@@ -1,0 +1,17 @@
+section_kpm_of_subsystem_dev_base_program_language
+=> nrel_main_idtf:
+	[Раздел. Машина обработки знаний подсистемы поддержки проектирования программ базового языка программирования Технологии OSTIS]
+	(* <- lang_ru;; *);
+	[Section. Knowledge processing machine of subsystem of support of programs of the basic programming language of OSTIS Technology designing]
+	(* <- lang_en;; *);
+<- atomic_section;
+<- not_enough_formed_structure;;
+
+
+section_kpm_of_subsystem_dev_base_program_language = [*^"file://section_kpm_of_subsystem_dev_base_program_language.scsi"*];;
+
+section_kpm_of_subsystem_dev_base_program_language
+   -> rrel_key_sc_element:
+		kpm_dev_base_program_language;
+		abstract_sc_agent_verification_scp_programs;
+		abstract_sc_agent_debug_scp_programs;;

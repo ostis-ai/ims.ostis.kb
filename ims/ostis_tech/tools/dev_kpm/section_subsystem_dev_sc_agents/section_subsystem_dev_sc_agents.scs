@@ -1,0 +1,13 @@
+section_subsystem_dev_sc_agents
+	=> nrel_main_idtf:
+		[Раздел. Подсистема поддержки проектирования sc-агентов]
+		(* <- lang_ru;; *);
+		[Section. Subsystem of support of the sc-agents designing]
+		(* <- lang_en;; *);
+	<=nrel_section_decomposition:
+				{ 
+					section_kb_subsystem_dev_sc_agents;
+					section_kpm_subsystem_dev_sc_agents;
+					section_ui_subsystem_dev_sc_agents
+				};
+	<- not_enough_formed_structure;;

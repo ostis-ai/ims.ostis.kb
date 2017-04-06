@@ -1,0 +1,13 @@
+section_subsystem_dev_base_program_language
+	=> nrel_main_idtf:
+		[Раздел. Подсистема поддержки проектирования программ базового языка программирования Технологии OSTIS]
+		(* <- lang_ru;; *);
+		[Section. Subsystem of support of programs of the basic programming language of OSTIS Technology designing]
+		(* <- lang_en;; *);
+	<=nrel_section_decomposition:
+			{
+				section_kb_of_subsystem_dev_base_program_language;
+				section_kpm_of_subsystem_dev_base_program_language;
+				section_ui_of_subsystem_dev_base_program_language
+			};
+	<-not_enough_formed_structure;;

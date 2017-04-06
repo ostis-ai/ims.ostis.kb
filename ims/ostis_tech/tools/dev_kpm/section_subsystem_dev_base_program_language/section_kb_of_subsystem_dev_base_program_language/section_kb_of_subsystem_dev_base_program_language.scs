@@ -1,0 +1,25 @@
+section_kb_of_subsystem_dev_base_program_language
+=> nrel_main_idtf:
+	[Раздел. База знаний подсистемы поддержки проектирования программ базового языка программирования Технологии OSTIS]
+	(* <- lang_ru;; *);
+	[Section. Knowledge base of subsystem of support of programs of the basic programming language of OSTIS Technology designing]
+	(* <- lang_en;; *);
+<- atomic_section;
+<- not_enough_formed_structure;;
+
+section_kb_of_subsystem_dev_base_program_language = [*^"file://section_kb_of_subsystem_dev_base_program_language.scsi"*];;
+
+section_kb_of_subsystem_dev_base_program_language
+-> rrel_key_sc_element:
+	nrel_breakpoints;
+	breakpoint;
+	incorrectness_in_scp_program;
+	error_in_scp_program;
+	syntax_error_in_scp_program;
+	semantic_error_in_scp_program;
+	error_in_scp_program_at_program_level;
+	error_in_scp_program_at_set_of_parameters_level;
+	error_in_scp_program_at_set_of_operators_level;
+	error_in_scp_program_at_operator_level;
+	error_in_scp_program_at_operand_level;
+	nrel_incorrectness_in_scp_program;;
