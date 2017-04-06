@@ -1,0 +1,7 @@
+<p>Связки отношения <b><sc_element sys_idtf="nrel_breakpoints">точки останова</sc_element></b>* связывают 
+<sc_element sys_idtf="scp_program"> scp-программу</sc_element> с некоторым множеством sc-переменных, соответствующих
+<sc_element sys_idtf="scp_operator">scp-операторам</sc_element> в рамках этой программы.
+При генерации каждого <sc_element sys_idtf="scp_process">scp-процесса</sc_element>, соответствующего этой 
+<sc_element sys_idtf="scp_program">scp-программе</sc_element>, все <sc_element sys_idtf="scp_operator"> scp-операторы</sc_element>, соответствующие таким переменным, будут добавлены во множество <sc_element sys_idtf="breakpoint">точка останова</sc_element>, т.е. выполнение данного <sc_element sys_idtf="scp_process">scp-процесса</sc_element> будет прерываться при достижении каждого из этих <sc_element sys_idtf="scp_operator">scp-операторов</sc_element>.
+Использование данного отношения приводит к указанию точек останова для всех scp-процессов, формируемых на основе заданной scp-программы.
+Для указания <b><sc_element sys_idtf="breakpoint">точки останова</sc_element></b> в рамках отдельно взятого scp-процесса необходимо явно использовать множество точка останова.</p>

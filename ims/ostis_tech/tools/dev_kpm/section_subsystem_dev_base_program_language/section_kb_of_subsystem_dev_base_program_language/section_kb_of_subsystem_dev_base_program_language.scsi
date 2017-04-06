@@ -1,0 +1,434 @@
+nrel_breakpoints
+	=> nrel_main_idtf:
+		[точки останова*]
+		(* <- lang_ru;; *);
+		[breakpoints*]
+		(* <- lang_en;; *);
+	<- sc_node_norole_relation;
+	<- quasybinary_relation;
+	<- rrel_key_sc_element:
+		    ...
+			(*
+				<- explanation;;
+				<= nrel_sc_text_translation:
+						...
+				(*
+					-> rrel_example:
+						"file://content_html/nrel_breakpoints.html"
+						(* <- lang_ru;; *);;
+				*);;
+			*);;
+
+breakpoint
+	=> nrel_main_idtf:
+		[точка останова]
+		(* <- lang_ru;; *);
+		[breakpoint]
+		(* <- lang_en;; *);
+	<=nrel_inclusion : scp_operator;
+	<- sc_node_not_relation;
+	<- rrel_key_sc_element:
+	...
+		(*  <- explanation;;
+			<= nrel_sc_text_translation:	
+			...
+			(*
+				-> rrel_example:
+					"file://content_html/breakpoint.html"
+					(* <- lang_ru;; *);;
+			*);;
+		*);;
+
+incorrectness_in_scp_program
+	=> nrel_main_idtf:
+		[некорректность в scp-программе]
+		(* <- lang_ru;; *);
+		[incorrectness in the scp-program]
+		(* <- lang_en;; *);
+	=>nrel_inclusion: error_in_scp_program;
+	<=nrel_inclusion: incorrect_structure;
+	<- sc_node_not_relation;
+	<- rrel_key_sc_element:
+	   ...
+		(*  <- explanation;;
+			<= nrel_sc_text_translation:	
+			...
+			(*
+				-> rrel_example:
+					"file://content_html/incorrectness_in_scp_program.html"
+					(*	<- lang_ru;; *);;
+			*);;
+		*);
+	=>nrel_inclusion: unreachable_scp_operator;
+					  potentially_infinite_cycle;;
+
+unreachable_scp_operator
+	=> nrel_main_idtf:
+		[недостижимый scp-оператор]
+		(* <- lang_ru;; *);
+		[unreachable scp-operator]
+		(* <- lang_en;; *);
+	<- sc_node_not_relation;;
+
+potentially_infinite_cycle
+	=> nrel_main_idtf:
+		[потенциально бесконечный цикл]
+		(* <- lang_ru;; *);
+		[potentially infinite cycle]
+		(* <- lang_en;; *);
+	<- sc_node_not_relation;;
+
+error_in_scp_program
+	<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[ошибка в scp-программе]
+		(* <- lang_ru;; *);
+		[error in the scp-program]
+		(* <- lang_en;; *);
+	<= nrel_subdividing : 
+		{ syntax_error_in_scp_program;
+		  semantic_error_in_scp_program
+		};
+	<= nrel_subdividing : { 
+		error_in_scp_program_at_program_level;
+		error_in_scp_program_at_set_of_parameters_level;
+		error_in_scp_program_at_set_of_operators_level;
+		error_in_scp_program_at_operator_level;
+		error_in_scp_program_at_operand_level
+	};
+	<- rrel_key_sc_element:
+		  ...
+			(*  <- explanation;;
+				<= nrel_sc_text_translation:	
+				...
+				(*
+					-> rrel_example:
+						"file://content_html/error_in_scp_program.html"
+						(* 	<- lang_ru;; *);;
+				*);;
+			*);;
+
+error_in_scp_program_at_program_level
+	<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[ошибка в scp-программе на уровне программы]
+		(* <- lang_ru;; *);
+		[error in the scp-program at the program level]
+		(* <- lang_en;; *);
+	<- rrel_key_sc_element:
+		  ...
+			(*  <- explanation;;
+				<= nrel_sc_text_translation:	
+				...
+				(*
+					-> rrel_example:
+						"file://content_html/error_in_scp_program_at_program_level.html"
+						(* 	<- lang_ru;; *);;
+				*);;
+			*);
+	=> nrel_inclusion : absent_scp_process;
+						decomposition_of_scp_process_not_specified;;
+
+absent_scp_process
+	=> nrel_main_idtf:
+		[отсутствует scp-процесс, соответствующий данной scp-программе]
+		(* <- lang_ru;; *);
+		[scp-process corresponding to given scp-program is absent]
+		(* <- lang_en;; *);
+	<- syntax_error_in_scp_program;
+	<- sc_node_not_relation;;
+
+decomposition_of_scp_process_not_specified
+	=> nrel_main_idtf:
+		[не указана декомпозиция scp-процесса, соответствующего данной scp-программе]
+		(* <- lang_ru;; *);
+		[the decomposition of the scp-process corresponding to given scp-program is not specified]
+		(* <- lang_en;; *);
+	<- syntax_error_in_scp_program;
+	<- sc_node_not_relation;;
+
+error_in_scp_program_at_set_of_parameters_level
+	=> nrel_main_idtf:
+		[ошибка в scp-программе на уровне множества параметров]
+		(* <- lang_ru;; *);
+		[error in the scp-program at the set of parameters level]
+		(* <- lang_en;; *);
+	<- sc_node_not_relation;
+	<- rrel_key_sc_element:
+		  ...
+			(*  <- explanation;;
+				<= nrel_sc_text_translation:	
+				...
+				(*
+					-> rrel_example:
+						"file://content_html/error_in_scp_program_at_set_of_parameters_level.html"
+						(* 	<- lang_ru;; *);;
+				*);;
+			*);
+		=> nrel_inclusion : type_of_scp_program_parameter_not_specified;
+							sequence_number_of_scp_program_parameter_not_specified ;;
+
+type_of_scp_program_parameter_not_specified
+	=> nrel_main_idtf:
+		[не указан тип параметра scp-программы]
+		(* <- lang_ru;; *);
+		[type of the scp-program parameter is not specified]
+		(* <- lang_en;; *);
+	<- syntax_error_in_scp_program;
+	<- sc_node_not_relation;;
+
+sequence_number_of_scp_program_parameter_not_specified
+	=> nrel_main_idtf:
+		[не указан порядковый номер параметра scp-программы]
+		(* <- lang_ru;; *);
+		[sequence number of the scp-program parameter is not specified]
+		(* <- lang_en;; *);
+	<- syntax_error_in_scp_program;
+	<- sc_node_not_relation;;
+
+error_in_scp_program_at_set_of_operators_level
+	=> nrel_main_idtf:
+		[ошибка в scp-программе на уровне множества операторов]
+		(* <- lang_ru;; *);
+		[error in the scp-program at the set of operators level]
+		(* <- lang_en;; *);
+	<- sc_node_not_relation;
+	<- rrel_key_sc_element:
+		  ...
+			(*  <- explanation;;
+				<= nrel_sc_text_translation:	
+				...
+				(*
+					-> rrel_example:
+						"file://content_html/error_in_scp_program_at_set_of_operators_level.html"
+						(* <- lang_ru;;	*);;
+				*);;
+			*);
+		=>nrel_inclusion : decomposition_of_scp_process_not_contain_any_elements;
+						   absent_return;
+						   next_scp_operator_not_part_of_scp_process;
+						   sequence_of_actions_after_execution_scp_operator_not_specified;
+						   there_is_no_rrel_init;;
+
+decomposition_of_scp_process_not_contain_any_elements
+	=> nrel_main_idtf:
+		[декомпозиция scp-процесса не содержит ни одного элемента]
+		(* <- lang_ru;; *);
+		[the decomposition of the scp-process does not contain any elements]
+		(* <- lang_en;; *);
+	<- syntax_error_in_scp_program;
+	<- sc_node_not_relation;;
+
+absent_return
+	=> nrel_main_idtf:
+		[отсутствует scp-оператор завершения выполнения программы]
+		(* <- lang_ru;; *);
+		[scp-program completion scp-operator is absent]
+		(* <- lang_en;; *);
+	<- semantic_error_in_scp_program;
+	<- sc_node_not_relation;;
+
+next_scp_operator_not_part_of_scp_process
+	=> nrel_main_idtf:
+			[scp-оператор, к которому осуществляется переход, не является частью текущего scp-процесса]
+			(* <- lang_ru;; *);
+			[the scp-operator to which the transition occurs is not part of the current scp-process]
+			(* <- lang_en;; *);
+		<- syntax_error_in_scp_program;
+		<- sc_node_not_relation;;
+
+sequence_of_actions_after_execution_scp_operator_not_specified
+	=> nrel_main_idtf:
+		[не указана последовательность действий после выполнения текущего scp-оператора]
+		(* <- lang_ru;; *);
+		[the sequence of actions after execution of the current scp-operator is not specified]
+		(* <- lang_en;; *);
+	<- syntax_error_in_scp_program;
+	<- sc_node_not_relation;;
+
+there_is_no_rrel_init
+	=> nrel_main_idtf:
+		[отсутствует начальный оператор scp-программы]
+		(* <- lang_ru;; *);
+		[there is no initial scp-program operator]
+		(* <- lang_en;; *);
+	<- syntax_error_in_scp_program;
+	<- sc_node_not_relation;;
+
+error_in_scp_program_at_operator_level
+	<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[ошибка в scp-программе на уровне оператора]
+		(* <- lang_ru;; *);
+		[error in the scp-program at the operator level]
+		(* <- lang_en;; *);
+	<- rrel_key_sc_element:
+		  ...
+			(*  <- explanation;;
+				<= nrel_sc_text_translation:	
+				...
+				(*
+					-> rrel_example:
+						"file://content_html/error_in_scp_program_at_operator_level.html"
+						(* <- lang_ru;; *);;
+				*);;
+			*);
+		=> nrel_inclusion : scp_operator_not_belong_to_any_scp_operators_atomic_classes;
+							no_operand_of_erase_scp_operator_is_marked_rrel_erase;
+							in_searchElStr5_second_and_fourth_operands_coincide;
+							scp_operator_of_searching_not_contain_rrel_fixed_operands;
+							searchSet_scp_operator_not_contain_rrel_set_operands;
+							fixed_operand_marked_as_rrel_set;
+							number_of_scp_operator_operands_not_coincide_with_specification;;
+
+scp_operator_not_belong_to_any_scp_operators_atomic_classes
+	=> nrel_main_idtf:
+			[scp-оператор не принадлежит ни одному из атомарных классов scp-операторов]
+			(* <- lang_ru;; *);
+			[The scp-operator does not belong to any of the atomic classes of scp-operators]
+			(* <- lang_en;; *);
+		<- semantic_error_in_scp_program;
+		<- sc_node_not_relation;;
+
+no_operand_of_erase_scp_operator_is_marked_rrel_erase
+	=> nrel_main_idtf:
+			[ни один операнд scp-оператора удаления не помечен как удаляемый sc-элемент]
+			(* <- lang_ru;; *);
+			[no operand of the scp-operator of deletion is marked as a removable sc-element]
+			(* <- lang_en;; *);
+		<- semantic_error_in_scp_program;
+		<- sc_node_not_relation;;
+
+in_searchElStr5_second_and_fourth_operands_coincide
+	=> nrel_main_idtf:
+			[в scp-операторе поиска пятиэлементной конструкции совпадает второй и четвертый операнд]
+			(* <- lang_ru;; *);
+			[in the scp-operator of searching for the five-element construction the second and the fourth operands coincide]
+			(* <- lang_en;; *);
+		<- semantic_error_in_scp_program;
+		<- sc_node_not_relation;;
+
+scp_operator_of_searching_not_contain_rrel_fixed_operands
+	=> nrel_main_idtf:
+			[scp-оператор поиска не содержит ни одного операнда с заданным значением]
+			(* <- lang_ru;; *);
+			[the scp-operator of searching does not contain any operands with a given value]
+			(* <- lang_en;; *);
+		<- semantic_error_in_scp_program;
+		<- sc_node_not_relation;;
+
+searchSet_scp_operator_not_contain_rrel_set_operands
+	=> nrel_main_idtf:
+			[scp-оператор поиска с формированием множеств не содержит ни одного операнда с атрибутом формируемое множество]
+			(* <- lang_ru;; *);
+			[scp-operator of searching with the formation of sets does not contain any operands with rrel_set attribute]
+			(* <- lang_en;; *);
+		<- semantic_error_in_scp_program;
+		<- sc_node_not_relation;;
+
+fixed_operand_marked_as_rrel_set
+	=> nrel_main_idtf:
+			[атрибутом формируемое множество отмечен операнд, которому соответствует операнд с заданным значением]
+			(* <- lang_ru;; *);
+			[operand that has rrel_fixed attribute is marked as rrel_set]
+			(* <- lang_en;; *);
+		<- semantic_error_in_scp_program;
+		<- sc_node_not_relation;;
+
+number_of_scp_operator_operands_not_coincide_with_specification
+	=> nrel_main_idtf:
+			[количество операндов scp-оператора не совпадает с спецификацией]
+			(* <- lang_ru;; *);
+			[The number of operands of the scp-operator does not coincide with the specification]
+			(* <- lang_en;; *);
+		<- syntax_error_in_scp_program;
+		<- sc_node_not_relation;;
+
+error_in_scp_program_at_operand_level
+	<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[ошибка в scp-программе на уровне операнда]
+		(* <- lang_ru;; *);
+		[error in the scp-program at the operand level]
+		(* <- lang_en;; *);
+	<- rrel_key_sc_element:
+		  ...
+			(*  <- explanation;;
+				<= nrel_sc_text_translation:	
+				...
+				(*
+					-> rrel_example:
+						"file://content_html/error_in_scp_program_at_operand_level.html"
+						(* 	<- lang_ru;; *);;
+				*);;
+			*);
+		=>nrel_inclusion : operand_number_within_scp_operator_not_specified ;;
+
+	operand_number_within_scp_operator_not_specified
+		=> nrel_main_idtf:
+			[не указан номер операнда в рамках  scp-оператора]
+			(* <- lang_ru;; *);
+			[the operand number within the scp-operator is not specified]
+			(* <- lang_en;; *);
+		<- syntax_error_in_scp_program;
+		<- sc_node_not_relation;;
+
+syntax_error_in_scp_program
+	<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[синтаксическая ошибка в scp-программе]
+		(* <- lang_ru;; *);
+		[syntax error in the scp-program]
+		(* <- lang_en;; *);
+	<- rrel_key_sc_element:
+		  ...
+			(*  <- explanation;;
+				<= nrel_sc_text_translation:	
+				...
+				(*
+					-> rrel_example:
+						"file://content_html/syntax_error_in_scp_program.html"
+						(* <- lang_ru;;	*);;
+				*);;
+			*);;
+
+semantic_error_in_scp_program
+	<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[семантическая ошибка в scp-программе]
+		(* <- lang_ru;; *);
+		[semantic error in the scp-program]
+		(* <- lang_en;; *);
+	<- rrel_key_sc_element:
+		  ...
+			(*  <- explanation;;
+				<= nrel_sc_text_translation:	
+				...
+				(*
+					-> rrel_example:
+						"file://content_html/semantic_error_in_scp_program.html"
+						(* 	<- lang_ru;;*);;
+				*);;
+			*);;
+
+nrel_incorrectness_in_scp_program
+	=> nrel_main_idtf:
+		[некорректность в scp-программе*]
+		(* <- lang_ru;; *);
+		[incorrectness in the scp-program*]
+		(* <- lang_en;; *);
+	<- sc_node_norole_relation;
+	<- binary_relation;
+	=> nrel_first_domain : scp_program;
+	=> nrel_second_domain : incorrectness_in_scp_program;
+	<- rrel_key_sc_element:
+	   ...
+		(*  <- explanation;;
+			<= nrel_sc_text_translation:	
+			...
+			(*
+				-> rrel_example:
+					"file://content_html/nrel_incorrectness_in_scp_program.html"
+					(*	<- lang_ru;; *);;
+			*);;
+		*);;
