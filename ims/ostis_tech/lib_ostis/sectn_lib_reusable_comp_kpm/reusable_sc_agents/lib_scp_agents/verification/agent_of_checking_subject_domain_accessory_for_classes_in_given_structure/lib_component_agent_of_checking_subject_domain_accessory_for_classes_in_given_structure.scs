@@ -1,0 +1,37 @@
+lib_component_agent_of_checking_subject_domain_accessory_for_classes_in_given_structure
+=> nrel_main_idtf:
+	[Компонент библиотеки. sc-агент проверки указания соответствующей предметной области для классов в рамках заданной структуры]
+	(* <- lang_ru;; *);
+	[Library component. sc-agent of checking subject domain accessory for classes in given structure]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components; 
+<- library_of_atomic_reusable_components; 
+
+=> nrel_attendant_component: 
+	lib_component_ui_menu_file_for_agent_of_checking_subject_domain_accessory_for_classes_in_given_structure;
+
+-> rrel_key_sc_element: 
+	.platform_independent_realization_of_sc_agent_of_checking_subject_domain_accessory_for_classes_in_given_structure;
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Agent_of_checking_subject_domain_accessory_for_classes_in_given_structure.html"
+				(* <- lang_ru;; *);; 
+		*);;
+	*);;
+
+sc_node_not_relation -> action_of_checking_subject_domain_accessory_for_classes_in_given_structure;;
+
+action_of_checking_subject_domain_accessory_for_classes_in_given_structure => nrel_main_idtf:
+	[действие. проверить указание соответствующей предметной области для классов в рамках заданной структуры]
+		(*<- lang_ru;;*);;
+action_of_checking_subject_domain_accessory_for_classes_in_given_structure => nrel_main_idtf:
+	[action. check subject domain accessory for classes in given structure]
+		(* <- lang_en;; *);;
