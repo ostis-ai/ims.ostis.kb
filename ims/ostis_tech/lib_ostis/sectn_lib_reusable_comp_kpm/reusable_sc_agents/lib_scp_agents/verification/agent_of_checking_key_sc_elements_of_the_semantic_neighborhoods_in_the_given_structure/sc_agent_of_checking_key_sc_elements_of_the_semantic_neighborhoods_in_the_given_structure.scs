@@ -1,0 +1,53 @@
+sc_agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure
+=> nrel_main_idtf:
+	[Абстрактный sc-агент проверки указания ключевых sc-элементов семантических окрестностей в рамках заданной структуры] (* <- lang_ru;; *);
+	[Abstract sc-agent of checking key sc-elements of the semantic neighborhoods in the given structure] (* <- lang_en;; *);
+	
+<- abstract_sc_agent;
+
+=> nrel_primary_initiation_condition: 
+	(sc_event_add_output_arc => question_initiated);
+	
+=> nrel_initiation_condition_and_result: 
+	(..sc_agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_condition => ..sc_agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_result);
+	
+<= nrel_sc_agent_key_sc_elements: 
+	{
+	question_initiated;
+	question;
+	action_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure
+	};
+	
+=> nrel_inclusion: 
+	.platform_independent_realization_of_sc_agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure
+	(*
+	<- platform_independent_abstract_sc_agent;;
+	<= nrel_sc_agent_program: 
+		{
+		agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure;
+		proc_of_finding_subclasses_by_taxonomy_relation;
+		proc_of_generation_of_verification_answer;
+		proc_of_adding_validating_message;
+		proc_of_adding_general_action_comment
+		};;
+		
+	-> sc_agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_scp 
+		(* <- active_sc_agent;; *);;
+	*);;
+
+..sc_agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_condition
+= [*
+	action_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure _-> .._question;;
+	question_initiated _-> .._question;;
+	question _-> .._question;;
+	.._question _-> .._parameter;;
+*];;
+
+..sc_agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_result
+= [*
+	action_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure _-> .._question;;
+	question_finished _-> .._question;;
+	question _-> .._question;;
+	.._question _=> nrel_answer:: .._answer;;
+	.._question _-> .._parameter;;
+*];;
