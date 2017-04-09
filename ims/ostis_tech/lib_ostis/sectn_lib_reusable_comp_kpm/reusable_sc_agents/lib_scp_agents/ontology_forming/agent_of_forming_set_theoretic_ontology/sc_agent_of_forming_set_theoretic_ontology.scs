@@ -6,7 +6,7 @@ sc_agent_of_forming_set_theoretic_ontology
 <- abstract_sc_agent;
 
 => nrel_primary_initiation_condition: 
-	(sc_event_add_outgoing_arc => question_initiated);
+	(sc_event_add_output_arc => question_initiated);
 
 => nrel_initiation_condition_and_result: 
 	(..sc_agent_of_forming_set_theoretic_ontology_condition => ..sc_agent_of_forming_set_theoretic_ontology_result);
