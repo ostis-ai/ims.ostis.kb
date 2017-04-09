@@ -6,7 +6,7 @@ sc_agent_of_calculation_of_the_number_of_vertexes_with_diff_types_of_outgoing_co
 <- abstract_sc_agent;
 
 => nrel_primary_initiation_condition: 
-	(sc_event_add_outgoing_arc => question_initiated);
+	(sc_event_add_output_arc => question_initiated);
 
 => nrel_initiation_condition_and_result: 
 	(..sc_agent_of_calculation_of_the_number_of_vertexes_with_diff_types_of_outgoing_connections_to_all_vertexes_condition => ..sc_agent_of_calculation_of_the_number_of_vertexes_with_diff_types_of_outgoing_connections_to_all_vertexes_result);
