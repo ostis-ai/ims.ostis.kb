@@ -1,7 +1,7 @@
 agent_of_checking_cycle_existence_of_ordering_relation
 => nrel_main_idtf:
-	[scp-программа проверки наличия циклов в отношении порядка] (* <- lang_ru;; *);
-	[scp-program of check for cycle in order strict] (* <- lang_en;; *);
+	[scp-программа проверки наличия циклов в отношении порядка в рамках заданной структуры] (* <- lang_ru;; *);
+	[scp-program of check for cycle in order strict within a given domain] (* <- lang_en;; *);
 	<- agent_scp_program;;
 
 scp_program -> agent_of_checking_cycle_existence_of_ordering_relation
@@ -43,108 +43,170 @@ scp_program -> agent_of_checking_cycle_existence_of_ordering_relation
 
 			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
 			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-			-> rrel_3: rrel_assign: rrel_scp_var: _order_relation_param;;
-
-			=> nrel_then: .agent_of_checking_cycle_existence_of_ordering_relation_operator1D;;
-			=> nrel_else: .agent_of_checking_cycle_existence_of_ordering_relation_operator_return;;
-			*);;	
-
-		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator1D
-			(*
-			<- searchElStr3;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_const: strict_order_relation;;
-			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-			-> rrel_3: rrel_fixed: rrel_scp_var: _order_relation_param;;
+			-> rrel_3: rrel_assign: rrel_struct: rrel_scp_var: _structure_order_relation_param;;
 
 			=> nrel_then: .agent_of_checking_cycle_existence_of_ordering_relation_operator2A;;
-			=> nrel_else: .agent_of_checking_cycle_existence_of_ordering_relation_operator1E;;
+			=> nrel_else: .agent_of_checking_cycle_existence_of_ordering_relation_operator_call_proc_of_adding_validating_message;;
 			*);;	
-
-		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator1E
-			(*
-			<- searchElStr3;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_const: non_strict_order_relation;;
-			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-			-> rrel_3: rrel_fixed: rrel_scp_var: _order_relation_param;;
-
-			=> nrel_then: .agent_of_checking_cycle_existence_of_ordering_relation_operator2A;;
-			=> nrel_else: .agent_of_checking_cycle_existence_of_ordering_relation_operator_call_proc_of_adding_validating_message1;;
-			*);;
 
 		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator2A
 			(*
-			<- searchElStr5;;
+			<- genEl;;
 
-			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
-			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
-			-> rrel_3: rrel_assign: rrel_scp_var: _section_param;;
-			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
-			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_object;;
+			-> rrel_1: rrel_assign: rrel_node: rrel_scp_var: _structure_order_relation;;
 
-			=> nrel_then: .agent_of_checking_cycle_existence_of_ordering_relation_operator2B;;
-			=> nrel_else: .agent_of_checking_cycle_existence_of_ordering_relation_operator5A;;
-			*);;		
+			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator2B;;
+			*);;
 
 		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator2B
 			(*
-			<- searchSetStr3;;
+			<- call;;
 
-			-> rrel_1: rrel_fixed: rrel_scp_const: atomic_section;;
-			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-			-> rrel_3: rrel_fixed: rrel_scp_var: _section_param;;
+			-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_finding_subclasses_by_taxonomy_relation;;
+ 		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_checking_cycle_existence_of_ordering_relation_operator2B_params 
+ 				(*
+ 				-> rrel_1: rrel_fixed: rrel_scp_const: order_relation;;
+ 				-> rrel_2: rrel_fixed: rrel_scp_var: _structure_order_relation;;
+ 				*);;
+ 		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
 
-			-> rrel_set_2: rrel_assign: rrel_node: rrel_const: rrel_scp_var: rrel_struct: _answer_of_checking_cycle_existence_of_ordering_relation;;
+ 		  	=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator2C;;
+ 		  	*);;
 
-			=> nrel_then: .agent_of_checking_cycle_existence_of_ordering_relation_operator2D;;
-			=> nrel_else: .agent_of_checking_cycle_existence_of_ordering_relation_operator2C;;
-			*);;	
+ 		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator2C
+ 		  	(*
+ 		  	<- waitReturn;;
 
-		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator2C
+ 		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
+
+ 		  	=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator2D;;
+ 		  	*);;
+
+ 		 -> .agent_of_checking_cycle_existence_of_ordering_relation_operator2D
 			(*
 			<- searchSetStr3;;
 
-			-> rrel_1: rrel_fixed: rrel_scp_const: non_atomic_section;;
-			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-			-> rrel_3: rrel_fixed: rrel_scp_var: _section_param;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _structure_order_relation;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _absolute_class;;
 
-			-> rrel_set_2: rrel_assign: rrel_node: rrel_const: rrel_scp_var: rrel_struct: _answer_of_checking_cycle_existence_of_ordering_relation;;
+			-> rrel_set_3: rrel_assign: rrel_scp_var: _set_for_absolute_class;;
 
-			=> nrel_then: .agent_of_checking_cycle_existence_of_ordering_relation_operator2E;;
-			=> nrel_else: .agent_of_checking_cycle_existence_of_ordering_relation_operator_call_proc_of_adding_validating_message;;
-			*);;
-
-		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator2D
-			(*
-			<- genElStr3;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_checking_cycle_existence_of_ordering_relation;;
-		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-		  	-> rrel_3: rrel_fixed: rrel_scp_const: atomic_section;;
-			
-			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator3A;;
+			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator2E;;
 			*);;
 
 		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator2E
 			(*
-			<- genElStr3;;
+			<- searchElStr3;;
 
-			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_checking_cycle_existence_of_ordering_relation;;
-		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-		  	-> rrel_3: rrel_fixed: rrel_scp_const: non_atomic_section;;
-			
-			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator3A;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _structure_order_relation_param;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_const: order_relation;;
+
+			=> nrel_then: .agent_of_checking_cycle_existence_of_ordering_relation_operator2F;;
+			=> nrel_else: .agent_of_checking_cycle_existence_of_ordering_relation_operator3A;;
 			*);;
 
-		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator3A
+		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator2F
 			(*
-			<- genElStr3;;
+			<- genEl;;
 
-			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_checking_cycle_existence_of_ordering_relation;;
-		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-		  	-> rrel_3: rrel_fixed: rrel_scp_var: _section_param;;
-			
+			-> rrel_1: rrel_assign: rrel_node: rrel_const: rrel_struct: rrel_scp_var: _struct_node;;
+
+			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator2G;;
+			*);;
+
+ 		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator2G
+			(*
+			<- genEl;;
+
+			-> rrel_1: rrel_assign: rrel_node: rrel_const: rrel_struct: rrel_scp_var: _order_relations_to_check;;
+
+			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator2H;;
+			*);;
+
+		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator2H
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _structure_order_relation;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _absolute_class;;
+
+			=> nrel_then: .agent_of_checking_cycle_existence_of_ordering_relation_operator2I;;
+			=> nrel_else: .agent_of_checking_cycle_existence_of_ordering_relation_operator2K;;
+			*);;
+
+		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator2I
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_erase: rrel_fixed: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+
+			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator2J;;
+			*);;
+
+		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator2J
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _absolute_class;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _example;;
+
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _order_relations_to_check;;
+
+			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator2H;;
+			*);;
+
+		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator2K
+	 		(*
+	 		<- eraseEl;;
+
+	 		-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _structure_order_relation;;
+
+	 		=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator2L;;
+	 		*);;
+
+		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator2L
+			(*
+			<- eraseSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _order_relations_to_check;;
+			-> rrel_2: rrel_erase: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_const: nrel_goto;;
+
+			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator2M;;
+			*);;	
+
+		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator2M
+			(*
+			<- eraseSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _order_relations_to_check;;
+			-> rrel_2: rrel_erase: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_const: nrel_then;;
+
+			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator2N;;
+			*);;	
+
+		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator2N
+			(*
+			<- eraseSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _order_relations_to_check;;
+			-> rrel_2: rrel_erase: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_const: nrel_else;;
+
+			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator3F;;
+			*);;
+
+ 		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator3A
+			(*
+			<- genEl;;
+
+			-> rrel_1: rrel_assign: rrel_node: rrel_const: rrel_struct: rrel_scp_var: _struct_node;;
+
 			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator3B;;
 			*);;
 
@@ -152,164 +214,198 @@ scp_program -> agent_of_checking_cycle_existence_of_ordering_relation
 			(*
 			<- searchSetStr3;;
 
-			-> rrel_1: rrel_fixed: rrel_scp_const: action_of_checking_cycle_existence_of_ordering_relation;;
-		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
-		  	-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _structure_order_relation_param;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: rrel_norole_relation: _some_relation;;
 
-			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_of_checking_cycle_existence_of_ordering_relation;;
+			-> rrel_set_3: rrel_assign: rrel_scp_var: _order_relations_to_check;;
 
-			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator3C;;
+			=> nrel_then: .agent_of_checking_cycle_existence_of_ordering_relation_operator3C;;
+			=> nrel_else: .agent_of_checking_cycle_existence_of_ordering_relation_operator_call_gen_answer;;
 			*);;
-		
+
 		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator3C
 			(*
-			<- searchSetStr3;;
+			<- searchElStr3;;
 
-			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
-		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
-		  	-> rrel_3: rrel_fixed: rrel_scp_var: _order_relation_param;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _order_relations_to_check;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_const: nrel_goto;;
 
-			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_of_checking_cycle_existence_of_ordering_relation;;
+			=> nrel_then: .agent_of_checking_cycle_existence_of_ordering_relation_operator3C_erase_arc;;
+			=> nrel_else: .agent_of_checking_cycle_existence_of_ordering_relation_operator3D;;
+			*);;	
 
-			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator3D;;
-			*);;
+		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator3C_erase_arc
+	 		(*
+	 		<- eraseEl;;
+
+	 		-> rrel_1: rrel_fixed: rrel_erase: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+
+	 		=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator3D;;
+	 		*);;
 
 		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator3D
 			(*
-			<- genElStr3;;
+			<- searchElStr3;;
 
-			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_checking_cycle_existence_of_ordering_relation;;
-		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
-		  	-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _order_relations_to_check;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_const: nrel_then;;
 
-			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator3E;;
-			*);;
+			=> nrel_then: .agent_of_checking_cycle_existence_of_ordering_relation_operator3D_erase_arc;;
+			=> nrel_else: .agent_of_checking_cycle_existence_of_ordering_relation_operator3E;;
+			*);;	
+
+		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator3D_erase_arc
+	 		(*
+	 		<- eraseEl;;
+
+	 		-> rrel_1: rrel_fixed: rrel_erase: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+
+	 		=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator3E;;
+	 		*);;
 
 		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator3E
 			(*
-			<- genElStr3;;
+			<- searchElStr3;;
 
-			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_checking_cycle_existence_of_ordering_relation;;
-		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
-		  	-> rrel_3: rrel_fixed: rrel_scp_var: _order_relation_param;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _order_relations_to_check;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_const: nrel_else;;
 
-			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator3F;;
+			=> nrel_then: .agent_of_checking_cycle_existence_of_ordering_relation_operator3E_erase_arc;;
+			=> nrel_else: .agent_of_checking_cycle_existence_of_ordering_relation_operator3F;;
 			*);;
+
+		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator3E_erase_arc
+	 		(*
+	 		<- eraseEl;;
+
+	 		-> rrel_1: rrel_fixed: rrel_erase: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+
+	 		=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator3F;;
+	 		*);;
 
 		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator3F
 			(*
-			<- searchSetStr3;;
+			<- searchElStr3;;
 
-			-> rrel_1: rrel_fixed: rrel_scp_const: strict_order_relation;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _order_relations_to_check;;
 			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-			-> rrel_3: rrel_fixed: rrel_scp_var: _order_relation_param;;
-
-			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_of_checking_cycle_existence_of_ordering_relation;;
+			-> rrel_3: rrel_assign: rrel_scp_var: rrel_norole_relation: _some_relation;;
 
 			=> nrel_then: .agent_of_checking_cycle_existence_of_ordering_relation_operator3G;;
-			=> nrel_else: .agent_of_checking_cycle_existence_of_ordering_relation_operator3H;;
+			=> nrel_else: .agent_of_checking_cycle_existence_of_ordering_relation_operator8A;;
 			*);;	
 
 		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator3G
 			(*
-			<- genElStr3;;
+			<- eraseEl;;
 
-			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_checking_cycle_existence_of_ordering_relation;;
-		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
-		  	-> rrel_3: rrel_fixed: rrel_scp_const: strict_order_relation;;
+			-> rrel_1: rrel_erase: rrel_fixed: rrel_pos_const_perm: rrel_scp_var: _arc1;;
 
-			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator3J;;
+			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator3H;;
 			*);;
 
 		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator3H
 			(*
 			<- searchSetStr3;;
 
-			-> rrel_1: rrel_fixed: rrel_scp_const: non_strict_order_relation;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _set_for_absolute_class;;
 			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-			-> rrel_3: rrel_fixed: rrel_scp_var: _order_relation_param;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _some_class;;
 
-			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_of_checking_cycle_existence_of_ordering_relation;;
+			-> rrel_set_3: rrel_assign: rrel_scp_var: _set_for_check_belong;;
 
-			=> nrel_then: .agent_of_checking_cycle_existence_of_ordering_relation_operator3I;;
-			=> nrel_else: .agent_of_checking_cycle_existence_of_ordering_relation_operator_call_proc_of_adding_validating_message1;;
+			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator3I;;
 			*);;
 
 		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator3I
 			(*
-			<- genElStr3;;
+			<- searchElStr3;;
 
-			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_checking_cycle_existence_of_ordering_relation;;
-		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
-		  	-> rrel_3: rrel_fixed: rrel_scp_const: non_strict_order_relation;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _set_for_check_belong;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _some_class;;
 
-			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator3J;;
+			=> nrel_then: .agent_of_checking_cycle_existence_of_ordering_relation_operator3J;;
+			=> nrel_else: .agent_of_checking_cycle_existence_of_ordering_relation_operator3M;;
 			*);;
 
 		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator3J
 			(*
-			<- searchSetStr5;;
+			<- eraseEl;;
 
-			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
-			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
-			-> rrel_3: rrel_assign: rrel_scp_var: _section_param;;
-			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
-			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_object;;
+			-> rrel_1: rrel_erase: rrel_fixed: rrel_pos_const_perm: rrel_scp_var: _arc1;;
 
-			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_of_checking_cycle_existence_of_ordering_relation;;
-			-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_of_checking_cycle_existence_of_ordering_relation;;
-			-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer_of_checking_cycle_existence_of_ordering_relation;;
-
-			=> nrel_then: .agent_of_checking_cycle_existence_of_ordering_relation_operator3K;;
-			=> nrel_else: .agent_of_checking_cycle_existence_of_ordering_relation_operator_call_proc_of_adding_validating_message;;
-			*);;	
+			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator3K;;
+			*);;
 
 		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator3K
 			(*
-			<- genElStr3;;
+			<- searchElStr3;;
 
-			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_checking_cycle_existence_of_ordering_relation;;
-		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
-		  	-> rrel_3: rrel_fixed: rrel_scp_const: nrel_object;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _some_class;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: rrel_norole_relation: _some_relation;;
 
-			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator3L;;
+			=> nrel_then: .agent_of_checking_cycle_existence_of_ordering_relation_operator3L;;
+			=> nrel_else: .agent_of_checking_cycle_existence_of_ordering_relation_operator3I;;
 			*);;
 
 		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator3L
 			(*
-			<- genElStr3;;
+			<- eraseEl;;
 
-			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_checking_cycle_existence_of_ordering_relation;;
-		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
-		  	-> rrel_3: rrel_fixed: rrel_scp_const: action_of_checking_cycle_existence_of_ordering_relation;;
+			-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _set_for_check_belong;;
 
 			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator4A;;
 			*);;
 
-		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator4A
+		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator3M
 			(*
-			<- genEl;;
+			<- eraseEl;;
 
-			-> rrel_1: rrel_assign: rrel_node: rrel_scp_var: _set_of_unvisited_arcs;;
+			-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _set_for_check_belong;;
 
-			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator4B;;
+			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator3F;;
 			*);;
 
-		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator4B
+		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator4A
 			(*
 			<- searchSetStr3;;
 
-			-> rrel_1: rrel_fixed: rrel_scp_var: _order_relation_param;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _some_relation;;
 			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
 			-> rrel_3: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
 
 			-> rrel_set_3: rrel_assign: rrel_scp_var: _for_arcs;;
 
-			=> nrel_then: .agent_of_checking_cycle_existence_of_ordering_relation_operator4C;;
-			=> nrel_else: .agent_of_checking_cycle_existence_of_ordering_relation_operator_return;;
-			*);;	
+			=> nrel_then: .agent_of_checking_cycle_existence_of_ordering_relation_operator4B;;
+			=> nrel_else: .agent_of_checking_cycle_existence_of_ordering_relation_operator3F;;
+			*);;
+
+		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator4B
+			(*
+			<- ifVarAssign;;
+
+			-> rrel_1: rrel_assign: rrel_node: rrel_scp_var: _set_of_unvisited_arcs;;
+
+			=> nrel_then: .agent_of_checking_cycle_existence_of_ordering_relation_operator4D;;
+			=> nrel_else: .agent_of_checking_cycle_existence_of_ordering_relation_operator4C;;
+			*);;
 
 		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator4C
+			(*
+			<- genEl;;
+
+			-> rrel_1: rrel_assign: rrel_node: rrel_scp_var: _set_of_unvisited_arcs;;
+
+			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator4D;;
+			*);;
+
+		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator4D
 			(*
 			<- searchElStr3;;
 
@@ -317,20 +413,20 @@ scp_program -> agent_of_checking_cycle_existence_of_ordering_relation
 			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
 			-> rrel_3: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
 
-			=> nrel_then: .agent_of_checking_cycle_existence_of_ordering_relation_operator4D;;
-			=> nrel_else: .agent_of_checking_cycle_existence_of_ordering_relation_operator6A;;
+			=> nrel_then: .agent_of_checking_cycle_existence_of_ordering_relation_operator4E;;
+			=> nrel_else: .agent_of_checking_cycle_existence_of_ordering_relation_operator5A;;
 			*);;	
 
-		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator4D
+		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator4E
 			(*
 			<- eraseEl;;
 
 			-> rrel_1: rrel_erase: rrel_fixed: rrel_pos_const_perm: rrel_scp_var: _arc2;;
 
-			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator4E;;
+			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator4F;;
 			*);;
 				
-		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator4E
+		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator4F
 			(*
 			<- searchElStr3;;
 
@@ -338,35 +434,11 @@ scp_program -> agent_of_checking_cycle_existence_of_ordering_relation
 			-> rrel_2: rrel_fixed: rrel_common: rrel_scp_var: _arc1;;
 			-> rrel_3: rrel_assign: rrel_scp_var: _element2;;
 
-			=> nrel_then: .agent_of_checking_cycle_existence_of_ordering_relation_operator4F;;
-			=> nrel_else: .agent_of_checking_cycle_existence_of_ordering_relation_operator4C;;
-			*);;
-
-		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator4F
-			(*
-			<- searchElStr3;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _section_param;;
-			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
-			-> rrel_3: rrel_fixed: rrel_scp_var: _element1;;
-
 			=> nrel_then: .agent_of_checking_cycle_existence_of_ordering_relation_operator4G;;
-			=> nrel_else: .agent_of_checking_cycle_existence_of_ordering_relation_operator4C;;
+			=> nrel_else: .agent_of_checking_cycle_existence_of_ordering_relation_operator4D;;
 			*);;
 
 		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator4G
-			(*
-			<- searchElStr3;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _section_param;;
-			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
-			-> rrel_3: rrel_fixed: rrel_scp_var: _element2;;
-
-			=> nrel_then: .agent_of_checking_cycle_existence_of_ordering_relation_operator4H;;
-			=> nrel_else: .agent_of_checking_cycle_existence_of_ordering_relation_operator4C;;
-			*);;	
-
-		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator4H
 			(*
 			<- genElStr3;;
 
@@ -374,133 +446,10 @@ scp_program -> agent_of_checking_cycle_existence_of_ordering_relation
 			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
 			-> rrel_3: rrel_fixed: rrel_common: rrel_scp_var: _arc1;;
 
-			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator4C;;
-			*);;
+			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator4D;;
+			*);;	
 
 		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator5A
-			(*
-			<- searchSetStr3;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_const: action_of_checking_cycle_existence_of_ordering_relation;;
-		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
-		  	-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
-
-			-> rrel_set_2: rrel_assign: rrel_node: rrel_const: rrel_scp_var: _answer_of_checking_cycle_existence_of_ordering_relation;;
-
-			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator5B;;
-			*);;
-		
-		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator5B
-			(*
-			<- searchSetStr3;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
-		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
-		  	-> rrel_3: rrel_fixed: rrel_scp_var: _order_relation_param;;
-
-			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_of_checking_cycle_existence_of_ordering_relation;;
-
-			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator5C;;
-			*);;
-
-		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator5C
-			(*
-			<- genElStr3;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_checking_cycle_existence_of_ordering_relation;;
-		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
-		  	-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
-
-			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator5D;;
-			*);;
-
-		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator5D
-			(*
-			<- genElStr3;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_checking_cycle_existence_of_ordering_relation;;
-		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
-		  	-> rrel_3: rrel_fixed: rrel_scp_var: _order_relation_param;;
-
-			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator5E;;
-			*);;
-
-		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator5E
-			(*
-			<- searchSetStr3;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_const: strict_order_relation;;
-			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-			-> rrel_3: rrel_fixed: rrel_scp_var: _order_relation_param;;
-
-			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_of_checking_cycle_existence_of_ordering_relation;;
-
-			=> nrel_then: .agent_of_checking_cycle_existence_of_ordering_relation_operator5F;;
-			=> nrel_else: .agent_of_checking_cycle_existence_of_ordering_relation_operator5G;;
-			*);;	
-
-		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator5F
-			(*
-			<- genElStr3;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_checking_cycle_existence_of_ordering_relation;;
-		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
-		  	-> rrel_3: rrel_fixed: rrel_scp_const: strict_order_relation;;
-
-			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator5I;;
-			*);;
-
-		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator5G
-			(*
-			<- searchSetStr3;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_const: non_strict_order_relation;;
-			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-			-> rrel_3: rrel_fixed: rrel_scp_var: _order_relation_param;;
-
-			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_of_checking_cycle_existence_of_ordering_relation;;
-
-			=> nrel_then: .agent_of_checking_cycle_existence_of_ordering_relation_operator5H;;
-			=> nrel_else: .agent_of_checking_cycle_existence_of_ordering_relation_operator_call_proc_of_adding_validating_message1;;
-			*);;
-
-		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator5H
-			(*
-			<- genElStr3;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_checking_cycle_existence_of_ordering_relation;;
-		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
-		  	-> rrel_3: rrel_fixed: rrel_scp_const: non_strict_order_relation;;
-
-			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator5I;;
-			*);;
-
-		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator5I
-			(*
-			<- genElStr3;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_checking_cycle_existence_of_ordering_relation;;
-		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
-		  	-> rrel_3: rrel_fixed: rrel_scp_const: action_of_checking_cycle_existence_of_ordering_relation;;
-
-			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator5J;;
-			*);;
-
-		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator5J
-			(*
-			<- searchSetStr3;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _order_relation_param;;
-			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-			-> rrel_3: rrel_assign: rrel_scp_var: rrel_common: _arc2;;
-
-			-> rrel_set_3: rrel_assign: rrel_scp_var: _set_of_unvisited_arcs;;
-
-			=> nrel_then: .agent_of_checking_cycle_existence_of_ordering_relation_operator6A;;
-			=> nrel_else: .agent_of_checking_cycle_existence_of_ordering_relation_operator_return;;
-			*);;	
-
-		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator6A
 			(*
 			<- searchElStr3;;
 
@@ -508,88 +457,100 @@ scp_program -> agent_of_checking_cycle_existence_of_ordering_relation
 			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
 			-> rrel_3: rrel_assign: rrel_scp_var: rrel_common: _arc2;;
 
-			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator6B;;
+			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator5B;;
 			*);;
 
-		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator6B
+		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator5B
 			(*
 			<- searchElStr3;;
 
-			-> rrel_1: rrel_assign: rrel_scp_var: _node1;;
+			-> rrel_1: rrel_assign: rrel_scp_var: _start_node;;
 			-> rrel_2: rrel_fixed: rrel_scp_var: rrel_common: _arc2;;
 			-> rrel_3: rrel_assign: rrel_scp_var: _node2;;
 
-			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator6C;;
+			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator5C;;
 			*);;	
 
-		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator6C
-			(*
-			<- genEl;;
-
-			-> rrel_1: rrel_assign: rrel_node: rrel_const: rrel_struct: rrel_scp_var: _struct_node;;
-
-			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator6D;;
-			*);;
-
-		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator6D
+		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator5C
 	 		(*
 	 		<- genElStr3;;
 
 	 		-> rrel_1: rrel_fixed: rrel_scp_var: _struct_node;;
 	 		-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
-	 		-> rrel_3: rrel_fixed: rrel_scp_var: _node1;;
+	 		-> rrel_3: rrel_fixed: rrel_scp_var: _start_node;;
 
-	 		=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator6E;;
+	 		=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator5D;;
 	 		*);;
-		
-		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator6E
+
+		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator5D
 			(*
 			<- call;;
+
 			-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_finding_cycle;;
-		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_checking_cycle_existence_of_ordering_relation_operator6E_params 
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_checking_cycle_existence_of_ordering_relation_operator5D_params 
 				(*
 				-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_unvisited_arcs;;
-				-> rrel_2: rrel_fixed: rrel_scp_var: _node1;;
-				-> rrel_3: rrel_fixed: rrel_scp_var: _order_relation_param;;
+				-> rrel_2: rrel_fixed: rrel_scp_var: _start_node;;
+				-> rrel_3: rrel_fixed: rrel_scp_var: _some_relation;;
 				-> rrel_4: rrel_fixed: rrel_scp_var: _struct_node;;				
 				*);;
-		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr2;;
 
-		  	=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator6F;;
+		  	=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator5E;;
 			*);;
 
-		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator6F
+		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator5E
 			(*
 			<- waitReturn;;
-		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr2;;
 
-		  	=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator7A;;
+		  	=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator6A;;
 			*);;
 
-		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator7A
+		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator6A
 	 		(*
 	 		<- searchElStr5;;
 
 	 		-> rrel_1: rrel_fixed: rrel_scp_var: _struct_node;;
 	 		-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
-	 		-> rrel_3: rrel_assign: rrel_scp_var: _start_node;;
+	 		-> rrel_3: rrel_assign: rrel_scp_var: _last_node;;
 	 		-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
 	 		-> rrel_5: rrel_fixed: rrel_scp_const: rrel_1;;
 
-	 		=> nrel_then: .agent_of_checking_cycle_existence_of_ordering_relation_operator7B;;
-	 		=> nrel_else: .agent_of_checking_cycle_existence_of_ordering_relation_operator7C;;
+	 		=> nrel_then: .agent_of_checking_cycle_existence_of_ordering_relation_operator6B;;
+	 		=> nrel_else: .agent_of_checking_cycle_existence_of_ordering_relation_operator6E;;
 	 		*);;
 
-	 	-> .agent_of_checking_cycle_existence_of_ordering_relation_operator7B
+	 	-> .agent_of_checking_cycle_existence_of_ordering_relation_operator6B
 	 		(*
 	 		<- eraseEl;;
 
 	 		-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: rrel_pos_const_perm: _arc2;;
 
-	 		=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator9A;;
+	 		=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator6C;;
 	 		*);;
 
-	 	-> .agent_of_checking_cycle_existence_of_ordering_relation_operator7C
+	 	-> .agent_of_checking_cycle_existence_of_ordering_relation_operator6C
+	 		(*
+	 		<- eraseEl;;
+
+	 		-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _set_of_unvisited_arcs;;
+
+	 		=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator6D;;
+	 		*);;
+
+	 	-> .agent_of_checking_cycle_existence_of_ordering_relation_operator6D
+	 		(*
+	 		<- genElStr3;;
+
+	 		-> rrel_1: rrel_fixed: rrel_scp_var: _struct_node;;
+	 		-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+	 		-> rrel_3: rrel_fixed: rrel_scp_var: _some_relation;;
+
+	 		=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator7A;;
+	 		*);;
+
+	 	-> .agent_of_checking_cycle_existence_of_ordering_relation_operator6E
 	 		(*
 	 		<- searchElStr3;;
 
@@ -597,143 +558,110 @@ scp_program -> agent_of_checking_cycle_existence_of_ordering_relation
 	 		-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
 	 		-> rrel_3: rrel_assign: rrel_common: rrel_scp_var: _arc2;;
 
-	 		=> nrel_then: .agent_of_checking_cycle_existence_of_ordering_relation_operator6B;;
-	 		=> nrel_else: .agent_of_checking_cycle_existence_of_ordering_relation_operator8A;;
+	 		=> nrel_then: .agent_of_checking_cycle_existence_of_ordering_relation_operator5B;;
+	 		=> nrel_else: .agent_of_checking_cycle_existence_of_ordering_relation_operator3F;;
 	 		*);;		 	
+
+	 	-> .agent_of_checking_cycle_existence_of_ordering_relation_operator7A
+	 		(*
+	 		<- ifCoin;;
+
+	 		-> rrel_1: rrel_fixed: rrel_scp_var: _start_node;;
+	 		-> rrel_2: rrel_fixed: rrel_scp_var: _last_node;;
+
+	 		=> nrel_then: .agent_of_checking_cycle_existence_of_ordering_relation_operator3F;;
+	 		=> nrel_else: .agent_of_checking_cycle_existence_of_ordering_relation_operator7B;;
+	 		*);;
+
+
+	 	-> .agent_of_checking_cycle_existence_of_ordering_relation_operator7B
+			(*
+			<- call;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_clipping_elements_not_part_of_the_cycle;;
+ 		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_checking_cycle_existence_of_ordering_relation_operator7B_params 
+ 				(*
+ 				-> rrel_1: rrel_fixed: rrel_scp_var: _start_node;;
+ 				-> rrel_2: rrel_fixed: rrel_scp_var: _last_node;;
+ 				-> rrel_3: rrel_fixed: rrel_scp_var: _struct_node;;
+ 				-> rrel_4: rrel_fixed: rrel_scp_var: _some_relation;;
+ 				*);;
+ 		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr3;;
+
+ 		  	=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator7C;;
+ 		  	*);;
+
+    	-> .agent_of_checking_cycle_existence_of_ordering_relation_operator7C
+ 		  	(*
+ 		  	<- waitReturn;;
+
+ 		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr3;;
+
+ 		  	=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator3F;;
+ 		  	*);;
 
 	 	-> .agent_of_checking_cycle_existence_of_ordering_relation_operator8A
 	 		(*
-	 		<- genElStr3;;
+	 		<- eraseEl;;
 
-	 		-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_checking_cycle_existence_of_ordering_relation;;
-	 		-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
-	 		-> rrel_3: rrel_fixed: rrel_scp_var: _struct_node;;
+	 		-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _order_relations_to_check;;
 
-	 		=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator9F;;
+	 		=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator8B;;
 	 		*);;
 
-		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator9A
+	 	-> .agent_of_checking_cycle_existence_of_ordering_relation_operator8B
 	 		(*
-	 		<- genElStr3;;
+	 		<- eraseEl;;
 
-	 		-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_checking_cycle_existence_of_ordering_relation;;
-	 		-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
-	 		-> rrel_3: rrel_fixed: rrel_scp_var: _struct_node;;
+	 		-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _for_arcs;;
 
-	 		=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator9B;;
+	 		=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator8C;;
 	 		*);;
 
-		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator9B
+	 	-> .agent_of_checking_cycle_existence_of_ordering_relation_operator8C
 	 		(*
-	 		<- searchSetStr3;;
+	 		<- ifVarAssign;;
 
-	 		-> rrel_1: rrel_fixed: rrel_scp_var: _struct_node;;
-	 		-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
-	 		-> rrel_3: rrel_assign: rrel_scp_var: _something;;
+	 		-> rrel_1: rrel_fixed: rrel_scp_var: _set_for_absolute_class;;
 
-			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_of_checking_cycle_existence_of_ordering_relation;;
-			-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer_of_checking_cycle_existence_of_ordering_relation;;
-
-			=> nrel_then: .agent_of_checking_cycle_existence_of_ordering_relation_operator9C;;
-	 		=> nrel_else: .agent_of_checking_cycle_existence_of_ordering_relation_operator_gen_answer;;
+	 		=> nrel_then: .agent_of_checking_cycle_existence_of_ordering_relation_operator8D;;
+	 		=> nrel_else: agent_of_checking_cycle_existence_of_ordering_relation_operator_call_gen_answer;;
 	 		*);;
-		
-		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator9C
+
+	 	-> .agent_of_checking_cycle_existence_of_ordering_relation_operator8D
+	 		(*
+	 		<- eraseEl;;
+
+	 		-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _set_for_absolute_class;;
+
+	 		=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator_call_gen_answer;;
+	 		*);;
+
+		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator_call_gen_answer
 			(*
-			<- genElStr3;;
+			<- call;;
 
-			-> rrel_1: rrel_fixed: rrel_scp_const: structure_containing_cycle_of_ordering_relation;;
-			-> rrel_2: rrel_assign: rrel_scp_var: rrel_const: rrel_pos_const_perm: _arc1;;
-			-> rrel_3: rrel_fixed: rrel_scp_var: _struct_node;;
+			-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_generation_of_verification_answer;;
+ 		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_checking_cycle_existence_of_ordering_relation_operator_call_gen_answer_params 
+ 				(*
+ 				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+ 				-> rrel_2: rrel_fixed: rrel_scp_const: action_of_checking_cycle_existence_of_ordering_relation;;
+ 				-> rrel_3: rrel_fixed: rrel_scp_var: _struct_node;;
+ 				-> rrel_4: rrel_fixed: rrel_scp_const: structure_containing_cycle_of_ordering_relation;;
+ 				*);;
+ 		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr4;;
 
-			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator9D;;
-			*);;
+ 		  	=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator_waitreturn_gen_answer;;
+ 		  	*);;
 
-		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator9D
-			(*
-			<- searchSetStr3;;
+    	-> .agent_of_checking_cycle_existence_of_ordering_relation_operator_waitreturn_gen_answer
+ 		  	(*
+ 		  	<- waitReturn;;
 
-			-> rrel_1: rrel_fixed: rrel_scp_const: structure_containing_cycle_of_ordering_relation;;
-			-> rrel_2: rrel_assign: rrel_scp_var: rrel_const: rrel_pos_const_perm: _arc1;;
-			-> rrel_3: rrel_fixed: rrel_scp_var: _struct_node;;
+ 		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr4;;
 
-			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_of_checking_cycle_existence_of_ordering_relation;;
-
-			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator9E;;
-			*);;
-
-		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator9E
-			(*
-			<- genElStr3;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_checking_cycle_existence_of_ordering_relation;;
-			-> rrel_2: rrel_assign: rrel_scp_var: rrel_const: rrel_pos_const_perm: _arc1;;
-			-> rrel_3: rrel_fixed: rrel_scp_const: structure_containing_cycle_of_ordering_relation;;
-
-			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator9F;;
-			*);;
-
-		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator9F
-			(*
-			<- genElStr5;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
-			-> rrel_2: rrel_assign: rrel_scp_var: rrel_const: rrel_common: _arc1;;
-			-> rrel_3: rrel_fixed: rrel_scp_var: _struct_node;;
-			-> rrel_4: rrel_assign: rrel_scp_var: rrel_const: rrel_pos_const_perm: _arc2;;
-			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_result;;	
-
-			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator9G;;
-			*);;
-
-		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator9G
-			(*
-			<- searchSetStr5;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
-			-> rrel_2: rrel_assign: rrel_scp_var: rrel_const: rrel_common: _arc1;;
-			-> rrel_3: rrel_fixed: rrel_scp_var: _struct_node;;
-			-> rrel_4: rrel_assign: rrel_scp_var: rrel_const: rrel_pos_const_perm: _arc2;;
-			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_result;;	
-
-			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_of_checking_cycle_existence_of_ordering_relation;;
-			-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_of_checking_cycle_existence_of_ordering_relation;;
-
-			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator9H;;
-			*);;
-
-		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator9H
-			(*
-			<- genElStr3;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_checking_cycle_existence_of_ordering_relation;;
-			-> rrel_2: rrel_assign: rrel_scp_var: rrel_const: rrel_pos_const_perm: _arc1;;
-			-> rrel_3: rrel_fixed: rrel_scp_const: nrel_result;;	
-
-			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator10A;;
-			*);;
-
-	 	-> .agent_of_checking_cycle_existence_of_ordering_relation_operator10A
-			(*
-			<- eraseEl;;
-
-			-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _set_of_unvisited_arcs;;
-
-			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator_gen_answer;;
-			*);;
-
-	 	-> .agent_of_checking_cycle_existence_of_ordering_relation_operator_gen_answer 
-			(*
-		  	<- genElStr5;;
-
-		  	-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
-		  	-> rrel_2: rrel_assign: rrel_const: rrel_common: rrel_scp_var: _arc;;
-		  	-> rrel_3: rrel_fixed: rrel_scp_var: _answer_of_checking_cycle_existence_of_ordering_relation;;
-		  	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
-		  	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_answer;;
-
-		  	=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator_return;;
-			*);;     
+ 		  	=> nrel_got: .agent_of_checking_cycle_existence_of_ordering_relation_operator_return;;
+ 		  	*);;
 
 		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator_call_proc_of_adding_validating_message
 			(*
@@ -743,9 +671,9 @@ scp_program -> agent_of_checking_cycle_existence_of_ordering_relation
 		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_checking_cycle_existence_of_ordering_relation_operator_call_proc_of_adding_validating_message_params 
 				(*
 				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
-				-> rrel_2: rrel_fixed: rrel_scp_const: [Wrong the first parameter! It must belong to atomic_section or non_atomic_section];;
+				-> rrel_2: rrel_fixed: rrel_scp_const: [Wrong a parameter! It must be structure];;
 				*);;
-		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr5;;
 
 		  	=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator_waitreturn_call_proc_of_adding_validating_message;;
 			*);;
@@ -754,55 +682,7 @@ scp_program -> agent_of_checking_cycle_existence_of_ordering_relation
 			(*
 		  	<- waitReturn;;
 
-		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
-
-		  	=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator_return;;
-			*);;
-
-		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator_call_proc_of_adding_validating_message1
-			(*
-		  	<- call;;
-
-		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_validating_message;;
-		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_checking_cycle_existence_of_ordering_relation_operator_call_proc_of_adding_validating_message1_params 
-				(*
-				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
-				-> rrel_2: rrel_fixed: rrel_scp_const: [Wrong the second parameter! It must belong to strict_order_relation or non_strict_order_relation];;
-				*);;
-		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr2;;
-
-		  	=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator_waitreturn_call_proc_of_adding_validating_message1;;
-			*);;
-
-		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator_waitreturn_call_proc_of_adding_validating_message1
-			(*
-		  	<- waitReturn;;
-
-		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr2;;
-
-		  	=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator_return;;
-			*);;
-
-		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator_call_proc_of_adding_validating_message2
-			(*
-		  	<- call;;
-
-		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_validating_message;;
-		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_checking_cycle_existence_of_ordering_relation_operator_call_proc_of_adding_validating_message2_params 
-				(*
-				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
-				-> rrel_2: rrel_fixed: rrel_scp_const: [Wrong parameter! It must belong to strict_order_relation or non_strict_order_relation];;
-				*);;
-		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr3;;
-
-		  	=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator_waitreturn_call_proc_of_adding_validating_message2;;
-			*);;
-
-		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator_waitreturn_call_proc_of_adding_validating_message2
-			(*
-		  	<- waitReturn;;
-
-		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr3;;
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr5;;
 
 		  	=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator_return;;
 			*);;

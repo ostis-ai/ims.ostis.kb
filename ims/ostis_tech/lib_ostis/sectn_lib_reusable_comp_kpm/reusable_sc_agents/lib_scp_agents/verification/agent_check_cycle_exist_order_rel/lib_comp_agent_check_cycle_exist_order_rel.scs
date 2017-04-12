@@ -1,8 +1,8 @@
 lib_component_agent_of_checking_cycle_existence_of_ordering_relation
 => nrel_main_idtf:
-	[Компонент библиотеки. sc-агент проверки наличия цикла в заданном отношении порядка]
+	[Компонент библиотеки. sc-агент проверки наличия цикла в заданном отношении порядка в рамках заданной структуры]
 	(* <- lang_ru;; *);
-	[Library component. sc-agent of checking of cycle for a given order relation]
+	[Library component. sc-agent of checking of cycle for a given order relation within a given structure]
 	(* <- lang_en;; *);
 
 <- library_of_platform_independent_reusable_components;
@@ -30,8 +30,9 @@ lib_component_agent_of_checking_cycle_existence_of_ordering_relation
 action_of_checking_cycle_existence_of_ordering_relation 
 <- sc_node_not_relation;
 => nrel_main_idtf:
-	[действие. проверить наличие циклов в любом отношении порядка]
+	[действие. проверить наличие циклов в любом отношении порядка в рамках заданной структуры]
 	(* <- lang_ru;; *);
 => nrel_main_idtf:
-	[action. check cycles existence for any order relation]
+	[action. check cycles existence for any order relation within a given structure]
 	(* <- lang_en;; *);;
+
