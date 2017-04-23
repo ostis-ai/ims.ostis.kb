@@ -4,8 +4,9 @@ unified_semantic_model_programme_scp_interpretation
 	(*<- lang_ru;;*);
 	[Subject domain of abstract scp-machine]
 	(*<- lang_en;;*);
-
+<- sc_node_struct;
 <- subject_domain;
+<- structure;
 -> rrel_maximum_studied_object_class: 
 		abstract_scp_machine;
 -> rrel_not_maximum_studied_object_class:
