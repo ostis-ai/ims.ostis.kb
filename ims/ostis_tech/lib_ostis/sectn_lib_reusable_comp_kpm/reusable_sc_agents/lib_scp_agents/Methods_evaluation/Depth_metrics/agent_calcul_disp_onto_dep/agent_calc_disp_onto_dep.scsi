@@ -45,20 +45,83 @@ scp_program -> agent_of_calculation_dispersion_of_ontology_depths
 			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
 			-> rrel_3: rrel_assign: rrel_scp_var: _ontology;;
 
-			=> nrel_then: .agent_of_calculation_dispersion_of_ontology_depths_operator1C_check_is_ontology;;
+			=> nrel_then: .agent_of_calculation_dispersion_of_ontology_depths_operator1D;;
 			=> nrel_else: .agent_of_calculation_dispersion_of_ontology_depths_operator_return;;
 			*);;
 
-		-> .agent_of_calculation_dispersion_of_ontology_depths_operator1C_check_is_ontology
+		-> .agent_of_calculation_dispersion_of_ontology_depths_operator1D
+			(*
+			<- genEl;;
+
+			-> rrel_1: rrel_assign: rrel_node: rrel_scp_var: _ontology_classes;; 
+
+			=> nrel_goto: .agent_of_calculation_dispersion_of_ontology_depths_operator1E;;
+			*);;		
+
+		-> .agent_of_calculation_dispersion_of_ontology_depths_operator1E
+			(*
+		  	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_finding_subclasses_by_taxonomy_relation;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_calculation_dispersion_of_ontology_depths_operator1E_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_const: ontology;;
+				-> rrel_2: rrel_fixed: rrel_scp_var: _ontology_classes;;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr10;;
+
+		  	=> nrel_goto: .agent_of_calculation_dispersion_of_ontology_depths_operator1F;;
+			*);;
+
+		-> .agent_of_calculation_dispersion_of_ontology_depths_operator1F
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr10;;
+
+		  	=> nrel_goto: .agent_of_calculation_dispersion_of_ontology_depths_operator1G;;
+			*);;	
+
+		-> .agent_of_calculation_dispersion_of_ontology_depths_operator1G
 			(*
 			<- searchElStr3;;
 
-			-> rrel_1: rrel_fixed: rrel_scp_const: ontology;;
+			-> rrel_1: rrel_fixed: rrel_node: rrel_scp_var: _ontology_classes;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _class;;
+
+			=> nrel_then: .agent_of_calculation_dispersion_of_ontology_depths_operator1G1;;
+			=> nrel_else: .agent_of_calculation_dispersion_of_ontology_depths_operator_delete_ontology_classes;;
+			*);;
+
+		-> .agent_of_calculation_dispersion_of_ontology_depths_operator_delete_ontology_classes
+			(*
+		  	<- eraseEl;;
+
+		  	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _ontology_classes;;
+
+		  	=> nrel_goto: .agent_of_calculation_dispersion_of_ontology_depths_operator_call_proc_of_adding_validating_message;;
+			*);;
+
+		-> .agent_of_calculation_dispersion_of_ontology_depths_operator1G1
+			(*
+		  	<- eraseEl;;
+
+		  	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc1;;
+
+		  	=> nrel_goto: .agent_of_calculation_dispersion_of_ontology_depths_operator1H;;
+			*);;
+
+		-> .agent_of_calculation_dispersion_of_ontology_depths_operator1H
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _class;;
 			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
 			-> rrel_3: rrel_fixed: rrel_scp_var: _ontology;;
 
 			=> nrel_then: .agent_of_calculation_dispersion_of_ontology_depths_operator1C1;;
-			=> nrel_else: .agent_of_calculation_dispersion_of_ontology_depths_operator_call_proc_of_adding_validating_message;;
+			=> nrel_else: .agent_of_calculation_dispersion_of_ontology_depths_operator1G;;
 			*);;
 
 		-> .agent_of_calculation_dispersion_of_ontology_depths_operator1C1
@@ -210,6 +273,15 @@ scp_program -> agent_of_calculation_dispersion_of_ontology_depths
 		  	<- eraseEl;;
 
 		  	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _all_depths;;
+
+		  	=> nrel_goto: .agent_of_calculation_dispersion_of_ontology_depths_operator_delete;;
+			*);;
+
+		-> .agent_of_calculation_dispersion_of_ontology_depths_operator_delete
+			(*
+		  	<- eraseEl;;
+
+		  	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _ontology_classes;;
 
 		  	=> nrel_goto: .agent_of_calculation_dispersion_of_ontology_depths_operator_gen_agent_work_result;;
 			*);;
