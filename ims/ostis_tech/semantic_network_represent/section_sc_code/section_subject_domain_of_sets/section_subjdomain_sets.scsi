@@ -2,7 +2,7 @@ subject_domain_of_sets
 => nrel_main_idtf:
 	[Предметная область множеств] 
 	(* <- lang_ru;; *);
-	[subject domain of sets]	
+	[Subject domain of sets]	
 	(* <- lang_en;; *);
 => nrel_idtf:
 	[Теоретико-множественная предметная область] 
@@ -172,7 +172,7 @@ nrel_belonging
 => nrel_main_idtf:
 	[принадлежность*] 
 	(* <- lang_ru;; *);
-	[belonging] 
+	[belonging*] 
 	(* <- lang_en;; *);
 => nrel_idtf:
 	[принадлежность элемента множеству*] 
@@ -887,7 +887,7 @@ rrel_example
 => nrel_main_idtf:
 	[пример']
 	(* <- lang_ru;; *); 
-	[example]
+	[example']
 	(* <- lang_en;; *);
 => nrel_idtf:
 	[типичный пример']
@@ -913,7 +913,7 @@ nrel_inclusion
 => nrel_main_idtf:
 	[включение*]
 	(* <- lang_ru;; *); 
-	[inclusion]
+	[inclusion*]
 	(* <- lang_en;; *);
 => nrel_idtf:
 	[включение множеств*]
@@ -978,12 +978,11 @@ nrel_strict_inclusion
 => nrel_main_idtf:
 	[строгое включение*]
 	(* <- lang_ru;; *); 
-	[strict inclusion]
+	[strict inclusion*]
 	(* <- lang_en;; *);
 => nrel_idtf:
 	[строгое включение множеств*]
 	(* <- lang_ru;; *);
-<= nrel_strict_inclusion: nrel_inclusion;
 <- binary_relation;
 <- oriented_relation;
 <- taxonomy_relation;
@@ -1041,7 +1040,7 @@ nrel_combination
 => nrel_main_idtf:
 	[объединение*]
 	(* <- lang_ru;; *); 
-	[combination]
+	[combination*]
 	(* <- lang_en;; *);
 => nrel_idtf:
 	[объединение множеств*]
@@ -1101,7 +1100,7 @@ nrel_subdividing
 => nrel_main_idtf:
 	[разбиение*]
 	(* <- lang_ru;; *); 
-	[subdividing]
+	[subdividing*]
 	(* <- lang_en;; *);
 => nrel_idtf:
 	[разбиение множества*]
@@ -1167,7 +1166,7 @@ nrel_intersection
 => nrel_main_idtf:
 	[пересечение*]
 	(* <- lang_ru;; *); 
-	[intersection]
+	[intersection*]
 	(* <- lang_en;; *);
 => nrel_idtf:
 	[пересечение множеств*]
@@ -1227,7 +1226,7 @@ nrel_pair_of_intersecting_sets
 => nrel_main_idtf:
 	[пара пересекающихся множеств*]
 	(* <- lang_ru;; *); 
-	[pair of intersecting sets]
+	[pair of intersecting sets*]
 	(* <- lang_en;; *);
 <- binary_relation;
 <- non_oriented_relation;
@@ -1296,7 +1295,7 @@ nrel_pairwise_intersecting_sets
 => nrel_main_idtf:
 	[попарно пересекающиеся множества*]
 	(* <- lang_ru;; *); 
-	[pairwise intersecting sets]
+	[pairwise intersecting sets*]
 	(* <- lang_en;; *);
 => nrel_idtf:
 	[семейство попарно пересекающихся множеств*]
@@ -1368,7 +1367,7 @@ nrel_intersecting_sets
 => nrel_main_idtf:
 	[пересекающиеся множества*]
 	(* <- lang_ru;; *); 
-	[intersecting sets]
+	[intersecting sets*]
 	(* <- lang_en;; *);
 => nrel_idtf:
 	[семейство пересекающихся множеств*]
@@ -1377,7 +1376,6 @@ nrel_intersecting_sets
 	(* <- lang_ru;; *);
 	[семейство множеств, имеющих по крайней мере один элемент, являющийся общим для всех этих множеств*]
 	(* <- lang_ru;; *);
-=> nrel_strict_inclusion: nrel_pairwise_intersecting_sets;
 <- rrel_key_sc_element:
 	...
 	(*
@@ -1419,7 +1417,7 @@ nrel_pair_of_non_intersecting_sets
 => nrel_main_idtf:
 	[пара непересекающихся множеств*]
 	(* <- lang_ru;; *); 
-	[pair of non-intersecting sets]
+	[pair of non-intersecting sets*]
 	(* <- lang_en;; *);
 <- binary_relation;
 <- non_oriented_relation;
@@ -1476,7 +1474,7 @@ nrel_pairwise_non_intersecting_sets
 => nrel_main_idtf:
 	[попарно непересекающиеся множества*]
 	(* <- lang_ru;; *); 
-	[pairwise non-intersecting sets]
+	[pairwise non-intersecting sets*]
 	(* <- lang_en;; *);
 => nrel_idtf:
 	[семейство попарно непересекающихся множеств*]
@@ -1523,7 +1521,7 @@ nrel_non_intersecting_sets
 => nrel_main_idtf:
 	[непересекающиеся множества*]
 	(* <- lang_ru;; *); 
-	[non-intersecting sets]
+	[non-intersecting sets*]
 	(* <- lang_en;; *);
 => nrel_idtf:
 	[семейство непересекающихся множеств*]
@@ -1571,9 +1569,9 @@ nrel_sets_difference
 => nrel_main_idtf:
 	[разность множеств*]
 	(* <- lang_ru;; *); 
-	[sets difference]
+	[sets difference*]
 	(* <- lang_en;; *);
-<- ternary_relation;
+<- binary_relation;
 <- oriented_relation;
 <- rrel_key_sc_element:
 	...
@@ -1628,9 +1626,9 @@ nrel_symmetric_sets_difference
 => nrel_main_idtf:
 	[симметрическая разность множеств*]
 	(* <- lang_ru;; *); 
-	[symmetric sets difference]
+	[symmetric sets difference*]
 	(* <- lang_en;; *);
-<- quasybinary_relation;
+<- binary_relation;
 <- oriented_relation;
 <- rrel_key_sc_element:
 	...
@@ -1692,7 +1690,7 @@ nrel_cartesian_product
 	(* <- lang_ru;; *);
 	[прямое произведение множеств*]
 	(* <- lang_ru;; *);
-<- quasybinary_relation;
+<- binary_relation;
 <- oriented_relation;
 <- rrel_key_sc_element:
 	...
@@ -1747,12 +1745,13 @@ nrel_set_of_subsets
 => nrel_main_idtf:
 	[семейство подмножеств*]
 	(* <- lang_ru;; *); 
-	[set of subsets]
+	[set of subsets*]
 	(* <- lang_en;; *);
 => nrel_idtf:
 	[семейство подмножеств заданного множества*]
 	(* <- lang_ru;; *);
-=> nrel_strict_inclusion: nrel_boolean;
+<- binary_relation;
+<- oriented_relation;
 <- rrel_key_sc_element:
 	...
 	(*
@@ -1790,7 +1789,7 @@ nrel_boolean
 	(* <- lang_ru;; *);
 	[семейство всевозможных подмножеств заданного множества*]
 	(* <- lang_ru;; *);
-<- quasybinary_relation;
+<- binary_relation;
 <- oriented_relation;
 <- rrel_key_sc_element:
 	...
@@ -1884,9 +1883,10 @@ nrel_equality_of_sets
 => nrel_main_idtf:
 	[равенство множеств*]
 	(* <- lang_ru;; *);
-	[equality of sets]
+	[equality of sets*]
 	(* <- lang_en;; *);
-<= nrel_strict_inclusion: binary_relation;
+<- binary_relation;
+<- non_oriented_relation;
 => nrel_idtf:
 	[быть равными множествами*]
 	(* <- lang_ru;; *);
