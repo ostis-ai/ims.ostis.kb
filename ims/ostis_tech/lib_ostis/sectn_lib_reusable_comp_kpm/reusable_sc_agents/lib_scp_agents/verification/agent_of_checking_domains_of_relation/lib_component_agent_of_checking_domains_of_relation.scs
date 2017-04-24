@@ -1,8 +1,8 @@
 lib_component_agent_of_checking_domains_of_relation
 => nrel_main_idtf:
-	[Компонент библиотеки. sc-агент проверки наличия доменов у отношения]
+	[Компонент библиотеки. sc-агент проверки указания доменов у отношений в рамках заданной структуры]
 	(* <- lang_ru;; *);
-	[Library component. sc-agent of checking domains of relation]
+	[Library component. sc-agent of сhecking availability of domains in relations within the given structure]
 	(* <- lang_en;; *);
 
 <- library_of_platform_independent_reusable_components; 
@@ -30,8 +30,7 @@ lib_component_agent_of_checking_domains_of_relation
 sc_node_not_relation -> action_of_checking_domains_of_relation;;
 
 action_of_checking_domains_of_relation => nrel_main_idtf:
-	[действие. проверить наличие доменов у отношения]
+	[действие. проверить указание доменов у отношений в рамках заданной структуры]
 	(* <- lang_ru;;	*);
-	[action. check domains of relation]
+	[action. check availability of domains in relations within the given structure]
 	(* <- lang_en;;	*);;
-
