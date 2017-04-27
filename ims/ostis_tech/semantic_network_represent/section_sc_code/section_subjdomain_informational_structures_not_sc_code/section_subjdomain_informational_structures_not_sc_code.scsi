@@ -133,6 +133,22 @@ nrel_sc_text_translation
 	[sc-text translation*]
 	(* <- lang_en;; *);
 
+=> nrel_first_domain:
+	file;
+
+=> nrel_second_domain:
+	set;
+
+=> nrel_definitional_domain:
+	...
+	(*
+		<= nrel_combination:
+		{
+			file;
+			set
+		};;
+
+	*);
 <- rrel_key_sc_element:
 	...
 	(*
