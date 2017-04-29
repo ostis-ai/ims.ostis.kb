@@ -288,7 +288,7 @@ scp_program -> agent_approval_verification_result_of_offer
 			-> rrel_2: rrel_assign: rrel_const: rrel_common: rrel_scp_var: _arc1;;
 		  	-> rrel_3: rrel_fixed: rrel_scp_var: _verificate_struct;;
 		  	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
-		  	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_purpose;;
+		  	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_result;;
 
 			=> nrel_goto: .agent_approval_verification_result_of_offer_operator1_gen_act_initiator;; 
 			*);;
@@ -499,7 +499,7 @@ scp_program -> agent_approval_verification_result_of_offer
 			-> rrel_2: rrel_assign: rrel_const: rrel_common: rrel_scp_var: _arc1;;
 		  	-> rrel_3: rrel_assign: rrel_scp_var: _verificate_struct;;
 		  	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
-		  	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_purpose;;
+		  	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_result;;
 
 			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_approval_verification_result_of_offer;;
 			-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer_approval_verification_result_of_offer;;
@@ -531,7 +531,7 @@ scp_program -> agent_approval_verification_result_of_offer
 
 			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_approval_verification_result_of_offer;;
 			-> rrel_2: rrel_assign: rrel_const: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-		  	-> rrel_3: rrel_fixed: rrel_scp_const: nrel_purpose;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_const: nrel_result;;
 
 			=> nrel_goto: .agent_approval_verification_result_of_offer_operator_add_act_modify_offer_by_editing_the_kb_to_answer1;; 
 			*);;
