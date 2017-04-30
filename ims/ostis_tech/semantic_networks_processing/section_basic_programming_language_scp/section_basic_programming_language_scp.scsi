@@ -2145,6 +2145,22 @@ rrel_init
 		[initiating operator']
 		(*<- lang_en;;*);
 
+	=> nrel_first_domain:
+ 		question;
+
+ 	=> nrel_second_domain:
+ 		nrel_private_action;
+ 
+ 	=> nrel_definitional_domain:
+ 		...
+ 		(*
+ 			<= nrel_combination:
+ 			{
+ 				question;
+ 				nrel_private_action
+ 			};;
+ 		*);
+
 	<= nrel_inclusion:
 		rrel_1;
 
@@ -2166,6 +2182,22 @@ rrel_param
 	=> nrel_main_idtf:
 		[параметр scp-программы']
 		(*<- lang_ru;;*);
+
+	=> nrel_first_domain:
+ 		question;
+
+ 	=> nrel_second_domain:
+ 		rrel_argument_of_action;
+ 
+ 	=> nrel_definitional_domain:
+ 		...
+ 		(*
+ 			<= nrel_combination:
+ 			{
+ 				question;
+ 				rrel_argument_of_action
+ 			};;
+ 		*);
 
 	<= nrel_inclusion:
 		rrel_argument_of_action;
@@ -2196,6 +2228,19 @@ rrel_in
 		(*<- lang_ru;;*);
 		[in-parameter']
 		(*<- lang_en;;*);
+	=> nrel_first_domain:
+ 		sc_program;
+ 	=> nrel_second_domain:
+ 		sc_element;
+ 	=> nrel_definitional_domain:
+ 		...
+ 		(*
+ 			<= nrel_combination:
+ 			{
+ 				scp_program;
+ 				sc_element
+ 			};;
+ 		*);
 	<- rrel_key_sc_element:
 		...
 		(*
@@ -2216,6 +2261,19 @@ rrel_out
 		(*<- lang_ru;;*);
 		[out-parameter']
 		(*<- lang_en;;*);
+	=> nrel_first_domain:
+ 		sc_program;
+ 	=> nrel_second_domain:
+ 		sc_element;
+ 	=> nrel_definitional_domain:
+ 		...
+ 		(*
+ 			<= nrel_combination:
+ 			{
+ 				scp_program;
+ 				sc_element
+ 			};;
+ 		*);
 	<- rrel_key_sc_element:
 		...
 		(*
@@ -2232,10 +2290,26 @@ rrel_out
 rrel_scp_operand
 <- sc_node_role_relation;
 	=> nrel_main_idtf:
-		[scp-операнда']
+		[scp-операнд']
 		(*<- lang_ru;;*);
 		[scp-operand']
 		(*<- lang_en;;*);
+
+	=> nrel_first_domain:
+ 		rrel_argument_of_action;
+
+ 	=> nrel_second_domain:
+ 		scp_operator;
+ 
+ 	=> nrel_definitional_domain:
+ 		...
+ 		(*
+ 			<= nrel_combination:
+ 			{
+ 				rrel_argument_of_action;
+ 				scp_operator
+ 			};;
+ 		*);
 
 	<-role_relation;
 	<-minor_concept;
@@ -2286,6 +2360,19 @@ rrel_scp_const
 		(*<- lang_ru;;*);
 		[scp-constant']
 		(*<- lang_en;;*);
+	=> nrel_first_domain:
+ 		sc_element;
+ 	=> nrel_second_domain:
+ 		scp_program;
+ 	=> nrel_definitional_domain:
+ 		...
+ 		(*
+ 			<= nrel_combination:
+ 			{
+ 				sc_element;
+ 				scp_program
+ 			};;
+ 		*);
 	<- rrel_key_sc_element:
 		...
 		(*
@@ -2306,6 +2393,19 @@ rrel_scp_var
 		(*<- lang_ru;;*);
 		[scp-variable']
 		(*<- lang_en;;*);
+	=> nrel_first_domain:
+ 		sc_element;
+ 	=> nrel_second_domain:
+ 		scp_program;
+ 	=> nrel_definitional_domain:
+ 		...
+ 		(*
+ 			<= nrel_combination:
+ 			{
+ 				sc_element;
+ 				scp_program
+ 			};;
+ 		*);
 	<- rrel_key_sc_element:
 		...
 		(*
@@ -2326,6 +2426,19 @@ rrel_fixed
 		(*<- lang_ru;;*);
 		[scp-operand with fixed value']
 		(*<- lang_en;;*);
+	=> nrel_first_domain:
+ 		sc_element;
+ 	=> nrel_second_domain:
+ 		scp_operator;
+ 	=> nrel_definitional_domain:
+ 		...
+ 		(*
+ 			<= nrel_combination:
+ 			{
+ 				sc_element;
+ 				scp_operator
+ 			};;
+ 		*);
 	<- rrel_key_sc_element:
 		...
 		(*
@@ -2345,7 +2458,20 @@ rrel_assign
 		[scp-операнд со свободным значением']
 		(*<- lang_ru;;*);
 		[scp-operand with assign value']
-		(*<- lang_en;;*);
+		(*<- lang_en;;*);	
+	=> nrel_first_domain:
+ 		sc_element;
+ 	=> nrel_second_domain:
+ 		scp_operator;
+ 	=> nrel_definitional_domain:
+ 		...
+ 		(*
+ 			<= nrel_combination:
+ 			{
+ 				sc_element;
+ 				scp_operator
+ 			};;
+ 		*);
 	<- rrel_key_sc_element:
 		...
 		(*
@@ -2366,6 +2492,19 @@ rrel_set
 		(*<- lang_ru;;*);
 		[created set']
 		(*<- lang_en;;*);
+	=> nrel_first_domain:
+ 		set;
+ 	=> nrel_second_domain:
+ 		scp_operator;
+ 	=> nrel_definitional_domain:
+ 		...
+ 		(*
+ 			<= nrel_combination:
+ 			{
+ 				set;
+ 				scp_operator
+ 			};;
+ 		*);
 	<- rrel_key_sc_element:
 		...
 		(*
@@ -2420,6 +2559,19 @@ rrel_erase
 		(*<- lang_ru;;*);
 		[deleted sc-element']
 		(*<- lang_en;;*);
+	=> nrel_first_domain:
+ 		sc_element;
+ 	=> nrel_second_domain:
+ 		scp_operator_of_structure_deleting;
+ 	=> nrel_definitional_domain:
+ 		...
+ 		(*
+ 			<= nrel_combination:
+ 			{
+ 				rrel_scp_operand;
+ 				scp_operator_of_structure_deleting
+ 			};;
+ 		*);
 	<- rrel_key_sc_element:
 		...
 		(*
@@ -2440,6 +2592,31 @@ rrel_type_of_sc_element
 		(*<- lang_ru;;*);
 		[type of sc-element']
 		(*<- lang_en;;*);
+	=> nrel_first_domain:
+ 		sc_element;
+ 	=> nrel_second_domain:
+ 		...
+ 			(*
+ 				<= nrel_combination:
+ 				{
+ 					file;
+ 					sc_edge;
+ 					sc_node;
+ 					sc_arc
+ 				};;
+ 			*);
+ 	=> nrel_definitional_domain:
+ 		...
+ 		(*
+ 			<= nrel_combination:
+ 			{
+ 				sc_element;
+ 				file;
+ 				sc_edge;
+ 				sc_node;
+ 				sc_arc
+ 			};;
+ 		*);
 	<- rrel_key_sc_element:
 		...
 		(*
