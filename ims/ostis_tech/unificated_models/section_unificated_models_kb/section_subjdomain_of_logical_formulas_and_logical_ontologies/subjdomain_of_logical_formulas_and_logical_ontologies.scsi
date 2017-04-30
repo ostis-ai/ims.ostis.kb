@@ -69,6 +69,22 @@ rrel_subject_domain <- sc_node_role_relation;
 	[предметная область'] (* <- lang_ru;; *);
 	[subject domain'] (* <- lang_en;; *);
 
+=> nrel_first_domain:
+	formal_theory;
+
+=> nrel_second_domain:
+	subject_domain;
+
+=> nrel_definitional_domain:
+	...
+	(*
+		<= nrel_combination:
+		{
+			formal_theory;
+			subject_domain
+		};;
+	*);
+
 <- rrel_key_sc_element:
 	...
 	(*
@@ -87,6 +103,23 @@ rrel_axiom <- sc_node_role_relation;
 	[аксиома'] (* <- lang_ru;; *);
 	[axiom'] (* <- lang_en;; *);
 
+=> nrel_first_domain:
+	formal_theory;
+
+=> nrel_second_domain:
+	observation;
+
+=> nrel_definitional_domain:
+	...
+	(*
+		<= nrel_combination:
+		{
+			formal_theory;
+			observation
+		};;
+
+	*);
+
 <- rrel_key_sc_element:
 	...
 	(*
@@ -104,6 +137,23 @@ rrel_theorem <- sc_node_role_relation;
 => nrel_main_idtf:
 	[теорема'] (* <- lang_ru;; *);
 	[theorem'] (* <- lang_en;; *);
+
+=> nrel_first_domain:
+	formal_theory;
+
+=> nrel_second_domain:
+	observation;
+
+=> nrel_definitional_domain:
+	...
+	(*
+		<= nrel_combination:
+		{
+			formal_theory;
+			observation
+		};;
+
+	*);
 
 <- rrel_key_sc_element:
 	...
@@ -300,6 +350,15 @@ nrel_subformula <- sc_node_norole_relation;
 <- binary_relation;
 <- oriented_relation;
 <- transitive_relation;
+
+=> nrel_first_domain:
+	logical_formula;	
+
+=> nrel_second_domain:
+	logical_formula;
+
+=> nrel_definitional_domain:
+	logical_formula;
 
 <- rrel_key_sc_element:
 	...
@@ -547,6 +606,15 @@ nrel_implication <- sc_node_norole_relation;
 <- binary_relation;
 <- oriented_relation;
 
+=> nrel_first_domain:
+	observation;
+
+=> nrel_second_domain:
+	observation;
+
+=> nrel_definitional_domain:
+	observation;
+
 <- rrel_key_sc_element:
 	...
 	(*
@@ -579,6 +647,22 @@ rrel_if <- sc_node_role_relation;
 
 <= nrel_strict_inclusion: rrel_1;
 
+=> nrel_first_domain:
+	nrel_implication;
+
+=> nrel_second_domain:
+	observation;
+
+=> nrel_definitional_domain:
+	...
+	(*
+		<= nrel_combination:
+		{
+			nrel_implication;
+			observation
+		};;
+	*);
+
 <- rrel_key_sc_element:
 	...
 	(*
@@ -610,6 +694,22 @@ rrel_then <- sc_node_role_relation;
 	[then'] (* <- lang_en;; *);
 
 <= nrel_strict_inclusion: rrel_2;
+
+=> nrel_first_domain:
+	nrel_implication;
+
+=> nrel_second_domain:
+	observation;
+
+=> nrel_definitional_domain:
+	...
+	(*
+		<= nrel_combination:
+		{
+			nrel_implication;
+			observation
+		};;
+	*);
 
 <- rrel_key_sc_element:
 	...
@@ -645,6 +745,16 @@ nrel_equivalence <- sc_node_norole_relation;
 
 <- binary_relation;
 <- non_oriented_relation;
+
+=> nrel_first_domain:
+	observation;
+
+=> nrel_second_domain:
+	observation;
+
+=> nrel_definitional_domain:
+	observation;
+
 
 <- rrel_key_sc_element:
 	...
@@ -685,6 +795,15 @@ nrel_conjunction <- sc_node_norole_relation;
 <= nrel_strict_inclusion: class_of_sheaves_with_different_cardinality;
 
 <- non_oriented_relation;
+
+=> nrel_first_domain:
+	observation;
+
+=> nrel_second_domain:
+	observation;
+
+=> nrel_definitional_domain:
+	observation;
 
 <- rrel_key_sc_element:
 	...
@@ -727,6 +846,15 @@ nrel_disjunction <- sc_node_norole_relation;
 
 <= nrel_strict_inclusion: class_of_sheaves_with_different_cardinality;
 
+=> nrel_first_domain:
+	observation;
+
+=> nrel_second_domain:
+	observation;
+
+=> nrel_definitional_domain:
+	observation;
+
 <- rrel_key_sc_element:
 	...
 	(*
@@ -768,6 +896,15 @@ nrel_strict_disjunction <- sc_node_norole_relation;
 
 <= nrel_strict_inclusion: class_of_sheaves_with_different_cardinality;
 
+=> nrel_first_domain:
+	observation;
+
+=> nrel_second_domain:
+	observation;
+
+=> nrel_definitional_domain:
+	observation;
+
 <- rrel_key_sc_element:
 	...
 	(*
@@ -801,6 +938,12 @@ negation <- sc_node_norole_relation;
 <- logical_operation;
 
 <= nrel_strict_inclusion: singletone;
+
+=> nrel_first_domain:
+	observation;
+
+=> nrel_definitional_domain:
+	observation;
 
 <- rrel_key_sc_element:
 	...
@@ -861,6 +1004,15 @@ nrel_generality <- sc_node_norole_relation;
 <- oriented_relation;
 
 <= nrel_strict_inclusion: class_of_sheaves_with_different_cardinality;
+
+=> nrel_first_domain:
+	logical_formula;
+
+=> nrel_second_domain:
+	logical_formula;
+
+=> nrel_definitional_domain:
+	logical_formula;
 
 <- rrel_key_sc_element:
 	...
@@ -947,6 +1099,15 @@ nrel_existence <- sc_node_norole_relation;
 
 <= nrel_strict_inclusion: class_of_sheaves_with_different_cardinality;
 
+=> nrel_first_domain:
+	logical_formula;
+
+=> nrel_second_domain:
+	logical_formula;
+
+=> nrel_definitional_domain:
+	logical_formula;
+
 <- rrel_key_sc_element:
 	...
 	(*
@@ -1017,6 +1178,23 @@ rrel_bind_variables <- sc_node_role_relation;
 => nrel_main_idtf:
 	[связываемые переменные'] (* <- lang_ru;; *);
 	[bind variables'] (* <- lang_en;; *);
+
+=> nrel_first_domain:
+	quantifier;
+
+=> nrel_second_domain:
+	sc_variable;
+
+=> nrel_definitional_domain:
+	...
+	(*
+		<= nrel_combination:
+		{
+			sc_variable;
+			quantifier
+		};;
+
+	*);
 
 <- rrel_key_sc_element:
 	...
