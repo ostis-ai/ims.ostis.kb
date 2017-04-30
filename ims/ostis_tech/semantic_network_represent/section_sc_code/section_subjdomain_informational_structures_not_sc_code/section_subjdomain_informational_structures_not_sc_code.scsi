@@ -134,18 +134,18 @@ nrel_sc_text_translation
 	(* <- lang_en;; *);
 
 => nrel_first_domain:
-	file;
+	set;
 
 => nrel_second_domain:
-	set;
+	file;
 
 => nrel_definitional_domain:
 	...
 	(*
 		<= nrel_combination:
 		{
-			file;
-			set
+			set;
+			file
 		};;
 
 	*);
