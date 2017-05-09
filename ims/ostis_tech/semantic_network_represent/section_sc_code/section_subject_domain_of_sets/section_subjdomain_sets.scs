@@ -5,6 +5,17 @@ section_subjdomain_sets
 => nrel_idtf:
 	[Раздел базы знаний IMS, описывающий множества]
 	(* <- lang_ru;; *);
+=> nrel_introduction:
+	...
+(*
+	<= nrel_sc_text_translation:
+	 ...
+	 (*
+		 -> rrel_example:
+		   "file://content_html/introduction_section_subjdomain_sets.pdf"
+			(* <- lang_ru;;	*);;
+	 *);;
+*);
 <- not_enough_formed_structure;;
 
 section_subjdomain_sets = [*^"file://section_subjdomain_sets.scsi"*];;
