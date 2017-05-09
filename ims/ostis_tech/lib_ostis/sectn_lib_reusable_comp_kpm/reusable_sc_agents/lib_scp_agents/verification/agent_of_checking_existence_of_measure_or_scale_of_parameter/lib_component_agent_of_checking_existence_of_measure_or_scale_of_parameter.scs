@@ -1,8 +1,8 @@
 lib_component_agent_of_checking_existence_of_measure_or_scale_of_parameter
 => nrel_main_idtf:
-	[Компонент библиотеки. sc-агент проверки наличия единицы измерения или шкалы у параметра]
+	[Компонент библиотеки. sc-агент проверки указания шкалы или единицы измерения для значений параметров в рамках заданной структуры]
 	(* <- lang_ru;; *);
-	[Library component. sc-agent of checking existence of measure or scale of parameter]
+	[Library component. sc-agent of checking indication of scale or measure for values of parameters within given structure]
 	(* <- lang_en;; *);
 
 <- library_of_platform_independent_reusable_components; 
@@ -27,11 +27,11 @@ lib_component_agent_of_checking_existence_of_measure_or_scale_of_parameter
 		*);;
 	*);;
 
-action_to_check_existence_of_measure_or_scale_of_parameter
+action_to_check_indication_of_scale_or_measure_for_values_of_parameters_within_given_structure
 <- sc_node_not_relation;
 => nrel_main_idtf:
-	[действие. проверить наличие единицы измерения или шкалы у параметра]
+	[действие. проверить указания шкалы или единицы измерения для значений параметров в рамках заданной структуры]
  	(* <- lang_ru;; *);
- 	[action. check existence of measure or scale of parameter]
+ 	[action. check indication of scale or measure for values of parameters within given structure]
  	(* <- lang_en;; *);;
 

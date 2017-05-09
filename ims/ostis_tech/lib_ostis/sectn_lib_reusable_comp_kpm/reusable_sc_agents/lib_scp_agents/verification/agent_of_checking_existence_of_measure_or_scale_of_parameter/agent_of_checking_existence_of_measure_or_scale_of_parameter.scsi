@@ -1,12 +1,12 @@
 agent_of_checking_existence_of_measure_or_scale_of_parameter
 => nrel_main_idtf:
-	[агентная scp-программа проверки наличия единицы измерения или шкалы у параметра] (* <- lang_ru;; *);
-	[agent scp-program of checking existence of measure or scale of parameter] (* <- lang_en;; *);
+	[агентная scp-программа проверки указания шкалы или единицы измерения для значений параметров в рамках заданной структуры] (* <- lang_ru;; *);
+	[agent scp-program of checking indication of scale or measure for values of parameters within given structure] (* <- lang_en;; *);
 	<- agent_scp_program;;
 
 scp_program -> agent_of_checking_existence_of_measure_or_scale_of_parameter
 	(*
-	-> rrel_params: .agent_of_change_arc_direction_params 
+	-> rrel_params: .agent_of_checking_existence_of_measure_or_scale_of_parameter_params 
 		(*
 		-> rrel_1: rrel_in: _event;;
 		-> rrel_2: rrel_in: _input_arc;;
@@ -29,12 +29,12 @@ scp_program -> agent_of_checking_existence_of_measure_or_scale_of_parameter
 			(*
 		  	<- searchElStr3;;
 
-		  	-> rrel_1: rrel_fixed: rrel_scp_const: action_to_check_existence_of_measure_or_scale_of_parameter;;
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: action_to_check_indication_of_scale_or_measure_for_values_of_parameters_within_given_structure;;
 		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
 		  	-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
 
 		  	=> nrel_then: .agent_of_checking_existence_of_measure_or_scale_of_parameter_operator1C;;
-		  	=> nrel_else: .agent_of_checking_existence_of_measure_or_scale_of_parameter_operator8B;;
+		  	=> nrel_else: .agent_of_checking_existence_of_measure_or_scale_of_parameter_operator_return;;
 			*);;
 		
 		-> .agent_of_checking_existence_of_measure_or_scale_of_parameter_operator1C
@@ -45,33 +45,9 @@ scp_program -> agent_of_checking_existence_of_measure_or_scale_of_parameter
 			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
 			-> rrel_3: rrel_assign: rrel_scp_var: rrel_struct: _param;;
 
-		  	=> nrel_then: .agent_of_checking_existence_of_measure_or_scale_of_parameter_operator2A;;
+		  	=> nrel_then: .agent_of_checking_existence_of_measure_or_scale_of_parameter_operator2C;;
 		  	=> nrel_else: .agent_of_checking_existence_of_measure_or_scale_of_parameter_operator_call_proc_of_adding_validating_message;;
 			*);;	
-
-		-> .agent_of_checking_existence_of_measure_or_scale_of_parameter_operator2A
-			(*
-			<- searchElStr3;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_const: non_atomic_section;;
-			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-			-> rrel_3: rrel_fixed: rrel_scp_var: _param;;
-
-			=> nrel_then: .agent_of_checking_existence_of_measure_or_scale_of_parameter_operator2C;;
-			=> nrel_else: .agent_of_checking_existence_of_measure_or_scale_of_parameter_operator2B;;
-			*);;
-
-		-> .agent_of_checking_existence_of_measure_or_scale_of_parameter_operator2B
-			(*
-			<- searchElStr3;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_const: atomic_section;;
-			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-			-> rrel_3: rrel_fixed: rrel_scp_var: _param;;
-
-			=> nrel_then: .agent_of_checking_existence_of_measure_or_scale_of_parameter_operator2C;;
-			=> nrel_else: .agent_of_checking_existence_of_measure_or_scale_of_parameter_operator8B;;
-			*);;
 
 		-> .agent_of_checking_existence_of_measure_or_scale_of_parameter_operator2C
 			(*
@@ -591,9 +567,9 @@ scp_program -> agent_of_checking_existence_of_measure_or_scale_of_parameter
 		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_checking_existence_of_measure_or_scale_of_parameter_operator_gen_agent_work_result_params 
 				(*
 				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
-				-> rrel_2: rrel_fixed: rrel_scp_const: action_to_check_existence_of_measure_or_scale_of_parameter;;
+				-> rrel_2: rrel_fixed: rrel_scp_const: action_to_check_indication_of_scale_or_measure_for_values_of_parameters_within_given_structure;;
 				-> rrel_3: rrel_fixed: rrel_scp_var: _answer_of_proc_of_checking_parameter;;
-				-> rrel_4: rrel_fixed: rrel_scp_const: struct_of_checking_existence_of_measure_or_scale_of_parameter;;
+				-> rrel_4: rrel_fixed: rrel_scp_const: structure_of_checking_existence_of_measure_or_scale_of_parameter;;
 				*);;
 		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr2;;
 
