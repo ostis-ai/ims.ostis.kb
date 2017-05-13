@@ -1,0 +1,264 @@
+agent_of_counting_nodes_in_structure
+=> nrel_main_idtf:
+	[агентная scp-программа подсчета количества sc-узлов в струтуре] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[agent scp-program of counting number of sc-nodes in structure] (* <- lang_en;; *);
+<- agent_scp_program;;
+
+scp_program -> agent_of_counting_nodes_in_structure
+	(*
+	-> rrel_params: .agent_of_counting_nodes_in_structure_params 
+		(*
+		-> rrel_1: rrel_in: _event;;
+		-> rrel_2: rrel_in: _input_arc;;
+		*);;
+
+	-> rrel_operators: .agent_of_counting_nodes_in_structure_operator_set 
+		(*
+		-> rrel_init: .agent_of_counting_nodes_in_structure_operator_get_quest
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _temp;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: _input_arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _quest;;
+
+			=> nrel_goto: .agent_of_counting_nodes_in_structure_operator_check_action;;
+			*);;
+				 
+		-> .agent_of_counting_nodes_in_structure_operator_check_action
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: action_to_count_nodes_in_structure;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+
+			=> nrel_then: .agent_of_counting_nodes_in_structure_operator_get_first_argument;;
+			=> nrel_else: .agent_of_counting_nodes_in_structure_operator_return;;
+			*);;
+
+		-> .agent_of_counting_nodes_in_structure_operator_get_first_argument
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: rrel_struct: _pattern;;
+
+			=> nrel_then: .agent_of_counting_nodes_in_structure_operator_get_context;;
+			=> nrel_else: .agent_of_counting_nodes_in_structure_operator_invalid_first_argument;;
+			*);;
+
+		-> .agent_of_counting_nodes_in_structure_operator_invalid_first_argument
+			(*
+			<- contAssign;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _validation_message;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [Wrong first parameter! It must be a structure(rrel_struct).];;
+
+			=> nrel_goto: .agent_of_counting_nodes_in_structure_operator_validation_failed;;
+			*);;
+
+		-> .agent_of_counting_nodes_in_structure_operator_get_context
+			(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _context;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_context_of_action;;
+
+			=> nrel_then: .agent_of_counting_nodes_in_structure_operator_validate_context;;
+			=> nrel_else: .agent_of_counting_nodes_in_structure_operator_set_context_existence_to_false;;
+			*);;
+
+		-> .agent_of_counting_nodes_in_structure_operator_validate_context
+			(*
+			<- ifType;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_struct: _context;;
+
+			=> nrel_then: .agent_of_counting_nodes_in_structure_operator_set_context_existence_to_true;;
+			=> nrel_else: .agent_of_counting_nodes_in_structure_operator_invalid_context;;
+			*);;
+
+		-> .agent_of_counting_nodes_in_structure_operator_invalid_context
+			(*
+			<- contAssign;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _validation_message;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [Wrong second parameter! It must be a structure(rrel_struct).];;
+
+			=> nrel_goto: .agent_of_counting_nodes_in_structure_operator_validation_failed;;
+			*);;
+
+		-> .agent_of_counting_nodes_in_structure_operator_set_context_existence_to_true
+			(*
+			<- contAssign;;
+			
+			-> rrel_1: rrel_assign: rrel_scp_var:  _is_context_exist;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [true];;
+
+			=> nrel_goto: .agent_of_counting_nodes_in_structure_operator1;;
+			*);;
+
+		-> .agent_of_counting_nodes_in_structure_operator_set_context_existence_to_false
+			(*
+			<- contAssign;;
+			
+			-> rrel_1: rrel_assign: rrel_scp_var:  _is_context_exist;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [false];;
+
+			=> nrel_goto: .agent_of_counting_nodes_in_structure_operator1;;
+			*);;
+
+		-> .agent_of_counting_nodes_in_structure_operator1
+			(*
+			<- contAssign;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _number_of_nodes;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [0];;
+
+			=> nrel_goto: .agent_of_counting_nodes_in_structure_operator2;; 
+			*);;
+
+		-> .agent_of_counting_nodes_in_structure_operator2
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _pattern;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: rrel_node: _node;;
+
+			-> rrel_set_3: rrel_assign: rrel_scp_var: _set_of_nodes;;
+
+			=> nrel_then: .agent_of_counting_nodes_in_structure_operator3;;
+			=> nrel_else: .agent_of_counting_nodes_in_structure_operator_gen_answer;;
+			*);;
+
+		-> .agent_of_counting_nodes_in_structure_operator3
+			(*
+			<- stringIfEq;;			
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var:  _is_context_exist;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [true];;
+
+		 	=> nrel_then: .agent_of_counting_nodes_in_structure_operator4B;;
+		 	=> nrel_else: .agent_of_counting_nodes_in_structure_operator4A;;
+			*);;
+
+		-> .agent_of_counting_nodes_in_structure_operator4A
+			(*
+			<- call;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_cardinality_counting_without_multiple_occurrences;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_counting_nodes_in_structure_operator4A_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_nodes;;
+				-> rrel_2: rrel_assign: rrel_scp_var: _number_of_nodes;;
+				*);;
+			-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
+
+			=> nrel_goto: .agent_of_counting_nodes_in_structure_operator4C;;
+			*);;
+
+		-> .agent_of_counting_nodes_in_structure_operator4B
+			(*
+			<- call;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_cardinality_counting_without_multiple_occurrences_with_context;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_counting_nodes_in_structure_operator4B_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_nodes;;
+				-> rrel_2: rrel_assign: rrel_scp_var: _number_of_nodes;;
+				-> rrel_3: rrel_fixed: rrel_scp_var: _context;;
+				*);;
+			-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
+
+			=> nrel_goto: .agent_of_counting_nodes_in_structure_operator4C;;
+			*);;
+
+		-> .agent_of_counting_nodes_in_structure_operator4C
+			(*
+			<- waitReturn;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
+
+			=> nrel_goto: .agent_of_counting_nodes_in_structure_operator5;;
+			*);;
+
+		-> .agent_of_counting_nodes_in_structure_operator5
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _set_of_nodes;;
+
+			=> nrel_goto: .agent_of_counting_nodes_in_structure_operator6;;
+			*);;
+
+		-> .agent_of_counting_nodes_in_structure_operator6
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _is_context_exist;;
+
+			=> nrel_goto: .agent_of_counting_nodes_in_structure_operator_gen_answer;;
+			*);;
+
+		-> .agent_of_counting_nodes_in_structure_operator_gen_answer
+			(*
+			<- call;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_generation_of_metrics_answer;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_counting_nodes_in_structure_operator_gen_answer_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+				-> rrel_2: rrel_fixed: rrel_scp_const: action_to_count_nodes_in_structure;;
+				-> rrel_3: rrel_fixed: rrel_scp_var: _number_of_nodes;;
+				*);;
+			-> rrel_3: rrel_assign: rrel_scp_var: _descr2;;
+
+			=> nrel_goto: .agent_of_counting_nodes_in_structure_operator_gen_answer_wait_return;;
+			*);;
+
+		-> .agent_of_counting_nodes_in_structure_operator_gen_answer_wait_return
+			(*
+			<- waitReturn;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _descr2;;
+
+			=> nrel_goto: .agent_of_counting_nodes_in_structure_operator_return;;
+			*);;
+
+		-> .agent_of_counting_nodes_in_structure_operator_validation_failed
+			(*
+			<- call;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_validating_message;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_counting_nodes_in_structure_operator_validation_failed_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+				-> rrel_2: rrel_fixed: rrel_scp_var: _validation_message;;
+				*);;
+			-> rrel_3: rrel_assign: rrel_scp_var: _descr3;;
+
+			=> nrel_goto: .agent_of_counting_nodes_in_structure_operator_validation_failed_wait;;
+			*);;
+
+		-> .agent_of_counting_nodes_in_structure_operator_validation_failed_wait
+			(*
+			<- waitReturn;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _descr3;;
+
+			=> nrel_goto: .agent_of_counting_nodes_in_structure_operator_return;;
+			*);;
+
+		-> .agent_of_counting_nodes_in_structure_operator_return
+			(*
+			<- return;;
+			*);;
+		*);;
+	*);;
