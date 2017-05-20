@@ -43,7 +43,7 @@ basic_programming_language_scp
 	waitReturn;
 	waitReturnSet;
 	return;
-	scp_operators_conjunction;
+	syncronize;
 	scp_operator_of_event_control;
 	sys_wait;
 	scp_operator_of_file_content_process;
@@ -79,7 +79,7 @@ basic_programming_language_scp
 	print;
 	printNl;
 	printEl;
-	scp_operator_of_lock_managementProc;
+	scp_operator_of_lock_management;
 	unlockProc;
 	unlockEl;
 	lockEl;
@@ -114,21 +114,15 @@ scp_program
 <- sc_node_not_relation;
 	=> nrel_main_idtf:
 		[scp-программа]
-		(*
-		<- lang_ru;;
-		*);
+		(*<- lang_ru;;*);
 		[scp-program]
-		(*
-		<- lang_en;;
-		*);
+		(*<- lang_en;;*);
 	<= nrel_inclusion:
 		program_in_sc_memory;
 		
 	=> nrel_idtf:
 		[Язык SCP]
-		(*
-		<- lang_ru;;
-		*);
+		(*<- lang_ru;;*);
 	<- rrel_key_sc_element:
 		...
 		(*
@@ -146,21 +140,15 @@ agent_scp_program
 <- sc_node_not_relation;
 	=> nrel_main_idtf:
 		[агентная scp-программа]
-		(*
-		<- lang_ru;;
-		*);
+		(*<- lang_ru;;*);
 		[agent scp-program]
-		(*
-		<- lang_en;;
-		*);
+		(*<- lang_en;;*);
 	<= nrel_inclusion:
 		scp_program;
 		
 	=> nrel_idtf:
 		[Язык SCP]
-		(*
-		<- lang_ru;;
-		*);
+		(*<- lang_ru;;*);
 	<- rrel_key_sc_element:
 		...
 		(*
@@ -961,7 +949,7 @@ scp_operator_of_scp_process_control
 		waitReturn;
 		waitReturnSet;
 		return;
-		scp_operators_conjunction
+		syncronize
 	};;
 
 call
@@ -1077,6 +1065,7 @@ syncronize
 				*);;
 		*);;
 */
+
 
 scp_operator_of_event_control
 <- sc_node_not_relation;
@@ -2145,6 +2134,15 @@ rrel_init
 		[initiating operator']
 		(*<- lang_en;;*);
 
+	=> nrel_first_domain:
+ 		question;
+
+ 	=> nrel_second_domain:
+ 		question;
+ 
+ 	=> nrel_definitional_domain:
+ 		question;
+
 	<= nrel_inclusion:
 		rrel_1;
 
@@ -2166,6 +2164,22 @@ rrel_param
 	=> nrel_main_idtf:
 		[параметр scp-программы']
 		(*<- lang_ru;;*);
+
+	=> nrel_first_domain:
+ 		question;
+
+ 	=> nrel_second_domain:
+ 		sc_element;
+ 
+ 	=> nrel_definitional_domain:
+ 		...
+ 		(*
+ 			<= nrel_combination:
+ 			{
+ 				question;
+ 				sc_element
+ 			};;
+ 		*);
 
 	<= nrel_inclusion:
 		rrel_argument_of_action;
@@ -2196,6 +2210,19 @@ rrel_in
 		(*<- lang_ru;;*);
 		[in-parameter']
 		(*<- lang_en;;*);
+	=> nrel_first_domain:
+ 		question;
+ 	=> nrel_second_domain:
+ 		sc_element;
+ 	=> nrel_definitional_domain:
+ 		...
+ 		(*
+ 			<= nrel_combination:
+ 			{
+ 				question;
+ 				sc_element
+ 			};;
+ 		*);
 	<- rrel_key_sc_element:
 		...
 		(*
@@ -2216,6 +2243,19 @@ rrel_out
 		(*<- lang_ru;;*);
 		[out-parameter']
 		(*<- lang_en;;*);
+	=> nrel_first_domain:
+ 		question;
+ 	=> nrel_second_domain:
+ 		sc_element;
+ 	=> nrel_definitional_domain:
+ 		...
+ 		(*
+ 			<= nrel_combination:
+ 			{
+ 				question;
+ 				sc_element
+ 			};;
+ 		*);
 	<- rrel_key_sc_element:
 		...
 		(*
@@ -2232,10 +2272,26 @@ rrel_out
 rrel_scp_operand
 <- sc_node_role_relation;
 	=> nrel_main_idtf:
-		[scp-операнда']
+		[scp-операнд']
 		(*<- lang_ru;;*);
 		[scp-operand']
 		(*<- lang_en;;*);
+
+	=> nrel_first_domain:
+ 		scp_operator;
+
+ 	=> nrel_second_domain:
+ 		sc_element;
+ 
+ 	=> nrel_definitional_domain:
+ 		...
+ 		(*
+ 			<= nrel_combination:
+ 			{
+ 				sc_element;
+ 				scp_operator
+ 			};;
+ 		*);
 
 	<-role_relation;
 	<-minor_concept;
@@ -2286,6 +2342,19 @@ rrel_scp_const
 		(*<- lang_ru;;*);
 		[scp-constant']
 		(*<- lang_en;;*);
+	=> nrel_first_domain:
+ 		scp_program;
+ 	=> nrel_second_domain:
+ 		sc_element;
+ 	=> nrel_definitional_domain:
+ 		...
+ 		(*
+ 			<= nrel_combination:
+ 			{
+ 				sc_element;
+ 				scp_program
+ 			};;
+ 		*);
 	<- rrel_key_sc_element:
 		...
 		(*
@@ -2306,6 +2375,19 @@ rrel_scp_var
 		(*<- lang_ru;;*);
 		[scp-variable']
 		(*<- lang_en;;*);
+	=> nrel_first_domain:
+ 		scp_program;
+ 	=> nrel_second_domain:
+ 		sc_variable;
+ 	=> nrel_definitional_domain:
+ 		...
+ 		(*
+ 			<= nrel_combination:
+ 			{
+ 				sc_variable;
+ 				scp_program
+ 			};;
+ 		*);
 	<- rrel_key_sc_element:
 		...
 		(*
@@ -2326,6 +2408,19 @@ rrel_fixed
 		(*<- lang_ru;;*);
 		[scp-operand with fixed value']
 		(*<- lang_en;;*);
+	=> nrel_first_domain:
+ 		scp_operator;
+ 	=> nrel_second_domain:
+ 		sc_element;
+ 	=> nrel_definitional_domain:
+ 		...
+ 		(*
+ 			<= nrel_combination:
+ 			{
+ 				sc_element;
+ 				scp_operator
+ 			};;
+ 		*);
 	<- rrel_key_sc_element:
 		...
 		(*
@@ -2345,7 +2440,20 @@ rrel_assign
 		[scp-операнд со свободным значением']
 		(*<- lang_ru;;*);
 		[scp-operand with assign value']
-		(*<- lang_en;;*);
+		(*<- lang_en;;*);	
+	=> nrel_first_domain:
+ 		scp_operator;
+ 	=> nrel_second_domain:
+ 		sc_element;
+ 	=> nrel_definitional_domain:
+ 		...
+ 		(*
+ 			<= nrel_combination:
+ 			{
+ 				sc_element;
+ 				scp_operator
+ 			};;
+ 		*);
 	<- rrel_key_sc_element:
 		...
 		(*
@@ -2366,6 +2474,19 @@ rrel_set
 		(*<- lang_ru;;*);
 		[created set']
 		(*<- lang_en;;*);
+	=> nrel_first_domain:
+ 		scp_operator;
+ 	=> nrel_second_domain:
+ 		set;
+ 	=> nrel_definitional_domain:
+ 		...
+ 		(*
+ 			<= nrel_combination:
+ 			{
+ 				set;
+ 				scp_operator
+ 			};;
+ 		*);
 	<- rrel_key_sc_element:
 		...
 		(*
@@ -2385,30 +2506,100 @@ rrel_set
 			=> nrel_main_idtf:
 				[формируемое множество 1']
 				(*<- lang_ru;;*);;
+			<- sc_node_role_relation;;
+			=> nrel_first_domain:
+ 				scp_operator;;
+ 			=> nrel_second_domain:
+				set;;
+ 			=> nrel_definitional_domain:
+ 				...
+ 				(*
+ 					<= nrel_combination:
+ 					{
+ 						set;
+ 						scp_operator
+ 					};;
+ 				*);;
 		*);
         rrel_set_2
 		(*
 			=> nrel_main_idtf:
 				[формируемое множество 2']
 				(*<- lang_ru;;*);;
+			<- sc_node_role_relation;;
+			=> nrel_first_domain:
+ 				scp_operator;;
+ 			=> nrel_second_domain:
+				set;;
+ 			=> nrel_definitional_domain:
+ 				...
+ 				(*
+ 					<= nrel_combination:
+ 					{
+ 						set;
+ 						scp_operator
+ 					};;
+ 				*);;
 		*);
         rrel_set_3
 		(*
 			=> nrel_main_idtf:
 				[формируемое множество 3']
 				(*<- lang_ru;;*);;
+			<- sc_node_role_relation;;
+			=> nrel_first_domain:
+ 				scp_operator;;
+ 			=> nrel_second_domain:
+				set;;
+ 			=> nrel_definitional_domain:
+ 				...
+ 				(*
+ 					<= nrel_combination:
+ 					{
+ 						set;
+ 						scp_operator
+ 					};;
+ 				*);;
 		*);
         rrel_set_4
 		(*
 			=> nrel_main_idtf:
 				[формируемое множество 4']
 				(*<- lang_ru;;*);;
+			<- sc_node_role_relation;;
+			=> nrel_first_domain:
+ 				scp_operator;;
+ 			=> nrel_second_domain:
+				set;;
+ 			=> nrel_definitional_domain:
+ 				...
+ 				(*
+ 					<= nrel_combination:
+ 					{
+ 						set;
+ 						scp_operator
+ 					};;
+ 				*);;
 		*);
         rrel_set_5
 		(*
 			=> nrel_main_idtf:
 				[формируемое множество 5']
 				(*<- lang_ru;;*);;
+			<- sc_node_role_relation;;
+			=> nrel_first_domain:
+ 				scp_operator;;
+ 			=> nrel_second_domain:
+				set;;
+ 			=> nrel_definitional_domain:
+ 				...
+ 				(*
+ 					<= nrel_combination:
+ 					{
+ 						set;
+ 						scp_operator
+ 					};;
+ 				*);;
 		*)
     };;
 
@@ -2420,6 +2611,19 @@ rrel_erase
 		(*<- lang_ru;;*);
 		[deleted sc-element']
 		(*<- lang_en;;*);
+	=> nrel_first_domain:
+ 		scp_operator_of_structure_deleting;
+ 	=> nrel_second_domain:
+ 		sc_element;
+ 	=> nrel_definitional_domain:
+ 		...
+ 		(*
+ 			<= nrel_combination:
+ 			{
+ 				sc_element;
+ 				scp_operator_of_structure_deleting
+ 			};;
+ 		*);
 	<- rrel_key_sc_element:
 		...
 		(*
@@ -2440,6 +2644,26 @@ rrel_type_of_sc_element
 		(*<- lang_ru;;*);
 		[type of sc-element']
 		(*<- lang_en;;*);
+	=> nrel_first_domain:
+ 		sc_element;
+ 	=> nrel_second_domain:
+ 		...
+ 			(*
+ 				<= nrel_combination:
+ 				{
+ 					file;
+ 					sc_element
+ 				};;
+ 			*);
+ 	=> nrel_definitional_domain:
+ 		...
+ 		(*
+ 			<= nrel_combination:
+ 			{
+ 				sc_element;
+ 				file
+ 			};;
+ 		*);
 	<- rrel_key_sc_element:
 		...
 		(*
@@ -2463,6 +2687,21 @@ rrel_type_of_sc_element
 				(*<- lang_ru;;*);
 				[sc-edge']
 				(*<- lang_en;;*);;
+
+			<- sc_node_role_relation;;
+			=> nrel_first_domain:
+ 				sc_element;;
+ 			=> nrel_second_domain:
+ 				sc_edge;;
+ 			=> nrel_definitional_domain:
+ 				...
+ 				(*
+ 					<= nrel_combination:
+ 					{
+ 						sc_element;
+ 						sc_edge
+ 					};;
+ 				*);;
 		*);
 		rrel_file
 		(*
@@ -2471,6 +2710,21 @@ rrel_type_of_sc_element
 				(*<- lang_ru;;*);
 				[file']
 				(*<- lang_en;;*);;
+
+			<- sc_node_role_relation;;
+			=> nrel_first_domain:
+ 				sc_element;;
+ 			=> nrel_second_domain:
+ 				file;;
+ 			=> nrel_definitional_domain:
+ 				...
+ 				(*
+ 					<= nrel_combination:
+ 					{
+ 						sc_element;
+ 						file
+ 					};;
+ 				*);;
 		*)
 	};;
 
@@ -2481,6 +2735,20 @@ rrel_node
 		(*<- lang_ru;;*);
 		[sc-node']
 		(*<- lang_en;;*);
+
+	=> nrel_first_domain:
+ 		sc_element;
+ 	=> nrel_second_domain:
+ 		sc_node;
+ 	=> nrel_definitional_domain:
+ 		...
+ 		(*
+ 			<= nrel_combination:
+ 			{
+ 				sc_element;
+ 				sc_node
+ 			};;
+ 		*);
 	<= nrel_subdividing: 
 	{
 		rrel_struct
@@ -2490,6 +2758,20 @@ rrel_node
 				(*<- lang_ru;;*);
 				[structure']
 				(*<- lang_en;;*);;
+			<- sc_node_role_relation;;
+			=> nrel_first_domain:
+ 				sc_element;;
+ 			=> nrel_second_domain:
+ 				structure;;
+ 			=> nrel_definitional_domain:
+ 				...
+ 				(*
+ 					<= nrel_combination:
+ 					{
+ 						sc_element;
+ 						structure
+ 					};;
+ 				*);;
 		*);
 		rrel_relation;
 		rrel_class
@@ -2499,6 +2781,20 @@ rrel_node
 				(*<- lang_ru;;*);
 				[class']
 				(*<- lang_en;;*);;
+			<- sc_node_role_relation;;
+			=> nrel_first_domain:
+ 				sc_element;;
+ 			=> nrel_second_domain:
+ 				class;;
+ 			=> nrel_definitional_domain:
+ 				...
+ 				(*
+ 					<= nrel_combination:
+ 					{
+ 						sc_element;
+ 						class
+ 					};;
+ 				*);;
 		*)
 	};;
 
@@ -2509,6 +2805,19 @@ rrel_relation
 		(*<- lang_ru;;*);
 		[relation']
 		(*<- lang_en;;*);
+	=> nrel_first_domain:
+ 		sc_element;
+ 	=> nrel_second_domain:
+ 		relation;
+ 	=> nrel_definitional_domain:
+ 		...
+ 		(*
+ 			<= nrel_combination:
+ 			{
+ 				sc_element;
+ 				relation
+ 			};;
+ 		*);
 	=> nrel_inclusion:
 		rrel_role_relation;;
 
@@ -2519,6 +2828,19 @@ rrel_arc
 		(*<- lang_ru;;*);
 		[sc-arc']
 		(*<- lang_en;;*);
+	=> nrel_first_domain:
+ 		sc_element;
+ 	=> nrel_second_domain:
+ 		sc_arc;
+ 	=> nrel_definitional_domain:
+ 		...
+ 		(*
+ 			<= nrel_combination:
+ 			{
+ 				sc_element;
+ 				sc_arc
+ 			};;
+ 		*);
 	<= nrel_subdividing: 
 	{
 		rrel_common
@@ -2528,6 +2850,20 @@ rrel_arc
 				(*<- lang_ru;;*);
 				[common sc-arc']
 				(*<- lang_en;;*);;
+			<- sc_node_role_relation;;
+			=> nrel_first_domain:
+ 				sc_element;;
+ 			=> nrel_second_domain:
+ 				sc_arc_common;;
+ 			=> nrel_definitional_domain:
+ 				...
+ 				(*
+ 					<= nrel_combination:
+ 					{
+ 						sc_element;
+ 						sc_arc_common
+ 					};;
+ 				*);;
 		*);
 		rrel_access
 	};;
@@ -2539,15 +2875,42 @@ rrel_access
 		(*<- lang_ru;;*);
 		[access sc-arc']
 		(*<- lang_en;;*);
+	=> nrel_first_domain:
+ 		sc_element;
+ 	=> nrel_second_domain:
+ 		sc_arc_membership_or_nonmembership;
+ 	=> nrel_definitional_domain:
+ 		...
+ 		(*
+ 			<= nrel_combination:
+ 			{
+ 				sc_element;
+ 				sc_arc_membership_or_nonmembership
+ 			};;
+ 		*);
 	<= nrel_subdividing: 
 	{
 		rrel_pos
 		(*
 			=> nrel_main_idtf:
-				[позитивная sc-дуга принадлежности'']
+				[позитивная sc-дуга принадлежности']
 				(*<- lang_ru;;*);
 				[positive access sc-arc']
 				(*<- lang_en;;*);;
+			<- sc_node_role_relation;;
+			=> nrel_first_domain:
+ 				sc_element;;
+ 			=> nrel_second_domain:
+ 				sc_arc_membership;;
+ 			=> nrel_definitional_domain:
+ 				...
+ 				(*
+ 					<= nrel_combination:
+ 					{
+ 						sc_element;
+ 						sc_arc_membership
+ 					};;
+ 				*);;
 		*);
 		rrel_neg
 		(*
@@ -2556,6 +2919,20 @@ rrel_access
 				(*<- lang_ru;;*);
 				[negative access sc-arc']
 				(*<- lang_en;;*);;
+			<- sc_node_role_relation;;
+			=> nrel_first_domain:
+ 				sc_element;;
+ 			=> nrel_second_domain:
+ 				sc_arc_nonmembership;;
+ 			=> nrel_definitional_domain:
+ 				...
+ 				(*
+ 					<= nrel_combination:
+ 					{
+ 						sc_element;
+ 						sc_arc_nonmembership
+ 					};;
+ 				*);;
 		*);
 		rrel_fuz
 		(*
@@ -2564,6 +2941,20 @@ rrel_access
 				(*<- lang_ru;;*);
 				[fuzzy access sc-arc']
 				(*<- lang_en;;*);;
+			<- sc_node_role_relation;;
+			=> nrel_first_domain:
+ 				sc_element;;
+ 			=> nrel_second_domain:
+ 				sc_arc_fuzzy_membership;;
+ 			=> nrel_definitional_domain:
+ 				...
+ 				(*
+ 					<= nrel_combination:
+ 					{
+ 						sc_element;
+ 						sc_arc_fuzzy_membership
+ 					};;
+ 				*);;
 		*)
 	};
 	<= nrel_subdividing: 
@@ -2575,6 +2966,34 @@ rrel_access
 				(*<- lang_ru;;*);
 				[temporary access sc-arc']
 				(*<- lang_en;;*);;
+			<- sc_node_role_relation;;
+			=> nrel_first_domain:
+ 				sc_element;;
+ 			=> nrel_second_domain:
+ 				...
+ 				(*
+ 					<= nrel_intersection:
+ 					{
+ 						temporary_entity;
+ 						sc_arc_membership
+ 					};;
+ 				*);;
+ 			=> nrel_definitional_domain:
+ 				...
+ 				(*
+ 					<= nrel_combination:
+ 					{
+ 						sc_element;
+ 						...
+ 						(*
+ 							<= nrel_intersection:
+ 							{
+ 								temporary_entity;
+ 								sc_arc_membership
+ 							};;
+ 						*)
+ 					};;
+ 				*);;
 		*);
 		rrel_perm
 		(*
@@ -2583,5 +3002,33 @@ rrel_access
 				(*<- lang_ru;;*);
 				[permanent access sc-arc']
 				(*<- lang_en;;*);;
+			<- sc_node_role_relation;;
+			=> nrel_first_domain:
+ 				sc_element;;
+ 			=> nrel_second_domain:
+ 				...
+ 				(*
+ 					<= nrel_intersection:
+ 					{
+ 						permanent_entity;
+ 						sc_arc_membership
+ 					};;
+ 				*);;
+ 			=> nrel_definitional_domain:
+ 				...
+ 				(*
+ 					<= nrel_combination:
+ 					{
+ 						sc_element;
+ 						...
+ 						(*
+ 							<= nrel_intersection:
+ 							{
+ 								permanent_entity;
+ 								sc_arc_membership
+ 							};;
+ 						*)
+ 					};;
+ 				*);;
 		*)
 	};;

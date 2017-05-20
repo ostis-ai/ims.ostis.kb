@@ -57,6 +57,19 @@ nrel_subsidiary_ostis_system
 	(* <- lang_ru;; *);
 	[subsidiary ostis-system*]
 	(* <- lang_en;; *);
+=> nrel_first_domain:
+ 	IMS;
+ => nrel_second_domain:
+ 	ostis_system;
+ => nrel_definitional_domain:
+ 	...
+ 	(*
+ 		<= nrel_combination:
+ 			{
+ 				IMS;
+ 				ostis_system
+ 			};;
+ 	*);
 => nrel_idtf:
 	[дочерняя sc-система*]
 	(* <- lang_ru;; *);
