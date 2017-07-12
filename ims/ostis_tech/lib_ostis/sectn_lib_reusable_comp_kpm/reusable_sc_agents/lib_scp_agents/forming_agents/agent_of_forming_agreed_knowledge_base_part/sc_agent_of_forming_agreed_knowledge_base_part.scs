@@ -1,0 +1,49 @@
+sc_agent_of_forming_agreed_knowledge_base_part
+=> nrel_main_idtf:
+	[Абстрактный sc-агент формирования согласованной части базы знаний] (* <- lang_ru;; *);
+	[Abstract sc-agent of forming agreed knowledge base part] (* <- lang_en;; *);
+
+<- abstract_sc_agent;
+
+=> nrel_primary_initiation_condition: 
+	(sc_event_add_output_arc => question_initiated);
+
+=> nrel_initiation_condition_and_result: 
+	(..sc_agent_of_forming_agreed_knowledge_base_part_condition => ..sc_agent_of_forming_agreed_knowledge_base_part_result);
+
+<= nrel_sc_agent_key_sc_elements: 
+	{
+	question_initiated;
+	question;
+	action_of_forming_agreed_knowledge_base_part
+	};
+
+=> nrel_inclusion: 
+	.platform_independent_realization_of_sc_agent_of_forming_agreed_knowledge_base_part
+	(*
+	<- platform_independent_abstract_sc_agent;;
+	<= nrel_sc_agent_program: 
+		{
+		agent_of_forming_agreed_knowledge_base_part	
+		};;
+
+	-> sc_agent_of_forming_agreed_knowledge_base_part_scp    
+		(* <- active_sc_agent;; *);;  
+	*);;
+
+..sc_agent_of_forming_agreed_knowledge_base_part_condition
+= [*
+	action_of_forming_agreed_knowledge_base_part _-> .._question;;
+	question_initiated _-> .._question;;
+	question _-> .._question;;
+	.._question _-> .._parameter;;
+*];;
+
+..sc_agent_of_forming_agreed_knowledge_base_part_result
+= [*
+	action_of_forming_agreed_knowledge_base_part _-> .._question;;
+	question_finished _-> .._question;;
+	question _-> .._question;;
+	.._question _=> nrel_answer:: .._answer;;
+	.._question _-> .._parameter;;
+*];;

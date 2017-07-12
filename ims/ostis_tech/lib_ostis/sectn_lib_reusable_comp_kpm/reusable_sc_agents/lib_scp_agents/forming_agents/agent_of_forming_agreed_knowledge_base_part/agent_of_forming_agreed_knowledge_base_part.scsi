@@ -1,0 +1,221 @@
+agent_of_forming_agreed_knowledge_base_part
+=> nrel_main_idtf:
+	[агентная scp-программа формирования согласованной части базы знаний] (* <- lang_ru;; *);
+	[agent scp-program of forming agreed knowledge base part] (* <- lang_en;; *);
+<- agent_scp_program;;
+
+scp_program -> agent_of_forming_agreed_knowledge_base_part 
+	(*
+	-> rrel_params: .agent_of_forming_agreed_knowledge_base_part_params 
+		(*
+		-> rrel_1: rrel_in: _event;;
+		-> rrel_2: rrel_in: _input_arc;;
+		*);;
+
+	-> rrel_operators: .agent_of_forming_agreed_knowledge_base_part_operator_set 
+		(*
+		-> rrel_init: .agent_of_forming_agreed_knowledge_base_part_operator_init1
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _temp;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: _input_arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _quest;;
+
+			=> nrel_goto: .agent_of_forming_agreed_knowledge_base_part_operator_init2;;
+			*);;
+
+		-> .agent_of_forming_agreed_knowledge_base_part_operator_init2
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: action_of_forming_agreed_knowledge_base_part;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+
+			=> nrel_then: .agent_of_forming_agreed_knowledge_base_part_operator_init3;;
+			=> nrel_else: .agent_of_forming_agreed_knowledge_base_part_operator_return;;
+			*);;
+
+		-> .agent_of_forming_agreed_knowledge_base_part_operator_init3
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _param;;
+
+			=> nrel_then: .agent_of_forming_agreed_knowledge_base_part_operator_init4;;
+			=> nrel_else: .agent_of_forming_agreed_knowledge_base_part_operator_return;;
+			*);;	
+
+		-> .agent_of_forming_agreed_knowledge_base_part_operator_init4
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: concerted_part_of_kb;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _concerted_part;;
+
+			=> nrel_then: .agent_of_forming_agreed_knowledge_base_part_operator_init4_1;;
+			=> nrel_else: .agent_of_forming_agreed_knowledge_base_part_operator_unsuccess;;
+			*);;
+
+		-> .agent_of_forming_agreed_knowledge_base_part_operator_init4_1
+			(*
+		 	<- ifCoin;;
+
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _param;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: concerted_part_of_kb;;
+
+            => nrel_then: .agent_of_forming_agreed_knowledge_base_part_operator_find_substantive_part_of_kb;;
+			=> nrel_else: .agent_of_forming_agreed_knowledge_base_part_operator_return;;
+		 	*);;	
+		//TODO eraseSetStr3 doesn't work correct 
+		/*-> .agent_of_forming_agreed_knowledge_base_part_operator_init5
+			(*
+			<- eraseSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _concerted_part;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: rrel_erase: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _node1;;
+
+			=> nrel_goto: .agent_of_forming_agreed_knowledge_base_part_operator_find_substantive_part_of_kb;;
+			*);;*/
+
+		-> .agent_of_forming_agreed_knowledge_base_part_operator_find_substantive_part_of_kb
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: substantive_part_of_the_knowledge_base;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _substantive_part_of_kb;;
+
+			=> nrel_then: .agent_of_forming_agreed_knowledge_base_part_operator_section14;;
+			=> nrel_else: .agent_of_forming_agreed_knowledge_base_part_operator_find_documentation_section;;
+			*);;		
+
+		-> .agent_of_forming_agreed_knowledge_base_part_operator_section14
+			(*
+			<- call;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_section_in_context;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_forming_agreed_knowledge_base_part_operator_section14_params
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _substantive_part_of_kb;;
+				-> rrel_2: rrel_fixed: rrel_scp_var: _concerted_part;;
+				*);;
+			-> rrel_3: rrel_assign: rrel_scp_var: _descr_subst_part;;
+
+			=> nrel_goto: .agent_of_forming_agreed_knowledge_base_part_operator_section14_wait;;
+			*);;
+
+		-> .agent_of_forming_agreed_knowledge_base_part_operator_section14_wait
+			(*
+			<- waitReturn;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _descr_subst_part;;
+
+			=> nrel_goto: .agent_of_forming_agreed_knowledge_base_part_operator_find_documentation_section;;
+			*);;
+
+		-> .agent_of_forming_agreed_knowledge_base_part_operator_find_documentation_section
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: documentation_of_the_computer_system;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _documentation_section;;
+
+			=> nrel_then: .agent_of_forming_agreed_knowledge_base_part_operator_section15;;
+			=> nrel_else: .agent_of_forming_agreed_knowledge_base_part_operator_find_context_of_subject_of_kb_of_the_global_kb;;
+			*);;	
+
+		-> .agent_of_forming_agreed_knowledge_base_part_operator_section15
+			(*
+			<- call;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_section_in_context;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_forming_agreed_knowledge_base_part_operator_section15_params
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _documentation_section;;
+				-> rrel_2: rrel_fixed: rrel_scp_var: _concerted_part;;
+				*);;
+			-> rrel_3: rrel_assign: rrel_scp_var: _descr_documentation;;
+
+			=> nrel_goto: .agent_of_forming_agreed_knowledge_base_part_operator_section15_wait;;
+			*);;
+
+		-> .agent_of_forming_agreed_knowledge_base_part_operator_section15_wait
+			(*
+			<- waitReturn;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _descr_documentation;;
+
+			=> nrel_goto: .agent_of_forming_agreed_knowledge_base_part_operator_find_context_of_subject_of_kb_of_the_global_kb;;
+			*);;
+
+		-> .agent_of_forming_agreed_knowledge_base_part_operator_find_context_of_subject_of_kb_of_the_global_kb
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: context_of_subject_of_knowledge_base_of_the_Global_Knowledge_Base;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _context_of_subject_of_kb_of_the_global_kb;;
+
+			=> nrel_then: .agent_of_forming_agreed_knowledge_base_part_operator_section16;;
+			=> nrel_else: .agent_of_forming_agreed_knowledge_base_part_operator_success;;
+			*);;	
+
+		-> .agent_of_forming_agreed_knowledge_base_part_operator_section16
+			(*
+			<- call;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_section_in_context;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_forming_agreed_knowledge_base_part_operator_section16_params
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _context_of_subject_of_kb_of_the_global_kb;;
+				-> rrel_2: rrel_fixed: rrel_scp_var: _concerted_part;;
+				*);;
+			-> rrel_3: rrel_assign: rrel_scp_var: _descr_glob_context;;
+
+			=> nrel_goto: .agent_of_forming_agreed_knowledge_base_part_operator_section16_wait;;
+			*);;
+
+		-> .agent_of_forming_agreed_knowledge_base_part_operator_section16_wait
+			(*
+			<- waitReturn;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _descr_glob_context;;
+
+			=> nrel_goto: .agent_of_forming_agreed_knowledge_base_part_operator_success;;
+			*);;
+
+		-> .agent_of_forming_agreed_knowledge_base_part_operator_success
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: question_finished_successfully;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+
+			=> nrel_goto: .agent_of_forming_agreed_knowledge_base_part_operator_return;; 
+			*);;
+
+		-> .agent_of_forming_agreed_knowledge_base_part_operator_unsuccess
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: question_finished_unsuccessfully;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+
+			=> nrel_goto: .agent_of_forming_agreed_knowledge_base_part_operator_return;; 
+			*);;
+
+		-> .agent_of_forming_agreed_knowledge_base_part_operator_return
+			(*
+			<- return;;
+			*);;
+		*);;
+	*);;

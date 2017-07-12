@@ -1,0 +1,37 @@
+lib_component_agent_of_forming_agreed_knowledge_base_part
+=> nrel_main_idtf:
+	[Компонент библиотеки. sc-агент формирования согласованной части базы знаний]
+	(* <- lang_ru;; *);
+	[Library component. sc-agent of forming agreed knowledge base part]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components; 
+<- library_of_atomic_reusable_components; 
+
+=> nrel_attendant_component: 
+	lib_component_ui_menu_for_agent_of_forming_agreed_knowledge_base_part;
+
+-> rrel_key_sc_element: 
+	.platform_independent_realization_of_sc_agent_of_forming_agreed_knowledge_base_part; 
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/agent_of_forming_agreed_knowledge_base_part.html"
+				(* <- lang_ru;; *);; 
+		*);;
+	*);;
+
+action_of_forming_agreed_knowledge_base_part
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. сформировать согласованную часть базы знаний]
+		(*<- lang_ru;;*);
+=> nrel_main_idtf:
+	[action. form agreed knowledge base part]
+		(* <- lang_en;; *);;

@@ -1,0 +1,144 @@
+proc_of_adding_struct_elems_to_context
+=> nrel_main_idtf:
+	[scp-программа добавления элементов структуры в контекст] (* <- lang_ru;; *);
+	[scp-program of adding structures elements to context] (* <- lang_en;; *);;
+
+scp_program-> proc_of_adding_struct_elems_to_context
+(*
+     -> rrel_params: .proc_of_adding_struct_elems_to_context_params
+      	(*
+		-> rrel_1: rrel_in: _struct;;
+		-> rrel_2: rrel_in: _context;;
+		-> rrel_3: rrel_in: _visited_inner_structs;;
+	 	 *);;
+
+	 -> rrel_operators: .proc_of_adding_struct_elems_to_context_operator_set
+	 	(*
+	 	-> rrel_init: .proc_of_adding_struct_elems_to_context_operator_A0
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _visited_inner_structs;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _struct;;
+
+			=> nrel_goto: .proc_of_adding_struct_elems_to_context_operator_A1;;
+			*);;	
+
+	 	-> .proc_of_adding_struct_elems_to_context_operator_A1
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _struct;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _any_element;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _context;;
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _context;;
+
+			=> nrel_goto: .proc_of_adding_struct_elems_to_context_operator_A2;;
+			*);;
+
+		-> .proc_of_adding_struct_elems_to_context_operator_A2
+			(*
+			<- searchSetStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _struct;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _any_element;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_assign: rrel_scp_var: rrel_role_relation: _role_relation;;
+
+			-> rrel_set_4: rrel_fixed: rrel_scp_var: _context;;
+			-> rrel_set_5: rrel_fixed: rrel_scp_var: _context;;
+
+			=> nrel_goto: .proc_of_adding_struct_elems_to_context_operator_A3;;
+			*);;	
+			
+		-> .proc_of_adding_struct_elems_to_context_operator_A3
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _struct;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: rrel_struct: _inner_struct;;
+
+			-> rrel_set_3: rrel_assign: rrel_scp_var: _inner_structs;;
+
+			=> nrel_then: .proc_of_adding_struct_elems_to_context_operator_A4_loop_enter;;
+			=> nrel_else: .proc_of_adding_struct_elems_to_context_operator_return;;
+			*);;
+
+		-> .proc_of_adding_struct_elems_to_context_operator_A4_loop_enter
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _inner_structs;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _inner_struct;;
+
+			=> nrel_then: .proc_of_adding_struct_elems_to_context_operator_A5;;
+			=> nrel_else: .proc_of_adding_struct_elems_to_context_operator_A8_erase_temp_set;;
+			*);;
+
+		-> .proc_of_adding_struct_elems_to_context_operator_A5
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _arc1;;
+
+			=> nrel_goto: .proc_of_adding_struct_elems_to_context_operator_A6_0;;
+			*);;
+
+		-> .proc_of_adding_struct_elems_to_context_operator_A6_0
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _visited_inner_structs;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _inner_struct;;
+
+			=> nrel_then: .proc_of_adding_struct_elems_to_context_operator_A4_loop_enter;;
+			=> nrel_else: .proc_of_adding_struct_elems_to_context_operator_A6;;
+			*);;	
+
+		-> .proc_of_adding_struct_elems_to_context_operator_A6
+			(*
+			<- call;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_struct_elems_to_context;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: proc_of_adding_struct_elems_to_context_operator_A6_params
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _inner_struct;;
+				-> rrel_2: rrel_fixed: rrel_scp_var: _context;;
+				-> rrel_3: rrel_fixed: rrel_scp_var: _visited_inner_structs;;
+				*);;
+			-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
+
+			=> nrel_goto: .proc_of_adding_struct_elems_to_context_operator_A7;;
+			*);;
+
+		-> .proc_of_adding_struct_elems_to_context_operator_A7
+			(*
+			<- waitReturn;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
+
+			=> nrel_goto: .proc_of_adding_struct_elems_to_context_operator_A4_loop_enter;;
+			*);;
+
+		-> .proc_of_adding_struct_elems_to_context_operator_A8_erase_temp_set
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _inner_structs;;
+
+			=> nrel_goto: .proc_of_adding_struct_elems_to_context_operator_return;;
+			*);;	
+
+		-> .proc_of_adding_struct_elems_to_context_operator_return
+			(*
+			<- return;;
+			*);;	
+	 	*);;
+	*);;
