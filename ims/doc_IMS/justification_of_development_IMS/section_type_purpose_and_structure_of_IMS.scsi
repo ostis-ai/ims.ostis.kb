@@ -13,17 +13,3 @@ IMS
 	knowledge_base_IMS;
 	IMS_user_interface
 };;
-
-Myself_IMS
-<- sc_node_not_relation;
-<- ostis_system;
-=> nrel_main_idtf:
-	[Собственное Я IMS]
-	(* <- lang_ru;; *);
-	[IMS Myself]
-	(* <- lang_en;; *);
-<= nrel_basic_decomposition:
-{
-	IMS;
-	web_platform_based_on_software_sc_memory
-};;

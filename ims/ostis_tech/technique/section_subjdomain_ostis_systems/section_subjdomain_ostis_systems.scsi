@@ -18,24 +18,30 @@ subjdomain_ostis_systems
 	[Subject domain of ostis-systems]
 	(* <- lang_en;; *);;
 
-Myself
-<- sc_node_not_relation;
-=> nrel_main_idtf:
-	[Собственное Я]
-	(* <- lang_ru;; *);
-	[Myself]
-	(* <- lang_en;; *);;
-
 ostis_system <= nrel_abstract_basic_decomposition:
 	{
 	sc_models_interpretation_platform;
 	sc_model_computer_systems
 	};;
 
-Myself 
-=> nrel_idtf: [Я]
+Myself
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[Собственное Я]
+	(* <- lang_ru;; *);
+	[Myself]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[Я]
+	(* <- lang_ru;; *);
+	[Собственное Я IMS]
 	(* <- lang_ru;; *);
 <- ostis_system;
+<= nrel_basic_decomposition:
+{
+	IMS;
+	web_platform_based_on_software_sc_memory
+};
 <- rrel_key_sc_element:
 	...
 	(*
