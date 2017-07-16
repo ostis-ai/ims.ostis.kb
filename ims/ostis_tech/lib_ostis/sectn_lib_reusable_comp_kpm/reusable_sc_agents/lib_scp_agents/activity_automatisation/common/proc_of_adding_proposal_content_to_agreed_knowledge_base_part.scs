@@ -1,0 +1,172 @@
+scp_program -> proc_of_adding_proposal_content_to_agreed_knowledge_base_part
+	(*
+  	-> rrel_params: .proc_of_adding_proposal_content_to_agreed_knowledge_base_part_params 
+		(*
+		-> rrel_1: rrel_in: _proposal;;
+		-> rrel_2: rrel_in: _section;;
+    	*);;
+
+	-> rrel_operators: .proc_of_adding_proposal_content_to_agreed_knowledge_base_part_operator_set
+    	(*
+    	-> rrel_init: .proc_of_adding_proposal_content_to_agreed_knowledge_base_part_operator_A1
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: concerted_part_of_kb;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _concerted_part_of_kb;;
+
+			=> nrel_then: .proc_of_adding_proposal_content_to_agreed_knowledge_base_part_operator_A1_1;;
+			=> nrel_else: .proc_of_adding_proposal_content_to_agreed_knowledge_base_part_operator_return;;
+			*);;
+
+		-> .proc_of_adding_proposal_content_to_agreed_knowledge_base_part_operator_A1_1
+			(*
+		  	<- genEl;;
+
+		  	-> rrel_1: rrel_assign: rrel_node: rrel_scp_var: _temp_content;;
+
+		  	=> nrel_goto: .proc_of_adding_proposal_content_to_agreed_knowledge_base_part_operator_A2;;
+			*);;	
+
+    	-> .proc_of_adding_proposal_content_to_agreed_knowledge_base_part_operator_A2
+			(*
+		 	<- ifCoin;;
+
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _section;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: concerted_part_of_kb;;
+
+            => nrel_then: .proc_of_adding_proposal_content_to_agreed_knowledge_base_part_operator_A3;;
+			=> nrel_else: .proc_of_adding_proposal_content_to_agreed_knowledge_base_part_operator_B1;;
+		 	*);;
+
+		-> .proc_of_adding_proposal_content_to_agreed_knowledge_base_part_operator_B1
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _proposal;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _content;;
+
+			-> rrel_set_3: rrel_assign: rrel_scp_var: _temp_proposal_content;;
+
+			=> nrel_then: .proc_of_adding_proposal_content_to_agreed_knowledge_base_part_operator_B2_loop_enter;;
+			=> nrel_else: .proc_of_adding_proposal_content_to_agreed_knowledge_base_part_operator_A8_erase_temp_set;;
+			*);;	 	
+
+		-> .proc_of_adding_proposal_content_to_agreed_knowledge_base_part_operator_B2_loop_enter
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _temp_proposal_content;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _elem;;
+
+			=> nrel_then: .proc_of_adding_proposal_content_to_agreed_knowledge_base_part_operator_B3;;
+			=> nrel_else: .proc_of_adding_proposal_content_to_agreed_knowledge_base_part_operator_B5_erase_temp_set;;
+			*);;
+
+		-> .proc_of_adding_proposal_content_to_agreed_knowledge_base_part_operator_B3
+			(*
+		  	<- eraseEl;;
+
+		  	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc1;;
+
+		  	=> nrel_goto: .proc_of_adding_proposal_content_to_agreed_knowledge_base_part_operator_B4;;
+			*);;	
+
+		-> .proc_of_adding_proposal_content_to_agreed_knowledge_base_part_operator_B4
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _section;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _elem;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _temp_content;;
+
+			=> nrel_goto: .proc_of_adding_proposal_content_to_agreed_knowledge_base_part_operator_B2_loop_enter;;
+			*);;	
+
+		-> .proc_of_adding_proposal_content_to_agreed_knowledge_base_part_operator_B5_erase_temp_set
+			(*
+		  	<- eraseEl;;
+
+		  	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _temp_proposal_content;;
+
+		  	=> nrel_goto: .proc_of_adding_proposal_content_to_agreed_knowledge_base_part_operator_A3;;
+			*);;	
+
+		-> .proc_of_adding_proposal_content_to_agreed_knowledge_base_part_operator_A3
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _proposal;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _content;;
+
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _temp_content;;
+
+			=> nrel_then: .proc_of_adding_proposal_content_to_agreed_knowledge_base_part_operator_A4_loop_enter;;
+			=> nrel_else: .proc_of_adding_proposal_content_to_agreed_knowledge_base_part_operator_A8_erase_temp_set;;
+			*);;
+
+		-> .proc_of_adding_proposal_content_to_agreed_knowledge_base_part_operator_A4_loop_enter
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _temp_content;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _elem;;
+
+			=> nrel_then: .proc_of_adding_proposal_content_to_agreed_knowledge_base_part_operator_A5;;
+			=> nrel_else: .proc_of_adding_proposal_content_to_agreed_knowledge_base_part_operator_A8_erase_temp_set;;
+			*);;
+
+		-> .proc_of_adding_proposal_content_to_agreed_knowledge_base_part_operator_A5
+			(*
+		  	<- eraseEl;;
+
+		  	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc1;;
+
+		  	=> nrel_goto: .proc_of_adding_proposal_content_to_agreed_knowledge_base_part_operator_A6;;
+			*);;
+
+		-> .proc_of_adding_proposal_content_to_agreed_knowledge_base_part_operator_A6
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _concerted_part_of_kb;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _elem;;
+
+			=> nrel_then: .proc_of_adding_proposal_content_to_agreed_knowledge_base_part_operator_A4_loop_enter;;
+			=> nrel_else: .proc_of_adding_proposal_content_to_agreed_knowledge_base_part_operator_A7;;
+			*);;	
+
+		-> .proc_of_adding_proposal_content_to_agreed_knowledge_base_part_operator_A7
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _concerted_part_of_kb;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _elem;;
+
+			=> nrel_goto: .proc_of_adding_proposal_content_to_agreed_knowledge_base_part_operator_A4_loop_enter;;
+			*);;
+
+		-> .proc_of_adding_proposal_content_to_agreed_knowledge_base_part_operator_A8_erase_temp_set
+			(*
+		  	<- eraseEl;;
+
+		  	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _temp_content;;
+
+		  	=> nrel_goto: .proc_of_adding_proposal_content_to_agreed_knowledge_base_part_operator_return;;
+			*);;		
+			
+		-> .proc_of_adding_proposal_content_to_agreed_knowledge_base_part_operator_return 
+			(*
+			<- return;;
+			*);;
+		*);;
+	*);;
