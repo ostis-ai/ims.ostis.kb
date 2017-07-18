@@ -45,8 +45,42 @@ scp_program -> agent_of_checking_the_main_idtf_for_all_foreign_lang
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
 			-> rrel_3: rrel_assign: rrel_struct: rrel_scp_var: _param;;
 
-			=> nrel_then: .agent_of_checking_the_main_idtf_for_all_foreign_lang_operator_B0;;
+			=> nrel_then: .agent_of_checking_the_main_idtf_for_all_foreign_lang_operator_B0_find_context;;
 			=> nrel_else: .agent_of_checking_the_main_idtf_for_all_foreign_lang_operator_call_proc_of_adding_validating_message;;
+			*);;
+
+		-> .agent_of_checking_the_main_idtf_for_all_foreign_lang_operator_B0_find_context
+			(*
+		 	<- searchElStr5;;
+
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+		 	-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _common_arc;;
+		 	-> rrel_3: rrel_assign: rrel_scp_var: _context;;
+            -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc_in_relation;;
+		 	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_context_of_action;;
+
+			=> nrel_then: .agent_of_checking_the_main_idtf_for_all_foreign_lang_operator_B0_to_true;;
+			=> nrel_else: .agent_of_checking_the_main_idtf_for_all_foreign_lang_operator_B0_to_false;;
+			*);;
+
+		-> .agent_of_checking_the_main_idtf_for_all_foreign_lang_operator_B0_to_true
+			(*
+			<- contAssign;;			
+			
+			-> rrel_1: rrel_assign: rrel_scp_var:  _is_context_exist;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [true];;
+
+			=> nrel_goto: .agent_of_checking_the_main_idtf_for_all_foreign_lang_operator_B0;;
+			*);; 
+
+		-> .agent_of_checking_the_main_idtf_for_all_foreign_lang_operator_B0_to_false
+			(*
+			<- contAssign;;			
+			
+			-> rrel_1: rrel_assign: rrel_scp_var:  _is_context_exist;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [false];;
+
+			=> nrel_goto: .agent_of_checking_the_main_idtf_for_all_foreign_lang_operator_B0;;
 			*);;
 
 		->.agent_of_checking_the_main_idtf_for_all_foreign_lang_operator_B0
@@ -91,7 +125,7 @@ scp_program -> agent_of_checking_the_main_idtf_for_all_foreign_lang
 			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc;;
 
 			=> nrel_goto: .agent_of_checking_the_main_idtf_for_all_foreign_lang_operator_B4;;
-			*);;	
+			*);;
 
 		->.agent_of_checking_the_main_idtf_for_all_foreign_lang_operator_B4
 			(*
@@ -162,7 +196,30 @@ scp_program -> agent_of_checking_the_main_idtf_for_all_foreign_lang
 
 			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc;;
 
-			=> nrel_goto: .agent_of_checking_the_main_idtf_for_all_foreign_lang_operator_B10;;
+			=> nrel_goto: .agent_of_checking_the_main_idtf_for_all_foreign_lang_operator_B10_context_logic1;;
+			*);;
+
+		-> .agent_of_checking_the_main_idtf_for_all_foreign_lang_operator_B10_context_logic1
+			(*
+			<- stringIfEq;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _is_context_exist;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [true];;
+
+			=> nrel_then: .agent_of_checking_the_main_idtf_for_all_foreign_lang_operator_B10_context_logic2;;
+			=> nrel_else: .agent_of_checking_the_main_idtf_for_all_foreign_lang_operator_B10;;
+			*);;
+
+		-> .agent_of_checking_the_main_idtf_for_all_foreign_lang_operator_B10_context_logic2
+			(*
+			<- searchElStr3;;
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var: _context;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _identification_node;;
+			
+			=> nrel_then: .agent_of_checking_the_main_idtf_for_all_foreign_lang_operator_B10;;
+			=> nrel_else: .agent_of_checking_the_main_idtf_for_all_foreign_lang_operator_B8;;
 			*);;
 
 		-> .agent_of_checking_the_main_idtf_for_all_foreign_lang_operator_B10
@@ -293,5 +350,3 @@ scp_program -> agent_of_checking_the_main_idtf_for_all_foreign_lang
 			*);;
 		*);;
 	*);;
-
-
