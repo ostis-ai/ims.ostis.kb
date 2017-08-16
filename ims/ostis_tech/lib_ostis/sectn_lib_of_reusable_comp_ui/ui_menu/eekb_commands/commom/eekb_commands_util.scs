@@ -20,7 +20,7 @@ quasybinary_relation -> nrel_command_access;;
 sc_node_norole_relation -> nrel_command_access; nrel_command_order;;
 
 ui_user_command_with_context <- sc_node_not_relation;;
-computer_system
+ui_user_command_with_context
 => nrel_main_idtf:
 	[команда с контекстом]
 	(* <- lang_ru;; *);
