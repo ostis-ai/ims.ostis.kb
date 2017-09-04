@@ -46,8 +46,18 @@ scp_program -> agent_of_checking_concept_def_existence
 			-> rrel_3: rrel_assign: rrel_scp_var: rrel_struct: _param;;
 
 			=> nrel_then: .agent_of_checking_concept_def_existence_operator1D_find_context;;
-			=> nrel_else: .agent_of_checking_concept_def_existence_operator_call_proc_of_adding_validating_message;;
+			=> nrel_else: .agent_of_checking_concept_def_existence_operator_invalid_first_param_msg;;
 			*);;
+
+		-> .agent_of_checking_concept_def_existence_operator_invalid_first_param_msg
+			(*
+			<- contAssign;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _validation_message;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [Wrong 1st parameter! It must be a structure.];;
+
+			=> nrel_goto: .agent_of_checking_concept_def_existence_operator_call_proc_of_adding_validating_message;;
+			*);;	
 
 		-> .agent_of_checking_concept_def_existence_operator1D_find_context
 			(*
@@ -70,8 +80,28 @@ scp_program -> agent_of_checking_concept_def_existence
 			-> rrel_1: rrel_assign: rrel_scp_var:  _is_context_exist;;
 			-> rrel_2: rrel_fixed: rrel_scp_const: [true];;
 
-			=> nrel_goto: .agent_of_checking_concept_def_existence_operator1E_gen_answer_node;;
+			=> nrel_goto: .agent_of_checking_concept_def_existence_operator_validate_context;;
 			*);; 
+
+		-> .agent_of_checking_concept_def_existence_operator_validate_context
+			(*
+			<- ifType;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_struct: _context;;
+
+			=> nrel_then: .agent_of_checking_concept_def_existence_operator1E_gen_answer_node;;
+			=> nrel_else: .agent_of_checking_concept_def_existence_operator_invalid_second_param_msg;;
+			*);;	
+
+		-> .agent_of_checking_concept_def_existence_operator_invalid_second_param_msg
+			(*
+			<- contAssign;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _validation_message;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [Wrong 2nd parameter! It must be a structure.];;
+
+			=> nrel_goto: .agent_of_checking_concept_def_existence_operator_call_proc_of_adding_validating_message;;
+			*);;		
 
 		-> .agent_of_checking_concept_def_existence_operator1D_set_context_existence_to_false
 			(*
@@ -359,7 +389,7 @@ scp_program -> agent_of_checking_concept_def_existence
 		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_checking_concept_def_existence_operator_call_proc_of_adding_validating_message_params 
 				(*
 				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
-				-> rrel_2: rrel_fixed: rrel_scp_const: [Wrong 1st parameter! It must be structure.];;
+				-> rrel_2: rrel_fixed: rrel_scp_var: _validation_message;;
 				*);;
 		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
 
