@@ -1,0 +1,39 @@
+lib_component_agent_of_counting_arcs_in_structure
+=> nrel_main_idtf:
+	[Компонент библиотеки. sc-агент подсчета количества sc-дуг в структуре]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[Library component. sc-agent of counting number of sc-arcs in structure]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components; 
+<- library_of_atomic_reusable_components; 
+
+=> nrel_attendant_component: 
+	lib_component_ui_menu_file_for_counting_arcs_in_structure; 
+
+-> rrel_key_sc_element: 
+	.platform_independent_realization_of_sc_agent_of_counting_arcs_in_structure; 
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Agent_of_counting_arcs_in_structure.html"
+				(* <- lang_ru;; *);; 
+		*);;
+	*);;
+
+action_to_count_arcs_in_structure <- sc_node_not_relation;;
+
+action_to_count_arcs_in_structure
+=> nrel_main_idtf: 
+	[действие. посчитать количество sc-дуг в структуре] 
+	(* <- lang_ru;; *);
+=> nrel_main_idtf: 
+	[action. count of number of sc-arcs in structure] 
+	(* <- lang_en;; *);;
