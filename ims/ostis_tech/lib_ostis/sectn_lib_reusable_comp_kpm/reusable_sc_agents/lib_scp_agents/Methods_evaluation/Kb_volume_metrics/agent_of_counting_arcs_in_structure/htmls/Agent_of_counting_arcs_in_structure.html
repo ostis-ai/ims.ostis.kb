@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+</head>
+<body>
+	<p>
+		Задачей <b><sc_element sys_idtf="agent_of_counting_arcs_in_structure">агента подсчёта количества sc-дуг в струтуре</sc_element></b> является подсчёт количества sc-дуг в заданной структуре. Данный агент инициируется при условии появления в памяти вопросной конструкции, соответствующей <b><sc_element sys_idtf="action_to_count_arcs_in_structure">запросу посчитать количество sc-дуг в структуре</sc_element></b>. Входным аргументом является структура, для которой необходимо подсчитать количество sc-дуг. При необходимости ограничения области поиска агента в качестве второго аргумента запроса подается <b><sc_element sys_idtf="nrel_context_of_action">контекст действия</sc_element></b>, в рамках которого будет осуществляться поиск.
+	<p/>
+	<ul>В ходе выполнения агента явно указывается связь со следующими scp-программами:
+		<li>
+			<b><sc_element sys_idtf="proc_of_generation_of_metrics_answer">scp-программа генерации ответа для агентов оценки качества</sc_element>;</b>
+		</li>
+		<li>
+			<b><sc_element sys_idtf="proc_of_adding_validating_message">scp-программа добавления сообщения об ошибке</sc_element>.</b>
+		</li>
+	</ul>
+</body>
+</html>

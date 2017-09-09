@@ -1,0 +1,100 @@
+proc_of_cardinality_counting_with_context
+=> nrel_main_idtf:
+	[scp-программа подсчёта мощности множества в рамках заданного контекста] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[scp-program of counting set's cardinality within the context] (* <-lang_en;; *);;
+
+scp_program -> proc_of_cardinality_counting_with_context
+	(*
+	-> rrel_params: .proc_of_cardinality_counting_with_context_params 
+		(*
+		-> rrel_1: rrel_in: _set;;
+		-> rrel_2: rrel_in: _cardinality;;
+		-> rrel_3: rrel_in: _context;;
+		*);;
+
+	-> rrel_operators: .proc_of_cardinality_counting_with_context_operator_set
+		(*
+		-> rrel_init: .proc_of_cardinality_counting_with_context_operator1 
+			(*
+			<- contAssign;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _cardinality;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [0];;
+
+			=> nrel_goto: .proc_of_cardinality_counting_with_context_operator2;;
+			*);;
+
+		-> .proc_of_cardinality_counting_with_context_operator2
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _set;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _element;;
+
+			-> rrel_set_3: rrel_assign: rrel_scp_var: _temp_set;;
+
+			=> nrel_then: .proc_of_cardinality_counting_with_context_operator3A;;
+			=> nrel_else: .proc_of_cardinality_counting_with_context_operator_return;;
+			*);;
+
+		-> .proc_of_cardinality_counting_with_context_operator3A
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _temp_set;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _element;;
+
+			=> nrel_then: .proc_of_cardinality_counting_with_context_operator3B;;
+			=> nrel_else: .proc_of_cardinality_counting_with_context_operator4;;
+			*);;
+
+		-> .proc_of_cardinality_counting_with_context_operator3B
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+
+			=> nrel_goto: .proc_of_cardinality_counting_with_context_operator3C;;
+			*);;
+
+		-> .proc_of_cardinality_counting_with_context_operator3C
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _context;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _element;;
+
+			=> nrel_then: .proc_of_cardinality_counting_with_context_operator3D;;
+			=> nrel_else: .proc_of_cardinality_counting_with_context_operator3A;;
+			*);;
+
+		-> .proc_of_cardinality_counting_with_context_operator3D
+			(*
+			<- contAdd;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _cardinality;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: _cardinality;;
+			-> rrel_3: rrel_fixed: rrel_scp_const: [1];;
+
+			=> nrel_goto: .proc_of_cardinality_counting_with_context_operator3A;;
+			*);;
+
+		-> .proc_of_cardinality_counting_with_context_operator4
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _temp_set;;
+
+			=> nrel_goto: .proc_of_cardinality_counting_with_context_operator_return;;
+			*);;
+
+		-> .proc_of_cardinality_counting_with_context_operator_return 
+			(*
+			<- return;;
+			*);;
+		*);;
+	*);;
