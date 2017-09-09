@@ -45,8 +45,72 @@ scp_program -> agent_of_checking_existence_of_using_const_for_def
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
 			-> rrel_3: rrel_assign: rrel_scp_var: rrel_struct: _param;;
 
+			=> nrel_then: .agent_of_checking_existence_of_using_const_for_def_operator1D_find_context;;
+			=> nrel_else: .agent_of_checking_existence_of_using_const_for_def_operator_invalid_first_param_msg;;
+			*);;
+
+		-> .agent_of_checking_existence_of_using_const_for_def_operator_invalid_first_param_msg
+			(*
+			<- contAssign;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _validation_message;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [Wrong 1st parameter! It must be a structure.];;
+
+			=> nrel_goto: .agent_of_checking_existence_of_using_const_for_def_operator_call_proc_of_adding_validating_message;;
+			*);;		
+
+		-> .agent_of_checking_existence_of_using_const_for_def_operator1D_find_context
+			(*
+		 	<- searchElStr5;;
+
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+		 	-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _common_arc;;
+		 	-> rrel_3: rrel_assign: rrel_scp_var: _context;;
+            -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc_in_relation;;
+		 	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_context_of_action;;
+
+			=> nrel_then: .agent_of_checking_existence_of_using_const_for_def_operator1D_to_true;;
+			=> nrel_else: .agent_of_checking_existence_of_using_const_for_def_operator1D_to_false;;
+			*);;
+
+		-> .agent_of_checking_existence_of_using_const_for_def_operator1D_to_true
+			(*
+			<- contAssign;;			
+			
+			-> rrel_1: rrel_assign: rrel_scp_var:  _is_context_exist;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [true];;
+
+			=> nrel_goto: .agent_of_checking_existence_of_using_const_for_def_operator_validate_context;;
+			*);; 
+
+		-> .agent_of_checking_existence_of_using_const_for_def_operator_validate_context
+			(*
+			<- ifType;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_struct: _context;;
+
 			=> nrel_then: .agent_of_checking_existence_of_using_const_for_def_operator1E_gen_answer_node;;
-			=> nrel_else: .agent_of_checking_existence_of_using_const_for_def_operator_call_proc_of_adding_validating_message;;
+			=> nrel_else: .agent_of_checking_existence_of_using_const_for_def_operator_invalid_second_param_msg;;
+			*);;	
+
+		-> .agent_of_checking_existence_of_using_const_for_def_operator_invalid_second_param_msg
+			(*
+			<- contAssign;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _validation_message;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [Wrong 2nd parameter! It must be a structure.];;
+
+			=> nrel_goto: .agent_of_checking_existence_of_using_const_for_def_operator_call_proc_of_adding_validating_message;;
+			*);;	
+
+		-> .agent_of_checking_existence_of_using_const_for_def_operator1D_to_false
+			(*
+			<- contAssign;;			
+			
+			-> rrel_1: rrel_assign: rrel_scp_var:  _is_context_exist;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [false];;
+
+			=> nrel_goto: .agent_of_checking_existence_of_using_const_for_def_operator1E_gen_answer_node;;
 			*);;
 
 		-> .agent_of_checking_existence_of_using_const_for_def_operator1E_gen_answer_node
@@ -137,10 +201,105 @@ scp_program -> agent_of_checking_existence_of_using_const_for_def
 			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
 			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_key_sc_element;;
 
-			-> rrel_set_1: rrel_assign: rrel_scp_var: _def_set;;
+			-> rrel_set_1: rrel_assign: rrel_scp_var: _all_def_set;;
 
-			=> nrel_then: .agent_of_checking_existence_of_using_const_for_def_operator_def_search_loop_enter;;
+			=> nrel_then: .agent_of_checking_existence_of_using_const_for_def_operator1G_context_logic1;;
 			=> nrel_else: .agent_of_checking_existence_of_using_const_for_def_operator1G_loop_enter;;
+			*);;
+
+		-> .agent_of_checking_existence_of_using_const_for_def_operator1G_context_logic1
+			(*
+			<- stringIfEq;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _is_context_exist;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [true];;
+
+			=> nrel_then: .agent_of_checking_existence_of_using_const_for_def_operator1H_context_logic1;;
+			=> nrel_else: .agent_of_checking_existence_of_using_const_for_def_operator1G_loop3;;
+			*);;
+
+		-> .agent_of_checking_existence_of_using_const_for_def_operator1G_loop3
+			(*
+			<- searchSetStr3;;
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var: _all_def_set;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _some_element;;
+			
+			-> rrel_set_3: rrel_assign: rrel_scp_var: _def_set;;
+			
+			=> nrel_goto: .agent_of_checking_existence_of_using_const_for_def_operator1G_loop3_delete;;
+			*);;
+
+		-> .agent_of_checking_existence_of_using_const_for_def_operator1G_loop3_delete
+			(*
+			<- eraseEl;;
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _all_def_set;;
+			
+			=> nrel_goto: .agent_of_checking_existence_of_using_const_for_def_operator_def_search_loop_enter;;
+			*);;
+		
+		-> .agent_of_checking_existence_of_using_const_for_def_operator1H_context_logic1 
+			(*
+			<- genEl;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: rrel_node: _def_set;;
+
+			=> nrel_goto: .agent_of_checking_existence_of_using_const_for_def_operator1H_context_logic2;;
+			*);;
+
+		-> .agent_of_checking_existence_of_using_const_for_def_operator1H_context_logic2
+			(*
+			<- searchElStr3;;
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var: _all_def_set;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _some_def;;
+			
+			=> nrel_then: .agent_of_checking_existence_of_using_const_for_def_operator1H_context_logic3;;
+			=> nrel_else: .agent_of_checking_existence_of_using_const_for_def_operator1G_context_logic3_delete;;
+			*);;
+
+		-> .agent_of_checking_existence_of_using_const_for_def_operator1H_context_logic3
+			(*
+			<- eraseEl;;
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _arc;;
+			
+			=> nrel_goto: .agent_of_checking_existence_of_using_const_for_def_operator1H_context_logic4;;
+			*);;
+		
+		-> .agent_of_checking_existence_of_using_const_for_def_operator1H_context_logic4
+			(*
+			<- searchElStr3;;
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var: _context;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _some_def;;
+			
+			=> nrel_then: .agent_of_checking_existence_of_using_const_for_def_operator1H_context_logic5;;
+			=> nrel_else: .agent_of_checking_existence_of_using_const_for_def_operator1H_context_logic2;;
+			*);;
+		
+		-> .agent_of_checking_existence_of_using_const_for_def_operator1H_context_logic5
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _def_set;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _some_def;;
+
+			=> nrel_goto: .agent_of_checking_existence_of_using_const_for_def_operator1H_context_logic2;;
+			*);;
+		
+		-> .agent_of_checking_existence_of_using_const_for_def_operator1G_context_logic3_delete
+			(*
+			<- eraseEl;;
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _all_def_set;;
+			
+			=> nrel_goto: .agent_of_checking_existence_of_using_const_for_def_operator_def_search_loop_enter;;
 			*);;
 
 		-> .agent_of_checking_existence_of_using_const_for_def_operator_def_search_loop_enter
@@ -172,7 +331,7 @@ scp_program -> agent_of_checking_existence_of_using_const_for_def
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
 			-> rrel_3: rrel_fixed: rrel_scp_var: _def;;
 
-			=> nrel_then: .agent_of_checking_existence_of_using_const_for_def_operator1G_loop_check_using_constants;;
+			=> nrel_then: .agent_of_checking_existence_of_using_const_for_def_operator1G_context_logic4;;
 			=> nrel_else: .agent_of_checking_existence_of_using_const_for_def_operator1G_loop_is_explanation;;
 			*);;
 
@@ -184,8 +343,68 @@ scp_program -> agent_of_checking_existence_of_using_const_for_def
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
 			-> rrel_3: rrel_fixed: rrel_scp_var: _def;;
 
-			=> nrel_then: .agent_of_checking_existence_of_using_const_for_def_operator1G_loop_check_using_constants;;
+			=> nrel_then: .agent_of_checking_existence_of_using_const_for_def_operator1G_context_logic4;;
 			=> nrel_else: .agent_of_checking_existence_of_using_const_for_def_operator_def_search_loop_enter;;
+			*);;
+
+		-> .agent_of_checking_existence_of_using_const_for_def_operator1G_context_logic4
+			(*
+			<- stringIfEq;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _is_context_exist;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [true];;
+
+			=> nrel_then: .agent_of_checking_existence_of_using_const_for_def_operator1G_context_logic5;;
+			=> nrel_else: .agent_of_checking_existence_of_using_const_for_def_operator1G_loop_check_using_constants;;
+			*);;
+
+		-> .agent_of_checking_existence_of_using_const_for_def_operator1G_context_logic5
+			(*
+			<- searchSetStr5;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _node;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _def;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_using_constants;;
+
+			-> rrel_set_1: rrel_assign: rrel_scp_var: _using_constants;;
+
+			=> nrel_then: .agent_of_checking_existence_of_using_const_for_def_operator1G_context_logic6;;
+			=> nrel_else: .agent_of_checking_existence_of_using_const_for_def_operator1G_loop_add_incorrect_concept;;
+			*);;
+
+		-> .agent_of_checking_existence_of_using_const_for_def_operator1G_context_logic6
+			(*
+			<- searchElStr3;;
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var: _using_constants;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _some_element;;
+			
+			=> nrel_then: .agent_of_checking_existence_of_using_const_for_def_operator1G_context_logic7;;
+			=> nrel_else: .agent_of_checking_existence_of_using_const_for_def_operator1G_loop_add_incorrect_concept;;
+			*);;
+		
+		-> .agent_of_checking_existence_of_using_const_for_def_operator1G_context_logic7
+			(*
+			<- eraseEl;;
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _arc;;
+			
+			=> nrel_goto: .agent_of_checking_existence_of_using_const_for_def_operator1G_context_logic8;;
+			*);;
+		
+		-> .agent_of_checking_existence_of_using_const_for_def_operator1G_context_logic8
+			(*
+			<- searchElStr3;;
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var: _context;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _some_element;;
+			
+			=> nrel_then: .agent_of_checking_existence_of_using_const_for_def_operator_def_search_loop_enter;;
+			=> nrel_else: .agent_of_checking_existence_of_using_const_for_def_operator1G_context_logic6;;
 			*);;
 			
 		-> .agent_of_checking_existence_of_using_const_for_def_operator1G_loop_check_using_constants
@@ -287,7 +506,7 @@ scp_program -> agent_of_checking_existence_of_using_const_for_def
 		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_checking_existence_of_using_const_for_def_operator_call_proc_of_adding_validating_message_params 
 				(*
 				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
-				-> rrel_2: rrel_fixed: rrel_scp_const: [Wrong 1st parameter! It must be structure.];;
+				-> rrel_2: rrel_fixed: rrel_scp_var: _validation_message;;
 				*);;
 		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
 
@@ -309,5 +528,3 @@ scp_program -> agent_of_checking_existence_of_using_const_for_def
 			*);;
 		*);;
 	*);;
-
-
