@@ -1,0 +1,329 @@
+scp_program-> proc_of_finding_cycle_with_context
+(*
+     -> rrel_params: .proc_of_finding_cycle_with_context_params
+      	(*
+		-> rrel_1: rrel_in: _set_of_unvisited_arcs;;
+		-> rrel_2: rrel_in: _current_node;;
+		-> rrel_3: rrel_in: _order_relation_param;;
+		-> rrel_4: rrel_in: _struct_node;;
+		-> rrel_5: rrel_in: _context;;
+	 	 *);;
+
+	 -> rrel_operators: .proc_of_finding_cycle_with_context_operator_set
+	 	(*
+	 	-> rrel_init: .proc_of_finding_cycle_with_context_operator1A
+	 		(*
+	 		<- searchSetStr5;;
+
+	 		-> rrel_1: rrel_fixed: rrel_scp_var: _current_node;;
+	 		-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
+	 		-> rrel_3: rrel_assign: rrel_scp_var: _node2;;
+	 		-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+	 		-> rrel_5: rrel_fixed: rrel_scp_var: _order_relation_param;;
+
+	 		-> rrel_set_3: rrel_assign: rrel_scp_var: _set_for_next_node;;
+
+	 		=> nrel_then: .proc_of_finding_cycle_with_context_operator1B;;
+	 		=> nrel_else: .proc_of_finding_cycle_with_context_operator_return;;
+	 		*);;
+
+	 	-> .proc_of_finding_cycle_with_context_operator1B
+	 		(*
+	 		<- searchElStr3;;
+
+	 		-> rrel_1: rrel_fixed: rrel_scp_var: _set_for_next_node;;
+	 		-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+	 		-> rrel_3: rrel_assign: rrel_scp_var: _node2;;
+
+	 		=> nrel_then: .proc_of_finding_cycle_with_context_operator1L;;
+	 		=> nrel_else: .proc_of_finding_cycle_with_context_operator1C;;
+	 		*);;
+
+	 	-> .proc_of_finding_cycle_with_context_operator1C
+	 		(*
+	 		<- searchElStr3;;
+
+	 		-> rrel_1: rrel_fixed: rrel_scp_var: _struct_node;;
+	 		-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+	 		-> rrel_3: rrel_fixed: rrel_scp_var: _current_node;;
+
+	 		=> nrel_then: .proc_of_finding_cycle_with_context_operator1D;;
+	 		=> nrel_else: .proc_of_finding_cycle_with_context_operator_return;;
+	 		*);;
+
+	 	-> .proc_of_finding_cycle_with_context_operator1D
+	 		(*
+	 		<- eraseEl;;
+
+	 		-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: rrel_pos_const_perm: _arc;;
+
+	 		=> nrel_goto: .proc_of_finding_cycle_with_context_operator1E;;
+	 		*);;
+
+	 	-> .proc_of_finding_cycle_with_context_operator1E
+	 		(*
+	 		<- searchSetStr5;;
+
+	 		-> rrel_1: rrel_assign: rrel_scp_var: _node1;;
+	 		-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+	 		-> rrel_3: rrel_fixed: rrel_scp_var: _current_node;;
+	 		-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+	 		-> rrel_5: rrel_fixed: rrel_scp_var: _order_relation_param;;
+
+	 		-> rrel_set_2: rrel_assign: rrel_scp_var: _set_for_arc;;
+
+	 		=> nrel_then: .proc_of_finding_cycle_with_context_operator1F;;
+	 		=> nrel_else: .proc_of_finding_cycle_with_context_operator_return;;
+	 		*);;
+
+	 	-> .proc_of_finding_cycle_with_context_operator1F
+	 		(*
+	 		<- searchSetStr5;;
+
+	 		-> rrel_1: rrel_assign: rrel_scp_var: _node1;;
+	 		-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+	 		-> rrel_3: rrel_fixed: rrel_scp_var: _current_node;;
+	 		-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+	 		-> rrel_5: rrel_fixed: rrel_scp_var: _order_relation_param;;
+
+	 		-> rrel_set_4: rrel_fixed: rrel_scp_var: _set_for_arc;;
+	 		
+	 		=> nrel_then: .proc_of_finding_cycle_with_context_operator1G;;
+	 		=> nrel_else: .proc_of_finding_cycle_with_context_operator_return;;
+	 		*);;
+
+	 	-> .proc_of_finding_cycle_with_context_operator1G
+	 		(*
+	 		<- searchElStr3;;
+
+	 		-> rrel_1: rrel_fixed: rrel_scp_var: _set_for_arc;;
+	 		-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+	 		-> rrel_3: rrel_assign: rrel_scp_var: _arc1;;
+
+	 		=> nrel_then: .proc_of_finding_cycle_with_context_operator1H;;
+	 		=> nrel_else: .proc_of_finding_cycle_with_context_operator1K;;
+	 		*);;
+
+	 	-> .proc_of_finding_cycle_with_context_operator1H
+	 		(*
+	 		<- eraseEl;;
+
+	 		-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: rrel_pos_const_perm: _arc;;
+
+	 		=> nrel_goto: .proc_of_finding_cycle_with_context_operator1I;;
+	 		*);;
+
+	 	-> .proc_of_finding_cycle_with_context_operator1I
+	 		(*
+	 		<- searchElStr3;;
+
+	 		-> rrel_1: rrel_fixed: rrel_scp_var: _struct_node;;
+	 		-> rrel_2: rrel_erase: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+	 		-> rrel_3: rrel_fixed: rrel_scp_var: _arc1;;
+
+	 		=> nrel_then: .proc_of_finding_cycle_with_context_operator1J;;
+	 		=> nrel_else: .proc_of_finding_cycle_with_context_operator1G;;
+	 		*);;
+
+	 	-> .proc_of_finding_cycle_with_context_operator1J
+	 		(*
+	 		<- eraseEl;;
+
+	 		-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: rrel_pos_const_perm: _arc;;
+
+	 		=> nrel_goto: .proc_of_finding_cycle_with_context_operator1G;;
+	 		*);;
+
+	 	-> .proc_of_finding_cycle_with_context_operator1K
+	 		(*
+	 		<- eraseEl;;
+
+	 		-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _set_for_arc;;
+
+	 		=> nrel_goto: .proc_of_finding_cycle_with_context_operator_return;;
+	 		*);;
+
+	 	-> .proc_of_finding_cycle_with_context_operator1L
+	 		(*
+	 		<- eraseEl;;
+
+	 		-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: rrel_pos_const_perm: _arc;;
+
+	 		=> nrel_goto: .proc_of_finding_cycle_with_context_operator1M;;
+	 		*);;	
+
+	 	-> .proc_of_finding_cycle_with_context_operator1M
+	 		(*
+	 		<- searchElStr3;;
+
+	 		-> rrel_1: rrel_fixed: rrel_scp_var: _context;;
+	 		-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+	 		-> rrel_3: rrel_fixed: rrel_scp_var: _node2;;
+
+	 		=> nrel_then: .proc_of_finding_cycle_with_context_operator2A;;
+	 		=> nrel_else: .proc_of_finding_cycle_with_context_operator1B;;
+	 		*);;
+
+	 	-> .proc_of_finding_cycle_with_context_operator2A
+	 		(*
+	 		<- searchElStr5;;
+	 		
+	 		-> rrel_1: rrel_fixed: rrel_scp_var: _current_node;;
+	 		-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
+	 		-> rrel_3: rrel_fixed: rrel_scp_var: _node2;;
+	 		-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+	 		-> rrel_5: rrel_fixed: rrel_scp_var: _order_relation_param;;
+
+	 		=> nrel_then: .proc_of_finding_cycle_with_context_operator2B;;
+	 		=> nrel_else: .proc_of_finding_cycle_with_context_operator_return;;	
+	 		*);;	
+		
+	 	-> .proc_of_finding_cycle_with_context_operator2B
+	 		(*
+	 		<- searchElStr3;;
+
+	 		-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_unvisited_arcs;;
+	 		-> rrel_2: rrel_assign: rrel_scp_var:  rrel_pos_const_perm: _arc2;;
+	 		-> rrel_3: rrel_fixed: rrel_common: rrel_scp_var: _arc1;;
+
+	 		=> nrel_then: .proc_of_finding_cycle_with_context_operator2C;;
+	 		=> nrel_else: .proc_of_finding_cycle_with_context_operator1B;;
+	 		*);;
+	 
+	 	-> .proc_of_finding_cycle_with_context_operator2C
+	 		(*
+	 		<- eraseEl;;
+	 		
+	 		-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+
+	 		=> nrel_goto: .proc_of_finding_cycle_with_context_operator2D;;	
+	 		*);;	
+
+	 	-> .proc_of_finding_cycle_with_context_operator2D
+	 		(*
+	 		<- searchElStr3;;
+
+	 		-> rrel_1: rrel_fixed: rrel_scp_var: _struct_node;;
+	 		-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc_of_cycle_label;;
+	 		-> rrel_3: rrel_fixed: rrel_scp_var: _node2;;
+
+	 		=> nrel_then: .proc_of_finding_cycle_with_context_operator3A;;
+	 		=> nrel_else: .proc_of_finding_cycle_with_context_operator2E;;
+	 		*);;
+
+		-> .proc_of_finding_cycle_with_context_operator2E
+	 		(*
+	 		<- searchElStr5;;
+	 		
+	 		-> rrel_1: rrel_fixed: rrel_scp_var: _node2;;
+	 		-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
+	 		-> rrel_3: rrel_assign: rrel_scp_var: _next_node;;
+	 		-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+	 		-> rrel_5: rrel_fixed: rrel_scp_var: _order_relation_param;;
+
+	 		=> nrel_then: .proc_of_finding_cycle_with_context_operator4A;;
+	 		=> nrel_else: .proc_of_finding_cycle_with_context_operator1B;;	
+	 		*);;
+		
+		-> .proc_of_finding_cycle_with_context_operator3A
+	 		(*
+	 		<- searchSetStr5;;
+
+	 		-> rrel_1: rrel_fixed: rrel_scp_var: _current_node;;
+	 		-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc2;;
+	 		-> rrel_3: rrel_fixed: rrel_scp_var: _node2;;
+	 		-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+	 		-> rrel_5: rrel_fixed: rrel_scp_var: _order_relation_param;;
+
+	 		-> rrel_set_2: rrel_fixed: rrel_scp_var: _struct_node;;
+	 		-> rrel_set_4: rrel_fixed: rrel_scp_var: _struct_node;;
+
+	 		=> nrel_goto: .proc_of_finding_cycle_with_context_operator3B;;
+	 		*);;
+
+	 	-> .proc_of_finding_cycle_with_context_operator3B
+	 		(*
+	 		<- genElStr3;;
+	 		
+	 		-> rrel_1: rrel_fixed: rrel_scp_const: rrel_1;;
+	 		-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+	 		-> rrel_3: rrel_fixed: rrel_scp_var: rrel_pos_const_perm: _arc_of_cycle_label;;
+
+	 		=> nrel_goto: .proc_of_finding_cycle_with_context_operator_return;;
+	 		*);;	
+
+		-> .proc_of_finding_cycle_with_context_operator4A
+	 		(*
+	 		<- searchSetStr5;;
+	 		
+	 		-> rrel_1: rrel_fixed: rrel_scp_var: _current_node;;
+	 		-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
+	 		-> rrel_3: rrel_fixed: rrel_scp_var: _node2;;
+	 		-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+	 		-> rrel_5: rrel_fixed: rrel_scp_var: _order_relation_param;;
+
+	 		-> rrel_set_2: rrel_fixed: rrel_scp_var: _struct_node;;
+	 		-> rrel_set_4: rrel_fixed: rrel_scp_var: _struct_node;;
+
+	 		=> nrel_then: .proc_of_finding_cycle_with_context_operator4B;;
+	 		=> nrel_else: .proc_of_finding_cycle_with_context_operator_return;;	
+	 		*);;	
+
+	 	-> .proc_of_finding_cycle_with_context_operator4B
+	 		(*
+	 		<- genElStr3;;
+
+	 		-> rrel_1: rrel_fixed: rrel_scp_var: _struct_node;;
+	 		-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+	 		-> rrel_3: rrel_fixed: rrel_scp_var: _node2;;
+
+	 		=> nrel_goto: .proc_of_finding_cycle_with_context_operator5A;;
+	 		*);;
+
+	 	-> .proc_of_finding_cycle_with_context_operator5A
+			(*
+			<- call;;
+			-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_finding_cycle_with_context;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .proc_of_finding_cycle_with_context_operator5A_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_unvisited_arcs;;
+				-> rrel_2: rrel_fixed: rrel_scp_var: _node2;;
+				-> rrel_3: rrel_fixed: rrel_scp_var: _order_relation_param;;
+				-> rrel_4: rrel_fixed: rrel_scp_var: _struct_node;;
+				-> rrel_5: rrel_fixed: rrel_scp_var: _context;;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .proc_of_finding_cycle_with_context_operator5B;;
+
+			*);;
+
+		-> .proc_of_finding_cycle_with_context_operator5B
+			(*
+			<- waitReturn;;
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .proc_of_finding_cycle_with_context_operator5C;;
+			*);;
+
+		-> .proc_of_finding_cycle_with_context_operator5C
+	 		(*
+	 		<- searchElStr5;;
+
+	 		-> rrel_1: rrel_fixed: rrel_scp_var: _struct_node;;
+	 		-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+	 		-> rrel_3: rrel_assign: rrel_scp_var: _node2;;
+	 		-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+	 		-> rrel_5: rrel_fixed: rrel_scp_const: rrel_1;;
+
+	 		=> nrel_then: .proc_of_finding_cycle_with_context_operator_return;;
+	 		=> nrel_else: .proc_of_finding_cycle_with_context_operator1B;;
+	 		*);;
+
+		-> .proc_of_finding_cycle_with_context_operator_return
+			(*
+			<- return;;
+			*);;	
+				
+	 	*);;
+	*);;
