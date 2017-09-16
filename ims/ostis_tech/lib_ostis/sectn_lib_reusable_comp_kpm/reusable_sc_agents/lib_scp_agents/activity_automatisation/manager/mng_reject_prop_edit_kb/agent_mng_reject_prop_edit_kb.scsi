@@ -59,7 +59,7 @@ scp_program -> agent_of_manager_rejection_proposals_for_editing_kb
 			-> rrel_3: rrel_fixed: rrel_scp_var: _sign_of_action;;
 
 			=> nrel_then: .agent_of_manager_rejection_proposals_for_editing_kb_operator1E1;;
-			=> nrel_else: .agent_of_manager_rejection_proposals_for_editing_kb_operator_find_wrong_param;;
+			=> nrel_else: .agent_of_manager_rejection_proposals_for_editing_kb_call_proc_of_adding_validating_message_wrong_param;;
 			*);;
 
 		-> .agent_of_manager_rejection_proposals_for_editing_kb_operator1E1
@@ -73,7 +73,7 @@ scp_program -> agent_of_manager_rejection_proposals_for_editing_kb
 			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_authors;;
 
         		=> nrel_then: .agent_of_manager_rejection_proposals_for_editing_kb_operator1E2;;
-			=> nrel_else: .agent_of_manager_rejection_proposals_for_editing_kb_operator_return;;
+			=> nrel_else: .agent_of_manager_rejection_proposals_for_editing_kb_operator_access_denied;;
         		*);;
 
 		 -> .agent_of_manager_rejection_proposals_for_editing_kb_operator1E2
@@ -87,7 +87,7 @@ scp_program -> agent_of_manager_rejection_proposals_for_editing_kb
 			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_manager;;
 
         		=> nrel_then: .agent_of_manager_rejection_proposals_for_editing_kb_operator1F;;
-			=> nrel_else: .agent_of_manager_rejection_proposals_for_editing_kb_operator_return;;
+			=> nrel_else: .agent_of_manager_rejection_proposals_for_editing_kb_operator_access_denied;;
         		*);;
 
 		-> .agent_of_manager_rejection_proposals_for_editing_kb_operator1F
@@ -123,7 +123,7 @@ scp_program -> agent_of_manager_rejection_proposals_for_editing_kb
 			-> rrel_3: rrel_fixed: rrel_scp_var: _sign_of_action;;
 
 			=> nrel_then: .agent_of_manager_rejection_proposals_for_editing_kb_operator1H2;;
-			=> nrel_else: .agent_of_manager_rejection_proposals_for_editing_kb_operator2A;;
+			=> nrel_else: .agent_of_manager_rejection_proposals_for_editing_kb_operator_call_removing;;
 			*);;
 
 		-> .agent_of_manager_rejection_proposals_for_editing_kb_operator1H2
@@ -517,92 +517,57 @@ scp_program -> agent_of_manager_rejection_proposals_for_editing_kb
 
 /*******************************************************Wrong Parameters*******************************************************************/
 
-		-> .agent_of_manager_rejection_proposals_for_editing_kb_operator_find_wrong_param
-			(*
-			<- searchElStr3;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
-			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
-			-> rrel_3: rrel_assign: rrel_scp_var: _wrong_param;;
-
-			=> nrel_goto: .agent_of_manager_rejection_proposals_for_editing_kb_operator_gen_answer_node_for_wrong_param;;
-			*);;	
-
-		-> .agent_of_manager_rejection_proposals_for_editing_kb_operator_gen_answer_node_for_wrong_param
-			(*
-			<- genEl;;
-
-			-> rrel_1: rrel_assign: rrel_scp_var: rrel_const: rrel_node: _answer_of_manager_rejection_proposals_for_editing_kb;;	
-
-			=> nrel_goto: .agent_of_manager_rejection_proposals_for_editing_kb_operator_call_proc_of_erasing_comment;;   
-			*);;	
-				
-		-> .agent_of_manager_rejection_proposals_for_editing_kb_operator_call_proc_of_erasing_comment 
+		-> .agent_of_manager_rejection_proposals_for_editing_kb_call_proc_of_adding_validating_message_wrong_param
 			(*
 		  	<- call;;
 
-		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_erasing_comment;;
-		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_manager_rejection_proposals_for_editing_kb_operator_call_proc_of_erasing_comment_params 
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_validating_message;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_manager_rejection_proposals_for_editing_kb_call_proc_of_adding_validating_message_wrong_param_params 
 				(*
-				-> rrel_1: rrel_fixed: rrel_scp_var: _wrong_param;;
+				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+				-> rrel_2: rrel_fixed: rrel_scp_const: [Wrong 1st parameter! It must be sign of action_to_consider_offered_artist_of_project_task];;
 				*);;
-		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr3;;
 
-		  	=> nrel_goto: .agent_of_manager_rejection_proposals_for_editing_kb_operator_waitreturn_proc_of_erasing_comment;;
+		  	=> nrel_goto: .agent_of_manager_rejection_proposals_for_editing_kb_waitreturn_proc_of_adding_validating_message_wrong_param;;
 			*);;
 
-		-> .agent_of_manager_rejection_proposals_for_editing_kb_operator_waitreturn_proc_of_erasing_comment 
+		-> .agent_of_manager_rejection_proposals_for_editing_kb_waitreturn_proc_of_adding_validating_message_wrong_param
 			(*
 		  	<- waitReturn;;
 
-		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr3;;
 
-		  	=> nrel_goto: .agent_of_manager_rejection_proposals_for_editing_kb_operator_call_proc_of_generating_comment;;
+		  	=> nrel_goto: .agent_of_manager_rejection_proposals_for_editing_kb_operator_return;;
 			*);;
 
-
-		-> .agent_of_manager_rejection_proposals_for_editing_kb_operator_call_proc_of_generating_comment 
+		-> .agent_of_manager_rejection_proposals_for_editing_kb_operator_access_denied
 			(*
 		  	<- call;;
 
-		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_generating_comment;;
-		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_manager_rejection_proposals_for_editing_kb_operator_call_proc_of_generating_comment_params 
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_validating_message;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_manager_rejection_proposals_for_editing_kb_operator_access_denied_params 
 				(*
-				-> rrel_1: rrel_fixed: rrel_scp_var: _wrong_param;;
-				-> rrel_2: rrel_fixed: rrel_scp_const: [Ooops... Wrong parameters!];;
-				-> rrel_3: rrel_fixed: rrel_scp_var: _answer_of_manager_rejection_proposals_for_editing_kb;;
+				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+				-> rrel_2: rrel_fixed: rrel_scp_const: [Access denied. User must be a manager.];;
 				*);;
-		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr2;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr4;;
 
-		  	=> nrel_goto: .agent_of_manager_rejection_proposals_for_editing_kb_operator_waitreturn_proc_of_generating_comment;;
+		  	=> nrel_goto: .agent_of_manager_rejection_proposals_for_editing_kb_waitreturn_access_denied;;
 			*);;
 
-		-> .agent_of_manager_rejection_proposals_for_editing_kb_operator_waitreturn_proc_of_generating_comment
+		-> .agent_of_manager_rejection_proposals_for_editing_kb_waitreturn_access_denied
 			(*
 		  	<- waitReturn;;
 
-		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr2;;
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr4;;
 
-		  	=> nrel_goto: .agent_of_manager_rejection_proposals_for_editing_kb_operator_gen_wrong_param_answer;;
-			*);;		
-
-		-> .agent_of_manager_rejection_proposals_for_editing_kb_operator_gen_wrong_param_answer
-			(*
-			<- genElStr5;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
-			-> rrel_2: rrel_assign: rrel_scp_var: rrel_const: rrel_common: _arc1;;
-			-> rrel_3: rrel_fixed: rrel_scp_var: _answer_of_manager_rejection_proposals_for_editing_kb;;
-			-> rrel_4: rrel_assign: rrel_scp_var: rrel_const: rrel_pos_const_perm: _arc2;;
-			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_answer;;
-
-			=> nrel_goto: .agent_of_manager_rejection_proposals_for_editing_kb_operator_return;;
-			*);;
-                                                           			
+		  	=> nrel_goto: .agent_of_manager_rejection_proposals_for_editing_kb_operator_return;;
+			*);;	
+			                                                   			
 		-> .agent_of_manager_rejection_proposals_for_editing_kb_operator_return 
 			(*
 			<- return;;
 			*);;
-
 		*);;
 	*);;
