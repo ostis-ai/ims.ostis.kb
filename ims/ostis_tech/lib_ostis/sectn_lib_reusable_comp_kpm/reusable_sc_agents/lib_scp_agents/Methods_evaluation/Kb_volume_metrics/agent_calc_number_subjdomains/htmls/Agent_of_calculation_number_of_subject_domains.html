@@ -4,8 +4,16 @@
 	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 </head>
 <body>
-	<p>
-		Задачей <b><sc_element sys_idtf="agent_of_calculation_number_of_subject_domains">агента подсчета количества предметных областей базы знаний</sc_element></b> является подсчет количества <b><sc_element sys_idtf="subject_domain">предметных областей</sc_element></b> базы знаний. Данный агент инициируется при условии появления в памяти вопросной конструкции, соответствующей <b><sc_element sys_idtf="action_to_calculate_number_of_subject_domains">запросу подсчета количества предметных областей базы знаний</sc_element></b>. У данного запроса нет аргументом. В ходе выполнения агента явно указывается связь с <b><sc_element sys_idtf="proc_of_cardinality_calculation">scp-программой подсчета мощности множества</sc_element></b> и <b><sc_element sys_idtf="proc_of_generation_of_metrics_answer">scp-программой генерации ответа для агентов оценки качества</sc_element></b>.
-	</p>
+	<p><b>Задача:</b> подсчет количества <b><sc_element sys_idtf="subject_domain">предметных областей</sc_element></b> базы знаний.</p>
+	<p>Описание: агент находит экзмпляры класса <b><sc_element sys_idtf="subject_domain">предметная область</sc_element></b> и вызывает <b><sc_element sys_idtf="proc_of_cardinality_calculation">процедуру подсчета мощности множества</sc_element></b>.</p>
+	<p> <b>Инициализация:</b> появление в памяти вопросной конструкции, соответствующей <b><sc_element sys_idtf="action_to_calculate_number_of_subject_domains">действию. подсчитать количество предметных областей базы знаний.</sc_element></b></p>
+	<p> <b>Аргументы:</b> отстутствуют.</p>
+	<p> <b>Результаты:</b>
+	<ul>
+		<li>Число - количество предметных областей в базе знаний.</li>
+	</ul>
+	<p> <b>Пример:</b> </p>
+	<p> <figure><img src="example_agent_calc_number_subjdomains.png" alt="Пример работы агента"> </figure></p>
+
 </body>
 </html>

@@ -179,6 +179,21 @@ scp_program -> agent_of_calculation_average_depth_of_subject_domain
 		  	=> nrel_goto: .agent_of_calculation_average_depth_of_subject_domain_operator4B;;
 			*);;
 
+		-> .agent_of_calculation_average_depth_of_subject_domain_operator_call_proc_of_adding_validating_message
+			(*
+		  	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_validating_message;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_calculation_average_depth_of_subject_domain_operator_call_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+				-> rrel_2: rrel_fixed: rrel_scp_const: [Wrong first parameter! It must be an instance of subject domain];;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr3;;
+
+		  	=> nrel_goto: .agent_of_calculation_average_depth_of_subject_domain_operator4B;;
+			*);;
+
 		-> .agent_of_calculation_average_depth_of_subject_domain_operator4B
 			(*
 		  	<- waitReturn;;
