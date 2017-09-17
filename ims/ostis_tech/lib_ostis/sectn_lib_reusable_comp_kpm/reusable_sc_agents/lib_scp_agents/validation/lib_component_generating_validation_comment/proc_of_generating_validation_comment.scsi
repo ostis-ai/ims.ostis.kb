@@ -215,8 +215,20 @@ scp_program -> proc_of_generating_validation_comment
 			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
 			-> rrel_3: rrel_fixed: rrel_scp_var: _message;;
 
-			=> nrel_goto: .proc_of_generating_validation_comment_operator1D4;;
+			=> nrel_goto: .proc_of_generating_validation_comment_operator1D4_1;;
 			*);;
+
+		-> .proc_of_generating_validation_comment_operator1D4_1
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: lang_en;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _message;;
+
+			=> nrel_then: .proc_of_generating_validation_comment_operator1B3_add_lang_en_arcs_to_answer;;
+			=> nrel_else: .proc_of_generating_validation_comment_operator1D4;;
+			*);;	
 
 		-> .proc_of_generating_validation_comment_operator1D4 
 			(*
@@ -241,7 +253,6 @@ scp_program -> proc_of_generating_validation_comment
 
 			=> nrel_goto: .proc_of_generating_validation_comment_operator1C1_add_language_const_node_to_answer;;
 			*);;
-
 
 		-> .proc_of_generating_validation_comment_operator1C1_add_language_const_node_to_answer
 			(*
