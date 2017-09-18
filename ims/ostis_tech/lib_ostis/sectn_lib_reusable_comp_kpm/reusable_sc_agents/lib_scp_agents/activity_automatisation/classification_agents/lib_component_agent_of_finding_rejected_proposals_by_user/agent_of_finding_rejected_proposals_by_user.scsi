@@ -37,7 +37,6 @@ scp_program -> agent_of_finding_rejected_proposals_by_user
 			=> nrel_else: .agent_of_finding_rejected_proposals_by_user_return;;
 			*);;
 
-
 		-> .agent_of_finding_rejected_proposals_by_user1C
 			(*
 		  	<- searchElStr3;;
@@ -46,9 +45,31 @@ scp_program -> agent_of_finding_rejected_proposals_by_user
 		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
 		  	-> rrel_3: rrel_assign: rrel_scp_var: _param;;
 
-		  	=> nrel_then: .agent_of_finding_rejected_proposals_by_user_2A_find_context;;
+		  	=> nrel_then: .agent_of_finding_rejected_proposals_by_user_check_on_user;;
 		  	=> nrel_else: .agent_of_finding_rejected_proposals_by_user_return;;
 			*);;
+
+		-> .agent_of_finding_rejected_proposals_by_user_check_on_user
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: ui_user;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _param;;
+			
+		  	=> nrel_then: .agent_of_finding_rejected_proposals_by_user_2A_find_context;;
+			=> nrel_else: .agent_of_finding_rejected_proposals_by_user_invalid_first_param_msg;;
+			*);;
+
+		-> .agent_of_finding_rejected_proposals_by_user_invalid_first_param_msg
+			(*
+			<- contAssign;;			
+			
+			-> rrel_1: rrel_assign: rrel_scp_var:  _validation_message;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [Wrong first parameter! It must be user sign(element of ui_user)];;
+
+			=> nrel_goto: .agent_of_finding_rejected_proposals_by_user_call_proc_of_adding_validating_message_wrong_second_param;;
+			*);; 
 
 		-> .agent_of_finding_rejected_proposals_by_user_2A_find_context
 			(*
@@ -57,7 +78,7 @@ scp_program -> agent_of_finding_rejected_proposals_by_user
 		 	-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
 		 	-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
 		 	-> rrel_3: rrel_assign: rrel_scp_var: _context;;
-            -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+           		-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
 		 	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_context_of_action;;
 
 			=> nrel_then: .agent_of_finding_rejected_proposals_by_user_2A_set_context_existence_to_true;;
@@ -71,7 +92,27 @@ scp_program -> agent_of_finding_rejected_proposals_by_user
 			-> rrel_1: rrel_assign: rrel_scp_var:  _is_context_exist;;
 			-> rrel_2: rrel_fixed: rrel_scp_const: [true];;
 
-			=> nrel_goto: .agent_of_finding_rejected_proposals_by_user_set_necessary;;
+			=> nrel_goto: .agent_of_finding_rejected_proposals_by_user_validate_context;;
+			*);; 
+
+		-> .agent_of_finding_rejected_proposals_by_user_validate_context
+			(*
+			<- ifType;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_struct: _context;;
+
+			=> nrel_then: .agent_of_finding_rejected_proposals_by_user_set_necessary;;
+			=> nrel_else: .agent_of_finding_rejected_proposals_by_user_invalid_second_param_msg;;
+			*);; 
+
+		-> .agent_of_finding_rejected_proposals_by_user_invalid_second_param_msg
+			(*
+			<- contAssign;;			
+			
+			-> rrel_1: rrel_assign: rrel_scp_var:  _validation_message;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [Wrong 2nd parameter! It must be a structure.];;
+
+			=> nrel_goto: .agent_of_finding_rejected_proposals_by_user_call_proc_of_adding_validating_message_wrong_second_param;;
 			*);; 
 
 		  -> .agent_of_finding_rejected_proposals_by_user_2A_set_context_existence_to_false
@@ -124,7 +165,7 @@ scp_program -> agent_of_finding_rejected_proposals_by_user
 			-> rrel_set_1: rrel_fixed: rrel_scp_var: _set_of_object_rejected;;
 
 			=> nrel_then: .agent_of_finding_rejected_proposals_by_user1G;;
-			=> nrel_else: .agent_of_finding_rejected_proposals_by_user_erase_set_1;;
+			=> nrel_else: .agent_of_finding_rejected_proposals_by_user_call_proc_of_adding_general_action_comment;;
 			*);;
 
 		-> .agent_of_finding_rejected_proposals_by_user1G
@@ -145,7 +186,21 @@ scp_program -> agent_of_finding_rejected_proposals_by_user
 
 			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _arc_remove;;
 
-			=> nrel_goto: .agent_of_finding_rejected_proposals_by_user_add_action_finding_arc_node;;
+			=> nrel_goto: .agent_of_finding_rejected_proposals_by_user_finding_struct;;
+			*);;
+
+		-> .agent_of_finding_rejected_proposals_by_user_finding_struct
+			(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _action_node;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: rrel_const: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _structure;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: rrel_const: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_proposal;;
+
+			=> nrel_then: .agent_of_finding_rejected_proposals_by_user_add_action_finding_arc_node;;
+			=> nrel_else: .agent_of_finding_rejected_proposals_by_user1G;;
 			*);;
 			
 		-> .agent_of_finding_rejected_proposals_by_user_add_action_finding_arc_node
@@ -166,6 +221,18 @@ scp_program -> agent_of_finding_rejected_proposals_by_user
 			-> rrel_1: rrel_fixed: rrel_scp_var: _context;;
 			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
 			-> rrel_3: rrel_fixed: rrel_scp_var: _action_node;;
+
+			=> nrel_then: .agent_of_finding_rejected_proposals_by_user_context_logic_3;;
+			=> nrel_else: .agent_of_finding_rejected_proposals_by_user1G;;
+			*);; 
+
+		-> .agent_of_finding_rejected_proposals_by_user_context_logic_3 
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _context;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _structure;;
 
 			=> nrel_then: .agent_of_finding_rejected_proposals_by_user_find_set_some_sign_class_1;;
 			=> nrel_else: .agent_of_finding_rejected_proposals_by_user1G;;
@@ -307,7 +374,8 @@ scp_program -> agent_of_finding_rejected_proposals_by_user
 			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_for_finding_rejected_proposals_by_user;;
 			-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_for_finding_rejected_proposals_by_user;;
 
-			=> nrel_goto: .agent_of_finding_rejected_proposals_by_user6G;;
+			=> nrel_then: .agent_of_finding_rejected_proposals_by_user6G;;
+			=> nrel_else: .agent_of_finding_rejected_proposals_by_user1G;;
 			*);;
 
 		-> .agent_of_finding_rejected_proposals_by_user6G
@@ -333,7 +401,6 @@ scp_program -> agent_of_finding_rejected_proposals_by_user
 			=> nrel_else: .agent_of_finding_rejected_proposals_by_user1G;;
 			*);;
 
-
 		-> .agent_of_finding_rejected_proposals_by_user_add_structure 
 			(*
 			<- genElStr3;;
@@ -344,7 +411,6 @@ scp_program -> agent_of_finding_rejected_proposals_by_user
 
 			=>nrel_goto: .agent_of_finding_rejected_proposals_by_user9G;;
 			*);;
-
 
 		-> .agent_of_finding_rejected_proposals_by_user9G
 			(*	
@@ -374,7 +440,8 @@ scp_program -> agent_of_finding_rejected_proposals_by_user
 			-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer_for_finding_rejected_proposals_by_user;;
 			-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_for_finding_rejected_proposals_by_user;;
 
-			=> nrel_goto: .agent_of_finding_rejected_proposals_by_user_add_in_is_const_nodes_necessary;;
+			=> nrel_then: .agent_of_finding_rejected_proposals_by_user_add_in_is_const_nodes_necessary;;
+			=> nrel_else: .agent_of_finding_rejected_proposals_by_user1G;;
 			*);;
 
 		-> .agent_of_finding_rejected_proposals_by_user_add_in_is_const_nodes_necessary
@@ -396,7 +463,8 @@ scp_program -> agent_of_finding_rejected_proposals_by_user
    	    		-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
 			-> rrel_3: rrel_assign: rrel_scp_var: _node;;
 
-			=>nrel_goto: .agent_of_finding_rejected_proposals_by_user_add_nrel_rejected;;
+			=> nrel_then: .agent_of_finding_rejected_proposals_by_user_add_nrel_rejected;;
+			=> nrel_else: .agent_of_finding_rejected_proposals_by_user_check_is_answer_empty;;
 			*);;
 
 		-> .agent_of_finding_rejected_proposals_by_user_add_nrel_rejected
@@ -443,6 +511,18 @@ scp_program -> agent_of_finding_rejected_proposals_by_user
 			=>nrel_goto: .agent_of_finding_rejected_proposals_by_user11A;;
 			*);;
 
+		-> .agent_of_finding_rejected_proposals_by_user_check_is_answer_empty
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var:  _answer_for_finding_rejected_proposals_by_user;;
+   	    		-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _node;;
+
+			=> nrel_then: .agent_of_finding_rejected_proposals_by_user11A;;
+			=> nrel_else: .agent_of_finding_rejected_proposals_by_user_call_proc_of_adding_general_action_comment;;
+			*);;
+
 		-> .agent_of_finding_rejected_proposals_by_user11A
 			(*
 			<- genElStr5;;
@@ -454,6 +534,30 @@ scp_program -> agent_of_finding_rejected_proposals_by_user
 			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_answer;;
 
 			=> nrel_goto: .agent_of_finding_rejected_proposals_by_user_erase_set_1;;	
+			*);;
+
+		-> .agent_of_finding_rejected_proposals_by_user_call_proc_of_adding_general_action_comment
+			(*
+		  	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_general_action_comment;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_finding_rejected_proposals_by_user_call_proc_of_adding_general_action_comment_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+				-> rrel_2: rrel_fixed: rrel_scp_const: [The search hasn't given any results];;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .agent_of_finding_rejected_proposals_by_user_waitreturn_proc_of_adding_general_action_comment;;
+			*);;
+
+		-> .agent_of_finding_rejected_proposals_by_user_waitreturn_proc_of_adding_general_action_comment
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .agent_of_finding_rejected_proposals_by_user_erase_set_1;;
 			*);;
 
 		-> .agent_of_finding_rejected_proposals_by_user_erase_set_1
@@ -482,9 +586,9 @@ scp_program -> agent_of_finding_rejected_proposals_by_user
 		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_finding_rejected_proposals_by_user_call_proc_of_adding_validating_message_wrong_second_param_params 
 				(*
 				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
-				-> rrel_2: rrel_fixed: rrel_scp_const: [Wrong first parameter! It must be user sign(element of ui_user)];;
+				-> rrel_2: rrel_fixed: rrel_scp_var: _validation_message;;
 				*);;
-		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr2;;
 
 		  	=> nrel_goto: .agent_of_finding_rejected_proposals_by_user_waitreturn_proc_of_adding_validating_message_wrong_second_param;;
 			*);;
@@ -493,11 +597,10 @@ scp_program -> agent_of_finding_rejected_proposals_by_user
 			(*
 		  	<- waitReturn;;
 
-		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr2;;
 
 		  	=> nrel_goto: .agent_of_finding_rejected_proposals_by_user_return;;
 			*);;	
-
 
 		-> .agent_of_finding_rejected_proposals_by_user_return
 			(*
