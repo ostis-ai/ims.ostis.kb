@@ -1,0 +1,1001 @@
+subject_domain_developers_actions_knowledge_base_cooperation_hierarchy
+
+=> nrel_main_idtf:
+	[Предметная область действий разработчиков sc-моделей баз знаний, соответствующих методике, предполагающей взаимодействие всех разработчиков с семантической памятью и наличием иерархии администраторов]
+	(* <- lang_ru;; *);
+	[Subject domain of specialization sc-model knowledge bases developers actions  relevant to the procedure involving the cooperation of all developers of semantic memory and the presence of a hierarchy of administrators ]
+	(* <- lang_en;; *);
+
+<- subject_domain;
+<- sc_node_struct;
+<- structure;
+
+-> rrel_maximum_studied_object_class:
+	action_of_developer_unified_semantic_models_of_knowledge_bases;
+-> rrel_not_maximum_studied_object_class:
+	action_of_verifying_the_desired_structure;
+	action_of_kb_editing;
+	action_of_kb_parameters_calculation;
+	action_to_check_fulfillment_of_unique_existense_condition_for_structure;
+	action_of_checking_cycle_existence_of_ordering_relation;
+	action_to_check_cardinality_and_type_of_relation_correspondence;
+	action_to_check_tuples_elements_and_domains_of_relation_correspondence;
+	action_to_check_existence_of_using_const_for_def;
+	action_to_check_concept_def_existence;
+	action_to_check_existence_of_main_idtf_for_all_concepts_that_have_sys_idtf;
+	action_of_check_for_crossing_from_one_subdividing_elements;
+	action_to_check_existence_of_key_sc_element_for_semantic_neighborhood;
+	action_check_the_main_idtf_for_all_foreign_lang;
+	action_of_checking_existence_of_max_studied_class_of_subject_domain;
+	action_to_check_existence_of_relation_domains;
+	action_to_check_belonging_of_all_concepts_to_subjdomain;
+	action_to_check_existence_of_measure_or_scale_for_parameter;
+	action_to_replace_structure_according_to_rule;
+	question_merge_two_elements;
+	action_to_delete_structure_elements_that_dont_have_connected_sc_elements_outside;
+	action_to_delete_selected_sc_element;
+	action_to_reverse_sc_arc_direction;
+	action_to_change_main_identifier;
+	action_to_change_system_identifier;
+	action_to_make_auto_numbering_of_sections_in_kb;
+	action_of_forming_terminological_ontology;
+	action_of_forming_set_theoretic_ontology;
+	action_of_forming_logical_ontology_for_the_given_domain;
+	action_assign_user_as_administrator;
+	action_assign_user_as_manager;
+	action_assign_user_as_expert;
+	action_of_administrator_of_knowledge_base;
+	action_of_manager_of_knowledge_base;
+	action_of_expert_of_knowledge_base;
+	action_of_knowledge_base_developer;
+	action_to_add_new_draft;
+	action_to_find_drafts_developed_by_specific_developer;
+	action_of_finding_all_proposals_of_author;
+	action_search_structure_which_is_isomorphic_to_given_pattern;
+	action_of_request_assistance_of_entity_specification;
+	action_to_find_direct_subclasses_for_classes_that_include_desired_entity;
+	action_to_find_all_initiated_signs_of_kb_developer_actions_that_dont_have_performer;
+	action_to_find_all_initiated_actions_signs_by_action_type;
+	action_to_find_all_initiated_actions_signs_by_performer;
+	action_to_find_all_initiated_actions_signs_that_are_available_for_admin;
+	action_to_form_a_proposal_for_editing_the_knowledge_base;
+	action_to_form_a_proposal_of_project_task;
+	action_to_form_an_artist_proposal_of_project_task;
+	action_to_approve_the_proposal_for_editing_the_knowledge_base;
+	action_to_approve_the_proposal_for_editing_the_knowledge_base_manager;
+	action_to_approve_the_proposal_for_editing_the_knowledge_base_administrator;
+	action_to_reject_the_proposal_for_editing_the_knowledge_base;
+	action_to_reject_the_proposal_for_editing_the_knowledge_base_manager;
+	action_to_reject_the_proposal_for_editing_the_knowledge_base_administrator;
+	action_to_form_a_task_for_verification_of_the_proposal;
+	action_to_approve_verifiable_proposal;
+	question_expert_approval_of_proposal_for_verified_proposals;
+	action_to_reject_verifiable_proposal;
+	action_form_task_to_result_of_proposal_verification;
+	action_to_approve_the_result_of_proposal_verification;
+	action_to_reject_the_result_of_proposal_verification;
+	action_to_build_new_piece_to_be_included_in_knowledge_base;
+	action_to_finalize_proposal_for_editing_knowledge_base;
+	action_to_consider_proposal_for_editing_knowledge_base;
+	action_to_consider_new_project_task;
+	action_to_consider_result_of_proposal_verification;
+	action_to_consider_offered_artist_of_project_task;
+	draft;
+-> rrel_explored_relation: 
+	nrel_user;
+	nrel_unregistered_user;
+	nrel_registered_user;
+	nrel_administrator;
+	nrel_manager;
+	nrel_expert;
+	nrel_developer;
+	nrel_proposal;
+	nrel_approved;
+	nrel_rejected;
+	nrel_new_version;;
+
+action_of_developer_unified_semantic_models_of_knowledge_bases
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие разработчика унифицированных семантических моделей баз знаний]
+	(* <- lang_ru;; *);
+	[Action of developer of unified semantic models of knowledge bases]
+	(* <- lang_en;; *);
+<= nrel_inclusion:
+	action_in_sc_memory;
+=> nrel_inclusion:
+	action_of_administrator_of_knowledge_base;
+	action_of_manager_of_knowledge_base;
+	action_of_expert_of_knowledge_base;
+	action_of_knowledge_base_developer;
+	action_of_verifying_the_desired_structure;
+	action_of_kb_editing;
+	action_of_kb_parameters_calculation;;
+
+action_of_verifying_the_desired_structure
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие верификации заданной структуры]
+	(* <- lang_ru;; *);
+	[action of verifying the desired structure]
+	(* <- lang_en;; *);
+=> nrel_inclusion:
+	action_to_check_fulfillment_of_unique_existense_condition_for_structure;
+	action_of_checking_cycle_existence_of_ordering_relation;
+	action_to_check_cardinality_and_type_of_relation_correspondence;
+	action_to_check_tuples_elements_and_domains_of_relation_correspondence;
+	action_to_check_existence_of_using_const_for_def;
+	action_to_check_concept_def_existence;
+	action_to_check_existence_of_main_idtf_for_all_concepts_that_have_sys_idtf;
+	action_of_check_for_crossing_from_one_subdividing_elements;
+	action_to_check_existence_of_key_sc_element_for_semantic_neighborhood;
+	action_check_the_main_idtf_for_all_foreign_lang;
+	action_of_checking_existence_of_max_studied_class_of_subject_domain;
+	action_to_check_existence_of_relation_domains;
+	action_to_check_belonging_of_all_concepts_to_subjdomain;
+	action_to_check_existence_of_measure_or_scale_for_parameter;;
+
+action_to_check_fulfillment_of_unique_existense_condition_for_structure
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. проверить выполнение условия единственности существования некоторой конструкции]
+	(* <- lang_ru;; *);
+	[action. to check fulfillment of unique existence condition for structure]
+	(* <- lang_en;; *);;
+
+action_to_check_cardinality_and_type_of_relation_correspondence
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. проверить соответствие мощности связок заданного отношения его типу]
+	(* <- lang_ru;; *);
+	[action. to check cardinality and type of relation correspondence]
+	(* <- lang_en;; *);;
+
+action_to_check_tuples_elements_and_domains_of_relation_correspondence
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. проверить элементы связок заданного отношения на соответствие доменам указанного отношения]
+	(* <- lang_ru;; *);
+	[action. to check tuples elements and domains of relation correspondence]
+	(* <- lang_en;; *);;
+
+action_to_check_existence_of_main_idtf_for_all_concepts_that_have_sys_idtf
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. проверить наличие основных идентификаторов у всех понятий, имеющих системный идентификатор]
+	(* <- lang_ru;; *);
+	[action. to check existence of main identifiers for all concepts that have system identifier]
+	(* <- lang_en;; *);;
+
+action_to_check_existence_of_key_sc_element_for_semantic_neighborhood
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. проверить наличие ключевого sc-элемента у указанной семантической окрестности]
+	(* <- lang_ru;; *);
+	[action. to check existence of key sc-element for semantic neighborhood]
+	(* <- lang_en;; *);;
+
+action_to_check_existence_of_relation_domains
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. проверить наличие доменов у отношения]
+	(* <- lang_ru;; *);
+	[action. to check existence of relation domains]
+	(* <- lang_en;; *);;
+
+action_to_check_belonging_of_all_concepts_to_subjdomain
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. проверить соотнесение всех понятий с предметной областью]
+	(* <- lang_ru;; *);
+	[action. to check belonging of all concepts to subject domain]
+	(* <- lang_en;; *);;
+
+action_to_check_existence_of_measure_or_scale_for_parameter
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. проверить наличие единицы измерения или шкалы у параметра]
+	(* <- lang_ru;; *);
+	[action. to check existence of measure or scale for parameter]
+	(* <- lang_en;; *);;
+
+action_of_kb_editing
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие редактирования базы знаний]
+	(* <- lang_ru;; *);
+	[action of knowledge base editing]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[действие редактирования базы знаний ostis-системы]
+	(* <- lang_ru;; *);
+=> nrel_inclusion:
+	action_to_replace_structure_according_to_rule;
+	question_merge_two_elements;
+	action_to_delete_structure_elements_that_dont_have_connected_sc_elements_outside;
+	action_to_delete_selected_sc_element;
+	action_to_reverse_sc_arc_direction;
+	action_to_change_main_identifier;
+	action_to_change_system_identifier;
+	action_to_make_auto_numbering_of_sections_in_kb;
+	action_of_forming_terminological_ontology;
+	action_of_forming_set_theoretic_ontology;
+	action_of_forming_logical_ontology_for_the_given_domain;;
+
+action_to_replace_structure_according_to_rule
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. заменить конструкцию по правилу]
+	(* <- lang_ru;; *);
+	[action. to replace the structure according to rule]
+	(* <- lang_en;; *);;
+
+action_to_delete_structure_elements_that_dont_have_connected_sc_elements_outside
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. удалить все элементы структуры, не имеющие связанных с ними sc-элементов за ее пределами]
+	(* <- lang_ru;; *);
+	[action. to delete structure elements that don't have connected sc-elements outside the structure]
+	(* <- lang_en;; *);;
+
+action_to_reverse_sc_arc_direction
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. изменить направление sc-дуги]
+	(* <- lang_ru;; *);
+	[action. to reverse sc-arc direction]
+	(* <- lang_en;; *);;
+
+action_to_make_auto_numbering_of_sections_in_kb
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. сделать автоматическую нумерацию разделов в рамках базы знаний]
+	(* <- lang_ru;; *);
+	[action. to make auto-numbering of sections in knowledge base]
+	(* <- lang_en;; *);;
+
+action_of_kb_parameters_calculation
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие расчета характеристик базы знаний]
+	(* <- lang_ru;; *);
+	[action of knowledge base parameters calculation]
+	(* <- lang_en;; *);;
+
+action_of_administrator_of_knowledge_base
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие администратора базы знаний]
+	(* <- lang_ru;; *);
+	[Action of administrator of knowledge base]
+	(* <- lang_en;; *);
+=> nrel_inclusion:
+	action_assign_user_as_administrator;
+	action_assign_user_as_manager;
+	action_assign_user_as_expert;
+	action_to_consider_proposal_for_editing_knowledge_base
+	(*
+		=> nrel_inclusion:
+			action_to_consider_new_project_task;
+			action_to_consider_result_of_proposal_verification;;
+	*);;
+
+action_of_manager_of_knowledge_base
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие менеджера базы знаний]
+	(* <- lang_ru;; *);
+	[Action of manager of knowledge base]
+	(* <- lang_en;; *);
+=> nrel_inclusion:
+	action_to_consider_offered_artist_of_project_task
+	(*
+		<= nrel_inclusion:
+			action_to_consider_proposal_for_editing_knowledge_base;;
+	*);;
+
+action_of_expert_of_knowledge_base
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие эксперта базы знаний]
+	(* <- lang_ru;; *);
+	[action of expert of knowledge base]
+	(* <- lang_en;; *);
+
+=> nrel_inclusion:
+	act_verify_the_desired_structure;;
+
+action_of_knowledge_base_developer
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие разработчика базы знаний]
+	(* <- lang_ru;; *);
+	[action of knowledge base developer]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+		...
+		(*
+			-> rrel_example:
+			"file://nl_files/explanation_for_action_of_knowledge_base_developer.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);
+=> nrel_inclusion:
+	action_to_finalize_proposal_for_editing_knowledge_base;
+	action_to_build_new_piece_to_be_included_in_knowledge_base;
+	action_to_add_new_draft;
+	action_to_find_drafts_developed_by_specific_developer;
+	action_of_finding_all_proposals_of_author;
+	action_search_structure_which_is_isomorphic_to_given_pattern;
+	action_of_request_assistance_of_entity_specification
+	(*
+		=> nrel_inclusion:
+			action_to_find_direct_subclasses_for_classes_that_include_desired_entity;;
+	*);
+	action_to_find_all_initiated_signs_of_kb_developer_actions_that_dont_have_performer;
+	action_to_find_all_initiated_actions_signs_by_action_type;
+	action_to_find_all_initiated_actions_signs_by_performer;
+	action_to_find_all_initiated_actions_signs_that_are_available_for_admin;;
+
+action_to_find_direct_subclasses_for_classes_that_include_desired_entity
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. найти непосредственные подклассы для классов, которым принадлежит заданная сущность]
+	(* <- lang_ru;; *);
+	[action. to find direct subclasses for classes that include desired structure]
+	(* <- lang_en;; *);;
+
+action_to_find_all_initiated_signs_of_kb_developer_actions_that_dont_have_performer
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. найти все инициированные знаки действий разработчика базы знаний, не имеющие исполнителя]
+	(* <- lang_ru;; *);
+	[action. to find all initiated signs of knowledge base developer actions that don't have performer]
+	(* <- lang_en;; *);;
+
+action_to_find_all_initiated_actions_signs_by_action_type
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. найти все инициированные знаки действий по типу действия]
+	(* <- lang_ru;; *);
+	[action. to find all initiated actions signs by action type]
+	(* <- lang_en;; *);;
+
+action_to_find_all_initiated_actions_signs_by_performer
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. найти все инициированные знаки действий по исполнителю]
+	(* <- lang_ru;; *);
+	[action. to find all initiated actions signs by performer]
+	(* <- lang_en;; *);;
+
+action_to_find_all_initiated_actions_signs_that_are_available_for_admin
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. найти все инициированные знаки действий, доступные администратору для отклонения или утверждения]
+	(* <- lang_ru;; *);
+	[action. to find all initiated actions signs that are available for administrator to approval or rejection]
+	(* <- lang_en;; *);;
+
+action_to_form_a_proposal_for_editing_the_knowledge_base
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. сформировать предложение по редактированию базы знаний]
+	(* <- lang_ru;; *);
+	[Action to form a proposal for editing the knowledge base]
+	(* <- lang_en;; *);
+
+=> nrel_inclusion:
+	action_to_form_a_proposal_of_project_task;
+	action_to_form_an_artist_proposal_of_project_task;
+
+<= nrel_inclusion:
+	action_of_knowledge_base_developer;
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+		...
+		(*
+			-> rrel_example:
+			"file://nl_files/action_to_form_a proposal_for_editing_the_knowledge_base.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);;
+
+
+action_to_form_a_proposal_of_project_task
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. сформировать предложение проектного задания]
+	(* <- lang_ru;; *);
+	[Action to form a proposal of project task]
+	(* <- lang_en;; *);
+<= nrel_inclusion:
+	action_of_manager_of_knowledge_base;
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+		...
+		(*
+			-> rrel_example:
+			"file://nl_files/action_to_form_a_proposal_of_project_task.html"
+			(* <- lang_ru;;	*);;
+		*);;	
+	*);;
+
+action_to_form_an_artist_proposal_of_project_task
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. сформировать предложение исполнителя проектного задания]
+	(* <- lang_ru;; *);
+	[Action to form an artist proposal of project task]
+	(* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+				-> rrel_example:
+				"file://nl_files/action_to_form_an_artist_proposal_of_project_task.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
+
+action_to_approve_the_proposal_for_editing_the_knowledge_base
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. утвердить предложение по редактированию базы знаний]
+	(* <- lang_ru;; *);
+	[action to approve the proposal for editing the knowledge base]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[действие. одобрить предложение по редактированию базы знаний]
+	(* <- lang_ru;; *);
+<= nrel_inclusion:
+	action_of_administrator_of_knowledge_base;
+	action_of_manager_of_knowledge_base;
+	action_of_expert_of_knowledge_base;
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+				-> rrel_example:
+				"file://nl_files/action_to_approve_the_proposal_for_editing_the_knowledge_base.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
+
+
+action_to_approve_the_proposal_for_editing_the_knowledge_base_manager
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. утвердить предложение по редактированию базы знаний от имени менеджера]
+	(* <- lang_ru;; *);
+	[action. to approve the proposal for editing the knowledge base by manager]
+	(* <- lang_en;; *);
+<= nrel_inclusion: action_of_manager_of_knowledge_base;;
+
+action_to_approve_the_proposal_for_editing_the_knowledge_base_administrator
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. утвердить предложение по редактированию базы знаний от имени администратора]
+	(* <- lang_ru;; *);
+	[action. to approve the proposal for editing the knowledge base by administrator]
+	(* <- lang_en;; *);
+<= nrel_inclusion: action_of_administrator_of_knowledge_base;;
+
+action_to_reject_the_proposal_for_editing_the_knowledge_base
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. отклонить предложение по редактированию базы знаний]
+	(* <- lang_ru;; *);
+	[action to reject the proposal for editing the knowledge base]
+	(* <- lang_en;; *);
+
+<= nrel_inclusion:
+	action_of_administrator_of_knowledge_base;
+	action_of_manager_of_knowledge_base;
+	action_of_expert_of_knowledge_base;
+	
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+				-> rrel_example:
+				"file://nl_files/action_to_reject_the_proposal_for_editing_the_knowledge_base.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
+
+action_to_reject_the_proposal_for_editing_the_knowledge_base_manager
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. отклонить предложение по редактированию базы знаний от имени менеджера]
+	(* <- lang_ru;; *);
+	[action. to reject the proposal for editing the knowledge base by manager]
+	(* <- lang_en;; *);
+<= nrel_inclusion: action_of_manager_of_knowledge_base;;
+
+action_to_reject_the_proposal_for_editing_the_knowledge_base_administrator
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. отклонить предложение по редактированию базы знаний от имени администратора]
+	(* <- lang_ru;; *);
+	[action. to reject the proposal for editing the knowledge base by administrator]
+	(* <- lang_en;; *);
+<= nrel_inclusion: action_of_administrator_of_knowledge_base;;	
+
+action_to_form_a_task_for_verification_of_the_proposal
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. сформировать задание на верификацию предложения]
+	(* <- lang_ru;; *);
+	[action to form a task for verification of the proposal]
+	(* <- lang_en;; *);
+
+<= nrel_inclusion:
+	action_of_administrator_of_knowledge_base;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+				-> rrel_example:
+				"file://nl_files/action_to_form_a_task_for_verification_of_the_proposal.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
+
+
+action_to_approve_verifiable_proposal
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. утвердить результат верификации предложения]
+	(* <- lang_ru;; *);
+	[action to approve verifiable proposal]
+	(* <- lang_en;; *);
+
+<= nrel_inclusion:
+	action_of_expert_of_knowledge_base;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+				-> rrel_example:
+				"file://nl_files/action_to_approve_verifiable_proposal.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
+
+question_expert_approval_of_proposal_for_verified_proposals
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. утвердить верифицируемое предложение от имени эксперта]
+	(* <- lang_ru;; *);
+	[action. to approve verifiable proposal by expert]
+	(* <- lang_en;; *);
+<= nrel_inclusion: action_of_expert_of_knowledge_base;;
+
+action_to_reject_verifiable_proposal
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. отклонить верифицируемое предложение]
+	(* <- lang_ru;; *);
+	[action to reject verifiable proposal]
+	(* <- lang_en;; *);
+
+<= nrel_inclusion:
+	action_of_expert_of_knowledge_base;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+				-> rrel_example:
+				"file://nl_files/action_to_reject_verifiable_proposal.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
+
+action_form_task_to_result_of_proposal_verification
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. сформировать задание на рассмотрение результата верификации предложения]
+	(* <- lang_ru;; *);
+	[action form task to result of proposal verification]
+	(* <- lang_en;; *);
+	
+<= nrel_inclusion:
+	action_of_expert_of_knowledge_base;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+				-> rrel_example:
+				"file://nl_files/action_form_task_to_result_of_proposal_verification.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
+
+action_to_approve_the_result_of_proposal_verification
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. утвердить результат верификации предложения]
+	(* <- lang_ru;; *);
+	[action to approve the result of proposal verification]
+	(* <- lang_en;; *);
+	
+<= nrel_inclusion:
+	action_of_administrator_of_knowledge_base;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+				-> rrel_example:
+				"file://nl_files/action_to_approve_the_result_of_proposal_verification.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
+
+action_to_reject_the_result_of_proposal_verification
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. отклонить результат верификации предложения]
+	(* <- lang_ru;; *);
+	[action to reject the result of proposal verification]
+	(* <- lang_en;; *);
+	
+<= nrel_inclusion:
+	action_of_administrator_of_knowledge_base;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+				-> rrel_example:
+				"file://nl_files/action_to_reject_the_result_of_proposal_verification.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
+
+action_to_finalize_proposal_for_editing_knowledge_base
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. доработать предложение по редактированию базы знаний]
+	(* <- lang_ru;; *);
+	[action to finalize proposal for editing knowledge base]
+	(* <- lang_en;; *);;
+
+
+action_to_build_new_piece_to_be_included_in_knowledge_base
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. построить новый фрагмент для включения в базу знаний]
+	(* <- lang_ru;; *);
+	[action to build new piece to be included in knowledge base]
+	(* <- lang_en;; *);;
+
+action_to_consider_proposal_for_editing_knowledge_base
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. рассмотреть предложение по редактированию базы знаний]
+	(* <- lang_ru;; *);
+	[action to consider proposal for editing knowledge base]
+	(* <- lang_en;; *);;
+
+action_to_consider_new_project_task
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. рассмотреть новое проектное задание]
+	(* <- lang_ru;; *);
+	[action to consider a new project task]
+	(* <- lang_en;; *);;
+
+action_to_consider_result_of_proposal_verification
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. рассмотреть результат верификации предложения]
+	(* <- lang_ru;; *);
+	[action to consider result of proposal verification]
+	(* <- lang_en;; *);;
+
+action_to_consider_offered_artist_of_project_task
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. рассмотреть предлагаемого исполнителя проектной задачи]
+	(* <- lang_ru;; *);
+	[action to consider offered artist of project task]
+	(* <- lang_en;; *);;
+
+nrel_user
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[пользователь*]
+	(* <- lang_ru;; *);
+	[user]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[пользователь ostis-системы*]
+	(* <- lang_ru;; *);
+<- binary_relation;
+<- norole_relation;
+<= nrel_subdividing:
+	{
+	nrel_unregistered_user;
+	nrel_registered_user
+	};;
+
+nrel_unregistered_user
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[незарегистрированный пользователь*]
+	(* <- lang_ru;; *);
+	[unregistered user]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[незарегистрированный пользователь ostis-системы*]
+	(* <- lang_ru;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+				-> rrel_example:
+				"file://nl_files/nrel_unregistered_user.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;		
+
+nrel_registered_user
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[зарегистрированный пользователь*]
+	(* <- lang_ru;; *);
+	[registered user]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[зарегистрированный пользователь ostis-системы*]
+	(* <- lang_ru;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+				-> rrel_example:
+				"file://nl_files/nrel_registered_user.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;	
+
+nrel_administrator
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[администратор*]
+	(* <- lang_ru;; *);
+	[administrator]
+	(* <- lang_en;; *);
+	
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+				-> rrel_example:
+				"file://nl_files/nrel_administrator.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;	
+
+nrel_manager
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[менеджер*]
+	(* <- lang_ru;; *);
+	[manager]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[администратор проектных задач*]
+	(* <- lang_ru;; *);
+		<- rrel_key_sc_element:
+		...
+		(*
+			<- explanation;;
+			<= nrel_sc_text_translation:	
+				...
+				(*
+					-> rrel_example:
+					"file://nl_files/nrel_manager.html"
+					(* <- lang_ru;;	*);;
+				*);;
+		*);;
+
+nrel_expert
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[эксперт*]
+	(* <- lang_ru;; *);
+	[expert]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+				-> rrel_example:
+				"file://nl_files/nrel_expert.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
+
+nrel_developer
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[разработчик*]
+	(* <- lang_ru;; *);
+	[developer]
+	(* <- lang_en;; *);
+
+=> nrel_inclusion:
+	nrel_administrator;
+	nrel_manager;
+	nrel_expert;
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+				-> rrel_example:
+				"file://nl_files/nrel_developer.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
+
+nrel_proposal
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[предложение*]
+	(* <- lang_ru;; *);
+	[proposal]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+				-> rrel_example:
+				"file://nl_files/nrel_proposal.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
+
+nrel_approved
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[утверждено*]
+	(* <- lang_ru;; *);
+	[approved]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+				-> rrel_example:
+				"file://nl_files/nrel_approved.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
+
+nrel_rejected
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[отклонено*]
+	(* <- lang_ru;; *);
+	[rejected]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+				-> rrel_example:
+				"file://nl_files/nrel_rejected.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
+
+
+nrel_new_version
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[новая версия*]
+	(* <- lang_ru;; *);
+	[new_version]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+				-> rrel_example:
+				"file://nl_files/nrel_new_version.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
+
+draft
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[черновик]
+	(* <- lang_ru;; *);
+	[draft]
+	(* <- lang_en;; *);
+<= nrel_inclusion:
+	knowledge;
+	unformed_set;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+				-> rrel_example:
+				"file://nl_files/expl_draft.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;

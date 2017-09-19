@@ -1,0 +1,249 @@
+subjdomain_problematic_kb_fragments
+=> nrel_main_idtf:
+	[Предметная область проблемных фрагментов базы знаний]
+	(* <- lang_ru;; *);
+	[Subject domain of problematic knowledge base fragments]
+	(* <- lang_en;; *);
+<- subject_domain;
+<- sc_node_struct;
+<- structure;
+-> rrel_maximum_studied_object_class:
+	structure_describing_problematic_kb_fragment;
+-> not_maximum_studied_object_class:
+	incorrect_structure;
+	structure_contradicting_uniqueness_property;
+	structure_containing_cantor_set_with_duplicate_elements;
+	structure_containing_cycle_of_ordering_relation;
+	structure_of_wrong_using_of_relations;
+	structure_of_cardinality_and_arity_of_relation_discrepancy;
+	structure_containing_elements_one_subdividing_non_empty_crossing;
+	structure_describing_incompleteness_in_kb;
+	structure_which_elements_have_main_idtf_in_some_but_not_all_lang;
+	structure_which_elements_have_sys_idtf_but_dont_have_main_idtf_in_all_lang;
+	structure_which_contains_concepts_without_any_definition_and_explanation;
+	structure_which_contains_concepts_with_definition_but_without_using_constants;
+	structure_without_key_sc_element_for_semantic_neighborhood;
+	structure_without_max_studied_object_class_of_subject_domain;
+	structure_with_partly_defined_relation;
+	structure_of_checking_existence_of_measure_or_scale_of_parameter;
+	structure_which_contains_concepts_that_dont_belong_to_any_subjdomain;
+	sc_garbage;;
+
+structure_describing_problematic_kb_fragment
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[структура, описывающая проблемный фрагмент базы знаний]
+	(* <- lang_ru;; *);
+	[structure that describes problematic knowledge base fragment]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[структура, описывающая изъян в базе знаний]
+	(* <- lang_ru;; *);
+	[структура, описывающая некачественный фрагмент базы знаний]
+	(* <- lang_ru;; *);
+<= nrel_inclusion:
+	structure;
+<= nrel_subdividing:
+	{
+		incorrect_structure;
+		structure_describing_incompleteness_in_kb;
+		sc_garbage
+	};;
+
+incorrect_structure
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[некорректная структура]
+	(* <- lang_ru;; *);
+	[incorrect structure]
+	(* <- lang_en;; *);
+=> nrel_inclusion:
+	structure_contradicting_uniqueness_property;
+	structure_containing_cycle_of_ordering_relation;
+	structure_of_wrong_using_of_relations;
+	structure_of_cardinality_and_arity_of_relation_discrepancy;
+	structure_containing_elements_one_subdividing_non_empty_crossing;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		=> nrel_sc_text_translation:
+		...
+		(*
+			-> rrel_example:
+				"file://html/explanation_for_incorrect_structure.html"
+				(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+structure_contradicting_uniqueness_property
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[структура, противоречащая свойству единственности]
+	(* <- lang_ru;; *);
+	[structure that contradicts to uniqueness property]
+	(* <- lang_en;; *);
+=> nrel_inclusion:
+	structure_containing_cantor_set_with_duplicate_elements;;
+
+structure_containing_cantor_set_with_duplicate_elements
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[канторовское множество содержит повторяющийся элемент]
+	(* <-lang_ru;; *);
+	[cantor set that contains duplicate elements]
+	(* <-lang_en;; *);;
+
+structure_containing_cycle_of_ordering_relation
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[цикл по отношению порядка]
+	(* <- lang_ru;; *);
+	[cycle of ordering relation]
+	(* <- lang_en;; *);;
+
+structure_of_wrong_using_of_relations
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[несоответствие элементов связки доменам отношения]
+	(* <- lang_ru;; *);
+	[tuple elements and relation domains discrepancy]
+	(* <- lang_en;; *);;
+
+structure_of_cardinality_and_arity_of_relation_discrepancy
+<- sc_node_not_relation;
+=>nrel_main_idtf:
+	[несоответствие мощности связки арности отношения]
+	(* <- lang_ru;; *);
+	[cardinality and arity of relation discrepancy]
+	(* <- lang_en;; *);;
+
+structure_containing_elements_one_subdividing_non_empty_crossing
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[элементы одного разбиения имеют непустое пересечение]
+	(* <- lang_ru;; *);
+	[elements of one subdividing have non-empty intersection]
+	(* <- lang_en;; *);;
+
+structure_describing_incompleteness_in_kb
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[структура, описывающая неполноту в базе знаний]
+	(* <- lang_ru;; *);
+	[structure that describes incompleteness in knowledge base]
+	(* <- lang_en;; *);
+=> nrel_inclusion:
+	structure_which_elements_have_main_idtf_in_some_but_not_all_lang;
+	structure_which_elements_have_sys_idtf_but_dont_have_main_idtf_in_all_lang;
+	structure_which_contains_concepts_without_any_definition_and_explanation;
+	structure_which_contains_concepts_with_definition_but_without_using_constants;
+	structure_without_key_sc_element_for_semantic_neighborhood;
+	structure_without_max_studied_object_class_of_subject_domain;
+	structure_with_partly_defined_relation;
+	structure_of_checking_existence_of_measure_or_scale_of_parameter;
+	structure_which_contains_concepts_that_dont_belong_to_any_subjdomain;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		=> nrel_sc_text_translation:
+		...
+		(*
+			-> rrel_example:
+				"file://html/explanation_for_struct_incompleteness.html"
+				(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+structure_which_elements_have_main_idtf_in_some_but_not_all_lang
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[указаны основные идентификаторы заданной сущности для некоторых, но не всех внешних языков]
+	(* <- lang_ru;; *);
+	[entity has main identifiers in some but not all external languages]
+	(* <- lang_en;; *);;
+
+structure_which_elements_have_sys_idtf_but_dont_have_main_idtf_in_all_lang
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[для заданной сущности указан системный, но не указаны основные идентификаторы для всех внешних языков]
+	(* <- lang_ru;; *);
+	[entity has system identifier but doesn't have main identifiers in all external languages]
+	(* <- lang_en;; *);;
+
+structure_which_contains_concepts_without_any_definition_and_explanation
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[понятию предметной области не соответствует определение либо пояснение]
+	(* <- lang_ru;; *);
+	[no definition or explanation corresponds to concept of subject domain]
+	(* <- lang_en;; *);;
+
+structure_which_contains_concepts_with_definition_but_without_using_constants
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[в определении не указаны используемые константы]
+	(* <- lang_ru;; *);
+	[using constants are not specified in concept definition]
+	(* <- lang_en;; *);;
+
+structure_without_key_sc_element_for_semantic_neighborhood
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[не указан ключевой sc-элемент семантической окрестности]
+	(* <- lang_ru;; *);
+	[key sc-element of semantic neighborhood is not specified]
+	(* <- lang_en;; *);;
+
+structure_without_max_studied_object_class_of_subject_domain
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[не указан максимальный класс объектов исследования предметной области]
+	(* <- lang_ru;; *);
+	[maximum studied object class of subject domain is not specified]
+	(* <- lang_en;; *);;
+
+structure_with_partly_defined_relation
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[не указаны домены отношения]
+	(* <- lang_ru;; *);
+	[no domains in relation definition]
+	(* <- lang_en;; *);;
+
+structure_of_checking_existence_of_measure_or_scale_of_parameter
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[не указано ни одной единицы измерения или шкалы для измеряемого параметра]
+	(* <- lang_ru;; *);
+	[no measure or scale of parameter is specified]
+	(* <- lang_en;; *);;
+
+structure_which_contains_concepts_that_dont_belong_to_any_subjdomain
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[понятие не соотнесено ни с одной предметной областью]
+	(* <- lang_ru;; *);
+	[concept doesn't belong to any subject domain]
+	(* <- lang_en;; *);;
+
+sc_garbage
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[информационный мусор]
+	(* <- lang_ru;; *);
+	[sc-garbage]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		=> nrel_sc_text_translation:
+		...
+		(*
+			-> rrel_example:
+				"file://html/explanation_for_sc_garbage.html"
+				(* <- lang_ru;; *);;
+		*);;
+	*);;

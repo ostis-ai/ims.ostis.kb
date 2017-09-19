@@ -1,0 +1,77 @@
+scp_program -> proc_of_adding_action_sign_base
+	(*
+  	-> rrel_params: .proc_of_adding_action_sign_base_params 
+		(*
+		-> rrel_1: rrel_in: _action_sign;;
+		-> rrel_2: rrel_in: _class;;
+    	*);;
+
+	-> rrel_operators: .proc_of_adding_action_sign_base_operator_set
+    	(*
+    	-> rrel_init: .proc_of_adding_action_sign_base_operator_get_class_sign 
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _class;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _class_sign;;
+
+			=> nrel_then: .proc_of_adding_action_sign_base_operator_D1;;
+			=> nrel_else: .proc_of_adding_action_sign_base_operator_return;;
+			*);;
+
+		-> .proc_of_adding_action_sign_base_operator_D1
+			(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _class_sign;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _prev_last_action;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _marked_arc;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_last_executed_action;;
+
+			=> nrel_then: .proc_of_adding_action_sign_base_operator_D2;;
+			=> nrel_else: .proc_of_adding_action_sign_base_operator_D4;;
+			*);;		
+
+		-> .proc_of_adding_action_sign_base_operator_D2
+			(*
+		  	<- eraseEl;;
+
+		  	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _marked_arc;;
+
+		  	=> nrel_goto: .proc_of_adding_action_sign_base_operator_D3;;
+			*);;
+
+		-> .proc_of_adding_action_sign_base_operator_D3
+			(*
+			<- genElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _prev_last_action;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_const: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _action_sign;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_const: rrel_scp_var: _marked_arc;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_sequence_of_actions;;
+
+			=> nrel_goto: .proc_of_adding_action_sign_base_operator_D4;;
+			*);;		
+
+		-> .proc_of_adding_action_sign_base_operator_D4
+			(*
+			<- genElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _class_sign;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_const: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _action_sign;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_const: rrel_scp_var: _marked_arc;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_last_executed_action;;
+
+			=> nrel_goto: .proc_of_adding_action_sign_base_operator_return;;
+			*);;			
+			
+		-> .proc_of_adding_action_sign_base_operator_return 
+			(*
+			<- return;;
+			*);;
+		*);;
+	*);;

@@ -1,0 +1,27 @@
+lib_component_proc_of_cardinality_counting_without_multiple_occurrences
+=> nrel_main_idtf:
+	[Компонент библиотеки. scp-программа подсчёта мощности множества без учёта кратных вхождений]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[Library component. scp-program of set's cardinality counting without taking into account multiple occurrences]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components;
+
+-> rrel_key_sc_element: 
+	proc_of_cardinality_counting_without_multiple_occurrences;
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Proc_Cardinality_Counting_Without_Multiple_Occurrences.html" 
+				(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+lib_component_proc_of_cardinality_counting_without_multiple_occurrences = [*^"file://cardinality_counting_without_multiple_occurrences.scsi"*];;

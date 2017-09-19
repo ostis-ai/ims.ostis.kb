@@ -1,0 +1,395 @@
+agent_of_expert_rejection_of_verified_proposal
+-> nrel_main_idtf:
+	[агентная scp-программа отклонения верифицируемого предложения экспертом] (* <- lang_ru;; *);
+	[agent scp-program of expert rejection of verified proposal] (* <- lang_en;; *);
+	<- agent_scp_program;;
+
+scp_program -> agent_of_expert_rejection_of_verified_proposal 
+	(*
+	-> rrel_params: .agent_of_expert_rejection_of_verified_proposal_params 
+		(*
+		-> rrel_1: rrel_in: _event;;
+		-> rrel_2: rrel_in: _input_arc;;
+		*);;
+
+	-> rrel_operators: .agent_of_expert_rejection_of_verified_proposal_operator_set 
+		(*
+		-> rrel_init: .agent_of_expert_rejection_of_verified_proposal_operator1A
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _temp;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: _input_arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _quest;;
+
+			=> nrel_then: .agent_of_expert_rejection_of_verified_proposal_operator1B;;
+			=> nrel_else: .agent_of_expert_rejection_of_verified_proposal_return;;
+			*);;
+
+		-> .agent_of_expert_rejection_of_verified_proposal_operator1B
+        		(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: action_of_expert_rejection_of_verified_proposal;; 
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+
+			=> nrel_then: .agent_of_expert_rejection_of_verified_proposal_operator1C;;
+			=> nrel_else: .agent_of_expert_rejection_of_verified_proposal_return;;
+			*);;
+
+		-> .agent_of_expert_rejection_of_verified_proposal_operator1C
+        		(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _action;;
+
+			=> nrel_then: .agent_of_expert_rejection_of_verified_proposal_operator1D;;
+			=> nrel_else: .agent_of_expert_rejection_of_verified_proposal_return;;
+			*);;
+
+		-> .agent_of_expert_rejection_of_verified_proposal_operator1D
+        		(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: act_verify_the_desired_structure;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _action;;
+
+			=> nrel_then: .agent_of_expert_rejection_of_verified_proposal_operator1E;;
+			=> nrel_else: .agent_of_expert_rejection_of_verified_proposal_call_proc_of_adding_validating_message;;
+			*);;
+
+		-> .agent_of_expert_rejection_of_verified_proposal_operator1E
+        		(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _user;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_authors;;
+
+			=> nrel_goto: .agent_of_expert_rejection_of_verified_proposal_operator1F;;
+			*);;
+
+		-> .agent_of_expert_rejection_of_verified_proposal_operator1F
+        		(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _section_for_expert;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _user;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_expert;;
+
+			=> nrel_then: .agent_of_expert_rejection_of_verified_proposal_operator1G;;
+			=> nrel_else: .agent_of_expert_rejection_of_verified_proposal_call_proc_of_adding_validating_message_not_expert;;
+			*);;
+
+		-> .agent_of_expert_rejection_of_verified_proposal_operator1G
+        		(*
+			<- genElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _action;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: rrel_const: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _user;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: rrel_const: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_rejected;;
+
+			=> nrel_goto: .agent_of_expert_rejection_of_verified_proposal_operator2A_gen_answer_node;;
+			*);;
+
+		-> .agent_of_expert_rejection_of_verified_proposal_operator2A_gen_answer_node
+        		(*
+		 	<- genEl;;
+
+		 	-> rrel_1: rrel_assign: rrel_const: rrel_node: rrel_scp_var: _answer_of_expert_rejection;;
+
+		 	=> nrel_goto: .agent_of_expert_rejection_of_verified_proposal_operator1H;;
+		 	*);;
+
+		-> .agent_of_expert_rejection_of_verified_proposal_operator1H
+        		(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _action;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _object;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_object;;
+
+			=> nrel_then: .agent_of_expert_rejection_of_verified_proposal_operator1I;;
+			=> nrel_else: .agent_of_expert_rejection_of_verified_proposal_operator2B;;
+			*);;
+
+		-> .agent_of_expert_rejection_of_verified_proposal_operator1I
+        		(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _object;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _author_of_object;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_authors;;
+
+			=> nrel_then: .agent_of_expert_rejection_of_verified_proposal_operator2P;;
+			=> nrel_else: .agent_of_expert_rejection_of_verified_proposal_operator2A;;
+			*);;
+
+        -> .agent_of_expert_rejection_of_verified_proposal_operator2P
+        		(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_expert_rejection;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: rrel_const: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _author_of_object;;
+
+		 	=> nrel_goto: .agent_of_expert_rejection_of_verified_proposal_operator2Q1;;
+		 	*);;
+
+		-> .agent_of_expert_rejection_of_verified_proposal_operator2Q1
+			(*
+			<- searchSetStr5;;
+
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _object;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: rrel_const: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _author_of_object;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: rrel_const: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_authors;;
+
+		  	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_of_expert_rejection;;
+		  	-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_of_expert_rejection;;
+		  	
+		  	=> nrel_goto: .agent_of_expert_rejection_of_verified_proposal_operator2A;;	
+		  	*);;		
+
+		-> .agent_of_expert_rejection_of_verified_proposal_operator2A
+        		(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_expert_rejection;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: rrel_const: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _object;;
+
+		 	=> nrel_goto: .agent_of_expert_rejection_of_verified_proposal_operator2N;;
+		 	*);;
+
+		-> .agent_of_expert_rejection_of_verified_proposal_operator2N
+        		(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_expert_rejection;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: rrel_const: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_const:  nrel_object;;
+
+		 	=> nrel_goto: .agent_of_expert_rejection_of_verified_proposal_operator2O;;
+		 	*);;
+
+		-> .agent_of_expert_rejection_of_verified_proposal_operator2O
+			(*
+			<- searchSetStr5;;
+
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _action;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: rrel_const: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _object;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: rrel_const: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_object;;
+
+		  	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_of_expert_rejection;;
+		  	-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_of_expert_rejection;;
+		  	
+		  	=> nrel_goto: .agent_of_expert_rejection_of_verified_proposal_operator2B;;	
+		  	*);;        
+
+	    -> .agent_of_expert_rejection_of_verified_proposal_operator2B
+        		(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_expert_rejection;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: rrel_const: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _section_for_expert;;
+
+		 	=> nrel_goto: .agent_of_expert_rejection_of_verified_proposal_operator2C;;
+		 	*);;
+
+		-> .agent_of_expert_rejection_of_verified_proposal_operator2C
+        		(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_expert_rejection;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: rrel_const: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _user;;
+
+		 	=> nrel_goto: .agent_of_expert_rejection_of_verified_proposal_operator2D;;
+		 	*);;
+
+		-> .agent_of_expert_rejection_of_verified_proposal_operator2D
+        		(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_expert_rejection;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: rrel_const: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_const: nrel_expert;;
+
+		 	=> nrel_goto: .agent_of_expert_rejection_of_verified_proposal_operator2E;;
+		 	*);;
+
+		-> .agent_of_expert_rejection_of_verified_proposal_operator2E
+			(*
+			<- searchSetStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _section_for_expert;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: rrel_const: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _user;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: rrel_const: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_expert;;
+
+		  	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_of_expert_rejection;;
+		  	-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_of_expert_rejection;;
+		  	
+		  	=> nrel_goto: .agent_of_expert_rejection_of_verified_proposal_operator2F;;	
+		  	*);;
+
+		-> .agent_of_expert_rejection_of_verified_proposal_operator2F
+        		(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_expert_rejection;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: rrel_const: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_const: nrel_authors;;
+
+		 	=> nrel_goto: .agent_of_expert_rejection_of_verified_proposal_operator2H;;
+		 	*);;
+
+		-> .agent_of_expert_rejection_of_verified_proposal_operator2H
+        		(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_expert_rejection;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: rrel_const: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _action;;
+
+		 	=> nrel_goto: .agent_of_expert_rejection_of_verified_proposal_operator2K;;
+		 	*);;
+
+		-> .agent_of_expert_rejection_of_verified_proposal_operator2K
+        		(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_expert_rejection;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var:rrel_const: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_const: nrel_rejected;;
+
+		 	=> nrel_goto: .agent_of_expert_rejection_of_verified_proposal_operator2L;;
+		 	*);;
+
+		-> .agent_of_expert_rejection_of_verified_proposal_operator2L
+			(*
+			<- searchSetStr5;;
+
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _action;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: rrel_const: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _user;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: rrel_const: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_rejected;;
+
+		  	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_of_expert_rejection;;
+		  	-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_of_expert_rejection;;
+		  	
+		  	=> nrel_goto: .agent_of_expert_rejection_of_verified_proposal_operator2P1;;	
+		  	*);;
+
+		-> .agent_of_expert_rejection_of_verified_proposal_operator2P1
+        		(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_expert_rejection;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: rrel_const: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_const: act_verify_the_desired_structure;;
+
+		 	=> nrel_goto: .agent_of_expert_rejection_of_verified_proposal_operator2Q;;
+		 	*);;
+
+		-> .agent_of_expert_rejection_of_verified_proposal_operator2Q
+			(*
+			<- searchSetStr3;;
+
+		 	-> rrel_1: rrel_fixed: rrel_scp_const: act_verify_the_desired_structure;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: rrel_const: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _action;;
+
+		  	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_of_expert_rejection;;
+		  	
+		  	=> nrel_goto: .agent_of_expert_rejection_of_verified_proposal_operator2R;;	
+		  	*);;
+
+		-> .agent_of_expert_rejection_of_verified_proposal_operator2R
+			(*
+			<- genElStr5;;
+
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: rrel_const: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _answer_of_expert_rejection;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: rrel_const: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_answer;;
+		  	
+		  	=> nrel_goto: .agent_of_expert_rejection_of_verified_proposal_return;;	
+		  	*);;	
+
+        -> .agent_of_expert_rejection_of_verified_proposal_call_proc_of_adding_validating_message 
+			(*
+		  	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_validating_message;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_expert_rejection_of_verified_proposal_call_proc_of_adding_validating_message_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+				-> rrel_2: rrel_fixed: rrel_scp_const: [Wrong first parameter! It must be sign of act_verify_the_desired_structure];;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .agent_of_expert_rejection_of_verified_proposal_call_proc_of_adding_validating_message_waitreturn_proc_of_adding_validating_message;;
+			*);;
+
+		-> .agent_of_expert_rejection_of_verified_proposal_call_proc_of_adding_validating_message_waitreturn_proc_of_adding_validating_message
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .agent_of_expert_rejection_of_verified_proposal_return;;
+			*);;
+
+		-> .agent_of_expert_rejection_of_verified_proposal_call_proc_of_adding_validating_message_not_expert
+			(*
+		  	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_validating_message;;
+		  	-> rrel_2: rrel_fixed: .agent_of_expert_rejection_of_verified_proposal_call_proc_of_adding_validating_message_not_expert_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+				-> rrel_2: rrel_fixed: rrel_scp_const: [Access denied. User must be a expert.];;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr2;;
+
+		  	=> nrel_goto: .agent_of_expert_rejection_of_verified_proposal_call_proc_of_adding_validating_message_waitreturn_proc_of_adding_validating_message_not_expert;;
+			*);;
+
+		-> .agent_of_expert_rejection_of_verified_proposal_call_proc_of_adding_validating_message_waitreturn_proc_of_adding_validating_message_not_expert
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr2;;
+
+		  	=> nrel_goto: .agent_of_expert_rejection_of_verified_proposal_return;;
+			*);;		
+
+		-> .agent_of_expert_rejection_of_verified_proposal_return
+			(*
+		 	<- return;;
+			*);;
+	*);;
+*);;

@@ -1,0 +1,45 @@
+section_subjdomain_actions_executing_in_sc_memory
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[Раздел. Предметная область действий, выполняемых в абстрактной унифицированной семантической памяти]
+	(* <- lang_ru;; *);
+<- atomic_section;
+<- not_enough_formed_structure;;
+
+section_subjdomain_actions_executing_in_sc_memory = [*^"file://section_subjdomain_actions_executing_in_sc_memory.scsi"*];;
+
+rrel_key_sc_element -> (section_subjdomain_actions_executing_in_sc_memory -> subject_domain_of_actions_executing_in_sc_memory)
+(*
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_executing_in_sc_memory -> action_in_sc_memory)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_executing_in_sc_memory -> action_in_sc_memory_initiated_by_question)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_executing_in_sc_memory -> action_of_kb_editing)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_executing_in_sc_memory -> question_merge_two_elements)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_executing_in_sc_memory -> action_to_renew_concepts)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_executing_in_sc_memory -> action_to_delete_selected_sc_elements)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_executing_in_sc_memory -> action_to_integrate_selected_structure_into_current_state_of_kb)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_executing_in_sc_memory -> action_of_ostis_system_mode_setting)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_executing_in_sc_memory -> action_of_editing_file_stored_in_sc_memory)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_executing_in_sc_memory -> action_of_interpreting_program_stored_in_sc_memory)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_executing_in_sc_memory -> task_solved_in_sc_memory)
+	(* <- rrel_key_sc_element;; *);;
+*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;

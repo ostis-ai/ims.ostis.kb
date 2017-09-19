@@ -1,0 +1,38 @@
+lib_component_agent_of_checking_cycle_existence_of_ordering_relation
+=> nrel_main_idtf:
+	[Компонент библиотеки. sc-агент проверки наличия цикла в заданном отношении порядка в рамках заданной структуры]
+	(* <- lang_ru;; *);
+	[Library component. sc-agent of checking of cycle for a given order relation within a given structure]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components;
+<- library_of_atomic_reusable_components;
+
+=> nrel_attendant_component:
+	lib_ui_menu_file_for_checking_cycle_existence_of_ordering_relation;
+
+-> rrel_key_sc_element: 
+	.platform_independent_realization_of_sc_agent_of_checking_cycle_existence_of_ordering_relation;
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Agent_Of_Finding_Cycle.html"
+				(* <- lang_ru;; *);; 
+		*);;
+	*);;
+
+action_of_checking_cycle_existence_of_ordering_relation 
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. проверить наличие циклов в любом отношении порядка в рамках заданной структуры]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[action. check cycles existence for any order relation within a given structure]
+	(* <- lang_en;; *);;
+

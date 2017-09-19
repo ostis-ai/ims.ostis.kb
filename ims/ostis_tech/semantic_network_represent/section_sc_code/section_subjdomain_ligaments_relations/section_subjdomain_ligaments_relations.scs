@@ -1,0 +1,91 @@
+section_subjdomain_ligaments_relations
+
+=> nrel_main_idtf:
+	[Раздел. Предметная область связей и отношений]
+	(* <- lang_ru;; *);
+	[Section. Subject domain of sheaves and relations]
+	(* <- lang_en;; *);
+=> nrel_introduction:
+	...
+(*
+	<= nrel_sc_text_translation:
+	 ...
+	 (*
+		 -> rrel_example:
+		   "file://nl_files/introduction_section_subjdomain_ligaments_relations.pdf"
+			(* <- lang_ru;;	*);;
+	 *);;
+*);
+<- not_enough_formed_structure;
+<- atomic_section;;
+
+section_subjdomain_ligaments_relations = [*^"file://section_subjdomain_ligaments_relations.scsi"*];;
+section_subjdomain_ligaments_relations
+-> rrel_key_sc_element:
+	section_subject_domain_ligaments_relations;
+	sheaf;
+	binary_sheaf;
+	sc_connector;
+	non_atomic_binary_sheaf;
+	non_binary_sheaf;
+	non_oriented_sheaf;
+	oriented_sheaf;
+	relation;
+	class_of_equipotent_sheaves;
+	class_of_sheaves_with_different_cardinality;
+	unary_relation;
+	binary_relation;
+	quasybinary_relation;
+	ternary_relation;
+	nonbinary_relation;
+	oriented_relation;
+	non_oriented_relation;
+	reflexive_relation;
+	antireflexive_relation;
+	partially_reflexive_relation;
+	symmetric_relation;
+	antisymmetric_relation;
+	partially_symmetric_relation;
+	transitive_relation;
+	antitransitive_relation;
+	partially_transitive_relation;
+	related_relation;
+	order_relation;
+	strict_order_relation;
+	non_strict_order_relation;
+	tolerance_relation;
+	equivalence_relation;
+	role_relation;
+	order_role_relation;
+	norole_relation;
+	norole_binary_relation;
+	arity;
+	nrel_definitional_domain;
+	nrel_relation_attribute;
+	nrel_domain;
+	nrel_first_domain;
+	nrel_second_domain;
+	nrel_composition_of_relations;
+	nrel_quotient_set;
+	metarelation;
+	decomposition_relation;
+	integration_relation;
+	nrel_mapping;
+	nrel_relation_of_mapping;
+	rrel_input_set;
+	rrel_output_set;
+	rrel_image_of_mapping;
+	rrel_preimage_of_mapping;
+	nrel_total_mapping;
+	nrel_partial_mapping;
+	nrel_surjection;
+	nrel_non_surjective_mapping;
+	nrel_functional_mapping;
+	nrel_backward_mapping;
+	nrel_inversible_mapping;
+	nrel_ambiguous_mapping;
+	nrel_injection;
+	nrel_bijective_mapping;
+	nrel_set_of_combinations;
+	nrel_set_of_partial_permutations;
+	nrel_set_of_permutations;;

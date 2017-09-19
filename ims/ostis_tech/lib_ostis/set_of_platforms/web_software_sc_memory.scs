@@ -1,0 +1,35 @@
+doc_web_platform_based_on_software_sc_memory
+=> nrel_main_idtf:
+	[Документация. Web-ориентированная платформа интерпретации sc-моделей компьютерных систем]
+	(* <- lang_ru;;	*);
+	[Documentation. Web-oriented interpretation platform for sc-models of computer systems]
+	(* <- lang_en;;	*);
+<- not_enough_formed_structure;
+-> rrel_key_sc_element:
+	web_platform_based_on_software_sc_memory;
+<= nrel_section_decomposition:
+	{
+		justification_of_web_platform_based_on_software_sc_memory_implementation
+		(*
+		=> nrel_section_base_order: 
+			doc_web_platform_based_on_software_sc_memory_code_format;;
+		*);
+		doc_web_platform_based_on_software_sc_memory_code_format
+		(*
+		=> nrel_section_base_order: 
+			doc_web_platform_based_on_software_sc_memory_implementation;;
+		*);
+		doc_web_platform_based_on_software_sc_memory_implementation
+		(*
+		=> nrel_section_base_order: 
+			doc_web_platform_based_on_software_scp_language_implementation;;
+		*);
+		doc_web_platform_based_on_software_scp_language_implementation
+		(*
+		=> nrel_section_base_order: 
+			initial_text_web_oriented_interpretation_platform;;
+		*);
+		initial_text_web_oriented_interpretation_platform
+	};;
+
+doc_web_platform_based_on_software_sc_memory = [*^"file://web_software_sc_memory.scsi"*];;

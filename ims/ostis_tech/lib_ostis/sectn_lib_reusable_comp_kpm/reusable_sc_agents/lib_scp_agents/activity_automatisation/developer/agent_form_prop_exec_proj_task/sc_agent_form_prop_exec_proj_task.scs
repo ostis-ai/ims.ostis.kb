@@ -1,0 +1,51 @@
+sc_agent_formation_proposal_executor_of_project_task
+=> nrel_main_idtf:	
+	[sc-агент формирования предложения исполнителя проектного задания] (* <- lang_ru;; *);
+	[sc-agent of formation proposal executor of project task] (* <- lang_en;; *);
+	
+<- abstract_sc_agent;
+
+=> nrel_primary_initiation_condition: 
+	(sc_event_add_output_arc => question_initiated);
+	
+=> nrel_initiation_condition_and_result: 
+	(..sc_agent_formation_proposal_executor_of_project_task_condition => ..sc_agent_formation_proposal_executor_of_project_task_result);
+	
+<= nrel_sc_agent_key_sc_elements: 
+	{
+	question_initiated;
+	question;
+	action_to_consider_offered_artist_of_project_task
+	};
+	
+=> nrel_inclusion: 
+	.platform_independent_realization_of_sc_agent_formation_proposal_executor_of_project_task
+	(*
+	<- platform_independent_abstract_sc_agent;;
+	<= nrel_sc_agent_program: 
+		{
+		agent_formation_proposal_executor_of_project_task
+		};;
+		
+	-> sc_agent_formation_proposal_executor_of_project_task_scp 
+		(* <- active_sc_agent;; *);;
+	*);;
+
+..sc_agent_formation_proposal_executor_of_project_task_condition
+= [*
+	action_to_consider_offered_artist_of_project_task _-> .._question;;
+	question_initiated _-> .._question;;
+	question _-> .._question;;
+	.._question _-> rrel_1:: .._parameter1;;
+	.._question _-> rrel_2:: .._parameter2;;
+*];;
+
+..sc_agent_formation_proposal_executor_of_project_task_result
+= [*
+	action_to_consider_offered_artist_of_project_task _-> .._question;;
+	question_finished _-> .._question;;
+	question _-> .._question;;
+	.._question _-> rrel_1:: .._parameter1;;
+	.._question _-> rrel_2:: .._parameter2;;
+	.._question _=> nrel_answer:: .._answer;;
+*];;

@@ -1,0 +1,812 @@
+subjdomain_entities
+<- subject_domain;
+<- sc_node_struct;
+<- structure;
+=> nrel_main_idtf:
+	[Предметная область sc-элементов]
+	(* <- lang_ru;; *);
+	[Subject domain of sc-elements]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[Предметная область сущностей]
+	(* <- lang_ru;; *);
+
+-> rrel_maximum_studied_object_class:
+	sc_element;
+-> rrel_not_maximum_studied_object_class:
+	sc_constant;
+	fictional_entity;
+	unfabled_entity;
+	sc_terminal_constant;
+	material_or_quasi_material_entity;
+	material_entity;
+	quasi_material_entity;
+	abstract_entity_terminal;
+	sc_variable;
+	sc_variable_first_order;
+	sc_variable_second_order;
+	sc_variable_mixed_order;
+	abstract_entity;
+	permanent_entity;
+	temporary_entity;
+	sc_node;
+	sc_connector;
+	sc_edge;
+	sc_arc;
+	sc_arc_common;
+	sc_arc_membership_or_nonmembership;
+	sc_arc_membership;
+	sc_arc_nonmembership;
+	sc_arc_fuzzy_membership;
+	sc_arc_constant_permanent_membership;
+	sc_code_alphabet;
+-> rrel_explored_relation: 
+	nrel_synonymy;
+=> nrel_primary_elements_class_private_subject_domain: subjdomain_of_unified_sc_models;
+=> nrel_primary_elements_class_private_subject_domain: subjdomain_ostis_systems;
+=> nrel_primary_elements_class_private_subject_domain: subject_domain_of_actions_and_tasks;
+=> nrel_primary_elements_class_private_subject_domain: subjdomain_informational_structures_not_sc_code;
+=> nrel_primary_elements_class_private_subject_domain: subject_domain_numbers_and_numeric_structures;
+=> nrel_primary_elements_class_private_subject_domain: subject_domain_of_structures;
+=> nrel_primary_elements_class_private_subject_domain: subjdomain_parameters_and_values;
+=> nrel_primary_elements_class_private_subject_domain: subjdomain_temporary_entity;
+=> nrel_primary_elements_class_private_subject_domain: subject_domain_of_sc_identifiers;
+=> nrel_primary_elements_class_private_subject_domain: subject_domain_of_sets;;
+
+sc_element 
+<- sc_node_not_relation;
+
+=> nrel_main_idtf:
+	[sc-элемент]
+	(* <- lang_ru;; *);
+	[sc-element]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[sc-знак]
+	(* <- lang_ru;;*);
+	[знак сущности]
+	(* <- lang_ru;; *);
+	[знак, входящий в текст SC-кода]
+	(* <- lang_ru;;*);
+	[сущность]
+	(* <- lang_ru;;*);
+	[sc-знак сущности]
+	(* <- lang_ru;;*);
+	[знак, входящий в состав текста SC-кода]
+	(* <- lang_ru;;*);
+	[Множество всевозможных атомарных фрагментов текста]
+	(* <- lang_ru;;*);
+
+<= nrel_subdividing:
+	{
+		sc_constant;
+		sc_variable
+	};
+
+<= nrel_subdividing:
+	{
+		sc_connector;
+		sc_node
+	};
+<- rrel_key_sc_element:
+	...
+		(*
+			<- identify_instances_rule;;
+			<= nrel_sc_text_translation:
+				...
+					(*
+					-> rrel_example:
+						"file://nl_files/rule_for_sc_element.html"
+						(* <- lang_ru;; *);;
+					*);;
+		*);;
+
+
+sc_constant
+<- sc_node_not_relation;
+
+=> nrel_main_idtf:
+	[sc-константа]
+	(* <- lang_ru;; *);
+	[sc-constant]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[константный sc-элемент]
+	(* <- lang_ru;; *);
+
+<= nrel_subdividing:
+	{
+		sc_terminal_constant;
+		set
+	};
+
+<= nrel_subdividing:
+	{
+		permanent_entity;
+		temporary_entity
+	};
+
+<- rrel_key_sc_element:
+	...
+		(*
+			<- note;;
+			<= nrel_sc_text_translation:
+				...
+					(*
+					-> rrel_example:
+						"file://nl_files/note_for_sc_constant.html"
+						(* <- lang_ru;; *);;
+					*);;
+		*);
+
+<- rrel_key_sc_element:
+	...
+		(*
+			<- note;;
+			<= nrel_sc_text_translation:
+				...
+					(*
+					-> rrel_example:
+						"file://nl_files/note2_for_sc_constant.html"
+						(* <- lang_ru;; *);;
+					*);;
+		*);;
+
+fictional_entity
+<- sc_node_not_relation;
+
+=> nrel_main_idtf:
+	[вымышленная сущность]
+	(* <- lang_ru;; *);
+	[fictional entity]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[придуманная сущность]
+	(* <- lang_ru;; *);;
+
+unfabled_entity
+<- sc_node_not_relation;
+
+=> nrel_main_idtf:
+	[невымышленная сущность]
+	(* <- lang_ru;; *);
+	[unfabled entity]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[действительно существующая сущность]
+	(* <- lang_ru;; *);;
+
+sc_terminal_constant
+<- sc_node_not_relation;
+
+=> nrel_main_idtf:
+	[терминальная sc-константа]
+	(* <- lang_ru;; *);
+	[terminal sc-constant]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[терминальная сущность]
+	(* <- lang_ru;; *);
+	[первичная sc-константа]
+	(* <- lang_ru;; *);
+	[первичная сущность]
+	(* <- lang_ru;; *);
+	[sc-константа, не являющаяся знаком множества]
+	(* <- lang_ru;; *);
+	[терминальная константная сущность]
+	(* <- lang_ru;; *);
+
+<= nrel_subdividing:
+	{
+		material_or_quasi_material_entity;
+		file;
+		abstract_entity_terminal
+	};;
+
+material_or_quasi_material_entity
+<- sc_node_not_relation;
+
+=> nrel_main_idtf:
+	[материальная или квазиматериальная сущность]
+	(* <- lang_ru;; *);
+	[material or quasi material entity]
+	(* <- lang_en;; *);
+
+<= nrel_subdividing:
+	{
+		material_entity;
+		quasi_material_entity
+	};;
+
+material_entity
+<- sc_node_not_relation;
+
+=> nrel_main_idtf:
+	[материальная сущность]
+	(* <- lang_ru;; *);
+	[material entity]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[естественная сущность]
+	(* <- lang_ru;; *);
+	[объект исследования естественной науки]
+	(* <- lang_ru;; *);
+	[физическая сущность]
+	(* <- lang_ru;; *);
+	[материальный объект]
+	(* <- lang_ru;; *);
+	[реальная сущность]
+	(* <- lang_ru;; *);
+	[знак материальной сущности]
+	(* <- lang_ru;; *);
+	[sc-знак материальной сущности]
+	(* <- lang_ru;; *);
+	[sc-элемент, обозначающий конкретную материальную сущность]
+	(* <- lang_ru;; *);;
+
+quasi_material_entity
+<-sc_node_not_relation;
+
+=> nrel_main_idtf:
+	[квазиматериальная сущность]
+	(* <- lang_ru;; *);
+	[quasi material entity]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[вымышленная сущность, подобная материальной]
+	(* <- lang_ru;; *);
+	[псевдоматериальная сущность]
+	(* <- lang_ru;; *);
+	[sc-знак квазиматериальной сущности]
+	(* <- lang_ru;; *);
+	[придуманная сущность, подобная материальной]
+	(* <- lang_ru;; *);;
+
+abstract_entity_terminal
+<- sc_node_not_relation;
+
+=> nrel_main_idtf:
+	[абстрактная терминальная сущность]
+	(* <- lang_ru;; *);
+	[abstract terminal entity]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[абстрактная константная сущность, не являющаяся множеством]
+	(* <- lang_ru;; *);
+	[первичный элемент абстрактной структуры]
+	(* <- lang_ru;; *);
+
+=> nrel_inclusion:
+	real_number;
+
+
+	<- rrel_key_sc_element:
+	...
+		(*
+			<- note;;
+			<= nrel_sc_text_translation:
+				...
+					(*
+					-> rrel_example:
+						"file://nl_files/note_for_abstract_entity_terminal.html"
+						(* <- lang_ru;; *);;
+					*);;
+		*);;
+
+sc_variable
+<- sc_node_not_relation;
+
+=> nrel_main_idtf:
+	[sc-переменная]
+	(* <- lang_ru;; *);
+	[sc-variable]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[sc-знак переменной сущности]
+	(* <- lang_ru;; *);
+	[переменная сущность]
+	(* <- lang_ru;; *);
+	[обозначение произвольной сущности, которое пробегает некоторое дополнительно уточняемое множество знаков]
+	(* <- lang_ru;; *);
+	[sc-знак произвольной сущности из некоторого дополнительно уточняемого множества сущностей]
+	(* <- lang_ru;; *);
+	[sc-обозначение произвольной сущности, которому соответствует некоторое дополнительно уточняемое множество sc-элементов, являющееся областью возможных значений этого sc-обозначения]
+	(* <- lang_ru;; *);
+
+=> nrel_inclusion:
+	sc_variable_first_order;
+	sc_variable_second_order;
+	sc_variable_mixed_order;
+<- rrel_key_sc_element:
+	...
+		(*
+			<- identify_instances_rule;;
+			<= nrel_sc_text_translation:
+				...
+					(*
+					-> rrel_example:
+						"file://nl_files/rule_for_sc_variable.html"
+						(* <- lang_ru;; *);;
+					*);;
+		*);;
+
+sc_variable_first_order
+<- sc_node_not_relation;
+
+=> nrel_main_idtf:
+	[sc-переменная первого порядка]
+	(* <- lang_ru;; *);
+	[sc-variable of the first order]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[sc-переменная, значениями которой являются только sc-константы]
+	(* <- lang_ru;; *);;
+
+sc_variable_second_order
+<- sc_node_not_relation;
+
+=> nrel_main_idtf:
+	[sc-переменная второго порядка]
+	(* <- lang_ru;; *);
+	[sc-variable of the second order]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[sc-метапеременная]
+	(* <- lang_ru;; *);
+	[sc-переменная, значениями которой являются только sc-переменные первого порядка]
+	(* <- lang_ru;; *);;
+
+sc_variable_mixed_order
+<- sc_node_not_relation;
+
+=> nrel_main_idtf:
+	[sc-переменная смешанного порядка]
+	(* <- lang_ru;; *);
+	[sc-variable of mixed order]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[sc-переменная, значениями которой являются как sc-константы, так и sc-переменные первого порядка]
+	(* <- lang_ru;; *);;
+
+abstract_entity
+<- sc_node_not_relation;
+
+=> nrel_main_idtf:
+	[абстрактная сущность]
+	(* <- lang_ru;; *);
+	[abstract entity]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[sc-знак абстрактной сущности]
+	(* <- lang_ru;; *);
+
+<= nrel_subdividing:
+	{
+		set;
+		abstract_entity_terminal
+	};;
+
+permanent_entity
+<- sc_node_not_relation;
+
+=> nrel_main_idtf:
+	[постоянная сущность]
+	(* <- lang_ru;; *);
+	[permanent entity]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[постоянно существующая сущность]
+	(* <- lang_ru;; *);
+	[стационарная сущность]
+	(* <- lang_ru;; *);;
+
+temporary_entity
+<- sc_node_not_relation;
+
+=> nrel_main_idtf:
+	[временная сущность]
+	(* <- lang_ru;; *);
+	[temporary entity]
+	(* <- lang_en;; *);;
+
+sc_node
+<- sc_node_not_relation;
+
+=> nrel_main_idtf:
+	[sc-узел]
+	(* <- lang_ru;; *);
+	[sc-node]
+	(* <- lang_en;; *);
+
+<= nrel_subdividing:
+	{
+		constant_sc_node;
+		variable_sc_node
+	};;
+
+sc_connector
+<- sc_node_not_relation;
+
+=> nrel_main_idtf:
+	[sc-коннектор]
+	(* <- lang_ru;; *);
+	[sc-connector]
+	(* <- lang_en;; *);
+
+<= nrel_subdividing:
+	{
+		sc_edge;
+		sc_arc
+	};;
+
+sc_edge
+<- sc_node_not_relation;
+
+=> nrel_main_idtf:
+	[sc-ребро]
+	(* <- lang_ru;; *);
+	[sc-edge]
+	(* <- lang_en;; *);
+
+<= nrel_subdividing:
+	{
+		sc_edge_constant;
+		sc_edge_variable
+	};;
+
+sc_edge_constant
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[константное sc-ребро]
+	(* <- lang_ru;; *);
+	[constant sc-edge]
+	(* <- lang_en;; *);;
+
+sc_edge_variable
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[переменное sc-ребро]
+	(* <- lang_ru;; *);
+	[variable sc-edge]
+	(* <- lang_en;; *);;
+
+sc_arc
+<- sc_node_not_relation;
+
+=> nrel_main_idtf:
+	[sc-дуга]
+	(* <- lang_ru;; *);
+	[sc-arc]
+	(* <- lang_en;; *);
+
+<= nrel_subdividing:
+	{
+		sc_arc_common;
+		sc_arc_membership_or_nonmembership
+	};;
+
+sc_arc_common
+<-sc_node_not_relation;
+
+=> nrel_main_idtf:
+	[sc-дуга общего вида]
+	(* <- lang_ru;; *);
+	[sc-arc of general form]
+	(* <- lang_en;; *);
+
+<= nrel_subdividing:
+	{
+		sc_arc_common_constant;
+		sc_arc_common_variable
+	};;
+
+sc_arc_membership_or_nonmembership
+<- sc_node_not_relation;
+
+=> nrel_main_idtf:
+	[sc-дуга принадлежности или непринадлежности]
+	(* <- lang_ru;; *);
+	[sc-arc of membership or non-membership]
+	(* <- lang_en;; *);
+
+<= nrel_subdividing:
+	{
+		sc_arc_membership;
+		sc_arc_nonmembership;
+		sc_arc_fuzzy_membership
+	};;
+
+sc_arc_membership
+<- sc_node_not_relation;
+
+=> nrel_main_idtf:
+	[sc-дуга принадлежности]
+	(* <- lang_ru;; *);
+	[sc-arc of membership]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[sc-дуга позитивной принадлежности]
+	(* <- lang_ru;; *);
+
+<= nrel_subdividing:
+	{
+		sc_arc_constant_permanent_membership;
+		sc_arc_variable_permanent_membership;
+		sc_arc_constant_temporary_membership;
+		sc_arc_variable_temporary_membership
+	};;
+
+sc_arc_nonmembership
+<- sc_node_not_relation;
+
+=> nrel_main_idtf:
+	[sc-дуга непринадлежности]
+	(* <- lang_ru;; *);
+	[sc-arc of non-membership]
+	(* <- lang_en;; *);
+
+<= nrel_subdividing:
+	{
+		sc_arc_constant_permanent_nonmembership;
+		sc_arc_variable_permanent_nonmembership;
+		sc_arc_constant_temporary_nonmembership;
+		sc_arc_variable_temporary_nonmembership
+	};;
+
+sc_arc_fuzzy_membership 
+<- sc_node_not_relation;
+
+=> nrel_main_idtf:
+	[sc-дуга нечеткой принадлежности]
+	(* <- lang_ru;; *);
+	[sc-arc of fuzzy membership]
+	(* <- lang_en;; *);
+
+<= nrel_subdividing:
+	{
+		sc_arc_constant_temporary_fuzzy_membership;
+		sc_arc_variable_permanent_fuzzy_membership;
+		sc_arc_constant_permanent_fuzzy_membership;
+		sc_arc_variable_temporary_fuzzy_membership
+	};;
+
+sc_arc_constant_temporary_fuzzy_membership
+<- sc_node_not_relation;
+
+=> nrel_main_idtf:
+	[sc-дуга константной нестационарной нечеткой принадлежности]
+	(* <- lang_ru;; *);
+	[sc-arc of constant temporary fuzzy membership]
+	(* <- lang_en;; *);;
+
+sc_arc_variable_temporary_fuzzy_membership
+<- sc_node_not_relation;
+
+=> nrel_main_idtf:
+	[sc-дуга переменной нестационарной нечеткой принадлежности]
+	(* <- lang_ru;; *);
+	[sc-arc of variable temporary fuzzy membership]
+	(* <- lang_en;; *);;
+
+sc_arc_constant_permanent_fuzzy_membership
+<- sc_node_not_relation;
+
+=> nrel_main_idtf:
+	[sc-дуга константной стационарной нечеткой принадлежности]
+	(* <- lang_ru;; *);
+	[sc-arc of constant permanent fuzzy membership]
+	(* <- lang_en;; *);;
+
+sc_arc_variable_permanent_fuzzy_membership
+<- sc_node_not_relation;
+
+=> nrel_main_idtf:
+	[sc-дуга переменной стационарной нечеткой принадлежности]
+	(* <- lang_ru;; *);
+	[sc-arc of variable permanent fuzzy membership]
+	(* <- lang_en;; *);;
+
+sc_arc_variable_temporary_nonmembership
+<- sc_node_not_relation;
+
+=> nrel_main_idtf:
+	[sc-дуга переменной нестационарной непринадлежности]
+	(* <- lang_ru;; *);
+	[sc-arc of variable temporary non-membership]
+	(* <- lang_en;; *);;
+
+sc_arc_constant_temporary_nonmembership
+<- sc_node_not_relation;
+
+=> nrel_main_idtf:
+	[sc-дуга константной нестационарной непринадлежности]
+	(* <- lang_ru;; *);
+	[sc-arc of constant temporary non-membership]
+	(* <- lang_en;; *);;
+
+sc_arc_variable_permanent_nonmembership
+<- sc_node_not_relation;
+
+=> nrel_main_idtf:
+	[sc-дуга переменной стационарной непринадлежности]
+	(* <- lang_ru;; *);
+	[sc-arc of variable permanent non-membership]
+	(* <- lang_en;; *);;
+	
+sc_arc_constant_permanent_nonmembership
+<- sc_node_not_relation;
+
+=> nrel_main_idtf:
+	[sc-дуга константной стационарной непринадлежности]
+	(* <- lang_ru;; *);
+	[sc-arc of constant permanent non-membership]
+	(* <- lang_en;; *);;
+	
+sc_arc_variable_temporary_membership
+<- sc_node_not_relation;
+
+=> nrel_main_idtf:
+	[sc-дуга переменной нестационарной принадлежности]
+	(* <- lang_ru;; *);
+	[sc-arc of variable temporary membership]
+	(* <- lang_en;; *);;
+
+sc_arc_variable_permanent_membership
+<- sc_node_not_relation;
+
+=> nrel_main_idtf:
+	[sc-дуга переменной стационарной принадлежности]
+	(* <- lang_ru;; *);
+	[sc-arc of variable permanent membership]
+	(* <- lang_en;; *);;
+
+sc_arc_constant_temporary_membership
+<- sc_node_not_relation;
+
+=> nrel_main_idtf:
+	[sc-дуга константной нестационарной принадлежности]
+	(* <- lang_ru;; *);
+	[sc-arc of constant temporary membership]
+	(* <- lang_en;; *);;
+
+variable_sc_node
+<- sc_node_not_relation;
+
+=> nrel_main_idtf:
+	[переменный sc-узел]
+	(* <- lang_ru;; *);
+	[variable sc-node]
+	(* <- lang_en;; *);;
+
+constant_sc_node
+<- sc_node_not_relation;
+
+=> nrel_main_idtf:
+	[константный sc-узел]
+	(* <- lang_ru;; *);
+	[constant sc-node]
+	(* <- lang_en;; *);;
+
+sc_arc_common_variable
+<- sc_node_not_relation;
+
+=> nrel_main_idtf:
+	[переменная sc-дуга общего вида]
+	(* <- lang_ru;; *);
+	[variable sc-arc common]
+	(* <- lang_en;; *);;
+
+sc_arc_common_constant
+<- sc_node_not_relation;
+
+=> nrel_main_idtf:
+	[константная sc-дуга общего вида]
+	(* <- lang_ru;; *);
+	[constant sc-arc common]
+	(* <- lang_en;; *);;
+
+sc_arc_constant_permanent_membership
+<- sc_node_not_relation;
+
+=> nrel_main_idtf:
+	[sc-дуга константной стационарной принадлежности]
+	(* <- lang_ru;; *);
+	[sc-arc of constant permanent membership]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[sc-дуга основного вида]
+	(* <- lang_ru;; *);;
+
+sc_code_alphabet
+<- sc_node_not_relation;
+
+=> nrel_main_idtf:
+	[Алфавит SC-кода]
+	(* <- lang_ru;; *);
+	[SC-code alphabet]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[Семейство классов синтаксически выделенных sc-элементов]
+	(* <- lang_ru;; *);
+	[Семейство классов sc-элементов, элементы каждого из которых имеют одинаковые синтаксические метки]
+	(* <- lang_ru;; *);
+	[Семейство классов эквивалентности для неявно заданного отношения эквивалентности “быть sc-элементами, имеющими одинаковую синтаксическую метку”]
+	(* <- lang_ru;; *);
+
+<= nrel_set_of_subsets:
+	sc_element;
+
+-> sc_node;
+-> constant_sc_node;
+-> variable_sc_node;
+-> sc_connector;
+-> sc_edge;
+-> sc_arc;
+-> sc_edge_constant;					
+-> sc_edge_variable;
+-> sc_arc_common;
+-> sc_arc_membership_or_nonmembership;
+-> sc_arc_common_constant;
+-> sc_arc_common_variable;
+-> sc_arc_membership;
+-> sc_arc_nonmembership;
+-> sc_arc_fuzzy_membership;
+-> sc_arc_constant_permanent_membership;
+-> sc_arc_variable_permanent_membership;
+-> sc_arc_constant_temporary_membership;
+-> sc_arc_variable_temporary_membership;
+-> sc_arc_constant_permanent_nonmembership;
+-> sc_arc_variable_permanent_nonmembership;
+-> sc_arc_constant_temporary_nonmembership;
+-> sc_arc_variable_temporary_nonmembership;
+-> sc_arc_constant_permanent_fuzzy_membership;
+-> sc_arc_variable_permanent_fuzzy_membership;
+-> sc_arc_constant_temporary_fuzzy_membership;
+-> sc_arc_variable_temporary_fuzzy_membership;;
+
+nrel_synonymy
+<- sc_node_norole_relation;
+
+=> nrel_main_idtf:
+	[синонимия*]
+	(* <- lang_ru;; *);
+	[synonymy*]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[быть синонимичными sc-элементами*]
+	(* <- lang_ru;; *);
+	[синонимия sc-элементов*]
+	(* <- lang_ru;; *);
+	[отношение, с помощью которого явно указывается факт синонимии некоторых sc-элементов*]
+	(* <- lang_ru;; *);
+
+<- rrel_key_sc_element:
+	...
+		(*
+			<- note;;
+			<= nrel_sc_text_translation:
+				...
+					(*
+					-> rrel_example:
+						"file://nl_files/note_for_nrel_synonymy.html"
+						(* <- lang_ru;; *);;
+					*);;
+		*);;

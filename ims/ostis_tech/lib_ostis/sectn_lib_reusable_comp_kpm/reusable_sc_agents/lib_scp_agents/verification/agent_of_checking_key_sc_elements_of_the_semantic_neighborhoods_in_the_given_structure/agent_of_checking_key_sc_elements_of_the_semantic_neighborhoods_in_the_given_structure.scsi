@@ -1,0 +1,275 @@
+agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure
+=> nrel_main_idtf:
+	[агентная scp-программа проверки указания ключевых sc-элементов семантических окрестностей в рамках заданной структуры] (* <- lang_ru;; *);
+	[agent scp-program of checking key sc-elements of the semantic neighborhoods in the given structure] (* <- lang_en;; *);
+	<- agent_scp_program;;
+
+scp_program -> agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure 
+	(*
+	-> rrel_params: .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_params 
+		(*
+		-> rrel_1: rrel_in: _event;;
+		-> rrel_2: rrel_in: _input_arc;;
+		*);;
+
+	-> rrel_operators: .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator_set 
+		(*
+		-> rrel_init: .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator1A 
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _temp;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: _input_arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _quest;;
+
+			=> nrel_goto: .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator1B;;
+			*);;
+
+		-> .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator1B 
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: action_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+
+		  	=> nrel_then: .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator1C;;
+		  	=> nrel_else: .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator_return;;
+			*);;
+		
+		-> .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator1C
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: rrel_struct: _structure;;
+
+		  	=> nrel_then: .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator0A;;
+		  	=> nrel_else: .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_call_proc_of_adding_validating_message;;
+			*);;
+
+		-> .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator0A
+        		(*
+		 	<- genEl;;
+
+		 	-> rrel_1: rrel_assign: rrel_const: rrel_node: rrel_scp_var: _set_of_element_of_structure;;
+
+		 	=> nrel_goto: .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator0B;;
+		 	*);;
+
+		-> .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator0B
+        		(*
+		 	<- genEl;;
+
+		 	-> rrel_1: rrel_assign: rrel_const: rrel_node: rrel_scp_var: _set_of_subclasses_of_semantic_neighborhood;;
+
+		 	=> nrel_goto: .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator0C;;
+		 	*);;
+
+		-> .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator0C
+        		(*
+		 	<- genEl;;
+
+		 	-> rrel_1: rrel_assign: rrel_const: rrel_node: rrel_struct: rrel_scp_var: _struct_of_answer;;
+
+		 	=> nrel_goto: .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator1A1;;
+		 	*);;
+
+
+		-> .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator1A1
+        		(*
+		 	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_finding_subclasses_by_taxonomy_relation;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator1A1_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_const: semantic_neighborhood;;
+				-> rrel_2: rrel_fixed: rrel_scp_var: _set_of_subclasses_of_semantic_neighborhood;;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr10;;
+
+		 	=> nrel_goto: .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator1B1;;
+		 	*);;
+		 	
+		-> .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator1B1
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr10;;
+
+		  	=> nrel_goto: .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator2A1;;
+			*);; 	
+
+
+		-> .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator2A1
+			(*
+		  	<- searchSetStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _structure;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: rrel_node: _element;;
+
+		  	-> rrel_set_3: rrel_fixed: rrel_scp_var: _set_of_element_of_structure;;
+
+		  	=> nrel_then: .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator2A2;;
+		  	=> nrel_else: .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator_gen_verification_answer;;
+			*);;
+
+		-> .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator2A2
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_subclasses_of_semantic_neighborhood;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: rrel_node: _subclass;;
+		  	
+		  	=> nrel_then: .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator2A3;;
+		  	=> nrel_else: .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator_gen_verification_answer;;
+			*);;
+
+		-> .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator2A3
+			(*
+			<- eraseEl;;
+	
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_pos_const_perm: rrel_erase: _arc1;;
+
+			=> nrel_goto: .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator2B1;;
+			*);;
+
+		-> .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator2B1
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_element_of_structure;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: rrel_node: _element;;
+		  	
+		  	=> nrel_then: .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator2B2;;
+		  	=> nrel_else: .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator2A1;;
+			*);;
+
+		-> .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator2B2
+			(*
+			<- eraseEl;;
+	
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_pos_const_perm: rrel_erase: _arc1;;
+
+			=> nrel_goto: .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator2B3;;
+			*);;
+
+		-> .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator2B3
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _subclass;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _element;;
+		  	
+		  	=> nrel_then: .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator2B4;;
+		  	=> nrel_else: .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator2B1;;
+			*);;
+
+		-> .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator2B4
+			(*
+		  	<- searchElStr5;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _element;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _node;;
+		  	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		  	-> rrel_5: rrel_fixed: rrel_scp_const: rrel_key_sc_element;;
+		  	
+		  	=> nrel_then: .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator2B1;;
+		  	=> nrel_else: .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator2B5;;  
+		  	*);;
+		  	
+		-> .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator2B5
+        		(*
+		 	<- genElStr5;;
+
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _struct_of_answer;;
+		 	-> rrel_2: rrel_assign: rrel_scp_var: rrel_const: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _element;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_const: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_key_sc_element;;
+
+		 	=> nrel_goto: .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator2B1;;
+		 	*);; 	
+		 	
+		-> .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator_gen_verification_answer
+			(*
+		 	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_generation_of_verification_answer;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator_gen_verification_answer_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+				-> rrel_2: rrel_fixed: rrel_scp_const: action_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure;;
+				-> rrel_3: rrel_fixed: rrel_scp_var: _struct_of_answer;;
+				-> rrel_4: rrel_fixed: rrel_scp_const: structure_without_key_sc_element_for_semantic_neighborhood;;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr4;;
+
+		  	=> nrel_goto: .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator_waitreturn_generation_verification_answer;;
+			*);;
+
+		-> .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator_waitreturn_generation_verification_answer 
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr4;;
+
+		  	=> nrel_goto: .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator_erase_temp_set_1_0;;
+			*);; 
+
+		-> .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator_erase_temp_set_1_0
+		    	(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _set_of_element_of_structure;;
+
+			=> nrel_goto: .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator_erase_temp_set_1_1;;
+			*);;
+
+		-> .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator_erase_temp_set_1_1
+		    	(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _set_of_subclasses_of_semantic_neighborhood;;
+
+			=> nrel_goto: .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator_return;;
+			*);;
+
+/*******************************************************Wrong Parameters*******************************************************************/
+
+		-> .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_call_proc_of_adding_validating_message 
+			(*
+		  	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_validating_message;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_call_proc_of_adding_validating_message_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+				-> rrel_2: rrel_fixed: rrel_scp_const: [Wrong 1st parameter! It must be structure];;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr2;;
+
+		  	=> nrel_goto: .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_call_proc_of_adding_validating_message_waitreturn_proc_of_adding_validating_message;;
+			*);;
+
+		-> .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_call_proc_of_adding_validating_message_waitreturn_proc_of_adding_validating_message
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr2;;
+
+		  	=> nrel_goto: .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator_return;;
+			*);;
+
+		-> .agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator_return 
+			(*
+		  	<- return;;
+			*);;
+		*);;
+	*);;

@@ -1,0 +1,65 @@
+scp_program -> proc_of_adding_proposal_content_to_substantive_part_of_kb
+	(*
+  	-> rrel_params: .proc_of_adding_proposal_content_to_substantive_part_of_kb_params 
+		(*
+		-> rrel_1: rrel_in: _proposal;;
+		-> rrel_2: rrel_in: _section;;
+    	*);;
+
+	-> rrel_operators: .proc_of_adding_proposal_content_to_substantive_part_of_kb_operator_set
+    	(*
+    	-> rrel_init: .proc_of_adding_proposal_content_to_substantive_part_of_kb_operator1B
+			(*
+		 	<- ifCoin;;
+
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _section;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: substantive_part_of_the_knowledge_base;;
+
+            => nrel_then: .proc_of_adding_proposal_content_to_substantive_part_of_kb_operator_get_substantive_part_of_kb_sign;;
+			=> nrel_else: .proc_of_adding_proposal_content_to_substantive_part_of_kb_operator_D2;;
+		 	*);;
+
+    	-> .proc_of_adding_proposal_content_to_substantive_part_of_kb_operator_get_substantive_part_of_kb_sign
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: substantive_part_of_the_knowledge_base;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _substantive_part_of_kb_sign;;
+
+			=> nrel_then: .proc_of_adding_proposal_content_to_substantive_part_of_kb_operator_D1;;
+			=> nrel_else: .proc_of_adding_proposal_content_to_substantive_part_of_kb_operator_return;;
+			*);;
+
+		-> .proc_of_adding_proposal_content_to_substantive_part_of_kb_operator_D1
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _proposal;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _content;;
+
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _substantive_part_of_kb_sign;;
+
+			=> nrel_goto: .proc_of_adding_proposal_content_to_substantive_part_of_kb_operator_return;;
+			*);;	
+
+		-> .proc_of_adding_proposal_content_to_substantive_part_of_kb_operator_D2
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _proposal;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _content;;
+
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _section;;
+
+			=> nrel_goto: .proc_of_adding_proposal_content_to_substantive_part_of_kb_operator_return;;
+			*);;		
+			
+		-> .proc_of_adding_proposal_content_to_substantive_part_of_kb_operator_return 
+			(*
+			<- return;;
+			*);;
+		*);;
+	*);;

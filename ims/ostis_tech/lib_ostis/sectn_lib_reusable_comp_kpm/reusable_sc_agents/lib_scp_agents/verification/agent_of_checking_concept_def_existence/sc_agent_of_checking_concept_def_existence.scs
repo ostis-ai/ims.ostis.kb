@@ -1,0 +1,53 @@
+sc_agent_of_checking_concept_def_existence
+=> nrel_main_idtf:
+	[Абстрактный sc-агент проверки наличия определений или пояснений у понятий, имеющихся в рамках заданной структуры] (* <- lang_ru;; *);
+	[Abstract sc-agent of checking definitions or explanations existence for concepts within the given structure] (* <- lang_en;; *);
+<- abstract_sc_agent;
+=> nrel_primary_initiation_condition: (sc_event_add_output_arc => question_initiated);
+=> nrel_initiation_condition_and_result: (..sc_agent_of_checking_concept_def_existence_condition => ..sc_agent_of_checking_concept_def_existence_result);
+<= nrel_sc_agent_key_sc_elements: 
+	{
+		question_initiated;
+		question;
+		action_to_check_concept_def_existence
+	};
+<- key_sc_element:
+	...
+	(*
+	<- sc_description_of_sc_agent_behavior;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[Задачей sc-агента является проверка наличия определения в ключевых элементах];;
+		*);;
+	*);
+=> nrel_inclusion: 
+	.platform_independent_realization_of_sc_agent_of_checking_concept_def_existence
+	(*
+		<- platform_independent_abstract_sc_agent;;
+		<= nrel_sc_agent_program: 
+		{
+			agent_of_checking_concept_def_existence;
+			proc_of_generation_of_verification_answer;
+			proc_of_finding_intersection_of_two_sets
+		};;
+		-> sc_agent_of_checking_concept_def_existence_scp (* <- active_sc_agent;; *);;
+	*);;
+
+..sc_agent_of_checking_concept_def_existence_condition
+= [*
+	action_to_check_concept_def_existence _-> .._question;;
+	question_initiated _-> .._question;;
+	question _-> .._question;;
+	.._question _-> .._parameter;;
+*];;
+
+..sc_agent_of_checking_concept_def_existence_result
+= [*
+	action_to_check_concept_def_existence _-> .._question;;
+	question_finished _-> .._question;;
+	question _-> .._question;;
+	.._question _=> nrel_answer:: .._answer;;
+	.._question _-> .._parameter;;
+*];;

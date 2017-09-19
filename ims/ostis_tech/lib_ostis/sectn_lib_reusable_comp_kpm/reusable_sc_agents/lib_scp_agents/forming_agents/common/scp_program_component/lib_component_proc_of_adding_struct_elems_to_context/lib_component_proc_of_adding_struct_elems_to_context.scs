@@ -1,0 +1,27 @@
+lib_component_proc_of_adding_struct_elems_to_context
+=> nrel_main_idtf:
+	[Компонент библиотеки. scp-программа добавления элементов структуры в контекст]
+	(* <- lang_ru;; *);
+	[Library component. scp-program of adding structures elements to context]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components;
+
+-> rrel_key_sc_element: 
+	proc_of_adding_struct_elems_to_context;
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/proc_of_adding_struct_elems_to_context.html" 
+				(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+lib_component_proc_of_adding_struct_elems_to_context = [*^"file://proc_of_adding_struct_elems_to_context.scsi"*];;
+

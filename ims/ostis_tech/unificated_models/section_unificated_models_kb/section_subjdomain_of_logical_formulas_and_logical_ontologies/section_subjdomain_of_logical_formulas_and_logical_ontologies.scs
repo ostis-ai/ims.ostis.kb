@@ -1,0 +1,52 @@
+section_subjdomain_of_logical_formulas_and_logical_ontologies
+=> nrel_main_idtf:
+	[Раздел. Предметная область логических формул и логических онтологий ] (* <- lang_ru;; *);
+	[Section. Subject domain of logical formulas and logical ontologies] (* <- lang_en;; *);
+<- not_enough_formed_structure;
+<- atomic_section;;
+
+section_subjdomain_of_logical_formulas_and_logical_ontologies = [*^"file://subjdomain_of_logical_formulas_and_logical_ontologies.scsi"*];;
+
+section_subjdomain_of_logical_formulas_and_logical_ontologies
+-> rrel_key_sc_element:
+	formal_theory;
+	rrel_subject_domain;
+	rrel_axiom;
+	rrel_theorem;
+	observation;
+	atomic_observation;
+	non_atomic_observation;
+	factual_observation;
+	logical_formula;
+	atomic_logical_formula;
+	non_atomic_logical_formula;
+	nrel_subformula;
+	statement;
+	definition;
+	generally_valid_logical_formula;
+	contradictory_logical_formula;
+	neutral_logical_formula;
+	workable_logical_formula;
+	impossible_logical_formula;
+	tautology;
+	logical_operation;
+	nrel_implication;
+	rrel_if;
+	rrel_then;
+	nrel_equivalence;
+	nrel_conjunction;
+	nrel_disjunction;
+	nrel_strict_disjunction;
+	negation;
+	quantifier;
+	nrel_generality;
+	nrel_existence;
+	logical_formula_and_uniqueness;
+	rrel_bind_variables;
+	open_logical_formula;
+	closed_logical_formula;
+
+	existence_formula;
+	number_values_of_variable;
+	existence_fold;
+	unique_existence;;

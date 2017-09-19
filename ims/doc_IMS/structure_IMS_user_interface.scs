@@ -3,4 +3,9 @@ structure_IMS_user_interface
 	[Документация. Пользовательский интерфейс IMS]
 	(* <- lang_ru;; *);
 	[Documentation. IMS user interface]
-	(* <- lang_en;; *);;
+	(* <- lang_en;; *);
+<- not_enough_formed_structure;
+-> rrel_key_sc_element:
+	IMS_user_interface;;
+
+structure_IMS_user_interface = [*^"file://structure_IMS_user_interface.scsi"*];;

@@ -1,0 +1,50 @@
+sc_agent_of_calculation_average_depth_of_subject_domain
+=> nrel_main_idtf:
+	[sc-агент подсчета вычисления cредней глубины предметных областей] (* <- lang_ru;; *);
+	[sc-agent of calculation average depth of subject domain] (* <- lang_en;; *);
+
+<- abstract_sc_agent;
+
+=> nrel_primary_initiation_condition: 
+	(sc_event_add_output_arc => question_initiated);
+
+=> nrel_initiation_condition_and_result: 
+	(..sc_agent_of_calculation_average_depth_of_subject_domain_condition => ..sc_agent_of_calculation_average_depth_of_subject_domain_result);
+
+<= nrel_sc_agent_key_sc_elements: 
+	{
+	question_initiated;
+	question;
+	action_to_calculate_average_depth_of_subject_domain
+	};
+
+=> nrel_inclusion: 
+	.platform_independent_realization_of_sc_agent_of_calculation_average_depth_of_subject_domain
+	(*
+	<- platform_independent_abstract_sc_agent;;
+	<= nrel_sc_agent_program: 
+		{
+		agent_of_calculation_average_depth_of_subject_domain
+		};;
+
+	-> sc_agent_of_calculation_average_depth_of_subject_domain_scp    
+		(* <- active_sc_agent;; *);;  
+	*);;
+
+..sc_agent_of_calculation_average_depth_of_subject_domain_condition
+= [*
+	action_to_calculate_average_depth_of_subject_domain _-> .._question;;
+	question_initiated _-> .._question;;
+	question _-> .._question;;
+	.._question _-> .._parameter;;
+*];;
+
+..sc_agent_of_calculation_average_depth_of_subject_domain_result
+= [*
+	action_to_calculate_average_depth_of_subject_domain _-> .._question;;
+	question_finished _-> .._question;;
+	question _-> .._question;;
+	.._question _=> nrel_answer:: .._answer;;
+	.._question _-> .._parameter;;
+*];;
+

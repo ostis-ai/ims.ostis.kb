@@ -1,0 +1,211 @@
+agent_of_calculation_average_depth_of_subject_domain
+=> nrel_main_idtf:
+	[агентная scp-программа вычисления cредней глубины предметных областей] (* <- lang_ru;; *);
+	[agent scp-program of calculation average depth of subject domain] (* <- lang_en;; *);
+	<- agent_scp_program;;
+
+scp_program -> agent_of_calculation_average_depth_of_subject_domain
+	(*
+	-> rrel_params: .agent_of_calculation_average_depth_of_subject_domain_params 
+		(*
+		-> rrel_1: rrel_in: _event;;
+		-> rrel_2: rrel_in: _input_arc;;
+		*);;
+
+	-> rrel_operators: .agent_of_calculation_average_depth_of_subject_domain_operator_set 
+		(*
+		-> rrel_init: .agent_of_calculacaltion_average_depth_of_subject_domain_operator1A
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _temp;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: _input_arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _quest;;
+
+			=> nrel_goto: .agent_of_calculation_average_depth_of_subject_domain_operator1B;;
+			*);;
+
+		-> .agent_of_calculation_average_depth_of_subject_domain_operator1B
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: action_to_calculate_average_depth_of_subject_domain;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+
+			=> nrel_then: .agent_of_calculation_average_depth_of_subject_domain_operator1C;;
+			=> nrel_else: .agent_of_calculation_average_depth_of_subject_domain_operator_return;;
+			*);;
+
+		-> .agent_of_calculation_average_depth_of_subject_domain_operator1C
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _subject_domain;;
+
+			=> nrel_then: .agent_of_calculation_average_depth_of_subject_domain_operator1D;;
+			=> nrel_else: .agent_of_calculation_average_depth_of_subject_domain_operator_return;; 
+			*);;
+
+		-> .agent_of_calculation_average_depth_of_subject_domain_operator1D
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: subject_domain;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _subject_domain;;
+
+			=> nrel_then: .agent_of_calculation_average_depth_of_subject_domain_operator2A;;
+			=> nrel_else: .agent_of_calculation_average_depth_of_subject_domain_operator_call_proc_of_adding_validating_message;;
+			*);;
+
+		-> .agent_of_calculation_average_depth_of_subject_domain_operator2A
+    			(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var:  _subject_domain;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var:  _elem;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_private_subject_domain;;
+
+        		=> nrel_then: .agent_of_calculation_average_depth_of_subject_domain_operator2B;;
+        		=> nrel_else: .agent_of_calculation_average_depth_of_subject_domain_operator2C;;
+        		*);;
+
+        	-> .agent_of_calculation_average_depth_of_subject_domain_operator2C
+			(*
+			<- contAssign;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _average_value;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [1];;
+
+			=> nrel_goto: .agent_of_calculation_average_depth_of_subject_domain_operator4A;;
+			*);;
+
+		-> .agent_of_calculation_average_depth_of_subject_domain_operator2B
+			(*
+			<- genEl;;
+
+			-> rrel_1: rrel_assign: rrel_node: rrel_scp_var: _all_depth;;
+
+			=> nrel_goto: .agent_of_calculation_average_depth_of_subject_domain_operator2D;;
+			*);;
+
+		-> .agent_of_calculation_average_depth_of_subject_domain_operator2D
+			(*
+			<- contAssign;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _current_depth;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [0];;
+
+			=> nrel_goto: .agent_of_calculation_average_depth_of_subject_domain_operator2E;;
+			*);;
+
+		-> .agent_of_calculation_average_depth_of_subject_domain_operator2E
+			(*
+			<- call;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_calculation_all_depths_of_subject_domain;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_calculation_average_depth_of_subject_domain_operator2E_params
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _subject_domain;;
+				-> rrel_2: rrel_fixed: rrel_scp_var: _current_depth;;
+				-> rrel_3: rrel_fixed: rrel_scp_var: _all_depth;;
+				*);;
+			-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
+
+			=> nrel_goto: .agent_of_calculation_average_depth_of_subject_domain_operator2F;;
+			*);;
+
+		-> .agent_of_calculation_average_depth_of_subject_domain_operator2F
+			(*
+			<- waitReturn;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
+
+			=> nrel_goto: .agent_of_calculation_average_depth_of_subject_domain_operator3A;;
+			*);;
+
+		-> .agent_of_calculation_average_depth_of_subject_domain_operator3A
+			(*
+			<- contAssign;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _average_value;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [0];;
+
+			=> nrel_goto: .agent_of_calculation_average_depth_of_subject_domain_operator3B;;
+			*);;
+
+		-> .agent_of_calculation_average_depth_of_subject_domain_operator3B
+			(*
+			<- call;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_calculation_average_value;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_calculation_average_depth_of_subject_domain_operator3B_params
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _all_depth;;
+				-> rrel_2: rrel_fixed: rrel_scp_var: _average_value;;
+				*);;
+			-> rrel_3: rrel_assign: rrel_scp_var: _descr2;;
+
+			=> nrel_goto: .agent_of_calculation_average_depth_of_subject_domain_operator3C;;
+			*);;
+
+		-> .agent_of_calculation_average_depth_of_subject_domain_operator3C
+			(*
+			<- waitReturn;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _descr2;;
+
+			=> nrel_goto: .agent_of_calculation_average_depth_of_subject_domain_operator4A;;
+			*);;
+
+		-> .agent_of_calculation_average_depth_of_subject_domain_operator4A
+			(*
+		  	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_generation_of_metrics_answer;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_calculation_average_depth_of_subject_domain_operator4A_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+				-> rrel_2: rrel_fixed: rrel_scp_const: action_to_calculate_average_depth_of_subject_domain;;
+				-> rrel_3: rrel_fixed: rrel_scp_var: _average_value;;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr3;;
+
+		  	=> nrel_goto: .agent_of_calculation_average_depth_of_subject_domain_operator4B;;
+			*);;
+
+		-> .agent_of_calculation_average_depth_of_subject_domain_operator_call_proc_of_adding_validating_message
+			(*
+		  	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_validating_message;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_calculation_average_depth_of_subject_domain_operator_call_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+				-> rrel_2: rrel_fixed: rrel_scp_const: [Wrong first parameter! It must be an instance of subject domain];;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr3;;
+
+		  	=> nrel_goto: .agent_of_calculation_average_depth_of_subject_domain_operator4B;;
+			*);;
+
+		-> .agent_of_calculation_average_depth_of_subject_domain_operator4B
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr3;;
+
+		  	=> nrel_goto: .agent_of_calculation_average_depth_of_subject_domain_operator_return;;
+			*);;
+
+		-> .agent_of_calculation_average_depth_of_subject_domain_operator_return
+			(*
+			<- return;;
+			*);;
+		*);;
+	*);;

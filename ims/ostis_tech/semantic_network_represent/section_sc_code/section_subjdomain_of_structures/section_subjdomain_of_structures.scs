@@ -1,0 +1,111 @@
+section_subject_domain_of_structures
+
+=> nrel_main_idtf:
+	[Раздел. Предметная область структур]
+	(* <- lang_ru;; *);
+	[Section. Subject domain of structures]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[Раздел. Раздел базы знаний, описывающий Предметную область структур]
+	(* <- lang_ru;; *);
+<- not_enough_formed_structure;
+<- atomic_section;;
+
+section_subject_domain_of_structures = [*^"file://section_subjdomain_of_structures.scsi"*];;
+
+rrel_key_sc_element -> (section_subject_domain_of_structures -> subject_domain_of_structures)
+(*
+	=> nrel_key_sc_element_order: (section_subject_domain_of_structures -> structure)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_structures -> connected_structure)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_structures -> non_connected_structure)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_structures -> trivial_structure)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_structures -> non_trivial_structure)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_structures -> rrel_structure_element)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_structures -> rrel_unrepresented_set)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_structures -> rrel_completely_represented_set)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_structures -> rrel_partly_represented_set)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_structures -> rrel_structure_element_not_set)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_structures -> rrel_maximum_set)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_structures -> rrel_non_maximum_set)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_structures -> rrel_primary_element)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_structures -> rrel_second_element)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_structures -> rrel_second_level_element)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_structures -> second_level_structure)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_structures -> semantic_level_structural_element)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_structures -> quantity_semantic_level_structural_element)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_structures -> rrel_metaconnection)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_structures -> nrel_polymorphic)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_structures -> nrel_polymorphism)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_structures -> nrel_gomomorphic)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_structures -> nrel_gomomorphism)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_structures -> nrel_isomorphic)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_structures -> nrel_isomorphism)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_structures -> nrel_automorphic)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_structures -> nrel_automorphism)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_structures -> nrel_structures_analogy)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_structures -> nrel_sameness)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_structures -> nrel_difference)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_structures -> nrel_primary_syntax_sc_text_structure)
+	(* <- rrel_key_sc_element;; *);;
+*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;

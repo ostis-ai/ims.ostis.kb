@@ -1,0 +1,59 @@
+section_subjdomain_of_ontologies
+
+=> nrel_main_idtf:
+	[Раздел. Предметная область онтологий]
+	(* <- lang_ru;; *);
+	[Section. Subject domain of ontologies]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[Раздел базы знаний IMS, описывающий онтологии]
+	(* <- lang_ru;; *);
+<- not_enough_formed_structure;;
+
+section_subjdomain_of_ontologies = [*^"file://section_subjdomain_of_ontologies.scsi"*];;
+
+rrel_key_sc_element -> (section_subjdomain_of_ontologies -> subject_domain_of_ontologies)
+(*
+	=> nrel_key_sc_element_order: (section_subjdomain_of_ontologies -> ontology)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_of_ontologies -> nrel_ontology)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_of_ontologies -> integrated_ontology)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_of_ontologies -> structural_specification)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_of_ontologies -> theoretic_set_ontology)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_of_ontologies -> logical_ontology)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_of_ontologies -> logical_hiererchy_of_concept)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_of_ontologies -> nrel_using_constants)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_of_ontologies -> logical_hiererchy_of_statement)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_of_ontologies -> nrel_using_statements)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_of_ontologies -> terminological_ontology)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_of_ontologies -> ontology_of_tasks_and_solutions_of_tasks)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_of_ontologies -> ontology_classes_of_tasks_and_ways_of_solving_tasks)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_of_ontologies -> nrel_authorised_user)
+	(* <- rrel_key_sc_element;; *);;
+*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;

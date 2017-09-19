@@ -1,0 +1,29 @@
+lib_component_agent_of_change_arc_direction
+=> nrel_main_idtf:
+	[Компонент библиотеки. sc-агент изменения направления дуги]
+	(* <- lang_ru;; *);
+	[Library component. sc-agent of change arc direction]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components; 
+<- library_of_atomic_reusable_components; 
+
+=> nrel_attendant_component: 
+	lib_component_ui_menu_file_for_change_arc_direction; 
+
+-> rrel_key_sc_element: 
+	.platform_independent_realization_of_sc_agent_of_change_arc_direction; 
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Agent_of_change_arc_direction.html"
+				(* <- lang_ru;; *);; 
+		*);;
+	*);;
+

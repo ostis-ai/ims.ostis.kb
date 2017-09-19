@@ -1,0 +1,660 @@
+subject_domain_of_actions_executing_in_sc_memory
+=> nrel_main_idtf:
+	[Предметная область действий, выполняемых в абстрактной унифицированной семантической памяти] 
+	(* <- lang_ru;; *);
+	[Subject domain of actions executing in abstract unified semantic memory]	
+	(* <- lang_en;; *);
+<- subject_domain;
+<- sc_node_struct;
+<- structure;
+=> nrel_primary_elements_class_private_subject_domain: subject_domain_developers_actions_knowledge_base_cooperation_hierarchy;
+-> rrel_maximum_studied_object_class: action_in_sc_memory;
+-> rrel_not_maximum_studied_object_class:
+	action_in_sc_memory_initiated_by_question;
+	action_of_kb_editing;
+	question_merge_two_elements;
+	action_to_renew_concepts;
+	action_to_delete_selected_sc_elements;
+	action_to_integrate_selected_structure_into_current_state_of_kb;
+	action_of_ostis_system_mode_setting;
+	action_of_editing_file_stored_in_sc_memory;
+	action_of_interpreting_program_stored_in_sc_memory;
+	task_solved_in_sc_memory;;
+
+action_in_sc_memory
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие в sc-памяти] 
+	(* <- lang_ru;; *);
+	[action in sc-memory] 
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[внутреннее действие ostis-системы] 
+	(* <- lang_ru;; *);
+	[действие, выполняемое в sc-памяти] 
+	(* <- lang_ru;; *);	
+	[действие, выполняемое в абстрактной унифицированной семантической памяти] 
+	(* <- lang_ru;; *);
+	[действие, выполняемое машиной обработки знаний ostis-системы] 
+	(* <- lang_ru;; *);
+	[действие, выполняемое агентом или коллективом агентов ostis-системы] 
+	(* <- lang_ru;; *);	
+	[информационный процесс над базой знаний, хранимой в sc-памяти] 
+	(* <- lang_ru;; *);
+	[процесс решения информационной задачи в sc-памяти]
+	(* <- lang_ru;; *);
+<= nrel_inclusion: process_in_sc_memory;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_action_in_sc_memory.html" 
+				(* <- lang_ru;; *);;
+		*);;
+	*);
+=> nrel_inclusion:
+	action_in_sc_memory_initiated_by_question;
+	action_of_kb_editing;
+	action_of_ostis_system_mode_setting;
+	action_of_editing_file_stored_in_sc_memory;
+	action_of_interpreting_program_stored_in_sc_memory;;
+
+action_in_sc_memory_initiated_by_question
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие в sc-памяти, инициируемое вопросом]
+	(* <- lang_ru;; *);
+	[action in sc-memory initiated by question]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[действие, направленное на формирование ответа на поставленный вопрос]
+	(* <- lang_ru;; *);
+=> nrel_inclusion:
+	action_to_form_given_file;
+	action_to_form_given_structure
+	(*
+		=> nrel_inclusion:
+			act_verify_the_desired_structure
+			(* 
+				=> nrel_inclusion:
+					action_to_determine_truth_or_falsity_of_designated_logical_statement;
+					action_to_determine_correctness_or_incorrectness_of_designated_structure;
+					action_to_form_structure_describing_incorrectnesses_existing_in_designated_structure;;
+			*);
+			action_to_determine_type_of_given_sc_element
+			(*
+				=> nrel_inclusion: 
+					action_to_determine_positivity_or_negativity_of_designated_sc_arc_of_belonging_or_not_belonging;;
+			*);
+			action_to_form_semantic_neighborhood
+			(*
+				=> nrel_inclusion:
+					action_to_form_full_semantic_neighborhood_of_designated_entity;
+					action_to_form_basic_semantic_neighborhood_of_designated_entity;
+					action_to_form_local_semantic_neighborhood_of_designated_entity;;
+			*);
+			action_to_form_structure_describing_connections_between_designated_entities
+			(*
+				=> nrel_inclusion:
+					action_to_form_structure_describing_similarities_of_designated_entities;
+					action_to_form_structure_describing_differences_of_designated_entities;;
+			*);
+			action_to_form_structure_describing_method_of_designated_task_solution;
+			action_to_form_plan_of_answer_to_selected_question_generation;
+			action_to_form_execution_history_of_designated_action;
+			action_to_form_argumentation_of_designated_solution_correctness;
+			action_to_verify_argumentation_of_designated_solution_correctness;
+			action_one_of_arguments_of_that_is_some_generalized_structure;
+			action_aimed_at_determination_of_designated_entity_temporal_characteristics;
+			action_aimed_at_determination_of_designated_entity_extensive_characteristics;;
+	*);;
+
+action_to_form_given_file
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. сформировать заданный файл]
+	(* <- lang_ru;; *);
+	[action. to form given file]
+	(* <- lang_en;; *);;
+
+action_to_form_given_structure
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. сформировать заданную структуру]
+	(* <- lang_ru;; *);
+	[action. to form given structure]
+	(* <- lang_en;; *);;
+
+act_verify_the_desired_structure
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. верифицировать заданную структуру]
+	(* <- lang_ru;; *);
+	[action. to verify the desired structure]
+	(* <- lang_en;; *);;
+
+action_to_determine_truth_or_falsity_of_designated_logical_statement
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. установить истинность или ложность указываемого логического высказывания]
+	(* <- lang_ru;; *);
+	[action. to determine truth or falsity of designated logical statement]
+	(* <- lang_en;; *);;
+
+action_to_determine_correctness_or_incorrectness_of_designated_structure
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. установить корректность или некорректность указываемой структуры]
+	(* <- lang_ru;; *);
+	[action. to determine correctness or incorrectness of designated structure]
+	(* <- lang_en;; *);;
+
+action_to_form_structure_describing_incorrectnesses_existing_in_designated_structure
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. сформировать структуру, описывающую некорректности, имеющиеся в указываемой структуре]
+	(* <- lang_ru;; *);
+	[action. to form structure describing incorrectnesses existing in designated structure]
+	(* <- lang_en;; *);;
+
+action_to_determine_type_of_given_sc_element
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. установить тип заданного sc-элемента]
+	(* <- lang_ru;; *);
+	[action. to determine type of given sc element]
+	(* <- lang_en;; *);;
+
+action_to_determine_positivity_or_negativity_of_designated_sc_arc_of_belonging_or_not_belonging
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. установить позитивность/негативность указываемой sc-дуги принадлежности или непринадлежности]
+	(* <- lang_ru;; *);
+	[action. to determine positivity or negativity of designated sc arc of belonging or not belonging]
+	(* <- lang_en;; *);;
+
+action_to_form_semantic_neighborhood
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. сформировать семантическую окрестность]
+	(* <- lang_ru;; *);
+	[action. to form semantic neighbourhood]
+	(* <- lang_en;; *);;
+
+action_to_form_full_semantic_neighborhood_of_designated_entity
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. сформировать полную семантическую окрестность указываемой сущности]
+	(* <- lang_ru;; *);
+	[action. to form full semantic neighbourhood of designated entity]
+	(* <- lang_en;; *);;
+
+action_to_form_basic_semantic_neighborhood_of_designated_entity
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. сформировать базовую семантическую окрестность указываемой сущности]
+	(* <- lang_ru;; *);
+	[action. to form basic semantic neighbourhood of designated entity]
+	(* <- lang_en;; *);;
+
+action_to_form_local_semantic_neighborhood_of_designated_entity
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. сформировать частную семантическую окрестность указываемой сущности]
+	(* <- lang_ru;; *);
+	[action. to form local semantic neighbourhood of designated entity]
+	(* <- lang_en;; *);;
+
+action_to_form_structure_describing_connections_between_designated_entities
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. сформировать структуру, описывающую связи между указываемыми сущностями]
+	(* <- lang_ru;; *);
+	[action. to form structure describing connections between designated entities]
+	(* <- lang_en;; *);;
+
+action_to_form_structure_describing_similarities_of_designated_entities
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. сформировать структуру, описывающую сходства указываемых сущностей]
+	(* <- lang_ru;; *);
+	[action. to form structure describing similarities of designated entities]
+	(* <- lang_en;; *);;
+
+action_to_form_structure_describing_differences_of_designated_entities
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. сформировать структуру, описывающую различия указываемых сущностей]
+	(* <- lang_ru;; *);
+	[action. to form structure describing differences of designated entities]
+	(* <- lang_en;; *);;
+
+action_to_form_structure_describing_method_of_designated_task_solution
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. сформировать структуру, описывающую способ решения указываемой задачи]
+	(* <- lang_ru;; *);
+	[action. to form structure describing method of designated task solution]
+	(* <- lang_en;; *);;
+
+action_to_form_plan_of_answer_to_selected_question_generation
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. сформировать план генерации ответа на указанный вопрос]
+	(* <- lang_ru;; *);
+	[action. to form plan of answer to selected question generation]
+	(* <- lang_en;; *);;
+
+action_to_form_execution_history_of_designated_action
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. сформировать протокол выполнения указываемого действия]
+	(* <- lang_ru;; *);
+	[action. to form execution history of designated action]
+	(* <- lang_en;; *);;
+
+action_to_form_argumentation_of_designated_solution_correctness
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. сформировать обоснование корректности указываемого решения]
+	(* <- lang_ru;; *);
+	[action. to form argumentation of designated solution correctness]
+	(* <- lang_en;; *);;
+
+action_to_verify_argumentation_of_designated_solution_correctness
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. верифицировать обоснование корректности указываемого решения]
+	(* <- lang_ru;; *);
+	[action. to verify argumentation of designated solution correctness]
+	(* <- lang_en;; *);;
+
+action_one_of_arguments_of_that_is_some_generalized_structure
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие, одним из аргументов которого является некоторая обобщенная структура]
+	(* <- lang_ru;; *);
+	[action one of arguments of that is some generalized structure]
+	(* <- lang_en;; *);;
+
+action_aimed_at_determination_of_designated_entity_temporal_characteristics
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие, направленное на установление темпоральных характеристик указываемой сущности]
+	(* <- lang_ru;; *);
+	[action aimed at determination of designated entity temporal characteristics]
+	(* <- lang_en;; *);;
+
+action_aimed_at_determination_of_designated_entity_extensive_characteristics
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие, направленное на установление пространственных характеристик указываемой сущности]
+	(* <- lang_ru;; *);
+	[action aimed at determination of designated entity extensive characteristics]
+	(* <- lang_en;; *);;
+
+action_of_kb_editing
+=> nrel_inclusion:
+	action_to_correct_mistakes_in_given_structure;
+	action_to_include_set;
+	action_of_generation_sc_elements
+	(*
+		=> nrel_inclusion:
+			action_of_generation_one_of_arguments_of_that_is_some_generalized_structure
+			(*
+				=> nrel_inclusion:
+					action_search_structure_which_is_isomorphic_to_given_pattern;;
+			*);
+			action_to_generate_sc_element_of_selected_type
+			(* 
+				=> nrel_inclusion:
+					action_to_generate_sc_connector_of_selected_type;
+					action_to_generate_sc_node_of_selected_type;;
+			*);
+			action_to_generate_structure_containing_selected_sc_elements;
+			action_to_generate_file_with_selected_content;
+			action_to_renew_concepts;
+			action_to_set_selected_file_as_main_idtf_of_selected_sc_element;
+			action_to_translate_designated_file_content_to_sc_memory;
+			action_to_integrate_selected_structure_into_current_state_of_kb;
+			action_to_generate_structure_describing_evolutionary_history_of_ostis_system;
+			action_to_generate_structure_describing_performance_history_of_ostis_system;;
+	*);
+	action_of_deleting_sc_elements
+	(*
+		=> nrel_inclusion:
+			action_to_delete_selected_sc_elements
+			(*
+				=> nrel_inclusion:
+					action_to_delete_selected_sc_element;
+					action_to_delete_sc_elements_that_are_contained_in_selected_structure_and_that_arent_keynodes_of_any_sc_agents;;
+			*);
+			action_to_exclude_selected_sc_elements_from_client_side_of_knowledge_base;;
+	*);;
+
+action_to_correct_mistakes_in_given_structure
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. исправить ошибки в заданной структуре]
+	(* <- lang_ru;; *);
+	[action. to correct mistakes in given structure]
+	(* <- lang_en;; *);;
+
+question_merge_two_elements
+=> nrel_idtf:
+	[действие. совместить два указанных sc-элемента]
+	(* <- lang_ru;; *);
+	[действие. склеить два указанных sc-элемента]
+	(* <- lang_ru;; *);
+<= nrel_subdividing:
+{
+	action_to_physically_identify_two_selected_sc_elements;
+	action_to_logically_identify_two_selected_sc_elements
+};
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_action_to_identify_two_selected_elements.html" 
+				(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+action_to_physically_identify_two_selected_sc_elements
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. физически отождествить два указанных sc-элемента]
+	(* <- lang_ru;; *);
+	[action. to physically identify two sc-elements]
+	(* <- lang_en;; *);;
+
+action_to_logically_identify_two_selected_sc_elements
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. логически отождествить два указанных sc-элемента]
+	(* <- lang_ru;; *);
+	[action. to logically identify two sc-elements]
+	(* <- lang_en;; *);;
+
+action_to_include_set
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. включить множество]
+	(* <- lang_ru;; *);
+	[action. to include set]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[сделать все элементы множества si явно принадлежащими множеству sj, то есть сгенерировать соответствующие sc-дуги принадлежности]
+	(* <- lang_ru;; *);;
+
+action_of_generation_sc_elements
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие генерации sc-элементов]
+	(* <- lang_ru;; *);
+	[action. of generation sc-elements]
+	(* <- lang_en;; *);;
+
+action_of_generation_one_of_arguments_of_that_is_some_generalized_structure
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие генерации, одним из аргументов которого является некоторая обобщенная структура]
+	(* <- lang_ru;; *);
+	[action of generation one of arguments of that is some generalized structure]
+	(* <- lang_en;; *);;
+
+action_search_structure_which_is_isomorphic_to_given_pattern
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. найти структуру, изоморфную указываемому образцу]
+	(* <- lang_ru;; *);
+	[action. to search for structure which is isomorphic to given pattern]
+	(* <- lang_en;; *);;
+
+action_to_generate_sc_element_of_selected_type
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. сгенерировать sc-элемент указанного типа]
+	(* <- lang_ru;; *);
+	[action. to generate sc-element of selected type]
+	(* <- lang_en;; *);;
+
+action_to_generate_sc_connector_of_selected_type
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. сгенерировать sc-коннектор указанного типа]
+	(* <- lang_ru;; *);
+	[action. to generate sc-connector of selected type]
+	(* <- lang_en;; *);;
+
+action_to_generate_sc_node_of_selected_type
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. сгенерировать sc-узел указанного типа]
+	(* <- lang_ru;; *);
+	[action. to generate sc-node of selected type]
+	(* <- lang_en;; *);;
+
+action_to_generate_structure_containing_selected_sc_elements
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. сгенерировать структуру, содержащую указанные sc-элементы]
+	(* <- lang_ru;; *);
+	[action. to generate structure containing selected sc-elements]
+	(* <- lang_en;; *);;
+
+action_to_generate_file_with_selected_content
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. сгенерировать файл с заданным содержимым]
+	(* <- lang_ru;; *);
+	[action. to generate file with selected content]
+	(* <- lang_en;; *);;
+
+action_to_renew_concepts
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. обновить понятия]
+	(* <- lang_ru;; *);
+	[action. to renew concepts]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[действие. заменить неиспользуемое понятие на его определение через используемое понятие]
+	(* <- lang_ru;; *);
+	[действие. заменить некоторое множество понятий на другое множество понятий]
+	(* <- lang_ru;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_action_to_renew_concepts.html" 
+				(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+action_to_set_selected_file_as_main_idtf_of_selected_sc_element
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. установить указанный файл в качестве основного идентификатора указанного sc-элемента]
+	(* <- lang_ru;; *);
+	[action. to set selected file as main identifier of selected sc-element]
+	(* <- lang_en;; *);;
+
+action_to_translate_designated_file_content_to_sc_memory
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. протранслировать содержимое указываемого файла в sc-память]
+	(* <- lang_ru;; *);
+	[action. to translate designated file content to sc-memory]
+	(* <- lang_en;; *);;
+
+action_to_integrate_selected_structure_into_current_state_of_kb
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. интегрировать указанную структуру в текущее состояние базы знаний]
+	(* <- lang_ru;; *);
+	[action. to integrate selected structure into current state of knowledge base]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_action_to_integrate_selected_structure_into_current_state_of_kb.html" 
+				(* <- lang_ru;; *);;
+		*);;
+	*);;	
+
+action_to_generate_structure_describing_evolutionary_history_of_ostis_system
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. сгенерировать структуру, описывающую историю эволюции ostis-системы]
+	(* <- lang_ru;; *);
+	[action. to generate structure describing evolutionary history of ostis-system]
+	(* <- lang_en;; *);;
+
+action_to_generate_structure_describing_performance_history_of_ostis_system
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. сгенерировать структуру, описывающую историю эксплуатации ostis-системы]
+	(* <- lang_ru;; *);
+	[action. to generate structure describing performance history of ostis-system]
+	(* <- lang_en;; *);;
+
+action_of_deleting_sc_elements
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие удаления sc-элементов]
+	(* <- lang_ru;; *);
+	[action of deleting sc-elements]
+	(* <- lang_en;; *);;
+
+action_to_delete_selected_sc_element
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. удалить указанный sc-элемент]
+	(* <- lang_ru;; *);
+	[action. to delete selected sc-element]
+	(* <- lang_en;; *);;
+
+action_to_delete_selected_sc_elements
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. удалить указанные sc-элементы]
+	(* <- lang_ru;; *);
+	[action. to delete selected sc-elements]
+	(* <- lang_en;; *);
+<= nrel_subdividing:
+{
+	action_to_physically_delete_selected_sc_elements;
+	action_to_logically_delete_selected_sc_elements
+};
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_action_to_delete_selected_sc_elements.html" 
+				(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+action_to_physically_delete_selected_sc_elements
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. физически удалить указанные sc-элементы]
+	(* <- lang_ru;; *);
+	[action. to physically delete selected sc-elements]
+	(* <- lang_en;; *);;
+
+action_to_logically_delete_selected_sc_elements
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. логически удалить указанные sc-элементы]
+	(* <- lang_ru;; *);
+	[action. to logically delete selected sc-elements]
+	(* <- lang_en;; *);;
+
+action_to_delete_sc_elements_that_are_contained_in_selected_structure_and_that_arent_keynodes_of_any_sc_agents
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. удалить sc-элементы, входящие в состав указанной структуры и не являющиеся ключевыми узлами каких-либо sc-агентов]
+	(* <- lang_ru;; *);
+	[action. to delete sc-elements that are contained in selected structure and that aren't keynodes of any sc-agents] 
+	(* <- lang_en;; *);;
+
+action_to_exclude_selected_sc_elements_from_client_side_of_knowledge_base
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. исключить указанные sc-элементы из клиентской части базы знаний]
+	(* <- lang_ru;; *);
+	[action. to exclude selected sc-elements from client side of knowledge base]
+	(* <- lang_en;; *);;
+
+action_of_ostis_system_mode_setting
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие установки режима ostis-системы]
+	(* <- lang_ru;; *);
+	[action of ostis-system mode setting]
+	(* <- lang_en;; *);;
+
+action_of_editing_file_stored_in_sc_memory
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие редактирования файла, хранимого в sc-памяти]
+	(* <- lang_ru;; *);
+	[action of editing file stored in sc-memory]
+	(* <- lang_en;; *);;
+
+action_of_interpreting_program_stored_in_sc_memory
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие интерпретации программы, хранимой в sc-памяти]
+	(* <- lang_ru;; *);
+	[action of interpreting program stored in sc-memory]
+	(* <- lang_en;; *);
+=> nrel_inclusion: 
+	question_scp_interpretation_request;;
+
+question_scp_interpretation_request
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие интерпретации scp-программы]
+	(* <- lang_ru;; *);
+	[action of interpreting scp-program]
+	(* <- lang_en;; *);;
+
+task_solved_in_sc_memory
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[задача, решаемая в sc-памяти]
+	(* <- lang_ru;; *);
+	[task solved in sc-memory]
+	(* <- lang_en;; *);
+<= nrel_inclusion: task;
+=> nrel_idtf:
+	[спецификация действия, выполняемого в sc-памяти]
+	(* <- lang_ru;; *);
+	[структура, являющая таким описанием (постановкой, заданием) соответствующего действия в sc-памяти, которое обладает достаточной полнотой для выполения указанного действия]
+	(* <- lang_ru;; *);
+	[семантическая окрестность некоторого действия в sc-памяти, обеспечивающая достаточно полное задание этого действия]
+	(* <- lang_ru;; *);;

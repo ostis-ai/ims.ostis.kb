@@ -1,0 +1,15 @@
+﻿<html>
+	<body>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<p> Задачей <b><sc_element sys_idtf = "agent_of_formation_proposed_project_tasks"> агента формирования предложения проектного задания</sc_element></b> является формирование  <b><sc_element sys_idtf = "nrel_proposal"> предложения*</sc_element></b> нового проектного задания. Проектное задание - это описание некоторой задачи, которую реализовать в рамках базы знаний. Данный агент инициируется при условии появления в памяти вопросной конструкции, соответствующей <b><sc_element sys_idtf = "action_to_form_a_proposal_of_project_task"> действию. сформировать предложение проектного задания</sc_element></b>. Единственным аргументом запроса является знак <b><sc_element sys_idtf ="structure">структуры</sc_element></b> с описанием того, что именно необходимо разработать в рамках проектного задания. Возможные результаты работы агента: 
+		<ul>
+			<li>Если на вход данному агенту пришел не знак <b><sc_element sys_idtf ="structure">структуры</sc_element></b>, то генерируется сообщение об ошибке (Wrong 1st parameter! It must be a structure(rrel_struct)).</li>
+			<li>Если пользователь, инициировавший выполнение агента, не является разработчиком, то генерируется сообщение "Access denied. User must be a developer."</li>
+			<li>В случае успешного выполнения агента формируется конструкция, представленная на рисунке. Генерируется знак <b><sc_element sys_idtf ="action_to_build_new_piece_to_be_included_in_knowledge_base">действия. построить новый фрагмент для включения в базу знаний</sc_element></b>, <b><sc_element sys_idtf ="nrel_result">целью</sc_element></b> которого становится первый аргумент действия, инициировавшего выполнение агента (генерируется связка отношения <b><sc_element sys_idtf ="nrel_result">цель*</sc_element></b>). Генерируется и инициируется знак <b><sc_element sys_idtf ="action_to_consider_new_project_task">действия. рассмотреть новое проектное задание</sc_element></b>  Генерируется связка онтошения <b><sc_element sys_idtf ="nrel_proposal">предложение*</sc_element></b>, которая связывает знак <b><sc_element sys_idtf ="action_to_consider_new_project_task">действия. рассмотреть новое проектное задание</sc_element></b> и структуру, содержащую новое проектное задание (смотреть рисунок). <b><sc_element sys_idtf ="nrel_authors">Автором</sc_element></b> данной <b><sc_element sys_idtf ="structure">структуры</sc_element></b> становится <b><sc_element sys_idtf ="ui_user">пользователь</sc_element></b>, инициировавший выполнение агента. Знак <b><sc_element sys_idtf ="action_to_consider_new_project_task">действия. рассмотреть новое проектное задание</sc_element></b> добавляется в <b><sc_element sys_idtf ="current_processes_of_computer_system">текущие процессы развития компьютерной системы</sc_element></b>.
+			</li>
+		</ul>
+
+		<img src="result.png" alt="Результат успешной работы агента формирования предложения проектного задания">
+		</p>
+	</body>
+</html>

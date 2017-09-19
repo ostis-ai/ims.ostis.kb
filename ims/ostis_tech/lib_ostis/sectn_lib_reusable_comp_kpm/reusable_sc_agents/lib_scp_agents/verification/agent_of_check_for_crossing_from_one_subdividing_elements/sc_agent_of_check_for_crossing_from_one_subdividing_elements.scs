@@ -1,0 +1,53 @@
+sc_agent_of_check_for_crossing_from_one_subdividing_elements
+=> nrel_main_idtf:
+	[Абстрактный sc-агент проверки наличие непустого пересечения у элементов одного разбиения в рамках заданной структуры] 
+		(* <- lang_ru;; *);
+
+	[Abstract sc-agent of check for crossing from one subdividing elements within a given structure] 
+		(* <- lang_en;; *);
+
+<- abstract_sc_agent;
+
+=> nrel_primary_initiation_condition: 
+	(sc_event_add_output_arc => question_initiated);
+
+=> nrel_initiation_condition_and_result: 
+	(..sc_agent_of_check_for_crossing_from_one_subdividing_elements => ..sc_agent_of_check_for_crossing_from_one_subdividing_elements_result);
+
+<= nrel_sc_agent_key_sc_elements: 
+	{
+	question_initiated;
+	question;
+	action_of_check_for_crossing_from_one_subdividing_elements
+	};
+
+=> nrel_inclusion: 
+	.platform_independent_realization_of_sc_agent_of_check_for_crossing_from_one_subdividing_elements
+	(*
+	<- platform_independent_abstract_sc_agent;;
+	<= nrel_sc_agent_program: 
+		{
+		agent_of_check_for_crossing_from_one_subdividing_elements;
+		proc_of_finding_intersection_of_two_sets
+	
+		};;
+	-> sc_agent_of_check_for_crossing_from_one_subdividing_elements_scp   
+		(* <- active_sc_agent;; *);;
+	*);;
+
+..sc_agent_of_check_for_crossing_from_one_subdividing_elements_condition
+= [*
+	action_of_check_for_crossing_from_one_subdividing_elements _-> .._question;;
+	question_initiated _-> .._question;;
+	question _-> .._question;;
+	.._question _-> .._param1;;
+*];;
+
+..sc_agent_of_check_for_crossing_from_one_subdividing_elements_result
+= [*
+	action_of_check_for_crossing_from_one_subdividing_elements _-> .._question;;
+	question_finished _-> .._question;;
+	question _-> .._question;;
+	.._question _=> nrel_answer:: .._answer;;
+	.._question _-> .._param1;;
+*];;

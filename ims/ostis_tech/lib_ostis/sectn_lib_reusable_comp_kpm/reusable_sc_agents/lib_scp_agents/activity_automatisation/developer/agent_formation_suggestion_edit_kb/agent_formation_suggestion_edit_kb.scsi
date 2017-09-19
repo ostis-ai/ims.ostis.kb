@@ -1,0 +1,655 @@
+agent_formation_suggestion_edit_kb
+=> nrel_main_idtf:
+	[агентная scp-программа формирования предложения по редактированию базы знаний] (* <- lang_ru;; *);
+	[agent scp-program of the formation of proposals for editing the knowledge base] (* <- lang_en;; *);
+	<- agent_scp_program;;
+
+scp_program -> agent_formation_suggestion_edit_kb 
+	(*
+	-> rrel_params: .agent_formation_suggestion_edit_kb_params 
+		(*
+		-> rrel_1: rrel_in: _event;;
+		-> rrel_2: rrel_in: _input_arc;;
+		*);;
+
+	-> rrel_operators: .agent_formation_suggestion_edit_kb_operator_set
+		(*
+		-> rrel_init: .agent_formation_suggestion_edit_kb_operator_A1
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _temp;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: _input_arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _quest;;
+	
+			=> nrel_goto: .agent_formation_suggestion_edit_kb_operator_A2;;
+			*);;
+		
+		->.agent_formation_suggestion_edit_kb_operator_A2
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: action_to_form_a_proposal_for_editing_the_knowledge_base;;
+			-> rrel_2: rrel_assign: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+
+			=> nrel_then: .agent_formation_suggestion_edit_kb_operator_find_user;;
+			=> nrel_else: .agent_formation_suggestion_edit_kb_operator_return;;
+			*);;
+
+		-> .agent_formation_suggestion_edit_kb_operator_find_user
+			(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _user;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_authors;;
+
+			=> nrel_then: .agent_formation_suggestion_edit_kb_operator_is_two_argument_command;;
+			=> nrel_else: .agent_formation_suggestion_edit_kb_operator_return;;
+			*);;
+	
+		-> .agent_formation_suggestion_edit_kb_operator_is_two_argument_command
+			(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _param;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_1;;
+
+			=> nrel_then: .agent_formation_suggestion_edit_kb_operator_validate_first_param;;
+			=> nrel_else: .agent_formation_suggestion_edit_kb_operator_A3;;
+			*);;	
+
+		-> .agent_formation_suggestion_edit_kb_operator_validate_first_param
+			(*
+			<- ifType;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_struct: _param;;
+			
+			=> nrel_then: .agent_formation_suggestion_edit_kb_operator_get_section;;
+			=> nrel_else: .agent_formation_suggestion_edit_kb_operator_call_proc_of_adding_validating_message;;
+			*);;	
+
+		-> .agent_formation_suggestion_edit_kb_operator_get_section
+			(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _section_param;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_2;;
+
+			=> nrel_goto: .agent_formation_suggestion_edit_kb_operator_validate_second_param_1;;
+			*);;
+
+		-> .agent_formation_suggestion_edit_kb_operator_validate_second_param_1
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: atomic_section;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _section_param;;
+
+			=> nrel_then: .agent_formation_suggestion_edit_kb_operator_is_two_arg_command_assign_true;;
+			=> nrel_else: .agent_formation_suggestion_edit_kb_operator_validate_second_param_2;;
+			*);;	
+
+		-> .agent_formation_suggestion_edit_kb_operator_validate_second_param_2
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: non_atomic_section;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _section_param;;
+
+			=> nrel_then: .agent_formation_suggestion_edit_kb_operator_is_two_arg_command_assign_true;;
+			=> nrel_else: .agent_formation_suggestion_edit_kb_operator_call_proc_of_adding_validating_message_second_param;;
+			*);;	
+
+		-> .agent_formation_suggestion_edit_kb_operator_is_two_arg_command_assign_true 
+			(*
+			<- contAssign;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _is_two_arg_command;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [true];;
+
+			=> nrel_goto: .agent_formation_suggestion_edit_kb_operator_gen_proposer_relation;;
+			*);;	
+			
+		->.agent_formation_suggestion_edit_kb_operator_A3
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: rrel_struct: _param;;
+
+			=> nrel_then: .agent_formation_suggestion_edit_kb_operator_is_two_arg_command_assign_false;;
+			=> nrel_else: .agent_formation_suggestion_edit_kb_operator_call_proc_of_adding_validating_message;;
+			*);;
+
+		-> .agent_formation_suggestion_edit_kb_operator_is_two_arg_command_assign_false 
+			(*
+			<- contAssign;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _is_two_arg_command;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [false];;
+
+			=> nrel_goto: .agent_formation_suggestion_edit_kb_operator_gen_proposer_relation;;
+			*);;		
+
+		->.agent_formation_suggestion_edit_kb_operator_gen_proposer_relation
+			(*
+			<- genElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _param;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_const: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _user;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_authors;;			
+	
+			=> nrel_goto: .agent_formation_suggestion_edit_kb_operator_B1;;
+			*);;
+		
+		->.agent_formation_suggestion_edit_kb_operator_B1
+			(*
+			<- genEl;;
+
+			-> rrel_1: rrel_assign: rrel_node: rrel_scp_var: rrel_const: _action;;
+			
+			=> nrel_goto: .agent_formation_suggestion_edit_kb_operator_B2;;
+			*);;	
+
+		->.agent_formation_suggestion_edit_kb_operator_B2
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: action_to_consider_proposal_for_editing_knowledge_base;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _action;;
+
+			=> nrel_goto: .agent_formation_suggestion_edit_kb_operator_B3;;
+			*);;
+		
+		->.agent_formation_suggestion_edit_kb_operator_B3
+			(*
+			<- genElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _action;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_const: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _param;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_proposal;;			
+	
+			=> nrel_goto: .agent_formation_suggestion_edit_kb_operator_find_action_by_target_relation;;
+			*);;
+
+		-> .agent_formation_suggestion_edit_kb_operator_find_action_by_target_relation
+			(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _action_todo;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _param;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_result;;
+
+			=> nrel_then: .agent_formation_suggestion_edit_kb_operator_find_action_todo_question_initiated_arc;;
+			=> nrel_else: .agent_formation_suggestion_edit_kb_operator_is_two_arg_command;;
+			*);;
+
+		-> .agent_formation_suggestion_edit_kb_operator_find_action_todo_question_initiated_arc
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: question_initiated;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc_to_remove;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _action_todo;;
+
+			=> nrel_then: .agent_formation_suggestion_edit_kb_operator1E1_erase_question_initianted_arc;;
+			=> nrel_else: .agent_formation_suggestion_edit_kb_operator_E2;;
+			*);;
+		
+		-> .agent_formation_suggestion_edit_kb_operator1E1_erase_question_initianted_arc
+                 	(*
+		 	<- eraseEl;;
+
+		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc_to_remove;;
+
+		 	=> nrel_goto: .agent_formation_suggestion_edit_kb_operator_mark_action_todo_as_past_entity;;
+		 	*);;
+
+		-> .agent_formation_suggestion_edit_kb_operator_mark_action_todo_as_past_entity
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: last_entity;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _action_todo;;
+
+			=> nrel_goto: .agent_formation_suggestion_edit_kb_operator_gen_action_todo_as_past_entity;;
+			*);;
+		
+		-> .agent_formation_suggestion_edit_kb_operator_gen_action_todo_as_past_entity
+			(*
+			<- genElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _action_todo;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_const: rrel_common: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _action;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_const: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_sequence_of_actions;;
+
+			=> nrel_goto: .agent_formation_suggestion_edit_kb_operator_is_two_arg_command;;
+			*);;
+
+		-> .agent_formation_suggestion_edit_kb_operator_is_two_arg_command
+			(*
+			<- stringIfEq;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _is_two_arg_command;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [true];;
+
+			=> nrel_then: .agent_formation_suggestion_edit_kb_operator_add_object_to_action;;
+			=> nrel_else: .agent_formation_suggestion_edit_kb_operator_B4;;
+			*);;	
+
+		-> .agent_formation_suggestion_edit_kb_operator_add_object_to_action
+			(*
+			<- genElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _action;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_const: rrel_common: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _section_param;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_const: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_object;;
+
+			=> nrel_goto: .agent_formation_suggestion_edit_kb_operator_B4;;
+			*);;	
+
+		-> .agent_formation_suggestion_edit_kb_operator_B4
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: question_initiated;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _action;;
+	
+			=> nrel_goto: .agent_formation_suggestion_edit_kb_operator_call_adding;;
+			*);;
+
+		-> .agent_formation_suggestion_edit_kb_operator_call_adding
+			(*
+		  	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_action_sign_to_current_processes;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_formation_suggestion_edit_kb_operator_call_adding_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _action;;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .agent_formation_suggestion_edit_kb_operator_waitreturn_adding;;
+			*);;
+
+		-> .agent_formation_suggestion_edit_kb_operator_waitreturn_adding
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .agent_formation_suggestion_edit_kb_operator1E1_gen_answer;;
+			*);;
+
+/******************************************************************************UI*************************************************************************/
+		
+		
+		-> .agent_formation_suggestion_edit_kb_operator1E1_gen_answer
+                 	(*
+		 	<- genEl;;
+
+		 	-> rrel_1: rrel_assign: rrel_const: rrel_node: rrel_scp_var: _answer_formation_suggestion_edit_kb;;
+
+		 	=> nrel_goto: .agent_formation_suggestion_edit_kb_operator_scn_add_new_act_to_answer;;
+		 	*);;
+
+		-> .agent_formation_suggestion_edit_kb_operator_scn_add_new_act_to_answer
+			(*
+		  	<- genElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _answer_formation_suggestion_edit_kb;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_const: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_const: action_to_consider_proposal_for_editing_knowledge_base;;
+
+		  	=> nrel_goto: .agent_formation_suggestion_edit_kb_operator_scn_add_new_action_arc_to_answer;;
+			*);;
+
+		-> .agent_formation_suggestion_edit_kb_operator_scn_add_new_action_arc_to_answer
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: action_to_consider_proposal_for_editing_knowledge_base;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _action;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_formation_suggestion_edit_kb;;
+
+			=> nrel_goto: .agent_formation_suggestion_edit_kb_operator_scn_add_suggestion_relation_arcs_to_answer;;
+			*);;
+
+		-> .agent_formation_suggestion_edit_kb_operator_scn_add_suggestion_relation_arcs_to_answer
+			(*
+			<- searchSetStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _action;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _param;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_proposal;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_formation_suggestion_edit_kb;;
+			-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_formation_suggestion_edit_kb;;
+
+			=> nrel_goto: .agent_formation_suggestion_edit_kb_operator_scn_add_quest2_to_answer;;
+			*);;
+
+
+		-> .agent_formation_suggestion_edit_kb_operator_scn_add_quest2_to_answer
+			(*
+		  	<- genElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _answer_formation_suggestion_edit_kb;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_const: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _action;;
+
+		  	=> nrel_goto: .agent_formation_suggestion_edit_kb_operator_scn_add_target_to_answer;;
+			*);;
+
+		-> .agent_formation_suggestion_edit_kb_operator_scn_add_target_to_answer
+			(*
+		  	<- genElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _answer_formation_suggestion_edit_kb;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_const: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _param;;
+
+		  	=> nrel_goto: .agent_formation_suggestion_edit_kb_operator_scn_add_suggestion_relation_node_to_answer;;
+			*);;
+	
+		-> .agent_formation_suggestion_edit_kb_operator_scn_add_suggestion_relation_node_to_answer
+			(*
+		  	<- genElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _answer_formation_suggestion_edit_kb;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_const: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_const: nrel_proposal;;
+
+		  	=> nrel_goto: .agent_formation_suggestion_edit_kb_operator_add_result_proposer_arcs_to_answer;;
+			*);;
+
+		-> .agent_formation_suggestion_edit_kb_operator_add_result_proposer_arcs_to_answer
+			(*
+			<- searchSetStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _param;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_common: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _name;;
+		  	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		  	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_authors;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_formation_suggestion_edit_kb;;
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer_formation_suggestion_edit_kb;;
+			-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_formation_suggestion_edit_kb;;
+
+			=> nrel_goto: .agent_formation_suggestion_edit_kb_operator_scn_add_proposer_relation_node_to_answer;; 
+			*);;
+
+		-> .agent_formation_suggestion_edit_kb_operator_scn_add_proposer_relation_node_to_answer
+			(*
+		  	<- genElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _answer_formation_suggestion_edit_kb;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_const: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_const: nrel_authors;;
+
+		  	=> nrel_goto: .agent_formation_suggestion_edit_kb_operator_add_param_struct_content_to_answer;;
+			*);;
+
+
+		-> .agent_formation_suggestion_edit_kb_operator_add_param_struct_content_to_answer
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _param;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _content;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_formation_suggestion_edit_kb;;
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer_formation_suggestion_edit_kb;;
+
+			=> nrel_goto: .agent_formation_suggestion_edit_kb_operator2F_find_inner_struct_node_to_answer_formation_suggestion_edit_kb;; 
+			*);;
+
+		-> .agent_formation_suggestion_edit_kb_operator2F_find_inner_struct_node_to_answer_formation_suggestion_edit_kb
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _param;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: rrel_struct: _inner_struct;;			
+
+			=> nrel_then: .agent_oformation_suggestion_edit_kb_operator2F_add_inner_struct_content_to_answer_formation_suggestion_edit_kb;;
+			=> nrel_else: .agent_formation_suggestion_edit_kb_operator_add_sequence_of_actions_relation_arcs_to_answer;;
+			*);;
+
+		-> .agent_oformation_suggestion_edit_kb_operator2F_add_inner_struct_content_to_answer_formation_suggestion_edit_kb
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _inner_struct;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _content;;
+			
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_formation_suggestion_edit_kb;;
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer_formation_suggestion_edit_kb;;
+
+			=> nrel_goto: .agent_formation_suggestion_edit_kb_operator_add_sequence_of_actions_relation_arcs_to_answer;;
+			*);;
+
+
+		-> .agent_formation_suggestion_edit_kb_operator_add_sequence_of_actions_relation_arcs_to_answer
+			(*
+			<- searchSetStr5;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _action_todo;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _action;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_sequence_of_actions;;
+
+			-> rrel_set_1: rrel_fixed: rrel_scp_var: _answer_formation_suggestion_edit_kb;;
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_formation_suggestion_edit_kb;;
+			-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_formation_suggestion_edit_kb;;
+
+			=> nrel_then: .agent_formation_suggestion_edit_kb_operator_scn_add_sequence_action_relation_to_answer;; 
+			=> nrel_else:  .agent_formation_suggestion_edit_kb_operator_is_two_arg_command_to_answer;; 
+			*);;
+		
+		-> .agent_formation_suggestion_edit_kb_operator_scn_add_sequence_action_relation_to_answer
+			(*
+		  	<- genElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _answer_formation_suggestion_edit_kb;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_const: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_const: nrel_sequence_of_actions;;
+
+		  	=> nrel_goto: .agent_formation_suggestion_edit_kb_operator_add_sequence_of_performer_relation_arcs_to_answer;;
+			*);;
+
+		-> .agent_formation_suggestion_edit_kb_operator_add_sequence_of_performer_relation_arcs_to_answer
+			(*
+			<- searchSetStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _action_todo;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _performer;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_performer;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_formation_suggestion_edit_kb;;
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer_formation_suggestion_edit_kb;;
+			-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_formation_suggestion_edit_kb;;
+
+			=> nrel_then: .agent_formation_suggestion_edit_kb_operator_scn_add_performer_relation_node_to_answer;; 
+			=> nrel_else: .agent_formation_suggestion_edit_kb_operator_is_two_arg_command_to_answer;; 
+			*);;
+
+		-> .agent_formation_suggestion_edit_kb_operator_scn_add_performer_relation_node_to_answer
+			(*
+		  	<- genElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _answer_formation_suggestion_edit_kb;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_const: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_const: nrel_performer;;
+
+		  	=> nrel_goto: .agent_formation_suggestion_edit_kb_operator_is_two_arg_command_to_answer;;
+			*);;
+
+		-> .agent_formation_suggestion_edit_kb_operator_is_two_arg_command_to_answer
+			(*
+			<- stringIfEq;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _is_two_arg_command;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [true];;
+
+			=> nrel_then: .agent_formation_suggestion_edit_kb_operator_add_object_relation_arcs_to_answer;;
+			=> nrel_else: .agent_formation_suggestion_edit_kb_operator_gen_full_answer;;
+			*);;		
+
+		-> .agent_formation_suggestion_edit_kb_operator_add_object_relation_arcs_to_answer
+			(*
+			<- searchSetStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _action;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_const: rrel_common: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _section;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_const: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_object;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_formation_suggestion_edit_kb;;
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer_formation_suggestion_edit_kb;;
+			-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_formation_suggestion_edit_kb;;
+
+			=> nrel_goto: .agent_formation_suggestion_edit_kb_operator_scn_add_object_relation_node_to_answer;;
+			*);;	
+
+		-> .agent_formation_suggestion_edit_kb_operator_scn_add_object_relation_node_to_answer
+			(*
+		  	<- genElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _answer_formation_suggestion_edit_kb;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_const: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_const: nrel_object;;
+
+		  	=> nrel_goto: .agent_formation_suggestion_edit_kb_operator_gen_full_answer;;
+			*);;				
+
+		-> .agent_formation_suggestion_edit_kb_operator_gen_full_answer
+			(*
+			<- genElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_common: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _answer_formation_suggestion_edit_kb;;
+		  	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		  	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_answer;;
+
+			=> nrel_goto: .agent_formation_suggestion_edit_kb_operator_E1;; 
+			*);;
+
+		-> .agent_formation_suggestion_edit_kb_operator_E1
+			(*
+		  	<- genElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: question_finished_successfully;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_const: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+
+		  	=> nrel_goto: .agent_formation_suggestion_edit_kb_operator_return;;
+			*);;
+
+		-> .agent_formation_suggestion_edit_kb_operator_E2
+			(*
+		  	<- genElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: question_finished_unsuccessfully;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_const: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+
+		  	=> nrel_goto: .agent_formation_suggestion_edit_kb_operator_return;;
+			*);; 
+
+/**************************************************************************Wrong Parametrs************************************************************/	
+
+		-> .agent_formation_suggestion_edit_kb_operator_call_proc_of_adding_validating_message 
+			(*
+		  	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_validating_message;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_formation_suggestion_edit_kb_operator_call_proc_of_adding_validating_message_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+				-> rrel_2: rrel_fixed: rrel_scp_const: [Wrong first parameter! It must be a structure(rrel_struct)];;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .agent_formation_suggestion_edit_kb_operator_waitreturn_proc_of_adding_validating_message;;
+			*);;
+
+		-> .agent_formation_suggestion_edit_kb_operator_waitreturn_proc_of_adding_validating_message
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .agent_formation_suggestion_edit_kb_operator_return;;
+			*);;
+
+		-> .agent_formation_suggestion_edit_kb_operator_call_proc_of_adding_validating_message_second_param 
+			(*
+		  	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_validating_message;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_formation_suggestion_edit_kb_operator_call_proc_of_adding_validating_message_second_param_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+				-> rrel_2: rrel_fixed: rrel_scp_const: [Wrong second parameter! It must be a section];;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr2;;
+
+		  	=> nrel_goto: .agent_formation_suggestion_edit_kb_operator_waitreturn_proc_of_adding_validating_message_second_param;;
+			*);;
+
+		-> .agent_formation_suggestion_edit_kb_operator_waitreturn_proc_of_adding_validating_message_second_param
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr2;;
+
+		  	=> nrel_goto: .agent_formation_suggestion_edit_kb_operator_return;;
+			*);;	
+
+		-> .agent_formation_suggestion_edit_kb_operator_return 
+			(*
+			<- return;;
+			*);;
+		*);;
+	*);;
+
+

@@ -1,0 +1,37 @@
+lib_component_agent_of_forming_set_theoretic_ontology
+=> nrel_main_idtf:
+	[Компонент библиотеки. Sc-агент формирования теоретико-множественной онтологии для заданной предметной области]
+		(* <- lang_ru;; *);
+	[Library component. Sc-agent of forming set-theoretic ontology for specified subject domain]
+		(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components; 
+<- library_of_atomic_reusable_components; 
+
+=> nrel_attendant_component: 
+	lib_component_ui_menu_file_of_forming_set_theoretic_ontology;
+
+-> rrel_key_sc_element: 
+	.platform_independent_realization_of_sc_agent_of_forming_set_theoretic_ontology;
+
+<- rrel_key_sc_element: ...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Agent_of_forming_set_theoretic_ontology.html"
+				(* <- lang_ru;; *);; 
+		*);;
+	*);;
+
+sc_node_not_relation -> action_of_forming_set_theoretic_ontology;;
+
+action_of_forming_set_theoretic_ontology => nrel_main_idtf:
+	[действие. построить теоретико-множественную онтологию для заданной предметной области]
+	(*<- lang_ru;;*);;
+
+action_of_forming_set_theoretic_ontology => nrel_main_idtf:
+	[action. form set-theoretic ontology for given subject domain]
+	(*<- lang_en;;*);;

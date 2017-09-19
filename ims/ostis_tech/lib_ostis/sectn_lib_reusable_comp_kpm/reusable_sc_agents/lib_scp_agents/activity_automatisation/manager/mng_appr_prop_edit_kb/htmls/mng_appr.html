@@ -1,0 +1,18 @@
+<html>
+	<body>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+		<p> Задачей <b><sc_element sys_idtf = "agent_of_manager_approval_proposals_for_editing_kb"> агента утверждения менеджером предложения по редактированию базы знаний</sc_element></b> является <b><sc_element sys_idtf="nrel_approved">утверждение</sc_element></b> <b><sc_element sys_idtf="nrel_manager">менеджером</sc_element></b> <b><sc_element sys_idtf="nrel_proposal">предложения</sc_element></b> <b><sc_element sys_idtf="nrel_performer">исполнителя</sc_element></b> проектного задания. Данный агент инициируется при условии появления в памяти вопросной конструкции, соответствующей <b><sc_element sys_idtf = "action_to_approve_the_proposal_for_editing_the_knowledge_base_manager">действию. утвердить предложение по редактированию базы знаний от имени менеджера</sc_element></b>. Единственным аргументом запроса является знак <b><sc_element sys_idtf="action_to_consider_offered_artist_of_project_task">действия. рассмотреть предлагаемого исполнителя проектной задачи</sc_element></b>.
+		</p>
+		<p>
+		Возможные результаты работы агента:
+		<ul>
+			<li>Если первый аргумент знака <b><sc_element sys_idtf="action_to_approve_the_proposal_for_editing_the_knowledge_base_manager">действия. утвердить предложение по редактированию базы знаний от имени менеджера</sc_element></b> не является знаком <b><sc_element sys_idtf="action_to_consider_offered_artist_of_project_task">действия. рассмотреть предлагаемого исполнителя проектной задачи</sc_element></b>, то генерируется сообщение об ошибке (Wrong 1st parameter! It must be sign of action_to_consider_offered_artist_of_project_task).</li>
+			<li>Если пользователь, инициировавший выполнение агента, не является <b><sc_element sys_idtf="nrel_manager">менеджером</sc_element></b>, то генерируется сообщение "Access denied. User must be a manager."</li>
+			<li>В случае успешного выполнения агента генерируется связка отношения <b><sc_element sys_idtf="nrel_approved">утверждено</sc_element></b>, связывающая знак <b><sc_element sys_idtf="action_to_consider_offered_artist_of_project_task">действия. рассмотреть предлагаемого исполнителя проектной задачи</sc_element></b> и знак <b><sc_element sys_idtf="nrel_manager">менеджера</sc_element></b>, утвердившего предложение исполнителя проектного задания. Знак <b><sc_element sys_idtf="action_to_consider_offered_artist_of_project_task">действия. рассмотреть предлагаемого исполнителя проектной задачи</sc_element></b> становится <b><sc_element sys_idtf="last_entity">прошлой сущностью</sc_element></b>, удаляется из <b><sc_element sys_idtf="current_processes_of_computer_system">текущих процессов развития компьютерной системы</sc_element></b> и добавляется в <b><sc_element sys_idtf="history_of_the_development_of_computer_system">историю развития компьютерной системы</sc_element></b>. Содержимое предложения добавляется в <b><sc_element sys_idtf="computer_system_development_plan">план развития компьютерной системы</sc_element></b>.</li>
+		</ul>
+		</p>
+
+		<img src="result.png" alt="Результат успешной работы агента утверждения менеджером предложения по редактированию базы знаний">
+	</body>
+</html>
+

@@ -1,0 +1,23 @@
+section_subjdomain_ostis_systems
+=> nrel_main_idtf:
+	[Раздел. Предметная область ostis-систем]
+	(* <- lang_ru;; *);
+	[Section. Subject domain of ostis-systems]
+	(* <- lang_en;; *);
+<- atomic_section;
+<- not_enough_formed_structure;;
+
+section_subjdomain_ostis_systems = [*^"file://section_subjdomain_ostis_systems.scsi"*];;
+
+section_subjdomain_ostis_systems
+   -> rrel_key_sc_element:
+	subjdomain_ostis_systems;
+	ostis_system;
+	sc_models_interpretation_platform;
+	sc_model_computer_systems;
+	Myself;
+	nrel_subsidiary_ostis_system;;
+	
+
+
+

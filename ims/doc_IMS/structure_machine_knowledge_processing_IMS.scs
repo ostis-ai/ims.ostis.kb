@@ -2,5 +2,9 @@ structure_machine_knowledge_processing_IMS
 => nrel_main_idtf:
 	[Документация. Машина обработки знаний IMS]
 	(* <- lang_ru;; *);
-	[Documentation. Machine knowledge processing IMS]
-	(* <- lang_en;; *);;
+	[Documentation. IMS knowledge processing machine]
+	(* <- lang_en;; *);
+<- not_enough_formed_structure;
+-> rrel_key_sc_element: IMS_knowledge_processing_machine;;
+
+structure_machine_knowledge_processing_IMS = [*^"file://structure_machine_knowledge_processing_IMS.scsi"*];;

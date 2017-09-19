@@ -1,0 +1,18 @@
+section_subjdomain_problematic_kb_fragments
+=> nrel_main_idtf:
+	[Раздел. Предметная область проблемных фрагментов базы знаний]
+	(* <- lang_ru;; *);
+	[Section. Subject domain of problematic knowledge base fragments]
+	(* <- lang_en;; *);
+<- atomic_section;
+<- not_enough_formed_structure;;
+
+section_subjdomain_problematic_kb_fragments = [*^"file://section_subjdomain_problematic_kb_fragments.scsi"*];;
+
+section_subjdomain_problematic_kb_fragments
+-> rrel_key_sc_element:
+	subjdomain_problematic_kb_fragments;
+	structure_describing_problematic_kb_fragment;
+	incorrect_structure;
+	structure_describing_incompleteness_in_kb;
+	sc_garbage;;

@@ -103,5 +103,38 @@ project_design_collective_knowledge_bases_environment
 	[Проект Среда коллективного проектирования баз знаний]
 	(* <- lang_ru;; *);
 	[Projects design collective knowledge bases environment]
-	(* <- lang_en;; *);;				
+	(* <- lang_en;; *);;	
+
+project_ims_knowledge_base=> nrel_result:knowledge_base_IMS;; 
+
+Vladimir_Golenkov
+=> nrel_main_idtf:
+	[Голенков Владимир Васильевич]
+	(* <- lang_ru;; *);
+	[Vladimir Golenkov]
+	(* <- lang_en;; *);;	
+
+project_ims_knowledge_base => nrel_administrator: Vladimir_Golenkov;; 
+Vladimir_Golenkov => nrel_email: [golen@bsuir.by];; 
+Myself => nrel_registered_user:Vladimir_Golenkov;; 
+
+Irina_Davydenko
+=> nrel_main_idtf:
+	[Давыденко Ирина Тимофеевна]
+	(* <- lang_ru;; *);
+	[Irina Davydenko]
+	(* <- lang_en;; *);;	
+project_ims_knowledge_base => nrel_administrator: Irina_Davydenko;; 
+Irina_Davydenko => nrel_email: [davydenko@bsuir.by];; 
+Myself => nrel_registered_user:Irina_Davydenko;; 
+
+Daniil_Shunkevich
+=> nrel_main_idtf:
+	[Шункевич Даниил Вячеславович]
+	(* <- lang_ru;; *);
+	[Daniil Shunkevich]
+	(* <- lang_en;; *);;	
+project_ims_knowledge_base => nrel_administrator: Daniil_Shunkevich;; 
+Daniil_Shunkevich => nrel_email: [shu.dv@tut.by];; 
+Myself => nrel_registered_user:Daniil_Shunkevich;;
 

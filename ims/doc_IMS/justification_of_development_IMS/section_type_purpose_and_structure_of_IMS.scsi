@@ -1,0 +1,15 @@
+IMS
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[IMS]
+	(* <- lang_ru;; *);
+	[IMS]
+	(* <- lang_en;; *);
+<- sc_model_computer_systems;
+<- ostis_system;
+<= nrel_sc_model_decomposition:
+{
+	IMS_knowledge_processing_machine;
+	knowledge_base_IMS;
+	IMS_user_interface
+};;

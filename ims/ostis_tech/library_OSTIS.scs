@@ -1,0 +1,42 @@
+section_library_OSTIS
+=> nrel_main_idtf:
+	[Раздел. Библиотека OSTIS]
+	(* <- lang_ru;; *);
+	[Section. Library OSTIS]
+	(* <- lang_en;; *);
+<- not_enough_formed_structure;
+<= nrel_section_decomposition:
+	{
+	section_concept_of_reusable_component_OSTIS
+	(*
+	=> nrel_section_base_order: 
+		section_set_of_platforms;;
+	*);
+	section_set_of_platforms
+	(*
+	=> nrel_section_base_order: 
+		section_library_of_reusable_components_kb;;
+	*);
+	section_library_of_reusable_components_kb
+	(*
+	=> nrel_section_base_order: 
+		section_pattern_of_typical_component_ostis;;
+	*);
+	section_pattern_of_typical_component_ostis
+	(*
+	=> nrel_section_base_order: 
+		section_library_of_reusable_components_kpm;;
+	*);
+	section_library_of_reusable_components_kpm
+	(*
+	=> nrel_section_base_order: 
+		section_library_of_reusable_components_interfaces;;
+	*);
+	section_library_of_reusable_components_interfaces
+	(*
+	=> nrel_section_base_order: 
+		section_library_of_typical_subsystems_of_computer_systems;;
+	*);
+	section_library_of_typical_subsystems_of_computer_systems
+	};;
+

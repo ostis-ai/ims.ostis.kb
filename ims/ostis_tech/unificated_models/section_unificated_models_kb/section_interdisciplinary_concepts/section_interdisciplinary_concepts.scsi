@@ -1,0 +1,170 @@
+nrel_abstract_basic_decomposition
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[абстрактная базовая декомпозиция*] 
+	(* <- lang_ru;; *);
+	[abstract basic decomposition] 
+	(* <- lang_en;; *);
+<- decomposition_relation;
+<- quasybinary_relation;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_abstract_basic_decomposition.html"
+				(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+nrel_basic_decomposition
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[базовая декомпозиция*]
+	(* <- lang_ru;; *);
+	[basic decomposition]
+	(* <- lang_en;; *);
+<- decomposition_relation;
+<- quasybinary_relation;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_basic_decomposition.html"
+				(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+nrel_decomposition_of_abstract_object
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[декомпозиция абстрактного объекта*]
+	(* <- lang_ru;; *);
+	[decomposition of abstract object]
+	(* <- lang_en;; *);
+<= nrel_strict_inclusion: nrel_basic_decomposition;
+=> nrel_second_domain: abstract_entity;;
+
+nrel_basic_sequence
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[базовая последовательность*]
+	(* <- lang_ru;; *);
+	[basic sequence]
+	(* <- lang_en;; *);
+<- order_relation;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_basic_sequence.html"
+				(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+nrel_whole_part
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[часть-целое*]
+	(* <- lang_ru;; *);
+	[whole-part]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[часть*]
+	(* <- lang_ru;; *);
+	[part*]
+	(* <- lang_en;; *);
+<- order_relation;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_whole_part.html"
+				(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+nrel_abstract_part
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[абстрактная часть*]
+	(* <- lang_ru;; *);
+	[abstract part*]
+	(* <- lang_en;; *);
+<- order_relation;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_abstract_part.html"
+				(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+
+taxonomy_relation
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[отношение таксономии]
+	(* <- lang_ru;; *);
+	[taxonomy relation]
+	(* <- lang_en;; *);
+-> nrel_inclusion;
+-> nrel_whole_part;
+-> nrel_section_decomposition;
+-> nrel_abstract_basic_decomposition;
+-> nrel_basic_decomposition;
+-> nrel_private_subject_domain;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- definition;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/definition_for_taxonomy_relation.html"
+				(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+nrel_authors
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[автор*]
+	(* <- lang_ru;; *);
+	[author]
+	(* <- lang_en;; *);
+<- binary_relation;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_author.html"
+				(* <- lang_ru;; *);;
+		*);;
+	*);;
+

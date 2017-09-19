@@ -1,0 +1,18 @@
+<p>Каждый 
+	<b><sc_element sys_idtf  = "scp_operator">scp-оператор</sc_element></b> представляет собой некоторое элементарное действие в 
+	<sc_element sys_idtf  = "sc_memory">sc-памяти</sc_element>. Аргументы 
+	<sc_element sys_idtf  = "scp_operator">scp-оператора</sc_element>  будем называть операндами. Порядок операндов указывается при помощи соответствующих ролевых отношений (
+	<sc_element sys_idtf  = "rrel_1">1’</sc_element>, 
+	<sc_element sys_idtf  = "rrel_2">2’</sc_element>, 
+	<sc_element sys_idtf  = "rrel_3">3’</sc_element> и так далее). Операнд, помеченный ролевым отношением 
+	<sc_element sys_idtf  = "rrel_1">1’</sc_element>, будем называть первым операндом и т.д., помеченный ролевым отношением 
+	<sc_element sys_idtf  = "rrel_2">2’</sc_element> – вторым операндом, и т.д. Тип и смысл каждого операнда также уточняется при помощи различных подклассов отношения 
+	<sc_element sys_idtf  = "rrel_scp_operand">scp-операнд'</sc_element>. В общем случае операндом может быть любой 
+	<sc_element sys_idtf  = "sc_element">sc-элемент</sc_element>, в том числе, знак какой-либо 
+	<sc_element sys_idtf  = "scp_program">scp-программы</sc_element>, в том числе самой программы, содержащей данный оператор.</p>
+
+<p>Каждый 
+	<b><sc_element sys_idtf  = "scp_operator">scp-оператор</sc_element></b> должен иметь один и более операнд, а также указание того 
+	<b><sc_element sys_idtf  = "scp_operator">scp-оператора</sc_element></b> (или нескольких), который должен быть выполнен следующим. Исключение их данного правила составляет 
+	<sc_element sys_idtf  = "return">scp-оператор завершения выполнения программы</sc_element>, который не содержит ни одного операнда и после выполнения которого никакие 
+	<sc_element sys_idtf  = "scp_operator">scp-операторы</sc_element>  в рамках данной программы выполняться не могут.</p>

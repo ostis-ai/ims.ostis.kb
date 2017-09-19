@@ -1,0 +1,602 @@
+agent_of_verify_the_desired_structure
+=> nrel_main_idtf:
+	[агентная scp-программа формирования задания на верификацию предложения] (* <- lang_ru;; *);
+	[agent scp-program of forming of verification the desired structure] (* <- lang_en;; *);
+	<- agent_scp_program;;
+
+scp_program -> agent_of_verify_the_desired_structure
+	(*
+	-> rrel_params: .agent_of_verify_the_desired_structure 
+		(*
+		-> rrel_1: rrel_in: _event;;
+		-> rrel_2: rrel_in: _input_arc;;
+		*);;
+
+	-> rrel_operators: .agent_of_verify_the_desired_structure_operator_set 
+		(*
+		-> rrel_init: .agent_of_verify_the_desired_structure_operator1A
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _temp;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: _input_arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _quest;;
+
+			=> nrel_goto: .agent_of_verify_the_desired_structure_operator1B;;
+			*);;
+                 
+		-> .agent_of_verify_the_desired_structure_operator1B
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: action_to_form_a_task_for_verification_of_the_proposal;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+
+			=> nrel_then: .agent_of_verify_the_desired_structure_operator_get_action_param;;
+			=> nrel_else: .agent_of_verify_the_desired_structure_operator_return;;
+			*);;
+
+		-> .agent_of_verify_the_desired_structure_operator_get_action_param
+			(*
+		  	<- searchElStr5;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _action_param;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		  	-> rrel_5: rrel_fixed: rrel_scp_const: rrel_1;;
+
+		  	=> nrel_then: .agent_of_verify_the_desired_structure_operator_validate_action_param;;
+		  	=> nrel_else: .agent_of_verify_the_desired_structure_operator_return;;
+			*);;
+
+		-> .agent_of_verify_the_desired_structure_operator_validate_action_param
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: action_to_consider_proposal_for_editing_knowledge_base;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _action_param;;
+
+			=> nrel_then: .agent_of_verify_the_desired_structure_operator_gen_expert_executor_param;;
+			=> nrel_else: .agent_of_verify_the_desired_structure_operator_call_proc_of_adding_validating_message_wrong_first_param;;
+			*);;
+
+		-> .agent_of_verify_the_desired_structure_operator_gen_expert_executor_param 
+			(*
+		  	<- searchElStr5;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _expet_executor_param;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		  	-> rrel_5: rrel_fixed: rrel_scp_const: rrel_2;;
+
+		  	=> nrel_then: .agent_of_verify_the_desired_structure_operator1D_check_correct_expert_node;;
+		  	=> nrel_else: .agent_of_verify_the_desired_structure_operator_return;;
+			*);;
+
+		-> .agent_of_verify_the_desired_structure_operator1D_check_correct_expert_node
+			(*
+		  	<- searchElStr5;;
+
+		  	-> rrel_1: rrel_assign: rrel_scp_var: _some_node;;
+		  	-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _expet_executor_param;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_expert;;
+
+		  	=> nrel_then: .agent_of_verify_the_desired_structure_operator1D_get_auth_user;;
+			=> nrel_else: .agent_of_verify_the_desired_structure_operator_call_proc_of_adding_validating_message_wrong_second_param;;
+			*);;
+
+		-> .agent_of_verify_the_desired_structure_operator1D_get_auth_user
+			(*
+		  	<- searchElStr5;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+		  	-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _auth_user;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_authors;;
+
+		  	=> nrel_then: .agent_of_verify_the_desired_structure_operator_correct_user_checker;;
+			=> nrel_else: .agent_of_verify_the_desired_structure_operator_return;;
+			*);;
+
+		-> .agent_of_verify_the_desired_structure_operator_correct_user_checker
+			(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _uknown_entity;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _auth_user;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_administrator;;
+
+			=> nrel_then: .agent_of_verify_the_desired_structure_operator_gen_real_entity_node;;
+			=> nrel_else: .agent_of_verify_the_desired_structure_operator_return;;
+			*);;
+		
+		-> .agent_of_verify_the_desired_structure_operator_gen_real_entity_node
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: real_entity;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _action_param;;
+
+			=> nrel_goto: .agent_of_verify_the_desired_structure_operator2A_gen_new_action;; 
+			*);; 
+	
+		-> .agent_of_verify_the_desired_structure_operator2A_gen_new_action
+			(*
+			<- genEl;;
+
+			-> rrel_1: rrel_assign: rrel_node: rrel_const: rrel_scp_var: _new_action;;
+
+			=> nrel_goto: .agent_of_verify_the_desired_structure_operator2B_add_new_action_to_class_node;;
+			*);;
+
+		-> .agent_of_verify_the_desired_structure_operator2B_add_new_action_to_class_node
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: act_verify_the_desired_structure;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _new_action;;
+
+			=> nrel_goto: .agent_of_verify_the_desired_structure_operator2C_find_suggestion_node;;
+			*);;
+
+		-> .agent_of_verify_the_desired_structure_operator2C_find_suggestion_node
+			(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _action_param;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _suggestion;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_proposal;;
+
+			=> nrel_then: .agent_of_verify_the_desired_structure_operator2D_gen_object_relation_with_suggestion;;
+			=> nrel_else: .agent_of_verify_the_desired_structure_operator3B_question_finished_unsuccessfully;;
+			*);;
+
+		-> .agent_of_verify_the_desired_structure_operator2D_gen_object_relation_with_suggestion
+			(*
+			<- genElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _new_action;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_scp_var: rrel_common: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _suggestion;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_object;;
+
+			=> nrel_goto: .agent_of_verify_the_desired_structure_operator2E_gen_subact_relation_with_new_action;;
+			*);;
+
+		-> .agent_of_verify_the_desired_structure_operator2E_gen_subact_relation_with_new_action
+			(*
+			<- genElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _action_param;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_scp_var: rrel_common: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _new_action;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_private_action;;
+
+			=> nrel_goto: .agent_of_verify_the_desired_structure_operator2F_add_expert_performer;;
+			*);;
+
+		-> .agent_of_verify_the_desired_structure_operator2F_add_expert_performer
+			(*
+			<- genElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _new_action;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_scp_var: rrel_common: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _expet_executor_param;;
+			-> rrel_4: rrel_assign: rrel_const: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_performer;;
+
+			=> nrel_goto: .agent_of_verify_the_desired_structure_operator2H;;
+			*);;
+					
+
+		-> .agent_of_verify_the_desired_structure_operator2H
+			(*
+			<- genElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _action_param;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_scp_var: rrel_common: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var:  _auth_user;;
+			-> rrel_4: rrel_assign: rrel_const: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_performer;;
+
+			=> nrel_goto: .agent_of_verify_the_desired_structure_operator2I;;
+			*);;
+
+		-> .agent_of_verify_the_desired_structure_operator2I
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: question_initiated;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _new_action;;
+
+			=> nrel_goto: .agent_of_verify_the_desired_structure_operator_call_adding;;
+			*);;
+
+		-> .agent_of_verify_the_desired_structure_operator_call_adding
+			(*
+		  	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_action_sign_to_current_processes;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_verify_the_desired_structure_operator_call_adding_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _new_action;;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .agent_of_verify_the_desired_structure_operator_waitreturn_adding;;
+			*);;
+
+		-> .agent_of_verify_the_desired_structure_operator_waitreturn_adding
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .agent_of_verify_the_desired_structure_operator_gen_answer_of_verify_the_desired_structure_node;;
+			*);;		
+
+
+/*******************************************************************UI*****************************************************************************************/
+
+
+		-> .agent_of_verify_the_desired_structure_operator_gen_answer_of_verify_the_desired_structure_node
+			(*
+			<- genEl;;
+
+			-> rrel_1: rrel_assign: rrel_const: rrel_node: rrel_scp_var: _answer_of_verify_the_desired_structure;;
+
+			=> nrel_goto: .agent_of_verify_the_desired_structure_operator2E_add_subact_relation_arcs_to_answer1;;
+			*);;
+
+		
+		-> .agent_of_verify_the_desired_structure_operator2E_add_subact_relation_arcs_to_answer1
+			(*
+			<- searchSetStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _action_param;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _new_action;;
+			-> rrel_4: rrel_assign: rrel_const: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_private_action;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_of_verify_the_desired_structure;;
+			-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_of_verify_the_desired_structure;;
+
+			=> nrel_goto: .agent_of_verify_the_desired_structure_operator_add_subact_relation_to_answer1;;
+			*);;
+
+
+		-> .agent_of_verify_the_desired_structure_operator_add_subact_relation_to_answer1
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_verify_the_desired_structure;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_const: nrel_private_action;;
+
+			=> nrel_goto: .agent_of_verify_the_desired_structure_operator_add_new_action_act_to_answer1;; 
+			*);; 
+
+		-> .agent_of_verify_the_desired_structure_operator_add_new_action_act_to_answer1
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_verify_the_desired_structure;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _new_action;;
+
+			=> nrel_goto: .agent_of_verify_the_desired_structure_operator_add_action_param_act_to_answer1;; 
+			*);; 
+
+
+		-> .agent_of_verify_the_desired_structure_operator_add_action_param_act_to_answer1
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_verify_the_desired_structure;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _action_param;;
+
+			=> nrel_goto: .agent_of_verify_the_desired_structure_operator2F_add_performer_relation_arcs_to_answer1;; 
+			*);;
+
+		-> .agent_of_verify_the_desired_structure_operator2F_add_performer_relation_arcs_to_answer1
+			(*
+			<- searchSetStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _new_action;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _expet_executor_param;;
+			-> rrel_4: rrel_assign: rrel_const: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_performer;;
+			
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_of_verify_the_desired_structure;;
+			-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_of_verify_the_desired_structure;;
+
+			=> nrel_goto: .agent_of_verify_the_desired_structure_operator_add_performer_relation_to_answer1;;
+			*);;
+
+
+		-> .agent_of_verify_the_desired_structure_operator_add_performer_relation_to_answer1
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_verify_the_desired_structure;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_const: nrel_performer;;
+
+			=> nrel_goto: .agent_of_verify_the_desired_structure_operator_add_expet_executor_param_act_to_answer1;; 
+			*);; 
+
+		-> .agent_of_verify_the_desired_structure_operator_add_expet_executor_param_act_to_answer1
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_verify_the_desired_structure;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _expet_executor_param;;
+
+			=> nrel_goto: .agent_of_verify_the_desired_structure_operator2F_add_act_verify_the_desired_structure_arc_to_answer1;; 
+			*);; 
+		
+		-> .agent_of_verify_the_desired_structure_operator2F_add_act_verify_the_desired_structure_arc_to_answer1
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: act_verify_the_desired_structure;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _new_action;;
+			
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_of_verify_the_desired_structure;;
+
+			=> nrel_goto: .agent_of_verify_the_desired_structure_operator_add_act_verify_the_desired_structure_to_answer1;;
+			*);;
+
+		-> .agent_of_verify_the_desired_structure_operator_add_act_verify_the_desired_structure_to_answer1
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_verify_the_desired_structure;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_const: act_verify_the_desired_structure;;
+
+			=> nrel_goto: .agent_of_verify_the_desired_structure_operator_add_question_initiated_arc_to_answer;; 
+			*);; 
+
+		-> .agent_of_verify_the_desired_structure_operator_add_question_initiated_arc_to_answer
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: question_initiated;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _new_action;;
+			
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_of_verify_the_desired_structure;;
+
+			=> nrel_goto: .agent_of_verify_the_desired_structure_operator_add_question_initiated_to_answer;;
+			*);;
+
+		-> .agent_of_verify_the_desired_structure_operator_add_question_initiated_to_answer
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_verify_the_desired_structure;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_const: question_initiated;;
+
+			=> nrel_goto: .agent_of_verify_the_desired_structure_operator2F_add_act_to_consider_a_proposal_for_editing_the_kb_arc_to_answer1;; 
+			*);; 		
+
+		-> .agent_of_verify_the_desired_structure_operator2F_add_act_to_consider_a_proposal_for_editing_the_kb_arc_to_answer1
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: action_to_consider_proposal_for_editing_knowledge_base;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _action_param;;
+			
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_of_verify_the_desired_structure;;
+
+			=> nrel_goto: .agent_of_verify_the_desired_structure_operator_add_act_to_consider_a_proposal_for_editing_the_kb_to_answer1;;
+			*);;
+
+		-> .agent_of_verify_the_desired_structure_operator_add_act_to_consider_a_proposal_for_editing_the_kb_to_answer1
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_verify_the_desired_structure;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_const: action_to_consider_proposal_for_editing_knowledge_base;;
+
+			=> nrel_goto: .agent_of_verify_the_desired_structure_operator2F_add_object_relation_arcs_to_answer1;; 
+			*);; 
+		
+
+		-> .agent_of_verify_the_desired_structure_operator2F_add_object_relation_arcs_to_answer1
+			(*
+			<- searchSetStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _new_action;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _suggestion;;
+			-> rrel_4: rrel_assign: rrel_const: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_object;;
+			
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_of_verify_the_desired_structure;;
+			-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_of_verify_the_desired_structure;;
+
+			=> nrel_goto: .agent_of_verify_the_desired_structure_operator_add_object_relation_to_answer1;;
+			*);;
+
+		-> .agent_of_verify_the_desired_structure_operator_add_object_relation_to_answer1
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_verify_the_desired_structure;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_const: nrel_object;;
+
+			=> nrel_goto: .agent_of_verify_the_desired_structure_operator_add_suggestion_to_answer1;; 
+			*);; 
+
+		-> .agent_of_verify_the_desired_structure_operator_add_suggestion_to_answer1
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_verify_the_desired_structure;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _suggestion;;
+
+			=> nrel_goto: .agent_of_verify_the_desired_structure_operator2F_add_suggestion_struct_content_to_answer1;; 
+			*);; 
+		
+		
+		-> .agent_of_verify_the_desired_structure_operator2F_add_suggestion_struct_content_to_answer1
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _suggestion;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _content;;
+			
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_of_verify_the_desired_structure;;
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer_of_verify_the_desired_structure;;
+
+			=> nrel_goto: .agent_of_verify_the_desired_structure_operator2F_find_inner_struct_node_to_answer1;;
+			*);;
+
+		-> .agent_of_verify_the_desired_structure_operator2F_find_inner_struct_node_to_answer1
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _suggestion;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: rrel_struct: _inner_struct;;			
+
+			=> nrel_then: .agent_of_verify_the_desired_structure_operator2F_add_inner_struct_content_to_answer1;;
+			=> nrel_else: .agent_of_verify_the_desired_structure_operator_gen_full_answer1;;
+			*);;
+
+		-> .agent_of_verify_the_desired_structure_operator2F_add_inner_struct_content_to_answer1
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _inner_struct;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _content;;
+			
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_of_verify_the_desired_structure;;
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer_of_verify_the_desired_structure;;
+
+			=> nrel_goto: .agent_of_verify_the_desired_structure_operator_gen_full_answer1;;
+			*);;
+
+
+		-> .agent_of_verify_the_desired_structure_operator_gen_full_answer1
+			(*
+			<- genElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_common: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _answer_of_verify_the_desired_structure;;
+		  	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		  	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_answer;;
+
+			=> nrel_goto: .agent_of_verify_the_desired_structure_operator3A;; 
+			*);;
+
+		-> .agent_of_verify_the_desired_structure_operator3A
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: question_finished_successfully;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+
+			=> nrel_goto: .agent_of_verify_the_desired_structure_operator_return;;
+			*);;
+
+		-> .agent_of_verify_the_desired_structure_operator3B_question_finished_unsuccessfully
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: question_finished_unsuccessfully;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+
+			=> nrel_goto: .agent_of_verify_the_desired_structure_operator_return;;
+			*);;
+
+
+/*******************************************************************Wrong Parameters***********************************************************/
+
+		-> .agent_of_verify_the_desired_structure_operator_call_proc_of_adding_validating_message_wrong_first_param
+			(*
+		  	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_validating_message;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_verify_the_desired_structure_operator_call_proc_of_adding_validating_message_wrong_first_param_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+				-> rrel_2: rrel_fixed: rrel_scp_const: [Wrong first parameter! It must be sign of action to consider proposal for editing knowledge base(action_to_consider_proposal_for_editing_knowledge_base)];;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .agent_of_verify_the_desired_structure_operator_waitreturn_proc_of_adding_validating_message_wrong_first_param;;
+			*);;
+
+		-> .agent_of_verify_the_desired_structure_operator_waitreturn_proc_of_adding_validating_message_wrong_first_param
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .agent_of_verify_the_desired_structure_operator_return;;
+			*);;
+
+		-> .agent_of_verify_the_desired_structure_operator_call_proc_of_adding_validating_message_wrong_second_param
+			(*
+		  	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_validating_message;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_verify_the_desired_structure_operator_call_proc_of_adding_validating_message_wrong_second_param_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+				-> rrel_2: rrel_fixed: rrel_scp_const: [Wrong second parameter! It must be expert of this subject domain(nrel_expert)];;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr2;;
+
+		  	=> nrel_goto: .agent_of_verify_the_desired_structure_operator_waitreturn_proc_of_adding_validating_message_wrong_second_param;;
+			*);;
+
+		-> .agent_of_verify_the_desired_structure_operator_waitreturn_proc_of_adding_validating_message_wrong_second_param
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr2;;
+
+		  	=> nrel_goto: .agent_of_verify_the_desired_structure_operator_return;;
+			*);;
+
+		-> .agent_of_verify_the_desired_structure_operator_return
+			(*
+			<- return;;
+			*);;
+		*);;
+	*);;

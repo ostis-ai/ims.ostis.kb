@@ -1,0 +1,23 @@
+<html>
+	<body>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+		<p> Задачей <b><sc_element sys_idtf = "agent_of_administrator_approval_proposals_for_editing_kb"> агента утверждения администратором предложения по редактированию базы знаний</sc_element></b> является <b><sc_element sys_idtf = "nrel_approved">утверждение</sc_element></b> <b><sc_element sys_idtf = "nrel_administrator">администратором</sc_element></b> <b><sc_element sys_idtf="nrel_proposal">предложения</sc_element></b>, описывающего изменения, вносимые <b><sc_element sys_idtf = "nrel_developer">разработчиком</sc_element></b> в базу знаний (включая и проектное задание). Данный агент инициируется при условии появления в памяти вопросной конструкции, соответствующей <b><sc_element sys_idtf = "action_to_approve_the_proposal_for_editing_the_knowledge_base_administrator">действию. утвердить администратором предложение по редактированию базы знаний</sc_element></b>. Единственным аргументом запроса является знак <b><sc_element sys_idtf = "action_to_consider_proposal_for_editing_knowledge_base">действия. рассмотреть предложение по редактированию базы знаний</sc_element></b> или знак <b><sc_element sys_idtf = "action_to_consider_new_project_task">действия. рассмотреть новое проектное задание</sc_element></b>.
+		</p>
+		<p>
+			Возможные результаты работы агента:
+			<ul>
+				<li>Если первый аргумент знака <b><sc_element sys_idtf="action_to_approve_the_proposal_for_editing_the_knowledge_base_administrator">действию. утвердить администратором предложение по редактированию базы знаний</sc_element></b> не является знаком <b><sc_element sys_idtf = "action_to_consider_proposal_for_editing_knowledge_base">действия. рассмотреть предложение по редактированию базы знаний</sc_element></b> или знаком <b><sc_element sys_idtf = "action_to_consider_new_project_task">действия. рассмотреть новое проектное задание</sc_element></b>, то генерируется сообщение об ошибке (Wrong 1st parameter! It must be sign of action_to_consider_proposal_for_editing_knowledge_base or sign of action_to_consider_new_project_task).</li>
+
+				<li>Если пользователь, инициировавший выполнение агента, не является <b><sc_element sys_idtf="nrel_administrator">администратором</sc_element></b>, то генерируется сообщение "Access denied. User must be a administrator."</li>
+
+				<li>В случае успешного выполнения агента генерируется связка отношения <b><sc_element sys_idtf="nrel_approved">утверждено*</sc_element></b> (см рисунок). Знак <b><sc_element sys_idtf="action_to_consider_proposal_for_editing_knowledge_base">действия. рассмотреть предложение по редактированию базы знаний</sc_element></b> или знак <b><sc_element sys_idtf = "action_to_consider_new_project_task">действия. рассмотреть новое проектное задание</sc_element></b> становится <b><sc_element sys_idtf="last_entity">прошлой сущностью</sc_element></b>, удаляется из <b><sc_element sys_idtf="current_processes_of_computer_system">текущих процессов развития компьютерной системы</sc_element></b> и добавляется в <b><sc_element sys_idtf="history_of_the_development_of_computer_system">историю развития компьютерной системы</sc_element></b>.</li>
+
+				<li>Если на вход был подан знак <b><sc_element sys_idtf="action_to_consider_new_project_task">действия. рассмотреть новое проектное задание</sc_element></b>, то от данного знака действия будет найдено предложение, и будет инициирован знак действия из данного предложения, обозначающий проектное задание (от знака действия отходит отношение <b><sc_element sys_idtf="nrel_result">цель*</sc_element></b>). Знак проектного задания добавляется в <b><sc_element sys_idtf="computer_system_development_plan">план развития компьютерной системы</sc_element></b>.</li>
+
+				<li>Если на вход был подан знак <b><sc_element sys_idtf="action_to_consider_proposal_for_editing_knowledge_base">действия. рассмотреть предложение по редактированию базы знаний</sc_element></b>, то содержимое предложения добавляется либо в конкретный раздел базы знаний (раздел указан под отношением <b><sc_element sys_idtf="nrel_object">объект*</sc_element></b>), либо в <b><sc_element sys_idtf="substantive_part_of_the_knowledge_base">предметную часть базы знаний</sc_element></b>.</li>
+			</ul>
+		</p>
+
+		<img src="result.png" alt="Результат успешной работы агента утверждения администратором предложения по редактированию базы знаний">
+	</body>
+</html>

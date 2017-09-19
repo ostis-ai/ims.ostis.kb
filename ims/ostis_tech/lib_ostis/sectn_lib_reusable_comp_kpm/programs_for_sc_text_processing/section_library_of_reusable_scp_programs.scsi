@@ -1,0 +1,38 @@
+library_of_reusable_scp_programs
+=> nrel_main_idtf:
+	[Библиотека многократно используемых scp-программ]
+	(* <- lang_ru;; *);
+	[Library of reusable scp-programs]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[многократно используемая scp-программа]
+	(* <- lang_ru;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:	
+		...
+		(*
+		-> rrel_example:
+			"file://nl_files/library_of_reusable_scp_programs.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);;
+
+library_of_reusable_scp_programs ->
+	lib_component_proc_finding_arcs_between_concepts;
+	lib_component_proc_of_finding_connections;
+	lib_component_proc_equivalent_elements;
+	lib_component_proc_of_finding_formal_statement;
+	lib_component_proc_of_finding_identifier;
+	lib_component_proc_of_finding_illustrations;
+	lib_component_proc_finding_overall_concepts;
+	lib_component_proc_of_finding_proof;
+	lib_component_proc_control_subsection_window;
+	lib_component_proc_of_finding_translation;
+	lib_component_proc_of_adding_general_action_comment;
+	lib_component_proc_of_finding_subclasses_by_taxonomy_relation;
+	lib_component_proc_of_cardinality_counting_without_multiple_occurrences;;

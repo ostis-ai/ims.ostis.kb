@@ -1,0 +1,51 @@
+sc_agent_of_checking_the_main_idtf_for_all_foreign_lang
+=> nrel_main_idtf:	
+	[Абстрактный sc-агент проверки наличия основных идентификаторов sc-элементов в рамках заданной структуры для всех внешних языков] (* <- lang_ru;; *);
+	[Abstract sc-agent of сhecking existence of main identifiers for sc-elements within the given structure for all external languages] (* <- lang_en;; *);
+	
+<- abstract_sc_agent;
+
+=> nrel_primary_initiation_condition: 
+	(sc_event_add_output_arc => question_initiated);
+	
+=> nrel_initiation_condition_and_result: 
+	(..sc_agent_of_checking_the_main_idtf_for_all_foreign_lang_condition => ..sc_agent_of_checking_the_main_idtf_for_all_foreign_lang_result);
+	
+<= nrel_sc_agent_key_sc_elements: 
+	{
+	question_initiated;
+	question;
+	action_check_the_main_idtf_for_all_foreign_lang
+	};
+	
+=> nrel_inclusion: 
+	.platform_independent_realization_of_sc_agent_of_checking_the_main_idtf_for_all_foreign_lang
+	(*
+	<- platform_independent_abstract_sc_agent;;
+	<= nrel_sc_agent_program: 
+		{
+		agent_of_checking_the_main_idtf_for_all_foreign_lang;
+		proc_of_adding_validating_message
+		};;
+		
+	-> sc_agent_of_checking_the_main_idtf_for_all_foreign_lang_scp 
+		(* <- active_sc_agent;; *);;
+	*);;
+
+..sc_agent_of_checking_the_main_idtf_for_all_foreign_lang_condition
+= [*
+	action_check_the_main_idtf_for_all_foreign_lang _-> .._question;;
+	question_initiated _-> .._question;;
+	question _-> .._question;;
+	.._question _-> .._parameter1;;
+*];;
+
+..agent_of_checking_the_main_idtf_for_all_foreign_lang_result
+= [*
+	action_check_the_main_idtf_for_all_foreign_lang _-> .._question;;
+	question_finished _-> .._question;;
+	question _-> .._question;;
+	.._question _=> nrel_answer:: .._answer_for_checking_the_main_idtf_for_all_foreign_lang;;
+	.._question _-> .._parameter1;;
+	
+*];;

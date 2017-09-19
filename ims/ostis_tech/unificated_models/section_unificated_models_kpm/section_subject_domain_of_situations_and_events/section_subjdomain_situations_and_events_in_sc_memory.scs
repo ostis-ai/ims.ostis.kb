@@ -1,0 +1,98 @@
+section_subjdomain_of_situations_and_events_in_sc_memory
+=> nrel_main_idtf:
+	[Раздел. Предметная область ситуаций и событий в sc-памяти]
+	(* <- lang_ru;; *);
+	[Section. Subject domain of situations and events in sc-memory]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[Раздел. Предметная область, описывающая динамику базы знаний, хранимой в sc-памяти]
+	(* <- lang_ru;; *);
+<- not_enough_formed_structure;
+<- atomic_section;;
+
+section_subjdomain_of_situations_and_events_in_sc_memory = [*^"file://section_subjdomain_situations_and_events_in_sc_memory.scsi"*];;
+
+rrel_key_sc_element -> (section_subjdomain_of_situations_and_events_in_sc_memory -> subject_domain_situations_and_events_in_sc_memory)
+(*
+	=> nrel_key_sc_element_order: (section_subjdomain_of_situations_and_events_in_sc_memory -> sc_element)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_of_situations_and_events_in_sc_memory -> present_sc_element)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_of_situations_and_events_in_sc_memory -> logically_removed_sc_element)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_of_situations_and_events_in_sc_memory -> number)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_of_situations_and_events_in_sc_memory -> non_calculated_number)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_of_situations_and_events_in_sc_memory -> calculated_number)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_of_situations_and_events_in_sc_memory -> concept)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_of_situations_and_events_in_sc_memory -> main_concept)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_of_situations_and_events_in_sc_memory -> auxiliary_concept)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_of_situations_and_events_in_sc_memory -> main_to_auxilary_concept)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_of_situations_and_events_in_sc_memory -> auxiliary_to_main_concept)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_of_situations_and_events_in_sc_memory -> specified_essence)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_of_situations_and_events_in_sc_memory -> not_enough_specified_essence)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_of_situations_and_events_in_sc_memory -> enough_specified_essence)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_of_situations_and_events_in_sc_memory -> average_specified_essence)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_of_situations_and_events_in_sc_memory -> structure)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_of_situations_and_events_in_sc_memory -> file)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_of_situations_and_events_in_sc_memory -> nrel_situation_in_sc_memory)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_of_situations_and_events_in_sc_memory -> nrel_elementary_situation_in_sc_memory)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_of_situations_and_events_in_sc_memory -> sc_event_add_output_arc)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_of_situations_and_events_in_sc_memory -> sc_event_add_input_arc)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_of_situations_and_events_in_sc_memory -> nrel_add_sc_edge_incident_to_given_sc_element_situation)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_of_situations_and_events_in_sc_memory -> sc_event_remove_output_arc)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_of_situations_and_events_in_sc_memory -> sc_event_remove_input_arc)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_of_situations_and_events_in_sc_memory -> nrel_remove_sc_edge_incident_to_given_sc_element_situation)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_of_situations_and_events_in_sc_memory -> sc_event_remove_element)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_of_situations_and_events_in_sc_memory -> sc_event_content_changed)	
+	(* <- rrel_key_sc_element;; *);;
+*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;

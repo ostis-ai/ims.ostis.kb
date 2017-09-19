@@ -1,0 +1,245 @@
+agent_of_adding_new_draft
+=> nrel_main_idtf:
+	[агентная scp-программа добавления нового черновика] (* <- lang_ru;; *);
+	[agent scp-program of adding new draft] (* <- lang_en;; *);
+	<- agent_scp_program;;
+
+scp_program -> agent_of_adding_new_draft
+	(*
+	-> rrel_params: .agent_of_adding_new_draft_params 
+		(*
+		-> rrel_1: rrel_in: _event;;
+		-> rrel_2: rrel_in: _input_arc;;
+		*);;
+
+	-> rrel_operators: .agent_of_adding_new_draft_operator_set 
+		(*
+		-> rrel_init: .agent_of_adding_new_draft_operator1A
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _temp;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: _input_arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _quest;;
+
+			=> nrel_goto: .agent_of_adding_new_draft_operator1B;;
+			*);;
+                 
+		-> .agent_of_adding_new_draft_operator1B
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: action_to_add_new_draft;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+
+			=> nrel_then: .agent_of_adding_new_draft_operator1C;;
+			=> nrel_else: .agent_of_adding_new_draft_operator_return;;
+			*);;
+
+		-> .agent_of_adding_new_draft_operator1C
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _user;;
+
+			=> nrel_then: .agent_of_adding_new_draft_operator1C_check_is_user;;
+			=> nrel_else: .agent_of_adding_new_draft_operator_return;;
+			*);;
+
+		-> .agent_of_adding_new_draft_operator1C_check_is_user
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: ui_user;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _user;;
+
+			=> nrel_then: .agent_of_adding_new_draft_operator_gen_new_draft;;
+			=> nrel_else: .agent_of_adding_new_draft_operator_call_proc_of_adding_validating_message;;
+			*);;
+
+		-> .agent_of_adding_new_draft_operator_gen_new_draft
+			(*
+			<- genEl;;
+
+			-> rrel_1: rrel_assign: rrel_node: rrel_struct: rrel_scp_var: _new_draft;; 
+
+			=> nrel_goto: .agent_of_adding_new_draft_operator_gen_connection;;
+			*);;
+
+		-> .agent_of_adding_new_draft_operator_gen_connection
+    			(*
+			<- genElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _user;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_const: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _new_draft;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_const: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_authors;;
+
+        		=> nrel_goto: .agent_of_adding_new_draft_operator_gen_arc_draft;;
+        		*);;
+
+		-> .agent_of_adding_new_draft_operator_gen_arc_draft
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: draft;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _new_draft;;
+
+			=> nrel_goto: .agent_of_adding_new_draft_operator_gen_answer;;  
+			*);;
+		
+		-> .agent_of_adding_new_draft_operator_gen_answer
+			(*
+			<- genEl;;
+
+			-> rrel_1: rrel_assign: rrel_node: rrel_const: rrel_scp_var: _answer_of_adding_new_draft;; 
+
+			=> nrel_goto: .agent_of_adding_new_draft_operator_add_arc_draft;;
+			*);;
+		
+		-> .agent_of_adding_new_draft_operator_add_arc_draft
+    			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: draft;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _new_draft;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_of_adding_new_draft;;
+
+			=> nrel_goto: .agent_of_adding_new_draft_operator_add_draft;;   
+			*);;
+
+		-> .agent_of_adding_new_draft_operator_add_draft
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_adding_new_draft;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _new_draft;;
+
+			=> nrel_goto: .agent_of_adding_new_draft_operator_add_relation_draft;; 
+			*);;
+
+		-> .agent_of_adding_new_draft_operator_add_relation_draft
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_adding_new_draft;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_const: draft;;
+
+			=> nrel_goto: .agent_of_adding_new_draft_operator_add_relation_authors;; 
+			*);;
+
+		-> .agent_of_adding_new_draft_operator_add_relation_authors
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_adding_new_draft;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_const: nrel_authors;;
+
+			=> nrel_goto: .agent_of_adding_new_draft_operator_add_user;; 
+			*);;
+
+		-> .agent_of_adding_new_draft_operator_add_user
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_adding_new_draft;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _user;;
+
+			=> nrel_goto: .agent_of_adding_new_draft_operator_add_connection;; 
+			*);;
+
+		-> .agent_of_adding_new_draft_operator_add_connection
+    			(*
+			<- searchSetStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _user;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _new_draft;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_authors;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_of_adding_new_draft;;
+			-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_of_adding_new_draft;;
+
+        		=> nrel_goto: .agent_of_adding_new_draft_operator_make_answer;;
+        		*);;
+
+		-> .agent_of_adding_new_draft_operator_make_answer
+			(*
+			<- genElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_const: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _answer_of_adding_new_draft;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_const: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_answer;; 
+			
+			=> nrel_goto: .agent_of_adding_new_draft_operator_successfully_finished_question;;
+			*);;
+
+		-> .agent_of_adding_new_draft_operator_successfully_finished_question
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: question_finished_successfully;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+
+			=> nrel_goto: .agent_of_adding_new_draft_operator_return;; 
+			*);;
+
+/**************************************************************************Wrong Parametrs************************************************************/
+
+		-> .agent_of_adding_new_draft_operator_call_proc_of_adding_validating_message 
+			(*
+		  	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_validating_message;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_adding_new_draft_operator_call_proc_of_adding_validating_message_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+				-> rrel_2: rrel_fixed: rrel_scp_const: [Wrong parameter!It must be user!];;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .agent_of_adding_new_draft_operator_waitreturn_proc_of_adding_validating_message;;
+			*);;
+
+		-> .agent_of_adding_new_draft_operator_waitreturn_proc_of_adding_validating_message
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .agent_of_adding_new_draft_operator_unsuccessfully_finished_question;;
+			*);;
+
+		-> .agent_of_adding_new_draft_operator_unsuccessfully_finished_question
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: question_finished_unsuccessfully;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+
+			=> nrel_goto: .agent_of_adding_new_draft_operator_return;; 
+			*);;
+		
+		-> .agent_of_adding_new_draft_operator_return
+			(*
+			<- return;;
+			*);;
+		*);;
+	*);;

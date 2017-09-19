@@ -1,0 +1,26 @@
+lib_component_proc_of_clipping_elements_not_part_of_the_cycle
+=> nrel_main_idtf:
+	[Компонент библиотеки. scp-программа отсечения элементов, не являющихся частью цикла]
+	(* <- lang_ru;; *);
+	[Library component. scp-program of clipping elements that are not part of the cycle]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components;
+
+-> rrel_key_sc_element: 
+	proc_of_clipping_elements_not_part_of_the_cycle;
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Proc_Of_Clipping_Elemnts_of_Cycle.html" 
+				(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+lib_component_proc_of_finding_cycle = [*^"file://proc_of_clipping_elements_not_part_of_the_cycle.scsi"*];;

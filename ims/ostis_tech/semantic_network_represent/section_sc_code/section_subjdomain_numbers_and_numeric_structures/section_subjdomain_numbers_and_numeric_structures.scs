@@ -1,0 +1,57 @@
+section_subjdomain_numbers_and_numeric_structures
+
+=> nrel_main_idtf:
+	[Раздел. Предметная область чисел и числовых структур]
+	(* <- lang_ru;; *);
+	[Section. Subject domain of numbers and numeric structures]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[Раздел базы знаний IMS, описывающий числа и числовые структуры]
+	(* <- lang_ru;; *);
+=> nrel_introduction:
+	...
+(*
+	<= nrel_sc_text_translation:
+	 ...
+	 (*
+		 -> rrel_example:
+		   "file://content_html/introduction_section_subjdomain_numbers.pdf"
+			(* <- lang_ru;;	*);;
+	 *);;
+*);
+<- not_enough_formed_structure;
+<- atomic_section;;
+
+section_subjdomain_numbers_and_numeric_structures = [*^"file://subjdomain_numbers_and_numeric_structures.scsi"*];;
+
+section_subjdomain_numbers_and_numeric_structures
+-> rrel_key_sc_element:
+	subject_domain_numbers_and_numeric_structures;
+	number;
+	natural_number;
+	integer;
+	rational_number;
+	irrational_number;
+	real_number;
+	complex_number;
+	negative_number;
+	positive_number;
+	nrel_opposite_numbers;
+	nrel_modulus;
+	arithmetic_expression;
+	arithmetic_operation;
+	nrel_sum_of_numbers;
+	nrel_multiplication_of_numbers;
+	nrel_pow_numbers;
+	nrel_be_more;
+	nrel_equal_numbers;
+	nrel_more_or_equal;
+	number_pi;
+	number_zero;
+	number_one;
+	imaginary_unit;
+	numeric_structure;
+	numeral_system;
+	decimal_numeral_system;
+	binary_numeral_system;
+	hexadecimal_numeral_system;;

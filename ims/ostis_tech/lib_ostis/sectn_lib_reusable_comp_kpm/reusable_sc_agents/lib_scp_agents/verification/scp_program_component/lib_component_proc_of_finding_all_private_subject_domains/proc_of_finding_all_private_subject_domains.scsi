@@ -1,0 +1,134 @@
+scp_program -> proc_of_finding_all_private_subject_domains (*	
+	-> rrel_params: .proc_of_finding_all_private_subject_domains_params 
+		(*
+			-> rrel_1: rrel_in: _subject_domain;;
+			-> rrel_2: rrel_in: _all_subject_domains;;
+		*);;
+
+    -> rrel_operators: .proc_of_finding_all_private_subject_domains_operator_set 
+    	(*
+		-> rrel_init: .proc_of_finding_all_private_subject_domains_operator_add_to_answer
+			(*
+			  <- genElStr3;;
+
+			  -> rrel_1: rrel_fixed: rrel_scp_var: _all_subject_domains;;
+			  -> rrel_2: rrel_assign:  rrel_pos_const_perm: rrel_scp_var: _arc1;; 
+			  -> rrel_3: rrel_fixed: rrel_scp_var: _subject_domain;;
+	
+			  => nrel_goto: .proc_of_finding_all_private_subject_domains_operator_gen_temp_set;;
+			*);;
+
+		-> .proc_of_finding_all_private_subject_domains_operator_gen_temp_set
+			(*
+			  <- genEl;;
+
+			  -> rrel_1: rrel_assign: rrel_const: rrel_node: rrel_scp_var: _private_subject_domains;;
+	
+			  => nrel_goto: .proc_of_finding_all_private_subject_domains_operator1A_1;;
+			*);;	
+
+		-> .proc_of_finding_all_private_subject_domains_operator1A_1 
+			(*
+			  <- searchSetStr5;;
+
+			  -> rrel_1: rrel_fixed: rrel_scp_var: _subject_domain;;
+			  -> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+			  -> rrel_3: rrel_assign: rrel_scp_var: _private_subject_domain;;
+	          -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+	          -> rrel_5: rrel_fixed: rrel_scp_const: nrel_explored_relations_class_private_subject_domain;;
+			
+			  -> rrel_set_3: rrel_fixed: rrel_scp_var: _private_subject_domains;;
+	
+			  => nrel_goto: .proc_of_finding_all_private_subject_domains_operator1A_2;;
+			*);; 
+
+		-> .proc_of_finding_all_private_subject_domains_operator1A_2 
+			(*
+			  <- searchSetStr5;;
+
+			  -> rrel_1: rrel_fixed: rrel_scp_var: _subject_domain;;
+			  -> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+			  -> rrel_3: rrel_assign: rrel_scp_var: _private_subject_domain;;
+	          -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+	          -> rrel_5: rrel_fixed: rrel_scp_const: nrel_primary_elements_class_private_subject_domain;;
+			
+			  -> rrel_set_3: rrel_fixed: rrel_scp_var: _private_subject_domains;;
+	
+			  => nrel_goto: .proc_of_finding_all_private_subject_domains_operator1A_3;;
+			*);; 	
+
+		-> .proc_of_finding_all_private_subject_domains_operator1A_3 
+			(*
+			  <- searchSetStr5;;
+
+			  -> rrel_1: rrel_fixed: rrel_scp_var: _subject_domain;;
+			  -> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+			  -> rrel_3: rrel_assign: rrel_scp_var: _private_subject_domain;;
+	          -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+	          -> rrel_5: rrel_fixed: rrel_scp_const: nrel_private_subject_domain;;
+			
+			  -> rrel_set_3: rrel_fixed: rrel_scp_var: _private_subject_domains;;
+	
+			  => nrel_goto: .proc_of_finding_all_private_subject_domains_operator2A;;
+			*);; 	
+
+		-> .proc_of_finding_all_private_subject_domains_operator2A
+			(*
+			  <- searchElStr3;;
+
+			  -> rrel_1: rrel_fixed: rrel_scp_var: _private_subject_domains;;
+			  -> rrel_2: rrel_assign:  rrel_pos_const_perm: rrel_scp_var: _arc1;; 
+			  -> rrel_3: rrel_assign: rrel_scp_var: _private_subject_domain;;
+	
+			  => nrel_then: .proc_of_finding_all_private_subject_domains_operator_zv10;;
+			  => nrel_else: .proc_of_finding_all_private_subject_domains_operator_erase_temp_set;;
+			*);;
+
+		-> .proc_of_finding_all_private_subject_domains_operator_zv10 
+			(*
+			 <- eraseEl;;
+
+			 -> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _arc1;;
+	
+			 => nrel_goto: .proc_of_finding_all_private_subject_domains_operator_function_calling;;
+			 *);;
+
+		-> .proc_of_finding_all_private_subject_domains_operator_function_calling
+			(*
+		 	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_finding_all_private_subject_domains;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .proc_of_finding_all_private_subject_domains_operator_function_calling_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _private_subject_domain;;
+				-> rrel_2: rrel_fixed: rrel_scp_var: _all_subject_domains;;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .proc_of_finding_all_private_subject_domains_operator_descr;;
+			*);;
+
+		-> .proc_of_finding_all_private_subject_domains_operator_descr 
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .proc_of_finding_all_private_subject_domains_operator2A;;
+			*);; 
+
+		-> .proc_of_finding_all_private_subject_domains_operator_erase_temp_set 
+			(*
+			 <- eraseEl;;
+
+			 -> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _private_subject_domains;;
+	
+			 => nrel_goto: .proc_of_finding_all_private_subject_domains_operator_return;;
+			 *);;	
+
+		-> .proc_of_finding_all_private_subject_domains_operator_return
+			(*
+			<- return;;
+			*);;
+	*);;
+*);;

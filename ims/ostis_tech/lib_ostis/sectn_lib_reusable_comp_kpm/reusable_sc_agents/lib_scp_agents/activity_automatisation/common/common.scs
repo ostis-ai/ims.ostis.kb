@@ -1,0 +1,15 @@
+ rrel_last_executed_action
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+	[последнее выполненное действие]
+ 	(* <- lang_ru;; *);
+ 	[last executed action]
+ 	(* <- lang_en;; *);;
+
+nrel_sequence_of_actions
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[последовательность действий*]
+ 	(* <- lang_ru;; *);
+ 	[sequence of actions*]
+ 	(* <- lang_en;; *);; 	

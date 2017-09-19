@@ -1,0 +1,93 @@
+subjdomain_ostis_systems 
+<- subject_domain;
+<- sc_node_struct;
+<- structure;
+-> rrel_maximum_studied_object_class: ostis_system;
+-> rrel_not_maximum_studied_object_class: 
+	subjdomain_ostis_systems;
+	Myself;
+	sc_models_interpretation_platform;
+	sc_model_computer_systems;
+-> rrel_explored_relation:
+	nrel_subsidiary_ostis_system;;
+
+subjdomain_ostis_systems
+=> nrel_main_idtf:
+	[Предметная область ostis-систем]
+	(* <- lang_ru;; *);
+	[Subject domain of ostis-systems]
+	(* <- lang_en;; *);;
+
+ostis_system <= nrel_abstract_basic_decomposition:
+	{
+	sc_models_interpretation_platform;
+	sc_model_computer_systems
+	};;
+
+Myself
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[Собственное Я]
+	(* <- lang_ru;; *);
+	[Myself]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[Я]
+	(* <- lang_ru;; *);
+	[Собственное Я IMS]
+	(* <- lang_ru;; *);
+<- ostis_system;
+<= nrel_basic_decomposition:
+{
+	IMS;
+	web_platform_based_on_software_sc_memory
+};
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://nl_files/Myself.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
+
+nrel_subsidiary_ostis_system
+<- sc_node_norole_relation;
+<- binary_relation;
+=> nrel_main_idtf:
+	[дочерняя ostis-система*] 
+	(* <- lang_ru;; *);
+	[subsidiary ostis-system*]
+	(* <- lang_en;; *);
+=> nrel_first_domain:
+ 	IMS;
+ => nrel_second_domain:
+ 	ostis_system;
+ => nrel_definitional_domain:
+ 	...
+ 	(*
+ 		<= nrel_combination:
+ 			{
+ 				IMS;
+ 				ostis_system
+ 			};;
+ 	*);
+=> nrel_idtf:
+	[дочерняя sc-система*]
+	(* <- lang_ru;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://nl_files/nrel_subsidiary_ostis_system.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;

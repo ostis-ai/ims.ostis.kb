@@ -1,0 +1,82 @@
+section_subjdomain_knowledges 
+=> nrel_main_idtf:
+	[Раздел. Предметная область знаний]
+	(* <- lang_ru;; *);
+=> nrel_idtf:
+	[Раздел базы знаний, описывающий Предметную область знаний]
+	(* <- lang_ru;; *);
+
+<- not_enough_formed_structure;;
+section_subjdomain_knowledges = [*^"file://section_subjdomain_knowledges.scsi"*];;
+
+rrel_key_sc_element -> (section_subjdomain_knowledges -> subject_domain_of_knowledges)
+(*
+	=> nrel_key_sc_element_order: (section_subjdomain_knowledges -> knowledge)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_knowledges -> nrel_metaknowledge)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_knowledges -> section)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_knowledges -> section_argumentation)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_knowledges -> section_documentation)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_knowledges -> section_description_of_subject_domain)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_knowledges -> section_description_of_semantic_neighborhood)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_knowledges -> section_description_of_principles)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_knowledges -> nrel_section_decomposition)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_knowledges -> nrel_section_base_order)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_knowledges -> non_atomic_section)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_knowledges -> atomic_section)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_knowledges -> rrel_key_sc_element)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_knowledges -> rrel_main_key_sc_element)
+(*
+	<-rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_knowledges -> nrel_key_sc_element_order)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_knowledges -> nrel_comment)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_knowledges -> nrel_summary)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_knowledges -> nrel_introduction)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_knowledges -> nrel_conclusion)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_knowledges -> nrel_preface)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_knowledges -> nrel_postface)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_knowledges -> nrel_epigraph)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_knowledges -> nrel_detalization)
+	(* <- rrel_key_sc_element;; *);;
+*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;

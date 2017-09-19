@@ -1,0 +1,99 @@
+proc_of_finding_intersection_of_two_sets
+	=> nrel_main_idtf:
+	[scp-программа поиска пересечения двух множеств] (* <- lang_ru;; *);
+	=> nrel_main_idtf:
+	[scp-program of finding intersection of two sets] (* <- lang_en;; *);;
+
+scp_program -> proc_of_finding_intersection_of_two_sets
+(*
+     -> rrel_params: .proc_of_finding_intersection_of_two_sets_params
+      	(*
+		-> rrel_1: rrel_in: _set1;;
+		-> rrel_2: rrel_in: _set2;;
+		-> rrel_3: rrel_out: _result_set;;
+	 	 *);;
+
+	 -> rrel_operators: .proc_of_finding_intersection_of_two_sets_operator_set
+	 	(*
+	 	-> rrel_init: .proc_of_finding_intersection_of_two_sets_operator1
+	 		(*
+	 		<- genEl;;
+
+	 		-> rrel_1: rrel_assign: rrel_scp_var: rrel_node: rrel_const: _result_set;;
+
+	 		=> nrel_goto: .proc_of_finding_intersection_of_two_sets_operator2;;
+	 		*);;
+
+	 	-> .proc_of_finding_intersection_of_two_sets_operator2
+	 		(*
+	 		<- searchSetStr3;;
+
+	 		-> rrel_1: rrel_fixed: rrel_scp_var: _set1;;
+	 		-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+	 		-> rrel_3: rrel_assign: rrel_scp_var: _node;;
+
+	 		-> rrel_set_3: rrel_assign: rrel_scp_var: _temp_set_for_cycle;;
+
+	 		=> nrel_then: .proc_of_finding_intersection_of_two_sets_operator3A;;
+	 		=> nrel_else: .proc_of_finding_intersection_of_two_sets_operator_return;;
+	 		*);;
+
+	 	-> .proc_of_finding_intersection_of_two_sets_operator3A
+	 		(*
+	 		<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _temp_set_for_cycle;;
+	 		-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+	 		-> rrel_3: rrel_assign: rrel_scp_var: _node;;
+
+	 		=> nrel_then: .proc_of_finding_intersection_of_two_sets_operator3B;;
+	 		=> nrel_else: .proc_of_finding_intersection_of_two_sets_operator3E;;
+	 		*);;
+
+	 	-> .proc_of_finding_intersection_of_two_sets_operator3B
+	 		(*
+	 		<- eraseEl;;
+
+	 		-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+
+	 		=> nrel_goto: .proc_of_finding_intersection_of_two_sets_operator3C;;
+	 		*);;	
+	 	
+	 	-> .proc_of_finding_intersection_of_two_sets_operator3C
+	 		(*
+	 		<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _set2;;
+	 		-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+	 		-> rrel_3: rrel_fixed: rrel_scp_var: _node;;
+
+	 		=> nrel_then: .proc_of_finding_intersection_of_two_sets_operator3D;;
+	 		=> nrel_else: .proc_of_finding_intersection_of_two_sets_operator3A;;
+	 		*);;
+
+	 	-> .proc_of_finding_intersection_of_two_sets_operator3D
+	 		(*
+	 		<- genElStr3;;
+
+	 		-> rrel_1: rrel_fixed: rrel_scp_var: _result_set;;
+	 		-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: rrel_const: _arc1;;
+	 		-> rrel_3: rrel_fixed: rrel_scp_var: _node;;
+
+	 		=> nrel_goto: .proc_of_finding_intersection_of_two_sets_operator3A;;
+	 		*);;
+
+	 	-> .proc_of_finding_intersection_of_two_sets_operator3E
+	 		(*
+	 		<- eraseEl;;
+
+	 		-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _temp_set_for_cycle;;
+
+	 		=> nrel_goto: .proc_of_finding_intersection_of_two_sets_operator_return;;
+	 		*);;
+
+		-> .proc_of_finding_intersection_of_two_sets_operator_return
+			(*
+			<- return;;
+			*);;	
+	 	*);;
+	*);;

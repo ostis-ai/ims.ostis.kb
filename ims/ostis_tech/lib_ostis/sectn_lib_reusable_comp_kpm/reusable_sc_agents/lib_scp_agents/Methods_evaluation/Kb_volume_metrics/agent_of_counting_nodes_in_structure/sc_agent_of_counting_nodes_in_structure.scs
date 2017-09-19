@@ -1,0 +1,54 @@
+sc_agent_of_counting_nodes_in_structure
+=> nrel_main_idtf:
+	[sc-агент подсчета количества sc-узлов в структуре] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[sc-agent of counting number of sc-nodes in structure] (* <- lang_en;; *);
+
+<- abstract_sc_agent;
+
+=> nrel_primary_initiation_condition: 
+	(sc_event_add_output_arc => question_initiated);
+
+=> nrel_initiation_condition_and_result: 
+	(..sc_agent_of_counting_nodes_in_structure_condition => ..sc_agent_of_counting_nodes_in_structure_result);
+
+<= nrel_sc_agent_key_sc_elements: 
+	{
+	question_initiated;
+	question;
+	action_to_count_nodes_in_structure
+	};
+
+=> nrel_inclusion: 
+	.platform_independent_realization_of_sc_agent_of_counting_nodes_in_structure
+	(*
+	<- platform_independent_abstract_sc_agent;;
+	<= nrel_sc_agent_program: 
+		{
+		agent_of_counting_nodes_in_structure;
+		proc_of_adding_validating_message;
+		proc_of_cardinality_counting_without_multiple_occurrences;
+		proc_of_cardinality_counting_without_multiple_occurrences_with_context;
+		proc_of_generation_of_metrics_answer
+		};;
+
+	-> sc_agent_of_counting_nodes_in_structure_scp    
+		(* <- active_sc_agent;; *);;  
+	*);;
+
+..sc_agent_of_counting_nodes_in_structure_condition
+= [*
+	action_to_count_nodes_in_structure _-> .._question;;
+	question_initiated _-> .._question;;
+	question _-> .._question;;
+	.._question _-> .._parameter;;
+*];;
+
+..sc_agent_of_counting_nodes_in_structure_result
+= [*
+	action_to_count_nodes_in_structure _-> .._question;;
+	question_finished _-> .._question;;
+	question _-> .._question;;
+	.._question _=> nrel_answer:: .._answer;;
+	.._question _-> .._parameter;;
+*];;

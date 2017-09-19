@@ -1,0 +1,43 @@
+section_technique_of_designing_unified_semantic_models_of_kb
+=> nrel_main_idtf:
+	[Раздел. Методика проектирования унифицированных семантических моделей баз знаний]
+	(* <- lang_ru;; *);
+	[Section. Technique of designing unified semantic models of knowledge bases]
+	(* <- lang_en;; *);
+<- non_atomic_section;
+<- not_enough_formed_structure;
+<= nrel_section_decomposition:
+	{
+		section_general_rules_of_kb_development
+		(*
+		=> nrel_section_base_order:
+			section_techn_of_designing_models_texts;;
+		*);
+		section_techn_of_designing_models_texts
+		(*
+		=> nrel_section_base_order:
+			section_techn_of_designing_models_texts_administrator;;
+		*);
+		section_techn_of_designing_models_texts_administrator
+		(*
+		=> nrel_section_base_order:
+			section_techn_of_designing_models_developers_administrator;;
+		*);
+		section_techn_of_designing_models_developers_administrator
+		(*
+		=> nrel_section_base_order:
+			section_techn_of_designing_models_administrator_hierarchy;;
+		*);
+		section_techn_of_designing_models_administrator_hierarchy
+		(*
+		=> nrel_section_base_order:
+			section_techn_of_designing_models_automation_managing_technology;;
+		*);
+		section_techn_of_designing_models_automation_managing_technology
+		(*
+		=> nrel_section_base_order:
+			section_typical_mistakes_and_difficulties_in_kb_development;;
+		*);
+		section_typical_mistakes_and_difficulties_in_kb_development
+	};;
+

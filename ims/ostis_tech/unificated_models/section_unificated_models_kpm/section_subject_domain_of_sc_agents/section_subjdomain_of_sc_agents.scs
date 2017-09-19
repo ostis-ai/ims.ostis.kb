@@ -1,0 +1,109 @@
+section_subject_domain_of_sc_agents
+=> nrel_main_idtf:
+	[Раздел. Предметная область абстрактных агентов, работающих над унифицированной семантической памятью]
+	(* <- lang_ru;; *);
+=> nrel_idtf: 
+	[Раздел. Предметная область sc-агентов]
+	(* <- lang_ru;; *);
+<- atomic_section;
+<- not_enough_formed_structure;
+=> nrel_introduction:
+	...
+	(*
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/introduction_for_section.html" 
+				(* <- lang_ru;; *);;
+		*);;
+	*);; 
+
+section_subject_domain_of_sc_agents = [*^"file://section_subjdomain_of_sc_agents.scsi"*];;
+
+rrel_key_sc_element -> (section_subject_domain_of_sc_agents -> subject_domain_of_abstract_sc_agents)
+(*
+	=> nrel_key_sc_element_order: (section_subject_domain_of_sc_agents -> abstract_sc_agent)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_sc_agents -> non_atomic_abstract_sc_agent)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_sc_agents -> atomic_abstract_sc_agent)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_sc_agents -> platform_independent_abstract_sc_agent)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_sc_agents -> platform_dependent_abstract_sc_agent)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_sc_agents -> inside_abstract_sc_agent)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_sc_agents -> effector_abstract_sc_agent)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_sc_agents -> receptor_abstract_sc_agent)	
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_sc_agents -> abstract_sc_agent_is_not_implemented_on_the_scp_language)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_sc_agents -> abstract_sc_agent_implemented_on_the_scp_language)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_sc_agents -> abstract_sc_agent_of_interpretation_of_scp_program)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_sc_agents -> abstract_program_sc_agent)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_sc_agents -> abstract_sc_metaagent)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_sc_agents -> nrel_abstract_sc_agent_decomposition)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_sc_agents -> sc_agent)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_sc_agents -> active_sc_agent)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_sc_agents -> nrel_sc_agent_key_sc_elements)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_sc_agents -> nrel_sc_agent_program)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_sc_agents -> nrel_primary_initiation_condition)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_sc_agents -> nrel_initiation_condition_and_result)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_sc_agents -> sc_description_of_sc_agent_behavior)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_sc_agents -> process_in_sc_memory)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_sc_agents -> nrel_lock)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_sc_agents -> lock_type)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_sc_agents -> total_lock)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_sc_agents -> lock_for_any_change)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_sc_agents -> lock_for_deleting)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subject_domain_of_sc_agents -> abstract_program_sc_agent_implemented_on_the_scp_language)
+(* <- rrel_key_sc_element;; *);;
+*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;

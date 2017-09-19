@@ -1,0 +1,18 @@
+<html>
+	<body>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<p> Задачей<b><sc_element sys_idtf = "agent_of_finding_approved_proposals_by_user"> агента поиска всех предложений, утвержденных конкретным пользователем</sc_element></b> является поиск <b><sc_element sys_idtf = "nrel_approved">утвержденных</sc_element></b> <b><sc_element sys_idtf = "ui_user">пользователем</sc_element></b> <b><sc_element sys_idtf = "nrel_proposal">предложений</sc_element></b>. На вход данному агенту подается <b><sc_element sys_idtf = "ui_user">пользователь</sc_element></b>. Для данного пользователя будут найдены все предложения, которые он утвердил. При необходимости ограничения области поиска агента в качестве второго аргумента запроса подается <b><sc_element sys_idtf = "nrel_context_of_action">контекст действия</sc_element></b>, в рамках которого будет осуществляться поиск. Контекст действия является <b><sc_element sys_idtf = "structure">структурой</sc_element></b>. Данный агент инициируется при условии появления в памяти вопросной конструкции, соответствующей <b><sc_element sys_idtf = "action_of_finding_approved_proposals_by_user"> действию. поиск всех утвержденных конкретным пользователем предложений</sc_element></b>. Возможные результаты работы агента: 
+		<ul>
+			<li>Если на вход агенту пришел не знак <b><sc_element sys_idtf = "ui_user">пользователя</sc_element></b>, то генерируется сообщение об ошибке (Wrong first parameter! It must be user sign(element of ui_user)).
+			</li>
+			<li>Если на вход агенту был подан второй аргумент, который не является знаком структуры, то генерируется сообщение об ошибке (Wrong second parameter! It must be a structure).
+			</li>
+			<li>Если в результате поиска <b><sc_element sys_idtf = "nrel_approved">утвержденные</sc_element></b> <b><sc_element sys_idtf = "ui_user">пользователем</sc_element></b> <b><sc_element sys_idtf = "nrel_proposal">предложения</sc_element></b> не были найдены, то генерируется сообщение "The search hasn't given any results".
+			</li>
+			<li>Если в результате поиска <b><sc_element sys_idtf = "nrel_approved">утвержденные</sc_element></b> <b><sc_element sys_idtf = "ui_user">пользователем</sc_element></b> <b><sc_element sys_idtf = "nrel_proposal">предложения</sc_element></b> были найдены, то выводятся все найденные <b><sc_element sys_idtf = "nrel_proposal">предложения</sc_element></b>. Пример результата работы агента представлен на рисунке. Класс действия (смотреть рисунок) должен являться <b><sc_element sys_idtf = "rrel_key_sc_element">ключевым sc-элементом</sc_element></b> <b><sc_element sys idtf = "section_developers_actions_knowledge_base_cooperation_hierarchy">Раздел. Предметная область действий разработчиков sc-моделей баз знаний, соответствующих методике, предполагающей взаимодействие всех разработчиков с семантической памятью и наличием иерархии администраторов</sc_element></b>. Если класс действия не является <b><sc_element sys_idtf = "rrel_key_sc_element">ключевым sc-элементом</sc_element></b> данного раздела, то данный класс действия не будет добавлен в результат работы агента. 
+			</li>
+		</ul>
+		</p>
+		<img src="result.png" alt="Команда поиска всех утвержденных пользователем предложений"/>
+	</body>
+</html>

@@ -1,0 +1,370 @@
+agent_rejection_verification_result_of_offer
+=> nrel_main_idtf:
+	[агентная scp-программа для отклонения результата верификации предложения] (* <- lang_ru;; *);
+	[agent scp-program of rejection of verification result of offer] (* <- lang_en;; *);
+	<- agent_scp_program;;
+
+scp_program -> agent_rejection_verification_result_of_offer 
+	(*
+	-> rrel_params: .agent_rejection_verification_result_of_offer_params 
+		(*
+		-> rrel_1: rrel_in: _event;;
+		-> rrel_2: rrel_in: _input_arc;;
+		*);;
+
+	-> rrel_operators: .agent_rejection_verification_result_of_offer_operator_set
+		(*
+		-> rrel_init: .agent_rejection_verification_result_of_offer_operator1A 
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _temp;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: _input_arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _quest;;
+	
+			=> nrel_goto: .agent_rejection_verification_result_of_offer_operator1B;;
+			*);;
+		
+		-> .agent_rejection_verification_result_of_offer_operator1B
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: action_to_reject_the_result_of_proposal_verification;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+
+			=> nrel_then: .agent_rejection_verification_result_of_offer_operator1D;;
+			=> nrel_else: .agent_rejection_verification_result_of_offer_operator_return;;
+			*);;
+		
+		-> .agent_rejection_verification_result_of_offer_operator1D
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _act_param;;
+
+			=> nrel_then: .agent_rejection_verification_result_of_offer_operator1P;;
+			=> nrel_else: .agent_rejection_verification_result_of_offer_operator_return;;
+			*);;
+
+		-> .agent_rejection_verification_result_of_offer_operator1P
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: question_initiated;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _act_param;;
+
+			=> nrel_then: .agent_rejection_verification_result_of_offer_operator_correct_act_checker;;
+			=> nrel_else: .agent_rejection_verification_result_of_offer_operator_call_proc_of_adding_validating_message;;
+			*);;
+
+		-> .agent_rejection_verification_result_of_offer_operator_correct_act_checker
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: action_to_consider_result_of_proposal_verification;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _act_param;;
+
+			=> nrel_then: .agent_rejection_verification_result_of_offer_operator_find_user;;
+			=> nrel_else: .agent_rejection_verification_result_of_offer_operator_call_proc_of_adding_validating_message;;
+			*);;
+
+		-> .agent_rejection_verification_result_of_offer_operator_find_user
+			(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _user;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_authors;;
+
+			=> nrel_then: .agent_rejection_verification_result_of_offer_operator_correct_user_checker;;
+			=> nrel_else: .agent_rejection_verification_result_of_offer_operator_return;;
+			*);;
+
+		-> .agent_rejection_verification_result_of_offer_operator_correct_user_checker
+			(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _uknown_entity;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _user;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_administrator;;
+
+			=> nrel_then: .agent_rejection_verification_result_of_offer_operator1_mark_act_param_as_past_entity;;
+			=> nrel_else: .agent_rejection_verification_result_of_offer_operator_return;;
+			*);;
+
+		-> .agent_rejection_verification_result_of_offer_operator1_mark_act_param_as_past_entity
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: last_entity;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_common: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _act_param;;
+
+			=> nrel_goto: .agent_rejection_verification_result_of_offer_operator1_gen_rejection_relation_act;; 
+			*);;
+	
+		-> .agent_rejection_verification_result_of_offer_operator1_gen_rejection_relation_act
+			(*
+			<- genElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _act_param;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_common: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _user;;
+		  	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		  	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_rejected;;
+
+			=> nrel_goto: .agent_rejection_verification_result_of_offer_operator_call_removing;; 
+			*);; 
+		
+		-> .agent_rejection_verification_result_of_offer_operator_call_removing
+			(*
+		  	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_removing_action_sign_from_current_processes;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_rejection_verification_result_of_offer_operator_call_removing_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _act_param;;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .agent_rejection_verification_result_of_offer_operator_waitreturn_removing;;
+			*);;
+
+		-> .agent_rejection_verification_result_of_offer_operator_waitreturn_removing
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .agent_rejection_verification_result_of_offer_operator_call_adding;;
+			*);;	
+
+		-> .agent_rejection_verification_result_of_offer_operator_call_adding
+			(*
+		  	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_action_sign_to_history_of_the_development;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_rejection_verification_result_of_offer_operator_call_adding_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _act_param;;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr2;;
+
+		  	=> nrel_goto: .agent_rejection_verification_result_of_offer_operator_waitreturn_adding;;
+			*);;
+
+		-> .agent_rejection_verification_result_of_offer_operator_waitreturn_adding
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr2;;
+
+		  	=> nrel_goto: .agent_rejection_verification_result_of_offer_operator_gen_answer_node;;
+			*);;	
+
+//**********************************************************UI Answer********************************************************/
+		
+		-> .agent_rejection_verification_result_of_offer_operator_gen_answer_node
+			(*
+			<- genEl;;
+
+			-> rrel_1: rrel_assign: rrel_const: rrel_node: rrel_scp_var: _answer_rejection_verification_result_of_offer;;
+
+			=> nrel_goto: .agent_rejection_verification_result_of_offer_operator_add_previous_act_to_answer;;
+			*);;
+		
+
+		-> .agent_rejection_verification_result_of_offer_operator_add_previous_act_to_answer
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_rejection_verification_result_of_offer;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _act_param;;
+
+			=> nrel_goto: .agent_rejection_verification_result_of_offer_operator_add_result_desicion_arcs_to_answer;; 
+			*);; 
+
+		-> .agent_rejection_verification_result_of_offer_operator_add_result_desicion_arcs_to_answer
+			(*
+			<- searchSetStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _act_param;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_common: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _admin_name;;
+		  	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		  	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_rejected;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_rejection_verification_result_of_offer;;
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer_rejection_verification_result_of_offer;;
+			-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_rejection_verification_result_of_offer;;
+
+			=> nrel_goto: .agent_rejection_verification_result_of_offer_operator_add_rejected_relation_to_answer;; 
+			*);;
+
+		-> .agent_rejection_verification_result_of_offer_operator_add_rejected_relation_to_answer
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_rejection_verification_result_of_offer;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_const: nrel_rejected;;
+
+			=> nrel_goto: .agent_rejection_verification_result_of_offer_operator_add_object_relation_arcs_to_answer;; 
+			*);;
+
+		-> .agent_rejection_verification_result_of_offer_operator_add_object_relation_arcs_to_answer
+			(*
+			<- searchSetStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _act_param;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _verification_structure;;
+		  	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		  	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_object;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_rejection_verification_result_of_offer;;
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer_rejection_verification_result_of_offer;;
+			-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_rejection_verification_result_of_offer;;
+
+			=> nrel_goto: .agent_rejection_verification_result_of_offer_operator_add_verification_structure_nodes_to_answer;; 
+			*);;
+
+		-> .agent_rejection_verification_result_of_offer_operator_add_verification_structure_nodes_to_answer
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _verification_structure;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _node;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_rejection_verification_result_of_offer;;
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer_rejection_verification_result_of_offer;;
+
+			=> nrel_goto: .agent_rejection_verification_result_of_offer_operator_add_object_relation_node_to_answer;; 
+			*);;
+
+		-> .agent_rejection_verification_result_of_offer_operator_add_object_relation_node_to_answer
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_rejection_verification_result_of_offer;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_const: nrel_object;;
+
+			=> nrel_goto: .agent_rejection_verification_result_of_offer_operator_add_act_param_action_class_arc_to_answer_rejection_verification_result_of_offer;; 
+			*);;
+
+
+		-> .agent_rejection_verification_result_of_offer_operator_add_act_param_action_class_arc_to_answer_rejection_verification_result_of_offer
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: action_to_consider_result_of_proposal_verification;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _act_param;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_rejection_verification_result_of_offer;;
+
+			=> nrel_goto: .agent_rejection_verification_result_of_offer_operator_add_ct_param_action_class_to_answer_rejection_verification_result_of_offer;; 
+			*);;
+
+		
+		-> .agent_rejection_verification_result_of_offer_operator_add_ct_param_action_class_to_answer_rejection_verification_result_of_offer
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_rejection_verification_result_of_offer;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_const: action_to_consider_result_of_proposal_verification;;
+
+			=> nrel_goto: .agent_rejection_verification_result_of_offer_operator_gen_full_answer;; 
+			*);;
+		
+		-> .agent_rejection_verification_result_of_offer_operator_gen_full_answer
+			(*
+			<- genElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_common: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _answer_rejection_verification_result_of_offer;;
+		  	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		  	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_answer;;
+
+			=> nrel_goto: .agent_rejection_verification_result_of_offer_operator_pre_return;; 
+			*);;
+
+		-> .agent_rejection_verification_result_of_offer_operator_pre_return 
+			(*
+			<- printEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_rejection_verification_result_of_offer;;
+
+			=> nrel_goto: .agent_rejection_verification_result_of_offer_gen_question_finished_successfully;;
+			*);;
+
+		-> .agent_rejection_verification_result_of_offer_gen_question_finished_successfully
+			(*
+		  	<- genElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: question_finished_successfully;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_const: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+
+		  	=> nrel_goto: .agent_rejection_verification_result_of_offer_operator_return;;
+			*);;
+
+		-> .agent_rejection_verification_result_of_offer_gen_question_finished_unsuccessfully
+			(*
+		  	<- genElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: question_finished_unsuccessfully;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_const: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+
+		  	=> nrel_goto: .agent_rejection_verification_result_of_offer_operator_return;;
+			*);; 
+
+/*******************************************************Wrong Parameters*******************************************************************/
+
+		-> .agent_rejection_verification_result_of_offer_operator_call_proc_of_adding_validating_message 
+			(*
+		  	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_validating_message;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_rejection_verification_result_of_offer_operator_call_proc_of_adding_validating_message_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+				-> rrel_2: rrel_fixed: rrel_scp_const: [Wrong first parameter! It must be sign of action to consider result of proposal verification(action_to_consider_result_of_proposal_verification)];;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .agent_rejection_verification_result_of_offer_operator_waitreturn_proc_of_adding_validating_message;;
+			*);;
+
+		-> .agent_rejection_verification_result_of_offer_operator_waitreturn_proc_of_adding_validating_message
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .agent_rejection_verification_result_of_offer_operator_return;;
+			*);;
+	
+		-> .agent_rejection_verification_result_of_offer_operator_return 
+			(*
+			<- return;;
+			*);;
+		*);;
+	*);;
+
+

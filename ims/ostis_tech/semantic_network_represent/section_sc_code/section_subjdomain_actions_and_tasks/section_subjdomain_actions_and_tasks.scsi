@@ -1,0 +1,1675 @@
+subject_domain_of_actions_and_tasks
+=> nrel_main_idtf:
+	[Предметная область действий и задач]
+	(* <- lang_ru;; *);
+	[Subject domain of actions and tasks]
+	(* <- lang_en;; *);
+<- subject_domain;
+<- sc_node_struct;
+<- structure;
+=> nrel_primary_elements_class_private_subject_domain: subject_domain_of_actions_executing_in_sc_memory;
+=> nrel_primary_elements_class_private_subject_domain: subject_domain_of_abstract_sc_agents;
+-> rrel_maximum_studied_object_class: 
+	question;
+-> rrel_not_maximum_studied_object_class:
+	information_action;
+	behavioral_action;
+	effector_action;
+	receptor_action;
+	action_in_sc_memory;
+	action_in_the_external_environment_ostis_system;
+	effector_action_ostis_system;
+	receptor_action_ostis_system;
+	question_initiated;
+	performed_action;
+	active_action;
+	deferred_action;
+	planned_action;
+	question_finished;
+	question_finished_successfully;
+	question_finished_unsuccessfully;
+	question_finished_with_error;
+	priority_actions;
+	subject;
+	internal_subject_ostis_system;
+	external_subject_ostis_system_interaction;
+	external_subject_ostis_system_without_interaction;
+	actions_class;
+	independent_actions_class;
+	non_independent_actions_class;
+	task;
+	procedural_formulation_of_task;
+	declarative_formulation_of_task;
+	class_of_tasks;
+	task_question;
+	command;
+	command_class;
+	command_class_without_arguments;
+	command_class_with_one_argument;
+	command_class_with_two_arguments;
+	command_class_with_random_arguments_number;
+	atomic_command_class;
+	non_atomic_command_class;
+	plan;
+	program;
+	program_in_sc_memory;
+	protocol;
+	decision;
+-> rrel_explored_relation:
+	rrel_action_with_very_high_priority;
+	rrel_action_with_high_priority;
+	rrel_action_with_medium_priority;
+	rrel_action_with_low_priority;
+	rrel_action_with_very_low_priority;
+	nrel_decomposition_of_action;
+	nrel_private_action;
+	nrel_abstract_sub_action;
+	nrel_goto;
+	nrel_conjunction_of_previous_actions;
+	nrel_condition_control;
+	nrel_then;
+	nrel_else;
+	nrel_result;
+	nrel_performer;
+	nrel_executing_actions_class;
+	nrel_customer;
+	nrel_initiator;
+	nrel_object;
+	nrel_context_of_action;
+	rrel_argument_of_action;
+	rrel_first_action_argument;
+	rrel_second_section_argument;
+	rrel_third_section_argument;
+	nrel_class_of_arguments;
+	nrel_first_argument_class;
+	nrel_second_argument_class;;
+
+question
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие]
+	(* <- lang_ru;; *);
+	[action]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[акция]
+	(* <- lang_ru;; *);
+	[сделать]
+	(* <- lang_ru;; *);	
+	[работа]
+	(* <- lang_ru;; *);	
+	[процесс выполнения некоторой работы]
+	(* <- lang_ru;; *);	
+	[процесс решения некоторой задачи]
+	(* <- lang_ru;; *);	
+	[процесс достижения некоторой цели]
+	(* <- lang_ru;; *);	
+	[дело]
+	(* <- lang_ru;; *);
+	[мероприятие]
+	(* <- lang_ru;; *);		
+	[воздействие]
+	(* <- lang_ru;; *);	
+	[целостный фрагмент некоторой деятельности]
+	(* <- lang_ru;; *);	
+	[целенаправленный процесс, управляемый некоторым субъектом]
+	(* <- lang_ru;; *);	
+	[процесс выполнения некоторого действия некоторым субъектом (исполнителем) над некоторыми объектами]
+	(* <- lang_ru;; *);	
+	
+<= nrel_subdividing: 	
+	{  
+	information_action
+	(*
+	=> nrel_inclusion:
+		action_in_sc_memory;;
+	*);
+	behavioral_action
+	(*
+	=> nrel_inclusion:
+		action_in_the_external_environment_ostis_system;;
+	*);
+	effector_action
+	(*
+	=> nrel_inclusion:
+		effector_action_ostis_system;;
+	*);
+	receptor_action
+	(*
+	=> nrel_inclusion:
+		receptor_action_ostis_system;;
+	*)
+	};
+
+<= nrel_subdividing: 	
+	{ 
+	question_initiated
+	(*
+	=> nrel_inclusion:
+		performed_action
+		(*
+		=> nrel_idtf:
+			[настоящее действие]
+			(* <- lang_ru;; *);;
+		*);;
+	*);
+	planned_action;
+	question_finished
+	(*
+	=> nrel_idtf:
+		[прошлое действие]
+		(* <- lang_ru;; *);;
+	*)
+	};
+
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_action.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);
+	
+<- rrel_key_sc_element:
+	...
+	(*
+		<- identify_instances_rule;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/identify_instances_rule_for_action.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);;	
+
+
+
+information_action
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[информационное действие]
+	(* <- lang_ru;; *);
+	[information action]
+	(* <- lang_en;; *);
+	
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_information_action.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);;
+	
+	
+behavioral_action
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[поведенческое действие]
+	(* <- lang_ru;; *);
+	[behavioral action]
+	(* <- lang_en;; *);
+	
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_behavioral_action.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);;
+	
+
+effector_action
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[эффекторное действие]
+	(* <- lang_ru;; *);
+	[effector action]
+	(* <- lang_en;; *);;
+	
+receptor_action
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[рецепторное действие]
+	(* <- lang_ru;; *);
+	[receptor action]
+	(* <- lang_en;; *);;
+	
+action_in_sc_memory
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие в sc-памяти]
+	(* <- lang_ru;; *);
+	[action in sc-memory]
+	(* <- lang_en;; *);;
+	
+action_in_the_external_environment_ostis_system
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие во внешней среде ostis-системы]
+	(* <- lang_ru;; *);
+	[action in the external environment of OSTIS system]
+	(* <- lang_en;; *);;
+	
+effector_action_ostis_system
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[эффекторное действие ostis-системы]
+	(* <- lang_ru;; *);
+	[effector action of OSTIS system]
+	(* <- lang_en;; *);;
+	
+receptor_action_ostis_system
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[рецепторное действие ostis-системы]
+	(* <- lang_ru;; *);
+	[receptor action of OSTIS system]
+	(* <- lang_en;; *);;
+
+question_initiated
+<- sc_node_not_relation; 
+=> nrel_main_idtf:
+	[инициированное действие]
+	(* <- lang_ru;; *);
+	[action initiated]
+	(* <- lang_en;; *);	
+	
+=> nrel_idtf:
+	[действие, подлежащее выполнению]
+	(* <- lang_ru;; *);
+	[действие, включенное в план]
+	(* <- lang_ru;; *);	
+	
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_question_initiated.html"
+			(* <- lang_ru;; *);;
+		*);;
+	*);;
+	
+	
+performed_action
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[выполняемое действие]
+	(* <- lang_ru;; *);
+	[performed action]
+	(* <- lang_en;; *);	
+	
+<- minor_concept;	
+
+<= nrel_subdividing:
+	{
+	active_action;
+	deferred_action
+	};
+
+<= nrel_inclusion:	
+	real_entity;
+	
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_performed_action.html"
+			(* <- lang_ru;; *);;
+		*);;
+	*);;	
+
+
+active_action
+<- sc_node_not_relation;	
+=> nrel_main_idtf:
+	[активное действие]
+	(* <- lang_ru;; *);
+	[active action]
+	(* <- lang_en;; *);		
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_active_action.html"
+			(* <- lang_ru;; *);;
+		*);;
+	*);;		
+
+
+deferred_action
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[отложенное действие]
+	(* <- lang_ru;; *);
+	[deferred action]
+	(* <- lang_en;; *);		
+
+=> nrel_idtf:
+	[прерванное действие]
+	(* <- lang_ru;; *);
+	[приостановленное действие]
+	(* <- lang_ru;; *);		
+	
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+			-> rrel_example:
+				"file://content_html/explanation_for_deferred_action.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);;		
+
+
+planned_action
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[планируемое действие]
+	(* <- lang_ru;; *);
+	[planned action]
+	(* <- lang_en;; *);		
+
+=> nrel_idtf:
+	[будущее действие]
+	(* <- lang_ru;; *);
+		
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_planned_action.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);;
+
+
+question_finished
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[выполненное действие]
+	(* <- lang_ru;; *);
+	[completed action]
+	(* <- lang_en;; *);	
+
+=> nrel_idtf:
+	[прошлое действие]
+	(* <- lang_ru;; *);	
+	
+<- minor_concept;	
+
+<= nrel_subdividing:
+	{
+		question_finished_successfully;
+		question_finished_unsuccessfully
+	};
+
+<= nrel_inclusion:	
+	last_entity;
+	
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_question_finished.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);;	
+
+
+question_finished_successfully
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[успешно выполненное действие]
+	(* <- lang_ru;; *);
+	[successfully completed action]
+	(* <- lang_en;; *);	
+	
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+			-> rrel_example:
+				"file://content_html/explanation_for_question_finished_successfully.html"
+			(* <- lang_ru;; *);;
+		*);;
+	*);;		
+	
+	
+question_finished_unsuccessfully
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[безуспешно выполненное действие]
+	(* <- lang_ru;; *);
+	[unsuccessfully completed action]
+	(* <- lang_en;; *);	
+	
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+			-> rrel_example:
+				"file://content_html/explanation_for_question_finished_unsuccessfully.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);
+=> nrel_inclusion: question_finished_with_error;;
+
+question_finished_with_error
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие, выполненное с ошибкой]
+	(* <- lang_ru;; *);
+	[action performed with error]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+			-> rrel_example:
+				"file://content_html/explanation_for_question_finished_with_error.html"
+			(* <- lang_ru;; *);;
+		*);;
+	*);;
+	
+priority_actions
+<- sc_node_not_relation;	
+=> nrel_main_idtf:
+	[приоритет действия]
+	(* <- lang_ru;; *);
+	[priority actions]
+	(* <- lang_en;; *);	
+	
+-> rrel_action_with_very_high_priority;
+-> rrel_action_with_high_priority;
+-> rrel_action_with_medium_priority;
+-> rrel_action_with_low_priority;
+-> rrel_action_with_very_low_priority;
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+			-> rrel_example:
+				"file://content_html/explanation_for_priority_actions.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);;			
+	
+rrel_action_with_very_high_priority
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+	[действие с очень высоким приоритетом']
+	(* <- lang_ru;; *);
+	[action with very high priority']
+	(* <- lang_en;; *);;
+	
+rrel_action_with_high_priority
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+	[действие с высоким приоритетом']
+	(* <- lang_ru;; *);
+	[action with high priority']
+	(* <- lang_en;; *);;
+	
+rrel_action_with_medium_priority
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+	[действие со средним приоритетом']
+	(* <- lang_ru;; *);
+	[action with medium priority']
+	(* <- lang_en;; *);;
+	
+rrel_action_with_low_priority
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+	[действие с низким приоритетом']
+	(* <- lang_ru;; *);
+	[action with low priority']
+	(* <- lang_en;; *);;
+	
+rrel_action_with_very_low_priority
+<- sc_node_role_relation;	
+=> nrel_main_idtf:
+	[действие с очень низким приоритетом']
+	(* <- lang_ru;; *);
+	[action with very low priority']
+	(* <- lang_en;; *);;
+	
+
+subject
+<- sc_node_not_relation;	
+=> nrel_main_idtf:
+	[субъект]
+	(* <- lang_ru;; *);
+	[subject]
+	(* <- lang_en;; *);	
+	
+=> nrel_idtf:
+	[активная сущность]
+	(* <- lang_ru;; *);	
+	[сущность, способная самостоятельно выполнять некоторые виды действий]
+	(* <- lang_ru;; *);	
+	[агент деятельности]
+	(* <- lang_ru;; *);	
+
+=> nrel_inclusion:
+	Myself;
+	internal_subject_ostis_system;
+	external_subject_ostis_system_interaction;
+	external_subject_ostis_system_without_interaction;;
+
+	
+internal_subject_ostis_system
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[внутренний субъект ostis-системы]
+	(* <- lang_ru;; *);
+	[internal subject ostis system]
+	(* <- lang_en;; *);	
+	
+=> nrel_idtf:
+	[субъект, входящий в состав той ostis-системы, в базе знаний которой он описывается]
+	(* <- lang_ru;; *);	
+	
+=> nrel_inclusion:
+		sc_agent;
+	
+<- rrel_key_sc_element:
+	...
+	(*
+		<- note;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+			-> rrel_example:
+				"file://content_html/explanation_for_internal_subject_ostis_system.html"
+			(* <- lang_ru;; *);;
+		*);;
+	*);;	
+
+
+external_subject_ostis_system_interaction
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[внешний субъект ostis-системы, с которым осуществляется взаимодействие]
+	(* <- lang_ru;; *);
+	[external ostis system subject with which interaction occurs]
+	(* <- lang_en;; *);	
+	
+<- rrel_key_sc_element:
+	...
+	(*
+		<- note;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+			-> rrel_example:
+				"file://content_html/explanation_for_external_subject_ostis_system_interaction.html"
+			(* <- lang_ru;; *);;
+		*);;
+	*);;	
+
+
+external_subject_ostis_system_without_interaction
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[внешний субъект ostis-системы, с которым взаимодействие не происходит]
+	(* <- lang_ru;; *);
+	[external ostis system subject which doesn't interact with the system]
+	(* <- lang_en;; *);;
+
+
+actions_class
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[класс действий]
+	(* <- lang_ru;; *);
+	[actions class]
+	(* <- lang_en;; *);	
+	
+=> nrel_idtf:
+	[множество действий, однотипных в том или ином смысле]
+	(* <- lang_ru;; *);	
+	
+<= nrel_set_of_subsets:
+		question;
+
+<= nrel_subdividing:
+{
+	independent_actions_class;
+	non_independent_actions_class
+};	
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- identify_instances_rule;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+			-> rrel_example:
+				"file://content_html/identify_instances_rule_for_actions_class.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);;	
+	
+independent_actions_class
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[класс автономных действий]
+	(* <- lang_ru;; *);
+	[independent actions class]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+			-> rrel_example:
+				"file://content_html/expl_independent_actions_class.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);;
+
+non_independent_actions_class
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[класс неавтономных действий]
+	(* <- lang_ru;; *);
+	[non-independent actions class]
+	(* <- lang_en;; *);;		
+
+nrel_decomposition_of_action
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[декомпозиция действия*]
+	(* <- lang_ru;; *);
+	[decomposition of action]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[сведение действия ко множеству более простых взаимосвязанных действий*]
+	(* <- lang_ru;; *);		
+	
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+			-> rrel_example:
+				"file://content_html/explanation_for_nrel_decomposition_of_action.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);
+
+<- decomposition_relation;
+<- quasybinary_relation;;	
+
+nrel_private_action
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[поддействие*]
+	(* <- lang_ru;; *);
+	[private action*]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[частное действие*]
+	(* <- lang_ru;; *);	
+
+<- binary_relation;
+<- taxonomy_relation;
+	
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+			-> rrel_example:
+				"file://content_html/explanation_for_private_action.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);
+
+<= nrel_inclusion:
+	nrel_temporal_part;;
+
+nrel_abstract_sub_action
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[абстрактное поддействие*]
+	(* <- lang_ru;; *);
+	[abstract sub-action*]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[класс действий, частных для каждого из действий, принадлежащих некоторому классу*]
+	(* <- lang_ru;; *);;
+
+nrel_goto
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[последовательность действий*]
+	(* <- lang_ru;; *);
+	[sequence of actions*]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[порядок действий*]
+	(* <- lang_ru;; *);	
+	[бинарная ориентированная связка, описывающая то, какое действие может быть инициировано после завершения выполнения другого (предшествующего)*]
+	(* <- lang_ru;; *);	
+	[бинарная ориентированная связка, описывающая передачу управления от одного (предшествующего) действия к другому (последующему)*]
+	(* <- lang_ru;; *);	
+	[goto*]
+	(* <- lang_en;; *);	
+
+<- order_relation;
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+			-> rrel_example:
+				"file://content_html/explanation_for_nrel_goto.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);
+=> nrel_inclusion:
+	nrel_then;
+	nrel_else;
+	nrel_error;;
+
+nrel_conjunction_of_previous_actions
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[конъюнкция предшествующих действий*]
+	(* <- lang_ru;; *);
+	[conjunction of previous actions*]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[действие, заключающееся только в ожидании установлении факта завершения всех предшествующих действий]
+	(* <- lang_ru;; *);	
+	
+<= nrel_inclusion:
+	question;
+	
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_nrel_conjunction_of_previous_actions.html"
+			(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+nrel_condition_control
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[проверка условия]
+	(* <- lang_ru;; *);
+	[control of condition]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[if-действие]
+	(* <- lang_ru;; *);	
+	[действие, направленное на установление истинности или ложности заданного высказывания]
+	(* <- lang_ru;; *);
+	
+<= nrel_inclusion:
+	question;
+	
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_nrel_condition_control.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);;	
+	
+nrel_then
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[последовательность действий при положительном результате*]
+	(* <- lang_ru;; *);
+	[sequence of actions after positive result*]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[then*]
+	(* <- lang_en;; *);
+
+<- order_relation;
+	
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_nrel_then.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);;
+	
+nrel_else
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[последовательность действий при отрицательном результате*]
+	(* <- lang_ru;; *);
+	[sequence of actions after negative result*]
+	(* <- lang_en;; *);
+	
+=> nrel_idtf:
+	[else*]
+	(* <- lang_en;; *);
+	
+<- order_relation;
+	
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_nrel_else.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);;
+
+nrel_error
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[последовательность действий в случае ошибки*]
+	(* <- lang_ru;; *);
+	[sequence of actions in case of error*]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[error*]
+	(* <- lang_en;; *);
+<- order_relation;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_nrel_error.html"
+			(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+nrel_result
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[результат*]
+	(* <- lang_ru;; *);
+	[result*]
+	(* <- lang_en;; *);
+	
+=> nrel_idtf:
+	[цель*]
+	(* <- lang_ru;; *);
+	
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_nrel_result.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);;	
+	
+task
+<- sc_node_not_relation;	
+=> nrel_main_idtf:
+	[задача]
+	(* <- lang_ru;; *);
+	[task]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[sc-описание некоторого желаемого состояния или события либо в базе знаний, либо во внешней среде]
+	(* <- lang_ru;; *);
+	[формулировка задачи]
+	(* <- lang_ru;; *);	
+	[задание на выполнение некоторого действия]
+	(* <- lang_ru;; *);	
+	[постановка задачи]
+	(* <- lang_ru;; *);	
+	[описание задачной ситуации]
+	(* <- lang_ru;; *);	
+	[спецификация некоторого действия, обладающая достаточной полнотой для выполнения этого действия]
+	(* <- lang_ru;; *);	
+	[цель плюс дополнительные условия (ограничения) накладываемые на результат и\или процесс получения этого результата]
+	(* <- lang_ru;; *);
+	[описание того, что требуется сделать]
+	(* <- lang_ru;; *);		
+		
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_task.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);	
+	
+<- rrel_key_sc_element:
+	...
+	(*
+		<- identify_instances_rule;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/identify_instances_rule_for_task.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);	
+	
+<= nrel_inclusion:	
+	semantic_neighborhood;	
+
+=> nrel_inclusion:	
+	procedural_formulation_of_task;
+	declarative_formulation_of_task;
+	
+=> nrel_inclusion:	
+	task_question;
+	command;;
+
+	
+procedural_formulation_of_task
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[процедурная формулировка задачи]
+	(* <- lang_ru;; *);
+	[procedural formulation of task]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[спецификация действия, которое планируется быть выполненным]
+	(* <- lang_ru;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_procedural_formulation_of_task.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);;
+
+
+declarative_formulation_of_task
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[декларативная формулировка задачи]
+	(* <- lang_ru;; *);
+	[declarative formulation of task]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[описание ситуации (состояния), которое должно быть достигнуто в результате выполнения планируемого действия]
+	(* <- lang_ru;; *);
+
+	<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_declarative_formulation_of_task.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);;
+
+
+class_of_tasks
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[класс задач]
+	(* <- lang_ru;; *);
+	[class of tasks]
+	(* <- lang_en;; *);
+	
+<= nrel_set_of_subsets:
+		task;
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- identify_instances_rule;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/identify_instances_rule_for_class_of_tasks.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);;	
+
+
+task_question
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[вопрос]
+	(* <- lang_ru;; *);
+	[question]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[задача, направленная на удовлетворение информационной потребности некоторого субъекта-заказчика]
+	(* <- lang_ru;; *);;
+
+command
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[команда]
+	(* <- lang_ru;; *);
+	[command]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[инициированная задача]
+	(* <- lang_ru;; *);
+	[спецификация инициированного действия]
+	(* <- lang_ru;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- identify_instances_rule;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/identify_instances_rule_for_command.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);;	
+	
+command_class
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[класс команд]
+	(* <- lang_ru;; *);
+	[command class]
+	(* <- lang_en;; *);
+
+<= nrel_set_of_subsets:
+		command;
+	
+=> nrel_inclusion:
+	user_interface_command_class
+	(*
+	=> nrel_inclusion:
+		interface_command_class_of_ostis_user;;
+	*);
+		
+=> nrel_inclusion:
+	command_class_without_arguments;
+	command_class_with_one_argument;
+	command_class_with_two_arguments;
+	command_class_with_random_arguments_number;
+	
+<- rrel_key_sc_element:
+	...
+	(*
+		<- identify_instances_rule;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/identify_instances_rulen_for_command_class.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);
+
+<= nrel_subdividing: 
+	{  
+	atomic_command_class;
+	non_atomic_command_class
+	};;
+
+user_interface_command_class
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[класс интерфейсных пользовательских команд]
+	(* <- lang_ru;; *);
+	[class of user interface commands]
+	(* <- lang_en;; *);;
+	
+interface_command_class_of_ostis_user
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[класс интерфейсных команд пользователя ostis-системы]
+	(* <- lang_ru;; *);
+	[user command class of ostis_system user]
+	(* <- lang_en;; *);;
+	
+command_class_without_arguments
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[класс команд без аргументов]
+	(* <- lang_ru;; *);
+	[command class without arguments]
+	(* <- lang_en;; *);;
+
+command_class_with_one_argument
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[класс команд с одним аргументом]
+	(* <- lang_ru;; *);
+	[command class with one argument]
+	(* <- lang_en;; *);;
+	
+command_class_with_two_arguments
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[класс команд с двумя аргументом]
+	(* <- lang_ru;; *);
+	[command class with two arguments]
+	(* <- lang_en;; *);;
+	
+command_class_with_random_arguments_number
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[класс команд с произвольным числом аргументов]
+	(* <- lang_ru;; *);
+	[command class with random number of arguments]
+	(* <- lang_en;; *);;
+
+atomic_command_class
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[атомарный класс команд]
+	(* <- lang_ru;; *);
+	[atomic command class]
+	(* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_atomic_command_class.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);;
+	
+non_atomic_command_class
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[неатомарный класс команд]
+	(* <- lang_ru;; *);
+	[non-atomic command class]
+	(* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_non_atomic_command_class.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);;
+
+plan
+<- sc_node_not_relation;		
+=> nrel_main_idtf:
+	[план]
+	(* <- lang_ru;; *);
+	[plan]
+	(* <- lang_en;; *);	
+	
+=> nrel_idtf:
+	[план выполнения]
+	(* <- lang_ru;; *);
+	[план решения]
+	(* <- lang_ru;; *);	
+	
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+			-> rrel_example:
+				"file://content_html/explanation_for_plan.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);;
+
+
+program
+<- sc_node_not_relation;	
+=> nrel_main_idtf:
+	[программа]
+	(* <- lang_ru;; *);
+	[program]
+	(* <- lang_en;; *);	
+	
+=> nrel_idtf:
+	[программа выполнения действий некоторого класса]
+	(* <- lang_ru;; *);
+	[обобщенный план]
+	(* <- lang_ru;; *);	
+	[обобщенный план выполнения некоторого класса действий]
+	(* <- lang_ru;; *);	
+	[обобщенный план решения некоторого класса задач]
+	(* <- lang_ru;; *);	
+	[обобщенная спецификация декомпозиции любого действия, принадлежащего заданному классу действий]
+	(* <- lang_ru;; *);	
+	[знание о некотором классе действий (и соответствующем классе задач), позволяющее для каждого из указанных действий достаточно легко построить план его выполнения]
+	(* <- lang_ru;; *);	
+	
+<= nrel_inclusion:
+		knowledge;
+
+=> nrel_inclusion:
+		program_in_sc_memory;
+	
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_program.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);;	
+
+program_in_sc_memory
+<- sc_node_not_relation;	
+=> nrel_main_idtf:
+	[программа в sc-памяти]
+	(* <- lang_ru;; *);
+	[program in sc-memory]
+	(* <- lang_en;; *);;
+	
+protocol
+<- sc_node_not_relation;	
+=> nrel_main_idtf:
+	[протокол]
+	(* <- lang_ru;; *);
+	[protocol]
+	(* <- lang_en;; *);	
+	
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_protocol.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);;	
+
+
+decision
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[решение]
+	(* <- lang_ru;; *);
+	[decision]
+	(* <- lang_en;; *);	
+	
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_decision.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);;	
+
+nrel_performer
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[исполнитель*]
+	(* <- lang_ru;; *);
+	[performer*]
+	(* <- lang_en;; *);
+	
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_nrel_performer.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);;	
+
+nrel_executing_actions_class
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[класс выполняемых действий*]
+	(* <- lang_ru;; *);
+	[class of executing actions*]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[класс действий, выполняемых классом субъектов*]
+	(* <- lang_ru;; *);
+	
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_nrel_executing_actions_class.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);;
+	
+nrel_customer
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[заказчик*]
+	(* <- lang_ru;; *);
+	[customer*]
+	(* <- lang_en;; *);
+	
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_nrel_customer.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);;		
+
+nrel_initiator
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[инициатор*]
+	(* <- lang_ru;; *);
+	[initiator*]
+	(* <- lang_en;; *);
+	
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_nrel_initiator.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);;
+
+nrel_object
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[объект*]
+	(* <- lang_ru;; *);
+	[object*]
+	(* <- lang_en;; *);
+	
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_nrel_object.html"
+			(* <- lang_ru;; *);;
+		*);;
+	*);;		
+	
+nrel_context_of_action
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[контекст действия*]
+	(* <- lang_ru;; *);
+	[action context*]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[задачная ситуация*]
+	(* <- lang_ru;; *);
+	[что дано*]
+	(* <- lang_ru;; *);
+	[дополнительная информация о тех сущностях, которые входят в описание цели*]
+	(* <- lang_ru;; *);
+	[связь между некоторой задачей (формулировкой задачи) и состоянием базы знаний, возможностей и навыков некоторого субъекта, перед которым поставлена указанная задача*]
+	(* <- lang_ru;; *);
+	[связь между формулировкой задачи, т.е. описанием того, что требуется, и контекстом этой задачи, т.е. описанием имеющихся ресурсов, описанием того, что дано*]
+	(* <- lang_ru;; *);
+	
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_nrel_context_of_action.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);;
+
+rrel_argument_of_action
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+	[аргумент действия']
+	(* <- lang_ru;; *);
+	[action argument']
+	(* <- lang_en;; *);
+	
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_rrel_argument_of_action.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);
+
+=> nrel_inclusion:
+	rrel_first_action_argument;
+	rrel_second_section_argument;
+	rrel_third_section_argument;;
+
+rrel_first_action_argument
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+	[первый аргумент действия']
+	(* <- lang_ru;; *);
+	[first action argument']
+	(* <- lang_en;; *);;
+	
+rrel_second_section_argument
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+	[второй аргумент действия']
+	(* <- lang_ru;; *);
+	[second action argument']
+	(* <- lang_en;; *);;
+	
+rrel_third_section_argument
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+	[третий аргумент действия']
+	(* <- lang_ru;; *);
+	[third action argument']
+	(* <- lang_en;; *);;
+	
+nrel_class_of_arguments
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[класс аргументов*]
+	(* <- lang_ru;; *);
+	[arguments class*]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[класс аргументов класса команд*]
+	(* <- lang_ru;; *);
+	[быть классом sc-элементов, экземпляры которого являются аргументами для заданного класса команд*]
+	(* <- lang_ru;; *);
+	
+=> nrel_inclusion:
+	nrel_first_argument_class;
+	nrel_second_argument_class;
+	
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_nrel_class_of_arguments.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);;
+	
+nrel_first_argument_class
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[класс первых аргументов*]
+	(* <- lang_ru;; *);
+	[first arguments class*]
+	(* <- lang_en;; *);;
+	
+nrel_second_argument_class
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[класс вторых аргументов*]
+	(* <- lang_ru;; *);
+	[second arguments class*]
+	(* <- lang_en;; *);;

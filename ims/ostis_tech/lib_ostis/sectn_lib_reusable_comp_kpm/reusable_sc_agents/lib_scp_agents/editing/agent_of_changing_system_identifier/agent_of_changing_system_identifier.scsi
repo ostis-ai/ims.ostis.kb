@@ -1,0 +1,190 @@
+agent_of_changing_system_identifier
+=> nrel_main_idtf:
+	[агентная scp-программа замены системного идентификатора на указанный файл] (* <- lang_ru;; *);
+	[agent scp-program of changing system identifier on specified file] (* <- lang_en;; *);
+	<- agent_scp_program;;
+
+scp_program -> agent_of_changing_system_identifier
+	(*
+	-> rrel_params: .agent_of_changing_system_identifier_params
+		(*
+		-> rrel_1: rrel_in: _event;;
+		-> rrel_2: rrel_in: _input_arc;;
+		*);;
+
+	-> rrel_operators: .agent_of_changing_system_identifier_operator_set 
+		(*
+		-> rrel_init: .agent_of_changing_system_identifier_operator1A 
+			(*
+			<- searchElStr3;;
+		
+			-> rrel_1: rrel_assign: rrel_scp_var: _temp;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: _input_arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _quest;;
+		
+			=> nrel_goto: .agent_of_changing_system_identifier_operator1B;;
+			*);;
+
+		-> .agent_of_changing_system_identifier_operator1B 
+			(*
+			<- searchElStr3;;
+		
+			-> rrel_1: rrel_fixed: rrel_scp_const: action_to_change_system_identifier;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+
+			=> nrel_then: .agent_of_changing_system_identifier_operator1C1;;
+			=> nrel_else: .agent_of_changing_system_identifier_operator_return;;
+			*);;
+
+		-> .agent_of_changing_system_identifier_operator1C1
+		 	(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _param1;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_1;;
+
+			=> nrel_then: .agent_of_changing_system_identifier_operator1C2;;
+			=> nrel_else: .agent_of_changing_system_identifier_operator_return;;
+			*);;
+
+		-> .agent_of_changing_system_identifier_operator1C2
+			(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _param2;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_2;;
+
+			=> nrel_then: .agent_of_changing_system_identifier_operator2A;;
+			=> nrel_else: .agent_of_changing_system_identifier_operator_return;;
+			*);;
+
+		-> .agent_of_changing_system_identifier_operator2A 
+			(*
+			<- genEl;;
+
+			-> rrel_1: rrel_assign: rrel_const: rrel_node: rrel_scp_var: _answer_of_change_system_element;;
+
+			=> nrel_goto: .agent_of_changing_system_identifier_operator2B;; 
+			*);;
+
+		-> .agent_of_changing_system_identifier_operator2B 
+			(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _param1;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc_remove;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _node_change;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_system_identifier;;
+
+			=> nrel_then: .agent_of_changing_system_identifier_operator2C;;
+			=> nrel_else: .agent_of_changing_system_identifier_operator_return;;
+			*);;
+
+		->.agent_of_changing_system_identifier_operator2C
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _arc_remove;;
+
+			=> nrel_goto: .agent_of_changing_system_identifier_operator2D;;
+			*);;
+
+		->.agent_of_changing_system_identifier_operator2D
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _node_change;;
+
+			=> nrel_goto: .agent_of_changing_system_identifier_operator2E;;
+			*);;
+
+		-> .agent_of_changing_system_identifier_operator2E
+			(*
+			<- genElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _param1;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_common: rrel_scp_var: _arc_change;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _param2;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc_nrel;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_system_identifier;;
+
+			=> nrel_goto: .agent_of_changing_system_identifier_operator3A;;
+			*);;
+
+		-> .agent_of_changing_system_identifier_operator3A
+			(*
+			<- searchSetStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _param1;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_common: rrel_scp_var: _arc_change;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _param2;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc_nrel;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_system_identifier;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_of_change_system_element;;
+			-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_of_change_system_element;;
+
+			=> nrel_goto: .agent_of_changing_system_identifier_operator3B;;
+			*);;
+
+		-> .agent_of_changing_system_identifier_operator3B 
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_change_system_element;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _param1;;
+
+			=> nrel_goto: .agent_of_changing_system_identifier_operator3C;;
+			*);;
+
+		-> .agent_of_changing_system_identifier_operator3C 
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_change_system_element;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _param2;;
+
+			=> nrel_goto: .agent_of_changing_system_identifier_operator3D;;
+			*);;
+
+		-> .agent_of_changing_system_identifier_operator3D 
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_change_system_element;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_const: nrel_system_identifier;;
+
+			=> nrel_goto: .agent_of_changing_system_identifier_operator3E;;
+			*);;
+
+		-> .agent_of_changing_system_identifier_operator3E
+			(*
+			<- genElStr5;;
+		  	
+			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_const: rrel_common: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _answer_of_change_system_element;;
+			-> rrel_4: rrel_assign:rrel_pos_const_perm: rrel_const: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_answer;;
+
+			=> nrel_goto: .agent_of_changing_system_identifier_operator_return;;
+			*);; 
+
+		-> .agent_of_changing_system_identifier_operator_return
+		 	(*
+		  	<- return;;
+			*);;
+		*);;
+	*);;
+

@@ -1,0 +1,26 @@
+lib_component_proc_of_finding_identifier_extended
+=> nrel_main_idtf:
+	[Компонент библиотеки. Scp-программа поиска идентификаторов и основных идентификаторов]
+	(* <- lang_ru;; *);
+	[Library component. Scp-program of finding identifiers and main identifiers]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components;
+
+-> rrel_key_sc_element: 
+	proc_of_finding_identifier_extended;
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Proc_Of_Finding_Identifier_Extended.html" 
+				(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+lib_component_proc_of_finding_identifier_extended = [*^"file://proc_of_finding_identifier_extended.scsi"*];;

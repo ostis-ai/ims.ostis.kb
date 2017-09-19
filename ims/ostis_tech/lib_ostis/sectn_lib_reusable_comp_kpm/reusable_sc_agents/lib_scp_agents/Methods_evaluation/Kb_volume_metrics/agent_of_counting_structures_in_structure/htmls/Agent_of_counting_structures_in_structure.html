@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+</head>
+<body>
+	<p><b>Задача:</b> подсчет количества знаков <b><sc_element sys_idtf="structure">структур</sc_element></b>, принадлежащих заданной структуре.</p>
+	<p><b>Описание:</b> агент находит все элементы, принадлежащие заданной структуре под атрибутом <b><sc_element sys_idtf="rrel_struct">rrel_struct</sc_element></b> и вызывает для них  <b><sc_element sys_idtf="proc_of_cardinality_counting_without_multiple_occurrences">scp-программу подсчёта мощности множества без учёта кратных вхождений</sc_element></b> либо, если используется контекст для ограничения области поиска агента,	<b><sc_element sys_idtf="proc_of_cardinality_counting_without_multiple_occurrences_with_context">scp-программу подсчёта мощности множества без учёта кратных вхождений в рамках заданного контекста</sc_element>.</b></p>
+	<p><b>Инициализация:</b> появление в памяти вопросной конструкции, соответствующей <b><sc_element sys_idtf="action_to_count_structures_in_structure">запросу посчитать количество знаков структур в структуре</sc_element></b></p>
+	<p><b>Аргументы:</b> <b><sc_element sys_idtf="structure">структура</sc_element></b>, контекст(необязательный).</p>
+	<p><b>Результаты:</b>
+	<ul>
+		<li>Если на вход подан корректный аргумент, будет выведено число - количество знаков структур, принадлежащих заданной структуре.</li>
+		<li>Если на вход подан не корректный аргумент(первый или второй), будет сгенерировано сообщение о некорректном аргументе.</li>
+	</ul>
+	<p><b>Пример:</b> </p>
+	<p><figure><img src="example_agent_of_counting_structures_in_structure.png" alt="Пример работы агента"> </figure></p>
+</body>
+</html>

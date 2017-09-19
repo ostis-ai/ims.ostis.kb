@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+</head>
+<body>
+	<p><b>Задача:</b> подсчет количества <b><sc_element sys_idtf="relation">относительных</sc_element></b> и <b><sc_element sys_idtf="concept">абсолютных</sc_element></b> понятий базы знаний.</p>
+	<p><b>Описание:</b> агент находит экземпляры класса <b><sc_element sys_idtf="subject_domain">предметная область</sc_element></b> под атрибутами  <b><sc_element sys_idtf="rrel_maximum_studied_object_class">максимальный объект исследования</sc_element></b>,  <b><sc_element sys_idtf="rrel_not_maximum_studied_object_class">немаксимальный объект исследования</sc_element></b> и  <b><sc_element sys_idtf="rrel_explored_relation">исследуемое отношение</sc_element></b>, и для них вызывает <b><sc_element sys_idtf="proc_of_cardinality_calculation">процедуру подсчета мощности множества</sc_element></b>.</p>
+	<p><b>Инициализация:</b> появление в памяти вопросной конструкции, соответствующей <b><sc_element sys_idtf = "action_to_calculate_number_of_concepts_and_relations">действию. подсчитать количество относительных и абсолютных понятий базы знаний</sc_element></b>.</p>
+	<p><b>Аргументы:</b> отсутствуют.</p>
+	<p><b>Результаты:</b>
+	<ul>
+		<li>Число - количество абсолютных и относительных понятий в базе знаний.</li>
+	</ul>
+	<p><b>Пример:</b> </p>
+	<p><figure><img src="example_agent_of_calculation_number_of_concepts_and_relations.png" alt="Пример работы агента"> </figure></p>
+</body>
+</html>

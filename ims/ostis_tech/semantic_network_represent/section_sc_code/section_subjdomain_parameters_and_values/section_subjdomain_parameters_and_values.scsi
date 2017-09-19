@@ -1,0 +1,1097 @@
+subjdomain_parameters_and_values
+
+=> nrel_main_idtf:
+	[Предметная область параметров и величин]
+	(* <- lang_ru;; *);
+	[Subject domain of parameters and values]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[Предметная область параметров и классов эквивалентности, являющихся их элементами (значениями, величинами)]
+	(* <- lang_ru;; *);
+
+<- subject_domain;
+<- sc_node_struct;
+<- structure;
+-> rrel_maximum_studied_object_class:
+	parameter;
+-> rrel_not_maximum_studied_object_class:
+	measurable_parameter;
+	immeasurable_parameter;
+	level_class_equivalence;
+	value;
+	exact_value;
+	inaccurate_value;
+	interval_value;
+	parametric_model;
+	measurement_of_fixed_measure;
+	scale;
+	action_measurement;
+	task_measurement;
+	arithmetical_expression_values;
+	arithmetic_operation_on_the_values_for_values;
+-> rrel_explored_relation:
+	nrel_param_definitional_domain;
+	rrel_standard;
+	nrel_measurement;
+	nrel_accuracy;
+	nrel_measure;
+	nrel_zero_mark;
+	nrel_sum_of_quantities;
+	nrel_composition_of_quantities;
+	nrel_pow_of_quantities;
+	nrel_large_quantitie;
+	nrel_equal_of_quantities;
+	nrel_greater_or_equal_quantitie;;
+
+parameter
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[параметр]
+	(* <- lang_ru;; *);
+	[parameter]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[характеристика]
+	(* <- lang_ru;; *);
+	[свойство]
+	(* <- lang_ru;; *);
+	[признак]
+	(* <- lang_ru;; *);
+	[класс классов]
+	(* <- lang_ru;; *);
+	[измеряемое свойство]
+	(* <- lang_ru;; *);
+	[признак классификации или покрытия некоторого класса сущностей]
+	(* <- lang_ru;; *);
+	[признак разбиения или покрытия некоторого класса сущностей]
+	(* <- lang_ru;; *);
+	[семейство множеств, разбивающих или покрывающих некоторый класс сущностей]
+	(* <- lang_ru;; *);
+	[семейство классов сущностей, обладающих одинаковым соответствующим свойством]
+	(* <- lang_ru;; *);
+	[фактор-множество, соответствующее некоторому отношению эквивалентности, или аналог фактор-множества, соответствующий некоторому отношению толерантности]
+	(* <- lang_ru;; *);
+
+<= nrel_subdividing:
+	{
+	measurable_parameter;
+	immeasurable_parameter
+	};
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://nl_files/explanation_for_parameter.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- description_of_a_typical_instance;;
+	<= nrel_sc_text_translation:
+	...
+		(*
+		-> rrel_example:
+			"file://nl_files/parameter.png";;
+		*);;
+	*);;
+
+
+nrel_param_definitional_domain
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[область определения параметра*]
+	(* <- lang_ru;; *);
+	[parameter definitional domain*]
+	(* <- lang_en;; *);
+
+=> nrel_first_domain:
+ 		parameter;
+ => nrel_second_domain:
+ 		set;
+ 
+ => nrel_definitional_domain:
+ 		...
+ 		(*
+ 			<= nrel_combination:
+ 			{
+ 				set;
+ 				parameter
+ 			};;
+ 		*);
+
+=> nrel_idtf:
+	[множество всех тех и только тех сущностей, которые являются компонентами значений заданного параметра*]
+	(* <- lang_ru;; *);
+	[множество всех тех и только тех сущностей, которые обладают заданным параметром*]
+	(* <- lang_ru;; *);
+
+<= nrel_inclusion:
+	nrel_combination;;
+
+
+measurable_parameter
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[измеряемый параметр]
+	(* <- lang_ru;; *);
+	[measurable parameter]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[количественный параметр]
+	(* <- lang_ru;; *);
+	[семейство измеряемых величин]
+	(* <- lang_ru;; *);
+	[семейство классов эквивалентности, каждому из которых может быть поставлено в соответствие числовое значение]
+	(* <- lang_ru;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://nl_files/explanation_for_measurable_parameter.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
+
+
+immeasurable_parameter
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[неизмеряемый параметр]
+	(* <- lang_ru;; *);
+	[immeasurable parameter]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[качественный параметр]
+	(* <- lang_ru;; *);;
+
+
+
+level_class_equivalence
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[уровень класса эквивалентности]
+	(* <- lang_ru;; *);
+	[level of class equivalence]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[уровень параметра]
+	(* <- lang_ru;; *);
+
+<- parameter;
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://nl_files/explanation_for_level_class_equivalence.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- description_of_a_typical_instance;;
+	<= nrel_sc_text_translation:
+	...
+		(*
+		-> rrel_example:
+			"file://nl_files/color.png";;
+		*);;
+	*);;
+
+value
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[величина]
+	(* <- lang_ru;; *);
+	[value]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[значение количественного параметра]
+	(* <- lang_ru;; *);
+	[значение измеряемого параметра]
+	(* <- lang_ru;; *);
+	[класс сущностей, имеющих одинаковое значение соответствующего параметра]
+	(* <- lang_ru;; *);
+
+=> nrel_inclusion:
+	exact_value;
+	inaccurate_value;
+	interval_value;
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://nl_files/explanation_for_value.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
+
+exact_value
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[точная величина]
+	(* <- lang_ru;; *);
+	[the exact value]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[точное значение параметра]
+	(* <- lang_ru;; *);
+	[множество всех точных значений параметра]
+	(* <- lang_ru;; *);
+	[значение параметра, являющееся семейством классов эквивалентности, соответствующим некоторому отношению эквивалентности]
+	(* <- lang_ru;; *);
+	[класс эквивалентности]
+	(* <- lang_ru;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://nl_files/explanation_for_exact_value.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- description_of_a_typical_instance;;
+	<= nrel_sc_text_translation:
+	...
+		(*
+		-> rrel_example:
+			"file://nl_files/exact_value.png";;
+		*);;
+	*);
+
+=> nrel_comment:
+	...
+	(*
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> [<p>В данном примере <i>ki</i> обозначает класс сущностей, имеющих длину ровно 5 метров. Конкретный пример такой сущности - <i>bi.</i></p>]
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+			*);;
+		*);;
+	*);;
+
+inaccurate_value
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[неточная величина]
+	(* <- lang_ru;; *);
+	[the inaccurate value]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[множество неточных значений параметра]
+	(* <- lang_ru;; *);
+	[приблизительная величина]
+	(* <- lang_ru;; *);
+	[приблизительное значение параметра]
+	(* <- lang_ru;; *);
+	[значение параметра в интервале с нефиксированными границами]
+	(* <- lang_ru;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://nl_files/explanation_for_inaccurate_value.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- description_of_a_typical_instance;;
+	<= nrel_sc_text_translation:
+	...
+		(*
+		-> rrel_example:
+			"file://nl_files/inaccurate_value.png";;
+		*);;
+	*);
+
+=> nrel_comment:
+	...
+	(*
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> [<p>В данном примере <i>ki</i> обозначает класс сущностей, имеющих длину примерно 25 метров, при этом максимально возможное отклонение от этого значения составляет <i>kj</i>, то есть 2 метра. Конкретный пример такой сущности - <i>bi</i>.</p>]
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+			*);;
+		*);;
+	*);;
+
+interval_value
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[интервальная величина]
+	(* <- lang_ru;; *);
+	[the interval value]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[интервальное значение параметра]
+	(* <- lang_ru;; *);
+	[значение параметра в интервале с фиксированными границами]
+	(* <- lang_ru;; *);
+	[интервал значения параметра из множества пересекающихся интервалов разной длины, имеющих нефиксированные границы]
+	(* <- lang_ru;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://nl_files/explanation_for_interval_value.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- description_of_a_typical_instance;;
+	<= nrel_sc_text_translation:
+	...
+		(*
+		-> rrel_example:
+			"file://nl_files/interval_value.png";;
+		*);;
+	*);
+
+=> nrel_comment:
+	...
+	(*
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> [<p>В данном примере <i>ki</i> обозначает класс сущностей, имеющих длину, которая лежит в интервале от <i>kj</i> до <i>kl</i>, то есть в интервале от 4 до 5 метров, а <i>bi</i> – конкретный пример такой сущности.</p>]
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+			*);;
+		*);;
+	*);;
+
+
+rrel_standard
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+	[эталон']
+	(* <- lang_ru;; *);
+	[standard']
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[образец']
+	(* <- lang_ru;; *);
+
+=> nrel_first_domain:
+ 		parameter;
+ => nrel_second_domain:
+ 		value;
+ 
+ => nrel_definitional_domain:
+ 		...
+ 		(*
+ 			<= nrel_combination:
+ 			{
+ 				value;
+ 				parameter
+ 			};;
+ 		*);
+
+<- role_relation;
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://nl_files/explanation_for_rrel_standard.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
+
+
+nrel_measurement
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[измерение*]
+	(* <- lang_ru;; *);
+	[measurement*]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[значение параметра*]
+	(* <- lang_ru;; *);
+	[значение величины*]
+	(* <- lang_ru;; *);
+	[измерение как соответствие*]
+	(* <- lang_ru;; *);
+	[результат измерения заданной величины в заданной единице измерения и по заданной шкале*]
+	(* <- lang_ru;; *);
+	[бинарное ориентированное отношение, связывающее различные величины с результатами их измерения в различных единицах измерения и по различным шкалам*]
+	(* <- lang_ru;; *);
+
+=> nrel_first_domain:
+ 		parameter;
+ => nrel_second_domain:
+ 		value;
+ 
+ => nrel_definitional_domain:
+ 		...
+ 		(*
+ 			<= nrel_combination:
+ 			{
+ 				value;
+ 				parameter
+ 			};;
+ 		*);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://nl_files/explanation_for_nrel_measurement.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
+
+nrel_accuracy
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[точность*]
+	(* <- lang_ru;; *);
+	[accuracy*]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[отклонение*]
+	(* <- lang_ru;; *);
+	[степень точности неточного значения параметра*]
+	(* <- lang_ru;; *);
+
+=> nrel_first_domain:
+ 		inaccurate_value;
+ => nrel_second_domain:
+ 		exact_value;
+ 
+ => nrel_definitional_domain:
+ 		...
+ 		(*
+ 			<= nrel_combination:
+ 			{
+ 				inaccurate_value;
+ 				exact_value
+ 			};;
+ 		*);
+
+<- binary_relation;
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://nl_files/explanation_for_nrel_accuracy.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
+
+
+parametric_model
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[параметрическая модель]
+	(* <- lang_ru;; *);
+	[parametric model]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[параметрическая спецификация]
+	(* <- lang_ru;; *);
+	[параметрическое sc-описание заданной сущности]
+	(* <- lang_ru;; *);
+	[описание сущности как точки в некотором параметрическом (признаковом) пространстве]
+	(* <- lang_ru;; *);
+
+<= nrel_inclusion:
+	semantic_neighborhood;
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://nl_files/explanation_for_parametric_model.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
+	
+nrel_measure
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[единица измерения*]
+	(* <- lang_ru;; *);
+	[measure*]
+	(* <- lang_en;; *);
+
+=> nrel_first_domain:
+ 		measurement_of_fixed_measure;
+ => nrel_second_domain:
+ 		exact_value;
+ 
+ => nrel_definitional_domain:
+ 		...
+ 		(*
+ 			<= nrel_combination:
+ 			{
+ 				measurement_of_fixed_measure;
+ 				exact_value
+ 			};;
+ 		*);
+
+<- binary_relation;
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://nl_files/explanation_for_nrel_measure.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
+
+
+measurement_of_fixed_measure
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[измерение с фиксированной единицей измерения]
+	(* <- lang_ru;; *);
+	[measurement of fixed measure]
+	(* <- lang_en;; *);
+
+<= nrel_set_of_subsets:
+	nrel_measurement;
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://nl_files/explanation_for_measurement_of_fixed_measure.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
+
+scale
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[измерение по шкале]
+	(* <- lang_ru;; *);
+	[scale]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[шкала]
+	(* <- lang_ru;; *);
+
+<= nrel_set_of_subsets:
+	nrel_measurement;
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://nl_files/explanation_for_scale.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- description_of_a_typical_instance;;
+	<= nrel_sc_text_translation:
+	...
+		(*
+		-> rrel_example:
+			"file://nl_files/scale.png";;
+		*);;
+	*);
+
+=> nrel_comment:
+	...
+	(*
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> [<p>В данном примере <i>ki</i> обозначает класс сущностей, имеющих точную температуру в 330 К, а <i>bi</i> – конкретный пример такой сущности.</p>]
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+			*);;
+		*);;
+	*);;
+
+
+nrel_zero_mark
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[нулевая отметка*]
+	(* <- lang_ru;; *);
+	[zero mark*]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[нуль по шкале*]
+	(* <- lang_ru;; *);
+	[начало отсчета*]
+	(* <- lang_ru;; *);
+
+=> nrel_first_domain:
+ 		scale;
+ => nrel_second_domain:
+ 		exact_value;
+ 
+ => nrel_definitional_domain:
+ 		...
+ 		(*
+ 			<= nrel_combination:
+ 			{
+ 				scale;
+ 				exact_value
+ 			};;
+ 		*);
+
+<- binary_relation;
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://nl_files/explanation_for_nrel_zero_mark.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
+
+action_measurement
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. измерение]
+	(* <- lang_ru;; *);
+	[action. measurement]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[измерение как действие]
+	(* <- lang_ru;; *);
+	[действие, направленное на установление связи, принадлежащей отношению измерение* и связывающей величину, которая принадлежит заданному параметру, и которой принадлежит заданная сущность, и соответствующее значение этой величины на некоторой шкале]
+	(* <- lang_ru;; *);
+	[действие, направленное на решение задачи измерения заданного параметра у заданной сущности]
+	(* <- lang_ru;; *);
+
+<= nrel_inclusion:
+	question;;
+
+task_measurement
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[задача. измерение]
+	(* <- lang_ru;; *);
+	[task. measurement]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[спецификация действия измерения]
+	(* <- lang_ru;; *);
+	[спецификация действия, целью которого является измерение заданного параметра у заданной сущности]
+	(* <- lang_ru;; *);
+
+<= nrel_inclusion:
+	task;;
+
+arithmetical_expression_values
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[арифметическое выражение на величинах]
+	(* <- lang_ru;; *);
+	[arithmetical expression values]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://nl_files/arithmetical_expression_values.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
+
+arithmetic_operation_on_the_values_for_values
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[арифметическое выражение на величинах]
+	(* <- lang_ru;; *);
+	[arithmetical expression values]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://nl_files/arithmetic_operation_on_the_values_for_values.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
+arithmetic_operation_on_the_values_for_values<= nrel_set_of_subsets: arithmetical_expression_values;;
+
+arithmetic_operation_on_the_values
+=> nrel_main_idtf:
+	[арифметическая операция на величинах]
+	(* <- lang_ru;; *);
+	[arithmetic operation on the values]
+	(* <- lang_en;; *);;
+
+nrel_sum_of_quantities
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[сумма величин*]
+	(* <- lang_ru;; *);
+	[sum of quantities*]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[сложение величин*]	
+	(* <- lang_ru;; *);
+<- arithmetic_operation_on_the_values;
+<- quasybinary_relation;
+
+=> nrel_first_domain:
+ 		value;
+ => nrel_second_domain:
+ 		value;
+ 
+ => nrel_definitional_domain:
+ 		value;
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://nl_files/nrel_sum_of_quantities.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
+
+nrel_composition_of_quantities
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[произведение величин*]
+	(* <- lang_ru;; *);
+	[composition of quantities*]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[умножение величин*]	
+	(* <- lang_ru;; *);
+
+=> nrel_first_domain:
+ 		...
+ 		(*
+ 			<= nrel_combination:
+ 			{
+ 				value;
+ 				number
+ 			};;
+ 		*);
+ => nrel_second_domain:
+ 		value;
+ 
+ => nrel_definitional_domain:...
+ 		(*
+ 			<= nrel_combination:
+ 			{
+ 				value;
+ 				number
+ 			};;
+ 		*);
+ 		
+<- arithmetic_operation_on_the_values;
+<- quasybinary_relation;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://nl_files/nrel_composition_of_quantities.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- description_of_a_typical_instance;;
+	<= nrel_sc_text_translation:
+	...
+		(*
+		-> rrel_example:
+			"file://nl_files/composition.png";;
+		*);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- description_of_a_typical_instance;;
+	<= nrel_sc_text_translation:
+	...
+		(*
+		-> rrel_example:
+			"file://nl_files/composition2.png";;
+		*);;
+	*);;
+
+nrel_pow_of_quantities
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[возведение величин в степень*]
+	(* <- lang_ru;; *);
+	[pow of quantities*]
+	(* <- lang_en;; *);
+=> nrel_first_domain: 
+	...
+	(*
+		<= nrel_inclusion: oriented_set;;
+		<= nrel_inclusion: pair_set;;
+
+	*);
+=> nrel_second_domain:
+ 		value;
+=> nrel_definitional_domain:
+	...
+	(*
+		<= nrel_combination:
+		{
+			value;
+			number
+		};;
+
+	*);
+<- arithmetic_operation_on_the_values;
+<- ternary_relation;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://nl_files/nrel_pow_of_quantities.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- description_of_a_typical_instance;;
+	<= nrel_sc_text_translation:
+	...
+		(*
+		-> rrel_example:
+			"file://nl_files/pow.png";;
+		*);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- description_of_a_typical_instance;;
+	<= nrel_sc_text_translation:
+	...
+		(*
+		-> rrel_example:
+			"file://nl_files/pow2.png";;
+		*);;
+	*);;
+
+nrel_large_quantitie
+=> nrel_main_idtf:
+	[большая величина*]
+	(* <- lang_ru;; *);
+	[large quantitie*]
+	(* <- lang_en;; *);
+<- arithmetic_operation_on_the_values;
+<- binary_relation;
+<- sc_node_norole_relation;
+<- strict_order_relation;
+=> nrel_first_domain:
+ 		value;
+=> nrel_second_domain:
+ 		value;
+=> nrel_definitional_domain:
+ 		value;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://nl_files/nrel_large_quantitie.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
+
+nrel_equal_of_quantities
+=> nrel_main_idtf:
+	[равенство величин*]
+	(* <- lang_ru;; *);
+	[equal of quantities*]
+	(* <- lang_en;; *);
+<- binary_relation;
+<- arithmetic_operation_on_the_values;
+<- sc_node_norole_relation;
+<- equivalence_relation;
+=> nrel_first_domain:
+ 		value;
+=> nrel_second_domain:
+ 		value;
+=> nrel_definitional_domain:
+ 		value;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://nl_files/nrel_equal_of_quantities.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
+
+nrel_greater_or_equal_quantitie
+=> nrel_main_idtf:
+	[большая или равная величина*]
+	(* <- lang_ru;; *);
+	[greater or equal quantitie*]
+	(* <- lang_en;; *);
+<- sc_node_norole_relation;
+<- arithmetic_operation_on_the_values;
+<- binary_relation;
+<- non_strict_order_relation;
+=> nrel_first_domain:
+ 		value;
+=> nrel_second_domain:
+ 		value;
+=> nrel_definitional_domain:
+ 		value;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://nl_files/nrel_greater_or_equal_quantitie.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;

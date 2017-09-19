@@ -1,0 +1,42 @@
+section_technique
+=> nrel_main_idtf:
+	[Раздел. Методика проектирования компьютерных систем по Технологии OSTIS]
+	(* <- lang_ru;; *);
+	[Section. Technique of designing computer systems technologies OSTIS]
+	(* <- lang_en;; *);
+
+<- not_enough_formed_structure;
+<= nrel_section_decomposition:
+	{
+		section_subjdomain_ostis_systems
+		(*
+		=> nrel_section_base_order: 
+			section_general_technique_evolutionary_iterative_design_OSTIS;;
+		*);
+		section_general_technique_evolutionary_iterative_design_OSTIS
+		(*
+		=> nrel_section_base_order: 
+			section_technique_of_designing_unified_semantic_models_of_kb;;
+		*);
+		section_technique_of_designing_unified_semantic_models_of_kb
+		(*
+		=> nrel_section_base_order:
+			section_methodology_for_programs_development;;
+		*);
+		section_methodology_for_programs_development
+		(*
+		=> nrel_section_base_order:
+			section_technique_design_of_unified_kpm;;
+		*);
+		section_technique_design_of_unified_kpm
+		(*
+		=> nrel_section_base_order:
+			section_technique_design_of_unified_ui;;
+		*);
+		section_technique_design_of_unified_ui
+		(*
+		=> nrel_section_base_order:
+			section_set_of_techniques_intelligent_systems_design;;
+		*);
+		section_set_of_techniques_intelligent_systems_design
+	};;

@@ -1,0 +1,38 @@
+<p>
+Операторы класса 
+<b><sc_element sys_idtf  = "genElStr3">scp-оператор генерации трехэлементной структуры</sc_element></b> описывают действие генерации всех либо некоторых 
+<sc_element sys_idtf  = "sc_element">sc-элементов</sc_element> указанного типа, составляющих 
+<sc_element sys_idtf  = "sc_3_el_str">трехэлементную структуру</sc_element>. Каждый оператор данного класса содержит три операнда.
+</p>
+<p>	
+Первый операнд может иметь произвольный 
+тип значения <sc_element sys_idtf  = "rrel_scp_operand">scp-операнда'</sc_element>, и соответствует первому элементу трехэлементной структуры.
+</p>
+<p>	
+Второй операнд может иметь произвольный 
+тип значения <sc_element sys_idtf  = "rrel_scp_operand">scp-операнда'</sc_element>, и соответствует второму элементу 
+<sc_element sys_idtf  = "sc_3_el_str">трехэлементной структуры</sc_element>.
+</p>
+<p>	
+В случае, если данный операнд помечен как 
+<sc_element sys_idtf  = "rrel_assign">scp-операнд со свободным значением'</sc_element>, то генерируется 
+<sc_element sys_idtf  = "sc_connector">sc-коннектор</sc_element> указанного типа. В случае, если данный операнд помечен как 
+<sc_element sys_idtf  = "rrel_fixed">scp-операнд с заданным значением'</sc_element>, то 
+<sc_element sys_idtf  = "sc_connector">sc-коннектор</sc_element> не генерируется, а будут изменены оба или один из инцидентных ему 
+<sc_element sys_idtf  = "sc_element">sc-элемента</sc_element>. То есть можно сказать, что будут «переставлены» начало и/или конец данного 
+<sc_element sys_idtf  = "sc_connector">sc-коннектора</sc_element>. При этом физический адрес 
+<sc_element sys_idtf  = "sc_connector">sc-коннектора</sc_element> может измениться, но конфигурация окружающей его семантической сети (входящие и выходящие 
+<sc_element sys_idtf  = "sc_connector">sc-коннекторы</sc_element>, если такие были) будет полностью соответствовать той, что была до выполнения оператора.
+</p>
+<p>	
+Третий операнд может иметь произвольный 
+тип значения <sc_element sys_idtf  = "rrel_scp_operand">scp-операнда'</sc_element>, и соответствует третьему элементу 
+<sc_element sys_idtf  = "sc_3_el_str">трехэлементной структуры</sc_element>.
+</p>
+<p>	
+В результате выполнения оператора для всех операндов, помеченных как 
+<sc_element sys_idtf  = "rrel_assign">scp-операнд со свободным значением'</sc_element>, будет сгенерировано значение, т.е. новый 
+<sc_element sys_idtf  = "sc_element">sc-элемент</sc_element> соответствующего типа, с учетом уточнений типа. Тип генерируемого 
+<sc_element sys_idtf  = "sc_element">sc-элемента</sc_element> может быть уточнен при помощи подмножеств ролевого отношения 
+<sc_element sys_idtf  = "rrel_type_of_sc_element">тип sc-элемента'</sc_element>.
+</p>

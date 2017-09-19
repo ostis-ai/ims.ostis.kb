@@ -1,0 +1,26 @@
+lib_component_proc_count_number_of_class_instances
+=> nrel_main_idtf:
+	[Компонент библиотеки. scp-программа  вычисления количества элементов класса]
+	(* <- lang_ru;; *);
+	[Library component. scp-program of counting number of class instances]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components;
+
+-> rrel_key_sc_element: 
+	proc_count_number_of_class_instances;
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/proc_count_number_of_class_instances.html" 
+				(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+lib_component_proc_count_number_of_class_instances = [*^"file://proc_count_number_of_class_instances.scsi"*];;

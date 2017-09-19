@@ -1,0 +1,26 @@
+lib_component_proc_of_finding_definitional_domain
+=> nrel_main_idtf:
+	[Компонент библиотеки. scp-программа поиска области определения отношения]
+		(* <- lang_ru;; *);
+	[Library component. scp-program of finding the definitional domain of relation]
+		(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components;
+
+-> rrel_key_sc_element: 
+	proc_of_finding_definitional_domain;
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/proc_of_finding_definitional_domain.html" 
+				(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+lib_component_proc_of_finding_definitional_domain = [*^"file://proc_of_finding_definitional_domain.scsi"*];;

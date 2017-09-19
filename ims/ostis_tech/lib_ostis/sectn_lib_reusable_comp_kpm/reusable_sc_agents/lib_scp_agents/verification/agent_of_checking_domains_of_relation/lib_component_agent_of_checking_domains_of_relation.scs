@@ -1,0 +1,36 @@
+lib_component_agent_of_checking_domains_of_relation
+=> nrel_main_idtf:
+	[Компонент библиотеки. sc-агент проверки указания доменов у отношений в рамках заданной структуры]
+	(* <- lang_ru;; *);
+	[Library component. sc-agent of сhecking availability of domains in relations within the given structure]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components; 
+<- library_of_atomic_reusable_components;
+
+=> nrel_attendant_component: 
+	lib_component_ui_menu_file_for_checking_domains_of_relation;
+
+-> rrel_key_sc_element: 
+	.platform_independent_realization_of_sc_agent_of_checking_domains_of_relation; 
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Domains.html"
+				(* <- lang_ru;; *);; 
+		*);;
+	*);;
+
+sc_node_not_relation -> action_of_checking_domains_of_relation;;
+
+action_of_checking_domains_of_relation => nrel_main_idtf:
+	[действие. проверить указание доменов у отношений в рамках заданной структуры]
+	(* <- lang_ru;;	*);
+	[action. check availability of domains in relations within the given structure]
+	(* <- lang_en;;	*);;

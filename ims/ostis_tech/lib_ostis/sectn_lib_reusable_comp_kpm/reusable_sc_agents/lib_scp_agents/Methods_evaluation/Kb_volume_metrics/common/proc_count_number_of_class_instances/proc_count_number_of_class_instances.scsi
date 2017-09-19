@@ -1,0 +1,418 @@
+scp_program -> proc_count_number_of_class_instances
+	(*
+  	-> rrel_params: .proc_count_number_of_class_instances_params 
+		(*
+		-> rrel_1: rrel_in: _some_entity;;
+		-> rrel_2: rrel_in: _number_of_entities;;
+		-> rrel_3: rrel_in: _counted_entities;;
+    		*);;
+
+	-> rrel_operators: .proc_count_number_of_class_instances_operator_set
+    		(*	
+    		-> rrel_init: .proc_count_number_of_class_instances_operator1A
+			(*
+			<- genEl;;
+
+			-> rrel_1: rrel_assign: rrel_node: rrel_scp_var: _binary_relations;;
+
+			=> nrel_goto: .proc_count_number_of_class_instances_operator1B;;
+			*);;
+
+    		->.proc_count_number_of_class_instances_operator1B
+			(*
+			<- searchSetStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _some_entity;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _class;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_assign: rrel_scp_var: _relation;;
+
+			-> rrel_set_5: rrel_assign: rrel_scp_var: _relations;;
+
+			=> nrel_then: .proc_count_number_of_class_instances_operator1C;;
+			=> nrel_else: .proc_count_number_of_class_instances_operator2A;;
+			*);;
+
+		-> .proc_count_number_of_class_instances_operator1C
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _relations;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _relation;;
+
+			=> nrel_then: .proc_count_number_of_class_instances_operator1D;;
+			=> nrel_else: .proc_count_number_of_class_instances_operator1G;;
+			*);;
+
+		-> .proc_count_number_of_class_instances_operator1D
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _arc1;;
+
+			=> nrel_goto: .proc_count_number_of_class_instances_operator1E;;
+			*);;
+
+    		-> .proc_count_number_of_class_instances_operator1E
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: taxonomy_relation;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _relation;;
+
+			=> nrel_then: .proc_count_number_of_class_instances_operator1F;;
+			=> nrel_else: .proc_count_number_of_class_instances_operator1C;;
+			*);;
+
+		-> .proc_count_number_of_class_instances_operator1F
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _binary_relations;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _relation;;
+		
+			=> nrel_goto: .proc_count_number_of_class_instances_operator1C;;
+			*);;
+
+		-> .proc_count_number_of_class_instances_operator1G
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _relations;;
+
+			=> nrel_goto: .proc_count_number_of_class_instances_operator2A;;
+			*);;
+
+		-> .proc_count_number_of_class_instances_operator2A
+			(*
+			<- genEl;;
+
+			-> rrel_1: rrel_assign: rrel_node: rrel_scp_var: _quasybinary_relations;;
+
+			=> nrel_goto: .proc_count_number_of_class_instances_operator2B;;
+			*);;
+
+		-> .proc_count_number_of_class_instances_operator2B
+			(*
+			<- searchSetStr5;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _element;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _some_entity;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_assign: rrel_scp_var: _relation;;
+
+			-> rrel_set_5: rrel_assign: rrel_scp_var: _relations;;
+
+			=> nrel_then: .proc_count_number_of_class_instances_operator2C;;
+			=> nrel_else: .proc_count_number_of_class_instances_operator3A;;
+			*);;
+
+		-> .proc_count_number_of_class_instances_operator2C
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _relations;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _relation;;
+
+			=> nrel_then: .proc_count_number_of_class_instances_operator2D;;
+			=> nrel_else: .proc_count_number_of_class_instances_operator2H;;
+			*);;
+
+		-> .proc_count_number_of_class_instances_operator2D
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _arc1;;
+
+			=> nrel_goto: .proc_count_number_of_class_instances_operator2E;;
+			*);;
+
+    		-> .proc_count_number_of_class_instances_operator2E
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: taxonomy_relation;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _relation;;
+
+			=> nrel_then: .proc_count_number_of_class_instances_operator2F;;
+			=> nrel_else: .proc_count_number_of_class_instances_operator2C;;
+			*);;
+
+    		-> .proc_count_number_of_class_instances_operator2F
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: quasybinary_relation;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _relation;;
+
+			=> nrel_then: .proc_count_number_of_class_instances_operator2G;;
+			=> nrel_else: .proc_count_number_of_class_instances_operator2C;;
+			*);;
+
+		-> .proc_count_number_of_class_instances_operator2G
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _quasybinary_relations;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _relation;;
+		
+			=> nrel_goto: .proc_count_number_of_class_instances_operator2C;;
+			*);;
+
+		-> .proc_count_number_of_class_instances_operator2H
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _relations;;
+
+			=> nrel_goto: .proc_count_number_of_class_instances_operator3A;;
+			*);;
+
+		-> .proc_count_number_of_class_instances_operator3A
+			(*
+			<- genEl;;
+
+			-> rrel_1: rrel_assign: rrel_node: rrel_scp_var: _classes;;
+
+			=> nrel_goto: .proc_count_number_of_class_instances_operator3B;;
+			*);;
+
+		-> .proc_count_number_of_class_instances_operator3B
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _binary_relations;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _relation;;
+
+			=> nrel_then: .proc_count_number_of_class_instances_operator3C;;
+			=> nrel_else: .proc_count_number_of_class_instances_operator4A;;
+			*);;
+
+		-> .proc_count_number_of_class_instances_operator3C
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _arc1;;
+
+			=> nrel_goto: .proc_count_number_of_class_instances_operator3D;;
+			*);;
+
+		-> .proc_count_number_of_class_instances_operator3D
+			(*
+			<- searchSetStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _some_entity;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _class;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_var: _relation;;
+
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _classes;;
+
+			=> nrel_goto: .proc_count_number_of_class_instances_operator3B;; 
+			*);;
+
+		-> .proc_count_number_of_class_instances_operator4A
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _quasybinary_relations;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _relation;;
+
+			=> nrel_then: .proc_count_number_of_class_instances_operator4B;;
+			=> nrel_else: .proc_count_number_of_class_instances_operator5A;;
+			*);;
+
+		-> .proc_count_number_of_class_instances_operator4B
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _arc1;;
+
+			=> nrel_goto: .proc_count_number_of_class_instances_operator4C;;
+			*);;
+
+		-> .proc_count_number_of_class_instances_operator4C
+			(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _ligament;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _some_entity;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_var: _relation;;
+
+			=> nrel_goto: .proc_count_number_of_class_instances_operator4D;; 
+			*);;
+
+		-> .proc_count_number_of_class_instances_operator4D
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _ligament;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _class;;
+
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _classes;;
+
+			=> nrel_goto: .proc_count_number_of_class_instances_operator4A;;
+			*);;
+
+		-> .proc_count_number_of_class_instances_operator5A
+			(*
+			<- genEl;;
+
+			-> rrel_1: rrel_assign: rrel_node: rrel_scp_var: _all_elements;; 
+
+			=> nrel_goto: .proc_count_number_of_class_instances_operator5B;;
+			*);;		
+
+		-> .proc_count_number_of_class_instances_operator5B
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _some_entity;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _element;;
+
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _all_elements;;
+
+			=> nrel_goto: .proc_count_number_of_class_instances_operator5C;;
+			*);;
+
+		-> .proc_count_number_of_class_instances_operator5C
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _all_elements;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _element;;
+
+			=> nrel_then: .proc_count_number_of_class_instances_operator5D;;
+			=> nrel_else: .proc_count_number_of_class_instances_operator5H;;
+			*);;
+
+		-> .proc_count_number_of_class_instances_operator5D
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _arc1;;
+
+			=> nrel_goto: .proc_count_number_of_class_instances_operator5E;;
+			*);;
+
+		-> .proc_count_number_of_class_instances_operator5E
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _counted_entities;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _element;;
+
+			=> nrel_then: .proc_count_number_of_class_instances_operator5C;;
+			=> nrel_else: .proc_count_number_of_class_instances_operator5F;;
+			*);;
+
+		-> .proc_count_number_of_class_instances_operator5F
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _counted_entities;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _element;;
+		
+			=> nrel_goto: .proc_count_number_of_class_instances_operator5G;;
+			*);;
+
+		-> .proc_count_number_of_class_instances_operator5G
+			(*
+	       		<- contAdd;;
+
+        		-> rrel_1: rrel_fixed: rrel_scp_var: _number_of_entities;;
+	       		-> rrel_2: rrel_fixed: rrel_scp_var: _number_of_entities;;
+			-> rrel_3: rrel_fixed: rrel_scp_const: [1];;
+	         		
+	        	=> nrel_goto: .proc_count_number_of_class_instances_operator5C;;
+			*);;
+
+		-> .proc_count_number_of_class_instances_operator5H
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _all_elements;;
+
+			=> nrel_goto: .proc_count_number_of_class_instances_operator6A;;
+			*);;	
+
+		-> .proc_count_number_of_class_instances_operator6A
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _classes;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _element;;
+
+			=> nrel_then: .proc_count_number_of_class_instances_operator6B;;
+			=> nrel_else: .proc_count_number_of_class_instances_operator7A;;
+			*);;
+
+		-> .proc_count_number_of_class_instances_operator6B
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _arc1;;
+
+			=> nrel_goto: .proc_count_number_of_class_instances_operator6C;;
+			*);;
+
+		-> .proc_count_number_of_class_instances_operator6C
+			(*
+			<- call;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: proc_count_number_of_class_instances;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: .proc_count_number_of_class_instances_operator6C_params
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _element;;
+				-> rrel_2: rrel_fixed: rrel_scp_var: _number_of_entities;;
+				-> rrel_3: rrel_fixed: rrel_scp_var: _counted_entities;;
+				*);;
+			-> rrel_3: rrel_assign: rrel_scp_var: _descr;;
+
+			=> nrel_goto: .proc_count_number_of_class_instances_operator6D;;
+			*);;	
+
+		-> .proc_count_number_of_class_instances_operator6D
+			(*
+			<- waitReturn;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _descr;;
+
+			=> nrel_goto: .proc_count_number_of_class_instances_operator6A;;
+			*);;	
+
+		-> .proc_count_number_of_class_instances_operator7A
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _classes;;
+
+			=> nrel_goto: .proc_count_number_of_class_instances_operator_return;;
+			*);;
+
+		-> .proc_count_number_of_class_instances_operator_return
+			(*
+			<- return;;
+			*);;
+		*);;
+	*);;

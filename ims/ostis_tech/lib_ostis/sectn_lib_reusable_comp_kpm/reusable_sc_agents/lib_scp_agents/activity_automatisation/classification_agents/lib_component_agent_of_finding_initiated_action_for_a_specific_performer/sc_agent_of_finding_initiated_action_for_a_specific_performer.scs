@@ -1,0 +1,50 @@
+sc_agent_of_finding_initiated_action_for_a_specific_performer
+=> nrel_main_idtf:
+	[sc-агент поиска действий, закреплённых за конкретным исполнителем] (* <- lang_ru;; *);
+	[sc-agent of finding actions assigned for a specific performer] (* <- lang_en;; *);
+
+<- abstract_sc_agent;
+
+=> nrel_primary_initiation_condition: 
+	(sc_event_add_output_arc => question_initiated);
+
+=> nrel_initiation_condition_and_result: 
+	(..sc_agent_of_finding_initiated_action_for_a_specific_performer_condition => ..sc_agent_of_finding_initiated_action_for_a_specific_performer_result);
+
+<= nrel_sc_agent_key_sc_elements: 
+	{
+	question_initiated;
+	question;
+	action_of_finding_initiated_action_for_a_specific_performer
+	};
+
+=> nrel_inclusion: 
+	.platform_independent_realization_of_sc_agent_of_search_initiated_action_for_a_specific_performer
+	(*
+	<- platform_independent_abstract_sc_agent;;
+	<= nrel_sc_agent_program: 
+		{
+		agent_of_finding_initiated_action_for_a_specific_performer	
+		};;
+
+	-> sc_agent_of_search_initiated_action_for_a_specific_performer_scp    
+		(* <- active_sc_agent;; *);;  
+	*);;
+
+..sc_agent_of_search_initiated_action_for_a_specific_performer_condition
+= [*
+	action_of_finding_initiated_action_for_a_specific_performer _-> .._question;;
+	question_initiated _-> .._question;;
+	question _-> .._question;;
+	.._question _-> .._parameter;;
+*];;
+
+..sc_agent_of_search_initiated_action_for_a_specific_performer_result
+= [*
+	action_of_finding_initiated_action_for_a_specific_performer _-> .._question;;
+	question_finished _-> .._question;;
+	question _-> .._question;;
+	.._question _=> nrel_answer:: .._answer;;
+	.._question _-> .._parameter;;
+*];;
+

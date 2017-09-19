@@ -1,0 +1,414 @@
+agent_of_checking_concept_def_existence
+=> nrel_main_idtf:
+	[агентная scp-программа проверки наличия определений или пояснений у понятий, имеющихся в рамках заданной структуры] (* <- lang_ru;; *);
+	[agent scp-program of checking definitions or explanations existence for concepts within the given structure] (* <- lang_en;; *);
+	<- agent_scp_program;;
+
+scp_program -> agent_of_checking_concept_def_existence 
+	(*
+	-> rrel_params: .agent_of_checking_concept_def_existence_params 
+		(*
+		-> rrel_1: rrel_in: _event;;
+		-> rrel_2: rrel_in: _input_arc;;
+		*);;
+
+	-> rrel_operators: .agent_of_checking_concept_def_existence_operator_set
+		(*
+		-> rrel_init: .agent_of_checking_concept_def_existence_operator1A 
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _temp;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: _input_arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _quest;;
+	
+			=> nrel_goto: .agent_of_checking_concept_def_existence_operator1B;;
+			*);;
+		
+		-> .agent_of_checking_concept_def_existence_operator1B
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: action_to_check_concept_def_existence;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+
+			=> nrel_then: .agent_of_checking_concept_def_existence_operator1C;;
+			=> nrel_else: .agent_of_checking_concept_def_existence_operator_return;;
+			*);;
+
+		-> .agent_of_checking_concept_def_existence_operator1C
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: rrel_struct: _param;;
+
+			=> nrel_then: .agent_of_checking_concept_def_existence_operator1D_find_context;;
+			=> nrel_else: .agent_of_checking_concept_def_existence_operator_invalid_first_param_msg;;
+			*);;
+
+		-> .agent_of_checking_concept_def_existence_operator_invalid_first_param_msg
+			(*
+			<- contAssign;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _validation_message;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [Wrong 1st parameter! It must be a structure.];;
+
+			=> nrel_goto: .agent_of_checking_concept_def_existence_operator_call_proc_of_adding_validating_message;;
+			*);;	
+
+		-> .agent_of_checking_concept_def_existence_operator1D_find_context
+			(*
+		 	<- searchElStr5;;
+
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+		 	-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+		 	-> rrel_3: rrel_assign: rrel_scp_var: _context;;
+            -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		 	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_context_of_action;;
+
+			=> nrel_then: .agent_of_checking_concept_def_existence_operator1D_set_context_existence_to_true;;
+			=> nrel_else: .agent_of_checking_concept_def_existence_operator1D_set_context_existence_to_false;;
+			*);;
+
+		-> .agent_of_checking_concept_def_existence_operator1D_set_context_existence_to_true
+			(*
+			<- contAssign;;			
+			
+			-> rrel_1: rrel_assign: rrel_scp_var:  _is_context_exist;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [true];;
+
+			=> nrel_goto: .agent_of_checking_concept_def_existence_operator_validate_context;;
+			*);; 
+
+		-> .agent_of_checking_concept_def_existence_operator_validate_context
+			(*
+			<- ifType;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_struct: _context;;
+
+			=> nrel_then: .agent_of_checking_concept_def_existence_operator1E_gen_answer_node;;
+			=> nrel_else: .agent_of_checking_concept_def_existence_operator_invalid_second_param_msg;;
+			*);;	
+
+		-> .agent_of_checking_concept_def_existence_operator_invalid_second_param_msg
+			(*
+			<- contAssign;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _validation_message;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [Wrong 2nd parameter! It must be a structure.];;
+
+			=> nrel_goto: .agent_of_checking_concept_def_existence_operator_call_proc_of_adding_validating_message;;
+			*);;		
+
+		-> .agent_of_checking_concept_def_existence_operator1D_set_context_existence_to_false
+			(*
+			<- contAssign;;			
+			
+			-> rrel_1: rrel_assign: rrel_scp_var:  _is_context_exist;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [false];;
+
+			=> nrel_goto: .agent_of_checking_concept_def_existence_operator1E_gen_answer_node;;
+			*);; 
+
+		-> .agent_of_checking_concept_def_existence_operator1E_gen_answer_node
+			(*
+			<- genEl;;
+
+			-> rrel_1: rrel_assign: rrel_const: rrel_node: rrel_struct: rrel_scp_var: _incorrect_structure;;
+
+			=> nrel_goto: .agent_of_checking_concept_def_existence_operator1E_gen_concepts_node;;
+			*);;
+
+		-> .agent_of_checking_concept_def_existence_operator1E_gen_concepts_node
+			(*
+			<- genEl;;
+
+			-> rrel_1: rrel_assign: rrel_const: rrel_node: rrel_scp_var: _concepts;;
+
+			=> nrel_goto: .agent_of_checking_concept_def_existence_operator1F_get_params_1;;
+			*);;
+
+		-> .agent_of_checking_concept_def_existence_operator1F_get_params_1
+    		(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _param;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: rrel_not_relation: _concept;;
+
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _concepts;;
+
+			=> nrel_goto: .agent_of_checking_concept_def_existence_operator1F_get_params_2;;
+        	*);;
+
+        -> .agent_of_checking_concept_def_existence_operator1F_get_params_2
+    		(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _param;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: rrel_norole_relation: _concept;;
+
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _concepts;;
+
+			=> nrel_goto: .agent_of_checking_concept_def_existence_operator1F_get_params_3;;
+        	*);;
+        	
+        -> .agent_of_checking_concept_def_existence_operator1F_get_params_3
+    		(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _param;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: rrel_role_relation: _concept;;
+
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _concepts;;
+
+			=> nrel_goto: .agent_of_checking_concept_def_existence_operator1G_loop_enter;;
+        	*);;	
+
+		-> .agent_of_checking_concept_def_existence_operator1G_loop_enter
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _concepts;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _concept;;
+
+			=> nrel_then: .agent_of_checking_concept_def_existence_operator1G_loop1;;
+			=> nrel_else: .agent_of_checking_concept_def_existence_operator_gen_verification_answer;;
+			*);;
+
+		-> .agent_of_checking_concept_def_existence_operator1G_loop1 
+		    (*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _arc1;;
+
+			=> nrel_goto: .agent_of_checking_concept_def_existence_operator1G_is_context_exist;;
+			*);;
+
+		-> .agent_of_checking_concept_def_existence_operator1G_is_context_exist
+			(*
+			<- stringIfEq;;			
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var:  _is_context_exist;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [true];;
+
+			=> nrel_then: .agent_of_checking_concept_def_existence_operator1G_context_logic_1;;
+			=> nrel_else: .agent_of_checking_concept_def_existence_operator1G_loop2;;
+			*);;	
+
+		-> .agent_of_checking_concept_def_existence_operator1G_context_logic_1
+			(*
+		 	<- searchSetStr5;;
+
+		 	-> rrel_1: rrel_assign: rrel_scp_var: _node;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _concept;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_key_sc_element;;
+			
+			-> rrel_set_1: rrel_assign: rrel_scp_var: _all_key_sc_elems;;
+
+			=> nrel_then: .agent_of_checking_concept_def_existence_operator1G_context_logic_2;;
+			=> nrel_else: .agent_of_checking_concept_def_existence_operator1G_loop_add_incorrect_concept;;
+			*);;
+
+		-> .agent_of_checking_concept_def_existence_operator1G_context_logic_2 
+			(*
+			<- call;;
+		  	
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_finding_intersection_of_two_sets;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_checking_concept_def_existence_operator1G_context_logic_2_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _all_key_sc_elems;;
+				-> rrel_2: rrel_fixed: rrel_scp_var: _context;;
+				-> rrel_3: rrel_assign: rrel_scp_var: _def_set;; 
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr5;;
+
+		  	=> nrel_goto: .agent_of_checking_concept_def_existence_operator1G_context_logic_3;;
+			*);;    
+
+		-> .agent_of_checking_concept_def_existence_operator1G_context_logic_3
+			(*
+		  	<- waitReturn;;
+		  	
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr5;;
+
+		  	=> nrel_goto: .agent_of_checking_concept_def_existence_operator_def_search_loop_enter1;;
+			*);;
+
+		-> .agent_of_checking_concept_def_existence_operator1G_loop2
+			(*
+			<- searchSetStr5;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _node;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _concept;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_key_sc_element;;
+
+			-> rrel_set_1: rrel_assign: rrel_scp_var: _def_set;;
+
+			=> nrel_then: .agent_of_checking_concept_def_existence_operator_def_search_loop_enter1;;
+			=> nrel_else: .agent_of_checking_concept_def_existence_operator1G_loop_add_incorrect_concept;;
+			*);;
+
+		-> .agent_of_checking_concept_def_existence_operator_def_search_loop_enter1
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _def_set;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _def;;
+
+			=> nrel_then: .agent_of_checking_concept_def_existence_operator_def_search_loop1;;
+			=> nrel_else: .agent_of_checking_concept_def_existence_operator1G_loop_add_incorrect_concept;;
+			*);;
+
+		-> .agent_of_checking_concept_def_existence_operator_def_search_loop1 
+		    (*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _arc1;;
+
+			=> nrel_goto: .agent_of_checking_concept_def_existence_operator1G_loop_is_def;;
+			*);;
+
+		-> .agent_of_checking_concept_def_existence_operator1G_loop_is_def
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: definition;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _def;;
+
+			=> nrel_then: .agent_of_checking_concept_def_existence_operator1G_loop_enter;;
+			=> nrel_else: .agent_of_checking_concept_def_existence_operator1G_loop_is_explanation;;
+			*);;
+
+		-> .agent_of_checking_concept_def_existence_operator1G_loop_is_explanation
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: explanation;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _def;;
+
+			=> nrel_then: .agent_of_checking_concept_def_existence_operator1G_loop_enter;;
+			=> nrel_else: .agent_of_checking_concept_def_existence_operator_def_search_loop_enter1;;
+			*);;
+
+		-> .agent_of_checking_concept_def_existence_operator1G_loop_add_incorrect_concept 
+			(*
+			<- genElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _incorrect_structure;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_const: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _concept;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_const: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_key_sc_element;;
+
+			=> nrel_goto: .agent_of_checking_concept_def_existence_operator1G_loop_enter;;
+			*);;
+
+		-> .agent_of_checking_concept_def_existence_operator_gen_verification_answer
+			(*
+		 	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_generation_of_verification_answer;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_checking_concept_def_existence_operator_gen_verification_answer_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+				-> rrel_2: rrel_fixed: rrel_scp_const: action_to_check_concept_def_existence;;
+				-> rrel_3: rrel_fixed: rrel_scp_var: _incorrect_structure;;
+				-> rrel_4: rrel_fixed: rrel_scp_const: structure_which_contains_concepts_without_any_definition_and_explanation;;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr3;;
+
+		  	=> nrel_goto: .agent_of_checking_concept_def_existence_operator_waitreturn_generation_verification_answer;;
+			*);;
+
+		-> .agent_of_checking_concept_def_existence_operator_waitreturn_generation_verification_answer 
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr3;;
+
+		  	=> nrel_goto: .agent_of_checking_concept_def_existence_operator_temp_set_2_is_not_null;;
+			*);; 	
+
+		-> .agent_of_checking_concept_def_existence_operator_temp_set_2_is_not_null
+		    (*
+			<- ifVarAssign;;
+
+			-> rrel_1: rrel_scp_var: _concepts;;
+
+			=> nrel_then: .agent_of_checking_concept_def_existence_operator_erase_temp_set_2;;
+			=> nrel_else: .agent_of_checking_concept_def_existence_operator_temp_set_3_is_not_null;;
+			*);;    	
+
+		-> .agent_of_checking_concept_def_existence_operator_erase_temp_set_2
+		    (*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _concepts;;
+
+			=> nrel_goto: .agent_of_checking_concept_def_existence_operator_temp_set_3_is_not_null;;
+			*);;
+
+		-> .agent_of_checking_concept_def_existence_operator_temp_set_3_is_not_null
+		    (*
+			<- ifVarAssign;;
+
+			-> rrel_1: rrel_scp_var: _def_set;;
+
+			=> nrel_then: .agent_of_checking_concept_def_existence_operator_erase_temp_set_3;;
+			=> nrel_else: .agent_of_checking_concept_def_existence_operator_return;;
+			*);;      	
+			
+		-> .agent_of_checking_concept_def_existence_operator_erase_temp_set_3
+		    	(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _def_set;;
+
+			=> nrel_goto: .agent_of_checking_concept_def_existence_operator_return;;
+			*);;			
+			
+		-> .agent_of_checking_concept_def_existence_operator_call_proc_of_adding_validating_message 
+			(*
+		  	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_validating_message;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_checking_concept_def_existence_operator_call_proc_of_adding_validating_message_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+				-> rrel_2: rrel_fixed: rrel_scp_var: _validation_message;;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .agent_of_checking_concept_def_existence_operator_waitreturn_proc_of_adding_validating_message;;
+			*);;
+
+		-> .agent_of_checking_concept_def_existence_operator_waitreturn_proc_of_adding_validating_message
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .agent_of_checking_concept_def_existence_operator_return;;
+			*);; 	
+
+		-> .agent_of_checking_concept_def_existence_operator_return 
+			(*
+			<- return;;
+			*);;
+		*);;
+	*);;
+

@@ -1,0 +1,35 @@
+section_interdisciplinary_concepts
+<- sc_node_not_relation;
+<- atomic_section;
+=> nrel_main_idtf:
+	[Раздел. Междисциплинарные понятия]
+	(* <- lang_ru;; *);
+	[Section. Interdisciplinary concepts]
+	(* <- lang_en;; *);
+<- not_enough_formed_structure;;
+
+section_interdisciplinary_concepts = [*^"file://section_interdisciplinary_concepts.scsi"*];;
+
+rrel_key_sc_element -> (section_interdisciplinary_concepts -> nrel_abstract_basic_decomposition)
+(*
+	=> nrel_key_sc_element_order: (section_interdisciplinary_concepts -> nrel_basic_decomposition)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_interdisciplinary_concepts -> nrel_decomposition_of_abstract_object)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_interdisciplinary_concepts -> nrel_basic_sequence)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_interdisciplinary_concepts -> nrel_whole_part)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_interdisciplinary_concepts -> nrel_abstract_part)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_interdisciplinary_concepts -> taxonomy_relation)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_interdisciplinary_concepts -> nrel_authors)
+	(* <- rrel_key_sc_element;; *);;
+*);;*);;*);;*);;*);;*);;*);;

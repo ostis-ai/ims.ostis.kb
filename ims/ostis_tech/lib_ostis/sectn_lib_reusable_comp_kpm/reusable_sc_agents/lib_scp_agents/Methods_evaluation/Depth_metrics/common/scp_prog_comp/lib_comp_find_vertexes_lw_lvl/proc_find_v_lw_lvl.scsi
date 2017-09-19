@@ -1,0 +1,231 @@
+scp_program -> proc_of_finding_vertexes_of_lower_level
+	(*
+  	-> rrel_params: .proc_of_finding_vertexes_of_lower_level_params 
+		(*
+		-> rrel_1: rrel_in: _current_node;;
+		-> rrel_2: rrel_in: _ontology;;
+		-> rrel_3: rrel_in: _vertexes_of_lower_level;;
+    		*);;
+
+	-> rrel_operators: .proc_of_finding_vertexes_of_lower_level_operator_set
+    		(*
+    		-> rrel_init: .proc_of_finding_vertexes_of_lower_level_operator_gen_uncheck_lower_level_vertexes
+			(*
+		  	<- genEl;;
+
+		  	-> rrel_1: rrel_assign: rrel_node: rrel_scp_var: _uncheck_lower_level_vertexes;;
+
+		  	=> nrel_goto: .proc_of_finding_vertexes_of_lower_level_operator_A1;;
+			*);;	
+
+		-> .proc_of_finding_vertexes_of_lower_level_operator_A1
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: _current_node;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _node;;
+
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _uncheck_lower_level_vertexes;;
+
+			=> nrel_goto: .proc_of_finding_vertexes_of_lower_level_operator_get_all_taxonomy_relation;;
+			*);;	
+
+    		-> .proc_of_finding_vertexes_of_lower_level_operator_get_all_taxonomy_relation 
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: taxonomy_relation;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _relation;;
+
+			-> rrel_set_3: rrel_assign: rrel_scp_var: _all_taxonomy_relation;;
+
+			=> nrel_then: .proc_of_finding_vertexes_of_lower_level_operator_D1_loop_enter;;
+			=> nrel_else: .proc_of_finding_vertexes_of_lower_level_operator_G1_loop_enter;;
+			*);;
+
+		-> .proc_of_finding_vertexes_of_lower_level_operator_D1_loop_enter
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _all_taxonomy_relation;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _concrete_taxonomy_relation;;
+
+			=> nrel_then: .proc_of_finding_vertexes_of_lower_level_operator_D2_loop_arc_erase;;
+			=> nrel_else: .proc_of_finding_vertexes_of_lower_level_operator_G1_loop_enter;;
+			*);;		
+
+		-> .proc_of_finding_vertexes_of_lower_level_operator_D2_loop_arc_erase
+			(*
+		  	<- eraseEl;;
+
+		  	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc1;;
+
+		  	=> nrel_goto: .proc_of_finding_vertexes_of_lower_level_operator_D3_is_quasybinary_relation;;
+			*);;	
+
+		-> .proc_of_finding_vertexes_of_lower_level_operator_D3_is_quasybinary_relation
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: quasybinary_relation;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _concrete_taxonomy_relation;;
+
+			=> nrel_then: .proc_of_finding_vertexes_of_lower_level_operator_F1_gen_temp_set;;
+			=> nrel_else: .proc_of_finding_vertexes_of_lower_level_operator_E1;;
+			*);;	
+
+		-> .proc_of_finding_vertexes_of_lower_level_operator_E1
+			(*
+			<- searchSetStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _current_node;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _vertex_of_lower_level;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_var: _concrete_taxonomy_relation;;
+
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _uncheck_lower_level_vertexes;;
+
+			=> nrel_goto: .proc_of_finding_vertexes_of_lower_level_operator_D1_loop_enter;;
+			*);;				
+
+		-> .proc_of_finding_vertexes_of_lower_level_operator_F1_gen_temp_set
+			(*
+		  	<- genEl;;
+
+		  	-> rrel_1: rrel_assign: rrel_node: rrel_scp_var: _set_of_ligaments;;
+
+		  	=> nrel_goto: .proc_of_finding_vertexes_of_lower_level_operator_F1;;
+			*);;		
+
+		-> .proc_of_finding_vertexes_of_lower_level_operator_F1
+			(*
+			<- searchSetStr5;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _ligament;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _current_node;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_var: _concrete_taxonomy_relation;;
+
+			-> rrel_set_1: rrel_fixed: rrel_scp_var: _set_of_ligaments;;
+
+			=> nrel_then: .proc_of_finding_vertexes_of_lower_level_operator_F2_loop_enter;;
+			=> nrel_else: .proc_of_finding_vertexes_of_lower_level_operator_F5_erase_temp_set;;
+			*);;	
+
+		-> .proc_of_finding_vertexes_of_lower_level_operator_F2_loop_enter
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_ligaments;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _concrete_ligament;;
+
+			=> nrel_then: .proc_of_finding_vertexes_of_lower_level_operator_F3_loop_arc_erase;;
+			=> nrel_else: .proc_of_finding_vertexes_of_lower_level_operator_F5_erase_temp_set;;
+			*);;		
+
+		-> .proc_of_finding_vertexes_of_lower_level_operator_F3_loop_arc_erase
+			(*
+		  	<- eraseEl;;
+
+		  	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc1;;
+
+		  	=> nrel_goto: .proc_of_finding_vertexes_of_lower_level_operator_F4;;
+			*);;	
+
+		-> .proc_of_finding_vertexes_of_lower_level_operator_F4
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _concrete_ligament;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _lower_level_vertex;;
+
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _uncheck_lower_level_vertexes;;
+
+			=> nrel_goto: .proc_of_finding_vertexes_of_lower_level_operator_F2_loop_enter;;
+			*);;			
+
+		-> .proc_of_finding_vertexes_of_lower_level_operator_F5_erase_temp_set
+			(*
+		  	<- eraseEl;;
+
+		  	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _set_of_ligaments;;
+
+		  	=> nrel_goto: .proc_of_finding_vertexes_of_lower_level_operator_D1_loop_enter;;
+			*);;	
+
+		-> .proc_of_finding_vertexes_of_lower_level_operator_G1_loop_enter
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _uncheck_lower_level_vertexes;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _lower_level_vertex;;
+
+			=> nrel_then: .proc_of_finding_vertexes_of_lower_level_operator_G2;;
+			=> nrel_else: .proc_of_finding_vertexes_of_lower_level_operator_D4_erase_all_taxonomy_relation_set;;
+			*);;	
+
+		-> .proc_of_finding_vertexes_of_lower_level_operator_G2
+			(*
+		  	<- eraseEl;;
+
+		  	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc1;;
+
+		  	=> nrel_goto: .proc_of_finding_vertexes_of_lower_level_operator_G3;;
+			*);;
+
+		-> .proc_of_finding_vertexes_of_lower_level_operator_G3
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _ontology;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _lower_level_vertex;;
+
+			=> nrel_then: .proc_of_finding_vertexes_of_lower_level_operator_G4;;
+			=> nrel_else: .proc_of_finding_vertexes_of_lower_level_operator_G1_loop_enter;;
+			*);;
+
+		-> .proc_of_finding_vertexes_of_lower_level_operator_G4
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _vertexes_of_lower_level;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _lower_level_vertex;;
+
+			=> nrel_goto: .proc_of_finding_vertexes_of_lower_level_operator_G1_loop_enter;;
+			*);;
+
+		-> .proc_of_finding_vertexes_of_lower_level_operator_D4_erase_all_taxonomy_relation_set
+			(*
+		  	<- eraseEl;;
+
+		  	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _all_taxonomy_relation;;
+
+		  	=> nrel_goto: .proc_of_finding_vertexes_of_lower_level_operator_D5_erase_uncheck_lower_level_vertexes_set;;
+			*);;	
+
+		-> .proc_of_finding_vertexes_of_lower_level_operator_D5_erase_uncheck_lower_level_vertexes_set
+			(*
+		  	<- eraseEl;;
+
+		  	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _uncheck_lower_level_vertexes;;
+
+		  	=> nrel_goto: .proc_of_finding_vertexes_of_lower_level_operator_return;;
+			*);;			
+
+		-> .proc_of_finding_vertexes_of_lower_level_operator_return 
+			(*
+			<- return;;
+			*);;
+		*);;
+	*);;

@@ -1,0 +1,23 @@
+section_subjdomain_of_unified_sc_models
+=> nrel_main_idtf:
+	[Раздел. Предметная область унифицированных логико-семантических моделей компьютерных систем]
+	(* <- lang_ru;; *);
+	[Section. Subject domain of unified logical semantic models of computer systems]
+	(* <- lang_en;; *);
+<- not_enough_formed_structure;;
+ 
+section_subjdomain_of_unified_sc_models <- atomic_section;;
+
+section_subjdomain_of_unified_sc_models = [*^"file://section_subjdomain_of_unified_sc_models.scsi"*];;
+
+section_subjdomain_of_unified_sc_models
+-> rrel_key_sc_element:
+	sc_model_computer_systems;
+	sc_memory;
+	sc_model_of_knowledge_base;
+	sc_model_of_processing_machine_knowledge;
+	sc_model_computer_system_interface;
+	sc_model;
+	subjdomain_of_unified_sc_models;
+	nrel_sc_model_decomposition;;
+

@@ -1,0 +1,506 @@
+scp_program -> proc_of_calculation_number_of_all_types_of_outbound_connections
+	(*
+  		-> rrel_params: .proc_of_calculation_number_of_all_types_of_outbound_connections_params 
+			(*
+			-> rrel_1: rrel_in: _ontology;;
+			-> rrel_2: rrel_in: _vertexes;;
+			-> rrel_3: rrel_in: _result;;
+    			*);;
+
+		-> rrel_operators: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_set
+    			(*
+
+		-> rrel_init: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_1				
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _vertexes;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _vertex;;
+
+			-> rrel_set_3: rrel_assign: rrel_scp_var: _all_vertexes_of_ontology;;
+
+			=> nrel_goto: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_2_1;;
+			*);;
+	
+		-> .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_2_1
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _all_vertexes_of_ontology;;
+			-> rrel_2: rrel_assign: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _vertex1;;
+
+			=> nrel_then: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_2_2;;
+			=> nrel_else: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_return;;
+			*);;
+
+		-> .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_proverit_5
+			(*
+			<- printEl;;
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var: _vertex1;;
+			
+			=> nrel_goto: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_2_2;;
+        		*);; 
+
+		-> .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_2_2
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc1;; 
+
+			=> nrel_goto: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_2_3;;
+			*);;
+		
+		-> .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_2_3
+			(*
+			<- genEl;;
+
+			-> rrel_1: rrel_assign: rrel_node: rrel_scp_var: _set_of_connections;; 
+
+			=> nrel_goto: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_2_4;;
+			*);;
+		
+		-> .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_2_4
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _vertex1;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _elem;;
+			
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _set_of_connections;;
+
+        		=> nrel_goto: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_2_5;;
+        		*);;
+		
+		-> .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_2_5
+			(*
+			<- searchSetStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _vertex1;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _elem;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_assign: rrel_scp_var: _relation;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _set_of_connections;;
+
+        		=> nrel_goto: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_2_6;;
+        		*);;
+		
+		-> .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_2_6
+			(*
+			<- genEl;;
+
+			-> rrel_1: rrel_assign: rrel_node: rrel_scp_var: _set_of_quasibinary_arcs;; 
+
+			=> nrel_goto: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_2_7;;
+			*);;
+
+		-> .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_2_7
+			(*
+			<- searchSetStr5;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _elem;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _vertex1;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_assign: rrel_scp_var: _relation;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _set_of_quasibinary_arcs;;
+
+        		=> nrel_goto: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_3;; 
+        		*);;
+
+		-> .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_3
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_quasibinary_arcs;;
+			-> rrel_2: rrel_assign: rrel_scp_var: _arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _quasy_arc;;
+
+			=> nrel_then: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_3_1;;
+			=> nrel_else: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_3_5;;
+			*);;
+
+		-> .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_3_1
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc;; 
+
+			=> nrel_goto: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_3_2;; 
+			*);;
+
+		
+		-> .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_3_2
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: rrel_norole_relation: _relation;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _quasy_arc;;
+
+			=> nrel_then: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_3_3;;
+			=> nrel_else: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_3;;
+			*);;
+
+		-> .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_3_3
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: quasybinary_relation;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _relation;;
+
+			=> nrel_then: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_3_4;;
+			=> nrel_else: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_3;;
+			*);;
+		
+		-> .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_3_4
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_connections;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _quasy_arc;;
+
+			=> nrel_goto: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_3;; 
+			*);;	
+			
+		-> .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_3_5
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _set_of_quasibinary_arcs;; 
+
+			=> nrel_goto: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_3_6;;
+			*);;
+			
+		-> .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_3_6
+			(*
+			<- genEl;;
+
+			-> rrel_1: rrel_assign: rrel_node: rrel_scp_var: _set_of_types;; 
+
+			=> nrel_goto: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_3_7;;
+			*);;
+
+		-> .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_3_7
+			(*
+			<- contAssign;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _is_exist_accessories_arc;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [0];;
+		
+			=> nrel_goto: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_4;;
+			*);;
+
+		-> .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_4
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_connections;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _connection;;
+
+			=> nrel_then: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_4_1;;
+			=> nrel_else: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_6;;
+			*);;
+		
+		-> .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_4_1
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc;; 
+
+			=> nrel_goto: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_4_2;;		
+			*);;
+	
+		-> .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_4_2
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: rrel_norole_relation: _relation;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _connection;;
+
+			=> nrel_then: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_4_6;;
+			=> nrel_else: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_4_2_1;;
+			*);;
+	
+		-> .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_4_2_1
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: rrel_role_relation: _relation;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _connection;;
+
+			=> nrel_then: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_4_7;;
+			=> nrel_else: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_4_3;;
+			*);;
+
+		-> .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_4_3
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _elem1;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: _connection;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _elem2;;
+
+			=> nrel_goto: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_4_4;;
+			*);;
+
+		-> .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_4_4
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _ontology;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _elem2;;
+
+			=> nrel_then: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_4_5;;
+			=> nrel_else: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_4;;
+			*);;	
+
+		-> .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_4_5
+			(*
+			<- contAssign;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _is_exist_accessories_arc;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [1];;
+		
+			=> nrel_goto: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_4;;
+			*);;
+
+		-> .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_4_6
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: quasybinary_relation;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _relation;;
+
+			=> nrel_then: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_4_10;;
+			=> nrel_else: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_4_7;;
+			*);;
+
+		-> .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_4_7
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_types;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _relation;;
+
+			=> nrel_then: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_4;;
+			=> nrel_else: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_4_8;;
+			*);;	
+		
+		-> .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_4_8
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _elem1;;
+			-> rrel_2: rrel_fixed: rrel_scp_var:  _connection;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _elem2;;
+
+			=> nrel_then: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_4_8_1;;
+			=> nrel_else: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_4;;
+			*);;
+
+		-> .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_4_8_1
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _ontology;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _elem2;;
+
+			=> nrel_then: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_4_9;;
+			=> nrel_else: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_4;;
+			*);;		
+		
+		-> .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_4_9
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_types;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm:  _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _relation;;
+
+			=> nrel_goto: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_4;;
+			*);;
+
+		-> .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_4_10
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _elem1;;
+			-> rrel_2: rrel_fixed: rrel_scp_var:  _connection;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _elem2;;
+
+			=> nrel_goto: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_4_11;;
+			*);;
+				
+		-> .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_4_11
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _elem1;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm:  _arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _node;;
+
+			-> rrel_set_3: rrel_assign: rrel_scp_var: _set_of_nodes;;
+
+			=> nrel_goto: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_5;;
+			*);;	
+
+		-> .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_5
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_nodes;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm:  _arc3;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _node;;
+
+			=> nrel_then: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_5_1;;
+			=> nrel_else: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_5_5;;
+			*);;
+
+		-> .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_5_1
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc3;; 
+
+			=> nrel_goto: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_5_2;;
+			*);;
+		
+		-> .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_5_2
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _ontology;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _node;;
+
+			=> nrel_then: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_5_3;;
+			=> nrel_else: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_5;;
+			*);;	
+
+		-> .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_5_3
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_types;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm:  _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _relation;;
+
+			=> nrel_then: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_5_5;;
+			=> nrel_else: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_5_4;;
+			*);;
+
+		-> .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_5_4	
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_types;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm:  _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _relation;;
+
+			=> nrel_goto: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_5_5;;
+			*);;
+		
+		-> .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_5_5
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _set_of_nodes;; 
+
+			=> nrel_goto: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_4;;
+			*);;
+
+		-> .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_6
+			(*
+			<- genEl;;
+
+			-> rrel_1: rrel_assign: rrel_node: rrel_scp_var: rrel_link: _vertex_number;; 
+
+			=> nrel_goto: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_6_1;;  
+			*);;
+		
+		-> .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_6_1
+			(*
+			<- call;;
+
+		  		-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_cardinality_calculation;;
+		  		-> rrel_2: rrel_fixed:		rrel_scp_const: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_6_1_params 
+					(*
+					-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_types;;
+					-> rrel_2: rrel_fixed: rrel_scp_var: _vertex_number;;
+					*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
+
+		  		=> nrel_goto: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_6_2;;
+			*);;	
+
+		-> .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_6_2
+			(*
+			<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_6_3;;
+			*);;
+	
+		-> .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_6_3
+			(*
+			<- contAdd;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _vertex_number;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: _vertex_number;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _is_exist_accessories_arc;;
+		
+			=> nrel_goto: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_6_4;;
+			*);;
+
+		-> .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_6_4
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _result;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm:  _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _vertex_number;;
+
+			=> nrel_goto: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_6_5;;
+			*);;
+
+		-> .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_6_5
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _set_of_connections;; 
+
+			=> nrel_goto: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_6_6;;
+			*);;
+
+		-> .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_6_6
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _set_of_types;; 
+
+			=> nrel_goto: .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_2_1;;
+			*);;
+
+		-> .proc_of_calculation_number_of_all_types_of_outbound_connections_operator_return
+			(*
+			<- return;;
+			*);;
+		*);;
+	*);;

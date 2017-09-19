@@ -1,0 +1,234 @@
+section_subjdomain_actions_and_tasks
+=> nrel_main_idtf:
+	[Раздел. Предметная область действий и задач]
+	(* <- lang_ru;; *);
+
+=> nrel_idtf:
+	[Раздел. Семантическая теория действий (деятельности) и соответствующих им задач]
+	(* <- lang_ru;; *);
+=> nrel_idtf:
+	[Раздел. sc-модель предметной области действий и ее онтологий]
+	(* <- lang_ru;; *);
+<- not_enough_formed_structure;
+<- atomic_section;;
+
+section_subjdomain_actions_and_tasks = [*^"file://section_subjdomain_actions_and_tasks.scsi"*];;
+
+rrel_key_sc_element -> (section_subjdomain_actions_and_tasks -> subject_domain_of_actions_and_tasks)
+(*
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> question)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> information_action)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> behavioral_action)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> effector_action)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> receptor_action)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> action_in_sc_memory)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> action_in_the_external_environment_ostis_system)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> effector_action_ostis_system)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> receptor_action_ostis_system)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> question_initiated )
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> performed_action)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> active_action)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> deferred_action)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> planned_action)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> question_finished)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> question_finished_successfully)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> question_finished_unsuccessfully)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> question_finished_with_error)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> priority_actions)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> rrel_action_with_very_high_priority)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> rrel_action_with_high_priority)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> rrel_action_with_medium_priority)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> rrel_action_with_low_priority)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> rrel_action_with_very_low_priority)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> subject)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> internal_subject_ostis_system)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> external_subject_ostis_system_interaction)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> external_subject_ostis_system_without_interaction)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> actions_class)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> independent_actions_class)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> non_independent_actions_class)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> nrel_decomposition_of_action)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> nrel_private_action)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> nrel_abstract_sub_action)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> nrel_goto)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> nrel_conjunction_of_previous_actions)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> nrel_condition_control)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> nrel_then)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> nrel_else)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> nrel_error)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> nrel_result)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> task)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> procedural_formulation_of_task)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> declarative_formulation_of_task)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> class_of_tasks)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> task_question)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> command)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> command_class)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> command_class_without_arguments)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> command_class_with_one_argument)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> command_class_with_two_arguments)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> command_class_with_random_arguments_number)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> atomic_command_class)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> non_atomic_command_class)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> plan)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> program)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> program_in_sc_memory)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> protocol)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> decision)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> nrel_performer)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> nrel_executing_actions_class)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> nrel_customer)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> nrel_initiator)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> nrel_object)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> nrel_context_of_action)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> rrel_argument_of_action)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> rrel_first_action_argument)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> rrel_second_section_argument)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> rrel_third_section_argument)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> nrel_class_of_arguments)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> nrel_first_argument_class)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> nrel_second_argument_class)
+	(* <- rrel_key_sc_element;; *);;
+*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;

@@ -1,0 +1,50 @@
+sc_agent_assignment_form_to_the_verification_produce
+=> nrel_main_idtf:
+	[sc-агент формирования задания на рассмотрение результата верификации] (* <- lang_ru;; *);
+	[sc-agent of forming task of the verification result] (* <- lang_en;; *);
+	
+<- abstract_sc_agent;
+
+=> nrel_primary_initiation_condition: 
+	(sc_event_add_output_arc => question_initiated);
+	
+=> nrel_initiation_condition_and_result: 
+	(..sc_agent_assignment_form_to_the_verification_produce_condition => ..sc_agent_assignment_form_to_the_verification_produce_result);
+	
+<= nrel_sc_agent_key_sc_elements: 
+	{
+	question_initiated;
+	question;
+	action_form_task_to_result_of_proposal_verification
+	};
+	
+=> nrel_inclusion: 
+	.platform_independent_realization_of_sc_agent_of_assignment_form_to_the_verification_produce
+	(*
+	<- platform_independent_abstract_sc_agent;;
+	<= nrel_sc_agent_program: 
+		{
+		agent_assignment_form_to_the_verification_produce
+		};;
+		
+	-> sc_agent_assignment_form_to_the_verification_produce_scp 
+		(* <- active_sc_agent;; *);;
+	*);;
+
+..sc_agent_assignment_form_to_the_verification_produce_condition
+= [*
+	action_form_task_to_result_of_proposal_verification _-> .._question;;
+	question_initiated _-> .._question;;
+	question _-> .._question;;
+	.._question _-> rrel_1:: .._parameter1;;
+	.._question _-> rrel_2:: .._parameter2;;
+*];;
+
+..sc_agent_assignment_form_to_the_verification_produce_result
+= [*
+	action_form_task_to_result_of_proposal_verification _-> .._question;;
+	question_finished _-> .._question;;
+	question _-> .._question;;
+	.._question _-> rrel_1:: .._parameter1;;
+	.._question _-> rrel_2:: .._parameter2;;
+*];;

@@ -1,0 +1,72 @@
+section_subjdomain_entities
+
+=> nrel_main_idtf:
+	[Раздел. Предметная область sc-элементов]
+	(* <- lang_ru;; *);
+	[Section. Subject domain of sc-elements]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[Раздел. Предметная область сущностей]
+	(* <- lang_ru;; *);
+<- not_enough_formed_structure;
+<- atomic_section;
+
+<= nrel_introduction:
+	...
+		(*
+			<= nrel_sc_text_translation:
+				...
+					(*
+					-> rrel_example:
+						"file://nl_files/introduction_for_section_subjdomain_entities.html"
+						(* <- lang_ru;; *);;
+					*);;
+		*);;
+
+section_subjdomain_entities = [*^"file://section_subjdomain_entities.scsi"*];;		
+
+section_subjdomain_entities
+-> rrel_key_sc_element:
+	subjdomain_entities;
+	sc_element;
+	sc_constant;
+	fictional_entity;
+	unfabled_entity;
+	sc_terminal_constant;
+	material_or_quasi_material_entity;
+	material_entity;
+	quasi_material_entity;
+	abstract_entity_terminal;
+	sc_variable;
+	sc_variable_first_order;
+	sc_variable_second_order;
+	sc_variable_mixed_order;
+	abstract_entity;
+	permanent_entity;
+	temporary_entity;
+	sc_node;
+	sc_connector;
+	sc_edge;
+	sc_arc;
+	sc_arc_common;
+	sc_arc_membership_or_nonmembership;
+	sc_arc_membership;
+	sc_arc_nonmembership;
+	sc_arc_fuzzy_membership;
+	sc_arc_constant_permanent_membership;
+	sc_code_alphabet;
+	nrel_synonymy;;
+
+/*lang
+<- sc_not_node_role_relation;
+
+=> nrel_main_idtf:
+	[язык]
+	(* <- lang_ru;; *);
+	[language]
+	(* <- lang_en;; *);
+
+=> nrel_idtf:
+	[множество знаковых конструкций, удовлетворяющих общим для этого множества синтаксическим и семантическим правилам]
+	(* <- lang_ru;; *);;*/

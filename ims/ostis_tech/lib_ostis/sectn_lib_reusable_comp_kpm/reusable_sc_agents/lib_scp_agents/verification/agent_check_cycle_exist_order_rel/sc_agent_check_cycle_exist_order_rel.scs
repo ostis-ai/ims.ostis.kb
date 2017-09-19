@@ -1,0 +1,48 @@
+sc_agent_of_checking_cycle_existence_of_ordering_relation
+=> nrel_main_idtf:
+	[Абстрактный sc-агент проверки наличия циклов в отношениях порядка в рамках заданной структуры] (* <- lang_ru;; *);
+	[Abstract sc-agent of checking cycles existence for order strict within a given structure] (* <- lang_en;; *);
+<- abstract_sc_agent;
+=> nrel_primary_initiation_condition: (sc_event_add_output_arc => question_initiated);
+=> nrel_initiation_condition_and_result: (..sc_agent_of_checking_cycle_existence_of_ordering_relation_initiation_condition => ..sc_agent_of_checking_cycle_existence_of_ordering_relation_result);
+<= nrel_sc_agent_key_sc_elements: 
+	{
+		question_initiated;
+		question;
+		action_of_checking_cycle_existence_of_ordering_relation
+	};
+
+=> nrel_inclusion: 
+	.platform_independent_realization_of_sc_agent_of_checking_cycle_existence_of_ordering_relation
+	(*
+	<- platform_independent_abstract_sc_agent;;
+	<= nrel_sc_agent_program: 
+		{
+		agent_of_checking_cycle_existence_of_ordering_relation;
+		proc_of_finding_cycle;
+		proc_of_finding_subclasses_by_taxonomy_relation;
+		proc_of_generation_of_verification_answer;
+		proc_of_adding_validating_message;
+		proc_of_adding_general_action_comment;
+		proc_of_clipping_elements_not_part_of_the_cycle
+		};;
+	-> sc_agent_of_checking_cycle_existence_of_ordering_relation_scp   
+		(* <- active_sc_agent;; *);;
+	*);;
+
+..sc_agent_of_checking_cycle_existence_of_ordering_relation_condition
+= [*
+	action_of_checking_cycle_existence_of_ordering_relation _-> .._question;;
+	question_initiated _-> .._question;;
+	question _-> .._question;;
+	.._question _-> .._parameter;;
+*];;
+
+..sc_agent_of_checking_cycle_existence_of_ordering_relation_result
+= [*
+	action_of_checking_cycle_existence_of_ordering_relation _-> .._question;;
+	question_finished _-> .._question;;
+	question _-> .._question;;
+	.._question _=> nrel_answer:: .._answer;;
+	.._question _-> .._parameter;;
+*];;

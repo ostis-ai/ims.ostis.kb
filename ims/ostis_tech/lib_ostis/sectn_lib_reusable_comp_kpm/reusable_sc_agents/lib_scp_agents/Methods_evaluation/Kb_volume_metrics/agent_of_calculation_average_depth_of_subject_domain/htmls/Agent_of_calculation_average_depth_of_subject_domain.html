@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+</head>
+<body>
+	<p><b>Задача:</b> вычисление cредней глубины <b><sc_element sys_idtf="subject_domain">предметной области</sc_element></b>.</p>
+	<p><b>Описание:</b> агент вызывает <b><sc_element sys_idtf="proc_of_calculation_all_depths_of_subject_domain">процедуру вычисления суммы всех глубин предметной области</sc_element></b> (количество предметных областей связанных отношением <b><sc_element sys_idtf="nrel_private_subject_domain">частная предметная область</sc_element></b> с данным и так далее рекурсивно), а затем вызывает <b><sc_element sys_idtf="proc_of_calculation_average_value">scp-программу подсчета среднего значения</sc_element></b></b> (сумма всех глубин, деленная на количество различных ветвей в дереве отношения).</p>
+	<p><b>Инициализация:</b> появление в памяти вопросной конструкции, соответствующей <b><sc_element sys_idtf = "action_to_calculate_average_depth_of_subject_domain">действию. вычислить cреднюю глубину предметных областей</sc_element></b>.</p>
+	<p><b>Аргументы:</b> <b><sc_element sys_idtf="subject_domain">предметная область</sc_element></b>.</p>
+	<p><b>Результаты:</b>
+	<ul>
+		<li>Если на вход подан корректный аргумент, будет выведено число - средняя глубина предметной области.</li>
+		<li>Если на вход подан не корректный аргумент, будет сгенерировано сообщение о некорректном аргументе.</li>
+	</ul>
+	<p><b>Пример:</b> </p>
+	<p><figure><img src="example_agent_of_calculation_average_depth_of_subject_domain.png" alt="Пример работы агента"> </figure></p>
+</body>
+</html>

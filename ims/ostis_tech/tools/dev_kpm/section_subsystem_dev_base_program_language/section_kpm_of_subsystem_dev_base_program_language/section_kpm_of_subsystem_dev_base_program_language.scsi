@@ -1,0 +1,149 @@
+kpm_dev_base_program_language
+	=> nrel_main_idtf:
+	[Машина обработки знаний подсистемы поддержки проектирования программ базового языка программирования Технологии OSTIS]
+	(* <- lang_ru;; *);
+	[Knowledge processing machine of subsystem of support of programs of the basic programming language of OSTIS Technology designing]
+	(* <- lang_en;; *);
+	<= nrel_abstract_sc_agent_decomposition:
+		{
+			abstract_sc_agent_verification_scp_programs;
+			abstract_sc_agent_debug_scp_programs
+		};;
+
+	abstract_sc_agent_verification_scp_programs
+		<- sc_node_not_relation;
+		=> nrel_main_idtf:
+			[Абстрактный sc-агент верификации scp-программ]
+			(* <- lang_ru;; *);
+			[Abstract sc-agent of scp-programs verification]
+			(* <- lang_en;; *);
+		<- rrel_key_sc_element:
+		  ...
+			(*  <- explanation;;
+				<= nrel_sc_text_translation:	
+				...
+				(*
+					-> rrel_example:
+						"file://content_html/abstract_sc_agent_verification_scp_programs.html"
+						(* <- lang_ru;; *);;
+				*);;
+			*);;
+
+	abstract_sc_agent_debug_scp_programs
+		<- sc_node_not_relation;
+		=> nrel_main_idtf:
+		[Абстрактный sc-агент отладки scp-программ]
+		(* <- lang_ru;; *);
+		[Abstract sc-agent of scp-programs debugging]
+		(* <- lang_en;; *);
+	<=nrel_abstract_sc_agent_decomposition:
+		{
+			abstract_sc_agent_run_scp_program_for_given_rrel_in_set;
+			abstract_sc_agent_run_scp_program_for_given_rrel_in_set_single_step;
+			abstract_sc_agent_of_search_all_operators_within_scp_program;
+			abstract_sc_agent_of_search_all_breakpoints_within_scp_process;
+			abstract_sc_agent_add_breakpoint_in_scp_program;
+			abstract_sc_agent_remove_breakpoint_from_scp_program;
+			abstract_sc_agent_add_breakpoint_in_scp_process;
+			abstract_sc_agent_remove_breakpoint_from_scp_process;
+			abstract_sc_agent_step_in;
+			abstract_sc_agent_step_over;
+			abstract_sc_agent_view_information_about_scp_process;
+			abstract_sc_agent_view_information_about_scp_operator
+		};;
+
+abstract_sc_agent_run_scp_program_for_given_rrel_in_set
+		<- sc_node_not_relation;
+		=> nrel_main_idtf:
+		[Абстрактный sc-агент запуска заданной scp-программы для заданного множества входных данных]
+		(* <- lang_ru;; *);
+		[Abstract sc-agent of running a given scp-program for a given set of input data]
+		(* <- lang_en;; *);;
+
+abstract_sc_agent_run_scp_program_for_given_rrel_in_set_single_step
+		<- sc_node_not_relation;
+		=> nrel_main_idtf:
+		[Абстрактный sc-агент запуска заданной scp-программы для заданного множества входных данных в режиме пошагового выполнения]
+		(* <- lang_ru;; *);
+		[Abstract sc-agent of running a given scp-program for a given set of input data in single-stepping mode]
+		(* <- lang_en;; *);;
+
+abstract_sc_agent_of_search_all_operators_within_scp_program
+		<- sc_node_not_relation;
+		=> nrel_main_idtf:
+		[Абстрактный sc-агент поиска всех scp-операторов в рамках scp-программы]
+		(* <- lang_ru;; *);
+		[Abstract sc-agent of searching for all operators within the scp-program]
+		(* <- lang_en;; *);;
+
+abstract_sc_agent_of_search_all_breakpoints_within_scp_process
+		<- sc_node_not_relation;
+		=> nrel_main_idtf:
+		[Абстрактный sc-агент поиска всех точек останова в рамках scp-процесса]
+		(* <- lang_ru;; *);
+		[Abstract sc-agent of searching for all breakpoints within the scp-process]
+		(* <- lang_en;; *);;
+
+abstract_sc_agent_add_breakpoint_in_scp_program
+		<- sc_node_not_relation;
+		=> nrel_main_idtf:
+		[Абстрактный sc-агент добавления точки останова в scp-программу]
+		(* <- lang_ru;; *);
+		[Abstract sc-agent of adding a breakpoint in the scp-program]
+		(* <- lang_en;; *);;
+
+abstract_sc_agent_remove_breakpoint_from_scp_program
+		<- sc_node_not_relation;
+		=> nrel_main_idtf:
+		[Абстрактный sc-агент удаления точки останова из scp-программы]
+		(* <- lang_ru;; *);
+		[Abstract sc-agent of removing breakpoint from the scp-program]
+		(* <- lang_en;; *);;
+
+abstract_sc_agent_add_breakpoint_in_scp_process
+		<- sc_node_not_relation;
+		=> nrel_main_idtf:
+		[Абстрактный sc-агент добавления точки останова в scp-процесс]
+		(* <- lang_ru;; *);
+		[Abstract sc-agent of adding a breakpoint in the scp-process]
+		(* <- lang_en;; *);;
+
+abstract_sc_agent_remove_breakpoint_from_scp_process
+		<- sc_node_not_relation;
+		=> nrel_main_idtf:
+		[Абстрактный sc-агент удаления точки останова из scp-процесса]
+		(* <- lang_ru;; *);
+		[Abstract sc-agent of removing breakpoint from the scp-process]
+		(* <- lang_en;; *);;
+
+abstract_sc_agent_step_in
+		<- sc_node_not_relation;
+		=> nrel_main_idtf:
+		[Абстрактный sc-агент продолжения выполнения scp-процесса на один шаг]
+		(* <- lang_ru;; *);
+		[Abstract sc-agent of continuing of scp-process execution for a single step]
+		(* <- lang_en;; *);;
+
+abstract_sc_agent_step_over
+		<- sc_node_not_relation;
+		=> nrel_main_idtf:
+		[Абстрактный sc-агент продолжения выполнения scp-процесса до точки останова или завершения]
+		(* <- lang_ru;; *);
+		[Abstract sc-agent of continuing of scp-process execution until breakpoint or completion]
+		(* <- lang_en;; *);;
+
+abstract_sc_agent_view_information_about_scp_process
+		<- sc_node_not_relation;
+		=> nrel_main_idtf:
+		[Абстрактный sc-агент просмотра информации об scp-процессе]
+		(* <- lang_ru;; *);
+		[Abstract sc-agent of information about scp-process viewing]
+		(* <- lang_en;; *);;
+
+abstract_sc_agent_view_information_about_scp_operator
+		<- sc_node_not_relation;
+		=> nrel_main_idtf:
+		[Абстрактный sc-агент просмотра информации об scp-операторе]
+		(* <- lang_ru;; *);
+		[Abstract sc-agent of information about scp-operator viewing]
+		(* <- lang_en;; *);;

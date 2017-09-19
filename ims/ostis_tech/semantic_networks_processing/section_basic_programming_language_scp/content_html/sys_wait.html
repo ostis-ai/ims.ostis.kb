@@ -1,0 +1,31 @@
+<p>
+Операторы класса 
+<b><sc_element sys_idtf  = "sys_wait">scp-оператор ожидания события</sc_element></b> описывают действие ожидания возникновения в 
+<sc_element sys_idtf  = "sc_memory">sc-памяти</sc_element> одного из базовых типов 
+<sc_element sys_idtf  = "nrel_event">событий</sc_element>, связанных с каким-либо 
+<sc_element sys_idtf  = "sc_element">sc-элементом</sc_element>. Если при выполнении 
+<sc_element sys_idtf  = "scp_program">scp-программы</sc_element> встретился 
+<sc_element sys_idtf  = "scp_operator">scp-оператор</sc_element> данного класса, выполнение 
+<sc_element sys_idtf  = "scp_program">scp-программы</sc_element> приостанавливается до тех пор, пока в 
+<sc_element sys_idtf  = "sc_memory">sc-памяти</sc_element> не произойдет 
+<sc_element sys_idtf  = "nrel_event">событие</sc_element>, описываемое значениями операндов. При этом учитываются только события, произошедшие после того момента, как при выполнении 
+<sc_element sys_idtf  = "scp_program">scp-программы</sc_element> встретился 
+<sc_element sys_idtf  = "scp_operator">scp-оператор</sc_element> данного класса, события, произошедшие ранее, не учитываются.
+</p>
+<p>
+Каждый оператор данного класса содержит два операнда.
+</p>
+<p>
+Первый операнд должен быть помечен как 
+<sc_element sys_idtf  = "rrel_fixed">scp-операнд с заданным значением'</sc_element>. Значением данного операнда является один из базовых типов 
+<sc_element sys_idtf  = "nrel_event">событий</sc_element>, т.е. одно из подмножеств множества 
+<sc_element sys_idtf  = "nrel_event">событий</sc_element>.
+</p>
+<p>
+Второй операнд должен быть помечен как 
+<sc_element sys_idtf  = "rrel_fixed">scp-операнд с заданным значением'</sc_element>. Значением данного операнда является 
+<sc_element sys_idtf  = "sc_element">sc-элемент</sc_element>, с которым непосредственно связан указанный тип 
+<sc_element sys_idtf  = "nrel_event">события</sc_element>, т.е. элемент, из которого выходит либо в который входит генерируемая либо удаляемая 
+<sc_element sys_idtf  = "rrel_arc">sc-дуга</sc_element>, либо 
+<sc_element sys_idtf  = "rrel_file">файл</sc_element>, содержимое которой было изменено и т.п.
+</p>

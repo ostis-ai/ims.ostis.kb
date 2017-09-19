@@ -1,0 +1,371 @@
+agent_of_checking_existence_of_any_main_identifier
+=> nrel_main_idtf:
+	[агентная scp-программа проверки наличия sc-элементов, имеющих системный идентификатор, но не имеющих ни одного основного в рамках заданной структуры] (* <- lang_ru;; *);
+	[agent scp-program of checking existence of any main identifiers for sc-elements within the given structure] (* <- lang_en;; *);
+	<- agent_scp_program;;
+
+scp_program -> agent_of_checking_existence_of_any_main_identifier 
+	(*
+	-> rrel_params: .agent_of_checking_existence_of_any_main_identifier_params 
+		(*
+		-> rrel_1: rrel_in: _event;;
+		-> rrel_2: rrel_in: _input_arc;;
+		*);;
+
+	-> rrel_operators: .agent_of_checking_existence_of_any_main_identifier_operator_set 
+		(*
+		-> rrel_init: .agent_of_checking_existence_of_any_main_identifier_operatorA1 
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _temp;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: _input_arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _quest;;
+
+			=> nrel_goto: .agent_of_checking_existence_of_any_main_identifier_operatorA2;;
+			*);;
+
+		-> .agent_of_checking_existence_of_any_main_identifier_operatorA2 
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: action_to_find_sc_elements_without_any_main_identifier;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+
+		  	=> nrel_then: .agent_of_checking_existence_of_any_main_identifier_operatorA3;;
+		  	=> nrel_else: .agent_of_checking_existence_of_any_main_identifier_operator_return;;
+			*);;
+		
+		-> .agent_of_checking_existence_of_any_main_identifier_operatorA3
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: rrel_struct: _param;;
+
+		  	=> nrel_then: .agent_of_checking_existence_of_any_main_identifier_operatorA3_find_context;;
+		  	=> nrel_else: .agent_of_checking_existence_of_any_main_identifier_operator_call_proc_of_adding_validating_message;;
+			*);;
+
+		-> .agent_of_checking_existence_of_any_main_identifier_operatorA3_find_context
+			(*
+		 	<- searchElStr5;;
+
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+		 	-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _common_arc;;
+		 	-> rrel_3: rrel_assign: rrel_scp_var: _context;;
+            -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc_in_relation;;
+		 	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_context_of_action;;
+
+			=> nrel_then: .agent_of_checking_existence_of_any_main_identifier_operatorA3_set_context_existence_to_true;;
+			=> nrel_else: .agent_of_checking_existence_of_any_main_identifier_operatorA3_set_context_existence_to_false;;
+			*);;
+
+        -> .agent_of_checking_existence_of_any_main_identifier_operatorA3_set_context_existence_to_true
+			(*
+			<- contAssign;;			
+			
+			-> rrel_1: rrel_assign: rrel_scp_var:  _is_context_exist;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [true];;
+
+			=> nrel_goto: .agent_of_checking_existence_of_any_main_identifier_operatorB1;;
+			*);; 
+
+		-> .agent_of_checking_existence_of_any_main_identifier_operatorA3_set_context_existence_to_false
+			(*
+			<- contAssign;;			
+			
+			-> rrel_1: rrel_assign: rrel_scp_var:  _is_context_exist;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [false];;
+
+			=> nrel_goto: .agent_of_checking_existence_of_any_main_identifier_operatorB1;;
+			*);;
+
+		-> .agent_of_checking_existence_of_any_main_identifier_operatorB1
+			(*
+		  	<- genEl;;
+
+		  	-> rrel_1: rrel_assign: rrel_node: rrel_const: rrel_struct: rrel_scp_var: _incorrect_structure;; 
+
+		  	=> nrel_goto: .agent_of_checking_existence_of_any_main_identifier_operatorB2;;
+			*);;
+
+		-> .agent_of_checking_existence_of_any_main_identifier_operatorB2
+			(*
+		  	<- searchSetStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _param;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: rrel_node: _node1;;
+
+		  	-> rrel_set_3: rrel_assign: rrel_scp_var: _allRelations;;
+
+		  	=> nrel_then: .agent_of_checking_existence_of_any_main_identifier_operatorB3;;
+		  	=> nrel_else: .agent_of_checking_existence_of_any_main_identifier_operatorC1;;
+			*);;
+
+		-> .agent_of_checking_existence_of_any_main_identifier_operatorB3
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _allRelations;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _someRelation;;
+
+		  	=> nrel_then: .agent_of_checking_existence_of_any_main_identifier_operatorB3_erase_arc;;
+		  	=> nrel_else: .agent_of_checking_existence_of_any_main_identifier_operatorC1;;
+			*);;
+
+		-> .agent_of_checking_existence_of_any_main_identifier_operatorB3_erase_arc
+			(*
+		 	<- eraseEl;;
+
+		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc1;;
+
+		 	=> nrel_goto: .agent_of_checking_existence_of_any_main_identifier_operatorB4_context_logic1;;
+		 	*);;	
+
+		-> .agent_of_checking_existence_of_any_main_identifier_operatorB4_context_logic1
+			(*
+			<- stringIfEq;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _is_context_exist;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [true];;
+
+			=> nrel_then: .agent_of_checking_existence_of_any_main_identifier_operatorB4_context_logic2;;
+			=> nrel_else: .agent_of_checking_existence_of_any_main_identifier_operatorB4;;
+			*);;
+		
+		-> .agent_of_checking_existence_of_any_main_identifier_operatorB4_context_logic2
+			(*
+			<- searchSetStr5;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _someRelation;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc2;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _node3;;
+		  	-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc4;;
+		  	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_system_identifier;;
+
+		  	-> rrel_set_3: rrel_assign: rrel_scp_var: _allSystemIdtfs;;
+
+		  	=> nrel_then: .agent_of_checking_existence_of_any_main_identifier_operatorB4_context_logic3;;
+		  	=> nrel_else: .agent_of_checking_existence_of_any_main_identifier_operatorB3;;
+			*);;
+		
+		-> .agent_of_checking_existence_of_any_main_identifier_operatorB4_context_logic3
+			(*
+			<- searchElStr3;;
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var: _allSystemIdtfs;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _someSystemIdtf;;
+			
+			=> nrel_then: .agent_of_checking_existence_of_any_main_identifier_operatorB4_context_logic4;;
+			=> nrel_else: .agent_of_checking_existence_of_any_main_identifier_operatorB4_deleteAllSystemIdtfs;;
+			*);;
+		
+		-> .agent_of_checking_existence_of_any_main_identifier_operatorB4_context_logic4
+			(*
+			<- eraseEl;;
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _arc;;
+			
+			=> nrel_goto: .agent_of_checking_existence_of_any_main_identifier_operatorB4_context_logic5;;
+			*);;
+		
+		-> .agent_of_checking_existence_of_any_main_identifier_operatorB4_context_logic5
+			(*
+			<- searchElStr3;;
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var: _context;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _someSystemIdtf;;
+			
+			=> nrel_then: .agent_of_checking_existence_of_any_main_identifier_operatorB4_context_logic6;;
+			=> nrel_else: .agent_of_checking_existence_of_any_main_identifier_operatorB4_context_logic3;;
+			*);;
+		
+		-> .agent_of_checking_existence_of_any_main_identifier_operatorB4_context_logic6
+			(*
+			<- eraseEl;;
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _allSystemIdtfs;;
+			
+			=> nrel_goto: .agent_of_checking_existence_of_any_main_identifier_operatorB5_context_logic1;;
+			*);;
+
+		-> .agent_of_checking_existence_of_any_main_identifier_operatorB4_deleteAllSystemIdtfs
+			(*
+			<- eraseEl;;
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _allSystemIdtfs;;
+			
+			=> nrel_goto: .agent_of_checking_existence_of_any_main_identifier_operatorB3;;
+			*);;
+
+		-> .agent_of_checking_existence_of_any_main_identifier_operatorB4
+			(*
+		  	<- searchElStr5;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _someRelation;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc2;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _node3;;
+		  	-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc4;;
+		  	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_system_identifier;;
+
+		  	=> nrel_then: .agent_of_checking_existence_of_any_main_identifier_operatorB5;;
+		  	=> nrel_else: .agent_of_checking_existence_of_any_main_identifier_operatorB3;;
+			*);;
+
+		-> .agent_of_checking_existence_of_any_main_identifier_operatorB5_context_logic1
+			(*
+			<- searchSetStr5;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _someRelation;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc2;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _node3;;
+		  	-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc4;;
+		  	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_main_idtf;;
+
+		  	-> rrel_set_3: rrel_assign: rrel_scp_var: _allMainIdtfs;;
+
+		  	=> nrel_then: .agent_of_checking_existence_of_any_main_identifier_operatorB5_context_logic2;;
+		  	=> nrel_else: .agent_of_checking_existence_of_any_main_identifier_operatorB6;;
+			*);;
+		
+		-> .agent_of_checking_existence_of_any_main_identifier_operatorB5_context_logic2
+			(*
+			<- searchElStr3;;
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var: _allMainIdtfs;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _someMainIdtf;;
+			
+			=> nrel_then: .agent_of_checking_existence_of_any_main_identifier_operatorB5_context_logic3;;
+			=> nrel_else: .agent_of_checking_existence_of_any_main_identifier_operatorB6_context_logic1;;
+			*);;
+		
+		-> .agent_of_checking_existence_of_any_main_identifier_operatorB5_context_logic3
+			(*
+			<- eraseEl;;
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _arc;;
+			
+			=> nrel_goto: .agent_of_checking_existence_of_any_main_identifier_operatorB5_context_logic4;;
+			*);;
+		
+		-> .agent_of_checking_existence_of_any_main_identifier_operatorB5_context_logic4
+			(*
+			<- searchElStr3;;
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var: _context;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _someMainIdtf;;
+			
+			=> nrel_then: .agent_of_checking_existence_of_any_main_identifier_operatorB5_deleteAllMainIdtfs;;
+			=> nrel_else: .agent_of_checking_existence_of_any_main_identifier_operatorB5_context_logic2;;
+			*);;
+
+		-> .agent_of_checking_existence_of_any_main_identifier_operatorB5_deleteAllMainIdtfs
+			(*
+			<- eraseEl;;
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _allMainIdtfs;;
+			
+			=> nrel_goto: .agent_of_checking_existence_of_any_main_identifier_operatorB3;;
+			*);;
+
+		-> .agent_of_checking_existence_of_any_main_identifier_operatorB5
+			(*
+		  	<- searchElStr5;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _someRelation;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc3;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _node4;;
+		  	-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc4;;
+		  	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_main_idtf;;
+
+		   	=> nrel_then: .agent_of_checking_existence_of_any_main_identifier_operatorB3;;
+		  	=> nrel_else: .agent_of_checking_existence_of_any_main_identifier_operatorB6;;  
+			*);;
+
+		-> .agent_of_checking_existence_of_any_main_identifier_operatorB6_context_logic1
+			(*
+			<- eraseEl;;
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _allMainIdtfs;;
+			
+			=> nrel_goto: .agent_of_checking_existence_of_any_main_identifier_operatorB6;;
+			*);;
+		
+		-> .agent_of_checking_existence_of_any_main_identifier_operatorB6
+			(*
+		  	<- genElStr5;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _incorrect_structure;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc5;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _someRelation;;
+		  	-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc4;;
+		  	-> rrel_5: rrel_fixed: rrel_scp_const: rrel_key_sc_element;;
+
+			=> nrel_goto: .agent_of_checking_existence_of_any_main_identifier_operatorB3;;  
+			*);;
+
+		-> .agent_of_checking_existence_of_any_main_identifier_operatorC1
+			(*
+			<- call;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_generation_of_verification_answer;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_checking_existence_of_any_main_identifier_operatorC1_params
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+				-> rrel_2: rrel_fixed: rrel_scp_const: action_to_find_sc_elements_without_any_main_identifier;;
+				-> rrel_3: rrel_fixed: rrel_scp_var: _incorrect_structure;;
+				-> rrel_4: rrel_fixed: rrel_scp_const: structure_which_elements_have_sys_idtf_but_dont_have_main_idtf_in_all_lang;;
+				*);;
+			-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
+
+			=> nrel_goto: .agent_of_checking_existence_of_any_main_identifier_operatorC2;;
+			*);;
+
+		-> .agent_of_checking_existence_of_any_main_identifier_operatorC2
+			(*
+			<- waitReturn;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
+
+			=> nrel_goto: .agent_of_checking_existence_of_any_main_identifier_operator_return;;
+			*);;
+		
+		-> .agent_of_checking_existence_of_any_main_identifier_operator_call_proc_of_adding_validating_message 
+			(*
+		  	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_validating_message;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_checking_existence_of_any_main_identifier_operator_call_proc_of_adding_validating_message_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+				-> rrel_2: rrel_fixed: rrel_scp_const: [Wrong 1st parameter! It must be structure.];;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr2;;
+
+		  	=> nrel_goto: .agent_of_checking_existence_of_any_main_identifier_operator_waitreturn_proc_of_adding_validating_message;;
+			*);;
+
+		-> .agent_of_checking_existence_of_any_main_identifier_operator_waitreturn_proc_of_adding_validating_message
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr2;;
+
+		  	=> nrel_goto: .agent_of_checking_existence_of_any_main_identifier_operator_return;;
+			*);; 	
+
+		-> .agent_of_checking_existence_of_any_main_identifier_operator_return 
+			(*
+		  	<- return;;
+			*);;
+		*);;
+*);;

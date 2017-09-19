@@ -1,0 +1,14 @@
+semantic_network	
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://content_html/semantic.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
+

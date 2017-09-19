@@ -1,0 +1,38 @@
+lib_component_agent_of_forming_terminological_ontology
+=> nrel_main_idtf:
+	[Компонент библиотеки. Sc-агент формилования терминологической онтологии  для заданной предметной области]
+	(* <- lang_ru;; *);
+	[Library component. Sc-agent of forming terminological ontology for given subject domain]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components; 
+<- library_of_atomic_reusable_components; 
+
+=> nrel_attendant_component: 
+	lib_component_ui_menu_file_for_forming_terminological_ontology;
+
+-> rrel_key_sc_element: 
+	.platform_independent_realization_of_sc_agent_of_forming_terminological_ontology;
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Agent_Of_Forming_Terminological_Ontology.html"
+				(* <- lang_ru;; *);; 
+		*);;
+	*);;
+
+sc_node_not_relation -> action_of_forming_terminological_ontology;;
+
+action_of_forming_terminological_ontology => nrel_main_idtf:
+	[действие. построить терминологическую онтологию для заданной предметной области]
+	(*<- lang_ru;;*);;
+
+action_of_forming_terminological_ontology => nrel_main_idtf:
+	[action. form terminological ontology for given subject domain]
+	(*<- lang_en;;*);;

@@ -1,0 +1,258 @@
+sc_model_of_knowledge_base 
+=> nrel_idtf: 
+	[unified semantic model knowledge base]
+	(* <- lang_en;; *);
+	[унифицированная семантическая модель базы знаний]
+	(* <- lang_ru;; *);
+<- section;
+<= nrel_abstract_basic_decomposition:
+{
+	substantive_part_of_the_knowledge_base;
+	context_of_subject_of_knowledge_base_of_the_Global_Knowledge_Base;
+	documentation_of_the_computer_system;
+	history_and_current_processes_of_computer_system_operation;
+	history_current_processes_and_computer_systems_development_plan
+};;
+
+substantive_part_of_the_knowledge_base
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[предметная часть базы знаний]
+	(* <- lang_ru;; *);
+	[substantive part of the knowledge base]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://nl_files/substantive_part_of_the_knowledge_base.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
+
+context_of_subject_of_knowledge_base_of_the_Global_Knowledge_Base 
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[контекст предметной части базы знаний в рамках Глобальной базы знаний]
+	(* <- lang_ru;; *);
+	[context of subject of knowledge base of the Global Knowledge Base]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://nl_files/context_of_subject_of_knowledge_base_of_the_Global_Knowledge_Base.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
+
+documentation_of_the_computer_system 
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[документация компьютерной системы]
+	(* <- lang_ru;; *);
+	[documentation of the computer system]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://nl_files/documentation_of_the_computer_system.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
+
+history_and_current_processes_of_computer_system_operation
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[история и текущие процессы эксплуатации компьютерной системы]
+	(* <- lang_ru;; *);
+	[history and current processes of computer system operation]
+	(* <- lang_en;; *);
+<= nrel_abstract_basic_decomposition:
+{
+	history_of_operating_computer_system;
+	current_processes_of_computer_system_operation
+};;
+
+history_of_operating_computer_system
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[история эксплуатации компьютерной системы]
+	(* <- lang_ru;; *);
+	[history of operating computer system]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://nl_files/history_of_operating_computer_system.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
+
+current_processes_of_computer_system_operation
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[текущие процессы эксплуатации компьютерной системы]
+	(* <- lang_ru;; *);
+	[current processes of computer system operation]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://nl_files/current_processes_of_computer_system_operation.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
+
+history_current_processes_and_computer_systems_development_plan
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[история, текущие процессы и план развития компьютерной системы]
+	(* <- lang_ru;; *);
+	[history current processes and computer systems development plan]
+	(* <- lang_en;; *);
+<= nrel_abstract_basic_decomposition:
+{
+	structure_and_organization_of_computer_systems_design;
+	history_of_the_development_of_computer_system;
+	current_processes_of_computer_system;
+	computer_system_development_plan
+};;
+
+structure_and_organization_of_computer_systems_design
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[структура и организация проекта компьютерной системы]
+	(* <- lang_ru;; *);
+	[history current processes and computer systems development plan]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://nl_files/structure_and_organization_of_computer_systems_design.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
+
+history_of_the_development_of_computer_system
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[история развития компьютерной системы]
+	(* <- lang_ru;; *);
+	[history of the development of computer system]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://nl_files/history_of_the_development_of_computer_system.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
+
+current_processes_of_computer_system 
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[текущие процессы развития компьютерной системы]
+	(* <- lang_ru;; *);
+	[current processes of computer system]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://nl_files/current_processes_of_computer_system.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
+
+computer_system_development_plan
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[план развития компьютерной системы]
+	(* <- lang_ru;; *);
+	[computer system development plan]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://nl_files/computer_system_development_plan.html"
+				(* <- lang_ru;;	*);;
+			*);;
+	*);;
+
+concerted_part_of_kb
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[согласованная часть базы знаний]
+	(* <- lang_ru;; *);
+	[concerted part of knowledge base]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[утверждённая часть базы знаний]
+	(* <- lang_ru;; *);
+	[клиентская часть базы знаний]
+	(* <- lang_ru;; *);
+<- section;
+<= nrel_abstract_basic_decomposition:
+{
+	substantive_part_of_the_knowledge_base;
+	context_of_subject_of_knowledge_base_of_the_Global_Knowledge_Base;
+	documentation_of_the_computer_system
+};;
+
+unified_semantic_model_knowledge_base
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[унифицированная семантическая модель базы знаний]
+	(* <- lang_ru;; *);
+	[unified semantic model knowledge base]
+	(* <- lang_en;; *);;
+
+documentation_OSTIS
+=> nrel_main_idtf:
+	[Документация. Технология OSTIS]
+	(* <- lang_ru;; *);
+	[documentation OSTIS]
+	(* <- lang_en;; *);;

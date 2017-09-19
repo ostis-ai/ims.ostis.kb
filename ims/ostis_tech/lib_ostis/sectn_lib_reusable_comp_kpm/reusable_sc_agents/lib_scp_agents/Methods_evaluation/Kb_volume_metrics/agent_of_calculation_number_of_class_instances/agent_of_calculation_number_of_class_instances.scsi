@@ -1,0 +1,169 @@
+agent_of_calculation_number_of_class_instances
+=> nrel_main_idtf:
+	[агентная scp-программа подсчета количества элементов класса] (* <- lang_ru;; *);
+	[agent scp-program of calculation number of class instances] (* <- lang_en;; *);
+	<- agent_scp_program;;
+
+scp_program -> agent_of_calculation_number_of_class_instances
+	(*
+	-> rrel_params: .agent_of_calculation_number_of_class_instances_params 
+		(*
+		-> rrel_1: rrel_in: _event;;
+		-> rrel_2: rrel_in: _input_arc;;
+		*);;
+
+	-> rrel_operators: .agent_of_calculation_number_of_class_instances_operator_set 
+		(*
+		-> rrel_init: .agent_of_calculation_number_of_class_instances_operator1A
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _temp;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: _input_arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _quest;;
+
+			=> nrel_goto: .agent_of_calculation_number_of_class_instances_operator1B;;
+			*);;
+                 
+		-> .agent_of_calculation_number_of_class_instances_operator1B
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: action_to_calculate_number_of_class_instances;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+
+			=> nrel_then: .agent_of_calculation_number_of_class_instances_operator1C;;
+			=> nrel_else: .agent_of_calculation_number_of_class_instances_operator_return;;
+			*);;
+
+		-> .agent_of_calculation_number_of_class_instances_operator1C
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var:  _class;;
+
+			=> nrel_then: .agent_of_calculation_number_of_class_instances_operator1D;;
+			=> nrel_else: .agent_of_calculation_number_of_class_instances_operator_return;; 
+			*);;
+
+		-> .agent_of_calculation_number_of_class_instances_operator1D
+	    		(*
+			<- ifType;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_not_relation: _class;;
+
+			=> nrel_then: .agent_of_calculation_number_of_class_instances_operator1E;;
+			=> nrel_else: .agent_of_calculation_number_of_class_instances_operator4B;;
+			*);;
+
+		-> .agent_of_calculation_number_of_class_instances_operator1E
+	    		(*
+			<- contAssign;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _number_of_entities;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [0];;
+			
+			=> nrel_goto: .agent_of_calculation_number_of_class_instances_operator1F;;
+			*);;
+
+		-> .agent_of_calculation_number_of_class_instances_operator1F
+			(*
+		  	<- genEl;;
+
+		  	-> rrel_1: rrel_assign: rrel_node: rrel_scp_var: _counted_entities;;
+
+		  	=> nrel_goto: .agent_of_calculation_number_of_class_instances_operator2A;;
+			*);;
+
+	    	-> .agent_of_calculation_number_of_class_instances_operator2A
+			(*
+			<- call;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: proc_count_number_of_class_instances;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_calculation_number_of_class_instances_operator2A_params
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _class;;
+				-> rrel_2: rrel_fixed: rrel_scp_var: _number_of_entities;;
+				-> rrel_3: rrel_fixed: rrel_scp_var: _counted_entities;;
+				*);;
+			-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
+
+			=> nrel_goto: .agent_of_calculation_number_of_class_instances_operator2B;;
+			*);;	
+		
+		-> .agent_of_calculation_number_of_class_instances_operator2B
+    			(*
+    			<- waitReturn;;
+
+    			-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
+
+			=> nrel_goto: .agent_of_calculation_number_of_class_instances_operator3A;;
+			*);;
+
+		-> .agent_of_calculation_number_of_class_instances_operator3A
+			(*
+		  	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_generation_answer_for_agents_of_calculating_power_of_set;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_calculation_number_of_class_instances_operator3A_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _class;;
+				-> rrel_2: rrel_fixed: rrel_scp_var: _number_of_entities;;
+				-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;		
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .agent_of_calculation_number_of_class_instances_operator3B;;
+			*);;
+
+		-> .agent_of_calculation_number_of_class_instances_operator3B
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .agent_of_calculation_number_of_class_instances_operator4A;;
+			*);;
+
+		-> .agent_of_calculation_number_of_class_instances_operator4A
+			(*
+		  	<- eraseEl;;
+
+		  	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _counted_entities;;
+
+		  	=> nrel_goto: .agent_of_calculation_number_of_class_instances_operator_return;;
+			*);;
+
+		-> .agent_of_calculation_number_of_class_instances_operator4B
+			(*
+		  	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_validating_message;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_calculation_number_of_class_instances_operator4B_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+				-> rrel_2: rrel_fixed: rrel_scp_const: [Wrong first parameter! It must be a concept];;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .agent_of_calculation_number_of_class_instances_operator4C;;
+			*);;
+
+		-> .agent_of_calculation_number_of_class_instances_operator4C
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .agent_of_calculation_number_of_class_instances_operator_return;;
+		  	*);;
+
+		-> .agent_of_calculation_number_of_class_instances_operator_return
+			(*
+			<- return;;
+			*);;
+		*);;
+	*);;

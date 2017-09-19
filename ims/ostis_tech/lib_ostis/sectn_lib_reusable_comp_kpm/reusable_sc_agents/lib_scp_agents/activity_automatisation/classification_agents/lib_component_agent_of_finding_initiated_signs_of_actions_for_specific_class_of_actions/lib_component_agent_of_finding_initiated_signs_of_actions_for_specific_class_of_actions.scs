@@ -1,0 +1,37 @@
+lib_component_agent_of_finding_initiated_signs_of_actions_for_specific_class_of_actions
+=> nrel_main_idtf:
+	[Компонент библиотеки. Sc-агент поиска инициированных действий, относящихся к определённому классу действий]
+	(* <- lang_ru;; *);
+	[Library component. Sc-agent of finding signs of actions related to specific class of actions]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components; 
+<- library_of_atomic_reusable_components; 
+
+=> nrel_attendant_component: 
+	lib_component_ui_menu_for_agent_of_finding_initiated_signs_of_actions_for_specific_class_of_actions;
+
+-> rrel_key_sc_element: 
+	.platform_independent_realization_of_sc_agent_of_finding_initiated_signs_of_actions_for_specific_class_of_actions; 
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/agent_of_finding_initiated_signs_of_actions_for_specific_class_of_actions.html"
+				(* <- lang_ru;; *);; 
+		*);;
+	*);;
+
+action_of_finding_initiated_signs_of_actions_for_specific_class_of_actions
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. найти инициированные действия, относящиеся к определённому классу действий]
+		(*<- lang_ru;;*);
+=> nrel_main_idtf:
+	[action. find initiated signs of actions related to specific class of actions]
+		(* <- lang_en;; *);;

@@ -1,0 +1,16 @@
+<html>
+	<body>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<p> Задачей<b><sc_element sys_idtf = "agent_of_finding_all_unreviewed_proposals_of_author"> агента поиска всех нерассмотренных предложений конкретного разработчика</sc_element></b> является поиск всех нерассмотренных <b><sc_element sys_idtf = "nrel_proposal">предложений</sc_element></b> <b><sc_element sys_idtf = "nrel_developer">разработчика</sc_element></b>, который является <b><sc_element sys_idtf = "nrel_authors">автором</sc_element></b> данных <b><sc_element sys_idtf = "nrel_proposal">предложений</sc_element></b>. На вход данному агенту подается <b><sc_element sys_idtf = "nrel_developer">разработчик</sc_element></b> (экземпляр класса <b><sc_element sys_idtf = "ui_user">пользователя</sc_element></b>). Данный агент инициируется при условии появления в памяти вопросной конструкции, соответствующей <b><sc_element sys_idtf = "action_of_finding_all_unreviewed_proposals_of_author"> действию. поиск всех нерассмотренных предложений разработчика</sc_element></b>. Возможные результаты работы агента: 
+		<ul>
+			<li>Если на вход агенту пришел не знак <b><sc_element sys_idtf = "ui_user">пользователя</sc_element></b>, то генерируется сообщение об ошибке (Wrong first parameter! It must be user sign(element of ui_user)).
+			</li>
+			<li>Если в результате поиска нерассмотренные <b><sc_element sys_idtf = "nrel_proposal">предложения</sc_element></b> не были найдены, то генерируется сообщение "The search hasn't given any results".
+			</li>
+			<li>Если в результате поиска нерассмотренные <b><sc_element sys_idtf = "nrel_proposal">предложения</sc_element></b> были найдены, то выводятся все найденные <b><sc_element sys_idtf = "nrel_proposal">предложения</sc_element></b>. Нерассмотренное предложение - предложение, которое не <b><sc_element sys_idtf = "nrel_approved">утверждено</sc_element></b> и не <b><sc_element sys_idtf = "nrel_rejected">отклонено</sc_element></b>. Пример результата работы агента представлен на рисунке. Класс действия (смотреть рисунок) должен являться <b><sc_element sys_idtf = "rrel_key_sc_element">ключевым sc-элементом</sc_element></b> <b><sc_element sys idtf = "section_developers_actions_knowledge_base_cooperation_hierarchy">Раздел. Предметная область действий разработчиков sc-моделей баз знаний, соответствующих методике, предполагающей взаимодействие всех разработчиков с семантической памятью и наличием иерархии администраторов</sc_element></b>. Если класс действия не является <b><sc_element sys_idtf = "rrel_key_sc_element">ключевым sc-элементом</sc_element></b> данного раздела, то данный класс действия не будет добавлен в результат работы агента. 
+			</li>
+		</ul> 
+		</p>
+		<img src="result.png" alt="Команда поиска всех нерассмотренных предложений разработчика"/>		
+  	</body>
+</html>

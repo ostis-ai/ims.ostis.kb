@@ -1,0 +1,329 @@
+section_basic_programming_language_scp
+=> nrel_main_idtf:
+	[Раздел. Предметная область действий и спецификаций действий абстрактной scp-машины - базовый язык программирования SCP, ориентированный на обработку текстов SC-кода]
+	(* <- lang_ru;; *);
+	[Section. Subject domain of actions and action specifications of abstract scp-machine - base programming language SCP oriented on SC-code texts processing]
+	(* <- lang_en;; *);
+<- not_enough_formed_structure;;
+
+section_basic_programming_language_scp = [*^"file://section_basic_programming_language_scp.scsi"*];;
+
+rrel_key_sc_element -> (section_basic_programming_language_scp -> basic_programming_language_scp)
+(*
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> scp_program)
+(*
+	<- rrel_key_sc_element;;
+
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> scp_operator)
+(*
+	<- rrel_key_sc_element;;
+
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> scp_process)
+(*
+	<- rrel_key_sc_element;;
+
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> scp_operator_of_structure_generation)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> sys_gen)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> genElStr5)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> genElStr3)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> genEl)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> scp_operator_of_structure_associative_search)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> searchElStr3)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> searchElStr5)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> searchSetStr3)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> searchSetStr5)
+(*
+	<- rrel_key_sc_element;;
+	
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> sys_search)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> scp_operator_of_structure_deleting)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> eraseEl)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> eraseElStr3)
+(*
+	<- rrel_key_sc_element;;
+	
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> eraseElStr5)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> eraseSetStr3)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> eraseSetStr5)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> scp_operator_of_conditions_check)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> ifType)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> ifVarAssign)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> ifFormCont)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> ifCoin)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> ifEq)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> ifGr)
+(*
+	<- rrel_key_sc_element;;
+	
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> scp_operator_of_scp_operand_value_control)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> varAssign)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> varErase)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> scp_operator_of_scp_process_control)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> call)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> waitReturn)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> waitReturnSet)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> return)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> syncronize)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> scp_operator_of_event_control)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> sys_wait)
+(*
+	<- rrel_key_sc_element;;
+	
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> scp_operator_of_file_content_process)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> contAdd)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> contSub)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> contMult)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> contDiv)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> contPow)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> contLn)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> contSin)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> contCos)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> contTg)
+(*
+	<- rrel_key_sc_element;;
+	
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> contASin)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> contACos)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> contATg)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> contDivInt)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> contDivRem)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> contAssign)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> contErase)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> stringLen)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> contStringConcat)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> stringSub)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> stringStartsWith)
+(*
+	<- rrel_key_sc_element;;
+	
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> stringIfEq)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> stringIfGr)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> stringToUpperCase)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> stringToLowerCase)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> stringSplit)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> stringEndsWith)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> stringReplace)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> stringSlice)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> scp_operator_of_information_output_to_consol)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> print)
+(*
+	<- rrel_key_sc_element;;
+	
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> printNl)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> printEl)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> scp_operator_of_lock_management)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> unlockProc)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> unlockEl)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> lockEl)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> lockElEdit)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> lockElRemove)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> unlockElStr)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> lockElStr)
+(*
+	<- rrel_key_sc_element;;
+	
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> lockElStrEdit)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> lockElStrRemove)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> scp_operator_atomic_type)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> rrel_init)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> rrel_param)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> rrel_in)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> rrel_out)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> rrel_scp_operand)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> rrel_scp_const)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> rrel_scp_var)
+(*
+	<- rrel_key_sc_element;;
+
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> rrel_fixed)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> rrel_assign)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> rrel_set)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> rrel_erase)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> rrel_type_of_sc_element)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> rrel_node)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> rrel_relation)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> rrel_arc)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> rrel_access)
+(*
+	<- rrel_key_sc_element;;
+
+*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;
+*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;
+*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;
+*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;
+*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;
+*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;
+*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;
+*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;
+*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;
+*);;*);;*);;*);;*);;*);;*);;*);;*);;

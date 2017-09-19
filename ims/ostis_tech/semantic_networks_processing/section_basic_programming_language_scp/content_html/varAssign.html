@@ -1,0 +1,20 @@
+<p>
+Операторы класса 
+<b><sc_element sys_idtf  = "varAssign">scp-оператор присваивания значения переменной</sc_element></b> описывают действие присваивания значения некоторой <sc_element sys_idtf  = "rrel_scp_var">scp-переменной'</sc_element>.
+</p>
+<p>
+Каждый оператор данного класса содержит два операнда.
+</p>
+<p>
+Первый операнд может иметь произвольный 
+тип значения <sc_element sys_idtf  = "rrel_scp_operand">scp-операнда'</sc_element>. После выполнения оператора значением данного операнда станет значение второго операнда, то есть будет сгенерирована новая связка отношения 
+<sc_element sys_idtf  = "nrel_measurement">значение*</sc_element>, соединяющая данный операнд и 
+<sc_element sys_idtf  = "sc_element">sc-элемент</sc_element>, являющийся значением второго операнда. Данный операнд должен быть помечен как 
+<sc_element sys_idtf  = "rrel_scp_var">scp-переменная'</sc_element>.
+</p>
+<p>
+Второй операнд должен быть помечен как 
+<sc_element sys_idtf  = "rrel_fixed">scp-операнд с заданным значением'</sc_element>. При этом данный операнд может быть как 
+<sc_element sys_idtf  = "rrel_scp_var">scp-переменной'</sc_element>, так и 
+<sc_element sys_idtf  = "rrel_scp_const">scp-константой'</sc_element>.
+</p>

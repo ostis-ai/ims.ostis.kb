@@ -1,0 +1,658 @@
+subject_domain_of_knowledges
+=> nrel_main_idtf:
+	[Предметная область знаний] 
+	(* <- lang_ru;; *);
+	[Subject domain of knowledges]	
+	(* <- lang_en;; *);
+<- subject_domain;
+<- sc_node_struct;
+<- structure;
+<= nrel_primary_elements_class_private_subject_domain: subject_domain_of_structures;
+=> nrel_primary_elements_class_private_subject_domain: subject_domain_of_logical_formulas_and_logical_ontologies;
+=> nrel_primary_elements_class_private_subject_domain: subject_domain_of_semantic_neighborhoods;
+=> nrel_primary_elements_class_private_subject_domain: subject_domain_of_ontologies;
+=> nrel_primary_elements_class_private_subject_domain: subject_domain_of_subject_domains;
+-> rrel_maximum_studied_object_class: knowledge;
+-> rrel_not_maximum_studied_object_class:
+	section;
+	section_argumentation;
+	section_documentation;
+	section_description_of_subject_domain;
+	section_description_of_semantic_neighborhood;
+	section_description_of_principles;
+	non_atomic_section;
+	atomic_section;
+-> rrel_explored_relation:
+	nrel_metaknowledge;
+	nrel_section_decomposition;
+	nrel_section_base_order;
+	rrel_key_sc_element;
+	rrel_main_key_sc_element;
+	nrel_comment;
+	nrel_summary;
+	nrel_introduction;
+	nrel_conclusion;
+	nrel_preface;
+	nrel_postface;
+	nrel_epigraph;;
+
+sc_node_not_relation -> knowledge;;
+knowledge
+=> nrel_main_idtf:
+	[знание] 
+	(* <- lang_ru;; *);
+	[knowledge] 
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[sc-знание] 
+	(* <- lang_ru;; *);
+	[Множество всевозможных знаний] 
+	(* <- lang_ru;; *);	
+	[sc-знание или целостный фрагмент sc-знания] 
+	(* <- lang_ru;; *);
+<= nrel_strict_inclusion: structure;
+=> nrel_strict_inclusion:
+	semantic_neighborhood;
+	section;
+	subject_domain;
+	ontology;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_knowledge.html" (* <- lang_ru;; *);;
+		*);;
+	*);;
+
+sc_node_norole_relation -> nrel_metaknowledge;;	
+nrel_metaknowledge
+=> nrel_main_idtf:
+	[метазнание*] 
+	(* <- lang_ru;; *);
+	[metaknowledge] 
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[быть метазнанием*] 
+	(* <- lang_ru;; *);
+<- binary_relation;
+<- oriented_relation;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_metaknowledge.html" 
+				(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+sc_node_not_relation -> section;;	
+section
+=> nrel_main_idtf:
+	[раздел] 
+	(* <- lang_ru;; *);
+	[section] 
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[раздел базы знаний] 
+	(* <- lang_ru;; *);
+	[sc-модель раздела базы знаний] 
+	(* <- lang_ru;; *);
+<= nrel_subdividing:
+{
+	atomic_section;
+	non_atomic_section	
+};
+=> nrel_strict_inclusion:
+	section_argumentation;
+	section_description_of_principles;
+	section_documentation;
+	section_description_of_subject_domain;
+	section_description_of_semantic_neighborhood;
+	section_theory_of_subject_domain
+	(*
+		=> nrel_main_idtf:
+		[раздел-теория семантической окрестности]
+		(* <- lang_ru;; *);
+		[theory of subject domain section]
+		(* <- lang_en;; *);;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_section.html"
+			(* <- lang_ru;; *);;
+		*);;
+	*);	
+<- rrel_key_sc_element:
+	...
+	(*
+		<- identify_instances_rule;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/identify_instances_rule_for_section.html"
+			(* <- lang_ru;; *);;
+		*);;
+	*);;	
+
+sc_node_not_relation -> section_argumentation;;
+section_argumentation
+=> nrel_main_idtf:
+	[раздел-обоснование]
+	(* <- lang_ru;; *);
+	[argumentation section]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_argumentation_section.html"
+			(* <- lang_ru;; *);;
+		*);;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- identify_instances_rule;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/identify_instances_rule_for_argumentation_section.html"
+			(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+sc_node_not_relation -> section_documentation;;	
+section_documentation
+=> nrel_main_idtf:
+	[раздел-документация]
+	(* <- lang_ru;; *);
+	[documentation section]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_documentation_section.html"
+			(* <- lang_ru;; *);;
+		*);;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- identify_instances_rule;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/identify_instances_rule_for_documentation_section.html"
+			(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+sc_node_not_relation -> section_description_of_subject_domain;;	
+section_description_of_subject_domain
+=> nrel_main_idtf:
+	[раздел-описание предметной области]
+	(* <- lang_ru;; *);
+	[description of subject domain section]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_description_of_subject_domain_section.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);;
+
+sc_node_not_relation -> section_description_of_semantic_neighborhood;;
+section_description_of_semantic_neighborhood
+=> nrel_main_idtf:
+	[раздел-описание семантической окрестности]
+	(* <- lang_ru;; *);
+	[description of semantic neighbourhood section]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_description_of_semantic_neighborhood_section.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);;
+
+sc_node_not_relation -> section_description_of_principles;;
+section_description_of_principles
+=> nrel_main_idtf:
+	[раздел-описание принципов]
+	(* <- lang_ru;; *);
+	[description of principles section]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_description_of_principles_section.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);;
+
+sc_node_norole_relation -> nrel_section_decomposition;;
+nrel_section_decomposition
+=> nrel_main_idtf:
+	[декомпозиция раздела*]
+	(* <- lang_ru;; *);
+	[section decomposition]
+	(* <- lang_en;; *);
+<- decomposition_relation;
+<- quasybinary_relation;
+<- oriented_relation;
+<= nrel_strict_inclusion:
+	nrel_basic_decomposition;
+	nrel_metaknowledge;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_section_decomposition.html"
+			(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+sc_node_norole_relation -> nrel_section_base_order;;
+nrel_section_base_order
+=> nrel_main_idtf:
+	[базовый порядок разделов*]
+	(* <- lang_ru;; *);
+	[section base order]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[базовая последовательность разделов*]
+	(* <- lang_ru;; *);
+<- binary_relation;
+<- oriented_relation;
+<- order_relation;
+<= nrel_strict_inclusion:
+	nrel_basic_sequence;
+	nrel_metaknowledge;
+=> nrel_first_domain: section;
+=> nrel_second_domain: section;
+=> nrel_definitional_domain: section;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_section_base_order.html"
+			(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+sc_node_not_relation -> non_atomic_section;;
+non_atomic_section
+=> nrel_main_idtf:
+	[неатомарный раздел]
+	(* <- lang_ru;; *);
+	[non atomic section]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[раздел, имеющий подразделы]
+	(* <- lang_ru;; *);
+=> nrel_idtf:
+	[раздел, декомпозируемый на подразделы]
+	(* <- lang_ru;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_non_atomic_section.html"
+			(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+sc_node_not_relation -> atomic_section;;
+atomic_section
+=> nrel_main_idtf:
+	[атомарный раздел]
+	(* <- lang_ru;; *);
+	[atomic section]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[раздел, не имеющий подразделов]
+	(* <- lang_ru;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_atomic_section.html"
+			(* <- lang_ru;; *);;
+		*);;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- note;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+			-> rrel_example:
+				"file://content_html/note_for_atomic_section.html"
+			(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+sc_node_role_relation -> rrel_key_sc_element;;
+rrel_key_sc_element
+=> nrel_main_idtf:
+	[ключевой sc-элемент']
+	(* <- lang_ru;; *); 
+	[key sc-element]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[быть ключевым sc-элементом заданного sc-знания']
+	(* <- lang_ru;; *);
+=> nrel_idtf:
+	[ключевой знак']
+	(* <- lang_ru;; *);
+=> nrel_idtf:
+	[ключевой элемент sc-знания']
+	(* <- lang_ru;; *);
+=> nrel_idtf:
+	[быть ключевым элементом заданной sc-структуры]
+	(* <- lang_ru;; *);
+=> nrel_idtf:
+	[быть ключевым элементом заданной sc-знания]
+	(* <- lang_ru;; *);
+=> nrel_strict_inclusion: rrel_main_key_sc_element;
+<- role_relation;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_key_sc_element.html"
+			(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+sc_node_role_relation -> rrel_main_key_sc_element;;
+rrel_main_key_sc_element
+=> nrel_main_idtf:
+	[главный ключевой sc-элемент']
+	(* <- lang_ru;; *); 
+	[main key sc-element]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[быть ключевым sc-элементом заданного sc-знания']
+	(* <- lang_ru;; *);
+<= nrel_strict_inclusion: rrel_key_sc_element;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_main_key_sc_element.html"
+			(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+nrel_key_sc_element_order
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[порядок ключевых sc-элементов*]
+	(* <- lang_ru;; *);
+	[key sc-elements
+	 order]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[следующий ключевой sc-элемент*]
+	(* <- lang_ru;; *);
+<- strict_order_relation;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_key_sc_element_order.html"
+			(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+sc_node_norole_relation -> nrel_comment;;
+nrel_comment
+=> nrel_main_idtf:
+	[комментарий*]
+	(* <- lang_ru;; *); 
+	[comment]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[sc-комментарий*]
+	(* <- lang_ru;; *);
+<- binary_relation;
+<= nrel_strict_inclusion: nrel_metaknowledge;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_comment.html"
+			(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+sc_node_norole_relation -> nrel_summary;;
+nrel_summary
+=> nrel_main_idtf:
+	[аннотация*]
+	(* <- lang_ru;; *); 
+	[summary]
+	(* <- lang_en;; *);
+<- binary_relation;
+<= nrel_strict_inclusion: nrel_metaknowledge;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_summary.html"
+			(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+sc_node_norole_relation -> nrel_introduction;;
+nrel_introduction
+=> nrel_main_idtf:
+	[введение*]
+	(* <- lang_ru;; *); 
+	[introduction]
+	(* <- lang_en;; *);
+<- binary_relation;
+<= nrel_strict_inclusion: nrel_metaknowledge;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_introduction.html"
+			(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+sc_node_norole_relation -> nrel_conclusion;;
+nrel_conclusion
+=> nrel_main_idtf:
+	[заключение*]
+	(* <- lang_ru;; *); 
+	[conclusion]
+	(* <- lang_en;; *);
+<- binary_relation;
+<= nrel_strict_inclusion: nrel_metaknowledge;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_conclusion.html"
+			(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+sc_node_norole_relation -> nrel_preface;;
+nrel_preface
+=> nrel_main_idtf:
+	[предисловие*]
+	(* <- lang_ru;; *); 
+	[preface]
+	(* <- lang_en;; *);
+<- binary_relation;
+<= nrel_strict_inclusion: nrel_metaknowledge;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_preface.html"
+			(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+sc_node_norole_relation -> nrel_postface;;
+nrel_postface
+=> nrel_main_idtf:
+	[послесловие*]
+	(* <- lang_ru;; *); 
+	[postface]
+	(* <- lang_en;; *);
+<- binary_relation;
+<= nrel_strict_inclusion: nrel_metaknowledge;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_postface.html"
+			(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+sc_node_norole_relation -> nrel_epigraph;;
+nrel_epigraph
+=> nrel_main_idtf:
+	[эпиграф*]
+	(* <- lang_ru;; *); 
+	[epigraph]
+	(* <- lang_en;; *);
+<- binary_relation;
+<= nrel_strict_inclusion: nrel_metaknowledge;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_epigraph.html"
+			(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+nrel_detalization
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[детализация*]
+	(* <- lang_ru;; *);
+	[detalization]
+	(* <- lang_en;; *);
+<- binary_relation;
+<= nrel_strict_inclusion: nrel_metaknowledge;
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_detalization.html"
+			(* <- lang_ru;; *);;
+		*);;
+	*);;

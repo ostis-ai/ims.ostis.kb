@@ -1,0 +1,22 @@
+section_unified_models_of_ui_translators
+
+=> nrel_main_idtf:
+	[Раздел. Унифицированные логико-семантические модели трансляции вводимой информации в ее внутреннее смысловое представление]
+	(*<- lang_ru;;*);
+	[Section. Unified logical semantic models of translating input data into its internal semantic representation]
+	(*<- lang_en;;*);
+<- not_enough_formed_structure;
+<= nrel_section_decomposition:
+	{
+		section_unified_models_of_ui_translator_scg_sc
+		(*
+		=> nrel_section_base_order: 
+			section_unified_models_of_ui_translator_scs_sc;;
+		*);
+		section_unified_models_of_ui_translator_scs_sc
+		(*
+		=> nrel_section_base_order: 
+			section_unified_models_of_ui_translator_scn_sc;;
+		*);
+		section_unified_models_of_ui_translator_scn_sc
+	};;

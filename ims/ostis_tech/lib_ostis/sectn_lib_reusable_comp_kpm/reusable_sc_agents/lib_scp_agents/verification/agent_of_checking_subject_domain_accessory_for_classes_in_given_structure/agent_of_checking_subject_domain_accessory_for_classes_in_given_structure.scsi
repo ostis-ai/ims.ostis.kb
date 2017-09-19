@@ -1,0 +1,465 @@
+agent_of_checking_subject_domain_accessory_for_classes_in_given_structure
+=> nrel_main_idtf:
+	[агентная scp-программа проверки указания соответствующей предметной области для классов в рамках заданной структуры] (* <- lang_ru;; *);
+	[agent scp-program of checking subject domain accessory for classes in given structure] (* <- lang_en;; *);
+	<- agent_scp_program;;
+
+scp_program -> agent_of_checking_subject_domain_accessory_for_classes_in_given_structure 
+	(*
+	-> rrel_params: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_params 
+		(*
+		-> rrel_1: rrel_in: _event;;
+		-> rrel_2: rrel_in: _input_arc;;
+		*);;
+
+	-> rrel_operators: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator_set 
+		(*
+		-> rrel_init: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator1A 
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _temp;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: _input_arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _quest;;
+
+			=> nrel_goto: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator1B;;
+			*);;
+
+		-> .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator1B 
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: action_of_checking_subject_domain_accessory_for_classes_in_given_structure;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+
+		  	=> nrel_then: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator1C;;
+		  	=> nrel_else: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator_return;;
+			*);;
+		
+		-> .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator1C
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: rrel_struct: _structure;;
+
+		  	=> nrel_then: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator1D_find_context;;
+		  	=> nrel_else: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_call_proc_of_adding_validating_message;;
+			*);;
+
+		-> .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator1D_find_context
+			(*
+		 	<- searchElStr5;;
+
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+		 	-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+		 	-> rrel_3: rrel_assign: rrel_scp_var: _context;;
+           	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		 	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_context_of_action;;
+
+			=> nrel_then: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator1D_set_context_existence_to_true;;
+			=> nrel_else: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator1D_set_context_existence_to_false;;
+			*);;	
+
+        -> .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator1D_set_context_existence_to_true
+			(*
+			<- contAssign;;			
+			
+			-> rrel_1: rrel_assign: rrel_scp_var:  _is_context_exist;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [true];;
+
+			=> nrel_goto: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator1D;;
+			*);; 
+
+		-> .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator1D_set_context_existence_to_false
+			(*
+			<- contAssign;;			
+			
+			-> rrel_1: rrel_assign: rrel_scp_var:  _is_context_exist;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [false];;
+
+			=> nrel_goto: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator1D;;
+			*);; 
+
+		-> .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator1D
+        	(*
+		 	<- genEl;;
+
+		 	-> rrel_1: rrel_assign: rrel_const: rrel_node: rrel_struct: rrel_scp_var: _struct_of_answer;;
+
+		 	=> nrel_goto: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator1F;;
+		 	*);;
+
+		-> .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator1F
+			(*
+		  	<- searchSetStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: rrel_struct: _structure;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: rrel_norole_relation: _element;;
+
+		  	-> rrel_set_3: rrel_assign: rrel_scp_var: _set_of_elements;;
+
+		  	=> nrel_then: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator2A;;
+		  	=> nrel_else: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator3A;;
+			*);;
+
+		-> .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator2A
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_elements;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: rrel_node: rrel_norole_relation: _element;;
+		  	
+		  	=> nrel_then: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator2B;;
+		  	=> nrel_else: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator3A;;
+			*);;
+
+		-> .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator2B
+			(*
+			<- eraseEl;;
+	
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_pos_const_perm: rrel_erase: _arc1;;
+
+			=> nrel_goto: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator2C;;
+			*);;
+
+		-> .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator2C
+			(*
+			<- searchElStr5;;
+
+		  	-> rrel_1: rrel_assign: rrel_scp_var: _subject_domain;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: rrel_node: _element;;
+		  	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		  	-> rrel_5: rrel_fixed: rrel_scp_const: rrel_explored_relation;;
+
+			=> nrel_then: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator2D;;
+			=> nrel_else: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator2F;;
+			*);;
+
+		-> .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator2D
+			(*
+			<- stringIfEq;;			
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var:  _is_context_exist;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [true];;
+
+			=> nrel_then: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator2E;;
+			=> nrel_else: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator2A;;
+			*);;    
+
+		-> .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator2E
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _context;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _subject_domain;;
+		  	
+		  	=> nrel_then: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator2A;;
+		  	=> nrel_else: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator2F;;
+			*);;
+
+		-> .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator2F
+        	(*
+		 	<- genElStr5;;
+
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _struct_of_answer;;
+		 	-> rrel_2: rrel_assign: rrel_scp_var: rrel_const: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _element;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_const: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_key_sc_element;;
+
+		 	=> nrel_goto: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator2A;;
+		 	*);;
+
+		-> .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator3A
+			(*
+		  	<- searchSetStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: rrel_struct: _structure;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: rrel_role_relation: _element;;
+
+		  	-> rrel_set_3: rrel_assign: rrel_scp_var: _set_of_elements;;
+
+		  	=> nrel_then: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator3B;;
+		  	=> nrel_else: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator4A;; 
+			*);;
+
+		-> .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator3B
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_elements;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: rrel_node: rrel_role_relation: _element;;
+		  	
+		  	=> nrel_then: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator3C;;
+		  	=> nrel_else: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator4A;;
+			*);;
+
+		-> .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator3C
+			(*
+			<- eraseEl;;
+	
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_pos_const_perm: rrel_erase: _arc1;;
+
+			=> nrel_goto: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator3D;;
+			*);;
+
+		-> .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator3D
+			(*
+			<- searchElStr5;;
+
+		  	-> rrel_1: rrel_assign: rrel_scp_var: _subject_domain;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: rrel_node: _element;;
+		  	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		  	-> rrel_5: rrel_fixed: rrel_scp_const: rrel_explored_relation;;
+
+			=> nrel_then: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator3E;;
+			=> nrel_else: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator3G;;
+			*);;
+
+		-> .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator3E
+			(*
+			<- stringIfEq;;			
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var:  _is_context_exist;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [true];;
+
+			=> nrel_then: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator3F;;
+			=> nrel_else: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator3B;;
+			*);;    
+
+		-> .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator3F
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _context;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _subject_domain;;
+		  	
+		  	=> nrel_then: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator3B;;
+		  	=> nrel_else: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator3G;;
+			*);;
+
+		-> .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator3G
+        	(*
+		 	<- genElStr5;;
+
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _struct_of_answer;;
+		 	-> rrel_2: rrel_assign: rrel_scp_var: rrel_const: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _element;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_const: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_key_sc_element;;
+
+		 	=> nrel_goto: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator3B;;
+		 	*);;
+
+		-> .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator4A
+			(*
+		  	<- searchSetStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: rrel_struct: _structure;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: rrel_not_relation: _element;;
+
+		  	-> rrel_set_3: rrel_assign: rrel_scp_var: _set_of_elements;;
+
+		  	=> nrel_then: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator4B;;
+		  	=> nrel_else: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator_gen_verification_answer;;
+			*);;
+
+		-> .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator4B
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_elements;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: rrel_node: rrel_not_relation: _element;;
+		  	
+		  	=> nrel_then: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator4C;;
+		  	=> nrel_else: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator_gen_verification_answer;;
+			*);;
+
+		-> .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator4C
+			(*
+			<- eraseEl;;
+	
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_pos_const_perm: rrel_erase: _arc1;;
+
+			=> nrel_goto: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator4D;;
+			*);;
+
+		-> .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator4D
+			(*
+			<- searchElStr5;;
+
+		  	-> rrel_1: rrel_assign: rrel_scp_var: _subject_domain;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: rrel_node: _element;;
+		  	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		  	-> rrel_5: rrel_fixed: rrel_scp_const: rrel_not_maximum_studied_object_class;;
+
+			=> nrel_then: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator4E;;
+			=> nrel_else: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator4G;;
+			*);;
+
+		-> .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator4E
+			(*
+			<- stringIfEq;;			
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var:  _is_context_exist;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [true];;
+
+			=> nrel_then: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator4F;;
+			=> nrel_else: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator4B;;
+			*);;    
+
+		-> .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator4F
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _context;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _subject_domain;;
+		  	
+		  	=> nrel_then: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator4B;;
+		  	=> nrel_else: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator4J;;
+			*);;
+
+		-> .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator4G
+			(*
+			<- searchElStr5;;
+
+		  	-> rrel_1: rrel_assign: rrel_scp_var: _subject_domain;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: rrel_node: _element;;
+		  	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		  	-> rrel_5: rrel_fixed: rrel_scp_const: rrel_maximum_studied_object_class;;
+
+			=> nrel_then: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator4H;;
+			=> nrel_else: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator4J;;
+			*);;
+
+		-> .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator4H
+			(*
+			<- stringIfEq;;			
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var:  _is_context_exist;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [true];;
+
+			=> nrel_then: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator4I;;
+			=> nrel_else: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator4B;;
+			*);;    
+
+		-> .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator4I
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _context;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _subject_domain;;
+		  	
+		  	=> nrel_then: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator4B;;
+		  	=> nrel_else: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator4J;;
+			*);;
+
+		-> .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator4J
+        	(*
+		 	<- genElStr5;;
+
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _struct_of_answer;;
+		 	-> rrel_2: rrel_assign: rrel_scp_var: rrel_const: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _element;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_const: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_key_sc_element;;
+
+		 	=> nrel_goto: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator4B;;
+		 	*);;		 	
+
+		-> .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator_gen_verification_answer
+			(*
+		 	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_generation_of_verification_answer;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator_gen_verification_answer_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+				-> rrel_2: rrel_fixed: rrel_scp_const: action_of_checking_subject_domain_accessory_for_classes_in_given_structure;;
+				-> rrel_3: rrel_fixed: rrel_scp_var: _struct_of_answer;;
+				-> rrel_4: rrel_fixed: rrel_scp_const: structure_which_contains_concepts_that_dont_belong_to_any_subjdomain;;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr2;;
+
+		  	=> nrel_goto: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator_waitreturn_generation_verification_answer;;
+			*);;
+
+		-> .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator_waitreturn_generation_verification_answer 
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr2;;
+
+		  	=> nrel_goto: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator_erase_temp_set_1_0;;
+			*);; 	
+
+		-> .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator_erase_temp_set_1_0
+			(*
+			<- ifVarAssign;;
+
+			-> rrel_1: rrel_scp_var: rrel_struct: _set_of_elements;;
+
+			=> nrel_then: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator_erase_temp_set_1;;
+			=> nrel_else: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator_return;;
+			*);;	
+
+		-> .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator_erase_temp_set_1
+		    (*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _set_of_elements;;
+
+			=> nrel_goto: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator_return;;
+			*);;
+
+/*******************************************************Wrong Parameters*******************************************************************/
+
+		-> .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_call_proc_of_adding_validating_message 
+			(*
+		  	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_validating_message;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_call_proc_of_adding_validating_message_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+				-> rrel_2: rrel_fixed: rrel_scp_const: [Wrong 1st parameter! It must be structure];;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_call_proc_of_adding_validating_message_waitreturn_proc_of_adding_validating_message;;
+			*);;
+
+		-> .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_call_proc_of_adding_validating_message_waitreturn_proc_of_adding_validating_message
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_return;;
+			*);;
+
+
+		-> .agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator_return 
+			(*
+		  	<- return;;
+			*);;
+		*);;
+	*);;
+
