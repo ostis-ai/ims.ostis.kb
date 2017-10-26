@@ -252,18 +252,27 @@ nrel_using_constants
 <- quasybinary_relation;
 
 => nrel_first_domain:
-	concept;
+	...
+	(*
+		<-boolean;;
+		<=nrel_boolean: concept;;
+	*);
 
 => nrel_second_domain:
-	set_of_sets;
+	definition;
 
 => nrel_definitional_domain:
 	...
 	(*
 		<= nrel_combination:
 		{
-			concept;
-			set_of_sets
+			...
+			(*
+				<-boolean;;
+				<=nrel_boolean: concept;;
+			*);
+			definition
+
 		};;
 
 	*);
