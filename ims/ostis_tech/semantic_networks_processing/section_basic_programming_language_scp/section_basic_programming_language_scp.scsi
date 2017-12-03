@@ -110,7 +110,7 @@ basic_programming_language_scp
 -> rrel_maximum_studied_object_class: 
 	scp_program;;
 
-scp_program
+new_scp_program
 <- sc_node_not_relation;
 	=> nrel_main_idtf:
 		[scp-программа]
@@ -119,6 +119,7 @@ scp_program
 		(*<- lang_en;;*);
 	<= nrel_inclusion:
 		program_in_sc_memory;
+	<- main_concept;
 		
 	=> nrel_idtf:
 		[Язык SCP]
@@ -136,6 +137,72 @@ scp_program
 				*);;
 		*);;
 
+scp_program
+<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[#scp-программа]
+		(*<- lang_ru;;*);
+		[#scp-program]
+		(*<- lang_en;;*);
+	<= nrel_inclusion:
+		program_in_sc_memory;
+	<- main_to_auxilary_concept;
+
+	<- rrel_key_sc_element:
+		...
+		(*
+			<- explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://content_html/old_explanation_for_scp_program.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
+
+scp_lang
+<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[#Язык SCP]
+		(*<- lang_ru;;*);
+		[#SCP language]
+		(*<- lang_en;;*);
+	<- main_to_auxilary_concept;
+	<- rrel_key_sc_element:
+		...
+		(*
+			<- explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://content_html/old_explanation_for_scp.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
+
+scp_procedure
+<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[#scp-процедура]
+		(*<- lang_ru;;*);
+		[#scp-procedure]
+		(*<- lang_en;;*);
+	<- main_to_auxilary_concept;
+	<- rrel_key_sc_element:
+		...
+		(*
+			<- explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://content_html/old_explanation_for_scp_procedure.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
+
 agent_scp_program
 <- sc_node_not_relation;
 	=> nrel_main_idtf:
@@ -144,7 +211,8 @@ agent_scp_program
 		[agent scp-program]
 		(*<- lang_en;;*);
 	<= nrel_inclusion:
-		scp_program;
+		new_scp_program;
+	<- main_concept;
 		
 	=> nrel_idtf:
 		[Язык SCP]
@@ -189,7 +257,7 @@ scp_process
 				*);;
 		*);;
 
-scp_operator
+new_scp_operator
 <- sc_node_not_relation;
 	=> nrel_main_idtf:
 		[scp-оператор]
@@ -213,6 +281,14 @@ scp_operator
 						(* <- lang_ru;; *);; 
 				*);;
 		*);
+	<- main_concept;
+	
+	<= nrel_subdividing:
+	{
+		
+		scp_operator_executed_after_completion_of_at_least_one_of_the_previous;
+		scp_operator_executed_after_completion_of_all_previous		
+	};
 
 	<= nrel_subdividing: 
 	{
@@ -227,6 +303,90 @@ scp_operator
 		scp_operator_of_information_output_to_consol;
 		scp_operator_of_lock_management
 	};;
+
+scp_operator
+<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[#scp-оператор]
+		(*
+		<- lang_ru;;
+		*);
+		[#scp-operator]
+		(*
+		<- lang_en;;
+		*);
+	<- main_to_auxilary_concept;
+		
+	<- rrel_key_sc_element:
+		...
+		(*
+			<- explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://content_html/old_scp_operator.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);
+
+	<= nrel_subdividing: 
+	{
+		scp_operator_of_structure_generation;
+		scp_operator_of_structure_associative_search;
+		scp_operator_of_structure_deleting;
+		scp_operator_of_conditions_check;
+		scp_operator_of_scp_operand_value_control;
+		scp_operator_of_scp_process_control;
+		scp_operator_of_event_control;
+		scp_operator_of_file_content_process;
+		scp_operator_of_information_output_to_consol;
+		scp_operator_of_lock_management;
+		scp_operator_executed_after_completion_of_at_least_one_of_the_previous;
+		scp_operator_executed_after_completion_of_all_previous
+	};;
+
+scp_operator_executed_after_completion_of_at_least_one_of_the_previous
+<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[scp-оператор, выполняемый после завершения хотя бы одного из предыдущих]
+		(*<- lang_ru;;*);
+		[scp-operator executed after completion of at least one of the previous]
+		(*<- lang_en;;*);
+	<- main_concept;
+	<- rrel_key_sc_element:
+		...
+		(*
+			<- explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://content_html/scp_operator_executed_after_completion_of_at_least_one_of_the_previous.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
+
+scp_operator_executed_after_completion_of_all_previous
+<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[scp-оператор, выполняемый после завершения всех предыдущих]
+		(*<- lang_ru;;*);
+		[scp-operator executed after completion of all previous]
+		(*<- lang_en;;*);
+	<- main_concept;
+	<- rrel_key_sc_element:
+		...
+		(*
+			<- explanation;;
+			<= nrel_sc_text_translation:
+				...
+				(*
+				-> rrel_example:
+					"file://content_html/scp_operator_executed_after_completion_of_all_previous.html"
+						(* <- lang_ru;; *);; 
+				*);;
+		*);;
 
 scp_operator_of_structure_generation
 <- sc_node_not_relation;
@@ -2133,6 +2293,8 @@ rrel_init
 		(*<- lang_ru;;*);
 		[initiating operator']
 		(*<- lang_en;;*);
+	
+	<- main_concept;
 
 	=> nrel_first_domain:
  		question;
@@ -2159,7 +2321,7 @@ rrel_init
 				*);;
 		*);;
 
-rrel_param
+rrel_new_param
 <- sc_node_role_relation;
 	=> nrel_main_idtf:
 		[параметр scp-программы']
@@ -2184,6 +2346,8 @@ rrel_param
 	<= nrel_inclusion:
 		rrel_argument_of_action;
 
+	<-main_concept;
+
 	<= nrel_subdividing: 
 	{
 		rrel_in;
@@ -2199,6 +2363,66 @@ rrel_param
 				(*
 					-> rrel_example:
 						"file://content_html/explanation_for_rrel_param.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+rrel_param
+<- sc_node_role_relation;
+	=> nrel_main_idtf:
+		[#параметр scp-программы']
+		(*<- lang_ru;;*);
+	<- main_to_auxilary_concept;
+
+	<- rrel_key_sc_element:
+		...
+		(*
+			<- explanation;;
+			<= nrel_sc_text_translation:	
+				...
+				(*
+					-> rrel_example:
+						"file://content_html/old_explanation_for_rrel_param.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+rrel_operator
+<- sc_node_role_relation;
+	=> nrel_main_idtf:
+		[#оператор scp-программы']
+		(*<- lang_ru;;*);
+	<- main_to_auxilary_concept;
+
+	<- rrel_key_sc_element:
+		...
+		(*
+			<- explanation;;
+			<= nrel_sc_text_translation:	
+				...
+				(*
+					-> rrel_example:
+						"file://content_html/old_explanation_for_rrel_operator.html"
+						(*<- lang_ru;;*);;
+				*);;
+		*);;
+
+rrel_type_of_scp_operand
+<- sc_node_role_relation;
+	=> nrel_main_idtf:
+		[#тип значения scp-операнда']
+		(*<- lang_ru;;*);
+	<- auxiliary_concept;
+
+	<- rrel_key_sc_element:
+		...
+		(*
+			<- explanation;;
+			<= nrel_sc_text_translation:	
+				...
+				(*
+					-> rrel_example:
+						"file://content_html/old_explanation_for_rrel_type_of_scp_operand.html"
 						(*<- lang_ru;;*);;
 				*);;
 		*);;
@@ -2256,6 +2480,7 @@ rrel_out
  				sc_element
  			};;
  		*);
+	<- main_concept;
 	<- rrel_key_sc_element:
 		...
 		(*

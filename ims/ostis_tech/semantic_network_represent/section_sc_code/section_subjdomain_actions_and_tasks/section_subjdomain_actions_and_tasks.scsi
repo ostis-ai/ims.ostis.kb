@@ -805,13 +805,14 @@ nrel_abstract_sub_action
 	[класс действий, частных для каждого из действий, принадлежащих некоторому классу*]
 	(* <- lang_ru;; *);;
 
-nrel_goto
+nrel_goto_new
 <- sc_node_norole_relation;
 => nrel_main_idtf:
 	[последовательность действий*]
 	(* <- lang_ru;; *);
 	[sequence of actions*]
 	(* <- lang_en;; *);
+<- main_concept;
 
 => nrel_idtf:
 	[порядок действий*]
@@ -839,8 +840,30 @@ nrel_goto
 	*);
 => nrel_inclusion:
 	nrel_then;
-	nrel_else;
+	nrel_else_new;
 	nrel_error;;
+
+nrel_goto
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[#следующий оператор*]
+	(* <- lang_ru;; *);
+	[#next operator*]
+	(* <- lang_en;; *);
+	<- main_to_auxilary_concept;	
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+			-> rrel_example:
+				"file://content_html/old_explanation_for_nrel_goto.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);;
 
 nrel_conjunction_of_previous_actions
 <- sc_node_norole_relation;
@@ -913,7 +936,8 @@ nrel_then
 	(* <- lang_en;; *);
 
 <- order_relation;
-	
+<- main_concept;
+
 <- rrel_key_sc_element:
 	...
 	(*
@@ -927,13 +951,15 @@ nrel_then
 		*);;
 	*);;
 	
-nrel_else
+nrel_else_new
 <- sc_node_norole_relation;
 => nrel_main_idtf:
 	[последовательность действий при отрицательном результате*]
 	(* <- lang_ru;; *);
 	[sequence of actions after negative result*]
 	(* <- lang_en;; *);
+
+<- main_concept;
 	
 => nrel_idtf:
 	[else*]
@@ -950,6 +976,29 @@ nrel_else
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_nrel_else.html"
+			(* <- lang_ru;;	*);;
+		*);;
+	*);;
+
+	
+nrel_else
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[#следующий оператор при безуспешном выполнении*]
+	(* <- lang_ru;; *);
+	[#next operator after unsuccess*]
+	(* <- lang_en;; *);
+	<- main_to_auxilary_concept;
+	
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/old_explanation_for_nrel_else.html"
 			(* <- lang_ru;;	*);;
 		*);;
 	*);;

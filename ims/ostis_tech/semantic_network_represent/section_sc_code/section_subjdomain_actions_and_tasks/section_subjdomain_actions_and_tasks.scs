@@ -121,6 +121,9 @@ rrel_key_sc_element -> (section_subjdomain_actions_and_tasks -> subject_domain_o
 	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> nrel_goto)
 (*
 	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> nrel_goto_new)
+(*
+	<- rrel_key_sc_element;;
 	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> nrel_conjunction_of_previous_actions)
 (*
 	<- rrel_key_sc_element;;
@@ -131,6 +134,9 @@ rrel_key_sc_element -> (section_subjdomain_actions_and_tasks -> subject_domain_o
 (*
 	<- rrel_key_sc_element;;
 	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> nrel_else)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> nrel_else_new)
 (*
 	<- rrel_key_sc_element;;
 	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> nrel_error)
@@ -231,4 +237,4 @@ rrel_key_sc_element -> (section_subjdomain_actions_and_tasks -> subject_domain_o
 	<- rrel_key_sc_element;;
 	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> nrel_second_argument_class)
 	(* <- rrel_key_sc_element;; *);;
-*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;
+*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;

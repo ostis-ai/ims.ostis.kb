@@ -22,7 +22,27 @@ rrel_key_sc_element -> (section_basic_programming_language_scp -> basic_programm
 (*
 	<- rrel_key_sc_element;;
 
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> scp_lang)
+(*
+	<- rrel_key_sc_element;;
+
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> new_scp_program)
+(*
+	<- rrel_key_sc_element;;
+
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> scp_procedure)
+(*
+	<- rrel_key_sc_element;;
+
 	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> scp_operator_of_structure_generation)
+(*
+	<- rrel_key_sc_element;;
+
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> scp_operator_executed_after_completion_of_at_least_one_of_the_previous)
+(*
+	<- rrel_key_sc_element;;
+
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> scp_operator_executed_after_completion_of_all_previous)
 (*
 	<- rrel_key_sc_element;;
 	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> sys_gen)
@@ -270,13 +290,22 @@ rrel_key_sc_element -> (section_basic_programming_language_scp -> basic_programm
 	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> rrel_init)
 (*
 	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> rrel_new_param)
+(*
+	<- rrel_key_sc_element;;
 	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> rrel_param)
 (*
 	<- rrel_key_sc_element;;
 	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> rrel_in)
 (*
 	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> rrel_type_of_scp_operand)
+(*
+	<- rrel_key_sc_element;;
 	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> rrel_out)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> rrel_operator)
 (*
 	<- rrel_key_sc_element;;
 	=> nrel_key_sc_element_order: (section_basic_programming_language_scp -> rrel_scp_operand)
@@ -326,4 +355,5 @@ rrel_key_sc_element -> (section_basic_programming_language_scp -> basic_programm
 *);;*);;*);;*);;*);;*);;*);;*);;*);;*);;
 *);;*);;*);;*);;*);;*);;*);;*);;*);;*);;
 *);;*);;*);;*);;*);;*);;*);;*);;*);;*);;
-*);;*);;*);;*);;*);;*);;*);;*);;*);;
+*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;
+*);;*);;*);;*);;*);;*);;*);;
