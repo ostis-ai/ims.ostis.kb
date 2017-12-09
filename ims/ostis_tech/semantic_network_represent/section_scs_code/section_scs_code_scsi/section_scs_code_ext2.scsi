@@ -1,0 +1,73 @@
+scs_code_ext2
+<- sc_node_not_relation;
+=> nrel_main_idtf: 
+	[SCs-код. Расширение 2]
+	(* <- lang_ru;; *);
+	[SCs-code. Extension 2]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[sc.s-текст уровня 3]
+	(* <- lang_ru;; *);
+=> nrel_inclusion:
+	scs_code_ext3;
+=> nrel_abstract_semantic_inclusion:
+	scs_sentence_3_level;
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+				-> rrel_example:
+					"file://scs_code_htmls/expl_scs_txt_lvl3.html" 
+					(* <- lang_ru;;	*);;
+			*);;
+                
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+				-> rrel_example:
+					"file://scs_code_htmls/scs_code_ext2.html" 
+					(* <- lang_ru;;	*);;
+			*);;
+                
+	*);
+-> rrel_example:
+	.scs_code_ext2_example
+	(*
+		<= nrel_sc_text_translation:
+			...
+			(*
+				-> rrel_example:
+					"file://scs_code_htmls/example1_scs_txt_lvl3.html"
+					(*
+						<- scs_code_ext2;;
+						<=> nrel_semantic_equivalence:
+							.scs_code_ext1_example;;
+						=> nrel_comment:
+							...
+							(*
+								<= nrel_sc_text_translation:
+									...
+									(*
+										-> rrel_example:
+											"file://scs_code_htmls/comment_scs_txt_lvl3.html"
+											(* <- lang_ru;; *);;
+									*);;
+							*);;
+					*);;
+			*);;
+	*);
+	"file://scs_code_htmls/example2_scs_txt_lvl3.html"
+	(*
+		<=> nrel_semantic_equivalence:
+			"file://images/equiv_scg_ex2_scs_txt_lvl3.png"
+			(* <- scg_code;; *);;
+	*);;
