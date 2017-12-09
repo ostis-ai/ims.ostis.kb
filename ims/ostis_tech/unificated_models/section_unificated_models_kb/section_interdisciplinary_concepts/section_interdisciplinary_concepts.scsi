@@ -168,3 +168,48 @@ nrel_authors
 		*);;
 	*);;
 
+nrel_abstract_semantic_inclusion
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[абстрактное семантическое включение*]
+	(* <- lang_ru;;	*);
+	[abstract semantic inclusion*]
+	(* <- lang_en;;	*);
+<- oriented_relation;
+<- binary_relation;
+=> nrel_first_domain:
+	file;
+=> nrel_second_domain:
+	file;
+=> nrel_definitional_domain:
+	file;;
+
+nrel_semantic_inclusion
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[семантическое включение*]
+	(* <- lang_ru;;	*);
+	[semantic inclusion*]
+	(* <- lang_en;;	*);
+<- oriented_relation;
+<- binary_relation;
+=> nrel_first_domain:
+	file;
+=> nrel_second_domain:
+	file;
+=> nrel_definitional_domain:
+	file;;
+
+nrel_semantic_equivalence
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[семантическая эквивалентность*]
+	(* <- lang_ru;;	*);
+	[semantic equivalence*]
+	(* <- lang_en;;	*);
+<- non_oriented_relation;
+<- binary_relation;
+=> nrel_domain:
+	file;
+=> nrel_definitional_domain:
+	file;;
