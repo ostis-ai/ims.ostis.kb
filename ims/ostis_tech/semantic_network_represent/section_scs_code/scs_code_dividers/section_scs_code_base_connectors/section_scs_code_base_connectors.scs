@@ -1,0 +1,29 @@
+section_scs_code_base_connectors 
+
+=> nrel_main_idtf: 
+	[Раздел. SCs-код. Базовые sc.s-коннекторы] 
+	(* <- lang_ru;; *);
+	[Section. SCs-code. Basic sc.s-connectors]
+	(* <- lang_en;; *);
+<- not_enough_formed_structure;
+<- atomic_section;;
+
+section_scs_code_base_connectors = [*^"file://section_scs_code_base_connectors.scsi"*];; 
+
+rrel_key_sc_element -> (section_scs_code_base_connectors -> scs_divider_connector)
+(*
+	=> nrel_key_sc_element_order: (section_scs_code_base_connectors -> basic_scs_connector)
+	(*
+		<- rrel_key_sc_element;;
+		=> nrel_key_sc_element_order: (section_scs_code_base_connectors -> scs_divider_edge)
+	(*
+		<- rrel_key_sc_element;;
+		=> nrel_key_sc_element_order: (section_scs_code_base_connectors -> scs_divider_common_type_arc)
+	(*
+		<- rrel_key_sc_element;;
+		=> nrel_key_sc_element_order: (section_scs_code_base_connectors -> scs_divider_accessory_arc)
+	(*
+		<- rrel_key_sc_element;;
+		=> nrel_key_sc_element_order: (section_scs_code_base_connectors -> scs_divider_const_pos_stat_accessory_arc)
+		(* <- rrel_key_sc_element;; *);;
+	*);;*);;*);;*);;*);;
