@@ -5,8 +5,25 @@ doc_web_platform_based_on_software_sc_memory
 	[Documentation. Web-oriented interpretation platform for sc-models of computer systems]
 	(* <- lang_en;;	*);
 <- not_enough_formed_structure;
+=> nrel_introduction:
+	introduction_web_platform_based_on_software_sc_memory
+	(*
+		=> nrel_main_idtf:
+			[Введение. Документация. Web-ориентированная платформа интерпретации sc-моделей компьютерных систем]
+			(* <- lang_ru;; *);
+			[Introduction. Documentation. Web-oriented interpretation platform for sc-models of computer systems]
+			(* <- lang_en;; *);;
+		<= nrel_sc_text_translation:
+		 ...
+		 (*
+			 -> rrel_example:
+			   "file://nl_files/introduction_web_platform.html"
+				(* <- lang_ru;;	*);;
+		 *);;
+	*);
 -> rrel_key_sc_element:
 	web_platform_based_on_software_sc_memory;
+<- non_atomic_section;
 <= nrel_section_decomposition:
 	{
 		justification_of_web_platform_based_on_software_sc_memory_implementation
