@@ -5,6 +5,8 @@ subject_domain_of_knowledges
 	[Subject domain of knowledges]	
 	(* <- lang_en;; *);
 <- subject_domain;
+<- sc_node_struct;
+<- structure;
 <= nrel_primary_elements_class_private_subject_domain: subject_domain_of_structures;
 => nrel_primary_elements_class_private_subject_domain: subject_domain_of_logical_formulas_and_logical_ontologies;
 => nrel_primary_elements_class_private_subject_domain: subject_domain_of_semantic_neighborhoods;
@@ -678,7 +680,8 @@ nrel_exercise
 <- antireflexive_relation; antisymmetric_relation; antitransitive_relation;
 => nrel_first_domain: section;
 => nrel_second_domain: exercise;
-=> nrel_definitional_domain: ...
+=> nrel_definitional_domain: 
+	...
 	(*
 	<= nrel_combination: 
 		{
@@ -686,7 +689,8 @@ nrel_exercise
 			exercise
 		};;
 	*);
-<- rrel_key_sc_element: ...
+<- rrel_key_sc_element: 
+	...
 	(*
 		<- explanation;;
 		<= nrel_sc_text_translation:
@@ -710,7 +714,8 @@ nrel_right_answer
 <- antireflexive_relation; antisymmetric_relation; antitransitive_relation;
 => nrel_first_domain: exercise;
 => nrel_second_domain: file;
-=> nrel_definitional_domain: ...
+=> nrel_definitional_domain: 
+	...
 	(*
 	<= nrel_combination: 
 		{
@@ -718,7 +723,8 @@ nrel_right_answer
 			file
 		};;
 	*);
-<- rrel_key_sc_element: ...
+<- rrel_key_sc_element: 
+	...
 	(*
 		<- explanation;;
 		<= nrel_sc_text_translation:
