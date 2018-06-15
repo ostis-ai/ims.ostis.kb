@@ -1,0 +1,65 @@
+scs_code_ext4
+<- sc_node_not_relation;
+=> nrel_main_idtf: 
+	[SCs-код. Расширение 4]
+	(* <- lang_ru;; *);
+	[SCs-code. Extension 4]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[sc.s-текст уровня 5]
+	(* <- lang_ru;; *);
+=> nrel_abstract_semantic_inclusion:
+	scs_sentence_5_level;
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+				-> rrel_example:
+					"file://scs_code_htmls/expl_scs_txt_lvl5.html" 
+					(* <- lang_ru;;	*);;
+			*);;
+                
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+				-> rrel_example:
+					"file://scs_code_htmls/scs_code_ext4.html" 
+					(* <- lang_ru;;	*);;
+			*);;
+                
+	*);
+-> rrel_example:
+	.scs_code_ext4_example
+	(*
+		<= nrel_sc_text_translation:
+			...
+			(*
+				-> rrel_example:
+					"file://scs_code_htmls/example_scs_txt_lvl5.html"
+					(*
+						<- scs_code_ext4;;
+						<=> nrel_semantic_equivalence:
+							.scs_code_ext3_example;;
+						=> nrel_comment:
+							...
+							(*
+								<= nrel_sc_text_translation:
+									...
+									(*
+										-> rrel_example:
+											"file://scs_code_htmls/comment_scs_txt_lvl5.html"
+											(* <- lang_ru;; *);;
+									*);;
+							*);;
+					*);;
+			*);;
+	*);;
