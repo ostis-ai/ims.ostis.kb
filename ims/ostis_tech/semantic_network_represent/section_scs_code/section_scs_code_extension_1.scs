@@ -1,8 +1,12 @@
 section_scs_code_extension_1
 
 => nrel_main_idtf: 
-	[Раздел. SCs-код. Расш1] 
+	[Раздел. SCs-код. Расширение 1] 
 	(* <- lang_ru;; *);
 	[Section. SCs-code. Extension 1] 
 	(* <- lang_en;; *);
-<- unformed_structure;;
+<- not_enough_formed_structure;
+<- atomic_section;;
+
+section_scs_code_extension_1 = [*^"file://section_scs_code_scsi/section_scs_code_ext1.scsi"*];;
+section_scs_code_extension_1 -> rrel_key_sc_element: scs_code_ext1;;
