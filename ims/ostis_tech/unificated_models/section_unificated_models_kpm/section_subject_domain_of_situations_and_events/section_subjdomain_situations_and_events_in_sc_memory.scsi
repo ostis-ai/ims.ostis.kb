@@ -54,6 +54,7 @@ subject_domain_situations_and_events_in_sc_memory
 	nrel_situation_in_sc_memory;
 	nrel_elementary_situation_in_sc_memory;
 	sc_event_add_output_arc;
+	sc_event_add_input_arc;
 	nrel_add_sc_arc_coming_in_given_sc_element_situation;
 	nrel_add_sc_edge_incident_to_given_sc_element_situation;
 	sc_event_remove_output_arc;
@@ -435,6 +436,7 @@ nrel_elementary_situation_in_sc_memory
 
 <= nrel_subdividing: 
 	{  
+		sc_event_add_input_arc;
 		sc_event_add_output_arc;
 		nrel_add_sc_arc_coming_in_given_sc_element_situation;
 		nrel_add_sc_edge_incident_to_given_sc_element_situation;
@@ -444,6 +446,14 @@ nrel_elementary_situation_in_sc_memory
 		sc_event_remove_element;
 		sc_event_content_changed
 	};;
+
+sc_event_add_input_arc
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[событие добавления sc-дуги, входящей в заданный sc-элемент*]
+	(* <- lang_ru;; *);
+	[situation of adding sc-arc that comes into given sc-element*]
+	(* <- lang_en;; *);;
 
 sc_event_add_output_arc
 <- sc_node_norole_relation;
