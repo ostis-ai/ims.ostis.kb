@@ -22,6 +22,7 @@ subject_domain_of_knowledges
 	section_description_of_principles;
 	non_atomic_section;
 	atomic_section;
+	exercise;
 -> rrel_explored_relation:
 	nrel_metaknowledge;
 	nrel_section_decomposition;
@@ -34,7 +35,9 @@ subject_domain_of_knowledges
 	nrel_conclusion;
 	nrel_preface;
 	nrel_postface;
-	nrel_epigraph;;
+	nrel_epigraph;
+	nrel_exercise;
+	nrel_right_answer;;
 
 sc_node_not_relation -> knowledge;;
 knowledge
@@ -653,6 +656,82 @@ nrel_detalization
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_detalization.html"
+			(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+sc_node_not_relation -> exercise;;
+exercise 
+=> nrel_main_idtf: 
+	[упражнение] 
+	(*<-lang_ru;;*);
+	[exercise] 
+	(*<-lang_en;;*);;
+
+sc_node_norole_relation -> nrel_exercise;;
+nrel_exercise 
+=> nrel_main_idtf: 
+	[упражнение*] 
+	(*<-lang_ru;;*);
+	[exercise*] 
+	(*<-lang_en;;*);
+<- binary_relation;
+<- oriented_relation;
+<- antireflexive_relation; antisymmetric_relation; antitransitive_relation;
+=> nrel_first_domain: section;
+=> nrel_second_domain: exercise;
+=> nrel_definitional_domain: 
+	...
+	(*
+	<= nrel_combination: 
+		{
+			section;
+			exercise
+		};;
+	*);
+<- rrel_key_sc_element: 
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_exercise.html"
+			(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+sc_node_norole_relation -> nrel_right_answer;;
+nrel_right_answer 
+=> nrel_main_idtf: 
+	[правильный ответ*] 
+	(*<-lang_ru;;*);
+	[right answer*] 
+	(*<-lang_en;;*);
+<- binary_relation;
+<- oriented_relation;
+<- antireflexive_relation; antisymmetric_relation; antitransitive_relation;
+=> nrel_first_domain: exercise;
+=> nrel_second_domain: file;
+=> nrel_definitional_domain: 
+	...
+	(*
+	<= nrel_combination: 
+		{
+			exercise;
+			file
+		};;
+	*);
+<- rrel_key_sc_element: 
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_right_answer.html"
 			(* <- lang_ru;; *);;
 		*);;
 	*);;

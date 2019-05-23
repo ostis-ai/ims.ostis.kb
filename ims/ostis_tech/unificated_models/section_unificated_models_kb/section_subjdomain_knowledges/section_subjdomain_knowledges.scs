@@ -1,12 +1,12 @@
-section_subjdomain_knowledges 
+section_subjdomain_knowledges
 => nrel_main_idtf:
 	[Раздел. Предметная область знаний]
 	(* <- lang_ru;; *);
 => nrel_idtf:
 	[Раздел базы знаний, описывающий Предметную область знаний]
 	(* <- lang_ru;; *);
-
 <- not_enough_formed_structure;;
+
 section_subjdomain_knowledges = [*^"file://section_subjdomain_knowledges.scsi"*];;
 
 rrel_key_sc_element -> (section_subjdomain_knowledges -> subject_domain_of_knowledges)
@@ -78,5 +78,14 @@ rrel_key_sc_element -> (section_subjdomain_knowledges -> subject_domain_of_knowl
 (*
 	<- rrel_key_sc_element;;
 	=> nrel_key_sc_element_order: (section_subjdomain_knowledges -> nrel_detalization)
-	(* <- rrel_key_sc_element;; *);;
-*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_knowledges -> nrel_exercise)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_knowledges -> exercise)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_knowledges -> nrel_right_answer)
+	(*<- rrel_key_sc_element;;*);;
+*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;

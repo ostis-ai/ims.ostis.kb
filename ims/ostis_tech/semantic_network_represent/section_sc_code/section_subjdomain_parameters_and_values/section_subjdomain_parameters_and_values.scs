@@ -44,3 +44,89 @@ section_subjdomain_parameters_and_values
 	nrel_large_quantitie;
 	nrel_equal_of_quantities;
 	nrel_greater_or_equal_quantitie;;
+
+section_subjdomain_parameters_and_values
+=>nrel_exercise: 
+ exercise_1_section_subjdomain_parameters_and_values;; 
+
+exercise_1_section_subjdomain_parameters_and_values
+<- exercise;
+
+=> nrel_main_idtf:
+ 	[Упражнение 1. Раздел. Предметная область параметров и величин]
+ 	(* <- lang_ru;; *);
+ 	[Exercise 1. Section. Subject domain of parameters and values]
+ 	(* <- lang_en;; *);
+
+<- rrel_key_sc_element: 
+	...
+ 	(*
+  	<- explanation;;
+  	<= nrel_sc_text_translation:
+  		...
+  		(*
+  		-> rrel_example:
+    			"file://nl_files/def_section_subjdomain_parameters_and_values_exercise_1.html"
+   			(* <- lang_ru;; *);;
+  		*);;
+ 	*);;
+
+exercise_1_section_subjdomain_parameters_and_values
+=> nrel_right_answer: 
+	...
+	(*
+	<- rrel_key_sc_element: 
+		...
+ 		(*
+  		<- illustration;;
+  		<= nrel_sc_text_translation:
+  			...
+  			(*
+  			-> rrel_example:
+    				"file://nl_files/exercise_parameters_1_right_answer.png";;
+  			*);;
+ 		*);;
+	*);;
+
+section_subjdomain_parameters_and_values
+=>nrel_exercise: 
+ 	exercise_2_section_subjdomain_parameters_and_values;; 
+
+exercise_2_section_subjdomain_parameters_and_values
+<- exercise;
+
+=> nrel_main_idtf:
+ 	[Упражнение 2. Раздел. Предметная область параметров и величин]
+ 	(* <- lang_ru;; *);
+ 	[Exercise 2. Section. Subject domain of parameters and values]
+ 	(* <- lang_en;; *);
+
+<- rrel_key_sc_element: 
+	...
+ 	(*
+  	<- explanation;;
+  	<= nrel_sc_text_translation:
+  		...
+  		(*
+  		-> rrel_example:
+    			"file://nl_files/def_section_subjdomain_parameters_and_values_exercise_2.html"
+   			(* <- lang_ru;; *);;
+  		*);;
+ 	*);;
+
+exercise_2_section_subjdomain_parameters_and_values
+=> nrel_right_answer: 
+	...
+	(*
+	<- rrel_key_sc_element: 
+		...
+ 		(*
+  		<- illustration;;
+  		<= nrel_sc_text_translation:
+  			...
+  			(*
+  			-> rrel_example:
+    				"file://nl_files/exercise_parameters_2_right_answer.png";;  
+  			*);;
+ 		*);;
+	*);;

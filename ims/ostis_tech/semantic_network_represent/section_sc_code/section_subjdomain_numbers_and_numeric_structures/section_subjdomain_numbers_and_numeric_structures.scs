@@ -15,13 +15,12 @@ section_subjdomain_numbers_and_numeric_structures
 	 ...
 	 (*
 		 -> rrel_example:
-		   "file://content_html/introduction_section_subjdomain_numbers.pdf"
+				"file://content_html/introduction_section_subjdomain_numbers.pdf"
 			(* <- lang_ru;;	*);;
 	 *);;
 *);
 <- not_enough_formed_structure;
 <- atomic_section;;
-
 section_subjdomain_numbers_and_numeric_structures = [*^"file://subjdomain_numbers_and_numeric_structures.scsi"*];;
 
 section_subjdomain_numbers_and_numeric_structures
@@ -55,3 +54,127 @@ section_subjdomain_numbers_and_numeric_structures
 	decimal_numeral_system;
 	binary_numeral_system;
 	hexadecimal_numeral_system;;
+
+section_subjdomain_numbers_and_numeric_structures
+=>nrel_exercise: 
+	exercise_1_subjdomain_numbers_and_numeric_structures;; 
+
+exercise_1_subjdomain_numbers_and_numeric_structures
+<- exercise;
+=> nrel_main_idtf:
+	[Упражнение 1. Раздел. Предметная область чисел и числовых структур]
+	(* <- lang_ru;; *);
+	[Exercise 1. Section. Subject domain of numbers and numeric structures]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element: 
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/def_exercise_1.html"
+			(* <- lang_ru;; *);;
+		*);;
+	*);;
+exercise_1_subjdomain_numbers_and_numeric_structures
+=> nrel_right_answer: 
+	...
+	(*
+	<- rrel_key_sc_element: 
+		...
+		(*
+		<- illustration;;
+		<= nrel_sc_text_translation:
+		  	... 
+		  	(*
+		  	-> rrel_example:
+		    		"file://content_img/exercise_numbers_1_right_answer.png";; 
+		  	*);;
+		*);;
+
+	*);;
+
+section_subjdomain_numbers_and_numeric_structures
+=>nrel_exercise: 
+	exercise_2_subjdomain_numbers_and_numeric_structures;; 
+
+exercise_2_subjdomain_numbers_and_numeric_structures
+<- exercise;
+=> nrel_main_idtf:
+	[Упражнение 2. Раздел. Предметная область чисел и числовых структур]
+	(* <- lang_ru;; *);
+	[Exercise 2. Section. Subject domain of numbers and numeric structures]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/def_exercise_2.html"
+			(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+exercise_2_subjdomain_numbers_and_numeric_structures
+=> nrel_right_answer: 
+	...
+	(*
+	<- rrel_key_sc_element: 
+		...
+	 	(*
+	  	<- illustration;;
+	  	<= nrel_sc_text_translation:
+	  		...
+	  		(*
+	  		-> rrel_example:
+	    			"file://content_img/exercise_numbers_2_right_answer.png";;
+		  *);;
+	 	*);;
+	*);;
+
+
+section_subjdomain_numbers_and_numeric_structures
+=>nrel_exercise: 
+	exercise_3_subjdomain_numbers_and_numeric_structures;; 
+
+exercise_3_subjdomain_numbers_and_numeric_structures
+<- exercise;
+=> nrel_main_idtf:
+	[Упражнение 3. Раздел. Предметная область чисел и числовых структур]
+	(* <- lang_ru;; *);
+	[Exercise 3. Section. Subject domain of numbers and numeric structures]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/def_exercise_3.html"
+			(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+exercise_3_subjdomain_numbers_and_numeric_structures
+=> nrel_right_answer: 
+	...
+	(*
+	<- rrel_key_sc_element: 
+		...
+ 		(*
+		<- illustration;;
+  		<= nrel_sc_text_translation:
+  			...
+  			(*
+  			-> rrel_example:
+    				"file://content_img/exercise_numbers_3_right_answer.png";;  
+ 			*);;
+ 		*);;
+	*);;
