@@ -172,3 +172,90 @@ rrel_key_sc_element -> (section_subjdomain_sets -> subject_domain_of_sets)
 	=> nrel_key_sc_element_order: (section_subjdomain_sets -> nrel_equality_of_sets)
 	(* <- rrel_key_sc_element;; *);;
 *);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;
+
+
+
+section_subjdomain_sets
+=>nrel_exercise: 
+ exercise_1_section_subjdomain_sets;; 
+
+exercise_1_section_subjdomain_sets
+<- exercise;
+
+=> nrel_main_idtf:
+ [Упражнение 1. Раздел. Предметная область множеств]
+ (* <- lang_ru;; *);
+ [Exercise 1. Section. Subject domain of sets]
+ (* <- lang_en;; *);
+
+<- rrel_key_sc_element: ...
+ (*
+  <- explanation;;
+  <= nrel_sc_text_translation:
+  ...
+  (*
+  -> rrel_example:
+    "file://content_html/exercises/exercise_1/exercise_1_subjdomain_sets.html"
+   (* <- lang_ru;; *);;
+  *);;
+ *);;
+
+exercise_1_section_subjdomain_sets
+=> nrel_right_answer: ...
+(*
+<- rrel_key_sc_element: ...
+ (*
+  <- illustration;;
+  <= nrel_sc_text_translation:
+  ...
+  (*
+  -> rrel_example:
+    "file://content_html/exercises/exercise_1/1.png";;
+  *);;
+ *);;
+
+*);;
+
+
+section_subjdomain_sets
+=>nrel_exercise: 
+ exercise_2_section_subjdomain_sets;; 
+
+exercise_2_section_subjdomain_sets
+<- exercise;
+
+=> nrel_main_idtf:
+ [Упражнение 2. Раздел. Предметная область множеств]
+ (* <- lang_ru;; *);
+ [Exercise 2. Section. Subject domain of sets]
+ (* <- lang_en;; *);
+
+<- rrel_key_sc_element: ...
+ (*
+  <- explanation;;
+  <= nrel_sc_text_translation:
+  ...
+  (*
+  -> rrel_example:
+    "file://content_html/exercises/exercise_2/subjdomain_sets_exercise_2.html"
+   (* <- lang_ru;; *);;
+  *);;
+ *);;
+
+exercise_2_section_subjdomain_sets
+=> nrel_right_answer: ...
+(*
+<- rrel_key_sc_element: ...
+ (*
+  <- illustration;;
+  <= nrel_sc_text_translation:
+  ...
+  (*
+  -> rrel_example:
+    "file://content_html/exercises/exercise_2/2.png";;
+  *);;
+ *);;
+
+*);;
+
+
