@@ -71,10 +71,10 @@ scp_program -> agent_of_finding_all_drafts_of_author
 			*);;
 
 		-> .agent_of_finding_all_drafts_of_author_operator_fill
-    		(*
+			(*
 			<- searchSetStr5;;
 
-            -> rrel_1: rrel_assign: rrel_scp_var: _draft;;
+			-> rrel_1: rrel_assign: rrel_scp_var: _draft;;
 			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
 			-> rrel_3: rrel_fixed: rrel_scp_var: _user;;
 			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
@@ -82,7 +82,7 @@ scp_program -> agent_of_finding_all_drafts_of_author
 
 			-> rrel_set_1: rrel_fixed: rrel_scp_var: _possible_drafts;;
 
-        	=> nrel_goto: .agent_of_finding_all_drafts_of_author_operator_gen_answer;;
+			=> nrel_goto: .agent_of_finding_all_drafts_of_author_operator_gen_answer;;
 			*);;
 		
 		-> .agent_of_finding_all_drafts_of_author_operator_gen_answer
@@ -105,7 +105,7 @@ scp_program -> agent_of_finding_all_drafts_of_author
 			*);;
 		
 		-> .agent_of_finding_all_drafts_of_author_operator_find_draft
-    		(*
+			(*
 			<- searchElStr3;;
 
 			-> rrel_1: rrel_fixed: rrel_scp_var: _possible_drafts;;
@@ -117,7 +117,7 @@ scp_program -> agent_of_finding_all_drafts_of_author
 			*);;
 
 		-> .agent_of_finding_all_drafts_of_author_operator_delete_arc
-    		(*
+			(*
 			<- eraseEl;;
 
 			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc1;; 
@@ -138,7 +138,7 @@ scp_program -> agent_of_finding_all_drafts_of_author
 			*);;
 
 		-> .agent_of_finding_all_drafts_of_author_operator_plus
-    		(*
+			(*
 			<- contAssign;;
 
 			-> rrel_1: rrel_assign: rrel_scp_var: _is_exist_draft;;
@@ -186,7 +186,7 @@ scp_program -> agent_of_finding_all_drafts_of_author
 			*);;
 
 		-> .agent_of_finding_all_drafts_of_author_operator_del
-    		(*
+			(*
 			<- eraseEl;;
 
 			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _possible_drafts;; 
@@ -300,7 +300,7 @@ scp_program -> agent_of_finding_all_drafts_of_author
 			*);;
 	
 		-> .agent_of_finding_all_drafts_of_author_operator_del_1
-    		(*
+			(*
 			<- eraseEl;;
 
 			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _possible_drafts;; 
