@@ -1,0 +1,170 @@
+agent_of_finding_all_drafts_of_question_author
+=> nrel_main_idtf:
+	[агентная scp-программа поиска всех черновиков автора вопроса] (* <- lang_ru;; *);
+	[agent scp-program of finding all drafts of question author] (* <- lang_en;; *);
+	<- agent_scp_program;;
+
+scp_program -> agent_of_finding_all_drafts_of_question_author
+	(*
+	-> rrel_params: .agent_of_finding_all_drafts_of_question_author_params 
+		(*
+		-> rrel_1: rrel_in: _event;;
+		-> rrel_2: rrel_in: _input_arc;;
+		*);;
+
+	-> rrel_operators: .agent_of_finding_all_drafts_of_question_author_operator_set 
+		(*
+		-> rrel_init: .agent_of_finding_all_drafts_of_question_author_operator_get_question
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _temp;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: _input_arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _quest;;
+
+			=> nrel_goto: .agent_of_finding_all_drafts_of_question_author_operator_check_action;;
+			*);;
+
+		-> .agent_of_finding_all_drafts_of_question_author_operator_check_action
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: action_of_finding_all_drafts_of_question_author;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+
+			=> nrel_then: .agent_of_finding_all_drafts_of_question_author_operator_get_question_author;;
+			=> nrel_else: .agent_of_finding_all_drafts_of_question_author_operator_return;;
+			*);;
+
+		-> .agent_of_finding_all_drafts_of_question_author_operator_get_question_author
+			(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _user;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_authors;;
+
+			=> nrel_then: .agent_of_finding_all_drafts_of_question_author_operator_gen_new_question_1;;
+			=> nrel_else: .agent_of_finding_all_drafts_of_question_author_operator_return;;
+			*);;
+
+		-> .agent_of_finding_all_drafts_of_question_author_operator_gen_new_question_1
+			(*
+			<- genElStr3;;
+			
+			-> rrel_1: rrel_fixed: rrel_scp_const: question;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_const: rrel_node: rrel_scp_var: _new_quest;;
+
+			=> nrel_goto: .agent_of_finding_all_drafts_of_question_author_operator_gen_new_question_2;;
+			*);;
+
+		-> .agent_of_finding_all_drafts_of_question_author_operator_gen_new_question_2
+    		(*
+			<- genElStr3;;
+			
+			-> rrel_1: rrel_fixed: rrel_scp_const: action_of_finding_all_drafts_of_author;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _new_quest;;
+
+        	=> nrel_goto: .agent_of_finding_all_drafts_of_question_author_operator_gen_new_question_3;;
+			*);;
+
+		-> .agent_of_finding_all_drafts_of_question_author_operator_gen_new_question_3
+    		(*
+			<- genElStr3;;
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var: _new_quest;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _user;;
+
+        	=> nrel_goto: .agent_of_finding_all_drafts_of_question_author_operator_gen_new_question_4;;
+			*);;
+		
+		-> .agent_of_finding_all_drafts_of_question_author_operator_gen_new_question_4
+    		(*
+			<- genElStr3;;
+			
+			-> rrel_1: rrel_fixed: rrel_scp_const: question_initiated;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _new_quest;;
+
+        	=> nrel_goto: .agent_of_finding_all_drafts_of_question_author_operator_check_answer_1;;
+			*);;
+
+		-> .agent_of_finding_all_drafts_of_question_author_operator_check_answer_1
+		(*                                       
+			<- searchElStr3;;
+			-> rrel_1: rrel_fixed: rrel_scp_const: question_finished_unsuccessfully;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc_result;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _new_quest;;
+
+			=> nrel_then: .agent_of_finding_all_drafts_of_question_author_operator_search_ready_answer;;
+			=> nrel_else: .agent_of_finding_all_drafts_of_question_author_operator_check_answer_2;;
+		*);;
+
+		-> .agent_of_finding_all_drafts_of_question_author_operator_check_answer_2
+		(*                                       
+			<- searchElStr3;;
+			-> rrel_1: rrel_fixed: rrel_scp_const: question_finished_successfully;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc_result;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _new_quest;;
+
+			=> nrel_then: .agent_of_finding_all_drafts_of_question_author_operator_search_ready_answer;;
+			=> nrel_else: .agent_of_finding_all_drafts_of_question_author_operator_check_answer_3;;
+		*);;
+
+		-> .agent_of_finding_all_drafts_of_question_author_operator_check_answer_3
+		(*
+			<- sys_wait;;
+			-> rrel_1: rrel_fixed: rrel_scp_const: sc_event_remove_input_arc;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: _new_quest;;
+
+			=> nrel_goto: .agent_of_finding_all_drafts_of_question_author_operator_check_answer_1;;
+		*);;
+
+		-> .agent_of_finding_all_drafts_of_question_author_operator_search_ready_answer
+		(*
+			<- searchElStr5;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _new_quest;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _agent_answer;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_answer;;
+
+			=>nrel_goto: .agent_of_finding_all_drafts_of_question_author_operator_make_answer;;
+		*);;						
+
+		-> .agent_of_finding_all_drafts_of_question_author_operator_make_answer
+			(*
+			<- genElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_const: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _agent_answer;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_const: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_answer;; 
+			
+			=> nrel_goto: .agent_of_finding_all_drafts_of_question_author_operator_successfully_finished_question;;
+			*);;
+
+		-> .agent_of_finding_all_drafts_of_question_author_operator_successfully_finished_question
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: question_finished_successfully;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+
+			=> nrel_goto: .agent_of_finding_all_drafts_of_question_author_operator_return;; 
+			*);;
+		
+		-> .agent_of_finding_all_drafts_of_question_author_operator_return
+			(*
+			<- return;;
+			*);;
+		*);;
+	*);;
