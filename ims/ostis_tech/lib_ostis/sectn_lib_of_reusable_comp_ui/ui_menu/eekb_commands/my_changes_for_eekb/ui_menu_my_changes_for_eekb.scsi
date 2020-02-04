@@ -4,6 +4,11 @@ ui_menu_my_changes_for_eekb <- ui_user_command_class_noatom;
 <= nrel_ui_commands_decomposition:
 {
 	ui_menu_file_for_finding_all_drafts_of_question_author
+		(*
+		=> nrel_command_order: 
+			ui_menu_file_for_finding_all_proposals_of_question_author;;
+		*);
+	ui_menu_file_for_finding_all_proposals_of_question_author
 };;
 
 ui_menu_my_changes_for_eekb <= nrel_command_access: ...
