@@ -1,0 +1,37 @@
+asymmetric_relation
+=> nrel_main_idtf:
+	[асимметричное отношение] (* <- lang_ru;; *);
+	[asymmetric relation]     (* <- lang_en;; *);
+<- rrel_key_sc_element: ...
+(*
+    <- sc_definition;;
+   	=> nrel_main_idtf:
+		[Def.(Asymmetric relation)]       (* <-lang_en;; *);
+		[Опр.(Асимметричное отношение)]   (* <-lang_ru;; *);;
+	<= nrel_sc_text_translation:
+	    ... 
+        (* 
+        -> rrel_example: 
+            [Asymmetric relation is a binary relation that is antisymmetric and anti reflexive] 
+            (* <-lang_en;; *);;
+        *);
+	    ... 
+        (*
+        -> rrel_example: 
+            [Асимметричное отношение - бинарное отношение, которое антисимметрично и при этом антирефлексивно. ] 
+            (* <-lang_ru;; *);; 
+        *);;
+	<= nrel_using_constants:
+		{
+			binary_relation;
+			set;
+            antireflexive_relation;
+            antisymmetric_relation
+		};;
+*);
+<-sc_node_not_relation;
+<=nrel_intersection: 
+    {
+    antireflexive_relation;
+    antisymmetric_relation    
+    };;
