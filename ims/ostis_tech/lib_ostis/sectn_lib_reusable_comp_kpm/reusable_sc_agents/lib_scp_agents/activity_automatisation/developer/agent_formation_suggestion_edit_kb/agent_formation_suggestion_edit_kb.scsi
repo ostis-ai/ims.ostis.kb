@@ -119,7 +119,7 @@ scp_program -> agent_formation_suggestion_edit_kb
 			-> rrel_1: rrel_assign: rrel_scp_var: _is_two_arg_command;;
 			-> rrel_2: rrel_fixed: rrel_scp_const: [true];;
 
-			=> nrel_goto: .agent_formation_suggestion_edit_kb_operator_gen_proposer_relation;;
+			=> nrel_goto: .agent_formation_suggestion_edit_kb_operator_check_proposer_relation;;
 			*);;	
 			
 		->.agent_formation_suggestion_edit_kb_operator_A3
@@ -141,9 +141,23 @@ scp_program -> agent_formation_suggestion_edit_kb
 			-> rrel_1: rrel_assign: rrel_scp_var: _is_two_arg_command;;
 			-> rrel_2: rrel_fixed: rrel_scp_const: [false];;
 
-			=> nrel_goto: .agent_formation_suggestion_edit_kb_operator_gen_proposer_relation;;
+			=> nrel_goto: .agent_formation_suggestion_edit_kb_operator_check_proposer_relation;;
 			*);;		
 
+		-> .agent_formation_suggestion_edit_kb_operator_check_proposer_relation
+			(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _param;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_const: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _user;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_authors;;
+
+			=> nrel_then: .agent_formation_suggestion_edit_kb_operator_B1;;
+			=> nrel_else: .agent_formation_suggestion_edit_kb_operator_gen_proposer_relation;;
+			*);;
+			
 		->.agent_formation_suggestion_edit_kb_operator_gen_proposer_relation
 			(*
 			<- genElStr5;;
@@ -217,13 +231,13 @@ scp_program -> agent_formation_suggestion_edit_kb
 			*);;
 		
 		-> .agent_formation_suggestion_edit_kb_operator1E1_erase_question_initianted_arc
-                 	(*
+			(*
 		 	<- eraseEl;;
 
 		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc_to_remove;;
 
 		 	=> nrel_goto: .agent_formation_suggestion_edit_kb_operator_mark_action_todo_as_past_entity;;
-		 	*);;
+			*);;
 
 		-> .agent_formation_suggestion_edit_kb_operator_mark_action_todo_as_past_entity
 			(*
@@ -281,8 +295,29 @@ scp_program -> agent_formation_suggestion_edit_kb
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
 			-> rrel_3: rrel_fixed: rrel_scp_var: _action;;
 	
-			=> nrel_goto: .agent_formation_suggestion_edit_kb_operator_call_adding;;
+			=> nrel_goto: .agent_formation_suggestion_edit_kb_operator_find_draft_arc;;
 			*);;
+
+		-> .agent_formation_suggestion_edit_kb_operator_find_draft_arc
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: draft;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _draft_arc_to_remove;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _param;;
+
+			=> nrel_then: .agent_formation_suggestion_edit_kb_operator_erase_draft_arc;;
+			=> nrel_else: .agent_formation_suggestion_edit_kb_operator_call_adding;;
+			*);;
+
+		-> .agent_formation_suggestion_edit_kb_operator_erase_draft_arc
+			(*
+		 	<- eraseEl;;
+
+		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _draft_arc_to_remove;;
+
+		 	=> nrel_goto: .agent_formation_suggestion_edit_kb_operator_call_adding;;
+		 	*);;
 
 		-> .agent_formation_suggestion_edit_kb_operator_call_adding
 			(*

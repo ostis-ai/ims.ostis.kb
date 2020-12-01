@@ -123,6 +123,27 @@ ui_control_select_window_type
 		... (* -> [control that allows to change view language] (* <- lang_en;; *);; *);;
 	*);;
 
+// ------------------------------------------------
+ui_control_change_window_size
+=> nrel_main_idtf:
+	[Элемент управления размером активного окна] (* <- lang_ru;; *);
+	[Controlling element of active window resize] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [элемент управления, который позволяет расширить или сузить область содержимого активного окна] (* <- lang_ru;; *);; *);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [control that allows to expand or narrow active window content area] (* <- lang_en;; *);; *);;
+	*);;
 
 // ------------------------------------------------
 ui_control_print_window_content
@@ -146,6 +167,49 @@ ui_control_print_window_content
 		... (* -> [control that allows to prepare active window content for print] (* <- lang_en;; *);; *);;
 	*);;
 
+// ------------------------------------------------
+ui_control_display_link
+=> nrel_main_idtf:
+	[Элемент управления отображения ссылки для текущей страницы] (* <- lang_ru;; *);
+	[Controlling element of current page link display] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [элемент управления, который по нажатию отображает ссылку для текущей страницы. По следующему нажатию скрывает ссылку для текущей страницы] (* <- lang_ru;; *);; *);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [control that displays link to current page on click. Will hide the link on next click] (* <- lang_en;; *);; *);;
+	*);;
+
+// ------------------------------------------------
+ui_control_display_eekb_menu
+=> nrel_main_idtf:
+	[Элемент управления отображения меню СПБЗ] (* <- lang_ru;; *);
+	[Controlling element of EEKB menu display] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [элемент управления, который по нажатию отображает меню СПБЗ. По следующему нажатию скрывает меню] (* <- lang_ru;; *);; *);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [control that displays EEKB menu on click. Will hide the menu on next click] (* <- lang_en;; *);; *);;
+	*);;
 
 // ------------------------------------------------
 ui_control_argument_button_clear
