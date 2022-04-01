@@ -1,0 +1,51 @@
+nrel_login
+<- sc_node_norole_relation;
+<- relation;
+<- binary_relation;
+<- oriented_relation;
+<- antireflexive_relation;
+<- asymmetric_relation;
+<- antitransitive_relation;
+=> nrel_main_idtf:
+	[логин*]
+	(* <- lang_ru;; *);
+	[login*]
+	(* <- lang_en;; *);
+=> nrel_first_domain: concept_user;
+=> nrel_second_domain: sc_link;
+=> nrel_definitional_domain: 
+	... 
+	(*
+	<= nrel_combination: 
+		{
+		concept_user;
+		sc_link
+		};;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: 
+		[Опр. (логин*)] 
+		(* <- lang_ru;; *);
+		[Def. (login*)]
+		(* <- lang_en;; *);;
+	<-  definition;;
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[Логин* - бинарное отношение, связывающее пользователя и уникальную строку в рамках системы, предназначенную для авторизации в ней.]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example: 
+			[Login* is a binary relation that connects the user and a unique string within the system specified for authorization in it.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+		concept_user
+		};;	
+	*);;
