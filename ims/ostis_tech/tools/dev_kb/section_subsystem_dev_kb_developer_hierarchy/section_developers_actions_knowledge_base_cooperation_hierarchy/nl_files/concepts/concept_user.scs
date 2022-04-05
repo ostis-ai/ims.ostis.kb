@@ -1,0 +1,36 @@
+concept_user
+<- sc_node_class;
+<= nrel_inclusion: 
+	subject;
+=> nrel_main_idtf:
+    	[пользователь]
+	(* <- lang_ru;; *);
+	[user]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf:
+		[Опр. (пользователь)]
+		(* <- lang_ru;; *);
+		[Def. (user)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[Пользователь - субъект, который использует действующую систему для выполнения конкретной функции.]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example: 
+			[User is a subject that uses the operating system to perform a specific function.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+		subject
+		};;	
+	*);;
