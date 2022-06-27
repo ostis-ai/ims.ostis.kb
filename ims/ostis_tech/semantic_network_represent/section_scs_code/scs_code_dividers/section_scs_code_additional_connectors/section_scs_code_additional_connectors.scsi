@@ -39,7 +39,7 @@ additional_scs_connector
 			...
 			(*
 				-> rrel_example:
-					"file://img/table_extended.png";;
+					"file://img/table_extended.png" (* => nrel_format: format_png;; *);;
 			*);;
 	*);;
 
@@ -51,11 +51,11 @@ scs_divider_const_edge
 	[constant sc.s-edge]
 	(* <- lang_en;; *);
 => scs_nrel_representation_scs_editor:
-	"file://img/const_edge_scs_editor.png";
+	"file://img/const_edge_scs_editor.png" (* => nrel_format: format_png;; *);
 => scs_nrel_representation_standart_editor:
 	[<=>];
 => scs_nrel_representation_scg_code:
-	"file://img/const_edge_scg.png";;
+	"file://img/const_edge_scg.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_var_edge
 <- sc_node_not_relation;
@@ -65,11 +65,11 @@ scs_divider_var_edge
 	[variable sc.s-edge]
 	(* <- lang_en;; *);
 => scs_nrel_representation_scs_editor:
-	"file://img/var_edge_scs_editor.png";
+	"file://img/var_edge_scs_editor.png" (* => nrel_format: format_png;; *);
 => scs_nrel_representation_standart_editor:
 	[_<=>];
 => scs_nrel_representation_scg_code:
-	"file://img/var_edge_scg.png";;
+	"file://img/var_edge_scg.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_const_arc
 <- sc_node_not_relation;
@@ -79,14 +79,14 @@ scs_divider_const_arc
 	[constant sc.s-arc]
 	(* <- lang_en;; *);
 => scs_nrel_representation_scs_editor:
-	"file://img/const_arc_scs_editor1.png";
-	"file://img/const_arc_scs_editor2.png";
+	"file://img/const_arc_scs_editor1.png" (* => nrel_format: format_png;; *);
+	"file://img/const_arc_scs_editor2.png" (* => nrel_format: format_png;; *);
 => scs_nrel_representation_standart_editor:
 	[<=];
 	[=>];
 => scs_nrel_representation_scg_code:
-	"file://img/const_arc_scg1.png";
-	"file://img/const_arc_scg2.png";;
+	"file://img/const_arc_scg1.png" (* => nrel_format: format_png;; *);
+	"file://img/const_arc_scg2.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_var_arc
 <- sc_node_not_relation;
@@ -96,14 +96,14 @@ scs_divider_var_arc
 	[variable sc.s-arc]
 	(* <- lang_en;; *);
 => scs_nrel_representation_scs_editor:
-	"file://img/var_arc_scs_editor1.png";
-	"file://img/var_arc_scs_editor2.png";
+	"file://img/var_arc_scs_editor1.png" (* => nrel_format: format_png;; *);
+	"file://img/var_arc_scs_editor2.png" (* => nrel_format: format_png;; *);
 => scs_nrel_representation_standart_editor:
 	[_<=];
 	[_=>];
 => scs_nrel_representation_scg_code:
-	"file://img/var_arc_scg1.png";
-	"file://img/var_arc_scg2.png";;
+	"file://img/var_arc_scg1.png" (* => nrel_format: format_png;; *);
+	"file://img/var_arc_scg2.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_var_pos_stat_accessory_arc
 <- sc_node_not_relation;
@@ -113,14 +113,14 @@ scs_divider_var_pos_stat_accessory_arc
 	[variable positive stationary accessory sc.s-arc]
 	(* <- lang_en;; *);
 => scs_nrel_representation_scs_editor:
-	"file://img/var_pos_stat_acc_scs_editor1.png";
-	"file://img/var_pos_stat_acc_scs_editor2.png";
+	"file://img/var_pos_stat_acc_scs_editor1.png" (* => nrel_format: format_png;; *);
+	"file://img/var_pos_stat_acc_scs_editor2.png" (* => nrel_format: format_png;; *);
 => scs_nrel_representation_standart_editor:
 	[_<-];
 	[_->];
 => scs_nrel_representation_scg_code:
-	"file://img/var_pos_stat_acc_scg1.png";
-	"file://img/var_pos_stat_acc_scg2.png";;
+	"file://img/var_pos_stat_acc_scg1.png" (* => nrel_format: format_png;; *);
+	"file://img/var_pos_stat_acc_scg2.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_const_neg_stat_accessory_arc
 <- sc_node_not_relation;
@@ -130,14 +130,14 @@ scs_divider_const_neg_stat_accessory_arc
 	[constant negative stationary accessory sc.s-arc]
 	(* <- lang_en;; *);
 => scs_nrel_representation_scs_editor:
-	"file://img/const_neg_stat_acc_scs_editor1.png";
-	"file://img/const_neg_stat_acc_scs_editor2.png";
+	"file://img/const_neg_stat_acc_scs_editor1.png" (* => nrel_format: format_png;; *);
+	"file://img/const_neg_stat_acc_scs_editor2.png" (* => nrel_format: format_png;; *);
 => scs_nrel_representation_standart_editor:
 	[-|>];
 	[<|-];
 => scs_nrel_representation_scg_code:
-	"file://img/const_neg_stat_acc_scg1.png";
-	"file://img/const_neg_stat_acc_scg2.png";;
+	"file://img/const_neg_stat_acc_scg1.png" (* => nrel_format: format_png;; *);
+	"file://img/const_neg_stat_acc_scg2.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_var_neg_stat_accessory_arc
 <- sc_node_not_relation;
@@ -147,14 +147,14 @@ scs_divider_var_neg_stat_accessory_arc
 	[variable constant negative stationary accessory sc.s-arc]
 	(* <- lang_en;; *);
 => scs_nrel_representation_scs_editor:
-	"file://img/var_neg_stat_acc_scs_editor1.png";
-	"file://img/var_neg_stat_acc_scs_editor2.png";
+	"file://img/var_neg_stat_acc_scs_editor1.png" (* => nrel_format: format_png;; *);
+	"file://img/var_neg_stat_acc_scs_editor2.png" (* => nrel_format: format_png;; *);
 => scs_nrel_representation_standart_editor:
 	[_-|>];
 	[_<|-];
 => scs_nrel_representation_scg_code:
-	"file://img/var_neg_stat_acc_scg1.png";
-	"file://img/var_neg_stat_acc_scg2.png";;
+	"file://img/var_neg_stat_acc_scg1.png" (* => nrel_format: format_png;; *);
+	"file://img/var_neg_stat_acc_scg2.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_const_fuz_stat_accessory_arc
 <- sc_node_not_relation;
@@ -164,14 +164,14 @@ scs_divider_const_fuz_stat_accessory_arc
 	[constant fuzzy stationary accessory sc.s-arc]
 	(* <- lang_en;; *);
 => scs_nrel_representation_scs_editor:
-	"file://img/const_fuz_stat_acc_scs_editor1.png";
-	"file://img/const_fuz_stat_acc_scs_editor2.png";
+	"file://img/const_fuz_stat_acc_scs_editor1.png" (* => nrel_format: format_png;; *);
+	"file://img/const_fuz_stat_acc_scs_editor2.png" (* => nrel_format: format_png;; *);
 => scs_nrel_representation_standart_editor:
 	[-/>];
 	[</-];
 => scs_nrel_representation_scg_code:
-	"file://img/const_fuz_stat_acc_scg1.png";
-	"file://img/const_fuz_stat_acc_scg2.png";;
+	"file://img/const_fuz_stat_acc_scg1.png" (* => nrel_format: format_png;; *);
+	"file://img/const_fuz_stat_acc_scg2.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_var_fuz_stat_accessory_arc
 <- sc_node_not_relation;
@@ -181,14 +181,14 @@ scs_divider_var_fuz_stat_accessory_arc
 	[variable fuzzy stationary accessory sc.s-arc]
 	(* <- lang_en;; *);
 => scs_nrel_representation_scs_editor:
-	"file://img/var_fuz_stat_acc_scs_editor1.png";
-	"file://img/var_fuz_stat_acc_scs_editor2.png";
+	"file://img/var_fuz_stat_acc_scs_editor1.png" (* => nrel_format: format_png;; *);
+	"file://img/var_fuz_stat_acc_scs_editor2.png" (* => nrel_format: format_png;; *);
 => scs_nrel_representation_standart_editor:
 	[_-/>];
 	[_</-];
 => scs_nrel_representation_scg_code:
-	"file://img/var_fuz_stat_acc_scg1.png";
-	"file://img/var_fuz_stat_acc_scg2.png";;
+	"file://img/var_fuz_stat_acc_scg1.png" (* => nrel_format: format_png;; *);
+	"file://img/var_fuz_stat_acc_scg2.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_const_pos_nonstat_accessory_arc
 <- sc_node_not_relation;
@@ -198,14 +198,14 @@ scs_divider_const_pos_nonstat_accessory_arc
 	[constant positive non-stationary accessory sc.s-arc]
 	(* <- lang_en;; *);
 => scs_nrel_representation_scs_editor:
-	"file://img/const_pos_nonstat_acc_scs_editor1.png";
-	"file://img/const_pos_nonstat_acc_scs_editor2.png";
+	"file://img/const_pos_nonstat_acc_scs_editor1.png" (* => nrel_format: format_png;; *);
+	"file://img/const_pos_nonstat_acc_scs_editor2.png" (* => nrel_format: format_png;; *);
 => scs_nrel_representation_standart_editor:
 	[~>];
 	[<~];
 => scs_nrel_representation_scg_code:
-	"file://img/const_pos_nonstat_acc_scg1.png";
-	"file://img/const_pos_nonstat_acc_scg2.png";;
+	"file://img/const_pos_nonstat_acc_scg1.png" (* => nrel_format: format_png;; *);
+	"file://img/const_pos_nonstat_acc_scg2.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_var_pos_nonstat_accessory_arc
 <- sc_node_not_relation;
@@ -215,14 +215,14 @@ scs_divider_var_pos_nonstat_accessory_arc
 	[variable positive non-stationary accessory sc.s-arc]
 	(* <- lang_en;; *);
 => scs_nrel_representation_scs_editor:
-	"file://img/var_pos_nonstat_acc_scs_editor1.png";
-	"file://img/var_pos_nonstat_acc_scs_editor2.png";
+	"file://img/var_pos_nonstat_acc_scs_editor1.png" (* => nrel_format: format_png;; *);
+	"file://img/var_pos_nonstat_acc_scs_editor2.png" (* => nrel_format: format_png;; *);
 => scs_nrel_representation_standart_editor:
 	[_~>];
 	[_<~];
 => scs_nrel_representation_scg_code:
-	"file://img/var_pos_nonstat_acc_scg1.png";
-	"file://img/var_pos_nonstat_acc_scg2.png";;
+	"file://img/var_pos_nonstat_acc_scg1.png" (* => nrel_format: format_png;; *);
+	"file://img/var_pos_nonstat_acc_scg2.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_const_neg_nonstat_accessory_arc
 <- sc_node_not_relation;
@@ -232,14 +232,14 @@ scs_divider_const_neg_nonstat_accessory_arc
 	[constant negative non-stationary accessory sc.s-arc]
 	(* <- lang_en;; *);
 => scs_nrel_representation_scs_editor:
-	"file://img/const_neg_nonstat_acc_scs_editor1.png";
-	"file://img/const_neg_nonstat_acc_scs_editor2.png";
+	"file://img/const_neg_nonstat_acc_scs_editor1.png" (* => nrel_format: format_png;; *);
+	"file://img/const_neg_nonstat_acc_scs_editor2.png" (* => nrel_format: format_png;; *);
 => scs_nrel_representation_standart_editor:
 	[~|>];
 	[<|~];
 => scs_nrel_representation_scg_code:
-	"file://img/const_neg_nonstat_acc_scg1.png";
-	"file://img/const_neg_nonstat_acc_scg2.png";;
+	"file://img/const_neg_nonstat_acc_scg1.png" (* => nrel_format: format_png;; *);
+	"file://img/const_neg_nonstat_acc_scg2.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_var_neg_nonstat_accessory_arc
 <- sc_node_not_relation;
@@ -249,14 +249,14 @@ scs_divider_var_neg_nonstat_accessory_arc
 	[variable negative non-stationary accessory sc.s-arc]
 	(* <- lang_en;; *);
 => scs_nrel_representation_scs_editor:
-	"file://img/var_neg_nonstat_acc_scs_editor1.png";
-	"file://img/var_neg_nonstat_acc_scs_editor2.png";
+	"file://img/var_neg_nonstat_acc_scs_editor1.png" (* => nrel_format: format_png;; *);
+	"file://img/var_neg_nonstat_acc_scs_editor2.png" (* => nrel_format: format_png;; *);
 => scs_nrel_representation_standart_editor:
 	[_~|>];
 	[_<|~];
 => scs_nrel_representation_scg_code:
-	"file://img/var_neg_nonstat_acc_scg1.png";
-	"file://img/var_neg_nonstat_acc_scg2.png";;
+	"file://img/var_neg_nonstat_acc_scg1.png" (* => nrel_format: format_png;; *);
+	"file://img/var_neg_nonstat_acc_scg2.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_const_fuz_nonstat_accessory_arc
 <- sc_node_not_relation;
@@ -266,14 +266,14 @@ scs_divider_const_fuz_nonstat_accessory_arc
 	[constant fuzzy non-stationary accessory sc.s-arc]
 	(* <- lang_en;; *);
 => scs_nrel_representation_scs_editor:
-	"file://img/const_fuz_nonstat_acc_scs_editor1.png";
-	"file://img/const_fuz_nonstat_acc_scs_editor2.png";
+	"file://img/const_fuz_nonstat_acc_scs_editor1.png" (* => nrel_format: format_png;; *);
+	"file://img/const_fuz_nonstat_acc_scs_editor2.png" (* => nrel_format: format_png;; *);
 => scs_nrel_representation_standart_editor:
 	[~/>];
 	[</~];
 => scs_nrel_representation_scg_code:
-	"file://img/const_fuz_nonstat_acc_scg1.png";
-	"file://img/const_fuz_nonstat_acc_scg2.png";;
+	"file://img/const_fuz_nonstat_acc_scg1.png" (* => nrel_format: format_png;; *);
+	"file://img/const_fuz_nonstat_acc_scg2.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_var_fuz_nonstat_accessory_arc
 <- sc_node_not_relation;
@@ -283,11 +283,11 @@ scs_divider_var_fuz_nonstat_accessory_arc
 	[variable fuzzy non-stationary accessory sc.s-arc]
 	(* <- lang_en;; *);
 => scs_nrel_representation_scs_editor:
-	"file://img/var_fuz_nonstat_acc_scs_editor1.png";
-	"file://img/var_fuz_nonstat_acc_scs_editor2.png";
+	"file://img/var_fuz_nonstat_acc_scs_editor1.png" (* => nrel_format: format_png;; *);
+	"file://img/var_fuz_nonstat_acc_scs_editor2.png" (* => nrel_format: format_png;; *);
 => scs_nrel_representation_standart_editor:
 	[_~/>];
 	[_</~];
 => scs_nrel_representation_scg_code:
-	"file://img/var_fuz_nonstat_acc_scg1.png";
-	"file://img/var_fuz_nonstat_acc_scg2.png";;
+	"file://img/var_fuz_nonstat_acc_scg1.png" (* => nrel_format: format_png;; *);
+	"file://img/var_fuz_nonstat_acc_scg2.png" (* => nrel_format: format_png;; *);;

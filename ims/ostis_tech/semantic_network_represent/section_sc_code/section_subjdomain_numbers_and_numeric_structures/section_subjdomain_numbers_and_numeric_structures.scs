@@ -16,7 +16,10 @@ section_subjdomain_numbers_and_numeric_structures
 	 (*
 		 -> rrel_example:
 				"file://content_html/introduction_section_subjdomain_numbers.pdf"
-			(* <- lang_ru;;	*);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_pdf;;
+   				*);;
 	 *);;
 *);
 <- not_enough_formed_structure;
@@ -75,7 +78,10 @@ exercise_1_subjdomain_numbers_and_numeric_structures
 		(*
 		-> rrel_example:
 				"file://content_html/def_exercise_1.html"
-			(* <- lang_ru;; *);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;
 exercise_1_subjdomain_numbers_and_numeric_structures
@@ -90,7 +96,7 @@ exercise_1_subjdomain_numbers_and_numeric_structures
 		  	... 
 		  	(*
 		  	-> rrel_example:
-		    		"file://content_img/exercise_numbers_1_right_answer.png";; 
+		    		"file://content_img/exercise_numbers_1_right_answer.png" (* => nrel_format: format_png;; *);; 
 		  	*);;
 		*);;
 
@@ -116,7 +122,10 @@ exercise_2_subjdomain_numbers_and_numeric_structures
 		(*
 		-> rrel_example:
 				"file://content_html/def_exercise_2.html"
-			(* <- lang_ru;; *);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;
 
@@ -132,7 +141,7 @@ exercise_2_subjdomain_numbers_and_numeric_structures
 	  		...
 	  		(*
 	  		-> rrel_example:
-	    			"file://content_img/exercise_numbers_2_right_answer.png";;
+	    			"file://content_img/exercise_numbers_2_right_answer.png" (* => nrel_format: format_png;; *);;
 		  *);;
 	 	*);;
 	*);;
@@ -158,7 +167,10 @@ exercise_3_subjdomain_numbers_and_numeric_structures
 		(*
 		-> rrel_example:
 				"file://content_html/def_exercise_3.html"
-			(* <- lang_ru;; *);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;
 
@@ -174,7 +186,7 @@ exercise_3_subjdomain_numbers_and_numeric_structures
   			...
   			(*
   			-> rrel_example:
-    				"file://content_img/exercise_numbers_3_right_answer.png";;  
+    				"file://content_img/exercise_numbers_3_right_answer.png" (* => nrel_format: format_png;; *);;  
  			*);;
  		*);;
 	*);;

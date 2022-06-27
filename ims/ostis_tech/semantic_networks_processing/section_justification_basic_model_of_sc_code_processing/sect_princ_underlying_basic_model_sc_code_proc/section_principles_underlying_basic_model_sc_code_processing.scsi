@@ -8,7 +8,10 @@ structure
 				(*
 					-> rrel_example:
 						"file://html/explanation_for_structure.html"
-						(*<- lang_ru;;*);;
+						(*
+						<- lang_ru;;
+						=> nrel_format: format_html;;
+						*);;
 				*);;
 		*);
 	<= nrel_subdividing: 
@@ -33,7 +36,10 @@ standard_structure
 				(*
 					-> rrel_example:
 						"file://html/explanation_for_standard_structure.html"
-						(*<- lang_ru;;*);;
+						(*
+						<- lang_ru;;
+						=> nrel_format: format_html;;
+						*);;
 				*);;
 		*);
 	<= nrel_subdividing: 
@@ -59,7 +65,10 @@ sc_1_el_str
 				(*
 					-> rrel_example:
 						"file://html/explanation_for_sc_1_el_str.html"
-						(*<- lang_ru;;*);;
+						(*
+						<- lang_ru;;
+						=> nrel_format: format_html;;
+						*);;
 				*);;
 		*);
 	
@@ -71,7 +80,7 @@ sc_1_el_str
 		...
 		(*
 		-> rrel_example:
-			"file://img/sc_1_el_str.png";; 
+			"file://img/sc_1_el_str.png" (* => nrel_format: format_png;; *);; 
 		*);;
 	*);;
 
@@ -91,7 +100,10 @@ sc_3_el_str
 				(*
 					-> rrel_example:
 						"file://html/explanation_for_sc_3_el_str.html"
-						(*<- lang_ru;;*);;
+						(*
+						<- lang_ru;;
+						=> nrel_format: format_html;;
+						*);;
 				*);;
 		*);
 	
@@ -103,7 +115,7 @@ sc_3_el_str
 		...
 		(*
 		-> rrel_example:
-			"file://img/sc_3_el_str.png";; 
+			"file://img/sc_3_el_str.png" (* => nrel_format: format_png;; *);; 
 		*);;
 	*);;
 
@@ -123,7 +135,10 @@ sc_5_el_str
 				(*
 					-> rrel_example:
 						"file://html/explanation_for_sc_5_el_str.html"
-						(*<- lang_ru;;*);;
+						(*
+						<- lang_ru;;
+						=> nrel_format: format_html;;
+						*);;
 				*);;
 		*);
 	
@@ -135,7 +150,7 @@ sc_5_el_str
 		...
 		(*
 		-> rrel_example:
-			"file://img/sc_5_el_str.png";; 
+			"file://img/sc_5_el_str.png" (* => nrel_format: format_png;; *);; 
 		*);;
 	*);;
 
@@ -155,7 +170,10 @@ non_standard_structure
 				(*
 					-> rrel_example:
 						"file://html/explanation_for_non_standard_structure.html"
-						(*<- lang_ru;;*);;
+						(*
+						<- lang_ru;;
+						=> nrel_format: format_html;;
+						*);;
 				*);;
 		*);
 	
@@ -167,6 +185,6 @@ non_standard_structure
 		...
 		(*
 		-> rrel_example:
-			"file://img/non_standard_structure.png";; 
+			"file://img/non_standard_structure.png" (* => nrel_format: format_png;; *);; 
 		*);;
 	*);;

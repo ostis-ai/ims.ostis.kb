@@ -14,6 +14,7 @@ scn_code_ext2
 				"file://scn_code_htmls/scn_code_ext2_text1.html"
 				(*
 				<- lang_ru;;
+				=> nrel_format: format_html;;
 				*);;
 			*);;
                 <= nrel_sc_text_translation:	
@@ -23,6 +24,7 @@ scn_code_ext2
 				"file://scn_code_htmls/scn_code_ext2_text1_en.html"
 				(*
 				<- lang_en;;
+				=> nrel_format: format_html;;
 				*);;
 			*);;
 		*);
@@ -31,4 +33,4 @@ scn_code_ext2
 
 
 -> rrel_example:
-	"file://images/scn_text_example_3_1.png";;
+	"file://images/scn_text_example_3_1.png" (* => nrel_format: format_png;; *);;

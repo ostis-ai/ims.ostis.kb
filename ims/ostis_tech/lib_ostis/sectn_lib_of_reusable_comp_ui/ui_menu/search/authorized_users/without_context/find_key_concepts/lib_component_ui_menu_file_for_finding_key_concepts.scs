@@ -18,7 +18,10 @@ lib_component_ui_menu_file_for_finding_key_concepts
 		(*
 		-> rrel_example:
 			"file://htmls/Ui_Key_Concepts.html"
-				(* <- lang_ru;; *);;
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+			*);;
 		*);;
 	*);
 	
@@ -30,7 +33,7 @@ lib_component_ui_menu_file_for_finding_key_concepts
 		...
 		(*
 		-> rrel_example:
-			"file://images/key_concepts.png";; 
+			"file://images/key_concepts.png" (* => nrel_format: format_png;; *);; 
 		*);;
 	*);;
 

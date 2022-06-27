@@ -133,7 +133,10 @@ new_scp_program
 				(*
 				-> rrel_example:
 					"file://content_html/explanation_for_scp_program.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);;
 
@@ -157,7 +160,10 @@ scp_program
 				(*
 				-> rrel_example:
 					"file://content_html/old_explanation_for_scp_program.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);;
 
@@ -178,7 +184,10 @@ scp_lang
 				(*
 				-> rrel_example:
 					"file://content_html/old_explanation_for_scp.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);;
 
@@ -199,7 +208,10 @@ scp_procedure
 				(*
 				-> rrel_example:
 					"file://content_html/old_explanation_for_scp_procedure.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);;
 
@@ -226,7 +238,10 @@ agent_scp_program
 				(*
 				-> rrel_example:
 					"file://content_html/explanation_for_agent_scp_program.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);;
 
@@ -246,14 +261,20 @@ scp_process
 				(*
 					-> rrel_example:
 						"file://content_html/explanation_for_scp_process.html"
-						(*<- lang_ru;;*);;
+						(*
+						<- lang_ru;;
+						=> nrel_format: format_html;;
+						*);;
 								*);;
 			<= nrel_sc_text_translation:
 				...
 				(*
 					-> rrel_example:
 						"file://content_html/explanation_for_scp_process_en.html"
-						(*<- lang_en;;*);;
+						(*
+						<- lang_ru;;
+						=> nrel_format: format_html;;
+						*);;
 				*);;
 		*);;
 
@@ -278,7 +299,10 @@ new_scp_operator
 				(*
 				-> rrel_example:
 					"file://content_html/scp_operator.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<- main_concept;
@@ -326,7 +350,10 @@ scp_operator
 				(*
 				-> rrel_example:
 					"file://content_html/old_scp_operator.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 
@@ -363,7 +390,10 @@ scp_operator_executed_after_completion_of_at_least_one_of_the_previous
 				(*
 				-> rrel_example:
 					"file://content_html/scp_operator_executed_after_completion_of_at_least_one_of_the_previous.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);;
 
@@ -384,7 +414,10 @@ scp_operator_executed_after_completion_of_all_previous
 				(*
 				-> rrel_example:
 					"file://content_html/scp_operator_executed_after_completion_of_all_previous.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);;
 
@@ -404,7 +437,10 @@ scp_operator_of_structure_generation
 				(*
 				-> rrel_example:
 					"file://content_html/scp_operator_of_structure_generation.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<= nrel_subdividing: 
@@ -432,17 +468,20 @@ sys_gen
 				(*
 				-> rrel_example:
 					"file://content_html/sys_gen.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_sys_gen1.png";
+		"file://content_images/scp_operator_example_sys_gen1.png" (* => nrel_format: format_png;; *);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_sys_gen2.png";
+		"file://content_images/scp_operator_example_sys_gen2.png" (* => nrel_format: format_png;; *);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_sys_gen3.png";
+		"file://content_images/scp_operator_example_sys_gen3.png" (* => nrel_format: format_png;; *);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_sys_gen4.png";;
+		"file://content_images/scp_operator_example_sys_gen4.png" (* => nrel_format: format_png;; *);;
 
 genElStr5
 <- sc_node_not_relation;
@@ -461,15 +500,18 @@ genElStr5
 				(*
 				-> rrel_example:
 					"file://content_html/genElStr5.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_genElStr51.png";
+		"file://content_images/scp_operator_example_genElStr51.png" (* => nrel_format: format_png;; *);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_genElStr52.png";
+		"file://content_images/scp_operator_example_genElStr52.png" (* => nrel_format: format_png;; *);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_genElStr53.png";;
+		"file://content_images/scp_operator_example_genElStr53.png" (* => nrel_format: format_png;; *);;
 
 genElStr3
 <- sc_node_not_relation;
@@ -488,7 +530,10 @@ genElStr3
 				(*
 				-> rrel_example:
 					"file://content_html/genElStr3.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	-> rrel_example:
@@ -500,11 +545,11 @@ genElStr3
 			=> nrel_goto: ..scp_operator_example_goto_genElStr3;;
 		*);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_genElStr31.png";
+		"file://content_images/scp_operator_example_genElStr31.png" (* => nrel_format: format_png;; *);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_genElStr32.png";
+		"file://content_images/scp_operator_example_genElStr32.png" (* => nrel_format: format_png;; *);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_genElStr33.png";;
+		"file://content_images/scp_operator_example_genElStr33.png" (* => nrel_format: format_png;; *);;
 
 genEl
 <- sc_node_not_relation;
@@ -523,7 +568,10 @@ genEl
 				(*
 				-> rrel_example:
 					"file://content_html/genEl.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	-> rrel_example:
@@ -532,11 +580,11 @@ genEl
 			=> nrel_goto: ..scp_operator_example_goto_genEl;;
 		*);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_genEl1.png";
+		"file://content_images/scp_operator_example_genEl1.png" (* => nrel_format: format_png;; *);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_genEl2.png";
+		"file://content_images/scp_operator_example_genEl2.png" (* => nrel_format: format_png;; *);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_genEl3.png";;
+		"file://content_images/scp_operator_example_genEl3.png" (* => nrel_format: format_png;; *);;
 
 scp_operator_of_structure_associative_search
 <- sc_node_not_relation;
@@ -554,7 +602,10 @@ scp_operator_of_structure_associative_search
 				(*
 				-> rrel_example:
 					"file://content_html/scp_operator_of_structure_associative_search.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<= nrel_subdividing: 
@@ -583,13 +634,16 @@ sys_search
 				(*
 				-> rrel_example:
 					"file://content_html/sys_search.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_sys_search1.png";
+		"file://content_images/scp_operator_example_sys_search1.png" (* => nrel_format: format_png;; *);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_sys_search2.png";;
+		"file://content_images/scp_operator_example_sys_search2.png" (* => nrel_format: format_png;; *);;
 
 searchSetStr5
 <- sc_node_not_relation;
@@ -608,7 +662,10 @@ searchSetStr5
 				(*
 				-> rrel_example:
 					"file://content_html/searchSetStr5.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);;
 
@@ -629,7 +686,10 @@ searchSetStr3
 				(*
 				-> rrel_example:
 					"file://content_html/searchSetStr3.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);;
 
@@ -650,7 +710,10 @@ searchElStr5
 				(*
 				-> rrel_example:
 					"file://content_html/searchElStr5.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);;
 
@@ -671,7 +734,10 @@ searchElStr3
 				(*
 				-> rrel_example:
 					"file://content_html/searchElStr3.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);;
 
@@ -691,7 +757,10 @@ scp_operator_of_structure_deleting
 				(*
 				-> rrel_example:
 					"file://content_html/scp_operator_of_structure_deleting.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<= nrel_subdividing: 
@@ -720,15 +789,18 @@ eraseEl
 				(*
 				-> rrel_example:
 					"file://content_html/eraseEl.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_eraseEl1.png";
+		"file://content_images/scp_operator_example_eraseEl1.png" (* => nrel_format: format_png;; *);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_eraseEl2.png";
+		"file://content_images/scp_operator_example_eraseEl2.png" (* => nrel_format: format_png;; *);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_eraseEl3.png";;
+		"file://content_images/scp_operator_example_eraseEl3.png" (* => nrel_format: format_png;; *);;
 
 eraseElStr3
 <- sc_node_not_relation;
@@ -747,13 +819,16 @@ eraseElStr3
 				(*
 				-> rrel_example:
 					"file://content_html/eraseElStr3.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_eraseElStr31.png";
+		"file://content_images/scp_operator_example_eraseElStr31.png" (* => nrel_format: format_png;; *);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_eraseElStr32.png";;
+		"file://content_images/scp_operator_example_eraseElStr32.png" (* => nrel_format: format_png;; *);;
 
 eraseElStr5
 <- sc_node_not_relation;
@@ -772,11 +847,14 @@ eraseElStr5
 				(*
 				-> rrel_example:
 					"file://content_html/eraseElStr5.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_eraseElStr51.png";;
+		"file://content_images/scp_operator_example_eraseElStr51.png" (* => nrel_format: format_png;; *);;
 
 eraseSetStr3
 <- sc_node_not_relation;
@@ -795,15 +873,18 @@ eraseSetStr3
 				(*
 				-> rrel_example:
 					"file://content_html/eraseSetStr3.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_eraseSetStr31.png";
+		"file://content_images/scp_operator_example_eraseSetStr31.png" (* => nrel_format: format_png;; *);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_eraseSetStr32.png";
+		"file://content_images/scp_operator_example_eraseSetStr32.png" (* => nrel_format: format_png;; *);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_eraseSetStr33.png";;
+		"file://content_images/scp_operator_example_eraseSetStr33.png" (* => nrel_format: format_png;; *);;
 
 eraseSetStr5
 <- sc_node_not_relation;
@@ -822,13 +903,16 @@ eraseSetStr5
 				(*
 				-> rrel_example:
 					"file://content_html/eraseSetStr5.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_eraseSetStr51.png";
+		"file://content_images/scp_operator_example_eraseSetStr51.png" (* => nrel_format: format_png;; *);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_eraseSetStr52.png";;
+		"file://content_images/scp_operator_example_eraseSetStr52.png" (* => nrel_format: format_png;; *);;
 
 scp_operator_of_conditions_check
 <- sc_node_not_relation;
@@ -846,7 +930,10 @@ scp_operator_of_conditions_check
 				(*
 				-> rrel_example:
 					"file://content_html/scp_operator_of_conditions_check.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<= nrel_subdividing: 
@@ -876,15 +963,18 @@ ifType
 				(*
 				-> rrel_example:
 					"file://content_html/ifType.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_ifType1.png";
+		"file://content_images/scp_operator_example_ifType1.png" (* => nrel_format: format_png;; *);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_ifType2.png";
+		"file://content_images/scp_operator_example_ifType2.png" (* => nrel_format: format_png;; *);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_ifType3.png";;
+		"file://content_images/scp_operator_example_ifType3.png" (* => nrel_format: format_png;; *);;
 
 ifVarAssign
 <- sc_node_not_relation;
@@ -903,13 +993,16 @@ ifVarAssign
 				(*
 				-> rrel_example:
 					"file://content_html/ifVarAssign.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_ifVarAssign1.png";
+		"file://content_images/scp_operator_example_ifVarAssign1.png" (* => nrel_format: format_png;; *);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_ifVarAssign2.png";;
+		"file://content_images/scp_operator_example_ifVarAssign2.png" (* => nrel_format: format_png;; *);;
 
 ifFormCont
 <- sc_node_not_relation;
@@ -928,7 +1021,10 @@ ifFormCont
 				(*
 				-> rrel_example:
 					"file://content_html/ifFormCont.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);;
 
@@ -949,13 +1045,16 @@ ifCoin
 				(*
 				-> rrel_example:
 					"file://content_html/ifCoin.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_ifCoin1.png";
+		"file://content_images/scp_operator_example_ifCoin1.png" (* => nrel_format: format_png;; *);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_ifCoin2.png";;
+		"file://content_images/scp_operator_example_ifCoin2.png" (* => nrel_format: format_png;; *);;
 
 ifEq
 <- sc_node_not_relation;
@@ -974,15 +1073,18 @@ ifEq
 				(*
 				-> rrel_example:
 					"file://content_html/ifEq.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_ifEq1.png";
+		"file://content_images/scp_operator_example_ifEq1.png" (* => nrel_format: format_png;; *);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_ifEq2.png";
+		"file://content_images/scp_operator_example_ifEq2.png" (* => nrel_format: format_png;; *);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_ifEq3.png";;
+		"file://content_images/scp_operator_example_ifEq3.png" (* => nrel_format: format_png;; *);;
 
 ifGr
 <- sc_node_not_relation;
@@ -1001,13 +1103,16 @@ ifGr
 				(*
 				-> rrel_example:
 					"file://content_html/ifGr.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_ifGr1.png";
+		"file://content_images/scp_operator_example_ifGr1.png" (* => nrel_format: format_png;; *);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_ifGr2.png";;
+		"file://content_images/scp_operator_example_ifGr2.png" (* => nrel_format: format_png;; *);;
 
 scp_operator_of_scp_operand_value_control
 <- sc_node_not_relation;
@@ -1025,7 +1130,10 @@ scp_operator_of_scp_operand_value_control
 				(*
 				-> rrel_example:
 					"file://content_html/scp_operator_of_scp_operand_value_control.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<= nrel_subdividing: 
@@ -1051,13 +1159,16 @@ varAssign
 				(*
 				-> rrel_example:
 					"file://content_html/varAssign.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_varAssign1.png";
+		"file://content_images/scp_operator_example_varAssign1.png" (* => nrel_format: format_png;; *);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_varAssign2.png";;
+		"file://content_images/scp_operator_example_varAssign2.png" (* => nrel_format: format_png;; *);;
 
 varErase
 <- sc_node_not_relation;
@@ -1076,13 +1187,16 @@ varErase
 				(*
 				-> rrel_example:
 					"file://content_html/varErase.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_varErase1.png";
+		"file://content_images/scp_operator_example_varErase1.png" (* => nrel_format: format_png;; *);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_varErase2.png";;
+		"file://content_images/scp_operator_example_varErase2.png" (* => nrel_format: format_png;; *);;
 
 scp_operator_of_scp_process_control
 <- sc_node_not_relation;
@@ -1100,7 +1214,10 @@ scp_operator_of_scp_process_control
 				(*
 				-> rrel_example:
 					"file://content_html/scp_operator_of_scp_process_control.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<= nrel_subdividing: 
@@ -1129,11 +1246,14 @@ call
 				(*
 				-> rrel_example:
 					"file://content_html/call.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_call.png";;
+		"file://content_images/scp_operator_example_call.png" (* => nrel_format: format_png;; *);;
 
 waitReturn
 <- sc_node_not_relation;
@@ -1152,11 +1272,14 @@ waitReturn
 				(*
 				-> rrel_example:
 					"file://content_html/waitReturn.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_waitReturn.png";;
+		"file://content_images/scp_operator_example_waitReturn.png" (* => nrel_format: format_png;; *);;
 
 waitReturnSet
 <- sc_node_not_relation;
@@ -1175,11 +1298,14 @@ waitReturnSet
 				(*
 				-> rrel_example:
 					"file://content_html/waitReturnSet.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_waitReturnSet.png";;
+		"file://content_images/scp_operator_example_waitReturnSet.png" (* => nrel_format: format_png;; *);;
 
 return
 <- sc_node_not_relation;
@@ -1198,7 +1324,10 @@ return
 				(*
 				-> rrel_example:
 					"file://content_html/return.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);;
 
@@ -1221,7 +1350,10 @@ syncronize
 				(*
 				-> rrel_example:
 					"file://content_html/scp_operators_conjunction.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);;
 */
@@ -1243,7 +1375,10 @@ scp_operator_of_event_control
 				(*
 				-> rrel_example:
 					"file://content_html/scp_operator_of_event_control.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<= nrel_subdividing: 
@@ -1268,11 +1403,14 @@ sys_wait
 				(*
 				-> rrel_example:
 					"file://content_html/sys_wait.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_sys_wait.png";;
+		"file://content_images/scp_operator_example_sys_wait.png" (* => nrel_format: format_png;; *);;
 
 scp_operator_of_file_content_process
 <- sc_node_not_relation;
@@ -1290,7 +1428,10 @@ scp_operator_of_file_content_process
 				(*
 				-> rrel_example:
 					"file://content_html/scp_operator_of_file_content_process.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<= nrel_subdividing: 
@@ -1342,11 +1483,14 @@ contAdd
 				(*
 				-> rrel_example:
 					"file://content_html/contAdd.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_contAdd.png";;
+		"file://content_images/scp_operator_example_contAdd.png" (* => nrel_format: format_png;; *);;
 
 contSub
 <- sc_node_not_relation;
@@ -1365,11 +1509,14 @@ contSub
 				(*
 				-> rrel_example:
 					"file://content_html/contSub.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_contSub.png";;
+		"file://content_images/scp_operator_example_contSub.png" (* => nrel_format: format_png;; *);;
 
 contMult
 <- sc_node_not_relation;
@@ -1388,11 +1535,14 @@ contMult
 				(*
 				-> rrel_example:
 					"file://content_html/contMult.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_contMult.png";;
+		"file://content_images/scp_operator_example_contMult.png" (* => nrel_format: format_png;; *);;
 
 contDiv
 <- sc_node_not_relation;
@@ -1411,11 +1561,14 @@ contDiv
 				(*
 				-> rrel_example:
 					"file://content_html/contDiv.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_contDiv.png";;
+		"file://content_images/scp_operator_example_contDiv.png" (* => nrel_format: format_png;; *);;
 
 contPow
 <- sc_node_not_relation;
@@ -1434,11 +1587,14 @@ contPow
 				(*
 				-> rrel_example:
 					"file://content_html/contPow.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_contPow.png";;
+		"file://content_images/scp_operator_example_contPow.png" (* => nrel_format: format_png;; *);;
 
 contLn
 <- sc_node_not_relation;
@@ -1457,11 +1613,14 @@ contLn
 				(*
 				-> rrel_example:
 					"file://content_html/contLn.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_contLn.png";;
+		"file://content_images/scp_operator_example_contLn.png" (* => nrel_format: format_png;; *);;
 
 contSin
 <- sc_node_not_relation;
@@ -1480,11 +1639,14 @@ contSin
 				(*
 				-> rrel_example:
 					"file://content_html/contSin.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);; 
 				*);;
 		*);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_contSin.png";;
+		"file://content_images/scp_operator_example_contSin.png" (* => nrel_format: format_png;; *);;
 
 contCos
 <- sc_node_not_relation;
@@ -1503,11 +1665,14 @@ contCos
 				(*
 				-> rrel_example:
 					"file://content_html/contCos.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_contCos.png";;
+		"file://content_images/scp_operator_example_contCos.png" (* => nrel_format: format_png;; *);;
 contTg
 <- sc_node_not_relation;
 	<-scp_operator_atomic_type;
@@ -1525,11 +1690,14 @@ contTg
 				(*
 				-> rrel_example:
 					"file://content_html/contTg.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_contTg.png";;
+		"file://content_images/scp_operator_example_contTg.png" (* => nrel_format: format_png;; *);;
 
 contASin
 <- sc_node_not_relation;
@@ -1548,11 +1716,14 @@ contASin
 				(*
 				-> rrel_example:
 					"file://content_html/contASin.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_contASin.png";;
+		"file://content_images/scp_operator_example_contASin.png" (* => nrel_format: format_png;; *);;
 
 contACos
 <- sc_node_not_relation;
@@ -1571,11 +1742,14 @@ contACos
 				(*
 				-> rrel_example:
 					"file://content_html/contACos.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_contACos.png";;
+		"file://content_images/scp_operator_example_contACos.png" (* => nrel_format: format_png;; *);;
 
 contATg
 <- sc_node_not_relation;
@@ -1594,11 +1768,14 @@ contATg
 				(*
 				-> rrel_example:
 					"file://content_html/contATg.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_contATg.png";;
+		"file://content_images/scp_operator_example_contATg.png" (* => nrel_format: format_png;; *);;
 
 contDivInt
 <- sc_node_not_relation;
@@ -1618,7 +1795,10 @@ contDivInt
 				(*
 				-> rrel_example:
 					"file://content_html/contDivInt.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);;
 */
@@ -1641,7 +1821,10 @@ contDivRem
 				(*
 				-> rrel_example:
 					"file://content_html/contDivRem.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);;
 */
@@ -1663,13 +1846,16 @@ contAssign
 				(*
 				-> rrel_example:
 					"file://content_html/contAssign.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_contAssign_1.png";
+		"file://content_images/scp_operator_example_contAssign_1.png" (* => nrel_format: format_png;; *);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_contAssign_2.png";;
+		"file://content_images/scp_operator_example_contAssign_2.png" (* => nrel_format: format_png;; *);;
 
 contErase
 <- sc_node_not_relation;
@@ -1688,11 +1874,14 @@ contErase
 				(*
 				-> rrel_example:
 					"file://content_html/contErase.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_contErase_2.png";;
+		"file://content_images/scp_operator_example_contErase_2.png" (* => nrel_format: format_png;; *);;
 
 stringToUpperCase
 <- sc_node_not_relation;
@@ -1709,11 +1898,14 @@ stringToUpperCase
 				(*
 				-> rrel_example:
 					"file://content_html/stringToUpperCase.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_stringToUpperCase.png";;
+		"file://content_images/scp_operator_example_stringToUpperCase.png" (* => nrel_format: format_png;; *);;
 
 stringToLowerCase
 <- sc_node_not_relation;
@@ -1730,11 +1922,14 @@ stringToLowerCase
 				(*
 				-> rrel_example:
 					"file://content_html/stringToLowerCase.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_stringToLowerCase.png";;
+		"file://content_images/scp_operator_example_stringToLowerCase.png" (* => nrel_format: format_png;; *);;
 
 stringReplace
 <- sc_node_not_relation;
@@ -1751,11 +1946,14 @@ stringReplace
 				(*
 				-> rrel_example:
 					"file://content_html/stringReplace.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_stringReplace.png";;
+		"file://content_images/scp_operator_example_stringReplace.png" (* => nrel_format: format_png;; *);;
 
 stringEndsWith
 <- sc_node_not_relation;
@@ -1772,11 +1970,14 @@ stringEndsWith
 				(*
 				-> rrel_example:
 					"file://content_html/stringEndsWith.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<= nrel_using_example:
-		"file://content_images/scp_operator_example_stringEndsWith.png";;
+		"file://content_images/scp_operator_example_stringEndsWith.png" (* => nrel_format: format_png;; *);;
 
 stringStartsWith
 <- sc_node_not_relation;
@@ -1793,11 +1994,14 @@ stringStartsWith
 				(*
 				-> rrel_example:
 					"file://content_html/stringStartsWith.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_stringStartsWith.png";;
+		"file://content_images/scp_operator_example_stringStartsWith.png" (* => nrel_format: format_png;; *);;
 
 stringSlice
 <- sc_node_not_relation;
@@ -1814,11 +2018,14 @@ stringSlice
 				(*
 				-> rrel_example:
 					"file://content_html/stringSlice.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_stringSlice.png";;
+		"file://content_images/scp_operator_example_stringSlice.png" (* => nrel_format: format_png;; *);;
 
 stringSub
 <- sc_node_not_relation;
@@ -1835,11 +2042,14 @@ stringSub
 				(*
 				-> rrel_example:
 					"file://content_html/stringSub.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_stringSub.png";;
+		"file://content_images/scp_operator_example_stringSub.png" (* => nrel_format: format_png;; *);;
 
 stringLen
 <- sc_node_not_relation;
@@ -1856,11 +2066,14 @@ stringLen
 				(*
 				-> rrel_example:
 					"file://content_html/stringLen.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_stringLen.png";;
+		"file://content_images/scp_operator_example_stringLen.png" (* => nrel_format: format_png;; *);;
 
 stringSplit
 <- sc_node_not_relation;
@@ -1877,11 +2090,14 @@ stringSplit
 				(*
 				-> rrel_example:
 					"file://content_html/stringSplit.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<= nrel_using_example:
-		"file://content_images/scp_operator_example_stringSplit.png";;
+		"file://content_images/scp_operator_example_stringSplit.png" (* => nrel_format: format_png;; *);;
 
 stringIfGr
 <- sc_node_not_relation;
@@ -1898,11 +2114,14 @@ stringIfGr
 				(*
 				-> rrel_example:
 					"file://content_html/stringIfGr.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_stringIfGr.png";;
+		"file://content_images/scp_operator_example_stringIfGr.png" (* => nrel_format: format_png;; *);;
 
 stringIfEq
 <- sc_node_not_relation;
@@ -1919,11 +2138,14 @@ stringIfEq
 				(*
 				-> rrel_example:
 					"file://content_html/stringIfEq.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_stringIfEq.png";;
+		"file://content_images/scp_operator_example_stringIfEq.png" (* => nrel_format: format_png;; *);;
 		
 contStringConcat
 <- sc_node_not_relation;
@@ -1940,11 +2162,14 @@ contStringConcat
 				(*
 				-> rrel_example:
 					"file://content_html/contStringConcat.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_contStringConcat.png";;
+		"file://content_images/scp_operator_example_contStringConcat.png" (* => nrel_format: format_png;; *);;
 
 scp_operator_of_information_output_to_consol
 <- sc_node_not_relation;
@@ -1962,7 +2187,10 @@ scp_operator_of_information_output_to_consol
 				(*
 				-> rrel_example:
 					"file://content_html/scp_operator_of_information_output_to_consol.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<= nrel_subdividing: 
@@ -1989,13 +2217,16 @@ print
 				(*
 				-> rrel_example:
 					"file://content_html/print.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_print1.png";
+		"file://content_images/scp_operator_example_print1.png" (* => nrel_format: format_png;; *);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_print2.png";;
+		"file://content_images/scp_operator_example_print2.png" (* => nrel_format: format_png;; *);;
 
 printNl
 <- sc_node_not_relation;
@@ -2014,13 +2245,16 @@ printNl
 				(*
 				-> rrel_example:
 					"file://content_html/printNl.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_printNl1.png";
+		"file://content_images/scp_operator_example_printNl1.png" (* => nrel_format: format_png;; *);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_printNl2.png";;
+		"file://content_images/scp_operator_example_printNl2.png" (* => nrel_format: format_png;; *);;
 
 printEl
 <- sc_node_not_relation;
@@ -2039,11 +2273,14 @@ printEl
 				(*
 				-> rrel_example:
 					"file://content_html/printEl.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<=nrel_using_example:
-		"file://content_images/scp_operator_example_printEl1.png";;
+		"file://content_images/scp_operator_example_printEl1.png" (* => nrel_format: format_png;; *);;
 
 scp_operator_of_lock_management
 <- sc_node_not_relation;
@@ -2060,7 +2297,10 @@ scp_operator_of_lock_management
 				(*
 				-> rrel_example:
 					"file://content_html/scp_operator_of_lock_management.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 */
@@ -2093,7 +2333,10 @@ unlockProc
 				(*
 				-> rrel_example:
 					"file://content_html/unlockProc.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);;
 */
@@ -2114,7 +2357,10 @@ unlockEl
 				(*
 				-> rrel_example:
 					"file://content_html/unlockEl.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);;
 */
@@ -2135,7 +2381,10 @@ lockEl
 				(*
 				-> rrel_example:
 					"file://content_html/lockEl.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);;
 */
@@ -2156,7 +2405,10 @@ lockElEdit
 				(*
 				-> rrel_example:
 					"file://content_html/lockElEdit.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);;
 */
@@ -2177,7 +2429,10 @@ lockElRemove
 				(*
 				-> rrel_example:
 					"file://content_html/lockElRemove.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);;
 */
@@ -2198,7 +2453,10 @@ unlockElStr
 				(*
 				-> rrel_example:
 					"file://content_html/unlockElStr.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);;
 */
@@ -2219,7 +2477,10 @@ lockElStr
 				(*
 				-> rrel_example:
 					"file://content_html/lockElStr.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);;
 */
@@ -2240,7 +2501,10 @@ lockElStrEdit
 				(*
 				-> rrel_example:
 					"file://content_html/lockElStrEdit.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);;
 */
@@ -2261,7 +2525,10 @@ lockElStrRemove
 				(*
 				-> rrel_example:
 					"file://content_html/lockElStrRemove.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);;
 */
@@ -2282,7 +2549,10 @@ scp_operator_atomic_type
 				(*
 				-> rrel_example:
 					"file://content_html/scp_operator_atomic_type.html"
-						(* <- lang_ru;; *);; 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);;
 
@@ -2317,7 +2587,10 @@ rrel_init
 				(*
 					-> rrel_example:
 						"file://content_html/explanation_for_rrel_init.html"
-						(*<- lang_ru;;*);;
+						(*
+						<- lang_ru;;
+						=> nrel_format: format_html;;
+						*);;
 				*);;
 		*);;
 
@@ -2363,7 +2636,10 @@ rrel_new_param
 				(*
 					-> rrel_example:
 						"file://content_html/explanation_for_rrel_param.html"
-						(*<- lang_ru;;*);;
+						(*
+						<- lang_ru;;
+						=> nrel_format: format_html;;
+						*);;
 				*);;
 		*);;
 
@@ -2383,7 +2659,10 @@ rrel_param
 				(*
 					-> rrel_example:
 						"file://content_html/old_explanation_for_rrel_param.html"
-						(*<- lang_ru;;*);;
+						(*
+						<- lang_ru;;
+						=> nrel_format: format_html;;
+						*);;
 				*);;
 		*);;
 
@@ -2403,7 +2682,10 @@ rrel_operator
 				(*
 					-> rrel_example:
 						"file://content_html/old_explanation_for_rrel_operator.html"
-						(*<- lang_ru;;*);;
+						(*
+						<- lang_ru;;
+						=> nrel_format: format_html;;
+						*);;
 				*);;
 		*);;
 
@@ -2423,7 +2705,10 @@ rrel_type_of_scp_operand
 				(*
 					-> rrel_example:
 						"file://content_html/old_explanation_for_rrel_type_of_scp_operand.html"
-						(*<- lang_ru;;*);;
+						(*
+						<- lang_ru;;
+						=> nrel_format: format_html;;
+						*);;
 				*);;
 		*);;
 
@@ -2456,7 +2741,10 @@ rrel_in
 				(*
 					-> rrel_example:
 						"file://content_html/explanation_for_rrel_in.html"
-						(*<- lang_ru;;*);;
+						(*
+						<- lang_ru;;
+						=> nrel_format: format_html;;
+						*);;
 				*);;
 		*);;
 
@@ -2490,7 +2778,10 @@ rrel_out
 				(*
 					-> rrel_example:
 						"file://content_html/explanation_for_rrel_out.html"
-						(*<- lang_ru;;*);;
+						(*
+						<- lang_ru;;
+						=> nrel_format: format_html;;
+						*);;
 				*);;
 		*);;
 
@@ -2530,7 +2821,10 @@ rrel_scp_operand
 				(*
 					-> rrel_example:
 						"file://content_html/explanation_for_rrel_scp_operand.html"
-						(*<- lang_ru;;*);;
+						(*
+						<- lang_ru;;
+						=> nrel_format: format_html;;
+						*);;
 				*);;
 		*);
 
@@ -2589,7 +2883,10 @@ rrel_scp_const
 				(*
 					-> rrel_example:
 						"file://content_html/explanation_for_rrel_scp_const.html"
-						(*<- lang_ru;;*);;
+						(*
+						<- lang_ru;;
+						=> nrel_format: format_html;;
+						*);;
 				*);;
 		*);;
 
@@ -2622,7 +2919,10 @@ rrel_scp_var
 				(*
 					-> rrel_example:
 						"file://content_html/explanation_for_rrel_scp_var.html"
-						(*<- lang_ru;;*);;
+						(*
+						<- lang_ru;;
+						=> nrel_format: format_html;;
+						*);;
 				*);;
 		*);;
 
@@ -2655,7 +2955,10 @@ rrel_fixed
 				(*
 					-> rrel_example:
 						"file://content_html/explanation_for_rrel_fixed.html"
-						(*<- lang_ru;;*);;
+						(*
+						<- lang_ru;;
+						=> nrel_format: format_html;;
+						*);;
 				*);;
 		*);;
 
@@ -2688,7 +2991,10 @@ rrel_assign
 				(*
 					-> rrel_example:
 						"file://content_html/explanation_for_rrel_assign.html"
-						(*<- lang_ru;;*);;
+						(*
+						<- lang_ru;;
+						=> nrel_format: format_html;;
+						*);;
 				*);;
 		*);;
 
@@ -2721,7 +3027,10 @@ rrel_set
 				(*
 					-> rrel_example:
 						"file://content_html/explanation_for_rrel_set.html"
-						(*<- lang_ru;;*);;
+						(*
+						<- lang_ru;;
+						=> nrel_format: format_html;;
+						*);;
 				*);;
 		*);
 	<= nrel_subdividing:
@@ -2858,7 +3167,10 @@ rrel_erase
 				(*
 					-> rrel_example:
 						"file://content_html/explanation_for_rrel_erase.html"
-						(*<- lang_ru;;*);;
+						(*
+						<- lang_ru;;
+						=> nrel_format: format_html;;
+						*);;
 				*);;
 		*);;
 
@@ -2898,7 +3210,10 @@ rrel_type_of_sc_element
 				(*
 					-> rrel_example:
 						"file://content_html/explanation_for_rrel_type_of_sc_element.html"
-						(*<- lang_ru;;*);;
+						(*
+						<- lang_ru;;
+						=> nrel_format: format_html;;
+						*);;
 				*);;
 		*);
 	<= nrel_subdividing: 

@@ -49,7 +49,7 @@ basic_scs_connector
 			...
 			(*
 				-> rrel_example:
-					"file://img/table_kernel.png";;
+					"file://img/table_kernel.png" (* => nrel_format: format_png;; *);;
 			*);;
 	*);;
 
@@ -61,11 +61,11 @@ scs_divider_edge
 	[sc.s-edge]
 	(* <- lang_en;; *);
 => scs_nrel_representation_scs_editor:
-	"file://img/edge_scs_editor.png";
+	"file://img/edge_scs_editor.png" (* => nrel_format: format_png;; *);
 => scs_nrel_representation_standart_editor:
 	[<>];
 => scs_nrel_representation_scg_code:
-	"file://img/edge_scg.png";;
+	"file://img/edge_scg.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_common_type_arc
 <- sc_node_not_relation;
@@ -75,14 +75,14 @@ scs_divider_common_type_arc
 	[sc.s-arc of common type]
 	(* <- lang_en;; *);
 => scs_nrel_representation_scs_editor:
-	"file://img/common_type_arc_scs_editor1.png";
-	"file://img/common_type_arc_scs_editor2.png";
+	"file://img/common_type_arc_scs_editor1.png" (* => nrel_format: format_png;; *);
+	"file://img/common_type_arc_scs_editor2.png" (* => nrel_format: format_png;; *);
 => scs_nrel_representation_standart_editor:
 	[<];
 	[>];
 => scs_nrel_representation_scg_code:
-	"file://img/common_type_arc_scg1.png";
-	"file://img/common_type_arc_scg2.png";;
+	"file://img/common_type_arc_scg1.png" (* => nrel_format: format_png;; *);
+	"file://img/common_type_arc_scg2.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_accessory_arc
 <- sc_node_not_relation;
@@ -92,14 +92,14 @@ scs_divider_accessory_arc
 	[accessory sc.s-arc]
 	(* <- lang_en;; *);
 => scs_nrel_representation_scs_editor:
-	"file://img/accessory_arc_scs_editor1.png";
-	"file://img/accessory_arc_scs_editor2.png";
+	"file://img/accessory_arc_scs_editor1.png" (* => nrel_format: format_png;; *);
+	"file://img/accessory_arc_scs_editor2.png" (* => nrel_format: format_png;; *);
 => scs_nrel_representation_standart_editor:
 	[<**];
 	[ **> ];
 => scs_nrel_representation_scg_code:
-	"file://img/accessory_arc_scg1.png";
-	"file://img/accessory_arc_scg2.png";;
+	"file://img/accessory_arc_scg1.png" (* => nrel_format: format_png;; *);
+	"file://img/accessory_arc_scg2.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_const_pos_stat_accessory_arc
 <- sc_node_not_relation;
@@ -109,11 +109,11 @@ scs_divider_const_pos_stat_accessory_arc
 	[constant positive stationary accessory sc.s-arc]
 	(* <- lang_en;; *);
 => scs_nrel_representation_scs_editor:
-	"file://img/const_pos_stat_acc_arc_scs_editor1.png";
-	"file://img/const_pos_stat_acc_arc_scs_editor2.png";
+	"file://img/const_pos_stat_acc_arc_scs_editor1.png" (* => nrel_format: format_png;; *);
+	"file://img/const_pos_stat_acc_arc_scs_editor2.png" (* => nrel_format: format_png;; *);
 => scs_nrel_representation_standart_editor:
 	[<-];
 	[->];
 => scs_nrel_representation_scg_code:
-	"file://img/const_pos_stat_acc_arc_scg1.png";
-	"file://img/const_pos_stat_acc_arc_scg2.png";;
+	"file://img/const_pos_stat_acc_arc_scg1.png" (* => nrel_format: format_png;; *);
+	"file://img/const_pos_stat_acc_arc_scg2.png" (* => nrel_format: format_png;; *);;

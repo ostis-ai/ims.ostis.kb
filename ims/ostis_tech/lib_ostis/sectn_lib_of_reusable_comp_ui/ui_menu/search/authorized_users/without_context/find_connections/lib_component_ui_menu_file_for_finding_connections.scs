@@ -19,7 +19,10 @@ lib_component_ui_menu_file_for_finding_connections
 		(*
 		-> rrel_example:
 			"file://htmls/Ui_Connections.html"
-				(* <- lang_ru;; *);;
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+			*);;
 		*);;
 	*);
 	
@@ -31,7 +34,7 @@ lib_component_ui_menu_file_for_finding_connections
 		...
 		(*
 		-> rrel_example:
-			"file://images/connections.png";; 
+			"file://images/connections.png" (* => nrel_format: format_png;; *);; 
 		*);;
 	*);;
 

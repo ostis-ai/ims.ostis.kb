@@ -18,7 +18,10 @@ lib_component_ui_menu_file_for_finding_illustrations
 		(*
 		-> rrel_example:
 			"file://htmls/Ui_Illustration.html"
-				(* <- lang_ru;; *);;
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+			*);;
 		*);;
 	*);
 	
@@ -30,7 +33,7 @@ lib_component_ui_menu_file_for_finding_illustrations
 		...
 		(*
 		-> rrel_example:
-			"file://images/illustration.png";; 
+			"file://images/illustration.png" (* => nrel_format: format_png;; *);; 
 		*);;
 	*);;
 

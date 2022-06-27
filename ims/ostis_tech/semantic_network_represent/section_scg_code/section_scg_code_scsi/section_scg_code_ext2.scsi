@@ -21,6 +21,7 @@ scg_code_ext2 => nrel_main_idtf:
 					"file://files/ext1_moon_prop.png"
 					(*
 					<-lang_ru;;
+					=> nrel_format: format_png;;
 					=> nrel_comment:
 						..scg_code_ext2_comment1
 						(*
@@ -43,6 +44,7 @@ scg_code_ext2 => nrel_main_idtf:
 				"file://scg_code_htmls/scg_code_ext2_text1.html"
 				(*
 				<- lang_ru;;
+				=> nrel_format: format_html;;
 				*);;
 			*);;
                 <= nrel_sc_text_translation:	
@@ -52,6 +54,7 @@ scg_code_ext2 => nrel_main_idtf:
 				"file://scg_code_htmls/scg_code_ext2_text1_en.html"
 				(*
 				<- lang_en;;
+				=> nrel_format: format_html;;
 				*);;
 			*);;
 			*);;
@@ -78,6 +81,7 @@ scg_code_ext2 => nrel_main_idtf:
 					"file://files/ext2_moon_prop.png"
 					(*
 					<-lang_ru;;
+					=> nrel_format: format_png;;
 					=> nrel_comment:
 						..scg_code_ext2_comment2
 						(*
@@ -100,6 +104,7 @@ scg_code_ext2 => nrel_main_idtf:
 				"file://scg_code_htmls/scg_code_ext2_text2.html"
 				(*
 				<- lang_ru;;
+				=> nrel_format: format_html;;
 				*);;
 			*);;
                 <= nrel_sc_text_translation:	
@@ -108,7 +113,8 @@ scg_code_ext2 => nrel_main_idtf:
 			-> rrel_example:
 				"file://scg_code_htmls/scg_code_ext2_text2_en.html"
 				(*
-				<- lang_en;;
+				<- lang_ru;;
+				=> nrel_format: format_html;;
 				*);;
 			*);;
 			*);;
@@ -125,6 +131,9 @@ scg_code_ext2 => nrel_main_idtf:
 		(*
 		-> rrel_example:
 			"file://files/ext2_table.png"
-		(* <- lang_ru;; *);;
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_png;;
+			*);;
 		*);;
 	*);;

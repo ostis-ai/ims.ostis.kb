@@ -23,7 +23,10 @@ lib_component_agent_of_finding_all_initiated_signs
 		(*
 		-> rrel_example:
 			"file://htmls/Agent_Finding_All_Initiated_Signs.html"
-				(* <- lang_ru;; *);; 
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+   			*);;
 		*);;
 	*);;
 

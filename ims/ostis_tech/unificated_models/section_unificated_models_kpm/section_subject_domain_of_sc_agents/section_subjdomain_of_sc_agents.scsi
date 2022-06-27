@@ -60,7 +60,10 @@ abstract_sc_agent
 				(*
 				-> rrel_example:
 					"file://content_html/explanation_for_abstract_sc_agent.html"
-					(* <- lang_ru;; *);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 			*);
 	<= nrel_subdividing:
@@ -111,7 +114,10 @@ abstract_sc_agent_is_not_implemented_on_the_scp_language
 			(*
 				-> rrel_example:
 				"file://content_html/explanation_for_abstract_sc_agent_is_not_implemented_on_the_scp_language.html"
-				(* <- lang_ru;; *);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+				*);;
 			*);;
 		*);
 	<= nrel_subdividing:
@@ -141,7 +147,10 @@ abstract_sc_agent_implemented_on_the_scp_language
 				(*
 					-> rrel_example:
 					"file://content_html/explanation_for_abstract_sc_agent_implemented_on_the_scp_language.html"
-					(* <- lang_ru;; *);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);
 	<= nrel_subdividing:
@@ -165,7 +174,10 @@ abstract_program_sc_agent
 			(*
 				-> rrel_example:
 				"file://content_html/explanation_for_abstract_program_sc_agent.html"
-				(* <- lang_ru;;	*);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+				*);;
 			*);;
 		*);
 	<= nrel_subdividing: 
@@ -190,7 +202,10 @@ non_atomic_abstract_sc_agent
 				(*
 					-> rrel_example:
 					"file://content_html/explanation_for_non_atomic_abstract_sc_agent.html"
-					(* <- lang_ru;;	*);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);;
 
@@ -209,7 +224,10 @@ atomic_abstract_sc_agent
 			(*
 				-> rrel_example:
 				"file://content_html/explanation_for_atomic_abstract_sc_agent.html"
-				(* <- lang_ru;;	*);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+				*);;
 			*);;
 		*);
 	<= nrel_subdividing: 
@@ -233,7 +251,10 @@ platform_independent_abstract_sc_agent
 			(*
 				-> rrel_example:
 					"file://content_html/explanation_for_platform_independent_abstract_sc_agent.html"
-					(* <- lang_ru;; *);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 			*);;
 		*);;
 
@@ -252,7 +273,10 @@ platform_dependent_abstract_sc_agent
 			(*
 				-> rrel_example:
 					"file://content_html/explanation_for_platform_dependent_abstract_sc_agent.html"
-					(* <- lang_ru;; *);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 			*);;
 	*);
 	=>nrel_inclusion : abstract_sc_agent_is_not_implemented_on_the_scp_language;;
@@ -272,7 +296,10 @@ inside_abstract_sc_agent
 			(*
 				-> rrel_example:
 					"file://content_html/explanation_for_inside_abstract_sc_agent.html"
-					(* <- lang_ru;;	*);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 			*);;
 		*);;
 
@@ -291,7 +318,10 @@ effector_abstract_sc_agent
 			(*
 				-> rrel_example:
 					"file://content_html/explanation_for_effector_abstract_sc_agent.html"
-					(* <- lang_ru;;	*);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 			*);;
 		*);;
 
@@ -310,7 +340,10 @@ receptor_abstract_sc_agent
 			(*
 				-> rrel_example:
 					"file://content_html/explanation_for_receptor_abstract_sc_agent.html"
-					(* <- lang_ru;; *);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 			*);;
 	*);;
 
@@ -329,7 +362,10 @@ abstract_sc_agent_of_interpretation_of_scp_program
 				(*
 					-> rrel_example:
 					"file://content_html/explanation_for_abstract_sc_agent_of_interpretation_of_scp_program.html"
-					(* <- lang_ru;; *);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);;
 
@@ -356,7 +392,10 @@ abstract_sc_metaagent
 				(*
 					-> rrel_example:
 					"file://content_html/explanation_for_abstract_sc_metaagent.html"
-					(* <- lang_ru;; *);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 		*);;
 
@@ -378,7 +417,10 @@ nrel_abstract_sc_agent_decomposition
 			(*
 				-> rrel_example:
 					"file://content_html/explanation_for_nrel_abstract_sc_agent_decomposition.html"
-					(*	<- lang_ru;; *);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 			*);;
 		*);;
 
@@ -402,7 +444,10 @@ sc_agent
 			(*
 				-> rrel_example:
 					"file://content_html/explanation_for_sc_agent.html"
-					(* <- lang_ru;; *);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 			*);;
 		*);;
 
@@ -422,7 +467,10 @@ active_sc_agent
 			(*
 				-> rrel_example:
 					"file://content_html/explanation_for_active_sc_agent.html"
-					(*	<- lang_ru;; *);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 			*);;
 		*);;
 
@@ -441,7 +489,10 @@ nrel_sc_agent_key_sc_elements
 			(*
 				-> rrel_example:
 					"file://content_html/explanation_for_nrel_sc_agent_key_sc_elements.html"
-					(*	<- lang_ru;; *);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 			*);;
 		*);;
 
@@ -460,7 +511,10 @@ nrel_sc_agent_program
 			(*
 				-> rrel_example:
 					"file://content_html/explanation_for_nrel_sc_agent_program.html"
-					(* <- lang_ru;; *);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 			*);;
 		*);;
 
@@ -479,7 +533,10 @@ nrel_primary_initiation_condition
 			(*
 				-> rrel_example:
 					"file://content_html/explanation_for_nrel_primary_initiation_condition.html"
-					(* <- lang_ru;; *);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 			*);;
 		*);;
 
@@ -498,7 +555,10 @@ nrel_initiation_condition_and_result
 			(*
 				-> rrel_example:
 					"file://content_html/explanation_for_nrel_initiation_condition_and_result.html"
-					(* <- lang_ru;; *);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 			*);;
 		*);;
 
@@ -518,7 +578,10 @@ sc_description_of_sc_agent_behavior
 			(*
 				-> rrel_example:
 					"file://content_html/explanation_for_sc_description_of_sc_agent_behavior.html"
-					(* <- lang_ru;; *);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 			*);;
 		*);;
 	
@@ -597,7 +660,10 @@ nrel_lock
 			(*
 				-> rrel_example:
 					"file://content_html/explanation_for_lock.html"
-					(* <- lang_ru;; *);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 			*);;
 		*);
 	<- rrel_key_sc_element:
@@ -608,7 +674,10 @@ nrel_lock
 			(*
 				-> rrel_example:
 					"file://content_images/explanation_for_lock.png"
-					(* <- lang_ru;; *);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_png;;
+					*);;
 			*);;
 		*);;  
 
@@ -627,7 +696,10 @@ lock_type
 			(*
 				-> rrel_example:
 					"file://content_html/explanation_for_lock_type.html"
-					(* <- lang_ru;; *);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 			*);;
 		*);
 	-> total_lock;
@@ -649,7 +721,10 @@ total_lock
 			(*
 				-> rrel_example:
 					"file://content_html/explanation_for_total_lock.html"
-					(* <- lang_ru;; *);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 			*);;
 		*);;
 
@@ -668,7 +743,10 @@ lock_for_any_change
 			(*
 				-> rrel_example:
 					"file://content_html/explanation_for_lock_for_any_change.html"
-					(* <- lang_ru;;*);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 			*);;
 		*);;
 
@@ -687,6 +765,9 @@ lock_for_deleting
 			(*
 				-> rrel_example:
 					"file://content_html/explanation_for_lock_for_deleting.html"
-					(* <- lang_ru;;*);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 			*);;
 		*);;

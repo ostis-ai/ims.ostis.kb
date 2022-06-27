@@ -13,7 +13,10 @@ section_subjdomain_sets
 	 (*
 		 -> rrel_example:
 		   "file://content_html/introduction_section_subjdomain_sets.pdf"
-			(* <- lang_ru;;	*);;
+		   (*
+		   <- lang_ru;;
+		   => nrel_format: format_pdf;;
+		   *);;
 	 *);;
 *);
 <- not_enough_formed_structure;;
@@ -196,7 +199,10 @@ exercise_1_section_subjdomain_sets
   (*
   -> rrel_example:
     "file://content_html/exercises/exercise_1/exercise_1_subjdomain_sets.html"
-   (* <- lang_ru;; *);;
+    (*
+	<- lang_ru;;
+	=> nrel_format: format_html;;
+	*);;
   *);;
  *);;
 
@@ -210,7 +216,7 @@ exercise_1_section_subjdomain_sets
   ...
   (*
   -> rrel_example:
-    "file://content_html/exercises/exercise_1/1.png";;
+    "file://content_html/exercises/exercise_1/1.png" (* => nrel_format: format_png;; *);;
   *);;
  *);;
 
@@ -238,7 +244,10 @@ exercise_2_section_subjdomain_sets
   (*
   -> rrel_example:
     "file://content_html/exercises/exercise_2/subjdomain_sets_exercise_2.html"
-   (* <- lang_ru;; *);;
+    (*
+	<- lang_ru;;
+	=> nrel_format: format_html;;
+	*);;
   *);;
  *);;
 
@@ -252,7 +261,7 @@ exercise_2_section_subjdomain_sets
   ...
   (*
   -> rrel_example:
-    "file://content_html/exercises/exercise_2/2.png";;
+    "file://content_html/exercises/exercise_2/2.png" (* => nrel_format: format_png;; *);;
   *);;
  *);;
 

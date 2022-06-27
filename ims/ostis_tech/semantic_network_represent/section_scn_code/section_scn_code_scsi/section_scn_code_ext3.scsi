@@ -13,6 +13,7 @@ scn_code_ext3 => nrel_main_idtf:
 				"file://scn_code_htmls/scn_code_ext3_text1.html"
 				(*
 				<- lang_ru;;
+				=> nrel_format: format_html;;
 				*);;
 			*);;
                 <= nrel_sc_text_translation:	
@@ -22,6 +23,7 @@ scn_code_ext3 => nrel_main_idtf:
 				"file://scn_code_htmls/scn_code_ext3_text1_en.html"
 				(*
 				<- lang_en;;
+				=> nrel_format: format_html;;
 				*);;
 			*);;
 		*);
@@ -30,19 +32,22 @@ scn_code_ext3 => nrel_main_idtf:
 
 
 -> rrel_example:
-		"file://images/scn_text_example_4_1.png";
+		"file://images/scn_text_example_4_1.png" (* => nrel_format: format_png;; *);
 -> rrel_example:
 		"file://images/scn_text_example_4_2.png"
 		(*
-			<=> nrel_semantic_equivalence: "file://images/scn_text_example_4_2_comment.png";;
+			<=> nrel_semantic_equivalence: "file://images/scn_text_example_4_2_comment.png" (* => nrel_format: format_png;; *);;
+			=> nrel_format: format_png;;
 		*);
 -> rrel_example:
 		"file://images/scn_text_example_4_3.png"
 		(*
-			<=> nrel_semantic_equivalence: "file://images/scn_text_example_4_3_comment.png";;
+			<=> nrel_semantic_equivalence: "file://images/scn_text_example_4_3_comment.png" (* => nrel_format: format_png;; *);;
+			=> nrel_format: format_png;;
 		*);
 -> rrel_example:
 		"file://images/scn_text_example_4_4.png"
 		(*
-			<=> nrel_semantic_equivalence: "file://images/scn_text_example_4_4_comment.png";;
+			<=> nrel_semantic_equivalence: "file://images/scn_text_example_4_4_comment.png" (* => nrel_format: format_png;; *);;
+			=> nrel_format: format_png;;
 		*);;

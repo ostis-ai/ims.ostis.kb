@@ -123,7 +123,10 @@ temporary_entity
 		(*
 		-> rrel_example: 
 			"file://nl_files/temporary_entity.html"
-			(* <- lang_ru;; *);;
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+   			*);;
 		*);;
 	*);;
 	
@@ -192,7 +195,10 @@ future_entity
 		(*
 		-> rrel_example: 
 			"file://nl_files/future_entity.html"
-			(* <- lang_ru;; *);;
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+   			*);;
 		*);;
 	*);;
 
@@ -221,7 +227,10 @@ temporary_connection
 		(*
 		-> rrel_example: 
 			"file://nl_files/temporary_connection.html"
-			(* <- lang_ru;; *);;
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+   			*);;
 		*);;
 	*);;
 	
@@ -260,7 +269,10 @@ situation
 		(*
 		-> rrel_example: 
 			"file://nl_files/situation.html"
-			(* <- lang_ru;; *);;
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+   			*);;
 		*);;
 	*);;
 	
@@ -310,7 +322,10 @@ process
 		(*
 		-> rrel_example: 
 			"file://nl_files/process.html"
-			(* <- lang_ru;; *);;
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+   			*);;
 		*);;
 	*);;
 
@@ -348,7 +363,10 @@ material_entity
 		(*
 		-> rrel_example: 
 			"file://nl_files/material_entity.html"
-			(* <- lang_ru;; *);;
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+   			*);;
 		*);;
 	*);;
 
@@ -377,7 +395,10 @@ impact
 		(*
 		-> rrel_example:
 			"file://nl_files/impact.html"
-			(* <- lang_ru;; *);;
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+   			*);;
 		*);;
 	*);;
 	
@@ -431,7 +452,10 @@ nrel_initial_situation
 		(*
 		-> rrel_example: 
 			"file://nl_files/nrel_initial_situation.html"
-			(* <- lang_ru;; *);;
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+   			*);;
 		*);;
 	*);;
 	
@@ -460,7 +484,10 @@ nrel_typical_situation
 		(*
 		-> rrel_example: 
 			"file://nl_files/nrel_typical_situation.html"
-			(* <- lang_ru;; *);;
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+   			*);;
 		*);;
 	*);;
 
@@ -492,7 +519,10 @@ nrel_final_situation
 		(*
 		-> rrel_example: 
 			"file://nl_files/nrel_final_situation.html"
-			(* <- lang_ru;; *);;
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+   			*);;
 		*);;
 	*);;
 	
@@ -518,7 +548,10 @@ nrel_event
 		(*
 		-> rrel_example: 
 			"file://nl_files/nrel_event.html"
-			(* <- lang_ru;; *);;
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+   			*);;
 		*);;
 	*);
 
@@ -530,7 +563,7 @@ nrel_event
 	...
 		(*
 		-> rrel_example:
-			"file://nl_files/event.png";;
+			"file://nl_files/event.png" (* => nrel_format: format_png;; *);;
 		*);;
 	*);;
 	
@@ -565,7 +598,10 @@ class_of_temporary_connections
 		(*
 		-> rrel_example: 
 			"file://nl_files/class_of_temporary_connections.html"
-			(* <- lang_ru;; *);;
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+   			*);;
 		*);;
 	*);;
 
@@ -624,7 +660,10 @@ situational_set
 		(*
 		-> rrel_example: 
 			"file://nl_files/situational_set.html"
-			(* <- lang_ru;; *);;
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+   			*);;
 		*);;
 	*);;
 
@@ -654,7 +693,10 @@ non_situational_set
 		(*
 		-> rrel_example: 
 			"file://nl_files/non_situational_set.html"
-			(* <- lang_ru;; *);;
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+   			*);;
 		*);;
 	*);;
 
@@ -676,7 +718,10 @@ partial_situational_set
 		(*
 		-> rrel_example: 
 			"file://nl_files/partial_situational_set.html"
-			(* <- lang_ru;; *);;
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+   			*);;
 		*);;
 	*);;
 	
@@ -744,7 +789,10 @@ nrel_temporal_inclusion
 		(*
 		-> rrel_example: 
 			"file://nl_files/nrel_temporal_inclusion.html"
-			(* <- lang_ru;; *);;
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+   			*);;
 		*);;
 	*);;
 	
@@ -778,7 +826,10 @@ nrel_temporal_part
 		(*
 		-> rrel_example: 
 			"file://nl_files/nrel_temporal_part.html"
-			(* <- lang_ru;; *);;
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+   			*);;
 		*);;
 	*);
 	
@@ -790,7 +841,7 @@ nrel_temporal_part
 	...
 		(*
 		-> rrel_example:
-			"file://nl_files/nrel_temporal_part.png";;
+			"file://nl_files/nrel_temporal_part.png" (* => nrel_format: format_png;; *);;
 		*);;
 	*);
 	
@@ -802,7 +853,7 @@ nrel_temporal_part
 	...
 		(*
 		-> rrel_example:
-			"file://nl_files/nrel_temporal_part_second.png";;
+			"file://nl_files/nrel_temporal_part_second.png" (* => nrel_format: format_png;; *);;
 		*);;
 	*);;
 	
@@ -860,7 +911,7 @@ nrel_temporal_inclusion_without_coincidence_of_the_initial_and_final_moments
 	...
 		(*
 		-> rrel_example:
-			"file://nl_files/nrel_temporal_inclusion_without_coincidence_of_the_initial_and_final_moments.png";;
+			"file://nl_files/nrel_temporal_inclusion_without_coincidence_of_the_initial_and_final_moments.png" (* => nrel_format: format_png;; *);;
 		*);;
 	*);
 	
@@ -872,7 +923,7 @@ nrel_temporal_inclusion_without_coincidence_of_the_initial_and_final_moments
 	...
 		(*
 		-> rrel_example:
-			"file://nl_files/nrel_temporal_inclusion_without_coincidence_of_the_initial_and_final_moments_second.png";;
+			"file://nl_files/nrel_temporal_inclusion_without_coincidence_of_the_initial_and_final_moments_second.png" (* => nrel_format: format_png;; *);;
 		*);;
 	*);;
 	
@@ -895,7 +946,7 @@ nrel_temporal_inclusion_with_coincidence_of_the_initial_moments
 	...
 		(*
 		-> rrel_example:
-			"file://nl_files/nrel_temporal_inclusion_with_coincidence_of_the_initial_moments.png";;
+			"file://nl_files/nrel_temporal_inclusion_with_coincidence_of_the_initial_moments.png" (* => nrel_format: format_png;; *);;
 		*);;
 	*);
 	
@@ -907,7 +958,7 @@ nrel_temporal_inclusion_with_coincidence_of_the_initial_moments
 	...
 		(*
 		-> rrel_example:
-			"file://nl_files/nrel_temporal_inclusion_with_coincidence_of_the_initial_moments_second.png";;
+			"file://nl_files/nrel_temporal_inclusion_with_coincidence_of_the_initial_moments_second.png" (* => nrel_format: format_png;; *);;
 		*);;
 	*);;
 		
@@ -929,7 +980,7 @@ nrel_temporal_inclusion_with_coincidence_of_the_final_moments
 	...
 		(*
 		-> rrel_example:
-			"file://nl_files/nrel_temporal_inclusion_with_coincidence_of_the_final_moments.png";;
+			"file://nl_files/nrel_temporal_inclusion_with_coincidence_of_the_final_moments.png" (* => nrel_format: format_png;; *);;
 		*);;
 	*);
 	
@@ -941,7 +992,7 @@ nrel_temporal_inclusion_with_coincidence_of_the_final_moments
 	...
 		(*
 		-> rrel_example:
-			"file://nl_files/nrel_temporal_inclusion_with_coincidence_of_the_final_moments_second.png";;
+			"file://nl_files/nrel_temporal_inclusion_with_coincidence_of_the_final_moments_second.png" (* => nrel_format: format_png;; *);;
 		*);;
 	*);;
 
@@ -979,7 +1030,7 @@ nrel_temporal_union
 	...
 		(*
 		-> rrel_example:
-			"file://nl_files/nrel_temporal_union.png";;
+			"file://nl_files/nrel_temporal_union.png" (* => nrel_format: format_png;; *);;
 		*);;
 	*);
 
@@ -991,7 +1042,7 @@ nrel_temporal_union
 	...
 		(*
 		-> rrel_example:
-			"file://nl_files/nrel_temporal_union_second.png";;
+			"file://nl_files/nrel_temporal_union_second.png" (* => nrel_format: format_png;; *);;
 		*);;
 	*);;
 
@@ -1014,7 +1065,7 @@ nrel_temporal_decomposition
 	...
 		(*
 		-> rrel_example:
-			"file://nl_files/nrel_temporal_decomposition.png";;
+			"file://nl_files/nrel_temporal_decomposition.png" (* => nrel_format: format_png;; *);;
 		*);;
 	*);
 	
@@ -1026,7 +1077,7 @@ nrel_temporal_decomposition
 	...
 		(*
 		-> rrel_example:
-			"file://nl_files/nrel_temporal_decomposition_second.png";;
+			"file://nl_files/nrel_temporal_decomposition_second.png" (* => nrel_format: format_png;; *);;
 		*);;
 	*);;
 
@@ -1055,7 +1106,7 @@ nrel_temporal_adjacency
 	...
 		(*
 		-> rrel_example:
-			"file://nl_files/nrel_temporal_adjacency.png";;
+			"file://nl_files/nrel_temporal_adjacency.png" (* => nrel_format: format_png;; *);;
 		*);;
 	*);
 	
@@ -1067,7 +1118,7 @@ nrel_temporal_adjacency
 	...
 		(*
 		-> rrel_example:
-			"file://nl_files/nrel_temporal_adjacency_second.png";;
+			"file://nl_files/nrel_temporal_adjacency_second.png" (* => nrel_format: format_png;; *);;
 		*);;
 	*);;
 
@@ -1090,7 +1141,7 @@ nrel_temporal_sequence_with_gap
 	...
 		(*
 		-> rrel_example:
-			"file://nl_files/nrel_temporal_sequence_with_gap.png";;
+			"file://nl_files/nrel_temporal_sequence_with_gap.png" (* => nrel_format: format_png;; *);;
 		*);;
 	*);
 	
@@ -1102,7 +1153,7 @@ nrel_temporal_sequence_with_gap
 	...
 		(*
 		-> rrel_example:
-			"file://nl_files/nrel_temporal_sequence_with_gap_second.png";;
+			"file://nl_files/nrel_temporal_sequence_with_gap_second.png" (* => nrel_format: format_png;; *);;
 		*);;
 	*);;
 
@@ -1125,7 +1176,7 @@ nrel_temporal_sequence_with_intersection
 	...
 		(*
 		-> rrel_example:
-			"file://nl_files/nrel_temporal_sequence_with_intersection.png";;
+			"file://nl_files/nrel_temporal_sequence_with_intersection.png" (* => nrel_format: format_png;; *);;
 		*);;
 	*);
 	
@@ -1137,7 +1188,7 @@ nrel_temporal_sequence_with_intersection
 	...
 		(*
 		-> rrel_example:
-			"file://nl_files/nrel_temporal_sequence_with_intersection_second.png";;
+			"file://nl_files/nrel_temporal_sequence_with_intersection_second.png" (* => nrel_format: format_png;; *);;
 		*);;
 	*);;
 	
@@ -1165,7 +1216,10 @@ begin
 		(*
 		-> rrel_example: 
 			"file://nl_files/begin.html"
-			(* <- lang_ru;; *);;
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+   			*);;
 		*);;
 	*);
 
@@ -1178,7 +1232,10 @@ begin
 		(*
 		-> rrel_example: 
 			"file://nl_files/begin_second.html"
-			(* <- lang_ru;; *);;
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+   			*);;
 		*);;
 	*);
 
@@ -1190,7 +1247,7 @@ begin
 	...
 		(*
 		-> rrel_example:
-			"file://nl_files/begin.png";;
+			"file://nl_files/begin.png" (* => nrel_format: format_png;; *);;
 		*);;
 	*);;
 	
@@ -1220,7 +1277,10 @@ completion
 		(*
 		-> rrel_example: 
 			"file://nl_files/completion.html"
-			(* <- lang_ru;; *);;
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+   			*);;
 		*);;
 	*);
 
@@ -1233,7 +1293,10 @@ completion
 		(*
 		-> rrel_example: 
 			"file://nl_files/completion_second.html"
-			(* <- lang_ru;; *);;
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+   			*);;
 		*);;
 	*);
 
@@ -1245,7 +1308,7 @@ completion
 	...
 		(*
 		-> rrel_example:
-			"file://nl_files/completion.png";;
+			"file://nl_files/completion.png" (* => nrel_format: format_png;; *);;
 		*);;
 	*);;
 
@@ -1281,7 +1344,10 @@ duration
 		(*
 		-> rrel_example: 
 			"file://nl_files/duration.html"
-			(* <- lang_ru;; *);;
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+   			*);;
 		*);;
 	*);
 
@@ -1294,7 +1360,10 @@ duration
 		(*
 		-> rrel_example: 
 			"file://nl_files/duration_second.html"
-			(* <- lang_ru;; *);;
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+   			*);;
 		*);;
 	*);
 
@@ -1306,7 +1375,7 @@ duration
 	...
 		(*
 		-> rrel_example:
-			"file://nl_files/duration.png";;
+			"file://nl_files/duration.png" (* => nrel_format: format_png;; *);;
 		*);;
 	*);;
 

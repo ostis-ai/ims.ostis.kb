@@ -32,15 +32,18 @@ scs_divider_incidence
 			(*
 				-> rrel_example:
 					"file://html/expl_incidence.html"
-					(* <- lang_ru;; *);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 			*);;
 	*);
 -> rrel_example:
-	"file://html/example_incidence.html";
+	"file://html/example_incidence.html" (* => nrel_format: format_html;; *);
 => nrel_scs_editor_representation:
-	"file://img/incidence_any_editor.png";
+	"file://img/incidence_any_editor.png" (* => nrel_format: format_png;; *);
 => nrel_standart_editors_representation:
-	"file://img/incidence_any_editor.png";;
+	"file://img/incidence_any_editor.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_modifier
 <- sc_node_not_relation;
@@ -73,6 +76,7 @@ scs_divider_simple_colon
 					"file://html/expl_simple_colon.html"
 					(* 
 						<- lang_ru;;
+						=> nrel_format: format_html;;
 						=> nrel_comment:
 							...
 							(*
@@ -81,18 +85,21 @@ scs_divider_simple_colon
 									(*
 										-> rrel_example:
 											"file://html/comment_simple_colon.html"
-											(* <- lang_ru;; *);;
+											(*
+											<- lang_ru;;
+											=> nrel_format: format_html;;
+											*);;
 									*);;
 							*);;
 					*);;
 			*);;
 	*);
 -> rrel_example:
-	"file://html/example_simple_colon.html";
+	"file://html/example_simple_colon.html" (* => nrel_format: format_html;; *);
 => nrel_scs_editor_representation:
-	"file://img/simple_colon_any_editor.png";
+	"file://img/simple_colon_any_editor.png" (* => nrel_format: format_png;; *);
 => nrel_standart_editors_representation:
-	"file://img/simple_colon_any_editor.png";;
+	"file://img/simple_colon_any_editor.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_double_colon
 <- sc_node_not_relation;
@@ -112,6 +119,7 @@ scs_divider_double_colon
 					"file://html/expl_double_colon.html"
 					(* 
 						<- lang_ru;;
+						=> nrel_format: format_html;;
 						=> nrel_comment:
 							...
 							(*
@@ -120,16 +128,19 @@ scs_divider_double_colon
 									(*
 										-> rrel_example:
 											"file://html/comment_double_colon.html"
-											(* <- lang_ru;; *);;
+											(*
+											<- lang_ru;;
+											=> nrel_format: format_html;;
+											*);;
 									*);;
 							*);;
 					*);;
 			*);;
 	*);
 => nrel_scs_editor_representation:
-	"file://img/double_colon_any_editor.png";
+	"file://img/double_colon_any_editor.png" (* => nrel_format: format_png;; *);
 => nrel_standart_editors_representation:
-	"file://img/double_colon_any_editor.png";;
+	"file://img/double_colon_any_editor.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_metamodifier
 <- sc_node_not_relation;
@@ -162,6 +173,7 @@ scs_divider_simple_plus
 					"file://html/expl_simple_plus.html"
 					(* 
 						<- lang_ru;;
+						=> nrel_format: format_html;;
 						=> nrel_comment:
 							...
 							(*
@@ -170,18 +182,21 @@ scs_divider_simple_plus
 									(*
 										-> rrel_example:
 											"file://html/comment_simple_plus.html"
-											(* <- lang_ru;; *);;
+											(*
+											<- lang_ru;;
+											=> nrel_format: format_html;;
+											*);;
 									*);;
 							*);;
 					*);;
 			*);;
 	*);
 -> rrel_example:
-	"file://html/example_simple_plus.html";
+	"file://html/example_simple_plus.html" (* => nrel_format: format_html;; *);
 => nrel_scs_editor_representation:
-	"file://img/simple_plus_any_editor.png";
+	"file://img/simple_plus_any_editor.png" (* => nrel_format: format_png;; *);
 => nrel_standart_editors_representation:
-	"file://img/simple_plus_any_editor.png";;
+	"file://img/simple_plus_any_editor.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_double_plus
 <- sc_node_not_relation;
@@ -200,6 +215,7 @@ scs_divider_double_plus
 				-> rrel_example:
 					"file://html/expl_double_plus.html"
 					(* 
+						=> nrel_format: format_html;;
 						<- lang_ru;;
 						=> nrel_comment:
 							...
@@ -209,16 +225,19 @@ scs_divider_double_plus
 									(*
 										-> rrel_example:
 											"file://html/comment_double_plus.html"
-											(* <- lang_ru;; *);;
+											(*
+											<- lang_ru;;
+											=> nrel_format: format_html;;
+											*);;
 									*);;
 							*);;
 					*);;
 			*);;
 	*);
 => nrel_scs_editor_representation:
-	"file://img/double_plus_any_editor.png";
+	"file://img/double_plus_any_editor.png" (* => nrel_format: format_png;; *);
 => nrel_standart_editors_representation:
-	"file://img/double_plus_any_editor.png";;
+	"file://img/double_plus_any_editor.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_simple_semicolon
 <- sc_node_not_relation;
@@ -236,7 +255,10 @@ scs_divider_simple_semicolon
 			(*
 				-> rrel_example:
 					"file://html/expl_simple_semicolon.html"
-					(* <- lang_ru;; *);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 			*);;
 	*);
 <- rrel_key_sc_element:
@@ -248,15 +270,18 @@ scs_divider_simple_semicolon
 			(*
 				-> rrel_example:
 					"file://html/note_simple_semicolon.html"
-					(* <- lang_ru;; *);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 			*);;
 	*);
 -> rrel_example:
-	"file://html/example_simple_semicolon.html";
+	"file://html/example_simple_semicolon.html" (* => nrel_format: format_html;; *);
 => nrel_scs_editor_representation:
-	"file://img/simple_semicolon_any_editor.png";
+	"file://img/simple_semicolon_any_editor.png" (* => nrel_format: format_png;; *);
 => nrel_standart_editors_representation:
-	"file://img/simple_semicolon_any_editor.png";;
+	"file://img/simple_semicolon_any_editor.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_double_semicolon
 <- sc_node_not_relation;
@@ -274,13 +299,16 @@ scs_divider_double_semicolon
 			(*
 				-> rrel_example:
 					"file://html/expl_double_semicolon.html"
-					(* <- lang_ru;; *);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 			*);;
 	*);
 => nrel_scs_editor_representation:
-	"file://img/double_semicolon_any_editor.png";
+	"file://img/double_semicolon_any_editor.png" (* => nrel_format: format_png;; *);
 => nrel_standart_editors_representation:
-	"file://img/double_semicolon_any_editor.png";;
+	"file://img/double_semicolon_any_editor.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_subsentence
 <- sc_node_not_relation;
@@ -300,6 +328,7 @@ scs_divider_subsentence
 					"file://html/expl_subsentence.html"
 					(* 
 						<- lang_ru;;
+						=> nrel_format: format_html;;
 						=> nrel_comment:
 							...
 							(*
@@ -308,13 +337,16 @@ scs_divider_subsentence
 									(*
 										-> rrel_example:
 											"file://html/comment_subsentence.html"
-											(* <- lang_ru;; *);;
+											(*
+											<- lang_ru;;
+											=> nrel_format: format_html;;
+											*);;
 									*);;
 							*);;
 					*);;
 			*);;
 	*);
 => nrel_scs_editor_representation:
-	"file://img/subsentence_any_editor.png";
+	"file://img/subsentence_any_editor.png" (* => nrel_format: format_png;; *);
 => nrel_standart_editors_representation:
-	"file://img/subsentence_any_editor.png";;
+	"file://img/subsentence_any_editor.png" (* => nrel_format: format_png;; *);;
