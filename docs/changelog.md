@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Change scs external language to scn
 
+### Added
+- Add nrel_format for file inclusions
+
 ## [0.2.1] - 28.04.2022
 ### Added
 - Add relations for user identification
