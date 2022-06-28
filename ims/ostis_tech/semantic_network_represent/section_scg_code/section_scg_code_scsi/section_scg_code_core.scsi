@@ -16,6 +16,7 @@ scg_code_core => nrel_main_idtf:
 				"file://scg_code_htmls/scg_code_core_text1.html"
 				(*
 				<- lang_ru;;
+				=> nrel_format: format_html;;
 				*);;
 			*);;
                 <= nrel_sc_text_translation:	
@@ -25,6 +26,7 @@ scg_code_core => nrel_main_idtf:
 				"file://scg_code_htmls/scg_code_core_text1_en.html"
 				(*
 				<- lang_en;;
+				=> nrel_format: format_html;;
 				*);;
 			*);;
 		*);
@@ -44,7 +46,10 @@ scg_code_core => nrel_main_idtf:
 			(*
 			-> rrel_example:
 				"file://files/core_identification.png"
-			(*<-lang_ru;;*);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_png;;
+				*);;
 			*);;
 		*);;
 
@@ -55,6 +60,7 @@ scg_code_core => nrel_main_idtf:
 				"file://scg_code_htmls/scg_code_core_text2.html"
 				(*
 				<- lang_ru;;
+				=> nrel_format: format_html;;
 				*);;
 			*);;
                 <= nrel_sc_text_translation:	
@@ -64,6 +70,7 @@ scg_code_core => nrel_main_idtf:
 				"file://scg_code_htmls/scg_code_core_text2_en.html"
 				(*
 				<- lang_en;;
+				=> nrel_format: format_html;;
 				*);;
 			*);;
 		*);	
@@ -77,13 +84,17 @@ scg_code_core => nrel_main_idtf:
 		(*
 		-> rrel_example:
 			"file://files/core_table.png"
-			(* <- lang_ru;; *);;
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_png;;
+			*);;
 		*);;
 	*);
 
 -> rrel_example:
 	"file://files/core_triangle_ABC.png"
 	(*
+	=> nrel_format: format_png;;
 	<- rrel_key_sc_element:
 		..scg_code_core_comment1
 		(*
@@ -101,6 +112,7 @@ scg_code_core => nrel_main_idtf:
 -> rrel_example:
 	"file://files/core_moon.png"
 	(*
+	=> nrel_format: format_png;;
 	<- rrel_key_sc_element:
 		..scg_code_core_comment2
 		(*
@@ -126,6 +138,7 @@ scg_code_core => nrel_main_idtf:
 				"file://scg_code_htmls/scg_code_core_text3.html"
 				(*
 				<- lang_ru;;
+				=> nrel_format: format_html;;
 				*);;
 			*);;
                 <= nrel_sc_text_translation:	
@@ -135,6 +148,7 @@ scg_code_core => nrel_main_idtf:
 				"file://scg_code_htmls/scg_code_core_text3_en.html"
 				(*
 				<- lang_en;;
+				=> nrel_format: format_html;;
 				*);;
 			*);;
 	*);;

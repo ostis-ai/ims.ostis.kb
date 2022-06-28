@@ -16,7 +16,10 @@ scs_code
 				(*
 					-> rrel_example:
 					"file://nl_files/explanation_for_scs_code.html"
-					(* <- lang_ru;;	*);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 				*);;
 			*);;
 
@@ -75,12 +78,15 @@ scs_sentence_1_level
 		(*
 			-> rrel_example:
 			"file://nl_files/expl_scs_sent_lvl1.html"
-			(* <- lang_ru;;	*);;
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+			*);;
 		*);;
 	*);
 -> rrel_example:
-	"file://nl_files/example1_scs_sent_lvl1.html";
-	"file://nl_files/example2_scs_sent_lvl1.html";;
+	"file://nl_files/example1_scs_sent_lvl1.html" (* => nrel_format: format_html;; *);
+	"file://nl_files/example2_scs_sent_lvl1.html" (* => nrel_format: format_html;; *);;
 
 scs_sentence_2_level
 <- sc_node_not_relation;
@@ -90,8 +96,8 @@ scs_sentence_2_level
 	[sc.s-sentence of level 2]
 	(* <- lang_en;; *);
 -> rrel_example:
-	"file://nl_files/example1_scs_sent_lvl2.html";
-	"file://nl_files/example2_scs_sent_lvl2.html";;
+	"file://nl_files/example1_scs_sent_lvl2.html" (* => nrel_format: format_html;; *);
+	"file://nl_files/example2_scs_sent_lvl2.html" (* => nrel_format: format_html;; *);;
 
 
 scs_sentence_3_level
@@ -102,8 +108,8 @@ scs_sentence_3_level
 	[sc.s-sentence of level 3]
 	(* <- lang_en;; *);
 -> rrel_example:
-	"file://nl_files/example1_scs_sent_lvl3.html";
-	"file://nl_files/example2_scs_sent_lvl3.html";;
+	"file://nl_files/example1_scs_sent_lvl3.html" (* => nrel_format: format_html;; *);
+	"file://nl_files/example2_scs_sent_lvl3.html" (* => nrel_format: format_html;; *);;
 
 scs_sentence_4_level
 <- sc_node_not_relation;
@@ -121,11 +127,14 @@ scs_sentence_4_level
 		(*
 			-> rrel_example:
 			"file://nl_files/expl_scs_sent_lvl4.html"
-			(* <- lang_ru;;	*);;
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+			*);;
 		*);;
 	*);
 -> rrel_example:
-	"file://nl_files/example_scs_sent_lvl4.html";;
+	"file://nl_files/example_scs_sent_lvl4.html" (* => nrel_format: format_html;; *);;
 
 scs_sentence_5_level
 <- sc_node_not_relation;
@@ -135,7 +144,7 @@ scs_sentence_5_level
 	[sc.s-sentence of level 5]
 	(* <- lang_en;; *);
 -> rrel_example:
-	"file://nl_files/example_scs_sent_lvl5.html";;
+	"file://nl_files/example_scs_sent_lvl5.html" (* => nrel_format: format_html;; *);;
 
 scs_sentence_6_level
 <- sc_node_not_relation;
@@ -154,10 +163,14 @@ scs_sentence_6_level
 					"file://nl_files/example1_scs_sent_lvl6.html"
 					(*
 						<- scs_sentence_6_level;;
+						=> nrel_format: format_html;;
 						<= nrel_semantic_inclusion: .scs_code_ext4_example;;
 						<=> nrel_semantic_equivalence:
 							"file://nl_files/img/equivalent_scg_scs_sent_lvl6.png"
-							(* <- scg_code;; *);;
+							(*
+							<- scg_code;;
+							=> nrel_format: format_png;;
+							*);;
 						=> nrel_comment:
 							...
 							(*
@@ -166,14 +179,17 @@ scs_sentence_6_level
 									(*
 										-> rrel_example:
 											"file://nl_files/comment_scs_sent_lvl6.html"
-											(* <- lang_ru;; *);;
+											(*
+											<- lang_ru;;
+											=> nrel_format: format_html;;
+											*);;
 									*);;
 							*);;
 					*);;
 			*);;
 	*);
-	"file://nl_files/example2_scs_sent_lvl6.html";
-	"file://nl_files/example3_scs_sent_lvl6.html";;
+	"file://nl_files/example2_scs_sent_lvl6.html" (* => nrel_format: format_html;; *);
+	"file://nl_files/example3_scs_sent_lvl6.html" (* => nrel_format: format_html;; *);;
 
 scs_sentence_7_level
 <- sc_node_not_relation;
@@ -185,6 +201,7 @@ scs_sentence_7_level
 -> rrel_example:
 	"file://nl_files/example_scs_sent_lvl7.html"
 	(*
+		=> nrel_format: format_html;;
 		<=> nrel_semantic_equivalence:
 			.scs_sent_lvl6_example;;
 		=> nrel_comment:
@@ -195,7 +212,10 @@ scs_sentence_7_level
 					(*
 						-> rrel_example:
 							"file://nl_files/comment_scs_sent_lvl7.html"
-							(* <- lang_ru;; *);;
+							(*
+							<- lang_ru;;
+							=> nrel_format: format_html;;
+							*);;
 					*);;
 			*);;
 	*);;

@@ -23,7 +23,10 @@ lib_component_agent_of_assign_user_as_administrator
 		(*
 		-> rrel_example:
 			"file://htmls/Agent_Of_assign_user_as_administrator.html"
-				(* <- lang_ru;; *);; 
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+   			*);;
 		*);;
 	*);;
 

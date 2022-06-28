@@ -23,7 +23,10 @@ lib_component_agent_formation_proposal_executor_of_project_task
 		(*
 		-> rrel_example:
 			"file://htmls/form_prop_exec.html"
-				(* <- lang_ru;; *);; 
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+   			*);;
 		*);;
 	*);;
 

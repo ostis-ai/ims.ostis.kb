@@ -18,7 +18,10 @@ lib_component_ui_menu_file_for_finding_statements
 		(*
 		-> rrel_example:
 			"file://htmls/Ui_Statements.html"
-				(* <- lang_ru;; *);;
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+			*);;
 		*);;
 	*);
 	
@@ -30,7 +33,7 @@ lib_component_ui_menu_file_for_finding_statements
 		...
 		(*
 		-> rrel_example:
-			"file://images/statement.png";; 
+			"file://images/statement.png" (* => nrel_format: format_png;; *);; 
 		*);;
 	*);;
 

@@ -56,7 +56,11 @@ ui_control_search_idtf_edit
 	<= nrel_sc_text_translation:
 		...
 		(*
-		-> "file://contents/ui_control_search_idtf_edit_descr_initiate.html" (* <- lang_ru;; *);;
+		-> "file://contents/ui_control_search_idtf_edit_descr_initiate.html"
+			(* 
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+			*);;
 		*);;	
 	*);
 
@@ -67,7 +71,11 @@ ui_control_search_idtf_edit
 	<= nrel_sc_text_translation:
 		...	
 		(*
-		-> "file://contents/ui_control_search_idtf_edit_descr_oper_sem_ru.html" (* <- lang_ru;; *);;
+		-> "file://contents/ui_control_search_idtf_edit_descr_oper_sem_ru.html"
+			(* 
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+			*);;
 		*);;
 	*);
 
@@ -89,7 +97,8 @@ ui_control_search_idtf_edit
 
 "file://contents/ui_control_search_idtf_edit_example.gif"
   <- image;
-  <= nrel_system_identifier: [ui_control_search_idtf_edit_example];;
+  <= nrel_system_identifier: [ui_control_search_idtf_edit_example];
+  => nrel_format: format_png;;
 
 // ------------------------------------------------
 ui_control_select_window_type
@@ -104,7 +113,11 @@ ui_control_select_window_type
 	<= nrel_sc_text_translation:
 		...
 		(*
-		-> "file://contents/ui_control_select_window_type_descr_initiate.html" (* <- lang_ru;; *);;
+		-> "file://contents/ui_control_select_window_type_descr_initiate.html"
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+			*);;
 		*);;	
 	*);
 
@@ -225,7 +238,11 @@ ui_control_argument_button_clear
 	<= nrel_sc_text_translation:
 		...
 		(*
-		-> "file://contents/ui_control_argument_button_clear_descr_initiate.html" (* <- lang_ru;; *);;
+		-> "file://contents/ui_control_argument_button_clear_descr_initiate.html"
+			(*
+			<- lang_ru;;
+			=> nrel_format: format_html;;
+			*);;
 		*);;	
 	*);
 

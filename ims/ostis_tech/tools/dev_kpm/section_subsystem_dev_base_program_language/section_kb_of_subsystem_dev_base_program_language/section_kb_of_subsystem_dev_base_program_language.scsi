@@ -15,7 +15,10 @@ nrel_breakpoints
 				(*
 					-> rrel_example:
 						"file://content_html/nrel_breakpoints.html"
-						(* <- lang_ru;; *);;
+						(*
+						<- lang_ru;;
+						=> nrel_format: format_html;;
+						*);;
 				*);;
 			*);;
 
@@ -35,7 +38,10 @@ breakpoint
 			(*
 				-> rrel_example:
 					"file://content_html/breakpoint.html"
-					(* <- lang_ru;; *);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 			*);;
 		*);;
 
@@ -56,7 +62,10 @@ incorrectness_in_scp_program
 			(*
 				-> rrel_example:
 					"file://content_html/incorrectness_in_scp_program.html"
-					(*	<- lang_ru;; *);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 			*);;
 		*);
 	=>nrel_inclusion: unreachable_scp_operator;
@@ -104,7 +113,10 @@ error_in_scp_program
 				(*
 					-> rrel_example:
 						"file://content_html/error_in_scp_program.html"
-						(* 	<- lang_ru;; *);;
+						(*
+						<- lang_ru;;
+						=> nrel_format: format_html;;
+						*);;
 				*);;
 			*);;
 
@@ -123,7 +135,10 @@ error_in_scp_program_at_program_level
 				(*
 					-> rrel_example:
 						"file://content_html/error_in_scp_program_at_program_level.html"
-						(* 	<- lang_ru;; *);;
+						(*
+						<- lang_ru;;
+						=> nrel_format: format_html;;
+						*);;
 				*);;
 			*);
 	=> nrel_inclusion : absent_scp_process;
@@ -162,7 +177,10 @@ error_in_scp_program_at_set_of_parameters_level
 				(*
 					-> rrel_example:
 						"file://content_html/error_in_scp_program_at_set_of_parameters_level.html"
-						(* 	<- lang_ru;; *);;
+						(*
+						<- lang_ru;;
+						=> nrel_format: format_html;;
+						*);;
 				*);;
 			*);
 		=> nrel_inclusion : type_of_scp_program_parameter_not_specified;
@@ -201,7 +219,10 @@ error_in_scp_program_at_set_of_operators_level
 				(*
 					-> rrel_example:
 						"file://content_html/error_in_scp_program_at_set_of_operators_level.html"
-						(* <- lang_ru;;	*);;
+						(*
+						<- lang_ru;;
+						=> nrel_format: format_html;;
+						*);;
 				*);;
 			*);
 		=>nrel_inclusion : decomposition_of_scp_process_not_contain_any_elements;
@@ -270,7 +291,10 @@ error_in_scp_program_at_operator_level
 				(*
 					-> rrel_example:
 						"file://content_html/error_in_scp_program_at_operator_level.html"
-						(* <- lang_ru;; *);;
+						(*
+						<- lang_ru;;
+						=> nrel_format: format_html;;
+						*);;
 				*);;
 			*);
 		=> nrel_inclusion : scp_operator_not_belong_to_any_scp_operators_atomic_classes;
@@ -359,7 +383,10 @@ error_in_scp_program_at_operand_level
 				(*
 					-> rrel_example:
 						"file://content_html/error_in_scp_program_at_operand_level.html"
-						(* 	<- lang_ru;; *);;
+						(*
+						<- lang_ru;;
+						=> nrel_format: format_html;;
+						*);;
 				*);;
 			*);
 		=>nrel_inclusion : operand_number_within_scp_operator_not_specified ;;
@@ -388,7 +415,10 @@ syntax_error_in_scp_program
 				(*
 					-> rrel_example:
 						"file://content_html/syntax_error_in_scp_program.html"
-						(* <- lang_ru;;	*);;
+						(*
+						<- lang_ru;;
+						=> nrel_format: format_html;;
+						*);;
 				*);;
 			*);;
 
@@ -407,7 +437,10 @@ semantic_error_in_scp_program
 				(*
 					-> rrel_example:
 						"file://content_html/semantic_error_in_scp_program.html"
-						(* 	<- lang_ru;;*);;
+						(*
+						<- lang_ru;;
+						=> nrel_format: format_html;;
+						*);;
 				*);;
 			*);;
 
@@ -429,6 +462,9 @@ nrel_incorrectness_in_scp_program
 			(*
 				-> rrel_example:
 					"file://content_html/nrel_incorrectness_in_scp_program.html"
-					(*	<- lang_ru;; *);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 			*);;
 		*);;

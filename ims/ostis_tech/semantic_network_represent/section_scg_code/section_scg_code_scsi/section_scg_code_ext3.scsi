@@ -15,7 +15,10 @@ scg_code_ext3 => nrel_main_idtf:
 			(*
 			-> rrel_example:
 				"file://files/ext3_table.png"
-			(*<-lang_ru;;*);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_png;;
+				*);;
 			*);;
 		*);;
 <= nrel_sc_text_translation:	
@@ -25,6 +28,7 @@ scg_code_ext3 => nrel_main_idtf:
 				"file://scg_code_htmls/scg_code_ext3_text1.html"
 				(*
 				<- lang_ru;;
+				=> nrel_format: format_html;;
 				*);;
 			*);;
                 <= nrel_sc_text_translation:	
@@ -34,6 +38,7 @@ scg_code_ext3 => nrel_main_idtf:
 				"file://scg_code_htmls/scg_code_ext3_text1_en.html"
 				(*
 				<- lang_en;;
+				=> nrel_format: format_html;;
 				*);;
 			*);;
 		*);;

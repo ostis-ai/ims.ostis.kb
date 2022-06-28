@@ -35,7 +35,7 @@ special_scs_connector
 			...
 			(*
 				-> rrel_example:
-					"file://img/table_special.png";;
+					"file://img/table_special.png" (* => nrel_format: format_png;; *);;
 			*);;
 	*);;
 
@@ -55,15 +55,18 @@ const_scs_divider_inclusion
 			(*
 				-> rrel_example:
 					"file://html/expl_const_inclusion.html"
-					(* <- lang_ru;; *);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 			*);;
 	*);
 -> rrel_example:
-	"file://html/example_const_inclusion1.html";
-	"file://html/example_const_inclusion2.html";
+	"file://html/example_const_inclusion1.html" (* => nrel_format: format_html;; *);
+	"file://html/example_const_inclusion2.html" (* => nrel_format: format_html;; *);
 => nrel_scs_editor_representation:
-	"file://img/const_inclusion_scs_editor1.png";
-	"file://img/const_inclusion_scs_editor2.png";;
+	"file://img/const_inclusion_scs_editor1.png" (* => nrel_format: format_png;; *);
+	"file://img/const_inclusion_scs_editor2.png" (* => nrel_format: format_png;; *);;
 
 var_scs_divider_inclusion
 <- sc_node_not_relation;
@@ -81,20 +84,24 @@ var_scs_divider_inclusion
 			(*
 				-> rrel_example:
 					"file://html/expl_var_inclusion.html"
-					(* <- lang_ru;; *);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 			*);;
 	*);
 -> rrel_example:
 	"file://html/example_var_inclusion.html"
 	(*
+		=> nrel_format: format_html;;
 		<=> nrel_semantic_equivalence:
-			"file://html/var_inclusion_equivalent_scs.html";;
+			"file://html/var_inclusion_equivalent_scs.html" (* => nrel_format: format_html;; *);;
 		<=> nrel_semantic_equivalence:
-			"file://img/var_inclusion_equivalent_scg.png";;
+			"file://img/var_inclusion_equivalent_scg.png" (* => nrel_format: format_png;; *);;
 	*);
 => nrel_scs_editor_representation:
-	"file://img/var_inclusion_scs_editor1.png";
-	"file://img/var_inclusion_scs_editor2.png";;
+	"file://img/var_inclusion_scs_editor1.png" (* => nrel_format: format_png;; *);
+	"file://img/var_inclusion_scs_editor2.png" (* => nrel_format: format_png;; *);;
 
 const_scs_divider_non_inclusion
 <- sc_node_not_relation;
@@ -112,15 +119,18 @@ const_scs_divider_non_inclusion
 			(*
 				-> rrel_example:
 					"file://html/expl_const_non_inclusion.html"
-					(* <- lang_ru;; *);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 			*);;
 	*);
 -> rrel_example:
-	"file://html/example_const_non_inclusion1.html";
-	"file://html/example_const_non_inclusion2.html";
+	"file://html/example_const_non_inclusion1.html" (* => nrel_format: format_html;; *);
+	"file://html/example_const_non_inclusion2.html" (* => nrel_format: format_html;; *);
 => nrel_scs_editor_representation:
-	"file://img/const_non_inclusion_scs_editor1.png";
-	"file://img/const_non_inclusion_scs_editor2.png";;
+	"file://img/const_non_inclusion_scs_editor1.png" (* => nrel_format: format_png;; *);
+	"file://img/const_non_inclusion_scs_editor2.png" (* => nrel_format: format_png;; *);;
 
 var_scs_divider_non_inclusion
 <- sc_node_not_relation;
@@ -138,20 +148,24 @@ var_scs_divider_non_inclusion
 			(*
 				-> rrel_example:
 					"file://html/expl_var_non_inclusion.html"
-					(* <- lang_ru;; *);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 			*);;
 	*);
 -> rrel_example:
 	"file://html/example_var_non_inclusion.html"
 	(*
+		=> nrel_format: format_html;;
 		<=> nrel_semantic_equivalence:
-			"file://html/var_non_inclusion_equivalent_scs.html";;
+			"file://html/var_non_inclusion_equivalent_scs.html" (* => nrel_format: format_html;; *);;
 		<=> nrel_semantic_equivalence:
-			"file://img/var_non_inclusion_equivalent_scg.png";;
+			"file://img/var_non_inclusion_equivalent_scg.png" (* => nrel_format: format_png;; *);;
 	*);
 => nrel_scs_editor_representation:
-	"file://img/var_non_inclusion_scs_editor1.png";
-	"file://img/var_non_inclusion_scs_editor2.png";;
+	"file://img/var_non_inclusion_scs_editor1.png" (* => nrel_format: format_png;; *);
+	"file://img/var_non_inclusion_scs_editor2.png" (* => nrel_format: format_png;; *);;
 
 const_scs_divider_intersected_pair
 <- sc_node_not_relation;
@@ -169,14 +183,17 @@ const_scs_divider_intersected_pair
 			(*
 				-> rrel_example:
 					"file://html/expl_const_intersect.html"
-					(* <- lang_ru;; *);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 			*);;
 	*);
 -> rrel_example:
-	"file://html/example_const_intersect1.html";
-	"file://html/example_const_intersect2.html";
+	"file://html/example_const_intersect1.html" (* => nrel_format: format_html;; *);
+	"file://html/example_const_intersect2.html" (* => nrel_format: format_html;; *);
 => nrel_scs_editor_representation:
-	"file://img/const_intersect_scs_editor.png";;
+	"file://img/const_intersect_scs_editor.png" (* => nrel_format: format_png;; *);;
 
 var_scs_divider_intersected_pair
 <- sc_node_not_relation;
@@ -194,19 +211,23 @@ var_scs_divider_intersected_pair
 			(*
 				-> rrel_example:
 					"file://html/expl_var_intersect.html"
-					(* <- lang_ru;; *);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 			*);;
 	*);
 -> rrel_example:
 	"file://html/example_var_intersect.html"
 	(*
+		=> nrel_format: format_html;;
 		<=> nrel_semantic_equivalence:
-			"file://html/var_intersect_equivalent_scs.html";;
+			"file://html/var_intersect_equivalent_scs.html" (* => nrel_format: format_html;; *);;
 		<=> nrel_semantic_equivalence:
-			"file://img/var_intersect_equivalent_scg.png";;
+			"file://img/var_intersect_equivalent_scg.png" (* => nrel_format: format_png;; *);;
 	*);
 => nrel_scs_editor_representation:
-	"file://img/var_intersect_scs_editor.png";;
+	"file://img/var_intersect_scs_editor.png" (* => nrel_format: format_png;; *);;
 
 const_scs_divider_non_intersected_pair
 <- sc_node_not_relation;
@@ -224,14 +245,17 @@ const_scs_divider_non_intersected_pair
 			(*
 				-> rrel_example:
 					"file://html/expl_const_non_intersect.html"
-					(* <- lang_ru;; *);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 			*);;
 	*);
 -> rrel_example:
-	"file://html/example_const_non_intersect1.html";
-	"file://html/example_const_non_intersect2.html";
+	"file://html/example_const_non_intersect1.html" (* => nrel_format: format_html;; *);
+	"file://html/example_const_non_intersect2.html" (* => nrel_format: format_html;; *);
 => nrel_scs_editor_representation:
-	"file://img/const_non_intersect_scs_editor.png";;
+	"file://img/const_non_intersect_scs_editor.png" (* => nrel_format: format_png;; *);;
 
 var_scs_divider_non_intersected_pair
 <- sc_node_not_relation;
@@ -249,19 +273,23 @@ var_scs_divider_non_intersected_pair
 			(*
 				-> rrel_example:
 					"file://html/expl_var_non_intersect.html"
-					(* <- lang_ru;; *);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 			*);;
 	*);
 -> rrel_example:
 	"file://html/example_var_non_intersect.html"
 	(*
+		=> nrel_format: format_html;;
 		<=> nrel_semantic_equivalence:
-			"file://html/var_non_intersect_equivalent_scs.html";;
+			"file://html/var_non_intersect_equivalent_scs.html" (* => nrel_format: format_html;; *);;
 		<=> nrel_semantic_equivalence:
-			"file://img/var_non_intersect_equivalent_scg.png";;
+			"file://img/var_non_intersect_equivalent_scg.png" (* => nrel_format: format_png;; *);;
 	*);
 => nrel_scs_editor_representation:
-	"file://img/var_non_intersect_scs_editor.png";;
+	"file://img/var_non_intersect_scs_editor.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_identifier
 <- sc_node_not_relation;
@@ -279,7 +307,10 @@ scs_divider_identifier
 			(*
 				-> rrel_example:
 					"file://html/expl_identifier1.html"
-					(* <- lang_ru;; *);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 			*);;
 	*);
 <- rrel_key_sc_element:
@@ -291,14 +322,17 @@ scs_divider_identifier
 			(*
 				-> rrel_example:
 					"file://html/expl_identifier2.html"
-					(* <- lang_ru;; *);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 			*);;
 	*);
 -> rrel_example:
-	"file://html/example_identifier.html";
+	"file://html/example_identifier.html" (* => nrel_format: format_html;; *);
 => nrel_scs_editor_representation:
-	"file://img/identifier_scs_editor1.png";
-	"file://img/identifier_scs_editor2.png";;
+	"file://img/identifier_scs_editor1.png" (* => nrel_format: format_png;; *);
+	"file://img/identifier_scs_editor2.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_semantically_equal_files
 <- sc_node_not_relation;
@@ -316,7 +350,10 @@ scs_divider_semantically_equal_files
 			(*
 				-> rrel_example:
 					"file://html/expl_equal_files1.html"
-					(* <- lang_ru;; *);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 			*);;
 	*);
 <- rrel_key_sc_element:
@@ -328,13 +365,16 @@ scs_divider_semantically_equal_files
 			(*
 				-> rrel_example:
 					"file://html/expl_equal_files2.html"
-					(* <- lang_ru;; *);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 			*);;
 	*);
 -> rrel_example:
-	"file://html/example_equal_files.html";
+	"file://html/example_equal_files.html" (* => nrel_format: format_html;; *);
 => nrel_scs_editor_representation:
-	"file://img/equal_files_scs_editor.png";;
+	"file://img/equal_files_scs_editor.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_semantically_non_equal_files
 <- sc_node_not_relation;
@@ -352,7 +392,10 @@ scs_divider_semantically_non_equal_files
 			(*
 				-> rrel_example:
 					"file://html/expl_non_equal_files1.html"
-					(* <- lang_ru;; *);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 			*);;
 	*);
 <- rrel_key_sc_element:
@@ -364,11 +407,14 @@ scs_divider_semantically_non_equal_files
 			(*
 				-> rrel_example:
 					"file://html/expl_non_equal_files2.html"
-					(* <- lang_ru;; *);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 			*);;
 	*);
 -> rrel_example:
-	"file://html/example_non_equal_files.html";;
+	"file://html/example_non_equal_files.html" (* => nrel_format: format_html;; *);;
 
 scs_divider_translation
 <- sc_node_not_relation;
@@ -386,7 +432,10 @@ scs_divider_translation
 			(*
 				-> rrel_example:
 					"file://html/expl_translation1.html"
-					(* <- lang_ru;; *);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 			*);;
 	*);
 <- rrel_key_sc_element:
@@ -398,14 +447,17 @@ scs_divider_translation
 			(*
 				-> rrel_example:
 					"file://html/expl_translation2.html"
-					(* <- lang_ru;; *);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 			*);;
 	*);
 -> rrel_example:
-	"file://html/example_translation.html";
+	"file://html/example_translation.html" (* => nrel_format: format_html;; *);
 => nrel_scs_editor_representation:
-	"file://img/translation_scs_editor1.png";
-	"file://img/translation_scs_editor2.png";;
+	"file://img/translation_scs_editor1.png" (* => nrel_format: format_png;; *);
+	"file://img/translation_scs_editor2.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_semantic_inclusion
 <- sc_node_not_relation;
@@ -423,7 +475,10 @@ scs_divider_semantic_inclusion
 			(*
 				-> rrel_example:
 					"file://html/expl_semantic_inclusion1.html"
-					(* <- lang_ru;; *);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 			*);;
 	*);
 <- rrel_key_sc_element:
@@ -435,14 +490,17 @@ scs_divider_semantic_inclusion
 			(*
 				-> rrel_example:
 					"file://html/expl_semantic_inclusion2.html"
-					(* <- lang_ru;; *);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 			*);;
 	*);
 -> rrel_example:
-	"file://html/example_semantic_inclusion.html";
+	"file://html/example_semantic_inclusion.html" (* => nrel_format: format_html;; *);
 => nrel_scs_editor_representation:
-	"file://img/semantic_inclusion_scs_editor1.png";
-	"file://img/semantic_inclusion_scs_editor2.png";;
+	"file://img/semantic_inclusion_scs_editor1.png" (* => nrel_format: format_png;; *);
+	"file://img/semantic_inclusion_scs_editor2.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_equality
 <- sc_node_not_relation;
@@ -460,13 +518,16 @@ scs_divider_equality
 			(*
 				-> rrel_example:
 					"file://html/expl_equality.html"
-					(* <- lang_ru;; *);;
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
 			*);;
 	*);
 -> rrel_example:
-	"file://html/example_equality.html";
+	"file://html/example_equality.html" (* => nrel_format: format_html;; *);
 => nrel_scs_editor_representation:
-	"file://img/equality_scs_editor.png";;
+	"file://img/equality_scs_editor.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_non_equality
 <- sc_node_not_relation;
@@ -486,6 +547,7 @@ scs_divider_non_equality
 					"file://html/expl_non_equality.html"
 					(* 
 						<- lang_ru;;
+						=> nrel_format: format_html;;
 						=> nrel_comment:
 							...
 							(*
@@ -494,13 +556,16 @@ scs_divider_non_equality
 									(*
 										-> rrel_example:
 											"file://html/comment_non_equality.html"
-											(* <- lang_ru;; *);;
+											(*
+											<- lang_ru;;
+											=> nrel_format: format_html;;
+											*);;
 									*);;
 							*);;
 					*);;
 			*);;
 	*);
 -> rrel_example:
-	"file://html/example_non_equality.html";
+	"file://html/example_non_equality.html" (* => nrel_format: format_html;; *);
 => nrel_scs_editor_representation:
-	"file://img/non_equality_scs_editor.png";;
+	"file://img/non_equality_scs_editor.png" (* => nrel_format: format_png;; *);;

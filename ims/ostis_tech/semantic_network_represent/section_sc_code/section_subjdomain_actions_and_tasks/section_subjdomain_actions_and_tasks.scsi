@@ -102,7 +102,11 @@ non_atomic_action_class
 		...
 		(*
 			-> rrel_example:
-				"file://content_html/explanation_for_non_atomic_action_class.html" (* <- lang_ru;;	*);;
+				"file://content_html/explanation_for_non_atomic_action_class.html"
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;
 
@@ -122,7 +126,11 @@ atomic_action_class
 		...
 		(*
 			-> rrel_example:
-				"file://content_html/explanation_for_atomic_action_class.html" (* <- lang_ru;;	*);;
+				"file://content_html/explanation_for_atomic_action_class.html"
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;
 
@@ -215,7 +223,10 @@ question
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_action.html"
-			(* <- lang_ru;;	*);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);
 	
@@ -228,7 +239,10 @@ question
 		(*
 		-> rrel_example:
 				"file://content_html/identify_instances_rule_for_action.html"
-			(* <- lang_ru;;	*);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;	
 
@@ -251,7 +265,10 @@ information_action
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_information_action.html"
-			(* <- lang_ru;;	*);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;
 	
@@ -273,7 +290,10 @@ behavioral_action
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_behavioral_action.html"
-			(* <- lang_ru;;	*);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;
 	
@@ -349,7 +369,10 @@ question_initiated
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_question_initiated.html"
-			(* <- lang_ru;; *);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;
 	
@@ -382,7 +405,10 @@ performed_action
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_performed_action.html"
-			(* <- lang_ru;; *);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;	
 
@@ -404,7 +430,10 @@ active_action
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_active_action.html"
-			(* <- lang_ru;; *);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;		
 
@@ -432,7 +461,10 @@ deferred_action
 		(*
 			-> rrel_example:
 				"file://content_html/explanation_for_deferred_action.html"
-			(* <- lang_ru;;	*);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;		
 
@@ -458,7 +490,10 @@ planned_action
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_planned_action.html"
-			(* <- lang_ru;;	*);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;
 
@@ -495,7 +530,10 @@ question_finished
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_question_finished.html"
-			(* <- lang_ru;;	*);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;	
 
@@ -517,7 +555,10 @@ question_finished_successfully
 		(*
 			-> rrel_example:
 				"file://content_html/explanation_for_question_finished_successfully.html"
-			(* <- lang_ru;; *);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;		
 	
@@ -539,7 +580,10 @@ question_finished_unsuccessfully
 		(*
 			-> rrel_example:
 				"file://content_html/explanation_for_question_finished_unsuccessfully.html"
-			(* <- lang_ru;;	*);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);
 => nrel_inclusion: question_finished_with_error;;
@@ -560,7 +604,10 @@ question_finished_with_error
 		(*
 			-> rrel_example:
 				"file://content_html/explanation_for_question_finished_with_error.html"
-			(* <- lang_ru;; *);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;
 	
@@ -587,7 +634,10 @@ priority_actions
 		(*
 			-> rrel_example:
 				"file://content_html/explanation_for_priority_actions.html"
-			(* <- lang_ru;;	*);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;			
 	
@@ -679,7 +729,10 @@ internal_subject_ostis_system
 		(*
 			-> rrel_example:
 				"file://content_html/explanation_for_internal_subject_ostis_system.html"
-			(* <- lang_ru;; *);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;	
 
@@ -701,7 +754,10 @@ external_subject_ostis_system_interaction
 		(*
 			-> rrel_example:
 				"file://content_html/explanation_for_external_subject_ostis_system_interaction.html"
-			(* <- lang_ru;; *);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;	
 
@@ -751,7 +807,10 @@ actions_class
 		(*
 			-> rrel_example:
 				"file://content_html/identify_instances_rule_for_actions_class.html"
-			(* <- lang_ru;;	*);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;	
 	
@@ -771,7 +830,10 @@ independent_actions_class
 		(*
 			-> rrel_example:
 				"file://content_html/expl_independent_actions_class.html"
-			(* <- lang_ru;;	*);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;
 
@@ -804,7 +866,10 @@ nrel_decomposition_of_action
 		(*
 			-> rrel_example:
 				"file://content_html/explanation_for_nrel_decomposition_of_action.html"
-			(* <- lang_ru;;	*);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);
 
@@ -835,7 +900,10 @@ nrel_private_action
 		(*
 			-> rrel_example:
 				"file://content_html/explanation_for_private_action.html"
-			(* <- lang_ru;;	*);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);
 
@@ -883,7 +951,10 @@ nrel_goto_new
 		(*
 			-> rrel_example:
 				"file://content_html/explanation_for_nrel_goto.html"
-			(* <- lang_ru;;	*);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);
 => nrel_inclusion:
@@ -909,7 +980,10 @@ nrel_goto
 		(*
 			-> rrel_example:
 				"file://content_html/old_explanation_for_nrel_goto.html"
-			(* <- lang_ru;;	*);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;
 
@@ -937,7 +1011,10 @@ nrel_conjunction_of_previous_actions
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_nrel_conjunction_of_previous_actions.html"
-			(* <- lang_ru;; *);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;
 
@@ -967,7 +1044,10 @@ nrel_condition_control
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_nrel_condition_control.html"
-			(* <- lang_ru;;	*);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;	
 	
@@ -995,7 +1075,10 @@ nrel_then
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_nrel_then.html"
-			(* <- lang_ru;;	*);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;
 	
@@ -1024,7 +1107,10 @@ nrel_else_new
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_nrel_else.html"
-			(* <- lang_ru;;	*);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;
 
@@ -1047,7 +1133,10 @@ nrel_else
 		(*
 		-> rrel_example:
 				"file://content_html/old_explanation_for_nrel_else.html"
-			(* <- lang_ru;;	*);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;
 
@@ -1071,7 +1160,10 @@ nrel_error
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_nrel_error.html"
-			(* <- lang_ru;; *);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;
 
@@ -1096,7 +1188,10 @@ nrel_result
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_nrel_result.html"
-			(* <- lang_ru;;	*);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;	
 	
@@ -1135,7 +1230,10 @@ task
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_task.html"
-			(* <- lang_ru;;	*);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);	
 	
@@ -1148,7 +1246,10 @@ task
 		(*
 		-> rrel_example:
 				"file://content_html/identify_instances_rule_for_task.html"
-			(* <- lang_ru;;	*);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);	
 	
@@ -1185,7 +1286,10 @@ procedural_formulation_of_task
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_procedural_formulation_of_task.html"
-			(* <- lang_ru;;	*);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;
 
@@ -1211,7 +1315,10 @@ declarative_formulation_of_task
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_declarative_formulation_of_task.html"
-			(* <- lang_ru;;	*);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;
 
@@ -1236,7 +1343,10 @@ class_of_tasks
 		(*
 		-> rrel_example:
 				"file://content_html/identify_instances_rule_for_class_of_tasks.html"
-			(* <- lang_ru;;	*);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;	
 
@@ -1276,7 +1386,10 @@ command
 		(*
 		-> rrel_example:
 				"file://content_html/identify_instances_rule_for_command.html"
-			(* <- lang_ru;;	*);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;	
 	
@@ -1313,7 +1426,10 @@ command_class
 		(*
 		-> rrel_example:
 				"file://content_html/identify_instances_rulen_for_command_class.html"
-			(* <- lang_ru;;	*);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);
 
@@ -1388,7 +1504,10 @@ atomic_command_class
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_atomic_command_class.html"
-			(* <- lang_ru;;	*);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;
 	
@@ -1409,7 +1528,10 @@ non_atomic_command_class
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_non_atomic_command_class.html"
-			(* <- lang_ru;;	*);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;
 
@@ -1436,7 +1558,10 @@ plan
 		(*
 			-> rrel_example:
 				"file://content_html/explanation_for_plan.html"
-			(* <- lang_ru;;	*);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;
 
@@ -1478,7 +1603,10 @@ program
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_program.html"
-			(* <- lang_ru;;	*);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;	
 
@@ -1507,7 +1635,10 @@ protocol
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_protocol.html"
-			(* <- lang_ru;;	*);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;	
 
@@ -1529,7 +1660,10 @@ decision
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_decision.html"
-			(* <- lang_ru;;	*);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;	
 
@@ -1550,7 +1684,10 @@ nrel_performer
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_nrel_performer.html"
-			(* <- lang_ru;;	*);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;	
 
@@ -1574,7 +1711,10 @@ nrel_executing_actions_class
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_nrel_executing_actions_class.html"
-			(* <- lang_ru;;	*);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;
 	
@@ -1595,7 +1735,10 @@ nrel_customer
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_nrel_customer.html"
-			(* <- lang_ru;;	*);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;		
 
@@ -1616,7 +1759,10 @@ nrel_initiator
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_nrel_initiator.html"
-			(* <- lang_ru;;	*);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;
 
@@ -1637,7 +1783,10 @@ nrel_object
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_nrel_object.html"
-			(* <- lang_ru;; *);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;		
 	
@@ -1670,7 +1819,10 @@ nrel_context_of_action
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_nrel_context_of_action.html"
-			(* <- lang_ru;;	*);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;
 
@@ -1691,7 +1843,10 @@ rrel_argument_of_action
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_rrel_argument_of_action.html"
-			(* <- lang_ru;;	*);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);
 
@@ -1751,7 +1906,10 @@ nrel_class_of_arguments
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_nrel_class_of_arguments.html"
-			(* <- lang_ru;;	*);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;
 	

@@ -50,7 +50,10 @@ sc_identifier
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_sc_identifier.html" 
-				(* <- lang_ru;; *);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);
 <= nrel_subdividing:
@@ -75,7 +78,10 @@ string_sc_identifier
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_string_sc_identifier.html" 
-				(* <- lang_ru;; *);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);
 <= nrel_subdividing:
@@ -100,7 +106,10 @@ non_string_sc_identifier
 		(*
 		-> rrel_example:
 				"file://content_html/note_for_non_string_sc_identifier.html" 
-				(* <- lang_ru;; *);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;
 
@@ -120,11 +129,14 @@ atomic_sc_identifier
 		(*
 		-> rrel_example:
 				"file://content_html/note_for_atomic_sc_identifier.html" 
-				(* <- lang_ru;; *);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);
 -> rrel_example:
-	"file://content_html/example_for_atomic_sc_identifier.html";;		
+	"file://content_html/example_for_atomic_sc_identifier.html" (* => nrel_format: format_html;; *);;
 
 non_atomic_sc_identifier
 <- sc_node_not_relation;
@@ -142,7 +154,10 @@ non_atomic_sc_identifier
 		(*
 		-> rrel_example:
 				"file://content_html/note_for_non_atomic_sc_identifier.html" 
-				(* <- lang_ru;; *);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);
 -> rrel_example:
@@ -157,9 +172,13 @@ non_atomic_sc_identifier
 			(*
 			-> rrel_example:
 				"file://content_html/comment_for_non_atomic_sc_identifier.html"
-				(* <- lang_ru;; *);; 
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 			*);;
 		*);;
+		=> nrel_format: format_html;;
 	*);
 => nrel_strict_inclusion: sc_identifier_contour;
 => nrel_strict_inclusion: sc_identifier_file;
@@ -176,7 +195,10 @@ sc_identifier_contour
 	(* <- lang_en;; *);
 => nrel_idtf:
 	"file://content_html/identifier_for_contour_sc_identifier.html" 
-	(* <- lang_ru;; *);
+	(*
+	<- lang_ru;;
+	=> nrel_format: format_html;;
+   	*);
 <- rrel_key_sc_element:
 	...
 	(*
@@ -186,7 +208,10 @@ sc_identifier_contour
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_contour_sc_identifier.html" 
-				(* <- lang_ru;; *);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;
 
@@ -199,7 +224,10 @@ sc_identifier_file
 	(* <- lang_en;; *);
 => nrel_idtf:
 	"file://content_html/identifier_for_file_sc_identifier.html" 
-	(* <- lang_ru;; *);
+	(*
+	<- lang_ru;;
+	=> nrel_format: format_html;;
+   	*);
 	[идентификатор-рамка]
 	(* <- lang_ru;; *);
 	[идентификатор-ссылка]
@@ -213,7 +241,10 @@ sc_identifier_file
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_file_sc_identifier.html" 
-				(* <- lang_ru;; *);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;
 
@@ -236,7 +267,10 @@ sc_identifier_set
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_set_sc_identifier.html" 
-				(* <- lang_ru;; *);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);
 <- rrel_key_sc_element:
@@ -247,8 +281,8 @@ sc_identifier_set
 		...
 		(*
 		-> rrel_example:
-				"file://content_img/typical_sc_neighborhood_for_sc_identifier_set1.png";
-				"file://content_img/typical_sc_neighborhood_for_sc_identifier_set2.png";;
+				"file://content_img/typical_sc_neighborhood_for_sc_identifier_set1.png" (* => nrel_format: format_png;; *);
+				"file://content_img/typical_sc_neighborhood_for_sc_identifier_set2.png" (* => nrel_format: format_png;; *);;
 		*);;
 	*);;
 
@@ -271,7 +305,10 @@ sc_identifier_tuple_set
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_tuple_set_sc_identifier.html" 
-				(* <- lang_ru;; *);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);
 <- rrel_key_sc_element:
@@ -282,7 +319,7 @@ sc_identifier_tuple_set
 		...
 		(*
 		-> rrel_example:
-				"file://content_img/typical_sc_neighborhood_for_sc_identifier_tuple_set.png";;
+				"file://content_img/typical_sc_neighborhood_for_sc_identifier_tuple_set.png" (* => nrel_format: format_png;; *);;
 		*);;
 	*);;
 
@@ -305,7 +342,10 @@ sc_identifier_operation
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_operation_sc_identifier.html" 
-				(* <- lang_ru;; *);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);
 <- rrel_key_sc_element:
@@ -316,7 +356,7 @@ sc_identifier_operation
 		...
 		(*
 		-> rrel_example:
-				"file://content_img/typical_sc_neighborhood_for_sc_identifier_operation_set.png";;
+				"file://content_img/typical_sc_neighborhood_for_sc_identifier_operation_set.png" (* => nrel_format: format_png;; *);;
 		*);;
 	*);;
 
@@ -352,7 +392,10 @@ nrel_idtf
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_nrel_idtf.html" 
-				(* <- lang_ru;; *);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;
 
@@ -387,7 +430,10 @@ nrel_main_idtf
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_main_idtf.html" 
-				(* <- lang_ru;; *);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;
 
@@ -422,7 +468,10 @@ nrel_system_identifier
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_nrel_system_idtf.html" 
-				(* <- lang_ru;; *);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;
 
@@ -443,7 +492,10 @@ system_sc_identifier
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_system_identifier.html" 
-				(* <- lang_ru;; *);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;
 
@@ -478,6 +530,9 @@ nrel_external_sc_identifiers_sequence
 		(*
 		-> rrel_example:
 				"file://content_html/explanation_for_external_sc_identifiers_sequence.html" 
-				(* <- lang_ru;; *);;
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+   				*);;
 		*);;
 	*);;

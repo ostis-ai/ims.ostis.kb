@@ -44,7 +44,12 @@ ui_user_command_class_noatom
 	...
 	(*
 	<= nrel_sc_text_translation:
-		... (* -> [^"file://contents/ui_user_command_class_noatom_init_seq_ru.html"] (* <- lang_ru;; *);; *);;
+		... (* -> [^"file://contents/ui_user_command_class_noatom_init_seq_ru.html"]
+				(* 
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+				*);; 
+			*);;
 	*);;
 
 
