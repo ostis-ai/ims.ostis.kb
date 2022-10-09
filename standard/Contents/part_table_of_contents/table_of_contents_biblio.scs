@@ -1,0 +1,19 @@
+ostis_bibliography
+<- sc_node_struct;
+=> nrel_main_idtf: [Библиография OSTIS] (* <- lang_ru;; *);
+=> nrel_child_section:
+    index_of_projects_close_to_the_ostis_project;
+    index_of_authors_of_works_close_to_the_ostis_project;
+    index_of_events_important_for_the_development_of_the_ostis_project;;
+
+index_of_projects_close_to_the_ostis_project
+<- sc_node_struct;
+=> nrel_main_idtf: [Указатель проектов, близких Проекту OSTIS] (* <- lang_ru;; *);;
+
+index_of_authors_of_works_close_to_the_ostis_project
+<- sc_node_struct;
+=> nrel_main_idtf: [Указатель авторов работ, близких Проекту OSTIS] (* <- lang_ru;; *);;
+
+index_of_events_important_for_the_development_of_the_ostis_project
+<- sc_node_struct;
+=> nrel_main_idtf: [Указатель событий, важных для развития Проекта OSTIS] (* <- lang_ru;; *);;

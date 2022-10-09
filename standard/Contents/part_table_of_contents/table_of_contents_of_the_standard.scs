@@ -1,0 +1,202 @@
+table_of_contents_of_the_OSTIS_Standard
+<- sc_node_struct;
+=> nrel_main_idtf: [Оглавление Стандарта OSTIS] (* <- lang_ru;; *);
+=> nrel_idtf: [Оглавление текущей версии Стандарта OSTIS] (* <- lang_ru;; *);
+=> nrel_explanation: [<p>Иерархический перечень разделов, входящих в состав <i>Стандарта OSTIS</i>, с дополнительной спецификацией некоторых разделов, указывающей альтернативные названия разделов, а также их авторов и редакторов</p>] 
+    (*
+		<- lang_ru;;
+		=> nrel_format: format_html;;
+        => nrel_note: [<p>Существенно подчеркнуть, что иерархия разделов <i>Стандарта OSTIS</i> как и <i>разделов</i> любой другой <i>базы знаний</i> не означает то, что <i>разделы</i> более низкого уровня иерархии входят в состав (являются
+частями) соответствующих разделов более высокого уровня. Связь между <i>разделами</i> разных уровней иерархии означает то, что <i>раздел</i> более низкого уровня иерархии является <i>дочерним</i> разделом по
+отношению к соответствующему <i>разделу</i> более высокого уровня, т.е. <i>разделом</i>, который наследует свойства указанного <i>раздела</i> более высокого уровня.</p>] (* <- lang_ru;; => nrel_format: format_html;; *);;
+    *);
+=> nrel_note: [<p>Описание логико-семантических связей каждого раздела <i>Стандарта OSTIS</i> с другими разделами <i>Стандарта OSTIS</i> приводится в рамках <i>титульной спецификации каждого раздела</i>.</p>] (* <- lang_ru;; => nrel_format: format_html;; *);
+=> nrel_note: [<p>Названия тех <i>разделов</i>, которые планируется написать в последующих изданиях <i>Стандарта OSTIS</i> или
+<i>разделов</i>, которые <u>в данном</u> издании <i>Стандарта OSTIS</i> не печатаются, поскольку содержание их не
+изменилось по сравнению с предыдущим <u>явно указываемым</u> изданием <i>Стандарта OSTIS</i>, выделяются
+также <u>жирным курсивом</u>, но для них страницы в рамках данного издания <i>Стандарта OSTIS</i> не указываются</p>] (* <- lang_ru;; => nrel_format: format_html;; *);;
+
+table_of_contents_of_the_OSTIS_Standard = [*
+	...
+	-> preface_to_the_first_edition_of_the_OSTIS_Standard;
+	-> preface_to_the_second_edition_of_the_OSTIS_Standard;
+	-> table_of_contents_of_the_OSTIS_Standard;
+	-> title_specification_of_the_OSTIS_Standard;
+	-> introduction_to_ICS_of_the_new_generation;
+	-> sd_and_ontology_of_cybernetic_systems;
+	-> sd_and_ontology_of_multi_agent_systems;
+	-> sd_and_ontology_of_computer_systems;
+	-> sd_and_ontology_of_ICS_of_the_new_generation;
+	-> sd_and_ontology_of_semantic_representation_of_information;
+	-> sd_and_ontology_of_multi_agent_models_of_ps_based_on_semantic_representation_of_information;
+	-> sd_and_ontology_of_ontological_models_of_interfaces_of_ICS_based_on_semantic_representation_of_information;
+	-> sd_and_ontology_of_integrated_technology_for_life_cycle_support_of_ICS_of_new_generation;
+	-> semantic_representation_and_ontological_systematization_of_knowledge_in_ICS_of_new_generation;
+	-> sd_and_ontology_of_information_structures_and_languages;
+	-> sd_and_ontology_of_the_internal_language_of_ostis_systems;
+	-> sd_and_syntax_ontology_of_the_internal_language_of_ostis_systems;
+	-> sd_and_ontology_of_the_basic_denotational_semantics_of_the_internal_language_of_ostis_systems;
+	-> sd_and_ontology_of_external_identifiers_of_signs_included_in_the_information_constructions_of_the_internal_language_of_ostis_systems;
+	-> sd_and_ontology_of_the_language_of_external_graphical_representation_of_information_structures_of_the_internal_language_of_ostis_systems;
+	-> sd_and_ontology_of_the_syntax_of_the_language_of_the_external_graphical_representation_of_information_structures_of_the_internal_language_ostis_systems;
+	-> sd_and_ontology_of_denotational_semantics_of_the_language_of_external_graphical_representation_of_information_structures_of_the_internal_language_of_ostis_systems;
+	-> sd_and_ontology_of_a_hierarchical_family_of_sublanguages_semantically_equivalent_to_the_language_of_the_external_graphical_representation_of_information_structures;
+	-> sd_and_ontology_of_the_language_of_external_linear_representation_of_information_structures_of_the_internal_language_of_ostis_systems;
+	-> sd_and_ontology_of_the_syntax_of_language_of_external_linear_representation_of_information_structures_of_the_internal_language_of_ostis_systems;
+	-> sd_and_ontology_of_denotational_semantics_of_the_language_of_external_linear_representation_of_information_structures_of_the_internal_language_of_ostis_systems;
+	-> sd_and_ontology_of_a_hierarchical_family_of_sublanguages_semantically_equivalent_to_the_language_of_the_external_linear_representation_of_information_structures;
+	-> sd_and_ontology_of_the_language_of_the_external_formatted_representation_of_information_structures_of_the_internal_language_of_ostis_systems;
+	-> sd_and_ontology_of_the_syntax_of_the_language_of_the_external_formalized_representation_of_information_structures_of_the_internal_ostis_systems_language;
+	-> sd_and_ontology_of_denotational_semantics_of_the_language_of_externally_formatted_representation_of_information_structures_of_the_internal_language_of_ostis_systems;
+	-> sd_and_ontology_of_a_hierarchical_family_of_sublanguages_semantically_equivalent_to_the_language_of_the_external_formatted_representation_of_information_structures_of_the_internal_language_of_ostis_systems;
+	-> sd_and_ontology_of_knowledge_and_knowledge_bases_of_ostis_systems;
+	-> sd_and_ontology_of_sets;
+	-> sd_and_ontology_of_connectives_and_relations;
+	-> sd_and_ontology_of_parameters_quantities_and_scales;
+	-> sd_and_ontology_of_numbers_and_numerical_structures;
+	-> sd_and_ontology_of_structures;
+	-> sd_and_ontology_of_temporal_entities;
+	-> sd_and_ontology_of_situations_and_events_describing_the_dynamics_of_knowledge_bases_of_ostis_systems;
+	-> sd_and_ontology_of_spatial_entities_of_various_forms;
+	-> sd_and_ontology_of_material_entities;
+	-> sd_and_ontology_of_semantic_neighborhoods;
+	-> sd_and_ontology_of_sd;
+	-> sd_and_ontology_ontology;
+	-> sd_and_ontology_of_logical_formulas_statements_and_logical_sc_languages;
+	-> sd_and_ontology_of_files_external_information_constructions_and_external_languages_of_ostis_systems;
+	-> sd_and_ontology_of_natural_languages;
+	-> sd_and_ontology_of_the_syntax_of_natural_languages;
+	-> sd_and_ontology_of_denotational_semantics_of_natural_languages;
+	-> global_sd_and_ontology_describing_impacts_actions_methods_tools_and_technologies;
+	-> sd_and_ontology_of_local_subject_areas_and_ontologies_of_actions;
+	-> sd_and_ontology_of_actions_for_managing_the_activity_of_multi_agent_systems;
+	-> multi_agent_problem_solvers_ICS_of_the_new_generation;
+	-> sd_and_ontology_of_problem_solvers_of_ostis_systems;
+	-> sd_and_ontology_of_actions_tasks_plans_protocols_and_locations_implemented_by_the_ostis_system;
+	-> sd_and_ontology_of_the_ostis_systems_basic_programming_language;
+	-> sd_and_syntax_ontology_of_the_basic_programming_language_of_ostis_systems;
+	-> sd_and_ontology_of_denotational_semantics_of_the_basic_programming_language_ostis_systems;
+	-> sd_and_ontology_of_the_operational_semantics_of_the_basic_programming_language_of_ostis_systems;
+	-> sd_and_ontology_of_programs_and_programming_languages_for_ostis_systems;
+	-> sd_and_ontology_of_interpretation_of_modern_programming_languages_in_ostis_systems;
+	-> sd_and_ontology_of_the_sc_language_of_questions;
+	-> sd_and_syntax_ontology_of_the_sc_language_of_questions;
+	-> sd_and_ontology_of_denotational_semantics_of_the_sc_language_of_questions;
+	-> sd_and_ontology_of_the_operational_semantics_of_the_sc_language_of_questions;
+	-> sd_and_ontology_of_operational_semantics_of_logical_sc_languages;
+	-> sd_and_ontology_of_sc_production_programming_languages;
+	-> sd_and_syntax_ontology_of_sc_production_programming_languages;
+	-> sd_and_ontology_of_denotational_semantics_of_sc_production_programming_languages;
+	-> sd_and_ontology_of_operational_semantics_of_sc_production_programming_languages;
+	-> sd_and_ontology_of_sc_models_of_artificial_neural_networks;
+	-> sd_and_syntax_ontology_of_sc_models_of_artificial_neural_networks;
+	-> sd_and_ontology_of_denotational_semantics_of_sc_models_of_artificial_neural_networks;
+	-> sd_and_ontology_of_operational_semantics_of_sc_models_of_artificial_neural_networks;
+	-> ontological_models_of_interfaces_of_ICS_of_the_new_generation;
+	-> sd_and_ontology_of_ostis_system_interfaces;
+	-> sd_and_ontology_of_interface_actions_of_ostis_system_users;
+	-> sd_and_ontology_of_messages_entering_and_exiting_the_ostis_system;
+	-> sd_and_ontology_of_actions_and_internal_agents_of_the_ostis_system_user_interface;
+	-> sd_and_ontology_of_natural_language_interfaces_of_ostis_systems;
+	-> sd_and_ontology_of_syntactic_analysis_of_natural_language_messages_included_in_the_ostis_system;
+	-> sd_and_ontology_of_understanding_natural_language_interactions_included_in_the_ostis_system;
+	-> sd_and_ontology_of_synthesis_of_natural_language_expressions_of_the_ostis_system;
+	-> methods_and_means_of_designing_ICS_of_a_new_generation;
+	-> sd_and_ontology_of_a_complex_library_of_reusable_semantically_compatible_components_of_ostis_systems;
+	-> sd_and_ontology_of_reusable_components_of_knowledge_bases_of_ostis_systems;
+	-> sd_and_ontology_of_reusable_components_of_ostis_systems_problem_solvers;
+	-> sd_and_ontology_of_reusable_methods_stored_in_the_memory_of_ostis_systems_and_interpreted_by_their_internal_agents;
+	-> sd_and_ontology_of_reusable_internal_agents_of_ostis_systems;
+	-> sd_and_ontology_of_reusable_components_of_ostis_systems_interfaces;
+	-> sd_and_ontology_of_reusable_embedded_ostis_systems;
+	-> sd_and_ontology_of_actions_and_methods_of_designing_ostis_systems;
+	-> sd_and_ontology_of_actions_and_methods_of_designing_kb_of_ostis_systems;
+	-> sd_and_ontology_of_actions_and_methods_of_designing_interfaces_of_ostis_systems;
+	-> sd_and_ontology_of_actions_and_methods_of_teaching_ostis_systems_design;
+	-> sd_and_ontology_of_ostis_systems_design_tools;
+	-> logical_semantic_model_of_the_integrated_ostis_systems_automation_complex_for_designing_kb_of_ostis_systems;
+	-> logical_semantic_model_of_ostis_system_of_editing_of_various_components_of_the_designed_kb_into_the_memory_of_ostis_system;
+	-> logical_semantic_model_of_the_ostis_editing_system_of_the_designed_kb_of_the_ostis_system_at_the_level_of_its_internal_representation;
+	-> logical_semantic_model_of_ostis_system_for_detecting_and_analyzing_errors_and_contradictions_in_the_ostis_system_kb;
+	-> logical_semantic_model_of_ostis_system_for_detecting_and_analyzing_information_holes_in_the_ostis_system_kb;
+	-> logical_semantic_model_of_ostis_automation_system_for_managing_the_interaction_of_developers_of_various_categories_in_the_process_of_designing_the_ostis_system_kb;
+	-> logical_semantic_model_of_the_ostis_systems_automation_complex_for_designing_ostis_systems_problem_solvers;
+	-> logical_semantic_model_of_ostis_automation_systems_for_designing_programs_of_the_basic_programming_language_of_ostis_systems;
+	-> logical_semantic_model_of_ostis_system_for_automating_the_design_of_internal_agents_of_ostis_system;
+	-> logical_semantic_model_of_ostis_automation_systems_for_the_design_of_artificial_neural_networks_semantically_compatible_with_kb_of_ostis_systems;
+	-> logical_semantic_model_of_ostis_automation_systems_for_designing_interfaces_of_ostis_systems;
+	-> sd_and_ontology_of_ostis_systems_for_design_automation_of_various_classes_of_ostis_systems;
+	-> platforms_for_the_implementation_of_ICS_of_a_new_generation;
+	-> sd_and_ontology_of_methods_and_means_of_production_of_ostis_systems;
+	-> sd_and_ontology_of_basic_interpreters_of_logical_semantic_models_of_ostis_systems;
+	-> sd_and_ontology_of_associative_semantic_computers_for_ostis_systems;
+	-> sd_and_the_ontology_of_software_options_for_the_implementation_of_the_basic_interpreter_of_logical_and_semantic_models_of_ostis_systems_on_modern_computers;
+	-> methods_and_means_of_reengineering_and_operation_of_ICS_of_a_new_generation;
+	-> sd_and_ontology_of_life_cycle_support_methods_and_tools_ostis_systems;
+	-> sd_and_ontology_of_methods_and_means_of_reengineering_ostis_systems_during_operation;
+	-> sd_and_ontology_of_embedded_ostis_systems_to_support_the_use_of_ostis_systems_by_end_users;
+	-> ecosystem_of_INS_of_the_new_generation_and_their_users;
+	-> sd_and_ontology_of_the_ostis_ecosystem;
+	-> sd_and_ontology_of_automated_types_and_areas_of_human_activity;
+	-> sd_and_ontology_of_automation_technologies_of_various_types_and_areas_of_human_activity;
+	-> sd_and_ontology_of_computerization_technologies_of_various_types_and_areas_of_human_activity;
+	-> sd_and_ontology_of_activities_in_the_field_of_artificial_intelligence;
+	-> logical_semantic_model_of_integration_of_heterogeneous_information_resources_and_services_in_the_ostis_ecosystem_in_the_process_of_its_expansion;
+	-> sd_and_ontology_of_bibliographic_sources_and_other_information_resources;
+	-> sd_and_ontology_of_semantically_compatible_intellectual_ostis_portals_of_scientific_knowledge;
+	-> logical_semantic_model_of_the_ostis_metasystem;
+	-> sd_and_ontology_of_semantically_compatible_information_and_reference_ostis_systems_and_intelligent_help_systems;
+	-> sd_and_ontology_of_semantically_compatible_intelligent_corporate_ostis_systems_for_various_purposes;
+	-> sd_and_ontology_of_organizations;
+	-> sd_and_ontology_of_ostis_systems_which_are_personal_assistants_of_users;
+	-> sd_and_ontology_of_persons;
+	-> sd_and_ontology_of_semantically_compatible_ostis_systems_of_educational_activity_automation;
+	-> sd_and_ontology_of_didactic_knowledge;
+	-> sd_and_ontology_of_semantically_compatible_ostis_systems_for_design_automation_and_design_management_of_various_objects;
+	-> sd_and_ontology_of_semantically_compatible_ostis_systems_for_automation_of_production_activities;
+	-> sd_and_ontology_of_semantically_compatible_ostis_systems_of_prescription_production_management;
+	-> sd_and_ontology_of_geoinformation_ostis_systems;
+	-> sd_and_ontology_of_geographical_objects;
+	-> sd_and_ontology_of_information_security_tools_for_ostis_systems_within_the_ostis_ecosystem;
+	-> ostis_bibliography;
+	-> index_of_projects_close_to_the_ostis_project;
+	-> index_of_authors_of_works_close_to_the_ostis_project;
+	-> index_of_events_important_for_the_development_of_the_ostis_project;;
+*];;
+
+
+rrel_key_sc_element -> (table_of_contents_of_the_OSTIS_Standard -> preface_to_the_first_edition_of_the_OSTIS_Standard)
+(*
+	=> nrel_key_sc_element_order: (table_of_contents_of_the_OSTIS_Standard -> preface_to_the_second_edition_of_the_OSTIS_Standard)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (table_of_contents_of_the_OSTIS_Standard -> title_specification_of_the_OSTIS_Standard)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (table_of_contents_of_the_OSTIS_Standard -> introduction_to_ICS_of_the_new_generation)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (table_of_contents_of_the_OSTIS_Standard -> semantic_representation_and_ontological_systematization_of_knowledge_in_ICS_of_new_generation)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (table_of_contents_of_the_OSTIS_Standard -> multi_agent_problem_solvers_ICS_of_the_new_generation)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (table_of_contents_of_the_OSTIS_Standard -> ontological_models_of_interfaces_of_ICS_of_the_new_generation)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (table_of_contents_of_the_OSTIS_Standard -> methods_and_means_of_designing_ICS_of_a_new_generation)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (table_of_contents_of_the_OSTIS_Standard -> platforms_for_the_implementation_of_ICS_of_a_new_generation)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (table_of_contents_of_the_OSTIS_Standard -> methods_and_means_of_reengineering_and_operation_of_ICS_of_a_new_generation)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (table_of_contents_of_the_OSTIS_Standard -> ecosystem_of_INS_of_the_new_generation_and_their_users)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (table_of_contents_of_the_OSTIS_Standard -> ostis_bibliography)
+	(* <- rrel_key_sc_element;; *);;
+*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;

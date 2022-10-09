@@ -1,0 +1,23 @@
+methods_and_means_of_reengineering_and_operation_of_ICS_of_a_new_generation
+<- sc_node_class;
+=> nrel_main_idtf: [Часть 7 Стандарта OSTIS. Методы и средства реинжиниринга и эксплуатации интеллектуальных компьютерных систем нового поколения] (* <- lang_ru;; *);;
+
+sd_and_ontology_of_life_cycle_support_methods_and_tools_ostis_systems
+<- methods_and_means_of_reengineering_and_operation_of_ICS_of_a_new_generation;
+<- sc_node_struct;
+=> nrel_main_idtf: [Предметная область и онтология методов и средств поддержки жизненного цикла ostis-систем] (* <- lang_ru;; *);
+=> nrel_child_section:
+    sd_and_ontology_of_methods_and_means_of_reengineering_ostis_systems_during_operation;
+    sd_and_ontology_of_embedded_ostis_systems_to_support_the_use_of_ostis_systems_by_end_users;;
+
+sd_and_ontology_of_methods_and_means_of_reengineering_ostis_systems_during_operation
+<- methods_and_means_of_reengineering_and_operation_of_ICS_of_a_new_generation;
+<- sc_node_struct;
+=> nrel_main_idtf: [Предметная область и онтология методов и средств реинжиниринга ostis-систем в ходе эксплуатации] (* <- lang_ru;; *);;
+
+sd_and_ontology_of_embedded_ostis_systems_to_support_the_use_of_ostis_systems_by_end_users
+<- methods_and_means_of_reengineering_and_operation_of_ICS_of_a_new_generation;
+<- sc_node_struct;
+=> nrel_main_idtf: [Предметная область и онтология встроенных ostis-систем поддержки использования ostis-систем конечными пользователями] (* <- lang_ru;; *);;
+
+rrel_key_sc_element -> (methods_and_means_of_reengineering_and_operation_of_ICS_of_a_new_generation -> sd_and_ontology_of_life_cycle_support_methods_and_tools_ostis_systems);;

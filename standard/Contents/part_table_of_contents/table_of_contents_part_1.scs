@@ -1,0 +1,78 @@
+preface_to_the_first_edition_of_the_OSTIS_Standard
+<- sc_node_struct;
+=> nrel_main_idtf: [Предисловие к первому изданию Стандарта OSTIS] (* <- lang_ru;; *);
+=> nrel_idtf: [Предисловие Стандарта OSTIS-2021] (* <- lang_ru;; *);;
+
+preface_to_the_second_edition_of_the_OSTIS_Standard
+<- sc_node_struct;
+=> nrel_main_idtf: [Предисловие ко второму изданию Стандарта OSTIS] (* <- lang_ru;; *);
+=> nrel_idtf: [Предисловие Стандарта OSTIS-2022] (* <- lang_ru;; *);;
+
+title_specification_of_the_OSTIS_Standard
+<- sc_node_struct;
+=> nrel_main_idtf: [Титульная спецификация Стандарта OSTIS] (* <- lang_ru;; *);;
+
+introduction_to_ICS_of_the_new_generation
+<- sc_node_class;
+=> nrel_main_idtf: [Часть 1 Стандарта OSTIS. Введение в интеллектуальные компьютерные системы нового поколения] (* <- lang_ru;; *);;
+
+sd_and_ontology_of_cybernetic_systems
+<- introduction_to_ICS_of_the_new_generation;
+<- sc_node_struct;
+=> nrel_main_idtf: [Предметная область и онтология кибернетических систем] (* <- lang_ru;; *);
+=> nrel_idtf: [<p>Характеристики (параметры и способности) <i>кибернетических систем</i>, определяющие их качество и, в частности, уровень их <i>интеллекта</i></p>] (* <- lang_ru;; => nrel_format: format_html;; *);
+=> nrel_child_section:
+    sd_and_ontology_of_multi_agent_systems;
+    sd_and_ontology_of_computer_systems;;
+
+sd_and_ontology_of_multi_agent_systems
+<- introduction_to_ICS_of_the_new_generation;
+<- sc_node_struct;
+=> nrel_main_idtf: [Предметная область и онтология многоагентных систем] (* <- lang_ru;; *);;
+
+sd_and_ontology_of_computer_systems
+<- introduction_to_ICS_of_the_new_generation;
+<- sc_node_struct;
+=> nrel_main_idtf: [Предметная область и онтология компьютерных систем] (* <- lang_ru;; *);
+=> nrel_idtf: [<p>История эволюции <i>компьютерных систем</i> и, в том числе, <i>интеллектуальных компьютерных систем</i>. Недостатки современных <i>компьютерных систем<i> и интеллектуальных
+<i>компьютерных систем</i></p>] (* <- lang_ru;; => nrel_format: format_html;; *);;
+
+sd_and_ontology_of_ICS_of_the_new_generation
+<- introduction_to_ICS_of_the_new_generation;
+<- sc_node_struct;
+=> nrel_main_idtf: [Предметная область и онтология интеллектуальных компьютерных систем нового поколения] (* <- lang_ru;; *);
+=> nrel_child_section:
+    sd_and_ontology_of_semantic_representation_of_information;
+    sd_and_ontology_of_multi_agent_models_of_ps_based_on_semantic_representation_of_information;
+    sd_and_ontology_of_ontological_models_of_interfaces_of_ICS_based_on_semantic_representation_of_information;;
+
+sd_and_ontology_of_semantic_representation_of_information
+<- introduction_to_ICS_of_the_new_generation;
+<- sc_node_struct;
+=> nrel_main_idtf: [Предметная область и онтология смыслового представления информации] (* <- lang_ru;; *);;
+
+sd_and_ontology_of_multi_agent_models_of_ps_based_on_semantic_representation_of_information
+<- introduction_to_ICS_of_the_new_generation;
+<- sc_node_struct;
+=> nrel_main_idtf: [Предметная область и онтология многоагентных моделей решателей задач, основанных на смысловом представлении информации] (* <- lang_ru;; *);;
+
+sd_and_ontology_of_ontological_models_of_interfaces_of_ICS_based_on_semantic_representation_of_information
+<- introduction_to_ICS_of_the_new_generation;
+<- sc_node_struct;
+=> nrel_main_idtf: [Предметная область и онтология онтологических моделей интерфейсов интеллектуальных компьютерных систем, основанных на смысловом представлении информации] (* <- lang_ru;; *);;
+
+sd_and_ontology_of_integrated_technology_for_life_cycle_support_of_ICS_of_new_generation
+<- introduction_to_ICS_of_the_new_generation;
+<- sc_node_struct;
+=> nrel_main_idtf: [Предметная область и онтология комплексной технологии поддержки жизненного цикла интеллектуальных компьютерных систем нового поколения] (* <- lang_ru;; *);
+=> nrel_idtf: [<p>Предметная область и онтология <i>Технологии OSTIS</i> – Open Semantic Technology for Intelligent Systems</p>] (* <- lang_ru;; => nrel_format: format_html;; *);
+=> nrel_idtf: [<p>Принципы, лежащие в основе <i>Технологии OSTIS</i></p>] (* <- lang_ru;; => nrel_format: format_html;; *);;
+
+rrel_key_sc_element -> (introduction_to_ICS_of_the_new_generation -> sd_and_ontology_of_cybernetic_systems)
+(*
+	=> nrel_key_sc_element_order: (introduction_to_ICS_of_the_new_generation -> sd_and_ontology_of_ICS_of_the_new_generation)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (introduction_to_ICS_of_the_new_generation -> sd_and_ontology_of_integrated_technology_for_life_cycle_support_of_ICS_of_new_generation)
+	(* <- rrel_key_sc_element;; *);;
+*);;*);;
