@@ -7,20 +7,10 @@ sd_and_ontology_of_ostis_system_interfaces
 <- sc_node_struct;
 => nrel_main_idtf: [Предметная область и онтология интерфейсов ostis-систем] (* <- lang_ru;; *);
 => nrel_child_section:
-    sd_and_ontology_of_interface_actions_of_ostis_system_users;
-    sd_and_ontology_of_messages_entering_and_exiting_the_ostis_system;
+    section_subjdomain_ostis_user_actions;
+    section_subjdomain_ostis_system_messages;
     sd_and_ontology_of_actions_and_internal_agents_of_the_ostis_system_user_interface;
     sd_and_ontology_of_natural_language_interfaces_of_ostis_systems;;
-
-sd_and_ontology_of_interface_actions_of_ostis_system_users
-<- ontological_models_of_interfaces_of_ICS_of_the_new_generation;
-<- sc_node_struct;
-=> nrel_main_idtf: [Предметная область и онтология интерфейсных действий пользователей ostis-системы] (* <- lang_ru;; *);;
-
-sd_and_ontology_of_messages_entering_and_exiting_the_ostis_system
-<- ontological_models_of_interfaces_of_ICS_of_the_new_generation;
-<- sc_node_struct;
-=> nrel_main_idtf: [Предметная область и онтология сообщений, входящих в ostis-систему и выходящих из неё] (* <- lang_ru;; *);;
 
 sd_and_ontology_of_actions_and_internal_agents_of_the_ostis_system_user_interface
 <- ontological_models_of_interfaces_of_ICS_of_the_new_generation;
