@@ -1,21 +1,21 @@
-.system_element_307
+.system_element_442
 => nrel_inclusion: [*
 	=> nrel_idtf: [<p>Предметная область и онтология платформ интерпретации sc-моделей компьютерных систем</p>]
 	(*
 		<- lang_ru;;
 		=> nrel_format: format_html;;
 	*);;
-	<- .system_element_308;;
-	=> .system_element_309: 
-		.system_element_310;
-		.system_element_311
+	<- .system_element_443;;
+	=> .system_element_47: 
+		.system_element_444;
+		.system_element_445
 	;;
 
-	.system_element_312
-	<- .system_element_4;
-	-> .system_element_6: .system_element_313;;
+	.system_element_446
+	<- .system_element_2;
+	-> .system_element_151: .system_element_447;;
 
-	.system_element_314
+	.system_element_448
 	=> nrel_idtf: [<p>формальная модель (формальное описание) функционирования кибернетической системы, состоящая из:
 
 	<ul>
@@ -29,7 +29,7 @@
 		<- lang_ru;;
 		=> nrel_format: format_html;;
 	*);
-	=> nrel_inclusion: .system_element_315
+	=> nrel_inclusion: .system_element_449
 	(*
 		=> nrel_idtf: [<p>логико-семантическая модель кибернетической системы, представленная в SC-коде</p>]
 		(*
@@ -43,15 +43,15 @@
 		*);;
 	*);;
 
-	.system_element_316
-	=> nrel_inclusion: .system_element_317
+	.system_element_450
+	=> nrel_inclusion: .system_element_451
 	(*
 		=> nrel_idtf: [<p>искусственная кибернетическая система</p>]
 		(*
 			<- lang_ru;;
 			=> nrel_format: format_html;;
 		*);;
-		=> nrel_inclusion: .system_element_318
+		=> nrel_inclusion: .system_element_58
 		(*
 			=> nrel_idtf: [<p>компьютерная система, построенная по технологии OSTIS на основе интерпретации спроектированной логико-семантическая sc-модель этой системы</p>]
 			(*
@@ -61,7 +61,7 @@
 		*);;
 	*);;
 
-	.system_element_319
+	.system_element_102
 	=> nrel_idtf: [<p>базовый интерпретатор логико-семантических моделей ostis-систем</p>]
 	(*
 		<- lang_ru;;
@@ -77,7 +77,7 @@
 		<- lang_ru;;
 		=> nrel_format: format_html;;
 	*);
-	=> .system_element_320: [<p>универсальный интерпретатор sc-моделей компьютерных систем</p>]
+	=> .system_element_76: [<p>универсальный интерпретатор sc-моделей компьютерных систем</p>]
 	(*
 		<- lang_ru;;
 		=> nrel_format: format_html;;
@@ -87,7 +87,7 @@
 		<- lang_ru;;
 		=> nrel_format: format_html;;
 	*);
-	<= nrel_inclusion: .system_element_321;
+	<= nrel_inclusion: .system_element_452;
 	=> nrel_idtf: [<p>встроенная пустая ostis-система</p>]
 	(*
 		<- lang_ru;;
@@ -108,7 +108,7 @@
 		<- lang_ru;;
 		=> nrel_format: format_html;;
 	*);
-	=> .system_element_322: [<p>
+	=> .system_element_453: [<p>
 		<li> средства, обеспечивающие взаимодействие <i>sc-агентов</i> над общей памятью (sc-памятью);
 		<li> базовые средства интерфейса для взаимодействия системы с внешним миром (пользователем или другими системами). Указанные средства включают в себя, как минимум, редактор, транслятор (в sc-память и из нее) и визуализатор для одного из базовых универсальных вариантов представления <i>SC-кода</i> (<i>SCg-код</i>, <i>SCs-код</i>, <i>SCn-код</i>), средства, позволяющие задавать системе вопросы из некоторого универсального класса (например, запрос семантической окрестности некоторого объекта);
 		<li> реализацию <i>Абстрактной scp-машины</i>, то есть интерпретатор <i>scp-программ</i> (программ Языка SCP).</li>
@@ -117,10 +117,10 @@
 		<- lang_ru;;
 		=> nrel_format: format_html;;
 	*);
-	=> nrel_inclusion: .system_element_5;
-	=> nrel_inclusion: .system_element_323;
+	=> nrel_inclusion: .system_element_150;
+	=> nrel_inclusion: .system_element_454;
 	=> nrel_subdividing: {
-		.system_element_324
+		.system_element_455
 		(*
 			=> nrel_idtf: [<p>вариант реализации платформы интерпретации sc-моделей компьютерных систем, рассчитанный на то, что с конкретной ostis-системой взаимодействует только один пользователь (владелец)</p>]
 			(*
@@ -133,7 +133,7 @@
 				=> nrel_format: format_html;;
 			*);;
 		*);
-		.system_element_32
+		.system_element_177
 		(*
 			=> nrel_idtf: [<p>вариант реализации платформы интерпретации sc-моделей компьютерных систем, рассчитанный на то, что с конкретной ostis-системой одновременно или в разное время могут взаимодействовать разные пользователи, в общем случае обладающие разными правами, сферами ответственности, уровнем опыта, и имеющие свою конфиденциальную часть хранимой в базе знаний информации</p>]
 			(*
@@ -143,9 +143,9 @@
 		*)
 	};;
 
-	.system_element_319
+	.system_element_102
 	=> nrel_subdividing: {
-		.system_element_5
+		.system_element_150
 		(*
 			=> nrel_idtf: [<p>программная платформа интерпретации sc-моделей ostis-систем</p>]
 			(*
@@ -158,7 +158,7 @@
 				=> nrel_format: format_html;;
 			*);;
 		*);
-		.system_element_323
+		.system_element_454
 		(*
 			=> nrel_idtf: [<p>аппаратная платформа интерпретации sc-моделей ostis-систем</p>]
 			(*
