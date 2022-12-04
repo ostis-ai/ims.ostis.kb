@@ -160,6 +160,27 @@ ui_control_change_window_size
 	*);;
 
 // ------------------------------------------------
+ui_control_collapse_sidebar
+=> nrel_main_idtf:
+	[Элемент управления состоянием боковой панели навигации] (* <- lang_ru;; *);
+	[Controlling element of sidebar state] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [Элемент управления, который позволяет скрыть или раскрыть боковую панель навигации] (* <- lang_ru;; *);; *);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [Control that allows to collapse or expand the sidebar] (* <- lang_en;; *);; *);;
+	*);;
+// ------------------------------------------------
 ui_control_print_window_content
 => nrel_main_idtf:
 	[Элемент управления вывода содержимого активного окна на печать] (* <- lang_ru;; *);
