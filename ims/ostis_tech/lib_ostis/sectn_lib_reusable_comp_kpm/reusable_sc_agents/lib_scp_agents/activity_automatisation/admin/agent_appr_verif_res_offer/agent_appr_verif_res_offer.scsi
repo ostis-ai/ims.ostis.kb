@@ -84,7 +84,7 @@ scp_program -> agent_approval_verification_result_of_offer
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
 			-> rrel_3: rrel_assign: rrel_scp_var: _user;;
 			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
-			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_authors;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_author;;
 
 			=> nrel_then: .agent_approval_verification_result_of_offer_operator_correct_user_checker;;
 			=> nrel_else: .agent_approval_verification_result_of_offer_operator_return;;
@@ -314,7 +314,7 @@ scp_program -> agent_approval_verification_result_of_offer
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
 			-> rrel_3: rrel_assign: rrel_scp_var: _author;;
 			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
-			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_authors;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_author;;
 
 			=> nrel_then: .agent_approval_verification_result_of_offer_operator1_gen_act_performer;;
 			=> nrel_else: .agent_approval_verification_result_of_offer_gen_question_finished_unsuccessfully;;

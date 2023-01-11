@@ -168,11 +168,48 @@ taxonomy_relation
 nrel_authors
 <- sc_node_norole_relation;
 => nrel_main_idtf:
-	[автор*]
+	[авторы*]
 	(* <- lang_ru;; *);
-	[author]
+	[authors*]
 	(* <- lang_en;; *);
 <- binary_relation;
+=> nrel_first_domain:
+    sc_node;
+=> nrel_second_domain:
+    ...
+    (*
+        <= nrel_boolean:
+            subject;;
+    *);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+				"file://content_html/explanation_for_authors.html"
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+				*);;
+		*);;
+	*);;
+
+
+nrel_author
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[автор*]
+	(* <- lang_ru;; *);
+	[author*]
+	(* <- lang_en;; *);
+<- binary_relation;
+=> nrel_first_domain:
+    sc_node;
+=> nrel_second_domain:
+    subject;
 <- rrel_key_sc_element:
 	...
 	(*

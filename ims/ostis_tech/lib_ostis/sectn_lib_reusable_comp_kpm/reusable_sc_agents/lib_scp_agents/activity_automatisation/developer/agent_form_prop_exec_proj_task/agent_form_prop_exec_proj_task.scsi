@@ -296,7 +296,7 @@ scp_program -> agent_formation_proposal_executor_of_project_task
 		  	-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
 		  	-> rrel_3: rrel_assign: rrel_scp_var: _quest_author;;
 			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
-			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_authors;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_author;;
 
 		  	=> nrel_then: .agent_of_formation_proposal_executor_of_project_task_operator1H2;;
 			=> nrel_else: .agent_of_formation_proposal_executor_of_project_task_operator4B;;
@@ -310,7 +310,7 @@ scp_program -> agent_formation_proposal_executor_of_project_task
 		  	-> rrel_2: rrel_assign: rrel_common: rrel_const: rrel_scp_var: _arc1;;
 		  	-> rrel_3: rrel_fixed: rrel_scp_var: _quest_author;;
 			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_const: rrel_scp_var: _arc2;;
-			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_authors;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_author;;
 
 		  	=> nrel_goto: .agent_of_formation_proposal_executor_of_project_task_operator_call_adding;;
 			*);;
@@ -517,7 +517,7 @@ scp_program -> agent_formation_proposal_executor_of_project_task
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
 			-> rrel_3: rrel_assign: rrel_scp_var: _proposer;;
 			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
-			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_authors;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_author;;
 
 			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_of_formation_proposal_executor_of_project_task;;
 			-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer_of_formation_proposal_executor_of_project_task;;
@@ -532,7 +532,7 @@ scp_program -> agent_formation_proposal_executor_of_project_task
 
 		  	-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_formation_proposal_executor_of_project_task;;
 		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-		  	-> rrel_3: rrel_fixed: rrel_scp_const: nrel_authors;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_const: nrel_author;;
 
 		  	=> nrel_goto: .agent_of_formation_proposal_executor_of_project_task_operator3H;;
 			*);;
