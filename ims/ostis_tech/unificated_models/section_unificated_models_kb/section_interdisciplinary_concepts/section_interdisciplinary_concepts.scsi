@@ -173,6 +173,14 @@ nrel_authors
 	[authors*]
 	(* <- lang_en;; *);
 <- binary_relation;
+=> nrel_first_domain:
+    sc_node;
+=> nrel_second_domain:
+    ...
+    (*
+        <= nrel_boolean:
+            subject;;
+    *);
 <- rrel_key_sc_element:
 	...
 	(*
@@ -198,6 +206,10 @@ nrel_author
 	[author*]
 	(* <- lang_en;; *);
 <- binary_relation;
+=> nrel_first_domain:
+    sc_node;
+=> nrel_second_domain:
+    subject;
 <- rrel_key_sc_element:
 	...
 	(*
