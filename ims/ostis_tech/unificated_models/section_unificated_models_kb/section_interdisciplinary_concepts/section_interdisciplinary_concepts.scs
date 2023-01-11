@@ -30,6 +30,9 @@ rrel_key_sc_element -> (section_interdisciplinary_concepts -> nrel_abstract_basi
 	=> nrel_key_sc_element_order: (section_interdisciplinary_concepts -> taxonomy_relation)
 (*
 	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_interdisciplinary_concepts -> nrel_author)
+(*
+	<- rrel_key_sc_element;;
 	=> nrel_key_sc_element_order: (section_interdisciplinary_concepts -> nrel_authors)
 (*
 	<- rrel_key_sc_element;;
@@ -41,4 +44,4 @@ rrel_key_sc_element -> (section_interdisciplinary_concepts -> nrel_abstract_basi
 	<- rrel_key_sc_element;;
 	=> nrel_key_sc_element_order: (section_interdisciplinary_concepts -> nrel_semantic_equivalence)
 	(* <- rrel_key_sc_element;; *);;
-*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;
+*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;
