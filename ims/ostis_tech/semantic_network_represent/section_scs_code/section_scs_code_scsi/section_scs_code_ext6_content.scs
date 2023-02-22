@@ -1,0 +1,81 @@
+section_scs_code_extension_6 =  [*
+scs_code_ext6
+<- sc_node_not_relation;
+=> nrel_main_idtf: 
+	[SCs-код. Расширение 6]
+	(* <- lang_ru;; *);
+	[SCs-code. Extension 6]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[sc.s-текст уровня 7]
+	(* <- lang_ru;; *);
+=> nrel_abstract_semantic_inclusion:
+	scs_sentence_7_level;
+
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+				-> rrel_example:
+					"file://scs_code_htmls/expl_scs_text_lvl7.html" 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
+			*);;
+                
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+		<- explanation;;
+		<= nrel_sc_text_translation:	
+			...
+			(*
+				-> rrel_example:
+					"file://scs_code_htmls/scs_code_ext6.html" 
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
+			*);;
+                
+	*);
+
+-> rrel_example:
+	"file://scs_code_htmls/example1_scs_txt_lvl7.html"
+	(*
+		=> nrel_format: format_html;;
+		<=> nrel_semantic_equivalence:
+			"file://images/equivalent_scg1_scs_txt_lvl7.png"
+			(*
+			<- scg_code;;
+			=> nrel_format: format_png;;
+			*);;
+										
+	*);
+	"file://scs_code_htmls/example2_scs_txt_lvl7.html"
+	(*
+		=> nrel_format: format_html;;
+		<=> nrel_semantic_equivalence:
+			"file://images/equivalent_scg2_scs_txt_lvl7.png"
+			(*
+			<- scg_code;;
+			=> nrel_format: format_png;;
+			*);;
+	*);
+	"file://scs_code_htmls/example3_scs_txt_lvl7.html"
+	(*
+		=> nrel_format: format_html;;
+		<=> nrel_semantic_equivalence:
+			"file://images/equivalent_scg3_scs_txt_lvl7.png"
+			(*
+			<- scg_code;;
+			=> nrel_format: format_png;;
+			*);;
+	*);;
+
+*];;

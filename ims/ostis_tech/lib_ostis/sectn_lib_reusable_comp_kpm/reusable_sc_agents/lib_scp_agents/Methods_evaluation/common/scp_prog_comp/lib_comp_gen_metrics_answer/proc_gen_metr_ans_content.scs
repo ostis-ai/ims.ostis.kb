@@ -1,0 +1,142 @@
+lib_component_proc_of_generation_of_metrics_answer =  [*
+scp_program -> proc_of_generation_of_metrics_answer
+	(*
+  	-> rrel_params: .proc_of_generation_of_metrics_answer_params 
+		(*
+		-> rrel_1: rrel_in: _quest;;
+		-> rrel_2: rrel_in: _action;;
+		-> rrel_3: rrel_in: _result_value;;
+    		*);;
+
+	-> rrel_operators: .proc_of_generation_of_metrics_answer_operator_set
+    		(*
+    		-> rrel_init: .proc_of_generation_of_metrics_answer_operator_F1
+			(*
+			<- genEl;;
+
+			-> rrel_1: rrel_assign: rrel_node: rrel_const: rrel_scp_var: ..answer_of_metrics_calculation;; 
+
+			=> nrel_goto: .proc_of_generation_of_metrics_answer_operator_F2;;
+			*);;
+
+		-> .proc_of_generation_of_metrics_answer_operator_F2
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: _quest;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _ontology;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: ..answer_of_metrics_calculation;;
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: ..answer_of_metrics_calculation;;
+
+			=> nrel_goto: .proc_of_generation_of_metrics_answer_operator_F3;;
+			*);;
+
+		-> .proc_of_generation_of_metrics_answer_operator_F3
+			(*
+		  	<- genElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: ..answer_of_metrics_calculation;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: rrel_const: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+
+		  	=> nrel_goto: .proc_of_generation_of_metrics_answer_operator_F4;;
+			*);;
+
+		-> .proc_of_generation_of_metrics_answer_operator_F4
+			(*
+			<- genElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_const: rrel_common: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _result_value;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_const: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_result;;
+
+			=> nrel_goto: .proc_of_generation_of_metrics_answer_operator_F5;;
+			*);;
+
+		-> .proc_of_generation_of_metrics_answer_operator_F5
+			(*
+			<- searchSetStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_const: rrel_common: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _result_value;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_const: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_result;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: ..answer_of_metrics_calculation;;
+			-> rrel_set_4: rrel_fixed: rrel_scp_var: ..answer_of_metrics_calculation;;
+
+			=> nrel_goto: .proc_of_generation_of_metrics_answer_operator_F6;;
+			*);;
+
+		-> .proc_of_generation_of_metrics_answer_operator_F6
+			(*
+		  	<- genElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: ..answer_of_metrics_calculation;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: rrel_const: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _result_value;;
+
+		  	=> nrel_goto: .proc_of_generation_of_metrics_answer_operator_F7;;
+			*);;
+
+		-> .proc_of_generation_of_metrics_answer_operator_F7
+			(*
+		  	<- genElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: ..answer_of_metrics_calculation;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: rrel_const: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_const: nrel_result;;
+
+		  	=> nrel_goto: .proc_of_generation_of_metrics_answer_operator_F8;;
+			*);;
+
+		-> .proc_of_generation_of_metrics_answer_operator_F8
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _action;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: ..answer_of_metrics_calculation;;
+
+			=> nrel_goto: .proc_of_generation_of_metrics_answer_operator_F9;;
+			*);;
+
+		-> .proc_of_generation_of_metrics_answer_operator_F9
+			(*
+		  	<- genElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: ..answer_of_metrics_calculation;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: rrel_const: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _action;;
+
+		  	=> nrel_goto: .proc_of_generation_of_metrics_answer_operator_gen_full_answer;;
+			*);;
+
+		-> .proc_of_generation_of_metrics_answer_operator_gen_full_answer
+			(*
+			<- genElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_const: rrel_common: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: ..answer_of_metrics_calculation;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_const: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_answer;;
+
+			=> nrel_goto: .proc_of_generation_of_metrics_answer_operator_return;;
+			*);;
+
+		-> .proc_of_generation_of_metrics_answer_operator_return 
+			(*
+			<- return;;
+			*);;
+		*);;
+	*);;
+
+*];;
