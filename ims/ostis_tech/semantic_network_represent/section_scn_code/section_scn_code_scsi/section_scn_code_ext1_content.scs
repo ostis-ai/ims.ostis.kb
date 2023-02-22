@@ -1,0 +1,39 @@
+section_scn_code_extension_1 =  [*
+scn_code_ext1 => nrel_main_idtf: 
+	[SCn-код. Расширение 1] (* <- lang_ru;; *);
+	[SCn-code. Extension 1] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	..scn_code_ext1_explanation
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://scn_code_htmls/scn_code_ext1_text1.html"
+				(*
+				<- lang_ru;;
+				=> nrel_format: format_html;;
+				*);;
+			*);;
+                <= nrel_sc_text_translation:	
+			...
+			(*
+			-> rrel_example:
+				"file://scn_code_htmls/scn_code_ext1_text1_en.html"
+				(*
+				<- lang_en;;
+				=> nrel_format: format_html;;
+				*);;
+			*);;
+		*);
+
+
+
+-> rrel_example:
+		"file://images/scn_text_example_2_1.png" (* => nrel_format: format_png;; *);
+-> rrel_example:
+		"file://images/scn_text_example_2_2.png" (* => nrel_format: format_png;; *);;
+
+*];;

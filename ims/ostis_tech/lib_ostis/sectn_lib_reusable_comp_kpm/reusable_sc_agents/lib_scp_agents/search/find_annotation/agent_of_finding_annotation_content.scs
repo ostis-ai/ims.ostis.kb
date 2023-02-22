@@ -1,0 +1,200 @@
+sc_text_of_agent_of_finding_axioms =  [*
+agent_of_finding_annotation
+=> nrel_main_idtf:
+	[агентная scp-программа поиска аннотации для заданного раздела] (* <- lang_ru;; *);
+	[agent scp-program of finding annotation for given section] (* <- lang_en;; *);
+
+<- agent_scp_program;;
+
+scp_program -> agent_of_finding_annotation 
+	(*
+	-> rrel_params: .agent_of_finding_annotation_params 
+		(*
+		-> rrel_1: rrel_in: _event;;
+		-> rrel_2: rrel_in: _input_arc;;
+		*);;
+
+	-> rrel_operators: .agent_of_finding_annotation_operator_set 
+		(*		
+		-> rrel_init: .agent_of_finding_annotation_operator1A 
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_assign: rrel_scp_var: _temp;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_var: _input_arc;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _quest;;
+
+		  	=> nrel_goto: .agent_of_finding_annotation_operator1B;;
+			*);;
+
+		-> .agent_of_finding_annotation_operator1B 
+			(*
+			<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: question_finding_annotation;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+
+		  	=> nrel_then: .agent_of_finding_annotation_operator1C;;
+		  	=> nrel_else: .agent_of_finding_annotation_operator_return;;
+			*);;
+
+		-> .agent_of_finding_annotation_operator1C 
+			(*
+		 	<- searchElStr3;;
+
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		 	-> rrel_3: rrel_assign: rrel_scp_var: _param;;	
+
+                 	=> nrel_then: .agent_of_finding_annotation_operator1D;;
+                 	=> nrel_else: .agent_of_finding_annotation_operator_return;;
+                 	*);;  
+
+		-> .agent_of_finding_annotation_operator1D 
+			(*
+			<- genEl;;
+
+		 	-> rrel_1: rrel_assign: rrel_const: rrel_node: rrel_scp_var: _answer_finding_annotation;;
+		 
+		 	=> nrel_goto: .agent_of_finding_annotation_operator2A1;;
+                 	*);;
+
+		-> .agent_of_finding_annotation_operator2A1
+			(*
+			<- genElStr3;;
+
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _answer_finding_annotation;;
+		 	-> rrel_2: rrel_assign: rrel_const: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		 	-> rrel_3: rrel_fixed: rrel_scp_var: _param;;	
+
+                 	=> nrel_goto: .agent_of_finding_annotation_operator2AA1;;
+			*);;
+
+
+		-> .agent_of_finding_annotation_operator2AA1
+			(*
+			<- searchSetStr3;;
+
+		 	-> rrel_1: rrel_fixed: rrel_scp_const: atomic_section;;
+		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		 	-> rrel_3: rrel_fixed: rrel_scp_var: _param;;	
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_finding_annotation;;
+
+                 	=> nrel_then: .agent_of_finding_annotation_operator2B1;;
+                 	=> nrel_else: .agent_of_finding_annotation_operator2A2;;
+			*);;
+
+		-> .agent_of_finding_annotation_operator2B1
+			(*
+			<- genElStr3;;
+
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _answer_finding_annotation;;
+		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		 	-> rrel_3: rrel_fixed: rrel_scp_const: atomic_section;;	
+
+                 	=> nrel_goto: .agent_of_finding_annotation_operator2C1;;
+			*);;
+
+		-> .agent_of_finding_annotation_operator2A2
+			(*
+			<- searchSetStr3;;
+
+		 	-> rrel_1: rrel_fixed: rrel_scp_const: non_atomic_section;;
+		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+		 	-> rrel_3: rrel_fixed: rrel_scp_var: _param;;	
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_finding_annotation;;
+
+                 	=> nrel_then: .agent_of_finding_annotation_operator2B2;;
+                 	=> nrel_else: .agent_of_finding_annotation_operator_return;;
+			*);;
+
+		-> .agent_of_finding_annotation_operator2B2
+			(*
+			<- genElStr3;;
+
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _answer_finding_annotation;;
+		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		 	-> rrel_3: rrel_fixed: rrel_scp_const: non_atomic_section;;	
+
+                 	=> nrel_goto: .agent_of_finding_annotation_operator2C1;;
+			*);;
+
+		
+		-> .agent_of_finding_annotation_operator2C1 
+			(*
+		 	<- searchSetStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _param;;
+		 	-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _summary;;
+                 	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		 	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_summary;;
+
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer_finding_annotation;;
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_finding_annotation;;
+			-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_finding_annotation;;
+
+                	=> nrel_then: .agent_of_finding_annotation_operator2C2;;
+		 	=> nrel_else: .agent_of_finding_annotation_operator_return;;
+                	*);;
+
+		-> .agent_of_finding_annotation_operator2C2
+			(*
+			<- genElStr3;;
+
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _answer_finding_annotation;;
+		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		 	-> rrel_3: rrel_fixed: rrel_scp_const: nrel_summary;;	
+
+                 	=> nrel_goto: .agent_of_finding_annotation_operator2D1;;
+			*);;
+
+		-> .agent_of_finding_annotation_operator2D1 
+			(*
+			<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_finding_translation;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .proc_finding_annotation_operator2D1_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _summary;;
+				-> rrel_2: rrel_fixed: rrel_scp_var: _answer_finding_annotation;;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .agent_of_finding_annotation_operator2D2;;
+			*);;
+
+		-> .agent_of_finding_annotation_operator2D2 
+			(*
+			<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .agent_of_finding_annotation_gen_answer_finding_annotation;;
+			*);;				
+
+		-> .agent_of_finding_annotation_gen_answer_finding_annotation 
+			(*
+		  	<- genElStr5;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+		  	-> rrel_2: rrel_assign: rrel_const: rrel_common: rrel_scp_var: _arc;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _answer_finding_annotation;;
+		  	-> rrel_4: rrel_assign: rrel_const: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		  	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_answer;;
+
+		  	=> nrel_goto: .agent_of_finding_annotation_operator_return;;
+			*);;
+	
+		-> .agent_of_finding_annotation_operator_return 
+			(*
+			<- return;;
+			*);;
+		*);;
+	*);;
+
+
+*];;

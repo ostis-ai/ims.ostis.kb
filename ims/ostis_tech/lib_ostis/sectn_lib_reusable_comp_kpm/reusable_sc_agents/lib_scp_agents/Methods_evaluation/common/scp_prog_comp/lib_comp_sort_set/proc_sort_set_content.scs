@@ -1,0 +1,360 @@
+lib_component_proc_of_sorting_set_of_values =  [*
+scp_program -> proc_of_sorting_set_of_values
+	(*
+  	-> rrel_params: .proc_of_sorting_set_of_values_params 
+		(*
+		-> rrel_1: rrel_in: _input_set;;
+    		*);;
+
+	-> rrel_operators: .proc_of_sorting_set_of_values_operator_set
+    		(*
+    		-> rrel_init: .proc_of_sorting_set_of_values_operator_add_all_elem_to_temp_set 
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _input_set;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _value;;
+
+			-> rrel_set_3: rrel_assign: rrel_scp_var: _all_values;;
+
+			=> nrel_then: .proc_of_sorting_set_of_values_operator_get_first_value;;
+			=> nrel_else: .proc_of_sorting_set_of_values_operator_return;;
+			*);;
+
+		-> .proc_of_sorting_set_of_values_operator_get_first_value
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _input_set;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _marked_arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _first_value;;
+
+			=> nrel_goto: .proc_of_sorting_set_of_values_operator_mark_as_first_elem;;
+			*);;	
+
+		-> .proc_of_sorting_set_of_values_operator_mark_as_first_elem
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: rrel_first;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _marked_arc;;
+
+			=> nrel_goto: .proc_of_sorting_set_of_values_operator_mark_as_last_elem;;
+			*);;		
+
+		-> .proc_of_sorting_set_of_values_operator_mark_as_last_elem
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: rrel_last;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _marked_arc;;
+
+			=> nrel_goto: .proc_of_sorting_set_of_values_operator_get_first_value_arc_of_temp_set;;
+			*);;
+
+		-> .proc_of_sorting_set_of_values_operator_get_first_value_arc_of_temp_set
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _all_values;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _first_value;;
+
+			=> nrel_goto: .proc_of_sorting_set_of_values_operator_first_value_arc_erase;;
+			*);;
+
+		-> .proc_of_sorting_set_of_values_operator_first_value_arc_erase
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _arc1;;
+
+			=> nrel_goto: .proc_of_sorting_set_of_values_operator_all_elements_loop_enter;;
+			*);;			
+
+		-> .proc_of_sorting_set_of_values_operator_all_elements_loop_enter
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _all_values;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _concrete_value;;
+
+			=> nrel_then: .proc_of_sorting_set_of_values_operator_loop_arc_erase;;
+			=> nrel_else: .proc_of_sorting_set_of_values_operator_erase_temp_set;;
+			*);;
+
+		-> .proc_of_sorting_set_of_values_operator_loop_arc_erase
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _arc1;;
+
+			=> nrel_goto: .proc_of_sorting_set_of_values_operator_get_last_list_element;;
+			*);;
+
+		-> .proc_of_sorting_set_of_values_operator_get_last_list_element
+			(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _input_set;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _larger_value;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _can_be_removed;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_last;;
+
+			=> nrel_goto: .proc_of_sorting_set_of_values_operator_is_new_value_more_than_last_elem;;
+			*);;	
+
+		-> .proc_of_sorting_set_of_values_operator_is_new_value_more_than_last_elem
+	    		(*
+			<- ifGr;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _concrete_value;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: _larger_value;;
+
+			=> nrel_then: .proc_of_sorting_set_of_values_assign_new_last_element_1;;
+			=> nrel_else: .proc_of_sorting_set_of_values_operator_is_less_than_last_1_get_lesser;;  
+			*);;	
+
+		-> .proc_of_sorting_set_of_values_assign_new_last_element_1
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _can_be_removed;;
+
+			=> nrel_goto: .proc_of_sorting_set_of_values_assign_new_last_element_2;;
+			*);;
+
+		-> .proc_of_sorting_set_of_values_assign_new_last_element_2
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _input_set;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _marked_arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _concrete_value;;
+
+			=> nrel_goto: .proc_of_sorting_set_of_values_assign_new_last_element_3;;
+			*);;	
+
+		-> .proc_of_sorting_set_of_values_assign_new_last_element_3
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: rrel_last;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _marked_arc;;
+
+			=> nrel_goto: .proc_of_sorting_set_of_values_assign_new_last_element_4;;
+			*);;		
+
+		-> .proc_of_sorting_set_of_values_assign_new_last_element_4
+			(*
+			<- genElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _larger_value;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _concrete_value;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_be_more;;
+
+			=> nrel_goto: .proc_of_sorting_set_of_values_operator_all_elements_loop_enter;;
+			*);;
+
+		-> .proc_of_sorting_set_of_values_operator_is_less_than_last_1_get_lesser
+			(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _lesser_value;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _larger_value;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_be_more;;
+
+			=> nrel_then: .proc_of_sorting_set_of_values_operator_add_to_middle_1;;
+			=> nrel_else: .proc_of_sorting_set_of_values_operator_change_first_value_1;;
+			*);;			
+
+		-> .proc_of_sorting_set_of_values_operator_change_first_value_1
+			(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _input_set;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _previous_first_elem;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc_to_remove;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_first;;
+
+			=> nrel_goto: .proc_of_sorting_set_of_values_operator_change_first_value_2;;
+			*);;	
+
+		-> .proc_of_sorting_set_of_values_operator_change_first_value_2
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _arc_to_remove;;
+
+			=> nrel_goto: .proc_of_sorting_set_of_values_operator_change_first_value_3;;
+			*);;	
+
+		-> .proc_of_sorting_set_of_values_operator_change_first_value_3
+			(*
+			<- genElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _concrete_value;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _previous_first_elem;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_be_more;;
+
+			=> nrel_goto: .proc_of_sorting_set_of_values_operator_change_first_value_4;;
+			*);;	
+
+		-> .proc_of_sorting_set_of_values_operator_change_first_value_4
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _input_set;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _marked_arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _concrete_value;;
+
+			=> nrel_goto: .proc_of_sorting_set_of_values_operator_change_first_value_5;;
+			*);;		
+
+		-> .proc_of_sorting_set_of_values_operator_change_first_value_5
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: rrel_first;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _marked_arc;;
+
+			=> nrel_goto: .proc_of_sorting_set_of_values_operator_all_elements_loop_enter;;
+			*);;	
+
+		-> .proc_of_sorting_set_of_values_operator_add_to_middle_1
+	    		(*
+			<- ifGr;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _lesser_value;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: _concrete_value;;
+
+			=> nrel_then: .proc_of_sorting_set_of_values_operator_add_to_middle_1_1;;
+			=> nrel_else: .proc_of_sorting_set_of_values_operator_add_to_middle_1_2;;  
+			*);;	
+
+		-> .proc_of_sorting_set_of_values_operator_add_to_middle_1_1
+			(*
+			<- varAssign;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _larger_value;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: _lesser_value;;
+
+			=> nrel_goto: .proc_of_sorting_set_of_values_operator_is_less_than_last_1_get_lesser;;
+			*);;	
+
+	    	-> .proc_of_sorting_set_of_values_operator_add_to_middle_1_2
+			(*
+			<- eraseSetStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _lesser_value;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var:  rrel_erase: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _larger_value;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_be_more;;
+
+			=> nrel_goto: .proc_of_sorting_set_of_values_operator_add_to_middle_1_2_1;;
+			*);;		
+
+		-> .proc_of_sorting_set_of_values_operator_add_to_middle_1_2_1
+			(*
+			<- genElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _concrete_value;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _larger_value;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_be_more;;
+
+			=> nrel_goto: .proc_of_sorting_set_of_values_operator_add_to_middle_1_2_2;;
+			*);;	
+
+		-> .proc_of_sorting_set_of_values_operator_add_to_middle_1_2_2
+			(*
+			<- genElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _lesser_value;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _concrete_value;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_be_more;;
+
+			=> nrel_goto: .proc_of_sorting_set_of_values_operator_all_elements_loop_enter;;
+			*);;	
+
+		-> .proc_of_sorting_set_of_values_operator_erase_temp_set
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _all_values;;
+
+			=> nrel_goto: .proc_of_sorting_set_of_values_operator_gen_length_node;;
+			*);;
+
+		-> .proc_of_sorting_set_of_values_operator_gen_length_node 
+			(*
+			<- genEl;;
+
+			-> rrel_1: rrel_assign: rrel_node: rrel_scp_var: rrel_link: _length;; 
+
+			=> nrel_goto: .proc_of_sorting_set_of_values_operator_call_proc_of_cardinality_colculation;;
+			*);;		
+
+		-> .proc_of_sorting_set_of_values_operator_call_proc_of_cardinality_colculation
+			(*
+		  	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_cardinality_calculation;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .proc_of_sorting_set_of_values_operator_call_proc_of_cardinality_colculation_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _input_set;;
+				-> rrel_2: rrel_fixed: rrel_scp_var: _length;;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .proc_of_sorting_set_of_values_operator_waitreturn_proc_of_cardinality_colculation;;
+			*);;
+
+		-> .proc_of_sorting_set_of_values_operator_waitreturn_proc_of_cardinality_colculation
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .proc_of_sorting_set_of_values_operator_add_length_to_input_set;;
+			*);;
+
+		-> .proc_of_sorting_set_of_values_operator_add_length_to_input_set
+			(*
+			<- genElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _input_set;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _length;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_length;;
+
+			=> nrel_goto: .proc_of_sorting_set_of_values_operator_return;;
+			*);;	
+
+		-> .proc_of_sorting_set_of_values_operator_return 
+			(*
+			<- return;;
+			*);;
+		*);;
+	*);;
+
+*];;

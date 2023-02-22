@@ -1,12 +1,10 @@
 section_subjdomain_actions_executing_in_sc_memory
-<- sc_node_not_relation;
 => nrel_main_idtf:
 	[Раздел. Предметная область действий, выполняемых в абстрактной унифицированной семантической памяти]
 	(* <- lang_ru;; *);
 <- atomic_section;
 <- not_enough_formed_structure;;
 
-section_subjdomain_actions_executing_in_sc_memory = [*^"file://section_subjdomain_actions_executing_in_sc_memory.scsi"*];;
 
 rrel_key_sc_element -> (section_subjdomain_actions_executing_in_sc_memory -> subject_domain_of_actions_executing_in_sc_memory)
 (*

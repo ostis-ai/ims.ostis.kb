@@ -1,0 +1,143 @@
+structure_and_organization_IMS_project =  [*
+project_IMS
+	=> nrel_subproject: 
+		project_ims_knowledge_base;
+		project_ims_knowledge_processing_machine;
+		project_ims_user_interface;
+		ostis_library_project;
+		project_core_ui;
+		project_scg_environment;
+		project_scn_environment;
+		project_drawings_editing_environment;
+		project_cartographic_environment;
+		project_natural_language_communication_environment;
+		project_scp_environment;
+		project_design_management_ostis_systems_environment;
+		project_design_collective_knowledge_bases_environment;; 
+
+project_ims_knowledge_base
+=> nrel_main_idtf:
+	[Проект База знаний IMS]
+	(* <- lang_ru;; *);
+	[Project IMS Knowledge Base]
+	(* <- lang_en;; *);;
+
+project_ims_knowledge_processing_machine
+=> nrel_main_idtf:
+	[Проект Машина обработки знаний IMS]
+	(* <- lang_ru;; *);
+	[Project IMS knowledge processing machine]
+	(* <- lang_en;; *);;
+
+project_ims_user_interface
+=> nrel_main_idtf:
+	[Проект Пользовательский интерфейс IMS]
+	(* <- lang_ru;; *);
+	[Project IMS User Interface]
+	(* <- lang_en;; *);;
+
+ostis_library_project
+=> nrel_main_idtf:
+	[Проект Библиотека OSTIS]
+	(* <- lang_ru;; *);
+	[OSTIS Library Project]
+	(* <- lang_en;; *);;
+
+project_core_ui
+=> nrel_main_idtf:
+	[Проект Ядро пользовательских интерфейсов]
+	(* <- lang_ru;; *);
+	[Project Core UI]
+	(* <- lang_en;; *);;
+
+project_scg_environment
+=> nrel_main_idtf:
+	[Проект SCg-среда]
+	(* <- lang_ru;; *);
+	[SCg-project environment]
+	(* <- lang_en;; *);;
+
+project_scn_environment
+=> nrel_main_idtf:
+	[Проект SCn-среда]
+	(* <- lang_ru;; *);
+	[SCn-project environment]
+	(* <- lang_en;; *);;			
+
+project_drawings_editing_environment
+=> nrel_main_idtf:
+	[Проект Среда редактирования чертежей]
+	(* <- lang_ru;; *);
+	[Project drawings editing environment]
+	(* <- lang_en;; *);;
+
+project_cartographic_environment
+=> nrel_main_idtf:
+	[Проект Картографическая среда]
+	(* <- lang_ru;; *);
+	[Cartographic project environment]
+	(* <- lang_en;; *);;
+
+project_natural_language_communication_environment
+=> nrel_main_idtf:
+	[Проект Среда естественно-языкового общения]
+	(* <- lang_ru;; *);
+	[Project natural-language communication environment]
+	(* <- lang_en;; *);;
+
+project_scp_environment
+=> nrel_main_idtf:
+	[Проект SCp-среда]
+	(* <- lang_ru;; *);
+	[SCp-project environment]
+	(* <- lang_en;; *);;		
+
+project_design_management_ostis_systems_environment
+=> nrel_main_idtf:
+	[Проект Среда управления проектированием ostis-систем]
+	(* <- lang_ru;; *);
+	[Project design management environment ostis-systems]
+	(* <- lang_en;; *);;
+
+project_design_collective_knowledge_bases_environment
+=> nrel_main_idtf:
+	[Проект Среда коллективного проектирования баз знаний]
+	(* <- lang_ru;; *);
+	[Projects design collective knowledge bases environment]
+	(* <- lang_en;; *);;	
+
+project_ims_knowledge_base=> nrel_result:knowledge_base_IMS;; 
+
+Vladimir_Golenkov
+=> nrel_main_idtf:
+	[Голенков Владимир Васильевич]
+	(* <- lang_ru;; *);
+	[Vladimir Golenkov]
+	(* <- lang_en;; *);;	
+
+project_ims_knowledge_base => nrel_administrator: Vladimir_Golenkov;; 
+Vladimir_Golenkov => nrel_email: [golen@bsuir.by];; 
+Myself => nrel_registered_user:Vladimir_Golenkov;; 
+
+Irina_Davydenko
+=> nrel_main_idtf:
+	[Давыденко Ирина Тимофеевна]
+	(* <- lang_ru;; *);
+	[Irina Davydenko]
+	(* <- lang_en;; *);;	
+project_ims_knowledge_base => nrel_administrator: Irina_Davydenko;; 
+Irina_Davydenko => nrel_email: [davydenko@bsuir.by];; 
+Myself => nrel_registered_user:Irina_Davydenko;; 
+
+Daniil_Shunkevich
+=> nrel_main_idtf:
+	[Шункевич Даниил Вячеславович]
+	(* <- lang_ru;; *);
+	[Daniil Shunkevich]
+	(* <- lang_en;; *);;	
+project_ims_knowledge_base => nrel_administrator: Daniil_Shunkevich;; 
+Daniil_Shunkevich => nrel_email: [shu.dv@tut.by];; 
+Myself => nrel_registered_user:Daniil_Shunkevich;;
+
+
+*];;
