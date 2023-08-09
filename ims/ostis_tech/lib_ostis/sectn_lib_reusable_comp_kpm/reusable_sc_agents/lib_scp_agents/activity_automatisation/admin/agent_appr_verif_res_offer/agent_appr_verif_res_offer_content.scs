@@ -175,7 +175,7 @@ scp_program -> agent_approval_verification_result_of_offer
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
 			-> rrel_3: rrel_fixed: rrel_scp_var: _middle_act;;
 			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
-			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_private_action;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_subaction;;
 
 			=> nrel_then: .agent_approval_verification_result_of_offer_operator_find_real_entity_arc;;
 			=> nrel_else: .agent_approval_verification_result_of_offer_gen_question_finished_unsuccessfully;;
