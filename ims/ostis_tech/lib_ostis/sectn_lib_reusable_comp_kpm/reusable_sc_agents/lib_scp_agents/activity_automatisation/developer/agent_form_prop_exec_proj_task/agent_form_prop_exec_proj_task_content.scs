@@ -24,7 +24,7 @@ scp_program -> agent_formation_proposal_executor_of_project_task
 			-> rrel_3: rrel_assign: rrel_scp_var: _quest;;
 	
 			=> nrel_then: .agent_formation_proposal_executor_of_project_task_operator1B;;
-			=> nrel_else: .agent_formation_propose_tasks_return;;
+			=> nrel_else: .agent_of_formation_proposal_executor_of_project_task_operator_return;;
 			*);;
 		
 		->.agent_formation_proposal_executor_of_project_task_operator1B
@@ -36,7 +36,7 @@ scp_program -> agent_formation_proposal_executor_of_project_task
 			-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
 
 			=> nrel_then: .agent_of_formation_proposal_executor_of_project_task_operator1C1;;
-			=> nrel_else: .agent_formation_propose_tasks_return;;
+			=> nrel_else: .agent_of_formation_proposal_executor_of_project_task_operator_return;;
 			*);;
 		
 		-> .agent_of_formation_proposal_executor_of_project_task_operator1C1 
