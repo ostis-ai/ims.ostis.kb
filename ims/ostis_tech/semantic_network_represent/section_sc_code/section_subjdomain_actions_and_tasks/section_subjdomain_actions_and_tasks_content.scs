@@ -65,7 +65,7 @@ subject_domain_of_actions_and_tasks
 	rrel_action_with_low_priority;
 	rrel_action_with_very_low_priority;
 	nrel_decomposition_of_action;
-	nrel_private_action;
+	nrel_subaction;
 	nrel_abstract_sub_action;
 	nrel_goto;
 	nrel_conjunction_of_previous_actions;
@@ -877,7 +877,7 @@ nrel_decomposition_of_action
 <- decomposition_relation;
 <- quasybinary_relation;;	
 
-nrel_private_action
+nrel_subaction
 <- sc_node_norole_relation;
 => nrel_main_idtf:
 	[поддействие*]
