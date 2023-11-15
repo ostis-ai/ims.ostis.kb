@@ -91,6 +91,7 @@ basic_programming_language_scp
 	lockElStrEdit;
 	lockElStrRemove;
 	scp_operator_atomic_type;
+	active_agent_scp_program;
 -> rrel_explored_relation:
 	rrel_init;
 	rrel_param;
@@ -108,6 +109,12 @@ basic_programming_language_scp
 	rrel_relation;
 	rrel_arc;
 	rrel_access;
+	rrel_const;
+	rrel_var;
+	rrel_params;
+	rrel_operators;
+	nrel_scp_var_value;
+	rrel_pos_const_perm;
 -> rrel_maximum_studied_object_class: 
 	scp_program;;
 
@@ -245,6 +252,51 @@ agent_scp_program
 					*);;
 				*);;
 		*);;
+
+active_agent_scp_program
+	<- sc_node_not_relation;
+	=> nrel_main_idtf:
+		[активная агентная scp-программа]
+		(*<- lang_ru;;*);
+		[active agent scp-program]
+		(*<- lang_en;;*);
+	<= nrel_inclusion:
+		agent_scp_program;;
+
+
+rrel_params
+	<- sc_node_role_relation;
+	=> nrel_main_idtf:
+		[scp-параметры']
+		(*<- lang_ru;;*);
+		[scp-parameters']
+		(*<- lang_en;;*);
+	=> nrel_main_idtf:
+		[параметры scp-программы']
+		(*<- lang_ru;;*);
+		[scp-program parameters']
+		(*<- lang_en;;*);;
+
+rrel_operators
+	<- sc_node_role_relation;
+	=> nrel_main_idtf:
+		[scp-операторы']
+		(*<- lang_ru;;*);
+		[scp-operators']
+		(*<- lang_en;;*);
+	=> nrel_idtf:
+		[операторы scp-программы']
+		(*<- lang_ru;;*);
+		[scp-program operators']
+		(*<- lang_en;;*);;
+
+nrel_scp_var_value
+	<- sc_node_norole_relation;
+	=> nrel_main_idtf:
+		[значение scp-переменной*]
+		(*<- lang_ru;;*);
+		[scp-variable value']
+		(*<- lang_en;;*);;
 
 scp_process
 	<- sc_node_not_relation;
@@ -2999,6 +3051,58 @@ rrel_assign
 				*);;
 		*);;
 
+rrel_const
+	<- sc_node_role_relation;
+	=> nrel_main_idtf:
+		[константный sc-элемент']
+		(*<- lang_ru;;*);
+		[constant sc-element']
+		(*<- lang_en;;*);
+	=> nrel_idtf:
+		[sc-константа']
+		(*<- lang_ru;;*);
+		[sc-constant']
+		(*<- lang_en;;*);
+	=> nrel_first_domain:
+ 		sc_element;
+ 	=> nrel_second_domain:
+ 		sc_constant;
+ 	=> nrel_definitional_domain:
+ 		...
+ 		(*
+ 			<= nrel_combination:
+ 			{
+ 				sc_constant;
+ 				sc_element
+ 			};;
+ 		*);;
+
+rrel_var
+<- sc_node_role_relation;
+	=> nrel_main_idtf:
+		[переменный sc-элемен']
+		(*<- lang_ru;;*);
+		[variable sc-element']
+		(*<- lang_en;;*);
+	=> nrel_idtf:
+		[sc-переменная']
+		(*<- lang_ru;;*);
+		[sc-variable']
+		(*<- lang_en;;*);
+	=> nrel_first_domain:
+ 		sc_element;
+ 	=> nrel_second_domain:
+ 		sc_variable;
+ 	=> nrel_definitional_domain:
+ 		...
+ 		(*
+ 			<= nrel_combination:
+ 			{
+ 				sc_variable;
+ 				sc_element
+ 			};;
+ 		*);;
+
 rrel_set
 <- sc_node_role_relation;
 	=> nrel_main_idtf:
@@ -3337,6 +3441,11 @@ rrel_node
  					};;
  				*);;
 		*)
+	};
+	<= nrel_subdividing:
+	{
+		rrel_const;
+		rrel_var
 	};;
 
 rrel_relation
@@ -3572,6 +3681,42 @@ rrel_access
  					};;
  				*);;
 		*)
-	};;
-
+	};
+	=> nrel_inclusion: rrel_pos_const_perm (*
+		=> nrel_main_idtf:
+			[sc-дуга основного вида']
+			(*<- lang_ru;;*);
+			[main sc-arc']
+			(*<- lang_en;;*);;
+		<- sc_node_role_relation;;
+		=> nrel_first_domain:
+			sc_element;;
+		=> nrel_second_domain:
+			...
+			(*
+				<= nrel_intersection:
+				{
+					rrel_pos;
+					rrel_const;
+					rrel_perm
+				};;
+			*);;
+		=> nrel_definitional_domain:
+			...
+			(*
+				<= nrel_combination:
+				{
+					sc_element;
+					...
+					(*
+						<= nrel_intersection:
+						{
+							rrel_pos;
+							rrel_const;
+							rrel_perm
+						};;
+					*)
+				};;
+			*);;
+	*);;
 *];;
