@@ -3371,6 +3371,11 @@ rrel_type_of_sc_element
  					};;
  				*);;
 		*)
+	};
+	<= nrel_subdividing:
+	{
+		rrel_const;
+		rrel_var
 	};;
 
 rrel_node
@@ -3441,11 +3446,6 @@ rrel_node
  					};;
  				*);;
 		*)
-	};
-	<= nrel_subdividing:
-	{
-		rrel_const;
-		rrel_var
 	};;
 
 rrel_relation
