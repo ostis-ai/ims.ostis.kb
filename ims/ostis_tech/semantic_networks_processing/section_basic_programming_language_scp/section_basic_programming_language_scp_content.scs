@@ -3015,20 +3015,7 @@ rrel_const
 		[sc-константа']
 		(*<- lang_ru;;*);
 		[sc-constant']
-		(*<- lang_en;;*);
-	=> nrel_first_domain:
- 		sc_element;
- 	=> nrel_second_domain:
- 		sc_constant;
- 	=> nrel_definitional_domain:
- 		...
- 		(*
- 			<= nrel_combination:
- 			{
- 				sc_constant;
- 				sc_element
- 			};;
- 		*);;
+		(*<- lang_en;;*);;
 
 rrel_var
 <- sc_node_role_relation;
@@ -3041,20 +3028,7 @@ rrel_var
 		[sc-переменная']
 		(*<- lang_ru;;*);
 		[sc-variable']
-		(*<- lang_en;;*);
-	=> nrel_first_domain:
- 		sc_element;
- 	=> nrel_second_domain:
- 		sc_variable;
- 	=> nrel_definitional_domain:
- 		...
- 		(*
- 			<= nrel_combination:
- 			{
- 				sc_variable;
- 				sc_element
- 			};;
- 		*);;
+		(*<- lang_en;;*);;
 
 rrel_set
 <- sc_node_role_relation;
