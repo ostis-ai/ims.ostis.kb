@@ -91,7 +91,6 @@ basic_programming_language_scp
 	lockElStrEdit;
 	lockElStrRemove;
 	scp_operator_atomic_type;
-	active_agent_scp_program;
 -> rrel_explored_relation:
 	rrel_init;
 	rrel_param;
@@ -112,9 +111,6 @@ basic_programming_language_scp
 	rrel_access;
 	rrel_const;
 	rrel_var;
-	rrel_params;
-	rrel_operators;
-	nrel_scp_var_value;
 	rrel_pos_const_perm;
 -> rrel_maximum_studied_object_class: 
 	scp_program;;
@@ -253,51 +249,6 @@ agent_scp_program
 					*);;
 				*);;
 		*);;
-
-active_agent_scp_program
-	<- sc_node_class;
-	=> nrel_main_idtf:
-		[активная агентная scp-программа]
-		(*<- lang_ru;;*);
-		[active agent scp-program]
-		(*<- lang_en;;*);
-	<= nrel_inclusion:
-		agent_scp_program;;
-
-
-rrel_params
-	<- sc_node_role_relation;
-	=> nrel_main_idtf:
-		[scp-параметры']
-		(*<- lang_ru;;*);
-		[scp-parameters']
-		(*<- lang_en;;*);
-	=> nrel_idtf:
-		[параметры scp-программы']
-		(*<- lang_ru;;*);
-		[scp-program parameters']
-		(*<- lang_en;;*);;
-
-rrel_operators
-	<- sc_node_role_relation;
-	=> nrel_main_idtf:
-		[scp-операторы']
-		(*<- lang_ru;;*);
-		[scp-operators']
-		(*<- lang_en;;*);
-	=> nrel_idtf:
-		[операторы scp-программы']
-		(*<- lang_ru;;*);
-		[scp-program operators']
-		(*<- lang_en;;*);;
-
-nrel_scp_var_value
-	<- sc_node_norole_relation;
-	=> nrel_main_idtf:
-		[значение scp-переменной*]
-		(*<- lang_ru;;*);
-		[scp-variable value']
-		(*<- lang_en;;*);;
 
 scp_process
 	<- sc_node_not_relation;
