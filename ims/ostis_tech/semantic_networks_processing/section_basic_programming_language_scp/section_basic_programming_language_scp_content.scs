@@ -254,7 +254,7 @@ agent_scp_program
 		*);;
 
 active_agent_scp_program
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[активная агентная scp-программа]
 		(*<- lang_ru;;*);
