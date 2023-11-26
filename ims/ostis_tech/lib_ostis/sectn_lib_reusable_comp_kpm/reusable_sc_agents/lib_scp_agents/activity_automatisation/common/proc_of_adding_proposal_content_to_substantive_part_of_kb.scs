@@ -1,65 +1,59 @@
-scp_program -> proc_of_adding_proposal_content_to_substantive_part_of_kb
-	(*
-  	-> rrel_params: .proc_of_adding_proposal_content_to_substantive_part_of_kb_params 
-		(*
-		-> rrel_1: rrel_in: _proposal;;
-		-> rrel_2: rrel_in: _section;;
-    	*);;
+proc_of_adding_proposal_content_to_substantive_part_of_kb
+<- scp_program;
+-> rrel_key_sc_element: .._process1;;
 
-	-> rrel_operators: .proc_of_adding_proposal_content_to_substantive_part_of_kb_operator_set
-    	(*
-    	-> rrel_init: .proc_of_adding_proposal_content_to_substantive_part_of_kb_operator1B
-			(*
-		 	<- ifCoin;;
+proc_of_adding_proposal_content_to_substantive_part_of_kb = [*
+.._process1
+_<- scp_process;
 
-		 	-> rrel_1: rrel_fixed: rrel_scp_var: _section;;
-			-> rrel_2: rrel_fixed: rrel_scp_const: substantive_part_of_the_knowledge_base;;
+_-> rrel_1:: rrel_in:: _proposal;
+_-> rrel_2:: rrel_in:: _section;
+_<= nrel_decomposition_of_action:: .._actions (*
 
-            => nrel_then: .proc_of_adding_proposal_content_to_substantive_part_of_kb_operator_get_substantive_part_of_kb_sign;;
-			=> nrel_else: .proc_of_adding_proposal_content_to_substantive_part_of_kb_operator_D2;;
-		 	*);;
+	_-> rrel_1:: .._proc_of_adding_proposal_content_to_substantive_part_of_kb_operator1B (*
+		_<- ifCoin;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _section;;
+		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: substantive_part_of_the_knowledge_base;;
 
-    	-> .proc_of_adding_proposal_content_to_substantive_part_of_kb_operator_get_substantive_part_of_kb_sign
-			(*
-			<- searchElStr3;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_const: substantive_part_of_the_knowledge_base;;
-			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-			-> rrel_3: rrel_assign: rrel_scp_var: _substantive_part_of_kb_sign;;
-
-			=> nrel_then: .proc_of_adding_proposal_content_to_substantive_part_of_kb_operator_D1;;
-			=> nrel_else: .proc_of_adding_proposal_content_to_substantive_part_of_kb_operator_return;;
-			*);;
-
-		-> .proc_of_adding_proposal_content_to_substantive_part_of_kb_operator_D1
-			(*
-			<- searchSetStr3;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _proposal;;
-			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-			-> rrel_3: rrel_assign: rrel_scp_var: _content;;
-
-			-> rrel_set_3: rrel_fixed: rrel_scp_var: _substantive_part_of_kb_sign;;
-
-			=> nrel_goto: .proc_of_adding_proposal_content_to_substantive_part_of_kb_operator_return;;
-			*);;	
-
-		-> .proc_of_adding_proposal_content_to_substantive_part_of_kb_operator_D2
-			(*
-			<- searchSetStr3;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _proposal;;
-			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-			-> rrel_3: rrel_assign: rrel_scp_var: _content;;
-
-			-> rrel_set_3: rrel_fixed: rrel_scp_var: _section;;
-
-			=> nrel_goto: .proc_of_adding_proposal_content_to_substantive_part_of_kb_operator_return;;
-			*);;		
-			
-		-> .proc_of_adding_proposal_content_to_substantive_part_of_kb_operator_return 
-			(*
-			<- return;;
-			*);;
-		*);;
+		_=> nrel_then:: .._proc_of_adding_proposal_content_to_substantive_part_of_kb_operator_get_substantive_part_of_kb_sign;;
+		_=> nrel_else:: .._proc_of_adding_proposal_content_to_substantive_part_of_kb_operator_D2;;
 	*);;
+
+	_-> .._proc_of_adding_proposal_content_to_substantive_part_of_kb_operator_get_substantive_part_of_kb_sign (*
+		_<- searchElStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: substantive_part_of_the_knowledge_base;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _substantive_part_of_kb_sign;;
+
+		_=> nrel_then:: .._proc_of_adding_proposal_content_to_substantive_part_of_kb_operator_D1;;
+		_=> nrel_else:: .._proc_of_adding_proposal_content_to_substantive_part_of_kb_operator_return;;
+	*);;
+
+	_-> .._proc_of_adding_proposal_content_to_substantive_part_of_kb_operator_D2 (*
+		_<- searchSetStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _proposal;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _content;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_3:: _section;;
+
+		_=> nrel_goto:: .._proc_of_adding_proposal_content_to_substantive_part_of_kb_operator_return;;
+	*);;
+
+	_-> .._proc_of_adding_proposal_content_to_substantive_part_of_kb_operator_return (*
+		_<- return;;
+
+	*);;
+
+	_-> .._proc_of_adding_proposal_content_to_substantive_part_of_kb_operator_D1 (*
+		_<- searchSetStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _proposal;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _content;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _substantive_part_of_kb_sign;;
+
+		_=> nrel_goto:: .._proc_of_adding_proposal_content_to_substantive_part_of_kb_operator_return;;
+	*);;
+
+*);;
+
+*];;

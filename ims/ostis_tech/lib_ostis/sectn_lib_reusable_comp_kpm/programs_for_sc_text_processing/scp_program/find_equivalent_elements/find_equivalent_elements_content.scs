@@ -1,110 +1,102 @@
 lib_component_proc_equivalent_elements =  [*
-scp_program -> proc_equivalent_elements 
-	(*
-	-> rrel_params: .proc_equivalent_elements_params 
-		(*
-		-> rrel_1: rrel_in: _param;;
-                -> rrel_2: rrel_in: _param2;;
-		-> rrel_3: rrel_in: _answer_proc_equivalent_elements;;
-		*);;
-	
-	-> rrel_operators: .proc_equivalent_elements_operator_set 
-		(*
-		-> rrel_init: .proc_equivalent_elements_operator1A 
-			(*
-		  	<- searchSetStr3;;
-		  	-> rrel_1: rrel_fixed: rrel_scp_var: _param;;
-		  	-> rrel_2: rrel_assign: rrel_scp_var: _arc1;;
-		  	-> rrel_3: rrel_assign: rrel_scp_var: _elem1;;
+proc_equivalent_elements
+<- scp_program;
+-> rrel_key_sc_element: .._process1;;
 
-		  	-> rrel_set_3: rrel_assign: rrel_scp_var: _set1;;
+proc_equivalent_elements = [*
+.._process1
+_<- scp_process;
 
-		  	=> nrel_then: .proc_equivalent_elements_operator1B;;
-		  	=> nrel_else: .proc_equivalent_elements_operator_return;;
-			*);; 
+_-> rrel_1:: rrel_in:: _param;
+_-> rrel_2:: rrel_in:: _param2;
+_-> rrel_3:: rrel_in:: _answer_proc_equivalent_elements;
+_<= nrel_decomposition_of_action:: .._actions (*
 
-		-> .proc_equivalent_elements_operator1B 
-			(*
-		  	<- searchSetStr3;;
-		  	-> rrel_1: rrel_fixed: rrel_scp_var: _param2;;
-		  	-> rrel_2: rrel_assign: rrel_scp_var: _arc2;;
-		  	-> rrel_3: rrel_assign: rrel_scp_var: _elem2;;
+	_-> rrel_1:: .._proc_equivalent_elements_operator1A (*
+		_<- searchSetStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _param;;
+		_-> rrel_2:: rrel_assign:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _elem1;;
+		_-> rrel_assign:: rrel_scp_var:: rrel_set_3:: _set1;;
 
-		  	-> rrel_set_3: rrel_assign: rrel_scp_var: _set2;;
-
-		  	=> nrel_then: .proc_equivalent_elements_operator1C;;
-		  	=> nrel_else: .proc_equivalent_elements_operator_return;;
-			*);; 
-
-		-> .proc_equivalent_elements_operator1C 
-			(*
-		  	<- searchElStr3;;
-		  	-> rrel_1: rrel_fixed: rrel_scp_var: _set1;;
-		  	-> rrel_2: rrel_assign: rrel_scp_var: _arc1;;
-		  	-> rrel_3: rrel_assign: rrel_scp_var: _general;;
-
-		  	=> nrel_then: .proc_equivalent_elements_operator1D;;
-		  	=> nrel_else: .proc_equivalent_elements_operator2A;;
-			*);;                  
-
-		-> .proc_equivalent_elements_operator1D 
-			(*
-		  	<- eraseEl;;
-		  	-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _arc1;;
-
-		   	=> nrel_goto: .proc_equivalent_elements_operator1E;;
-			*);; 
-
-		-> .proc_equivalent_elements_operator1E 
-			(*
-		  	<- searchElStr3;;
-		  	-> rrel_1: rrel_fixed: rrel_scp_var: _set2;;
-		  	-> rrel_2: rrel_assign: rrel_scp_var: _arc2;;
-		  	-> rrel_3: rrel_fixed: rrel_scp_var: _general;;
-
-		  	=> nrel_then: .proc_equivalent_elements_operator1F;;
-		  	=> nrel_else: .proc_equivalent_elements_operator1C;;
-			*);; 
-
-		-> .proc_equivalent_elements_operator1F
-			(*
-		  	<- eraseEl;;
-		  	-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _arc2;;
-
-		   	=> nrel_goto: .proc_equivalent_elements_operator1H;;
-			*);; 
-
-		-> .proc_equivalent_elements_operator1H 
-			(*
-                  	<- genElStr3;;
-		  	-> rrel_1: rrel_fixed: rrel_scp_var: _answer_proc_equivalent_elements;;
-		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc12;;
-		  	-> rrel_3: rrel_fixed: rrel_scp_var: _general;;
-             
-                   	=> nrel_goto: .proc_equivalent_elements_operator1C;;
-                  	*);;
-
-		-> .proc_equivalent_elements_operator2A 
-			(*
-		  	<- eraseEl;;
-		  	-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _set1;;
-
-		   	=> nrel_goto: .proc_equivalent_elements_operator2B;;
-			*);;
-
-		-> .proc_equivalent_elements_operator2B 
-			(*
-		  	<- eraseEl;;
-		  	-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _set2;;
-
-		   	=> nrel_goto: .proc_equivalent_elements_operator_return;;
-			*);;
-			
-		-> .proc_equivalent_elements_operator_return 
-			(*
-		  	<- return;;
-			*);;
+		_=> nrel_then:: .._proc_equivalent_elements_operator1B;;
+		_=> nrel_else:: .._proc_equivalent_elements_operator_return;;
 	*);;
+
+	_-> .._proc_equivalent_elements_operator1B (*
+		_<- searchSetStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _param2;;
+		_-> rrel_2:: rrel_assign:: rrel_scp_var:: _arc2;;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _elem2;;
+		_-> rrel_assign:: rrel_scp_var:: rrel_set_3:: _set2;;
+
+		_=> nrel_then:: .._proc_equivalent_elements_operator1C;;
+		_=> nrel_else:: .._proc_equivalent_elements_operator_return;;
+	*);;
+
+	_-> .._proc_equivalent_elements_operator_return (*
+		_<- return;;
+
+	*);;
+
+	_-> .._proc_equivalent_elements_operator1C (*
+		_<- searchElStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _set1;;
+		_-> rrel_2:: rrel_assign:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _general;;
+
+		_=> nrel_then:: .._proc_equivalent_elements_operator1D;;
+		_=> nrel_else:: .._proc_equivalent_elements_operator2A;;
+	*);;
+
+	_-> .._proc_equivalent_elements_operator1D (*
+		_<- eraseEl;;
+		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _arc1;;
+
+		_=> nrel_goto:: .._proc_equivalent_elements_operator1E;;
+	*);;
+
+	_-> .._proc_equivalent_elements_operator2A (*
+		_<- eraseEl;;
+		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _set1;;
+
+		_=> nrel_goto:: .._proc_equivalent_elements_operator2B;;
+	*);;
+
+	_-> .._proc_equivalent_elements_operator2B (*
+		_<- eraseEl;;
+		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _set2;;
+
+		_=> nrel_goto:: .._proc_equivalent_elements_operator_return;;
+	*);;
+
+	_-> .._proc_equivalent_elements_operator1E (*
+		_<- searchElStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _set2;;
+		_-> rrel_2:: rrel_assign:: rrel_scp_var:: _arc2;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _general;;
+
+		_=> nrel_then:: .._proc_equivalent_elements_operator1F;;
+		_=> nrel_else:: .._proc_equivalent_elements_operator1C;;
+	*);;
+
+	_-> .._proc_equivalent_elements_operator1F (*
+		_<- eraseEl;;
+		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _arc2;;
+
+		_=> nrel_goto:: .._proc_equivalent_elements_operator1H;;
+	*);;
+
+	_-> .._proc_equivalent_elements_operator1H (*
+		_<- genElStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _answer_proc_equivalent_elements;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc12;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _general;;
+
+		_=> nrel_goto:: .._proc_equivalent_elements_operator1C;;
+	*);;
+
 *);;
 
+*];;
 *];;

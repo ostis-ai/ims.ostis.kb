@@ -2,130 +2,108 @@ lib_component_proc_of_cardinality_counting_without_multiple_occurrences =  [*
 proc_of_cardinality_counting_without_multiple_occurrences
 => nrel_main_idtf:
 	[scp-программа подсчёта мощности множества без учёта кратных вхождений] (* <- lang_ru;; *);
-=> nrel_main_idtf:
-	[scp-program of set's cardinality counting without taking into account multiple occurrences] (* <-lang_en;; *);;
+	[scp-program of set's cardinality counting without taking into account multiple occurrences] (* <- lang_en;; *);
+<- scp_program;
+-> rrel_key_sc_element: .._process1;;
 
-scp_program -> proc_of_cardinality_counting_without_multiple_occurrences 
-	(*	
-	-> rrel_params: .proc_of_cardinality_counting_without_multiple_occurrences_params 
-		(*
-		-> rrel_1: rrel_in: _set;;
-		-> rrel_2: rrel_out: _cardinality;;
-		*);;
-	
-	-> rrel_operators: .proc_of_cardinality_counting_without_multiple_occurrences_operator_set 
-		(*	
-		-> rrel_init: .proc_of_cardinality_counting_without_multiple_occurrences_operator1A 
-			(*
-			<- contAssign;;
+proc_of_cardinality_counting_without_multiple_occurrences = [*
+.._process1
+_<- scp_process;
 
-			-> rrel_1: rrel_assign: rrel_scp_var: _cardinality;;
-			-> rrel_2: rrel_fixed: rrel_scp_const: [0];;
-				 		  
-			=> nrel_goto: .proc_of_cardinality_counting_without_multiple_occurrences_operator1B;;
-			*);;
+_-> rrel_1:: rrel_in:: _set;
+_-> rrel_2:: rrel_out:: _cardinality;
+_<= nrel_decomposition_of_action:: .._actions (*
 
-		-> .proc_of_cardinality_counting_without_multiple_occurrences_operator1B
-			(*
-			<- searchSetStr3;;
+	_-> rrel_1:: .._proc_of_cardinality_counting_without_multiple_occurrences_operator1A (*
+		_<- contAssign;;
+		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _cardinality;;
+		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [0];;
 
-			-> rrel_1: rrel_fixed: rrel_scp_var: _set;;
-			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
-			-> rrel_3: rrel_assign: rrel_scp_var: _element;;
-
-			-> rrel_set_3: rrel_assign: rrel_scp_var: _set_of_elements;;
-
-			=> nrel_then: .proc_of_cardinality_counting_without_multiple_occurrences_operator1C;;
-			=> nrel_else: .proc_of_cardinality_counting_without_multiple_occurrences_operator_return;;
-			*);;
-
-		-> .proc_of_cardinality_counting_without_multiple_occurrences_operator1C
-			(*
-			<- genEl;;
-
-			-> rrel_1: rrel_assign: rrel_scp_var: rrel_const: rrel_node: _checked_elements;;
-
-			=> nrel_goto: .proc_of_cardinality_counting_without_multiple_occurrences_operator2A;;
-			*);;
-
-		-> .proc_of_cardinality_counting_without_multiple_occurrences_operator2A
-			(*
-			<- searchElStr3;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_elements;;
-			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
-			-> rrel_3: rrel_assign: rrel_scp_var: _element;;
-
-			=> nrel_then: .proc_of_cardinality_counting_without_multiple_occurrences_operator2B;;
-			=> nrel_else: .proc_of_cardinality_counting_without_multiple_occurrences_operator3A;;
-			*);;
-
-		-> .proc_of_cardinality_counting_without_multiple_occurrences_operator2B
-			(*
-			<- eraseEl;;
-
-			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: rrel_pos_const_perm: _arc1;;
-
-			=> nrel_goto: .proc_of_cardinality_counting_without_multiple_occurrences_operator2C;;
-			*);;
-		
-		-> .proc_of_cardinality_counting_without_multiple_occurrences_operator2C
-			(*
-			<- searchElStr3;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _checked_elements;;
-			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
-			-> rrel_3: rrel_fixed: rrel_scp_var: _element;;
-
-			=> nrel_then: .proc_of_cardinality_counting_without_multiple_occurrences_operator2A;;
-			=> nrel_else: .proc_of_cardinality_counting_without_multiple_occurrences_operator2D;;
-			*);;
-
-		-> .proc_of_cardinality_counting_without_multiple_occurrences_operator2D
-			(*
-			<- genElStr3;;
-			
-			-> rrel_1: rrel_fixed: rrel_scp_var: _checked_elements;;
-			-> rrel_2: rrel_assign: rrel_scp_var: rrel_const: rrel_pos_const_perm: _arc1;;
-			-> rrel_3: rrel_fixed: rrel_scp_var: _element;;
-
-			=> nrel_goto: .proc_of_cardinality_counting_without_multiple_occurrences_operator2E;;
-			*);;
-
-		-> .proc_of_cardinality_counting_without_multiple_occurrences_operator2E
-			(*
-			<- contAdd;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _cardinality;;
-			-> rrel_2: rrel_fixed: rrel_scp_var: _cardinality;;
-			-> rrel_3: rrel_fixed: rrel_scp_const: [1];;
-
-			=> nrel_goto: .proc_of_cardinality_counting_without_multiple_occurrences_operator2A;;
-			*);;
-
-		-> .proc_of_cardinality_counting_without_multiple_occurrences_operator3A
-			(*
-			<- eraseEl;;
-
-			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _set_of_elements;;
-
-			=> nrel_goto: .proc_of_cardinality_counting_without_multiple_occurrences_operator3B;;
-			*);;
-
-		-> .proc_of_cardinality_counting_without_multiple_occurrences_operator3B
-			(*
-			<- eraseEl;;
-
-			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _checked_elements;;
-
-			=> nrel_goto: .proc_of_cardinality_counting_without_multiple_occurrences_operator_return;;
-			*);;
-
-		-> .proc_of_cardinality_counting_without_multiple_occurrences_operator_return 
-			(*
-			<- return;;
-			*);;
-		*);;
+		_=> nrel_goto:: .._proc_of_cardinality_counting_without_multiple_occurrences_operator1B;;
 	*);;
 
+	_-> .._proc_of_cardinality_counting_without_multiple_occurrences_operator1B (*
+		_<- searchSetStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _set;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _element;;
+		_-> rrel_assign:: rrel_scp_var:: rrel_set_3:: _set_of_elements;;
+
+		_=> nrel_then:: .._proc_of_cardinality_counting_without_multiple_occurrences_operator1C;;
+		_=> nrel_else:: .._proc_of_cardinality_counting_without_multiple_occurrences_operator_return;;
+	*);;
+
+	_-> .._proc_of_cardinality_counting_without_multiple_occurrences_operator1C (*
+		_<- genEl;;
+		_-> rrel_1:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: _checked_elements;;
+
+		_=> nrel_goto:: .._proc_of_cardinality_counting_without_multiple_occurrences_operator2A;;
+	*);;
+
+	_-> .._proc_of_cardinality_counting_without_multiple_occurrences_operator_return (*
+		_<- return;;
+
+	*);;
+
+	_-> .._proc_of_cardinality_counting_without_multiple_occurrences_operator2A (*
+		_<- searchElStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _set_of_elements;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _element;;
+
+		_=> nrel_then:: .._proc_of_cardinality_counting_without_multiple_occurrences_operator2B;;
+		_=> nrel_else:: .._proc_of_cardinality_counting_without_multiple_occurrences_operator3A;;
+	*);;
+
+	_-> .._proc_of_cardinality_counting_without_multiple_occurrences_operator2B (*
+		_<- eraseEl;;
+		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+
+		_=> nrel_goto:: .._proc_of_cardinality_counting_without_multiple_occurrences_operator2C;;
+	*);;
+
+	_-> .._proc_of_cardinality_counting_without_multiple_occurrences_operator3A (*
+		_<- eraseEl;;
+		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _set_of_elements;;
+
+		_=> nrel_goto:: .._proc_of_cardinality_counting_without_multiple_occurrences_operator3B;;
+	*);;
+
+	_-> .._proc_of_cardinality_counting_without_multiple_occurrences_operator3B (*
+		_<- eraseEl;;
+		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _checked_elements;;
+
+		_=> nrel_goto:: .._proc_of_cardinality_counting_without_multiple_occurrences_operator_return;;
+	*);;
+
+	_-> .._proc_of_cardinality_counting_without_multiple_occurrences_operator2C (*
+		_<- searchElStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _checked_elements;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _element;;
+
+		_=> nrel_then:: .._proc_of_cardinality_counting_without_multiple_occurrences_operator2A;;
+		_=> nrel_else:: .._proc_of_cardinality_counting_without_multiple_occurrences_operator2D;;
+	*);;
+
+	_-> .._proc_of_cardinality_counting_without_multiple_occurrences_operator2D (*
+		_<- genElStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _checked_elements;;
+		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _element;;
+
+		_=> nrel_goto:: .._proc_of_cardinality_counting_without_multiple_occurrences_operator2E;;
+	*);;
+
+	_-> .._proc_of_cardinality_counting_without_multiple_occurrences_operator2E (*
+		_<- contAdd;;
+		_-> rrel_1:: rrel_2:: rrel_fixed:: rrel_scp_var:: _cardinality;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: [1];;
+
+		_=> nrel_goto:: .._proc_of_cardinality_counting_without_multiple_occurrences_operator2A;;
+	*);;
+
+*);;
+
+*];;
 *];;

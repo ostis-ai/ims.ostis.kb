@@ -1,169 +1,141 @@
-lib_component_proc_of_finding_arity =  [*
+lib_component_proc_of_finding_arity = [*
 proc_of_finding_arity_value
 => nrel_main_idtf:
 	[scp-программа поиска значения арности отношения] (* <- lang_ru;; *);
-=> nrel_main_idtf:
-	[scp-program of finding relation's arity value] (* <-lang_en;; *);;
+	[scp-program of finding relation's arity value] (* <- lang_en;; *);
+<- scp_program;
+-> rrel_key_sc_element: .._process1;;
 
-scp_program -> proc_of_finding_arity_value 
-	(*	
-	-> rrel_params: .proc_of_finding_arity_value_params 
-		(*
-		-> rrel_1: rrel_in: _relation;;
-		-> rrel_2: rrel_out: _arity_value;;
-		*);;
+proc_of_finding_arity_value = [*
+.._process1
+_<- scp_process;
 
-	-> rrel_operators: .proc_of_finding_arity_value_operator_set 
-		(*
-		-> rrel_init: .proc_of_finding_arity_value_operator1
-			(*
-			<- contAssign;;
+_-> rrel_1:: rrel_in:: _relation;
+_-> rrel_2:: rrel_out:: _arity_value;
+_<= nrel_decomposition_of_action:: .._actions (*
 
-			-> rrel_1: rrel_assign: rrel_scp_var: _arity_value;;
-			-> rrel_2: rrel_fixed: rrel_scp_const: [0];;
+	_-> rrel_1:: .._proc_of_finding_arity_value_operator1 (*
+		_<- contAssign;;
+		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _arity_value;;
+		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [0];;
 
-			=> nrel_goto: .proc_of_finding_arity_value_operator2;;
-			*);;
-
-		-> .proc_of_finding_arity_value_operator2
-			(*
-			<- searchSetStr3;;
-
-			-> rrel_1: rrel_assign: rrel_scp_var: rrel_node: _node;;
-			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
-			-> rrel_3: rrel_fixed: rrel_scp_var: _relation;;
-
-			-> rrel_set_1: rrel_assign: rrel_scp_var: _set_of_nodes;;
-
-			=> nrel_then: .proc_of_finding_arity_value_operator3A;;
-			=> nrel_else: .proc_of_finding_arity_value_operator_return;;
-			*);;
-
-		-> .proc_of_finding_arity_value_operator3A
-			(*
-			<- searchElStr3;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_nodes;;
-			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
-			-> rrel_3: rrel_assign: rrel_scp_var: rrel_node: _node;;
-
-			=> nrel_then: .proc_of_finding_arity_value_operator3B;;
-			=> nrel_else: .proc_of_finding_arity_value_operator5;; 
-			*);;
-
-		-> .proc_of_finding_arity_value_operator3B
-			(*
-			<- eraseEl;;
-
-			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: rrel_pos_const_perm: _arc1;;
-
-			=> nrel_goto: .proc_of_finding_arity_value_operator3C;;
-			*);;
-
-		-> .proc_of_finding_arity_value_operator3C
-			(*
-			<- searchElStr3;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_const: arity;;
-			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
-			-> rrel_3: rrel_fixed: rrel_scp_var: rrel_node: _node;;
-
-			=> nrel_then: .proc_of_finding_arity_value_operator3D;;
-			=> nrel_else: .proc_of_finding_arity_value_operator3A;;
-			*);;
-
-		-> .proc_of_finding_arity_value_operator3D
-			(*
-			<- searchElStr5;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_node: _node;;
-			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
-			-> rrel_3: rrel_assign: rrel_scp_var: _arity;;
-			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
-			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_measurement;;
-
-			=> nrel_then: .proc_of_finding_arity_value_operator4A;;
-			=> nrel_else: .proc_of_finding_arity_value_operator3A;;
-			*);;
-
-		-> .proc_of_finding_arity_value_operator4A
-			(*
-			<- genEl;;
-
-			-> rrel_1: rrel_assign: rrel_scp_var: rrel_const: rrel_node: _arity_of_relation;;
-
-			=> nrel_goto: .proc_of_finding_arity_value_operator4B;;
-			*);;
-
-		-> .proc_of_finding_arity_value_operator4B
-			(*
-			<- call;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_finding_value;;
-			-> rrel_2: rrel_fixed: rrel_scp_const: .proc_of_finding_arity_value_operator4B_params
-				(*
-				-> rrel_1: rrel_fixed: rrel_scp_var: _arity;;
-				-> rrel_2: rrel_fixed: rrel_scp_var: _arity_of_relation;;
-				*);;
-			-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
-
-			=> nrel_goto: .proc_of_finding_arity_value_operator4C;;
-			*);;
-
-		-> .proc_of_finding_arity_value_operator4C
-			(*
-			<- waitReturn;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
-
-			=> nrel_goto: .proc_of_finding_arity_value_operator4D;;
-			*);;
-
-		-> .proc_of_finding_arity_value_operator4D
-			(*
-			<- searchElStr3;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _arity_of_relation;;
-			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
-			-> rrel_3: rrel_assign: rrel_scp_var: rrel_link: _value;;
-
-			=> nrel_then: .proc_of_finding_arity_value_operator4E;;
-			=> nrel_else: .proc_of_finding_arity_value_operator3A;;
-			*);;
-
-		-> .proc_of_finding_arity_value_operator4E
-			(*
-			<- contAssign;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _arity_value;;
-			-> rrel_2: rrel_fixed: rrel_scp_var: _value;;
-
-			=> nrel_goto: .proc_of_finding_arity_value_operator4F;;
-			*);;
-
-		-> .proc_of_finding_arity_value_operator4F
-			(*
-			<- eraseEl;;
-
-			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arity_of_relation;;
-
-			=> nrel_goto: .proc_of_finding_arity_value_operator5;;
-			*);;
-
-		-> .proc_of_finding_arity_value_operator5
-			(*
-			<- eraseEl;;
-
-			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _set_of_nodes;;
-
-			=> nrel_goto: .proc_of_finding_arity_value_operator_return;;
-			*);;
-
-		-> .proc_of_finding_arity_value_operator_return
-			(*
-			<- return;;
-			*);;
-		*);;
+		_=> nrel_goto:: .._proc_of_finding_arity_value_operator2;;
 	*);;
 
+	_-> .._proc_of_finding_arity_value_operator2 (*
+		_<- searchSetStr3;;
+		_-> rrel_1:: rrel_assign:: rrel_node:: rrel_scp_var:: _node;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _relation;;
+		_-> rrel_assign:: rrel_scp_var:: rrel_set_1:: _set_of_nodes;;
+
+		_=> nrel_then:: .._proc_of_finding_arity_value_operator3A;;
+		_=> nrel_else:: .._proc_of_finding_arity_value_operator_return;;
+	*);;
+
+	_-> .._proc_of_finding_arity_value_operator3A (*
+		_<- searchElStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _set_of_nodes;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_assign:: rrel_node:: rrel_scp_var:: _node;;
+
+		_=> nrel_then:: .._proc_of_finding_arity_value_operator3B;;
+		_=> nrel_else:: .._proc_of_finding_arity_value_operator5;;
+	*);;
+
+	_-> .._proc_of_finding_arity_value_operator_return (*
+		_<- return;;
+
+	*);;
+
+	_-> .._proc_of_finding_arity_value_operator3B (*
+		_<- eraseEl;;
+		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+
+		_=> nrel_goto:: .._proc_of_finding_arity_value_operator3C;;
+	*);;
+
+	_-> .._proc_of_finding_arity_value_operator5 (*
+		_<- eraseEl;;
+		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _set_of_nodes;;
+
+		_=> nrel_goto:: .._proc_of_finding_arity_value_operator_return;;
+	*);;
+
+	_-> .._proc_of_finding_arity_value_operator3C (*
+		_<- searchElStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: arity;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_fixed:: rrel_node:: rrel_scp_var:: _node;;
+
+		_=> nrel_then:: .._proc_of_finding_arity_value_operator3D;;
+		_=> nrel_else:: .._proc_of_finding_arity_value_operator3A;;
+	*);;
+
+	_-> .._proc_of_finding_arity_value_operator3D (*
+		_<- searchElStr5;;
+		_-> rrel_1:: rrel_fixed:: rrel_node:: rrel_scp_var:: _node;;
+		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _arity;;
+		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_measurement;;
+
+		_=> nrel_then:: .._proc_of_finding_arity_value_operator4A;;
+		_=> nrel_else:: .._proc_of_finding_arity_value_operator3A;;
+	*);;
+
+	_-> .._proc_of_finding_arity_value_operator4A (*
+		_<- genEl;;
+		_-> rrel_1:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: _arity_of_relation;;
+
+		_=> nrel_goto:: .._proc_of_finding_arity_value_operator4B;;
+	*);;
+
+	_-> .._proc_of_finding_arity_value_operator4B (*
+		_<- call;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_finding_value;;
+		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._proc_of_finding_arity_value_param0 (*
+			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _arity;;
+			_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _arity_of_relation;;
+		*);;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _descr1;;
+
+		_=> nrel_goto:: .._proc_of_finding_arity_value_operator4C;;
+	*);;
+
+	_-> .._proc_of_finding_arity_value_operator4C (*
+		_<- waitReturn;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _descr1;;
+
+		_=> nrel_goto:: .._proc_of_finding_arity_value_operator4D;;
+	*);;
+
+	_-> .._proc_of_finding_arity_value_operator4D (*
+		_<- searchElStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _arity_of_relation;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_assign:: rrel_link:: rrel_scp_var:: _value;;
+
+		_=> nrel_then:: .._proc_of_finding_arity_value_operator4E;;
+		_=> nrel_else:: .._proc_of_finding_arity_value_operator3A;;
+	*);;
+
+	_-> .._proc_of_finding_arity_value_operator4E (*
+		_<- contAssign;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _arity_value;;
+		_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _value;;
+
+		_=> nrel_goto:: .._proc_of_finding_arity_value_operator4F;;
+	*);;
+
+	_-> .._proc_of_finding_arity_value_operator4F (*
+		_<- eraseEl;;
+		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _arity_of_relation;;
+
+		_=> nrel_goto:: .._proc_of_finding_arity_value_operator5;;
+	*);;
+
+*);;
+
+*];;
 *];;

@@ -1,94 +1,84 @@
 lib_component_proc_control_subsection_window =  [*
-scp_program -> proc_control_subsection_window (*	
-	-> rrel_params: .proc_control_subsection_window_params (*
-		-> rrel_1: rrel_in: _subject_domain;;
-		-> rrel_2: rrel_in: _answer;;
+proc_control_subsection_window
+<- scp_program;
+-> rrel_key_sc_element: .._process1;;
+
+proc_control_subsection_window = [*
+.._process1
+_<- scp_process;
+
+_-> rrel_1:: rrel_in:: _subject_domain;
+_-> rrel_2:: rrel_in:: _answer;
+_<= nrel_decomposition_of_action:: .._actions (*
+
+	_-> rrel_1:: .._proc_control_subsection_window_operator1C (*
+		_<- searchSetStr5;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _subject_domain;;
+		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _subsection;;
+		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_particular_subject_domain;;
+		_-> rrel_assign:: rrel_scp_var:: rrel_set_3:: _subsections;;
+
+		_=> nrel_then:: .._proc_control_subsection_window_operator_add_to_answer;;
+		_=> nrel_else:: .._proc_control_subsection_window_operator_return;;
 	*);;
 
-       -> rrel_operators: .proc_control_subsection_window_operator_set (*
+	_-> .._proc_control_subsection_window_operator_add_to_answer (*
+		_<- searchSetStr5;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _subject_domain;;
+		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _subsection;;
+		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_particular_subject_domain;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_3:: _answer;;
 
-		-> rrel_init: .proc_control_subsection_window_operator1C 
-			(*
-			  <- searchSetStr5;;
-
-			  -> rrel_1: rrel_fixed: rrel_scp_var: _subject_domain;;
-			  -> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
-			  -> rrel_3: rrel_assign: rrel_scp_var: _subsection;;
-	                  -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
-	                  -> rrel_5: rrel_fixed: rrel_scp_const: nrel_particular_subject_domain;;
-			
-			  -> rrel_set_3: rrel_assign: rrel_scp_var: _subsections;;
-	
-			  => nrel_then: .proc_control_subsection_window_operator_add_to_answer;;
-			  => nrel_else: .proc_control_subsection_window_operator_return;;
-			*);; 
-
-		-> .proc_control_subsection_window_operator_add_to_answer 
-			(*
-			  <- searchSetStr5;;
-
-			  -> rrel_1: rrel_fixed: rrel_scp_var: _subject_domain;;
-			  -> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
-			  -> rrel_3: rrel_assign: rrel_scp_var: _subsection;;
-	                  -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
-	                  -> rrel_5: rrel_fixed: rrel_scp_const: nrel_particular_subject_domain;;
-			
-			  -> rrel_set_3: rrel_fixed: rrel_scp_var: _answer;;
-	
-			  => nrel_then: .proc_control_subsection_window_operator_A;;
-			  => nrel_else: .proc_control_subsection_window_operator_return;;
-			*);;
-
-		-> .proc_control_subsection_window_operator_A
-			(*
-			  <- searchElStr3;;
-
-			  -> rrel_1: rrel_fixed: rrel_scp_var: _subsections;;
-			  -> rrel_2: rrel_assign:  rrel_pos_const_perm: rrel_scp_var: _arc1;; 
-			  -> rrel_3: rrel_assign: rrel_scp_var: _temp;;
-	
-			  => nrel_then: .proc_control_subsection_window_operator_zv10;;
-			  => nrel_else: .proc_control_subsection_window_operator_return;;
-			*);;
-
-                  -> .proc_control_subsection_window_operator_zv10 
-			(*
-			 <- eraseEl;;
-
-			 -> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _arc1;;
-	
-			 => nrel_goto: .proc_control_subsection_window_operator_function_calling;;
-			 *);;
-
-		-> .proc_control_subsection_window_operator_function_calling
-			(*
-		 	<- call;;
-
-		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_control_subsection_window;;
-		  	-> rrel_2: rrel_fixed: rrel_scp_const: .proc_control_subsection_window_operator_function_calling_params 
-				(*
-				-> rrel_1: rrel_fixed: rrel_scp_var: _temp;;
-				-> rrel_2: rrel_fixed: rrel_scp_var: _answer;;
-				*);;
-		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
-
-		  	=> nrel_goto: .proc_control_subsection_window_operator_descr;;
-			*);;
-
-		-> .proc_control_subsection_window_operator_descr 
-			(*
-		  	<- waitReturn;;
-
-		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
-
-		  	=> nrel_goto: .proc_control_subsection_window_operator_A;;
-			*);; 
-
-		-> .proc_control_subsection_window_operator_return
-			(*
-			<- return;;
-			*);;
+		_=> nrel_then:: .._proc_control_subsection_window_operator_A;;
+		_=> nrel_else:: .._proc_control_subsection_window_operator_return;;
 	*);;
+
+	_-> .._proc_control_subsection_window_operator_return (*
+		_<- return;;
+
+	*);;
+
+	_-> .._proc_control_subsection_window_operator_A (*
+		_<- searchElStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _subsections;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _temp;;
+
+		_=> nrel_then:: .._proc_control_subsection_window_operator_zv10;;
+		_=> nrel_else:: .._proc_control_subsection_window_operator_return;;
+	*);;
+
+	_-> .._proc_control_subsection_window_operator_zv10 (*
+		_<- eraseEl;;
+		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _arc1;;
+
+		_=> nrel_goto:: .._proc_control_subsection_window_operator_function_calling;;
+	*);;
+
+	_-> .._proc_control_subsection_window_operator_function_calling (*
+		_<- call;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_control_subsection_window;;
+		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._proc_control_subsection_window_param0 (*
+			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _temp;;
+			_-> rrel_2:: rrel_fixed:: rrel_scp_const:: _answer;;
+		*);;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _descr1;;
+
+		_=> nrel_goto:: .._proc_control_subsection_window_operator_descr;;
+	*);;
+
+	_-> .._proc_control_subsection_window_operator_descr (*
+		_<- waitReturn;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _descr1;;
+
+		_=> nrel_goto:: .._proc_control_subsection_window_operator_A;;
+	*);;
+
 *);;
 
+*];;
 *];;
