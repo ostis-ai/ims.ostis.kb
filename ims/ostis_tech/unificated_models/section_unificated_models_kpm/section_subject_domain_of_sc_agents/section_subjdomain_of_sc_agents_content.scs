@@ -519,6 +519,28 @@ nrel_sc_agent_program
 			*);;
 		*);;
 
+nrel_sc_agent_action_class
+    <- sc_node_norole_relation;
+	=> nrel_main_idtf:
+		[класс действий агента*]
+		(* <- lang_ru;; *);
+		[action class of agent*]
+		(* <- lang_en;; *);
+	<- rrel_key_sc_element:
+		...
+		(*  <- explanation;;
+			<= nrel_sc_text_translation:
+			...
+			(*
+				-> rrel_example:
+					"file://content_html/explanation_for_nrel_primary_initiation_condition.html"
+					(*
+					<- lang_ru;;
+					=> nrel_format: format_html;;
+					*);;
+			*);;
+		*);;
+
 nrel_primary_initiation_condition
 	<- sc_node_norole_relation;
 	=> nrel_main_idtf:
