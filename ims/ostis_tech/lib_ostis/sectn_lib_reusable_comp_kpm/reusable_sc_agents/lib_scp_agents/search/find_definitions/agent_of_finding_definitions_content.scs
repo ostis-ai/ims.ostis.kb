@@ -1,439 +1,358 @@
-sc_text_of_agent_of_finding_definitions =  [*
 agent_of_finding_definitions
 => nrel_main_idtf:
 	[агентная scp-программа поиска определения или пояснения для заданного объекта] (* <- lang_ru;; *);
 	[agent scp-program of finding definition or explanation for given object] (* <- lang_en;; *);
-	<- agent_scp_program;;
-
-scp_program -> agent_of_finding_definitions 
-	(*
-	-> rrel_params: .agent_of_finding_definitions_params 
-		(*
-		-> rrel_1: rrel_in: _event;;
-		-> rrel_2: rrel_in: _input_arc;;
-		*);;
-
-	-> rrel_operators: .agent_of_finding_definitions_operator_set 
-		(*
-		-> rrel_init: .agent_of_finding_definitions_operator1A 
-			(*
-		  	<- searchElStr3;;
-
-		  	-> rrel_1: rrel_assign: rrel_scp_var: _temp;;
-		  	-> rrel_2: rrel_fixed: rrel_scp_var: _input_arc;;
-		  	-> rrel_3: rrel_assign: rrel_scp_var: _quest;;
-
-		  	=> nrel_goto: .agent_of_finding_definitions_operator1B;;
-			*);;
-
-		-> .agent_of_finding_definitions_operator1B 
-			(*
-		  	<- searchElStr3;;
-
-		  	-> rrel_1: rrel_fixed: rrel_scp_const: question_of_finding_definitions;;
-		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
-		  	-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
-
-		  	=> nrel_then: .agent_of_finding_definitions_operator2A;;
-		  	=> nrel_else: .agent_of_finding_definitions_operator_return;;
-			*);;
-
-		-> .agent_of_finding_definitions_operator2A 
-			(*
-		  	<- searchElStr3;;
-
-		  	-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
-		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
-		  	-> rrel_3: rrel_assign: rrel_scp_var: _param;;
-
-		  	=> nrel_then: .agent_of_finding_definitions_operator2A_find_context;;
-		  	=> nrel_else: .agent_of_finding_definitions_operator_return;;
-			*);;
-
-		-> .agent_of_finding_definitions_operator2A_find_context
-			(*
-		 	<- searchElStr5;;
-
-		 	-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
-		 	-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
-		 	-> rrel_3: rrel_assign: rrel_scp_var: _context;;
-            		-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
-		 	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_context_of_action;;
-
-			=> nrel_then: .agent_of_finding_definitions_operator2A_set_context_existence_to_true;;
-			=> nrel_else: .agent_of_finding_definitions_operator2A_set_context_existence_to_false;;
-			*);;	
-
-        	-> .agent_of_finding_definitions_operator2A_set_context_existence_to_true
-			(*
-			<- contAssign;;			
-			
-			-> rrel_1: rrel_assign: rrel_scp_var:  _is_context_exist;;
-			-> rrel_2: rrel_fixed: rrel_scp_const: [true];;
-
-			=> nrel_goto: .agent_of_finding_definitions_operator2B;;
-			*);; 
-
-		  -> .agent_of_finding_definitions_operator2A_set_context_existence_to_false
-			(*
-			<- contAssign;;			
-			
-			-> rrel_1: rrel_assign: rrel_scp_var:  _is_context_exist;;
-			-> rrel_2: rrel_fixed: rrel_scp_const: [false];;
-
-			=> nrel_goto: .agent_of_finding_definitions_operator2B;;
-			*);; 	
-
-		-> .agent_of_finding_definitions_operator2B 
-			(*
-			<- genEl;;
-
-			-> rrel_1: rrel_assign: rrel_const: rrel_node: rrel_scp_var: _answer_finding_definition;;
-
-			=> nrel_goto: .agent_of_finding_definitions_operator3A_is_context_exist;;
-			*);;
-
-		-> .agent_of_finding_definitions_operator3A_is_context_exist
-			(*
-			<- stringIfEq;;			
-			
-			-> rrel_1: rrel_fixed: rrel_scp_var:  _is_context_exist;;
-			-> rrel_2: rrel_fixed: rrel_scp_const: [true];;
-
-			=> nrel_then: .agent_of_finding_definitions_operator3A_context_logic_1;;
-			=> nrel_else: .agent_of_finding_definitions_operator3A;;
-			*);;	
-
-		-> .agent_of_finding_definitions_operator3A_context_logic_1
-			(*
-		 	<- searchSetStr5;;
-
-		 	-> rrel_1: rrel_assign: rrel_scp_var: _elem;;
-		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-		 	-> rrel_3: rrel_fixed: rrel_scp_var: _param;;
-            		-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
-		 	-> rrel_5: rrel_fixed: rrel_scp_const: rrel_key_sc_element;;
-			-> rrel_set_1: rrel_assign: rrel_scp_var: _all_key_sc_elems;;
-
-			=> nrel_then: .agent_of_finding_definitions_operator3A_context_logic_2;;
-			=> nrel_else: .agent_of_finding_definitions_operator_return;;
-			*);;
-
-        	-> .agent_of_finding_definitions_operator3A_context_logic_2 
-			(*
-			<- call;;
-		  	
-		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_finding_intersection_of_two_sets;;
-		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_finding_definitions_operator3A_context_logic_2_params 
-				(*
-				-> rrel_1: rrel_fixed: rrel_scp_var: _all_key_sc_elems;;
-				-> rrel_2: rrel_fixed: rrel_scp_var: _context;;
-				-> rrel_3: rrel_assign: rrel_scp_var: _set1;; 
-				*);;
-		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr5;;
-
-		  	=> nrel_goto: .agent_of_finding_definitions_operator3A_context_logic_3;;
-			*);;    
-
-
-		-> .agent_of_finding_definitions_operator3A_context_logic_3
-			(*
-		  	<- waitReturn;;
-		  	
-		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr5;;
-
-		  	=> nrel_goto: .agent_of_finding_definitions_operator3B;;
-			*);;
-
-		-> .agent_of_finding_definitions_operator3A
-			(*
-		 	<- searchSetStr5;;
-
-		 	-> rrel_1: rrel_assign: rrel_scp_var: _elem;;
-		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-		 	-> rrel_3: rrel_fixed: rrel_scp_var: _param;;
-            		-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
-		 	-> rrel_5: rrel_fixed: rrel_scp_const: rrel_key_sc_element;;
-
-            		-> rrel_set_1: rrel_assign: rrel_scp_var: _set1;;
-
-	       		=> nrel_then: .agent_of_finding_definitions_operator3B;;
-	       		=> nrel_else: .agent_of_finding_definitions_operator_return;;
-	       		*);;
-
-		-> .agent_of_finding_definitions_operator3B 
-			(*
-		  	<- searchElStr3;;
-
-		  	-> rrel_1: rrel_fixed: rrel_scp_var: _set1;;
-		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
-		  	-> rrel_3: rrel_assign: rrel_scp_var: _inst;;
-
-		  	=> nrel_then: .agent_of_finding_definitions_operator3C;;
-		  	=> nrel_else: .agent_of_finding_definitions_operator6A;;
-			*);; 
-
-		-> .agent_of_finding_definitions_operator3C 
-			(*
-		 	<- eraseEl;;
-
-            		-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc;;
-
-            		=> nrel_goto: .agent_of_finding_definitions_operator3D1;;
-		 	*);;
-
-		-> .agent_of_finding_definitions_operator3D1 
-			(*
-		  	<- searchElStr3;;
-
-		  	-> rrel_1: rrel_fixed: rrel_scp_const: definition;;
-		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-		  	-> rrel_3: rrel_fixed: rrel_scp_var: _inst;;
-
-		  	=> nrel_then: .agent_of_finding_definitions_operator3E;;
-		  	=> nrel_else: .agent_of_finding_definitions_operator3D2;;
-			*);; 
-
-		-> .agent_of_finding_definitions_operator3D2 
-			(*
-			<- searchElStr3;;
-
-		  	-> rrel_1: rrel_fixed: rrel_scp_const: explanation;;
-		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-		  	-> rrel_3: rrel_fixed: rrel_scp_var: _inst;;
-
-		  	=> nrel_then: .agent_of_finding_definitions_operator3E;;
-		  	=> nrel_else: .agent_of_finding_definitions_operator3B;;
-			*);; 
-
-		-> .agent_of_finding_definitions_operator3E 
-			(*
-		 	<- genElStr3;;
-
-		 	-> rrel_1: rrel_fixed: rrel_scp_var: _answer_finding_definition;;
-		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-		 	-> rrel_3: rrel_fixed: rrel_scp_var: _inst;;
-
-            		=> nrel_goto: .agent_of_finding_definitions_operator3F;;
-            		*);;
-
-		-> .agent_of_finding_definitions_operator3F 
-			(*
-		 	<- searchSetStr5;;
-
-		 	-> rrel_1: rrel_fixed: rrel_scp_var: _inst;;
-		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-		 	-> rrel_3: rrel_fixed: rrel_scp_var: _param;;
-            		-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
-		 	-> rrel_5: rrel_fixed: rrel_scp_const: rrel_key_sc_element;;
-
-            		-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_finding_definition;;
-            		-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_finding_definition;;
-
-           		=> nrel_then: .agent_of_finding_definitions_operator3G1;;
-            		=> nrel_else: .agent_of_finding_definitions_operator_return;;
-            		*);;
-
-		-> .agent_of_finding_definitions_operator3G1 
-			(*
-			<- searchSetStr3;;
-
-		 	-> rrel_1: rrel_fixed: rrel_scp_const: definition;;
-		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-		 	-> rrel_3: rrel_fixed: rrel_scp_var: _inst;;
-
-            		-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_finding_definition;;
-
-            		=> nrel_then: .agent_of_finding_definitions_operator4A;;
-            		=> nrel_else: .agent_of_finding_definitions_operator3G2;;
-            		*);;
-
-		-> .agent_of_finding_definitions_operator3G2 
-			(*
-		 	<- searchSetStr3;;
-		 	
-		 	-> rrel_1: rrel_fixed: rrel_scp_const: explanation;;
-		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-		 	-> rrel_3: rrel_fixed: rrel_scp_var: _inst;;
-
-            		-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_finding_definition;;
-
-           		=> nrel_then: .agent_of_finding_definitions_operator4A_is_context_exist;;
-            		=> nrel_else: .agent_of_finding_definitions_operator3B;;
-            		*);;
-
-        	-> .agent_of_finding_definitions_operator4A_is_context_exist
-			(*
-			<- stringIfEq;;			
-			
-			-> rrel_1: rrel_fixed: rrel_scp_var:  _is_context_exist;;
-			-> rrel_2: rrel_fixed: rrel_scp_const: [true];;
-
-			=> nrel_then: .agent_of_finding_definitions_operator4A_finding_identifier_with_context;;
-			=> nrel_else: .agent_of_finding_definitions_operator4A;;
-			*);;    
-
-		-> .agent_of_finding_definitions_operator4A 
-			(*
-		  	<- call;;
-		  	
-		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_finding_identifier;;
-		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_finding_definitions_operator4A_params 
-				(*
-				-> rrel_1: rrel_fixed: rrel_scp_var: _inst;;
-				-> rrel_2: rrel_fixed: rrel_scp_var: _answer_finding_definition;;
-				*);;
-		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
-
-		  	=> nrel_goto: .agent_of_finding_definitions_operator4B;;
-			*);;
-
-		-> .agent_of_finding_definitions_operator4B 
-			(*
-		  	<- waitReturn;;
-		  	
-		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
-
-		  	=> nrel_goto: .agent_of_finding_definitions_operator5A;;
-			*);;  
-
-		-> .agent_of_finding_definitions_operator4A_finding_identifier_with_context 
-			(*
-		  	<- call;;
-
-		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_finding_identifier_with_context;;
-		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_finding_definitions_operator4A_finding_identifier_with_context_params 
-				(*
-				-> rrel_1: rrel_fixed: rrel_scp_var: _inst;;
-				-> rrel_2: rrel_fixed: rrel_scp_var: _answer_finding_definition;;
-				-> rrel_3: rrel_fixed: rrel_scp_var: _context;;
-				*);;
-		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr3;;
-
-		  	=> nrel_goto: .agent_of_finding_definitions_operator4B_with_context;;
-			*);;
-
-		-> .agent_of_finding_definitions_operator4B_with_context 
-			(*
-		  	<- waitReturn;;
-
-		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr3;;
-
-		  	=> nrel_goto: .agent_of_finding_definitions_operator5A_finding_translation_with_context;;
-			*);;  	                                                                                                         
-
-		-> .agent_of_finding_definitions_operator5A 
-			(*
-		  	<- call;;
-
-		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_finding_translation;;
-		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_finding_definitions_operator5A_params 
-		  		(*
-				-> rrel_1: rrel_fixed: rrel_scp_var: _inst;;
-				-> rrel_2: rrel_fixed: rrel_scp_var: _answer_finding_definition;;
-				*);;
-		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr2;;
-
-		  	=> nrel_goto: .agent_of_finding_definitions_operator5B;;
-			*);;
-
-		-> .agent_of_finding_definitions_operator5B 
-			(*
-			<- waitReturn;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _descr2;;
-
-		 	=> nrel_goto: .agent_of_finding_definitions_operator3B;;
-			*);;
-
-		-> .agent_of_finding_definitions_operator5A_finding_translation_with_context 
-			(*
-		  	<- call;;
-		  
-		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_finding_translation_with_context;;
-		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_finding_definitions_operator5A_finding_translation_with_context_params 
-		  		(*
-				-> rrel_1: rrel_fixed: rrel_scp_var: _inst;;
-				-> rrel_2: rrel_fixed: rrel_scp_var: _answer_finding_definition;;
-				-> rrel_3: rrel_fixed: rrel_scp_var: _context;;
-				*);;
-		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr4;;
-
-		  	=> nrel_goto: .agent_of_finding_definitions_operator5B_with_context;;
-			*);;
-
-		-> .agent_of_finding_definitions_operator5B_with_context 
-			(*
-			<- waitReturn;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _descr4;;
-
-		 	=> nrel_goto: .agent_of_finding_definitions_operator3B;;
-			*);;	
-
-		-> .agent_of_finding_definitions_operator6A 
-			(*
-			<- genElStr3;;
-
-		 	-> rrel_1: rrel_fixed: rrel_scp_var: _answer_finding_definition;;
-		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-		 	-> rrel_3: rrel_fixed: rrel_scp_const: rrel_key_sc_element;;
-
-            		=> nrel_goto: .agent_of_finding_definitions_operator6B;;
-            		*);;
-
-		-> .agent_of_finding_definitions_operator6B 
-			(*
-		 	<- genElStr3;;
-
-		 	-> rrel_1: rrel_fixed: rrel_scp_var: _answer_finding_definition;;
-		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-		 	-> rrel_3: rrel_fixed: rrel_scp_var: _param;;
-
-            		=> nrel_goto: .agent_of_finding_definitions_operator6C;;
-            		*);;
-
-		-> .agent_of_finding_definitions_operator6C 
-			(*
-		 	<- genElStr3;;
-
-		 	-> rrel_1: rrel_fixed: rrel_scp_var: _answer_finding_definition;;
-		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-		 	-> rrel_3: rrel_fixed: rrel_scp_const: definition;;
-
-            		=> nrel_goto: .agent_of_finding_definitions_operator6D;;
-            		*);;
-
-		-> .agent_of_finding_definitions_operator6D 
-			(*
-		 	<- genElStr3;;
-
-		 	-> rrel_1: rrel_fixed: rrel_scp_var: _answer_finding_definition;;
-		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-		 	-> rrel_3: rrel_fixed: rrel_scp_const: explanation;;
-
-            		=> nrel_goto: .agent_of_finding_definitions_operator_gen_answer_finding_definition;;
-            		*);;
-
-		-> .agent_of_finding_definitions_operator_gen_answer_finding_definition 
-			(*
-			<- genElStr5;;
-
-		  	-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
-		  	-> rrel_2: rrel_assign: rrel_const: rrel_common: rrel_scp_var: _arc;;
-		  	-> rrel_3: rrel_fixed: rrel_scp_var: _answer_finding_definition;;
-		  	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
-		  	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_answer;;
-
-		  	=> nrel_goto: .agent_of_finding_definitions_operator_return;;
-			*);;
-					
-		-> .agent_of_finding_definitions_operator_return 
-			(*
-		  	<- return;;
-			*);;
-		*);;
+<- scp_program;
+<- agent_scp_program;
+-> rrel_key_sc_element: .._process1;;
+
+agent_of_finding_definitions = [*
+.._process1
+_<- scp_process;
+
+_-> rrel_1:: rrel_in:: _event;
+_-> rrel_2:: rrel_in:: _input_arc;
+_<= nrel_decomposition_of_action:: .._actions (*
+
+	_-> rrel_1:: .._agent_of_finding_definitions_operator1A (*
+		_<- searchElStr3;;
+		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _temp;;
+		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: _input_arc;;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _quest;;
+
+		_=> nrel_goto:: .._agent_of_finding_definitions_operator1B;;
 	*);;
 
+	_-> .._agent_of_finding_definitions_operator1B (*
+		_<- searchElStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: question_of_finding_definitions;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _quest;;
+
+		_=> nrel_then:: .._agent_of_finding_definitions_operator2A;;
+		_=> nrel_else:: .._agent_of_finding_definitions_operator_return;;
+	*);;
+
+	_-> .._agent_of_finding_definitions_operator2A (*
+		_<- searchElStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _quest;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _param;;
+
+		_=> nrel_then:: .._agent_of_finding_definitions_operator2A_find_context;;
+		_=> nrel_else:: .._agent_of_finding_definitions_operator_return;;
+	*);;
+
+	_-> .._agent_of_finding_definitions_operator_return (*
+		_<- return;;
+
+	*);;
+
+	_-> .._agent_of_finding_definitions_operator2A_find_context (*
+		_<- searchElStr5;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _quest;;
+		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _context;;
+		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_context_of_action;;
+
+		_=> nrel_then:: .._agent_of_finding_definitions_operator2A_set_context_existence_to_true;;
+		_=> nrel_else:: .._agent_of_finding_definitions_operator2A_set_context_existence_to_false;;
+	*);;
+
+	_-> .._agent_of_finding_definitions_operator2A_set_context_existence_to_true (*
+		_<- contAssign;;
+		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _is_context_exist;;
+		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [true];;
+
+		_=> nrel_goto:: .._agent_of_finding_definitions_operator2B;;
+	*);;
+
+	_-> .._agent_of_finding_definitions_operator2A_set_context_existence_to_false (*
+		_<- contAssign;;
+		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _is_context_exist;;
+		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [false];;
+
+		_=> nrel_goto:: .._agent_of_finding_definitions_operator2B;;
+	*);;
+
+	_-> .._agent_of_finding_definitions_operator2B (*
+		_<- genEl;;
+		_-> rrel_1:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: _answer_finding_definition;;
+
+		_=> nrel_goto:: .._agent_of_finding_definitions_operator3A_is_context_exist;;
+	*);;
+
+	_-> .._agent_of_finding_definitions_operator3A_is_context_exist (*
+		_<- stringIfEq;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _is_context_exist;;
+		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [true];;
+
+		_=> nrel_then:: .._agent_of_finding_definitions_operator3A_context_logic_1;;
+		_=> nrel_else:: .._agent_of_finding_definitions_operator3A;;
+	*);;
+
+	_-> .._agent_of_finding_definitions_operator3A_context_logic_1 (*
+		_<- searchSetStr5;;
+		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _elem;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _param;;
+		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: rrel_key_sc_element;;
+		_-> rrel_assign:: rrel_scp_var:: rrel_set_1:: _all_key_sc_elems;;
+
+		_=> nrel_then:: .._agent_of_finding_definitions_operator3A_context_logic_2;;
+		_=> nrel_else:: .._agent_of_finding_definitions_operator_return;;
+	*);;
+
+	_-> .._agent_of_finding_definitions_operator3A (*
+		_<- searchSetStr5;;
+		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _elem;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _param;;
+		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: rrel_key_sc_element;;
+		_-> rrel_assign:: rrel_scp_var:: rrel_set_1:: _set1;;
+
+		_=> nrel_then:: .._agent_of_finding_definitions_operator3B;;
+		_=> nrel_else:: .._agent_of_finding_definitions_operator_return;;
+	*);;
+
+	_-> .._agent_of_finding_definitions_operator3B (*
+		_<- searchElStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _set1;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _inst;;
+
+		_=> nrel_then:: .._agent_of_finding_definitions_operator3C;;
+		_=> nrel_else:: .._agent_of_finding_definitions_operator6A;;
+	*);;
+
+	_-> .._agent_of_finding_definitions_operator3C (*
+		_<- eraseEl;;
+		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _arc;;
+
+		_=> nrel_goto:: .._agent_of_finding_definitions_operator3D1;;
+	*);;
+
+	_-> .._agent_of_finding_definitions_operator6A (*
+		_<- genElStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_finding_definition;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: rrel_key_sc_element;;
+
+		_=> nrel_goto:: .._agent_of_finding_definitions_operator6B;;
+	*);;
+
+	_-> .._agent_of_finding_definitions_operator6B (*
+		_<- genElStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_finding_definition;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _param;;
+
+		_=> nrel_goto:: .._agent_of_finding_definitions_operator6C;;
+	*);;
+
+	_-> .._agent_of_finding_definitions_operator6C (*
+		_<- genElStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_finding_definition;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: definition;;
+
+		_=> nrel_goto:: .._agent_of_finding_definitions_operator6D;;
+	*);;
+
+	_-> .._agent_of_finding_definitions_operator6D (*
+		_<- genElStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_finding_definition;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: explanation;;
+
+		_=> nrel_goto:: .._agent_of_finding_definitions_operator_gen_answer_finding_definition;;
+	*);;
+
+	_-> .._agent_of_finding_definitions_operator_gen_answer_finding_definition (*
+		_<- genElStr5;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _quest;;
+		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _answer_finding_definition;;
+		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_answer;;
+
+		_=> nrel_goto:: .._agent_of_finding_definitions_operator_return;;
+	*);;
+
+	_-> .._agent_of_finding_definitions_operator3D1 (*
+		_<- searchElStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: definition;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _inst;;
+
+		_=> nrel_then:: .._agent_of_finding_definitions_operator3E;;
+		_=> nrel_else:: .._agent_of_finding_definitions_operator3D2;;
+	*);;
+
+	_-> .._agent_of_finding_definitions_operator3E (*
+		_<- genElStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_finding_definition;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _inst;;
+
+		_=> nrel_goto:: .._agent_of_finding_definitions_operator3F;;
+	*);;
+
+	_-> .._agent_of_finding_definitions_operator3D2 (*
+		_<- searchElStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: explanation;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _inst;;
+
+		_=> nrel_then:: .._agent_of_finding_definitions_operator3E;;
+		_=> nrel_else:: .._agent_of_finding_definitions_operator3B;;
+	*);;
+
+	_-> .._agent_of_finding_definitions_operator3F (*
+		_<- searchSetStr5;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _inst;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _param;;
+		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: rrel_key_sc_element;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: rrel_set_4:: _answer_finding_definition;;
+
+		_=> nrel_then:: .._agent_of_finding_definitions_operator3G1;;
+		_=> nrel_else:: .._agent_of_finding_definitions_operator_return;;
+	*);;
+
+	_-> .._agent_of_finding_definitions_operator3G1 (*
+		_<- searchSetStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: definition;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _inst;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_finding_definition;;
+
+		_=> nrel_then:: .._agent_of_finding_definitions_operator4A;;
+		_=> nrel_else:: .._agent_of_finding_definitions_operator3G2;;
+	*);;
+
+	_-> .._agent_of_finding_definitions_operator4A (*
+		_<- call;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_finding_identifier;;
+		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._agent_of_finding_definitions_param0 (*
+			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _inst;;
+			_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _answer_finding_definition;;
+		*);;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _descr1;;
+
+		_=> nrel_goto:: .._agent_of_finding_definitions_operator4B;;
+	*);;
+
+	_-> .._agent_of_finding_definitions_operator3G2 (*
+		_<- searchSetStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: explanation;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _inst;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_finding_definition;;
+
+		_=> nrel_then:: .._agent_of_finding_definitions_operator4A_is_context_exist;;
+		_=> nrel_else:: .._agent_of_finding_definitions_operator3B;;
+	*);;
+
+	_-> .._agent_of_finding_definitions_operator4A_is_context_exist (*
+		_<- stringIfEq;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _is_context_exist;;
+		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [true];;
+
+		_=> nrel_then:: .._agent_of_finding_definitions_operator4A_finding_identifier_with_context;;
+		_=> nrel_else:: .._agent_of_finding_definitions_operator4A;;
+	*);;
+
+	_-> .._agent_of_finding_definitions_operator4A_finding_identifier_with_context (*
+		_<- call;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_finding_identifier_with_context;;
+		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._agent_of_finding_definitions_param1 (*
+			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _inst;;
+			_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _answer_finding_definition;;
+			_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _context;;
+		*);;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _descr3;;
+
+		_=> nrel_goto:: .._agent_of_finding_definitions_operator4B_with_context;;
+	*);;
+
+	_-> .._agent_of_finding_definitions_operator4B_with_context (*
+		_<- waitReturn;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _descr3;;
+
+		_=> nrel_goto:: .._agent_of_finding_definitions_operator5A_finding_translation_with_context;;
+	*);;
+
+	_-> .._agent_of_finding_definitions_operator5A_finding_translation_with_context (*
+		_<- call;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_finding_translation_with_context;;
+		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._agent_of_finding_definitions_param2 (*
+			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _inst;;
+			_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _answer_finding_definition;;
+			_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _context;;
+		*);;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _descr4;;
+
+		_=> nrel_goto:: .._agent_of_finding_definitions_operator5B_with_context;;
+	*);;
+
+	_-> .._agent_of_finding_definitions_operator5B_with_context (*
+		_<- waitReturn;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _descr4;;
+
+		_=> nrel_goto:: .._agent_of_finding_definitions_operator3B;;
+	*);;
+
+	_-> .._agent_of_finding_definitions_operator4B (*
+		_<- waitReturn;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _descr1;;
+
+		_=> nrel_goto:: .._agent_of_finding_definitions_operator5A;;
+	*);;
+
+	_-> .._agent_of_finding_definitions_operator5A (*
+		_<- call;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_finding_translation;;
+		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._agent_of_finding_definitions_param3 (*
+			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _inst;;
+			_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _answer_finding_definition;;
+		*);;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _descr2;;
+
+		_=> nrel_goto:: .._agent_of_finding_definitions_operator5B;;
+	*);;
+
+	_-> .._agent_of_finding_definitions_operator5B (*
+		_<- waitReturn;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _descr2;;
+
+		_=> nrel_goto:: .._agent_of_finding_definitions_operator3B;;
+	*);;
+
+	_-> .._agent_of_finding_definitions_operator3A_context_logic_2 (*
+		_<- call;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_finding_intersection_of_two_sets;;
+		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._agent_of_finding_definitions_param4 (*
+			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _all_key_sc_elems;;
+			_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _context;;
+			_-> rrel_3:: rrel_assign:: rrel_scp_var:: _set1;;
+		*);;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _descr5;;
+
+		_=> nrel_goto:: .._agent_of_finding_definitions_operator3A_context_logic_3;;
+	*);;
+
+	_-> .._agent_of_finding_definitions_operator3A_context_logic_3 (*
+		_<- waitReturn;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _descr5;;
+
+		_=> nrel_goto:: .._agent_of_finding_definitions_operator3B;;
+	*);;
+
+*);;
 
 *];;

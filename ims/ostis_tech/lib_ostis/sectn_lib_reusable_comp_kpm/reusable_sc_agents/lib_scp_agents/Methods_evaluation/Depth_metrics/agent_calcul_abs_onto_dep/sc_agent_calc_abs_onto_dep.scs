@@ -5,6 +5,9 @@ sc_agent_of_calculation_absolute_ontology_depths
 
 <- abstract_sc_agent;
 
+=> nrel_sc_agent_action_class:
+    action_to_calculate_absolute_ontology_depths;
+
 => nrel_primary_initiation_condition: 
 	(sc_event_add_output_arc => question_initiated);
 

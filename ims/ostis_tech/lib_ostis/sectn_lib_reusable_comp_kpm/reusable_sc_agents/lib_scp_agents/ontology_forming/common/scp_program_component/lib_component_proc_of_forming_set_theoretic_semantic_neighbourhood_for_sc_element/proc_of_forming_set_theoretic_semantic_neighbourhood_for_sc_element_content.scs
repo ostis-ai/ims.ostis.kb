@@ -1,257 +1,207 @@
 lib_component_proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element =  [*
-scp_program -> proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element
-	(*
-	-> rrel_params: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_params 
-		(*
-		-> rrel_1: rrel_in: _ontology_element;;
-		-> rrel_2: rrel_in: _ontology;;
-		*);;
+proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element
+<- scp_program;
+-> rrel_key_sc_element: .._process1;;
 
-	-> rrel_operators: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator_set
-		(*
-		-> rrel_init: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_notrel1
-			(*
-			<- ifType;;
+proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element = [*
+.._process1
+_<- scp_process;
 
-			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_not_relation: _ontology_element;;
+_-> rrel_1:: rrel_in:: _ontology_element;
+_-> rrel_2:: rrel_in:: _ontology;
+_<= nrel_decomposition_of_action:: .._actions (*
 
-			=> nrel_then: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_notrel2;;
-			=> nrel_else: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_rel1;;
-			*);;
+	_-> rrel_1:: .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_notrel1 (*
+		_<- ifType;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _ontology_element;;
 
-		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_notrel2
-			(*
-			<- searchSetStr5;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _ontology_element;;
-			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
-			-> rrel_3: rrel_assign: rrel_scp_var: rrel_node: rrel_const: _elem;;
-			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
-			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_example;;
-
-			-> rrel_set_2: rrel_fixed: rrel_scp_var: _ontology;;
-			-> rrel_set_3: rrel_fixed: rrel_scp_var: _ontology;;
-			-> rrel_set_4: rrel_fixed: rrel_scp_var: _ontology;;
-
-			=> nrel_then: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_notrel3;;
-			=> nrel_else: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax1;;
-			*);;
-
-		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_notrel3
-			(*
-			<- genElStr3;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _ontology;;
-			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
-			-> rrel_3: rrel_fixed: rrel_scp_const: rrel_example;;
-
-			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax1;;
-			*);;
-
-		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_rel1
-			(*
-			<- ifType;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_no_role_relation: _ontology_element;;
-
-			=> nrel_then: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_rel2;;
-			=> nrel_else: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_return;;
-			*);;
-
-		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_rel2
-			(*
-			<- call;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_finding_definitional_domain;;
-			-> rrel_2: rrel_fixed: rrel_scp_const: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_rel2_params
-				(*
-				-> rrel_1: rrel_fixed: rrel_scp_var: _ontology_element;;
-				-> rrel_2: rrel_fixed: rrel_scp_var: _ontology;;
-				*);;
-			-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
-
-			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_rel3;;
-			*);;
-
-		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_rel3
-			(*
-			<- waitReturn;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
-
-			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_rel4;;
-			*);;
-
-		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_rel4
-			(*
-			<- searchSetStr3;;
-
-			-> rrel_1: rrel_assign: rrel_scp_var: rrel_not_relation: _set;;
-			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
-			-> rrel_3: rrel_fixed: rrel_scp_var: _ontology_element;;
-
-			-> rrel_set_1: rrel_fixed: rrel_scp_var: _ontology;;
-			-> rrel_set_2: rrel_fixed: rrel_scp_var: _ontology;;
-
-			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax1;;
-			*);;
-
-		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax1
-			(*
-			<- genElStr3;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _ontology;;
-			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
-			-> rrel_3: rrel_fixed: rrel_scp_var: _ontology_element;;
-
-			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_0;;
-			*);;
-
-		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_0
-			(*
-			<- searchSetStr3;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_const: taxonomy_relation;;
-			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
-			-> rrel_3: rrel_assign: rrel_scp_var: _elem;;
-
-			-> rrel_set_3: rrel_assign: rrel_scp_var: _set_tax_rel;;
-
-			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_1;;
-			*);;
-
-		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_1
-			(*
-			<- searchElStr3;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _set_tax_rel;;
-			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
-			-> rrel_3: rrel_assign: rrel_scp_var: _tax_rel;;
-
-			=> nrel_then: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_2;;
-			=> nrel_else: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_return;;
-			*);;
-
-		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_2
-			(*
-			<- eraseEl;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _arc;;
-
-			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_3;;
-			*);;
-
-		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_3
-			(*
-			<- searchElStr3;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_const: binary_relation;;
-			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
-			-> rrel_3: rrel_fixed: rrel_scp_var: _tax_rel;;
-
-			=> nrel_then: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_4;;
-			=> nrel_else: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_5;;
-			*);;
-
-		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_4
-			(*
-			<- searchSetStr5;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _ontology_element;;
-			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
-			-> rrel_3: rrel_assign: rrel_scp_var: _elem;;
-			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
-			-> rrel_5: rrel_fixed: rrel_scp_var: _tax_rel;;
-
-			-> rrel_set_2: rrel_fixed: rrel_scp_var: _ontology;;
-			-> rrel_set_3: rrel_fixed: rrel_scp_var: _ontology;;
-			-> rrel_set_4: rrel_fixed: rrel_scp_var: _ontology;;
-
-			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_7;;
-			*);;
-
-		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_5
-			(*
-			<- searchSetStr5;;
-
-			-> rrel_1: rrel_assign: rrel_scp_var: _elem;;
-			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
-			-> rrel_3: rrel_fixed: rrel_scp_var: _ontology_element;;
-			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
-			-> rrel_5: rrel_fixed: rrel_scp_var: _tax_rel;;
-
-			-> rrel_set_1: rrel_assign: rrel_scp_var: _set_rel_elems;;
-			-> rrel_set_2: rrel_fixed: rrel_scp_var: _ontology;;
-			-> rrel_set_4: rrel_fixed: rrel_scp_var: _ontology;;
-
-			=> nrel_then: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_6;;
-			=> nrel_else: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_1;;
-			*);;
-
-		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_6
-			(*
-			<- searchSetStr3;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _set_rel_elems;;
-			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
-			-> rrel_3: rrel_assign: rrel_scp_var: _elem;;
-			
-			-> rrel_set_3: rrel_fixed: rrel_scp_var: _ontology;;
-			
-			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle2_1;;
-			*);;
-
-		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_7
-			(*
-			<- genElStr3;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _ontology;;
-			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
-			-> rrel_3: rrel_fixed: rrel_scp_var: _tax_rel;;
-
-			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_1;;
-			*);;
-
-		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle2_1
-			(*
-			<- searchElStr3;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _set_rel_elems;;
-			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
-			-> rrel_3: rrel_assign: rrel_scp_var: rrel_node: rrel_const: _rel_elems;;
-
-			=> nrel_then: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle2_2;;
-			=> nrel_else: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_7;;
-			*);;
-
-		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle2_2
-			(*
-			<- eraseEl;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _arc;;
-
-			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle2_3;;
-			*);;
-
-		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle2_3
-			(*
-			<- searchSetStr3;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _rel_elems;;
-			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
-			-> rrel_3: rrel_assign: rrel_scp_var: _elem;;
-
-			-> rrel_set_2: rrel_fixed: rrel_scp_var: _ontology;;
-			-> rrel_set_3: rrel_fixed: rrel_scp_var: _ontology;;
-
-			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle2_1;;
-			*);;
-
-		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_return
-			(*
-			<- return;;
-			*);;
-		*);;
+		_=> nrel_then:: .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_notrel2;;
+		_=> nrel_else:: .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_rel1;;
 	*);;
 
+	_-> .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_notrel2 (*
+		_<- searchSetStr5;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _ontology_element;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: _elem;;
+		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: rrel_example;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: rrel_set_3:: rrel_set_4:: _ontology;;
+
+		_=> nrel_then:: .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_notrel3;;
+		_=> nrel_else:: .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax1;;
+	*);;
+
+	_-> .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_rel1 (*
+		_<- ifType;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _ontology_element;;
+
+		_=> nrel_then:: .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_rel2;;
+		_=> nrel_else:: .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_return;;
+	*);;
+
+	_-> .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_rel2 (*
+		_<- call;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_finding_definitional_domain;;
+		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_param0 (*
+			_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _ontology_element;;
+			_-> rrel_2:: rrel_fixed:: rrel_scp_const:: _ontology;;
+		*);;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _descr1;;
+
+		_=> nrel_goto:: .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_rel3;;
+	*);;
+
+	_-> .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_return (*
+		_<- return;;
+
+	*);;
+
+	_-> .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_rel3 (*
+		_<- waitReturn;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _descr1;;
+
+		_=> nrel_goto:: .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_rel4;;
+	*);;
+
+	_-> .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_rel4 (*
+		_<- searchSetStr3;;
+		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _set;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _ontology_element;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_1:: rrel_set_2:: _ontology;;
+
+		_=> nrel_goto:: .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax1;;
+	*);;
+
+	_-> .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax1 (*
+		_<- genElStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _ontology;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _ontology_element;;
+
+		_=> nrel_goto:: .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_0;;
+	*);;
+
+	_-> .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_0 (*
+		_<- searchSetStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: taxonomy_relation;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _elem;;
+		_-> rrel_assign:: rrel_scp_var:: rrel_set_3:: _set_tax_rel;;
+
+		_=> nrel_goto:: .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_1;;
+	*);;
+
+	_-> .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_1 (*
+		_<- searchElStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _set_tax_rel;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _tax_rel;;
+
+		_=> nrel_then:: .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_2;;
+		_=> nrel_else:: .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_return;;
+	*);;
+
+	_-> .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_2 (*
+		_<- eraseEl;;
+		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _arc;;
+
+		_=> nrel_goto:: .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_3;;
+	*);;
+
+	_-> .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_3 (*
+		_<- searchElStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: binary_relation;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _tax_rel;;
+
+		_=> nrel_then:: .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_4;;
+		_=> nrel_else:: .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_5;;
+	*);;
+
+	_-> .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_4 (*
+		_<- searchSetStr5;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _ontology_element;;
+		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _elem;;
+		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_5:: rrel_fixed:: rrel_scp_var:: _tax_rel;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: rrel_set_3:: rrel_set_4:: _ontology;;
+
+		_=> nrel_goto:: .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_7;;
+	*);;
+
+	_-> .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_5 (*
+		_<- searchSetStr5;;
+		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _elem;;
+		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _ontology_element;;
+		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_5:: rrel_fixed:: rrel_scp_var:: _tax_rel;;
+		_-> rrel_assign:: rrel_scp_var:: rrel_set_1:: _set_rel_elems;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: rrel_set_4:: _ontology;;
+
+		_=> nrel_then:: .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_6;;
+		_=> nrel_else:: .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_1;;
+	*);;
+
+	_-> .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_6 (*
+		_<- searchSetStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _set_rel_elems;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _elem;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_3:: _ontology;;
+
+		_=> nrel_goto:: .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle2_1;;
+	*);;
+
+	_-> .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle2_1 (*
+		_<- searchElStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _set_rel_elems;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_3:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: _rel_elems;;
+
+		_=> nrel_then:: .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle2_2;;
+		_=> nrel_else:: .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_7;;
+	*);;
+
+	_-> .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle2_2 (*
+		_<- eraseEl;;
+		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _arc;;
+
+		_=> nrel_goto:: .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle2_3;;
+	*);;
+
+	_-> .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_7 (*
+		_<- genElStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _ontology;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _tax_rel;;
+
+		_=> nrel_goto:: .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_1;;
+	*);;
+
+	_-> .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle2_3 (*
+		_<- searchSetStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _rel_elems;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _elem;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: rrel_set_3:: _ontology;;
+
+		_=> nrel_goto:: .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle2_1;;
+	*);;
+
+	_-> .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_notrel3 (*
+		_<- genElStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _ontology;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: rrel_example;;
+
+		_=> nrel_goto:: .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax1;;
+	*);;
+
+*);;
+
+*];;
 *];;
