@@ -1,201 +1,170 @@
 lib_component_proc_of_calculation_ninetieth_percentile =  [*
-scp_program -> proc_of_calculation_ninetieth_percentile
-	(*
-  	-> rrel_params: .proc_of_calculation_ninetieth_percentile_params 
-		(*
-		-> rrel_1: rrel_in: _input_values;;
-		-> rrel_2: rrel_in: _ninetieth_percentile_value;;
-    		*);;
+proc_of_calculation_ninetieth_percentile
+<- scp_program;
+-> rrel_key_sc_element: .._process1;;
 
-	-> rrel_operators: .proc_of_calculation_ninetieth_percentile_operator_set
-    		(*
-    		-> rrel_init: .proc_of_calculation_ninetieth_percentile_operator_sort_input_values
-			(*
-		  	<- call;;
+proc_of_calculation_ninetieth_percentile = [*
+.._process1
+_<- scp_process;
 
-		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_sorting_set_of_values;;
-		  	-> rrel_2: rrel_fixed: rrel_scp_const: .proc_of_calculation_ninetieth_percentile_operator_sort_input_values_params 
-				(*
-				-> rrel_1: rrel_fixed: rrel_scp_var: _input_values;;
-				*);;
-		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
+_-> rrel_1:: rrel_in:: _input_values;
+_-> rrel_2:: rrel_in:: _ninetieth_percentile_value;
+_<= nrel_decomposition_of_action:: .._actions (*
 
-		  	=> nrel_goto: .proc_of_calculation_ninetieth_percentile_operator_waitreturn_sorting_input_values;;
-			*);;
-
-		-> .proc_of_calculation_ninetieth_percentile_operator_waitreturn_sorting_input_values
-			(*
-		  	<- waitReturn;;
-
-		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
-
-		  	=> nrel_goto: .proc_of_calculation_ninetieth_percentile_operator_D1_gen_index;;
-			*);;			
-
-		-> .proc_of_calculation_ninetieth_percentile_operator_D1_gen_index 
-	    		(*
-			<- contAssign;;
-
-			-> rrel_1: rrel_assign: rrel_scp_var: _index;;
-			-> rrel_2: rrel_fixed: rrel_scp_const: [0];;
-
-			=> nrel_goto: .proc_of_calculation_ninetieth_percentile_operator_D1_gen_result_value;;
-			*);;
-
-		-> .proc_of_calculation_ninetieth_percentile_operator_D1_gen_result_value 
-	    		(*
-			<- contAssign;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _ninetieth_percentile_value;;
-			-> rrel_2: rrel_fixed: rrel_scp_const: [0];;
-
-			=> nrel_goto: .proc_of_calculation_ninetieth_percentile_operator_D2;;
-			*);;	
-
-		-> .proc_of_calculation_ninetieth_percentile_operator_D2
-			(*
-			<- searchElStr5;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _input_values;;
-			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
-			-> rrel_3: rrel_assign: rrel_scp_var: _length;;
-			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
-			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_length;;
-
-			=> nrel_goto: .proc_of_calculation_ninetieth_percentile_operator_D3;;
-			*);;	
-
-		-> .proc_of_calculation_ninetieth_percentile_operator_D3 
-			(*
-	        	<- contMult;;
-
-	        	-> rrel_1: rrel_assign: rrel_scp_var: _ninetieth_percentile_index;;
-	        	-> rrel_2: rrel_fixed: rrel_scp_var: _length;;
-			-> rrel_3: rrel_fixed: rrel_scp_const: [0,1];;
-	         		
-	        	=> nrel_goto: .proc_of_calculation_ninetieth_percentile_operator_D4;;
-			*);;	
-
-		-> .proc_of_calculation_ninetieth_percentile_operator_D4
-    			(*
-			<- searchElStr5;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _input_values;;
-			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-			-> rrel_3: rrel_assign: rrel_scp_var: _last_elem;;
-			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
-			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_last;;
-
-        		=> nrel_then: .proc_of_calculation_ninetieth_percentile_operator_D5;;
-        		=> nrel_else: .proc_of_calculation_ninetieth_percentile_operator_return;;
-        		*);;
-
-		-> .proc_of_calculation_ninetieth_percentile_operator_D5
-	    		(*
-			<- ifGr;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _ninetieth_percentile_index;;
-			-> rrel_2: rrel_fixed: rrel_scp_var: _index;;
-
-			=> nrel_then: .proc_of_calculation_ninetieth_percentile_operator_D5_is_ninetieth_percentile_int;;
-			=> nrel_else: .proc_of_calculation_ninetieth_percentile_operator_D9_find_second_value;;  
-			*);;
-
-		-> .proc_of_calculation_ninetieth_percentile_operator_D5_is_ninetieth_percentile_int
-	    		(*
-			<- ifEq;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _ninetieth_percentile_index;;
-			-> rrel_2: rrel_fixed: rrel_scp_var: _index;;
-
-			=> nrel_then: .proc_of_calculation_ninetieth_percentile_operator_D10_get_int_value;;  
-			=> nrel_else: .proc_of_calculation_ninetieth_percentile_operator_D6;;
-			*);;		
-
-		-> .proc_of_calculation_ninetieth_percentile_operator_D6
-			(*
-			<- searchElStr5;;
-
-			-> rrel_1: rrel_assign: rrel_scp_var: _prev_elem;;
-			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
-			-> rrel_3: rrel_fixed: rrel_scp_var: _last_elem;;
-			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
-			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_be_more;;
-
-			=> nrel_goto: .proc_of_calculation_ninetieth_percentile_operator_D7;;
-			*);;
-
-		-> .proc_of_calculation_ninetieth_percentile_operator_D7 
-			(*
-	        	<- contAdd;;
-
-	        	-> rrel_1: rrel_fixed: rrel_scp_var: _index;;
-	        	-> rrel_2: rrel_fixed: rrel_scp_var: _index;;
-			-> rrel_3: rrel_fixed: rrel_scp_const: [1];;
-	         		
-	        	=> nrel_goto: .proc_of_calculation_ninetieth_percentile_operator_D8;;
-			*);;	
-
-		-> .proc_of_calculation_ninetieth_percentile_operator_D8
-			(*
-			<- varAssign;;
-
-			-> rrel_1: rrel_assign: rrel_scp_var: _last_elem;;
-			-> rrel_2: rrel_fixed: rrel_scp_var: _prev_elem;;
-
-			=> nrel_goto: .proc_of_calculation_ninetieth_percentile_operator_D5;;
-			*);;		
-
-		-> .proc_of_calculation_ninetieth_percentile_operator_D10_get_int_value
-			(*
-			<- contAssign;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _median_value;;
-			-> rrel_2: rrel_fixed: rrel_scp_var: _last_elem;;
-
-			=> nrel_goto: .proc_of_calculation_ninetieth_percentile_operator_return;;
-			*);;		
-
-		-> .proc_of_calculation_ninetieth_percentile_operator_D9_find_second_value	
-			(*
-			<- searchElStr5;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _last_elem;;
-			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
-			-> rrel_3: rrel_assign: rrel_scp_var: _next_elem;;
-			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
-			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_be_more;;
-
-			=> nrel_goto: .proc_of_calculation_ninetieth_percentile_operator_D10;;
-			*);;
-
-		-> .proc_of_calculation_ninetieth_percentile_operator_D10 
-			(*
-	        	<- contAdd;;
-
-	        	-> rrel_1: rrel_assign: rrel_scp_var: _sum_of_elem;;
-	        	-> rrel_2: rrel_fixed: rrel_scp_var: _next_elem;;
-			-> rrel_3: rrel_fixed: rrel_scp_var: _last_elem;;
-	         		
-	        	=> nrel_goto: .proc_of_calculation_ninetieth_percentile_operator_D11_find_result_value;;
-			*);;
-
-		-> .proc_of_calculation_ninetieth_percentile_operator_D11_find_result_value 
-			(*
-	        	<- contDiv;;
-
-		        -> rrel_1: rrel_fixed: rrel_scp_var: _ninetieth_percentile_value;;
-		        -> rrel_2: rrel_fixed: rrel_scp_var: _sum_of_elem;;
-			-> rrel_3: rrel_fixed: rrel_scp_const: [2];;
-	         		
-	        	=> nrel_goto: .proc_of_calculation_ninetieth_percentile_operator_return;;
-			*);;			
-
-		-> .proc_of_calculation_ninetieth_percentile_operator_return 
-			(*
-			<- return;;
-			*);;
+	_-> rrel_1:: .._proc_of_calculation_ninetieth_percentile_operator_sort_input_values (*
+		_<- call;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_sorting_set_of_values;;
+		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._proc_of_calculation_ninetieth_percentile_param0 (*
+			_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _input_values;;
 		*);;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _descr1;;
+
+		_=> nrel_goto:: .._proc_of_calculation_ninetieth_percentile_operator_waitreturn_sorting_input_values;;
 	*);;
 
+	_-> .._proc_of_calculation_ninetieth_percentile_operator_waitreturn_sorting_input_values (*
+		_<- waitReturn;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _descr1;;
+
+		_=> nrel_goto:: .._proc_of_calculation_ninetieth_percentile_operator_D1_gen_index;;
+	*);;
+
+	_-> .._proc_of_calculation_ninetieth_percentile_operator_D1_gen_index (*
+		_<- contAssign;;
+		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _index;;
+		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [0];;
+
+		_=> nrel_goto:: .._proc_of_calculation_ninetieth_percentile_operator_D1_gen_result_value;;
+	*);;
+
+	_-> .._proc_of_calculation_ninetieth_percentile_operator_D1_gen_result_value (*
+		_<- contAssign;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _ninetieth_percentile_value;;
+		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [0];;
+
+		_=> nrel_goto:: .._proc_of_calculation_ninetieth_percentile_operator_D2;;
+	*);;
+
+	_-> .._proc_of_calculation_ninetieth_percentile_operator_D2 (*
+		_<- searchElStr5;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _input_values;;
+		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _length;;
+		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_length;;
+
+		_=> nrel_goto:: .._proc_of_calculation_ninetieth_percentile_operator_D3;;
+	*);;
+
+	_-> .._proc_of_calculation_ninetieth_percentile_operator_D3 (*
+		_<- contMult;;
+		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _ninetieth_percentile_index;;
+		_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _length;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: [0,1];;
+
+		_=> nrel_goto:: .._proc_of_calculation_ninetieth_percentile_operator_D4;;
+	*);;
+
+	_-> .._proc_of_calculation_ninetieth_percentile_operator_D4 (*
+		_<- searchElStr5;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _input_values;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _last_elem;;
+		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: rrel_last;;
+
+		_=> nrel_then:: .._proc_of_calculation_ninetieth_percentile_operator_D5;;
+		_=> nrel_else:: .._proc_of_calculation_ninetieth_percentile_operator_return;;
+	*);;
+
+	_-> .._proc_of_calculation_ninetieth_percentile_operator_D5 (*
+		_<- ifGr;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _ninetieth_percentile_index;;
+		_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _index;;
+
+		_=> nrel_then:: .._proc_of_calculation_ninetieth_percentile_operator_D5_is_ninetieth_percentile_int;;
+		_=> nrel_else:: .._proc_of_calculation_ninetieth_percentile_operator_D9_find_second_value;;
+	*);;
+
+	_-> .._proc_of_calculation_ninetieth_percentile_operator_return (*
+		_<- return;;
+
+	*);;
+
+	_-> .._proc_of_calculation_ninetieth_percentile_operator_D5_is_ninetieth_percentile_int (*
+		_<- ifEq;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _ninetieth_percentile_index;;
+		_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _index;;
+
+		_=> nrel_then:: .._proc_of_calculation_ninetieth_percentile_operator_D10_get_int_value;;
+		_=> nrel_else:: .._proc_of_calculation_ninetieth_percentile_operator_D6;;
+	*);;
+
+	_-> .._proc_of_calculation_ninetieth_percentile_operator_D9_find_second_value (*
+		_<- searchElStr5;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _last_elem;;
+		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _next_elem;;
+		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_be_more;;
+
+		_=> nrel_goto:: .._proc_of_calculation_ninetieth_percentile_operator_D10;;
+	*);;
+
+	_-> .._proc_of_calculation_ninetieth_percentile_operator_D10 (*
+		_<- contAdd;;
+		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _sum_of_elem;;
+		_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _next_elem;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _last_elem;;
+
+		_=> nrel_goto:: .._proc_of_calculation_ninetieth_percentile_operator_D11_find_result_value;;
+	*);;
+
+	_-> .._proc_of_calculation_ninetieth_percentile_operator_D11_find_result_value (*
+		_<- contDiv;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _ninetieth_percentile_value;;
+		_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _sum_of_elem;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: [2];;
+
+		_=> nrel_goto:: .._proc_of_calculation_ninetieth_percentile_operator_return;;
+	*);;
+
+	_-> .._proc_of_calculation_ninetieth_percentile_operator_D10_get_int_value (*
+		_<- contAssign;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _median_value;;
+		_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _last_elem;;
+
+		_=> nrel_goto:: .._proc_of_calculation_ninetieth_percentile_operator_return;;
+	*);;
+
+	_-> .._proc_of_calculation_ninetieth_percentile_operator_D6 (*
+		_<- searchElStr5;;
+		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _prev_elem;;
+		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _last_elem;;
+		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_be_more;;
+
+		_=> nrel_goto:: .._proc_of_calculation_ninetieth_percentile_operator_D7;;
+	*);;
+
+	_-> .._proc_of_calculation_ninetieth_percentile_operator_D7 (*
+		_<- contAdd;;
+		_-> rrel_1:: rrel_2:: rrel_fixed:: rrel_scp_var:: _index;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: [1];;
+
+		_=> nrel_goto:: .._proc_of_calculation_ninetieth_percentile_operator_D8;;
+	*);;
+
+	_-> .._proc_of_calculation_ninetieth_percentile_operator_D8 (*
+		_<- varAssign;;
+		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _last_elem;;
+		_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _prev_elem;;
+
+		_=> nrel_goto:: .._proc_of_calculation_ninetieth_percentile_operator_D5;;
+	*);;
+
+*);;
+
+*];;
 *];;

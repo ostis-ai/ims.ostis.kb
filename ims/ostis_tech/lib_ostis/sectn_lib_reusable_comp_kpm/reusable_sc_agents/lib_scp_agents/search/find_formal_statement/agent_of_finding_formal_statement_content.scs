@@ -1,278 +1,231 @@
-sc_text_of_agent_of_finding_formal_statement =  [*
 agent_of_finding_formal_statement
 => nrel_main_idtf:
 	[агентная scp-программа поиска формальной записи утверждения для заданного знака утверждения] (* <- lang_ru;; *);
 	[agent scp-program of finding formal statement record for given sign of statement] (* <- lang_en;; *);
-	<- agent_scp_program;;
+<- scp_program;
+<- agent_scp_program;
+-> rrel_key_sc_element: .._process1;;
 
-scp_program -> agent_of_finding_formal_statement 
-	(*
-	-> rrel_params: .agent_of_finding_formal_statement_params 
-		(*
-		-> rrel_1: rrel_in: _event;;
-		-> rrel_2: rrel_in: _input_arc;;
-		*);;
+agent_of_finding_formal_statement = [*
+.._process1
+_<- scp_process;
 
-	-> rrel_operators: .agent_of_finding_formal_statement_operator_set 
-		(*
-		-> rrel_init: .agent_of_finding_formal_statement_operator1A 
-			(*
-		  	<- searchElStr3;;
-		  	-> rrel_1: rrel_assign: rrel_scp_var: _temp;;
-		  	-> rrel_2: rrel_fixed: rrel_scp_var: _input_arc;;
-		  	-> rrel_3: rrel_assign: rrel_scp_var: _quest;;
+_-> rrel_1:: rrel_in:: _event;
+_-> rrel_2:: rrel_in:: _input_arc;
+_<= nrel_decomposition_of_action:: .._actions (*
 
-		  	=> nrel_goto: .agent_of_finding_formal_statement_operator1B;;
-			*);;
+	_-> rrel_1:: .._agent_of_finding_formal_statement_operator1A (*
+		_<- searchElStr3;;
+		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _temp;;
+		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: _input_arc;;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _quest;;
 
-		-> .agent_of_finding_formal_statement_operator1B 
-			(*
-		  	<- searchElStr3;;
-		  	-> rrel_1: rrel_fixed: rrel_scp_const: question_finding_formal_statement;;
-		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-		  	-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
-
-		  	=> nrel_then: .agent_of_finding_formal_statement_operator1C;;
-			=> nrel_else: .agent_of_finding_formal_statement_operator_return;;
-			*);;
-
-		-> .agent_of_finding_formal_statement_operator1C 
-			(*
-		  	<- searchElStr3;;
-		  	-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
-		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
-		  	-> rrel_3: rrel_assign: rrel_scp_var: _param;;
-
-		  	=> nrel_then: .agent_of_finding_formal_statement_operator1D;;
-		  	=> nrel_else: .agent_of_finding_formal_statement_operator_return;;
-			*);;
-
-		-> .agent_of_finding_formal_statement_operator1D 
-			(*
-			<- genEl;;
-			-> rrel_1: rrel_assign: rrel_const: rrel_node: rrel_scp_var: _answer_of_finding_formal;;
-
-			=> nrel_goto: .agent_of_finding_formal_statement_operator1E;;
-			*);;
-			
-		-> .agent_of_finding_formal_statement_operator1E
-			(*
-			<- genElStr3;;
-		 	-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_finding_formal;;
-		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-		 	-> rrel_3: rrel_fixed: rrel_scp_var: _param;;
-
-                 	=> nrel_goto: .agent_of_finding_formal_statement_operator2A;;
-		 	*);;
-
-		-> .agent_of_finding_formal_statement_operator2A
-			(*
-		 	<- searchSetStr5;;
-		 	-> rrel_1: rrel_fixed: rrel_scp_var: _param;;
-		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-		 	-> rrel_3: rrel_assign: rrel_scp_var: _elem;;
-                 	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
-		 	-> rrel_5: rrel_fixed: rrel_scp_const: rrel_main_key_sc_element;;
-
-                	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_of_finding_formal;;
-                 	-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_of_finding_formal;;
-
-                 	=> nrel_then: .agent_of_finding_formal_statement_operator2B;;
-                 	=> nrel_else: .agent_of_finding_formal_statement_operator_return;;
-                 	*);;
-
-		-> .agent_of_finding_formal_statement_operator2B
-			(*
-			<- genElStr3;;
-		 	-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_finding_formal;;
-		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-		 	-> rrel_3: rrel_fixed: rrel_scp_const: rrel_main_key_sc_element;;
-
-                 	=> nrel_goto: .agent_of_finding_formal_statement_operator2C;;
-		 	*);;
-
-		-> .agent_of_finding_formal_statement_operator2C
-			(*
-		 	<- searchSetStr3;;
-		 	-> rrel_1: rrel_assign: rrel_scp_var: _relation_node;;
-		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-		 	-> rrel_3: rrel_fixed: rrel_scp_var: _elem;;
-			
-                 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_of_finding_formal;;
-
-	         	=> nrel_then: .agent_of_finding_formal_statement_operator2D;;
-			=> nrel_else: .agent_of_finding_formal_statement_operator_return;;
-                 	*);;
- 
-		-> .agent_of_finding_formal_statement_operator2D
-			(*
-		  	<- call;;
-		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_finding_formal_statement;;
-		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_finding_formal_statement_operator2D_params 
-				(*
-				-> rrel_1: rrel_fixed: rrel_scp_var: _elem;;
-				-> rrel_2: rrel_fixed: rrel_scp_var: _answer_of_finding_formal;;
-				*);;
-		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
-
-		  	=> nrel_goto: .agent_of_finding_formal_statement_operator2E;;
-			*);;
-
-		-> .agent_of_finding_formal_statement_operator2E
-			(*
-		  	<- waitReturn;;
-		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
-
-		  	=> nrel_goto: .agent_of_finding_formal_statement_operator3A1;;
-			*);;                                                                                                         
-
-		-> .agent_of_finding_formal_statement_operator3A1
-			(*
-			<- genElStr3;;
-		 	-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_finding_formal;;
-		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-		 	-> rrel_3: rrel_fixed: rrel_scp_const: nrel_implication;;
-
-                 	=> nrel_goto: .agent_of_finding_formal_statement_operator3A2;;
-		 	*);;
-
-		-> .agent_of_finding_formal_statement_operator3A2
-			(*
-			<- genElStr3;;
-		 	-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_finding_formal;;
-		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-		 	-> rrel_3: rrel_fixed: rrel_scp_const: nrel_equivalence;;
-
-                 	=> nrel_goto: .agent_of_finding_formal_statement_operator3B;;
-		 	*);;
-
-		-> .agent_of_finding_formal_statement_operator3B
-			(*
-			<- genElStr3;;
-		 	-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_finding_formal;;
-		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-		 	-> rrel_3: rrel_fixed: rrel_scp_const: nrel_conjunction;;
-
-                 	=> nrel_goto: .agent_of_finding_formal_statement_operator3C;;
-		 	*);;
-
-		-> .agent_of_finding_formal_statement_operator3C
-			(*
-			<- genElStr3;;
-		 	-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_finding_formal;;
-		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-		 	-> rrel_3: rrel_fixed: rrel_scp_const: nrel_disjunction;;
-
-                 	=> nrel_goto: .agent_of_finding_formal_statement_operator3D;;
-		 	*);;
-
-		-> .agent_of_finding_formal_statement_operator3D
-			(*
-			<- genElStr3;;
-		 	-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_finding_formal;;
-		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-		 	-> rrel_3: rrel_fixed: rrel_scp_const: negation;;
-
-                 	=> nrel_goto: .agent_of_finding_formal_statement_operator3E;;
-		 	*);;
-
-		-> .agent_of_finding_formal_statement_operator3E
-			(*
-			<- genElStr3;;
-		 	-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_finding_formal;;
-		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-		 	-> rrel_3: rrel_fixed: rrel_scp_const: nrel_generality;;
-
-                 	=> nrel_goto: .agent_of_finding_formal_statement_operator3F;;
-		 	*);;
-
-		-> .agent_of_finding_formal_statement_operator3F
-			(*
-			<- genElStr3;;
-		 	-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_finding_formal;;
-		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-		 	-> rrel_3: rrel_fixed: rrel_scp_const: nrel_existence;;
-
-                 	=> nrel_goto: .agent_of_finding_formal_statement_operator3G;;
-		 	*);;
-
-		-> .agent_of_finding_formal_statement_operator3G
-			(*
-			<- genElStr3;;
-		 	-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_finding_formal;;
-		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-		 	-> rrel_3: rrel_fixed: rrel_scp_const: atomic_existence;;
-
-                 	=> nrel_goto: .agent_of_finding_formal_statement_operator3H;;
-		 	*);;
-
-		-> .agent_of_finding_formal_statement_operator3H
-			(*
-			<- genElStr3;;
-		 	-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_finding_formal;;
-		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-		 	-> rrel_3: rrel_fixed: rrel_scp_const: atomic_existence_and_uniqueness;;
-
-                 	=> nrel_goto: .agent_of_finding_formal_statement_operator3I;;
-		 	*);;
-
-		-> .agent_of_finding_formal_statement_operator3I
-			(*
-			<- genElStr3;;
-		 	-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_finding_formal;;
-		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-		 	-> rrel_3: rrel_fixed: rrel_scp_const: rrel_1;;
-
-                 	=> nrel_goto: .agent_of_finding_formal_statement_operator3K;;
-		 	*);;
-
-		-> .agent_of_finding_formal_statement_operator3K
-			(*
-			<- genElStr3;;
-		 	-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_finding_formal;;
-		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-		 	-> rrel_3: rrel_fixed: rrel_scp_const: rrel_2;;
-
-                 	=> nrel_goto: .agent_of_finding_formal_statement_operator_gen_answer_of_finding_formal;;
-		 	*);;
-
-		-> .agent_of_finding_formal_statement_operator_gen_answer_of_finding_formal 
-			(*
-			<- genElStr5;;
-		  	-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
-		  	-> rrel_2: rrel_assign: rrel_const: rrel_common: rrel_scp_var: _arc;;
-		  	-> rrel_3: rrel_fixed: rrel_scp_var: _answer_of_finding_formal;;
-		  	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
-		  	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_answer;;
-
-		  	=> nrel_goto: .agent_of_finding_formal_statement_operator_return;;
-			*);;
-					
-		-> .agent_of_finding_formal_statement_operator_return 
-			(*
-		  	<- return;;
-			*);;
-		*);;
+		_=> nrel_goto:: .._agent_of_finding_formal_statement_operator1B;;
 	*);;
 
+	_-> .._agent_of_finding_formal_statement_operator1B (*
+		_<- searchElStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: question_finding_formal_statement;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _quest;;
 
+		_=> nrel_then:: .._agent_of_finding_formal_statement_operator1C;;
+		_=> nrel_else:: .._agent_of_finding_formal_statement_operator_return;;
+	*);;
 
+	_-> .._agent_of_finding_formal_statement_operator1C (*
+		_<- searchElStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _quest;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _param;;
 
+		_=> nrel_then:: .._agent_of_finding_formal_statement_operator1D;;
+		_=> nrel_else:: .._agent_of_finding_formal_statement_operator_return;;
+	*);;
 
+	_-> .._agent_of_finding_formal_statement_operator_return (*
+		_<- return;;
 
+	*);;
 
+	_-> .._agent_of_finding_formal_statement_operator1D (*
+		_<- genEl;;
+		_-> rrel_1:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: _answer_of_finding_formal;;
 
+		_=> nrel_goto:: .._agent_of_finding_formal_statement_operator1E;;
+	*);;
 
+	_-> .._agent_of_finding_formal_statement_operator1E (*
+		_<- genElStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_finding_formal;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _param;;
 
+		_=> nrel_goto:: .._agent_of_finding_formal_statement_operator2A;;
+	*);;
 
+	_-> .._agent_of_finding_formal_statement_operator2A (*
+		_<- searchSetStr5;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _param;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _elem;;
+		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: rrel_main_key_sc_element;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: rrel_set_4:: _answer_of_finding_formal;;
 
+		_=> nrel_then:: .._agent_of_finding_formal_statement_operator2B;;
+		_=> nrel_else:: .._agent_of_finding_formal_statement_operator_return;;
+	*);;
 
+	_-> .._agent_of_finding_formal_statement_operator2B (*
+		_<- genElStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_finding_formal;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: rrel_main_key_sc_element;;
 
+		_=> nrel_goto:: .._agent_of_finding_formal_statement_operator2C;;
+	*);;
 
+	_-> .._agent_of_finding_formal_statement_operator2C (*
+		_<- searchSetStr3;;
+		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _relation_node;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _elem;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_of_finding_formal;;
 
+		_=> nrel_then:: .._agent_of_finding_formal_statement_operator2D;;
+		_=> nrel_else:: .._agent_of_finding_formal_statement_operator_return;;
+	*);;
 
+	_-> .._agent_of_finding_formal_statement_operator2D (*
+		_<- call;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_finding_formal_statement;;
+		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._agent_of_finding_formal_statement_param0 (*
+			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _elem;;
+			_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _answer_of_finding_formal;;
+		*);;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _descr1;;
 
+		_=> nrel_goto:: .._agent_of_finding_formal_statement_operator2E;;
+	*);;
 
+	_-> .._agent_of_finding_formal_statement_operator2E (*
+		_<- waitReturn;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _descr1;;
 
+		_=> nrel_goto:: .._agent_of_finding_formal_statement_operator3A1;;
+	*);;
+
+	_-> .._agent_of_finding_formal_statement_operator3A1 (*
+		_<- genElStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_finding_formal;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_implication;;
+
+		_=> nrel_goto:: .._agent_of_finding_formal_statement_operator3A2;;
+	*);;
+
+	_-> .._agent_of_finding_formal_statement_operator3A2 (*
+		_<- genElStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_finding_formal;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_equivalence;;
+
+		_=> nrel_goto:: .._agent_of_finding_formal_statement_operator3B;;
+	*);;
+
+	_-> .._agent_of_finding_formal_statement_operator3B (*
+		_<- genElStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_finding_formal;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_conjunction;;
+
+		_=> nrel_goto:: .._agent_of_finding_formal_statement_operator3C;;
+	*);;
+
+	_-> .._agent_of_finding_formal_statement_operator3C (*
+		_<- genElStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_finding_formal;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_disjunction;;
+
+		_=> nrel_goto:: .._agent_of_finding_formal_statement_operator3D;;
+	*);;
+
+	_-> .._agent_of_finding_formal_statement_operator3D (*
+		_<- genElStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_finding_formal;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: negation;;
+
+		_=> nrel_goto:: .._agent_of_finding_formal_statement_operator3E;;
+	*);;
+
+	_-> .._agent_of_finding_formal_statement_operator3E (*
+		_<- genElStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_finding_formal;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_generality;;
+
+		_=> nrel_goto:: .._agent_of_finding_formal_statement_operator3F;;
+	*);;
+
+	_-> .._agent_of_finding_formal_statement_operator3F (*
+		_<- genElStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_finding_formal;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_existence;;
+
+		_=> nrel_goto:: .._agent_of_finding_formal_statement_operator3G;;
+	*);;
+
+	_-> .._agent_of_finding_formal_statement_operator3G (*
+		_<- genElStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_finding_formal;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: atomic_existence;;
+
+		_=> nrel_goto:: .._agent_of_finding_formal_statement_operator3H;;
+	*);;
+
+	_-> .._agent_of_finding_formal_statement_operator3H (*
+		_<- genElStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_finding_formal;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: atomic_existence_and_uniqueness;;
+
+		_=> nrel_goto:: .._agent_of_finding_formal_statement_operator3I;;
+	*);;
+
+	_-> .._agent_of_finding_formal_statement_operator3I (*
+		_<- genElStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_finding_formal;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: rrel_1;;
+
+		_=> nrel_goto:: .._agent_of_finding_formal_statement_operator3K;;
+	*);;
+
+	_-> .._agent_of_finding_formal_statement_operator3K (*
+		_<- genElStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_finding_formal;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: rrel_2;;
+
+		_=> nrel_goto:: .._agent_of_finding_formal_statement_operator_gen_answer_of_finding_formal;;
+	*);;
+
+	_-> .._agent_of_finding_formal_statement_operator_gen_answer_of_finding_formal (*
+		_<- genElStr5;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _quest;;
+		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _answer_of_finding_formal;;
+		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_answer;;
+
+		_=> nrel_goto:: .._agent_of_finding_formal_statement_operator_return;;
+	*);;
+
+*);;
 
 *];;

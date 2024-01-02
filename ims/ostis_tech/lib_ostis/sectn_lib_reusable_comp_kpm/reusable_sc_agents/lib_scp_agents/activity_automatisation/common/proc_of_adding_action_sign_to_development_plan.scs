@@ -1,39 +1,38 @@
-scp_program -> proc_of_adding_action_sign_to_development_plan
-	(*
-  	-> rrel_params: .proc_of_adding_action_sign_to_development_plan_params 
-		(*
-		-> rrel_1: rrel_in: _action_sign;;
-    	*);;
+proc_of_adding_action_sign_to_development_plan
+<- scp_program;
+-> rrel_key_sc_element: .._process1;;
 
-	-> rrel_operators: .proc_of_adding_action_sign_to_development_plan_operator_set
-    	(*
-    	-> rrel_init: .proc_of_adding_action_sign_to_development_plan_operator_call_base_adding
-			(*
-		  	<- call;;
+proc_of_adding_action_sign_to_development_plan = [*
+.._process1
+_<- scp_process;
 
-		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_action_sign_base;;
-		  	-> rrel_2: rrel_fixed: rrel_scp_const: .proc_of_adding_action_sign_to_development_plan_operator_call_base_adding_params 
-				(*
-				-> rrel_1: rrel_fixed: rrel_scp_var: _action_sign;;
-				-> rrel_2: rrel_fixed: rrel_scp_const: computer_system_development_plan;;
-				*);;
-		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
+_-> rrel_1:: rrel_in:: _action_sign;
+_<= nrel_decomposition_of_action:: .._actions (*
 
-		  	=> nrel_goto: .proc_of_adding_action_sign_to_development_plan_operator_waitreturn_base_adding;;
-			*);;
-
-		-> .proc_of_adding_action_sign_to_development_plan_operator_waitreturn_base_adding
-			(*
-		  	<- waitReturn;;
-
-		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
-
-		  	=> nrel_goto: .proc_of_adding_action_sign_to_development_plan_operator_return;;
-			*);;	
-			
-		-> .proc_of_adding_action_sign_to_development_plan_operator_return 
-			(*
-			<- return;;
-			*);;
+	_-> rrel_1:: .._proc_of_adding_action_sign_to_development_plan_operator_call_base_adding (*
+		_<- call;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_adding_action_sign_base;;
+		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._proc_of_adding_action_sign_to_development_plan_param0 (*
+			_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _action_sign;;
+			_-> rrel_2:: rrel_fixed:: rrel_scp_const:: computer_system_development_plan;;
 		*);;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _descr1;;
+
+		_=> nrel_goto:: .._proc_of_adding_action_sign_to_development_plan_operator_waitreturn_base_adding;;
 	*);;
+
+	_-> .._proc_of_adding_action_sign_to_development_plan_operator_waitreturn_base_adding (*
+		_<- waitReturn;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _descr1;;
+
+		_=> nrel_goto:: .._proc_of_adding_action_sign_to_development_plan_operator_return;;
+	*);;
+
+	_-> .._proc_of_adding_action_sign_to_development_plan_operator_return (*
+		_<- return;;
+
+	*);;
+
+*);;
+
+*];;

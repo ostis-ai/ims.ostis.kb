@@ -7,6 +7,9 @@ sc_agent_of_finding_proof
 
 <- abstract_sc_agent;
 
+=> nrel_sc_agent_action_class:
+    question_finding_proof;
+
 => nrel_primary_initiation_condition: 
 	(sc_event_add_output_arc => question_initiated);
 

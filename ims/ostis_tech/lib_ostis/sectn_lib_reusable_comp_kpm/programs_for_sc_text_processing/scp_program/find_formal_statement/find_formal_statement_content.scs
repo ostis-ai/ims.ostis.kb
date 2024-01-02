@@ -1,194 +1,172 @@
 lib_component_proc_of_finding_formal_statement =  [*
-scp_program -> proc_of_finding_formal_statement 
-	(*	
-	-> rrel_params: .proc_of_finding_formal_statement_params 
-		(*
-		-> rrel_1: rrel_in: _elem;;
-		-> rrel_2: rrel_in: _answer_proc_of_finding_formal_statement;;
-		*);;
+proc_of_finding_formal_statement
+<- scp_program;
+-> rrel_key_sc_element: .._process1;;
 
-	-> rrel_operators: .proc_of_finding_formal_statement_operator_set 
-		(*
-		-> rrel_init: .proc_of_finding_formal_statement_operator1A
-			(*
-		 	<- searchSetStr3;;
-		 	-> rrel_1: rrel_assign: rrel_scp_var: _temp_elem;;
-		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
-		 	-> rrel_3: rrel_fixed: rrel_scp_var: _elem;;
+proc_of_finding_formal_statement = [*
+.._process1
+_<- scp_process;
 
-                 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_formal_statement;;
+_-> rrel_1:: rrel_in:: _elem;
+_-> rrel_2:: rrel_in:: _answer_proc_of_finding_formal_statement;
+_<= nrel_decomposition_of_action:: .._actions (*
 
-		 	=> nrel_then: .proc_of_finding_formal_statement_operator1B;;
-                 	=> nrel_else: .proc_of_finding_formal_statement_operator_return;;
-		 	*);;
+	_-> rrel_1:: .._proc_of_finding_formal_statement_operator1A (*
+		_<- searchSetStr3;;
+		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _temp_elem;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _elem;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _answer_proc_of_finding_formal_statement;;
 
-		-> .proc_of_finding_formal_statement_operator1B
-			(*
-		 	<- searchSetStr5;;
-		 	-> rrel_1: rrel_fixed: rrel_scp_var: _elem;;
-		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
-		 	-> rrel_3: rrel_assign: rrel_scp_var: _elem2;;
-			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc3;;
-		 	-> rrel_5: rrel_fixed: rrel_scp_const: rrel_1;;
-
-			-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_formal_statement;;
-
-	         	=> nrel_goto: .proc_of_finding_formal_statement_operator1C;;
-			*);;
-
-		-> .proc_of_finding_formal_statement_operator1C
-			(*
-		 	<- searchSetStr5;;
-		 	-> rrel_1: rrel_fixed: rrel_scp_var: _elem;;
-		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
-		 	-> rrel_3: rrel_assign: rrel_scp_var: _elem3;;
-			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc3;;
-		 	-> rrel_5: rrel_fixed: rrel_scp_const: rrel_2;;
-
-                 	-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_formal_statement;;
-
-	         	=> nrel_goto: .proc_of_finding_formal_statement_operator2A;;
-			*);;
-
-		-> .proc_of_finding_formal_statement_operator2A
-			(*
-		 	<- searchSetStr3;;
-		 	-> rrel_1: rrel_fixed: rrel_scp_var: _elem;;
-		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc3;;
-		 	-> rrel_3: rrel_assign: rrel_scp_var: _elem4;;
-
-                 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_formal_statement;;
-
-	         	=> nrel_then: .proc_of_finding_formal_statement_operator2B;;
-			=> nrel_else: .proc_of_finding_formal_statement_operator_return;;
-			*);;
-
-		-> .proc_of_finding_formal_statement_operator2B
-			(*
-			<- genElStr3;;
-		 	-> rrel_1: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_formal_statement;;
-		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-		 	-> rrel_3: rrel_fixed: rrel_scp_var: _elem;;
-
-                 	=> nrel_goto: .proc_of_finding_formal_statement_operator2C;;
-		 	*);; 
-
-		-> .proc_of_finding_formal_statement_operator2C
-			(*
-		 	<- searchSetStr3;;
-		 	-> rrel_1: rrel_fixed: rrel_scp_var: _elem;;
-		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-		 	-> rrel_3: rrel_assign: rrel_scp_var: _elem3;;
-
-                 	-> rrel_set_3: rrel_assign: rrel_scp_var: _set1;;
-
-	         	=> nrel_then: .proc_of_finding_formal_statement_operator2D;;
-			=> nrel_else: .proc_of_finding_formal_statement_operator_return;;
-	 		*);;
-
-		-> .proc_of_finding_formal_statement_operator2D
-			(*
-		 	<- searchElStr3;;
-		 	-> rrel_1: rrel_fixed: rrel_scp_var: _set1;;
-		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc3;;
-		 	-> rrel_3: rrel_assign: rrel_scp_var: _elem3;;
-
-	         	=> nrel_then: .proc_of_finding_formal_statement_operator2E;;
-	         	=> nrel_else: .proc_of_finding_formal_statement_operator_erase;;
-	 		*);;
-		
-		-> .proc_of_finding_formal_statement_operator2E 
-			(*
-			<- eraseEl;;
-		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc3;;
-
-                 	=> nrel_goto: .proc_of_finding_formal_statement_operator2F;;
-		 	*);;
-
-		-> .proc_of_finding_formal_statement_operator2F
-			(*
-			<- genElStr3;;
-		 	-> rrel_1: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_formal_statement;;
-		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-		 	-> rrel_3: rrel_fixed: rrel_scp_var: _elem3;;
-
-                 	=> nrel_goto: .proc_of_finding_formal_statement_operator3A;;
-		 	*);;
-
-		-> .proc_of_finding_formal_statement_operator3A
-			(*
-		 	<- searchSetStr3;;
-		 	-> rrel_1: rrel_fixed: rrel_scp_const: atomic_existence;;
-		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-		 	-> rrel_3: rrel_fixed: rrel_scp_var: _elem3;;
-
-                 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_formal_statement;;
-
-	         	=> nrel_then: .proc_of_finding_formal_statement_operator3AB;;
-			=> nrel_else: .proc_of_finding_formal_statement_operator3B;;
-			*);;
-
-		-> .proc_of_finding_formal_statement_operator3B
-			(*
-		 	<- searchSetStr3;;
-		 	-> rrel_1: rrel_fixed: rrel_scp_const: atomic_existence_and_uniqueness;;
-		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-		 	-> rrel_3: rrel_fixed: rrel_scp_var: _elem3;;
-
-                 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_formal_statement;;
-
-	         	=> nrel_then: .proc_of_finding_formal_statement_operator3AB;;
-			=> nrel_else: .proc_of_finding_formal_statement_operator3C;;
-			*);;
-			
-		-> .proc_of_finding_formal_statement_operator3AB
-			(*
-		 	<- searchSetStr3;;
-		 	-> rrel_1: rrel_fixed: rrel_scp_var: _elem3;;
-		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-		 	-> rrel_3: rrel_assign: rrel_scp_var: _res1;;
-
-                 	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_formal_statement;;
-                 	-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_formal_statement;;
-
-	         	=> nrel_goto: .proc_of_finding_formal_statement_operator2D;;
-			*);;
-
-		-> .proc_of_finding_formal_statement_operator3C 
-			(*
-		  	<- call;;
-		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_finding_formal_statement;;
-		  	-> rrel_2: rrel_fixed: rrel_scp_const: proc_of_finding_formal_statement_operator3C_params 
-				(*
-				-> rrel_1: rrel_fixed: rrel_scp_var: _elem3;;
-				-> rrel_2: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_formal_statement;;
-				*);;
-		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
-
-		  	=> nrel_goto: .proc_of_finding_formal_statement_operator3D;;
-			*);;
-
-		-> .proc_of_finding_formal_statement_operator3D
-			(*
-		  	<- waitReturn;;
-		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
-
-		  	=> nrel_goto: .proc_of_finding_formal_statement_operator2D;;
-			*);; 
-
-		-> .proc_of_finding_formal_statement_operator_erase 
-			(*
-			<- eraseEl;;
-		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _set1;;
-
-                 	=> nrel_goto: .proc_of_finding_formal_statement_operator_return;;
-		 	*);;
-		
-		-> .proc_of_finding_formal_statement_operator_return 
-			(*
-			<- return;;
-			*);;
-		*);;
+		_=> nrel_then:: .._proc_of_finding_formal_statement_operator1B;;
+		_=> nrel_else:: .._proc_of_finding_formal_statement_operator_return;;
 	*);;
 
+	_-> .._proc_of_finding_formal_statement_operator1B (*
+		_<- searchSetStr5;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _elem;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _elem2;;
+		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc3;;
+		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: rrel_1;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_4:: _answer_proc_of_finding_formal_statement;;
+
+		_=> nrel_goto:: .._proc_of_finding_formal_statement_operator1C;;
+	*);;
+
+	_-> .._proc_of_finding_formal_statement_operator_return (*
+		_<- return;;
+
+	*);;
+
+	_-> .._proc_of_finding_formal_statement_operator1C (*
+		_<- searchSetStr5;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _elem;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _elem3;;
+		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc3;;
+		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: rrel_2;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_4:: _answer_proc_of_finding_formal_statement;;
+
+		_=> nrel_goto:: .._proc_of_finding_formal_statement_operator2A;;
+	*);;
+
+	_-> .._proc_of_finding_formal_statement_operator2A (*
+		_<- searchSetStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _elem;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc3;;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _elem4;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _answer_proc_of_finding_formal_statement;;
+
+		_=> nrel_then:: .._proc_of_finding_formal_statement_operator2B;;
+		_=> nrel_else:: .._proc_of_finding_formal_statement_operator_return;;
+	*);;
+
+	_-> .._proc_of_finding_formal_statement_operator2B (*
+		_<- genElStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _answer_proc_of_finding_formal_statement;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _elem;;
+
+		_=> nrel_goto:: .._proc_of_finding_formal_statement_operator2C;;
+	*);;
+
+	_-> .._proc_of_finding_formal_statement_operator2C (*
+		_<- searchSetStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _elem;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _elem3;;
+		_-> rrel_assign:: rrel_scp_var:: rrel_set_3:: _set1;;
+
+		_=> nrel_then:: .._proc_of_finding_formal_statement_operator2D;;
+		_=> nrel_else:: .._proc_of_finding_formal_statement_operator_return;;
+	*);;
+
+	_-> .._proc_of_finding_formal_statement_operator2D (*
+		_<- searchElStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _set1;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc3;;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _elem3;;
+
+		_=> nrel_then:: .._proc_of_finding_formal_statement_operator2E;;
+		_=> nrel_else:: .._proc_of_finding_formal_statement_operator_erase;;
+	*);;
+
+	_-> .._proc_of_finding_formal_statement_operator2E (*
+		_<- eraseEl;;
+		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _arc3;;
+
+		_=> nrel_goto:: .._proc_of_finding_formal_statement_operator2F;;
+	*);;
+
+	_-> .._proc_of_finding_formal_statement_operator_erase (*
+		_<- eraseEl;;
+		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _set1;;
+
+		_=> nrel_goto:: .._proc_of_finding_formal_statement_operator_return;;
+	*);;
+
+	_-> .._proc_of_finding_formal_statement_operator2F (*
+		_<- genElStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _answer_proc_of_finding_formal_statement;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _elem3;;
+
+		_=> nrel_goto:: .._proc_of_finding_formal_statement_operator3A;;
+	*);;
+
+	_-> .._proc_of_finding_formal_statement_operator3A (*
+		_<- searchSetStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: atomic_existence;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _elem3;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _answer_proc_of_finding_formal_statement;;
+
+		_=> nrel_then:: .._proc_of_finding_formal_statement_operator3AB;;
+		_=> nrel_else:: .._proc_of_finding_formal_statement_operator3B;;
+	*);;
+
+	_-> .._proc_of_finding_formal_statement_operator3AB (*
+		_<- searchSetStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _elem3;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _res1;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: rrel_set_3:: _answer_proc_of_finding_formal_statement;;
+
+		_=> nrel_goto:: .._proc_of_finding_formal_statement_operator2D;;
+	*);;
+
+	_-> .._proc_of_finding_formal_statement_operator3B (*
+		_<- searchSetStr3;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: atomic_existence_and_uniqueness;;
+		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _elem3;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _answer_proc_of_finding_formal_statement;;
+
+		_=> nrel_then:: .._proc_of_finding_formal_statement_operator3AB;;
+		_=> nrel_else:: .._proc_of_finding_formal_statement_operator3C;;
+	*);;
+
+	_-> .._proc_of_finding_formal_statement_operator3C (*
+		_<- call;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_finding_formal_statement;;
+		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: proc_of_finding_formal_statement_operator3C_params (*
+			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _elem3;;
+			_-> rrel_2:: rrel_fixed:: rrel_scp_const:: _answer_proc_of_finding_formal_statement;;
+		*);;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _descr1;;
+
+		_=> nrel_goto:: .._proc_of_finding_formal_statement_operator3D;;
+	*);;
+
+	_-> .._proc_of_finding_formal_statement_operator3D (*
+		_<- waitReturn;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _descr1;;
+
+		_=> nrel_goto:: .._proc_of_finding_formal_statement_operator2D;;
+	*);;
+
+*);;
+
+*];;
 *];;
