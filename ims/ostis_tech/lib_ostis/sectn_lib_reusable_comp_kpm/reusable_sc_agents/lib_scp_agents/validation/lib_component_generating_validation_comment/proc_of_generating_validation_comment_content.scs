@@ -46,7 +46,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _comment;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_comment;;
-		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: rrel_set_4:: _answer_proc_of_generating_validation_comment;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _answer_proc_of_generating_validation_comment;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_4:: _answer_proc_of_generating_validation_comment;;
 
 		_=> nrel_goto:: .._proc_of_generating_validation_comment_operator1B4_add_comment_node_to_answer;;
 	*);;
@@ -122,7 +123,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _comment;;
 		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_sc_text_translation;;
-		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: rrel_set_4:: _answer_proc_of_generating_validation_comment;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _answer_proc_of_generating_validation_comment;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_4:: _answer_proc_of_generating_validation_comment;;
 
 		_=> nrel_goto:: .._proc_of_generating_validation_comment_operator1_add_sc_text_translation_node_to_answer;;
 	*);;
@@ -163,7 +165,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _message;;
 		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: section_subjdomain_parameters_and_values;;
-		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: rrel_set_4:: _answer_proc_of_generating_validation_comment;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _answer_proc_of_generating_validation_comment;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_4:: _answer_proc_of_generating_validation_comment;;
 
 		_=> nrel_goto:: .._proc_of_generating_validation_comment_operator1C1_add_message_var_node_to_answer;;
 	*);;

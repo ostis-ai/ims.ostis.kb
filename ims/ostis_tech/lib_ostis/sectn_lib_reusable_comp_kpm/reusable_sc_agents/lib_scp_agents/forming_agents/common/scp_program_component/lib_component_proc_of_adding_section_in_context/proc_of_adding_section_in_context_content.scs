@@ -171,7 +171,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _section_class;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _section;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_1:: rrel_set_2:: _temp_context;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_1:: _temp_context;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _temp_context;;
 
 		_=> nrel_goto:: .._proc_of_adding_section_in_context_operator_gen_visited_inner_struct;;
 	*);;
@@ -217,7 +218,9 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _next_section;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_section_base_order;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: rrel_set_3:: rrel_set_4:: _temp_context;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _temp_context;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _temp_context;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _temp_context;;
 
 		_=> nrel_then:: .._proc_of_adding_section_in_context_operator_B5;;
 		_=> nrel_else:: .._proc_of_adding_section_in_context_operator_B5_1;;
@@ -246,7 +249,9 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _section;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_section_decomposition;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_1:: rrel_set_2:: rrel_set_4:: _temp_context;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_1:: _temp_context;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _temp_context;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _temp_context;;
 
 		_=> nrel_then:: .._proc_of_adding_section_in_context_operator_B7;;
 		_=> nrel_else:: .._proc_of_adding_section_in_context_operator_C1_loop_enter;;
@@ -391,7 +396,9 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _node;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_var:: _relation;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: rrel_set_3:: rrel_set_4:: _temp_context;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _temp_context;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _temp_context;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _temp_context;;
 
 		_=> nrel_then:: .._proc_of_adding_section_in_context_operator_A4;;
 		_=> nrel_else:: .._proc_of_adding_section_in_context_operator_A1_loop_enter;;
