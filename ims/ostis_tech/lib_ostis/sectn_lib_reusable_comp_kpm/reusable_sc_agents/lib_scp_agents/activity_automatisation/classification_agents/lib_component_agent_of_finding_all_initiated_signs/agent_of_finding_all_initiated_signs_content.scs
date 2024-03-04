@@ -472,7 +472,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_finding_all_initiated_signs_operator_add_action_to_set_number_of_actions (*
 		_<- contAdd;;
-		_-> rrel_1:: rrel_2:: rrel_fixed:: rrel_scp_var:: _number_of_actions;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _number_of_actions;;
+		_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _number_of_actions;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: [1];;
 
 		_=> nrel_goto:: .._agent_of_finding_all_initiated_signs_operator2D_add_to_init_actions_set;;

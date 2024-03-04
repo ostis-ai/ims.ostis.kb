@@ -70,7 +70,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._proc_of_cardinality_calculation_operator_increase (*
 		_<- contAdd;;
-		_-> rrel_1:: rrel_2:: rrel_fixed:: rrel_scp_const:: _result_cardinality;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _result_cardinality;;
+		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: _result_cardinality;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: [1];;
 
 		_=> nrel_goto:: .._proc_of_cardinality_calculation_operator_all_elements_loop_enter;;

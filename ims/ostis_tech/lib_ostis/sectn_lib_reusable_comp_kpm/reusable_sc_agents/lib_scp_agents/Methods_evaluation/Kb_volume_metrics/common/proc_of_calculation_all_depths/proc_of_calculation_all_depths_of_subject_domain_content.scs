@@ -14,7 +14,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> rrel_1:: .._proc_of_calculation_all_depths_of_subject_domain_operator1 (*
 		_<- contAdd;;
-		_-> rrel_1:: rrel_2:: rrel_fixed:: rrel_scp_const:: _current_depth;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _current_depth;;
+		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: _current_depth;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: [1];;
 
 		_=> nrel_goto:: .._proc_of_calculation_all_depths_of_subject_domain_operator2;;
@@ -156,7 +157,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._proc_of_calculation_all_depths_of_subject_domain_operator12 (*
 		_<- contSub;;
-		_-> rrel_1:: rrel_2:: rrel_fixed:: rrel_scp_const:: _current_depth;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _current_depth;;
+		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: _current_depth;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: [1];;
 
 		_=> nrel_goto:: .._proc_of_calculation_all_depths_of_subject_domain_operator7;;
