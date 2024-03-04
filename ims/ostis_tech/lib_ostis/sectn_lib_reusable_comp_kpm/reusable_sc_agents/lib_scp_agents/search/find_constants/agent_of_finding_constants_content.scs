@@ -125,7 +125,9 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _node;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_using_constants;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_1:: rrel_set_2:: rrel_set_4:: _answer_of_finding_constants;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_1:: _answer_of_finding_constants;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_of_finding_constants;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _answer_of_finding_constants;;
 
 		_=> nrel_then:: .._agent_of_finding_constants_operator7D;;
 		_=> nrel_else:: .._agent_of_finding_constants_operator7;;
@@ -176,7 +178,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _param;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: rrel_key_sc_element;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: rrel_set_4:: _answer_of_finding_constants;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_of_finding_constants;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _answer_of_finding_constants;;
 
 		_=> nrel_then:: .._agent_of_finding_constants_operator7I;;
 		_=> nrel_else:: .._agent_of_finding_constants_operator_return;;
@@ -196,7 +199,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _ligament_node;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _inst;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: rrel_set_3:: _answer_of_finding_constants;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_of_finding_constants;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _answer_of_finding_constants;;
 
 		_=> nrel_then:: .._agent_of_finding_constants_operator9;;
 		_=> nrel_else:: .._agent_of_finding_constants_operator_return;;

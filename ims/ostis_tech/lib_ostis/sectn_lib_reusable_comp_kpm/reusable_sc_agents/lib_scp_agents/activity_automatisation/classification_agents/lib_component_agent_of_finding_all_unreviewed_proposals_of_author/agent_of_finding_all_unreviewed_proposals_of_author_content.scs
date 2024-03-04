@@ -344,7 +344,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _structure;;
 		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_proposal;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: rrel_set_4:: _answer_for_finding_all_unreviewed_proposals_by_author;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_for_finding_all_unreviewed_proposals_by_author;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _answer_for_finding_all_unreviewed_proposals_by_author;;
 
 		_=> nrel_goto:: .._agent_of_finding_all_unreviewed_proposals_of_author8G_1;;
 	*);;
@@ -373,7 +374,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _structure;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _elem_of_struct;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: rrel_set_3:: _answer_for_finding_all_unreviewed_proposals_by_author;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_for_finding_all_unreviewed_proposals_by_author;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _answer_for_finding_all_unreviewed_proposals_by_author;;
 
 		_=> nrel_goto:: .._agent_of_finding_all_unreviewed_proposals_of_author11G;;
 	*);;
@@ -385,7 +387,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _param;;
 		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_authors;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: rrel_set_4:: _answer_for_finding_all_unreviewed_proposals_by_author;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_for_finding_all_unreviewed_proposals_by_author;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _answer_for_finding_all_unreviewed_proposals_by_author;;
 
 		_=> nrel_goto:: .._agent_of_finding_all_unreviewed_proposals_of_author_add_in_is_const_nodes_necessary;;
 	*);;

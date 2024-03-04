@@ -159,7 +159,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _connection;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_main_statements;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: rrel_set_4:: _answer;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _answer;;
 
 		_=> nrel_goto:: .._agent_of_finding_proof_steps_gen_answer;;
 	*);;

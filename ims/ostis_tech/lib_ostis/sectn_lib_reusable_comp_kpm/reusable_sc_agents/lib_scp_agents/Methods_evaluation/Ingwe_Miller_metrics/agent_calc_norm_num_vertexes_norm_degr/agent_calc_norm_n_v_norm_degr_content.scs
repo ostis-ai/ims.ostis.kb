@@ -353,7 +353,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_calculation_normalized_number_of_vertexes_with_normal_degree_operator_D5_increase (*
 		_<- contAdd;;
-		_-> rrel_1:: rrel_2:: rrel_fixed:: rrel_scp_var:: _number_of_vertex_with_normal_degree;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _number_of_vertex_with_normal_degree;;
+		_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _number_of_vertex_with_normal_degree;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: [1];;
 
 		_=> nrel_goto:: .._agent_of_calculation_normalized_number_of_vertexes_with_normal_degree_operator_D2_loop_enter;;
