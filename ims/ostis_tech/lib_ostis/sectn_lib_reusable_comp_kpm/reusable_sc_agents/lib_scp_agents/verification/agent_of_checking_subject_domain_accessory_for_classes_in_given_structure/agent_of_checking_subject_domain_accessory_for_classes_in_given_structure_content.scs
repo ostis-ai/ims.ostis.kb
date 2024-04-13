@@ -80,7 +80,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator1D_set_context_existence_to_true (*
-		_<- contAssign;;
+		_<- varAssign;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _is_context_exist;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [true];;
 
@@ -88,7 +88,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_operator1D_set_context_existence_to_false (*
-		_<- contAssign;;
+		_<- varAssign;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _is_context_exist;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [false];;
 

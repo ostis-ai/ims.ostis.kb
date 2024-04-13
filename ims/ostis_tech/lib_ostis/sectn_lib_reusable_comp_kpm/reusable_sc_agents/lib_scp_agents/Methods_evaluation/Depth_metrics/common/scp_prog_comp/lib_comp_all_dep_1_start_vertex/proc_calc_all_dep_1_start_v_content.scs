@@ -18,7 +18,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> rrel_1:: .._proc_of_calculation_all_depths_of_ontology_with_one_start_vertex_operator_increase_depth (*
 		_<- contAdd;;
-		_-> rrel_1:: rrel_2:: rrel_fixed:: rrel_scp_const:: _current_depth;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _current_depth;;
+		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: _current_depth;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: [1];;
 
 		_=> nrel_goto:: .._proc_of_calculation_all_depths_of_ontology_with_one_start_vertex_operator_gen_vertexes_of_lower_level_set;;
@@ -52,7 +53,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_all_depths_of_ontology_with_one_start_vertex_operator_A1_assign_is_last_node (*
-		_<- contAssign;;
+		_<- varAssign;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _is_last_node;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [true];;
 
@@ -86,7 +87,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_all_depths_of_ontology_with_one_start_vertex_operator_C2 (*
-		_<- contAssign;;
+		_<- varAssign;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _depth;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: _current_depth;;
 
@@ -122,7 +123,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_all_depths_of_ontology_with_one_start_vertex_operator_B3_assign_is_last_node_false (*
-		_<- contAssign;;
+		_<- varAssign;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _is_last_node;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [false];;
 
@@ -152,7 +153,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._proc_of_calculation_all_depths_of_ontology_with_one_start_vertex_operator_B5_decrease_depth (*
 		_<- contSub;;
-		_-> rrel_1:: rrel_2:: rrel_fixed:: rrel_scp_const:: _current_depth;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _current_depth;;
+		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: _current_depth;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: [1];;
 
 		_=> nrel_goto:: .._proc_of_calculation_all_depths_of_ontology_with_one_start_vertex_operator_B1_loop_enter;;

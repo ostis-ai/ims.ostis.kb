@@ -71,7 +71,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_finding_rejected_proposals_by_user_invalid_first_param_msg (*
-		_<- contAssign;;
+		_<- varAssign;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _validation_message;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [Wrong first parameter! It must be user sign(element of ui_user)];;
 
@@ -98,7 +98,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_finding_rejected_proposals_by_user_2A_set_context_existence_to_true (*
-		_<- contAssign;;
+		_<- varAssign;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _is_context_exist;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [true];;
 
@@ -106,7 +106,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_finding_rejected_proposals_by_user_2A_set_context_existence_to_false (*
-		_<- contAssign;;
+		_<- varAssign;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _is_context_exist;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [false];;
 
@@ -329,7 +329,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _param;;
 		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_rejected;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: rrel_set_4:: _answer_for_finding_rejected_proposals_by_user;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_for_finding_rejected_proposals_by_user;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _answer_for_finding_rejected_proposals_by_user;;
 
 		_=> nrel_then:: .._agent_of_finding_rejected_proposals_by_user_add_action_node;;
 		_=> nrel_else:: .._agent_of_finding_rejected_proposals_by_user1G;;
@@ -351,7 +352,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _structure;;
 		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_proposal;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: rrel_set_4:: _answer_for_finding_rejected_proposals_by_user;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_for_finding_rejected_proposals_by_user;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _answer_for_finding_rejected_proposals_by_user;;
 
 		_=> nrel_then:: .._agent_of_finding_rejected_proposals_by_user6G;;
 		_=> nrel_else:: .._agent_of_finding_rejected_proposals_by_user1G;;
@@ -390,7 +392,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _structure;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _elem_of_struct;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: rrel_set_3:: _answer_for_finding_rejected_proposals_by_user;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_for_finding_rejected_proposals_by_user;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _answer_for_finding_rejected_proposals_by_user;;
 
 		_=> nrel_goto:: .._agent_of_finding_rejected_proposals_by_user10G;;
 	*);;
@@ -402,7 +405,9 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _author;;
 		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_authors;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: rrel_set_3:: rrel_set_4:: _answer_for_finding_rejected_proposals_by_user;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_for_finding_rejected_proposals_by_user;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _answer_for_finding_rejected_proposals_by_user;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _answer_for_finding_rejected_proposals_by_user;;
 
 		_=> nrel_then:: .._agent_of_finding_rejected_proposals_by_user_add_in_is_const_nodes_necessary;;
 		_=> nrel_else:: .._agent_of_finding_rejected_proposals_by_user1G;;
@@ -486,7 +491,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_finding_rejected_proposals_by_user_invalid_second_param_msg (*
-		_<- contAssign;;
+		_<- varAssign;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _validation_message;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [Wrong 2nd parameter! It must be a structure.];;
 

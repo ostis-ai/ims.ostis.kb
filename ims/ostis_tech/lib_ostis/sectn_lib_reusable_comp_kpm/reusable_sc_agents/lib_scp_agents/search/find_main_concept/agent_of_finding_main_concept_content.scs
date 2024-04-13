@@ -61,7 +61,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_finding_key_concepts_operator1C_set_context_existence_to_true (*
-		_<- contAssign;;
+		_<- varAssign;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _is_context_exist;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [true];;
 
@@ -69,7 +69,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_finding_key_concepts_operator1C_set_context_existence_to_false (*
-		_<- contAssign;;
+		_<- varAssign;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _is_context_exist;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [false];;
 
@@ -112,7 +112,9 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _elem;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: rrel_not_maximum_studied_object_class;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: rrel_set_3:: rrel_set_4:: _answer_finding_key_concept;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_finding_key_concept;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _answer_finding_key_concept;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _answer_finding_key_concept;;
 
 		_=> nrel_then:: .._agent_of_finding_key_concepts_operator2A_add_to_answer;;
 		_=> nrel_else:: .._agent_of_finding_key_concepts_operator2B;;
@@ -134,7 +136,9 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _elem2;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: rrel_maximum_studied_object_class;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: rrel_set_3:: rrel_set_4:: _answer_finding_key_concept;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_finding_key_concept;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _answer_finding_key_concept;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _answer_finding_key_concept;;
 
 		_=> nrel_then:: .._agent_of_finding_key_concepts_operator2B_add_to_answer;;
 		_=> nrel_else:: .._agent_of_finding_key_concepts_operator2C;;
@@ -156,7 +160,9 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _elem3;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: rrel_explored_relation;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: rrel_set_3:: rrel_set_4:: _answer_finding_key_concept;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_finding_key_concept;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _answer_finding_key_concept;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _answer_finding_key_concept;;
 
 		_=> nrel_then:: .._agent_of_finding_key_concepts_operator2C_add_to_answer;;
 		_=> nrel_else:: .._agent_of_finding_key_concepts_operator3A;;
@@ -279,7 +285,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _elem;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: rrel_explored_relation;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: rrel_set_4:: _answer_finding_key_concept;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_finding_key_concept;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _answer_finding_key_concept;;
 
 		_=> nrel_then:: .._agent_of_finding_key_concepts_operator2C_context_logic_7;;
 		_=> nrel_else:: .._agent_of_finding_key_concepts_operator2C_context_logic_4;;
@@ -367,7 +374,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _elem;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: rrel_maximum_studied_object_class;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: rrel_set_4:: _answer_finding_key_concept;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_finding_key_concept;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _answer_finding_key_concept;;
 
 		_=> nrel_then:: .._agent_of_finding_key_concepts_operator2B_context_logic_7;;
 		_=> nrel_else:: .._agent_of_finding_key_concepts_operator2B_context_logic_4;;
@@ -433,7 +441,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _elem;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: rrel_not_maximum_studied_object_class;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: rrel_set_4:: _answer_finding_key_concept;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_finding_key_concept;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _answer_finding_key_concept;;
 
 		_=> nrel_then:: .._agent_of_finding_key_concepts_operator2A_context_logic_7;;
 		_=> nrel_else:: .._agent_of_finding_key_concepts_operator2A_context_logic_4;;

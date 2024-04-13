@@ -29,7 +29,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _struct;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _any_element;;
-		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: rrel_set_3:: _context;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _context;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_3:: _context;;
 
 		_=> nrel_goto:: .._proc_of_adding_struct_elems_to_context_operator_A2;;
 	*);;
@@ -41,7 +42,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _any_element;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_assign:: rrel_scp_var:: _role_relation;;
-		_-> rrel_fixed:: rrel_scp_const:: rrel_set_4:: rrel_set_5:: _context;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_4:: _context;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_5:: _context;;
 
 		_=> nrel_goto:: .._proc_of_adding_struct_elems_to_context_operator_A3;;
 	*);;

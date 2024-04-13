@@ -61,7 +61,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_checking_concept_def_existence_operator_invalid_first_param_msg (*
-		_<- contAssign;;
+		_<- varAssign;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _validation_message;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [Wrong 1st parameter! It must be a structure.];;
 
@@ -88,7 +88,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_checking_concept_def_existence_operator1D_set_context_existence_to_true (*
-		_<- contAssign;;
+		_<- varAssign;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _is_context_exist;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [true];;
 
@@ -96,7 +96,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_checking_concept_def_existence_operator1D_set_context_existence_to_false (*
-		_<- contAssign;;
+		_<- varAssign;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _is_context_exist;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [false];;
 
@@ -327,7 +327,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_checking_concept_def_existence_operator_invalid_second_param_msg (*
-		_<- contAssign;;
+		_<- varAssign;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _validation_message;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [Wrong 2nd parameter! It must be a structure.];;
 

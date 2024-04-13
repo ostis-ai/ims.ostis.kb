@@ -169,7 +169,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorC1 (*
-		_<- contAssign;;
+		_<- varAssign;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _count;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [0];;
 
@@ -278,7 +278,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorH9 (*
-		_<- contAssign;;
+		_<- varAssign;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _countForQuasi;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [0];;
 
@@ -301,7 +301,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _tempOutputNode;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arcInRelation;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_var:: _struct;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: rrel_set_3:: _answer;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _answer;;
 
 		_=> nrel_then:: .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorJ4;;
 		_=> nrel_else:: .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorJ8;;
@@ -376,7 +377,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _someElementInRelation;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arcInRelation;;
 		_-> rrel_5:: rrel_assign:: rrel_scp_var:: _someRoleRelation;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: rrel_set_5:: _answer;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _answer;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_5:: _answer;;
 
 		_=> nrel_goto:: .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorJ9;;
 	*);;
@@ -405,7 +407,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _someElement;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arcInRelation;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_var:: _struct;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_1:: rrel_set_2:: _answer;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_1:: _answer;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer;;
 
 		_=> nrel_goto:: .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorJ14;;
 	*);;
@@ -461,7 +464,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorH15 (*
-		_<- contAssign;;
+		_<- varAssign;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _countForQuasi;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [0];;
 
@@ -779,7 +782,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorC6 (*
 		_<- contAdd;;
-		_-> rrel_1:: rrel_2:: rrel_fixed:: rrel_scp_var:: _count;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _count;;
+		_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _count;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: [1];;
 
 		_=> nrel_goto:: .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorC4;;

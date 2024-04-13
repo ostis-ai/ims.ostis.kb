@@ -30,7 +30,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_ninetieth_percentile_operator_D1_gen_index (*
-		_<- contAssign;;
+		_<- varAssign;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _index;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [0];;
 
@@ -38,7 +38,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_ninetieth_percentile_operator_D1_gen_result_value (*
-		_<- contAssign;;
+		_<- varAssign;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _ninetieth_percentile_value;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [0];;
 
@@ -130,7 +130,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_ninetieth_percentile_operator_D10_get_int_value (*
-		_<- contAssign;;
+		_<- varAssign;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _median_value;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _last_elem;;
 
@@ -150,7 +150,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._proc_of_calculation_ninetieth_percentile_operator_D7 (*
 		_<- contAdd;;
-		_-> rrel_1:: rrel_2:: rrel_fixed:: rrel_scp_var:: _index;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _index;;
+		_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _index;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: [1];;
 
 		_=> nrel_goto:: .._proc_of_calculation_ninetieth_percentile_operator_D8;;
