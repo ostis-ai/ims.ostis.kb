@@ -23,7 +23,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_average_value_operator_D1 (*
-		_<- contAssign;;
+		_<- varAssign;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _sum_of_all_values;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [0];;
 
@@ -96,7 +96,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._proc_of_calculation_average_value_operator_D4_concrete_value_sum (*
 		_<- contAdd;;
-		_-> rrel_1:: rrel_2:: rrel_fixed:: rrel_scp_var:: _sum_of_all_values;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _sum_of_all_values;;
+		_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _sum_of_all_values;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _concrete_value;;
 
 		_=> nrel_goto:: .._proc_of_calculation_average_value_operator_D2_loop_enter;;

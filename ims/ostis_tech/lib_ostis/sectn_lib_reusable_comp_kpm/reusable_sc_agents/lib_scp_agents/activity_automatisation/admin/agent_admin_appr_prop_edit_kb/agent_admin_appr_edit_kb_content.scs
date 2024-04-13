@@ -81,7 +81,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_administrator_approval_proposals_for_editing_kb_operator_invalid_first_param_msg (*
-		_<- contAssign;;
+		_<- varAssign;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _validation_message;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [Wrong 1st parameter! It must be sign of action_to_consider_proposal_for_editing_knowledge_base or sign of action_to_consider_new_project_task.];;
 
@@ -121,7 +121,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_administrator_approval_proposals_for_editing_kb_operator_invalid_access_rights (*
-		_<- contAssign;;
+		_<- varAssign;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _validation_message;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [Access denied. User must be a administrator.];;
 
@@ -414,7 +414,9 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _kb_struct;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_proposal;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: rrel_set_3:: rrel_set_4:: _answer_of_administrator_approval_proposals_for_editing_kb;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_of_administrator_approval_proposals_for_editing_kb;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _answer_of_administrator_approval_proposals_for_editing_kb;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _answer_of_administrator_approval_proposals_for_editing_kb;;
 
 		_=> nrel_goto:: .._agent_of_administrator_approval_proposals_for_editing_kb_operator4C;;
 	*);;
@@ -435,7 +437,9 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _proposer;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_authors;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: rrel_set_3:: rrel_set_4:: _answer_of_administrator_approval_proposals_for_editing_kb;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_of_administrator_approval_proposals_for_editing_kb;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _answer_of_administrator_approval_proposals_for_editing_kb;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _answer_of_administrator_approval_proposals_for_editing_kb;;
 
 		_=> nrel_goto:: .._agent_of_administrator_approval_proposals_for_editing_kb_operator4E;;
 	*);;
@@ -477,7 +481,9 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _user;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_approved;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: rrel_set_3:: rrel_set_4:: _answer_of_administrator_approval_proposals_for_editing_kb;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_of_administrator_approval_proposals_for_editing_kb;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _answer_of_administrator_approval_proposals_for_editing_kb;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _answer_of_administrator_approval_proposals_for_editing_kb;;
 
 		_=> nrel_goto:: .._agent_of_administrator_approval_proposals_for_editing_kb_operator6B;;
 	*);;
@@ -498,7 +504,9 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _user;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_administrator;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_1:: rrel_set_2:: rrel_set_4:: _answer_of_administrator_approval_proposals_for_editing_kb;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_1:: _answer_of_administrator_approval_proposals_for_editing_kb;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_of_administrator_approval_proposals_for_editing_kb;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _answer_of_administrator_approval_proposals_for_editing_kb;;
 
 		_=> nrel_goto:: .._agent_of_administrator_approval_proposals_for_editing_kb_operator6D;;
 	*);;
@@ -559,7 +567,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _temp_kb_elem;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _elem1;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: rrel_set_3:: _answer_of_administrator_approval_proposals_for_editing_kb;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_of_administrator_approval_proposals_for_editing_kb;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _answer_of_administrator_approval_proposals_for_editing_kb;;
 
 		_=> nrel_goto:: .._agent_of_administrator_approval_proposals_for_editing_kb_operator5E;;
 	*);;

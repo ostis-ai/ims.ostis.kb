@@ -13,7 +13,7 @@ _-> rrel_3:: rrel_in:: _number_of_connections;
 _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> rrel_1:: .._proc_of_calculation_of_number_ontology_connections_operator_assign_zero (*
-		_<- contAssign;;
+		_<- varAssign;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _number_of_connections;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [0];;
 
@@ -152,7 +152,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._proc_of_calculation_of_number_ontology_connections_operator_increase (*
 		_<- contAdd;;
-		_-> rrel_1:: rrel_2:: rrel_fixed:: rrel_scp_const:: _number_of_connections;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _number_of_connections;;
+		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: _number_of_connections;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: [1];;
 
 		_=> nrel_goto:: .._proc_of_calculation_of_number_ontology_connections_operator_erase_not_ontology_arc_1_loop_enter;;

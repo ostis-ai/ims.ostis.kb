@@ -97,7 +97,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_calculation_average_depth_of_subject_domain_operator2C (*
-		_<- contAssign;;
+		_<- varAssign;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _average_value;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [1];;
 
@@ -118,7 +118,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_calculation_average_depth_of_subject_domain_operator2D (*
-		_<- contAssign;;
+		_<- varAssign;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _current_depth;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [0];;
 
@@ -146,7 +146,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_calculation_average_depth_of_subject_domain_operator3A (*
-		_<- contAssign;;
+		_<- varAssign;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _average_value;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [0];;
 

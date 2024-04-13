@@ -245,7 +245,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_calculation_number_of_diff_input_connections_for_vertex_to_all_ontology_vertexes_operator1D0 (*
-		_<- contAssign;;
+		_<- varAssign;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _number_of_vertex_with_more_that_one_input_connections;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [0];;
 
@@ -346,7 +346,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_calculation_number_of_diff_input_connections_for_vertex_to_all_ontology_vertexes_operator1D4 (*
 		_<- contAdd;;
-		_-> rrel_1:: rrel_2:: rrel_fixed:: rrel_scp_var:: _number_of_vertex_with_more_that_one_input_connections;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _number_of_vertex_with_more_that_one_input_connections;;
+		_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _number_of_vertex_with_more_that_one_input_connections;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: [1];;
 
 		_=> nrel_goto:: .._agent_of_calculation_number_of_diff_input_connections_for_vertex_to_all_ontology_vertexes_operator1D1;;

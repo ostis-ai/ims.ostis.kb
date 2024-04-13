@@ -25,7 +25,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_number_of_all_types_of_input_connections_operator3A1 (*
-		_<- contAssign;;
+		_<- varAssign;;
 		_-> rrel_1:: rrel_assign:: rrel_link:: rrel_scp_var:: _accessories_arc;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [0];;
 
@@ -189,14 +189,15 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._proc_of_calculation_number_of_all_types_of_input_connections_operator3C24 (*
 		_<- contAdd;;
-		_-> rrel_1:: rrel_3:: rrel_fixed:: rrel_scp_var:: _numb_of_types;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _numb_of_types;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _numb_of_types;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _accessories_arc;;
 
 		_=> nrel_goto:: .._proc_of_calculation_number_of_all_types_of_input_connections_operator3C25;;
 	*);;
 
 	_-> .._proc_of_calculation_number_of_all_types_of_input_connections_operator3C25 (*
-		_<- contAssign;;
+		_<- varAssign;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _accessories_arc;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [0];;
 
@@ -350,7 +351,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_number_of_all_types_of_input_connections_operator3C14 (*
-		_<- contAssign;;
+		_<- varAssign;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _accessories_arc;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [1];;
 

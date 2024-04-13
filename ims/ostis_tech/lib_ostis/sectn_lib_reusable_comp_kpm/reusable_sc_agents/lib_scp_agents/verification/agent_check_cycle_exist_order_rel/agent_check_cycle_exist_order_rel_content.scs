@@ -61,7 +61,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_checking_cycle_existence_of_ordering_relation_operator_invalid_first_param_msg (*
-		_<- contAssign;;
+		_<- varAssign;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _validation_message;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [Wrong 1st parameter! It must be a structure.];;
 
@@ -88,7 +88,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_checking_cycle_existence_of_ordering_relation_operator2A_to_true (*
-		_<- contAssign;;
+		_<- varAssign;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _is_context_exist;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [true];;
 
@@ -96,7 +96,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_checking_cycle_existence_of_ordering_relation_operator2A_to_false (*
-		_<- contAssign;;
+		_<- varAssign;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _is_context_exist;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [false];;
 
@@ -362,7 +362,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	_-> .._agent_of_checking_cycle_existence_of_ordering_relation_operator4A_context_logic1 (*
 		_<- searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _some_relation;;
-		_-> rrel_2:: rrel_3:: rrel_assign:: rrel_common:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_assign:: rrel_common:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_assign:: rrel_scp_var:: rrel_set_3:: _for_arcs;;
 
 		_=> nrel_then:: .._agent_of_checking_cycle_existenc_of_ordering_relation_operator4A_context_logic2;;
@@ -372,7 +373,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	_-> .._agent_of_checking_cycle_existence_of_ordering_relation_operator4B_without_context (*
 		_<- searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _some_relation;;
-		_-> rrel_2:: rrel_3:: rrel_assign:: rrel_common:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_assign:: rrel_common:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_assign:: rrel_scp_var:: rrel_set_3:: _set1;;
 
 		_=> nrel_then:: .._agent_of_checking_cycle_existence_of_ordering_relation_operator4B;;
@@ -711,7 +713,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_checking_cycle_existence_of_ordering_relation_operator_invalid_second_param_msg (*
-		_<- contAssign;;
+		_<- varAssign;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _validation_message;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [Wrong 2nd parameter! It must be a structure.];;
 

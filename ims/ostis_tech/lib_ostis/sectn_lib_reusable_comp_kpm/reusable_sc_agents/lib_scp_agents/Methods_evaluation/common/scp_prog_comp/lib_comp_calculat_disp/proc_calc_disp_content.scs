@@ -49,7 +49,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_dispersion_operator_D1 (*
-		_<- contAssign;;
+		_<- varAssign;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _sum_of_all_values;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [0];;
 
@@ -113,7 +113,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._proc_of_calculation_dispersion_operator_D4_number_of_value_minus_one (*
 		_<- contSub;;
-		_-> rrel_1:: rrel_2:: rrel_fixed:: rrel_scp_var:: _number_of_value;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _number_of_value;;
+		_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _number_of_value;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: [1];;
 
 		_=> nrel_goto:: .._proc_of_calculation_dispersion_operator_E1_calc_result_value;;
@@ -160,7 +161,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._proc_of_calculation_dispersion_operator_D4_pow_two (*
 		_<- contPow;;
-		_-> rrel_1:: rrel_2:: rrel_fixed:: rrel_scp_var:: _centered_value;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _centered_value;;
+		_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _centered_value;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: [2];;
 
 		_=> nrel_goto:: .._proc_of_calculation_dispersion_operator_D4_concrete_value_sum;;
@@ -168,7 +170,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._proc_of_calculation_dispersion_operator_D4_concrete_value_sum (*
 		_<- contAdd;;
-		_-> rrel_1:: rrel_2:: rrel_fixed:: rrel_scp_var:: _sum_of_all_values;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _sum_of_all_values;;
+		_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _sum_of_all_values;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _centered_value;;
 
 		_=> nrel_goto:: .._proc_of_calculation_dispersion_operator_D2_loop_enter;;

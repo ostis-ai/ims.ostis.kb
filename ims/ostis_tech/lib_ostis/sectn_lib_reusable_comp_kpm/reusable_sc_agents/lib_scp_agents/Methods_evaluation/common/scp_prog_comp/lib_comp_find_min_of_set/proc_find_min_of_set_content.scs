@@ -44,7 +44,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_finding_min_value_of_set_operator_assign_min_value (*
-		_<- contAssign;;
+		_<- varAssign;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _min_value;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _first_value;;
 
@@ -85,7 +85,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_finding_min_value_of_set_operator_assign_new_min_value (*
-		_<- contAssign;;
+		_<- varAssign;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _min_value;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _concrete_value;;
 
