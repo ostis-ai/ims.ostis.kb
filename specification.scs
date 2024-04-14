@@ -2,16 +2,18 @@ knowledge_base_ims_specification
     <- concept_reusable_component_specification;;
 
 knowledge_base_ims_specification = [*
-knowledge_base_ims
-    <- concept_reusable_component;
-    <- concept_nonatomic_reusable_component;
-    <- concept_independent_reusable_component;
-    <- concept_reusable_kb_component;
-    <- concept_reusable_dynamically_installed_component;
-    <- concept_reusable_source_code_component;
+-> rrel_key_sc_element : knowledge_base_ims
+(*
+    <- concept_reusable_component;;
+    <- concept_nonatomic_reusable_component;;
+    <- concept_independent_reusable_component;;
+    <- concept_reusable_kb_component;;
+    <- concept_reusable_dynamically_installed_component;;
+    <- concept_reusable_source_code_component;;
 
-    => nrel_sc_identifier: [IMS knowledge base](* <- lang_en;; *);
-    => nrel_component_dependencies: ... (* <- empty_set ;; *);
-    => nrel_component_address: [https://github.com/ostis-ai/ims.ostis.kb] (* <- concept_github_url;; *);
+    => nrel_sc_identifier: [IMS knowledge base](* <- lang_en;; *);;
+    => nrel_component_dependencies: ... (* <- empty_set ;; *);;
+    => nrel_component_address: [https://github.com/ostis-ai/ims.ostis.kb] (* <- concept_github_url;; *);;
     => nrel_installation_method: ... (* <- concept_component_dynamically_installed_method;; *);;
+*);;
 *];;
