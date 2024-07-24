@@ -165,17 +165,17 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_result;;
 
-		_=> nrel_then:: .._agent_formation_suggestion_edit_kb_operator_find_action_todo_question_initiated_arc;;
+		_=> nrel_then:: .._agent_formation_suggestion_edit_kb_operator_find_action_todo_action_initiated_arc;;
 		_=> nrel_else:: .._agent_formation_suggestion_edit_kb_operator_is_two_arg_command;;
 	*);;
 
-	_-> .._agent_formation_suggestion_edit_kb_operator_find_action_todo_question_initiated_arc (*
+	_-> .._agent_formation_suggestion_edit_kb_operator_find_action_todo_action_initiated_arc (*
 		_<- searchElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: question_initiated;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_initiated;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc_to_remove;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action_todo;;
 
-		_=> nrel_then:: .._agent_formation_suggestion_edit_kb_operator1E1_erase_question_initianted_arc;;
+		_=> nrel_then:: .._agent_formation_suggestion_edit_kb_operator1E1_erase_action_initianted_arc;;
 		_=> nrel_else:: .._agent_formation_suggestion_edit_kb_operator_E2;;
 	*);;
 
@@ -201,7 +201,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_formation_suggestion_edit_kb_operator_B4 (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: question_initiated;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_initiated;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
 
@@ -424,7 +424,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_formation_suggestion_edit_kb_operator_E1 (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: question_finished_successfully;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_finished_successfully;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _quest;;
 
@@ -464,7 +464,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_=> nrel_goto:: .._agent_formation_suggestion_edit_kb_operator_is_two_arg_command_to_answer;;
 	*);;
 
-	_-> .._agent_formation_suggestion_edit_kb_operator1E1_erase_question_initianted_arc (*
+	_-> .._agent_formation_suggestion_edit_kb_operator1E1_erase_action_initianted_arc (*
 		_<- eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _arc_to_remove;;
 
@@ -473,7 +473,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_formation_suggestion_edit_kb_operator_E2 (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: question_finished_unsuccessfully;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_finished_unsuccessfully;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _quest;;
 

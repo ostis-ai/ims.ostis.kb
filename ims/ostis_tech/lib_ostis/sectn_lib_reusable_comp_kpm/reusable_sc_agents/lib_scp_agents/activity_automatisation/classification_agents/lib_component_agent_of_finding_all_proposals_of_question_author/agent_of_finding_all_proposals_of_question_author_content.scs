@@ -1,4 +1,4 @@
-agent_of_finding_all_proposals_of_question_author
+agent_of_finding_all_proposals_of_action_author
 => nrel_main_idtf:
 	[агентная scp-программа поиска всех предложений разработчикa] (* <- lang_ru;; *);
 	[agent scp-program of finding all proposals of author] (* <- lang_en;; *);
@@ -6,7 +6,7 @@ agent_of_finding_all_proposals_of_question_author
 <- agent_scp_program;
 -> rrel_key_sc_element: .._process1;;
 
-agent_of_finding_all_proposals_of_question_author = [*
+agent_of_finding_all_proposals_of_action_author = [*
 .._process1
 _<- scp_process;
 
@@ -14,26 +14,26 @@ _-> rrel_1:: rrel_in:: _event;
 _-> rrel_2:: rrel_in:: _input_arc;
 _<= nrel_decomposition_of_action:: .._actions (*
 
-	_-> rrel_1:: .._agent_of_finding_all_proposals_of_question_author1A (*
+	_-> rrel_1:: .._agent_of_finding_all_proposals_of_action_author1A (*
 		_<- searchElStr3;;
-		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _temp_of_question;;
+		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _temp_of_action;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: _input_arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _quest;;
 
-		_=> nrel_goto:: .._agent_of_finding_all_proposals_of_question_author1B;;
+		_=> nrel_goto:: .._agent_of_finding_all_proposals_of_action_author1B;;
 	*);;
 
-	_-> .._agent_of_finding_all_proposals_of_question_author1B (*
+	_-> .._agent_of_finding_all_proposals_of_action_author1B (*
 		_<- searchElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_of_finding_all_proposals_of_question_author;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_of_finding_all_proposals_of_action_author;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _quest;;
 
-		_=> nrel_then:: .._agent_of_finding_all_proposals_of_question_author_operator_get_question_author;;
-		_=> nrel_else:: .._agent_of_finding_all_proposals_of_question_author_operator_return;;
+		_=> nrel_then:: .._agent_of_finding_all_proposals_of_action_author_operator_get_action_author;;
+		_=> nrel_else:: .._agent_of_finding_all_proposals_of_action_author_operator_return;;
 	*);;
 
-	_-> .._agent_of_finding_all_proposals_of_question_author_operator_get_question_author (*
+	_-> .._agent_of_finding_all_proposals_of_action_author_operator_get_action_author (*
 		_<- searchElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _quest;;
 		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
@@ -41,62 +41,62 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_authors;;
 
-		_=> nrel_then:: .._agent_of_finding_all_proposals_of_question_author_operator_gen_new_question_1;;
-		_=> nrel_else:: .._agent_of_finding_all_proposals_of_question_author_operator_return;;
+		_=> nrel_then:: .._agent_of_finding_all_proposals_of_action_author_operator_gen_new_action_1;;
+		_=> nrel_else:: .._agent_of_finding_all_proposals_of_action_author_operator_return;;
 	*);;
 
-	_-> .._agent_of_finding_all_proposals_of_question_author_operator_return (*
+	_-> .._agent_of_finding_all_proposals_of_action_author_operator_return (*
 		_<- return;;
 
 	*);;
 
-	_-> .._agent_of_finding_all_proposals_of_question_author_operator_gen_new_question_1 (*
+	_-> .._agent_of_finding_all_proposals_of_action_author_operator_gen_new_action_1 (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: question;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: _new_quest;;
 
-		_=> nrel_goto:: .._agent_of_finding_all_proposals_of_question_author_operator_gen_new_question_2;;
+		_=> nrel_goto:: .._agent_of_finding_all_proposals_of_action_author_operator_gen_new_action_2;;
 	*);;
 
-	_-> .._agent_of_finding_all_proposals_of_question_author_operator_gen_new_question_2 (*
+	_-> .._agent_of_finding_all_proposals_of_action_author_operator_gen_new_action_2 (*
 		_<- genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_of_finding_all_proposals_of_author;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _new_quest;;
 
-		_=> nrel_goto:: .._agent_of_finding_all_proposals_of_question_author_operator_gen_new_question_3;;
+		_=> nrel_goto:: .._agent_of_finding_all_proposals_of_action_author_operator_gen_new_action_3;;
 	*);;
 
-	_-> .._agent_of_finding_all_proposals_of_question_author_operator_gen_new_question_3 (*
+	_-> .._agent_of_finding_all_proposals_of_action_author_operator_gen_new_action_3 (*
 		_<- genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _new_quest;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _user;;
 
-		_=> nrel_goto:: .._agent_of_finding_all_proposals_of_question_author_operator_gen_new_question_4;;
+		_=> nrel_goto:: .._agent_of_finding_all_proposals_of_action_author_operator_gen_new_action_4;;
 	*);;
 
-	_-> .._agent_of_finding_all_proposals_of_question_author_operator_gen_new_question_4 (*
+	_-> .._agent_of_finding_all_proposals_of_action_author_operator_gen_new_action_4 (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: question_initiated;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_initiated;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _new_quest;;
 
-		_=> nrel_goto:: .._agent_of_finding_all_proposals_of_question_author_operator_check_answer_1;;
+		_=> nrel_goto:: .._agent_of_finding_all_proposals_of_action_author_operator_check_answer_1;;
 	*);;
 
-	_-> .._agent_of_finding_all_proposals_of_question_author_operator_check_answer_1 (*
+	_-> .._agent_of_finding_all_proposals_of_action_author_operator_check_answer_1 (*
 		_<- searchElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: question_finished_unsuccessfully;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_finished_unsuccessfully;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc_result;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _new_quest;;
 
-		_=> nrel_then:: .._agent_of_finding_all_proposals_of_question_author_operator_search_ready_answer;;
-		_=> nrel_else:: .._agent_of_finding_all_proposals_of_question_author_operator_check_answer_2;;
+		_=> nrel_then:: .._agent_of_finding_all_proposals_of_action_author_operator_search_ready_answer;;
+		_=> nrel_else:: .._agent_of_finding_all_proposals_of_action_author_operator_check_answer_2;;
 	*);;
 
-	_-> .._agent_of_finding_all_proposals_of_question_author_operator_search_ready_answer (*
+	_-> .._agent_of_finding_all_proposals_of_action_author_operator_search_ready_answer (*
 		_<- searchElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _new_quest;;
 		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc;;
@@ -104,28 +104,28 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_answer;;
 
-		_=> nrel_goto:: .._agent_of_finding_all_proposals_of_question_author_operator_make_answer;;
+		_=> nrel_goto:: .._agent_of_finding_all_proposals_of_action_author_operator_make_answer;;
 	*);;
 
-	_-> .._agent_of_finding_all_proposals_of_question_author_operator_check_answer_2 (*
+	_-> .._agent_of_finding_all_proposals_of_action_author_operator_check_answer_2 (*
 		_<- searchElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: question_finished_successfully;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_finished_successfully;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc_result;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _new_quest;;
 
-		_=> nrel_then:: .._agent_of_finding_all_proposals_of_question_author_operator_search_ready_answer;;
-		_=> nrel_else:: .._agent_of_finding_all_proposals_of_question_author_operator_check_answer_3;;
+		_=> nrel_then:: .._agent_of_finding_all_proposals_of_action_author_operator_search_ready_answer;;
+		_=> nrel_else:: .._agent_of_finding_all_proposals_of_action_author_operator_check_answer_3;;
 	*);;
 
-	_-> .._agent_of_finding_all_proposals_of_question_author_operator_check_answer_3 (*
+	_-> .._agent_of_finding_all_proposals_of_action_author_operator_check_answer_3 (*
 		_<- sys_wait;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: sc_event_remove_input_arc;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _new_quest;;
 
-		_=> nrel_goto:: .._agent_of_finding_all_proposals_of_question_author_operator_check_answer_1;;
+		_=> nrel_goto:: .._agent_of_finding_all_proposals_of_action_author_operator_check_answer_1;;
 	*);;
 
-	_-> .._agent_of_finding_all_proposals_of_question_author_operator_make_answer (*
+	_-> .._agent_of_finding_all_proposals_of_action_author_operator_make_answer (*
 		_<- genElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _quest;;
 		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc1;;
@@ -133,16 +133,16 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_answer;;
 
-		_=> nrel_goto:: .._agent_of_finding_all_proposals_of_question_author_operator_successfully_finished_question;;
+		_=> nrel_goto:: .._agent_of_finding_all_proposals_of_action_author_operator_successfully_finished_action;;
 	*);;
 
-	_-> .._agent_of_finding_all_proposals_of_question_author_operator_successfully_finished_question (*
+	_-> .._agent_of_finding_all_proposals_of_action_author_operator_successfully_finished_action (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: question_finished_successfully;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_finished_successfully;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _quest;;
 
-		_=> nrel_goto:: .._agent_of_finding_all_proposals_of_question_author_operator_return;;
+		_=> nrel_goto:: .._agent_of_finding_all_proposals_of_action_author_operator_return;;
 	*);;
 
 *);;

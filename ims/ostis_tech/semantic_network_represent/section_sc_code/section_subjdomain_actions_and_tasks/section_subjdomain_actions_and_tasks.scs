@@ -15,7 +15,7 @@ section_subjdomain_actions_and_tasks
 
 rrel_key_sc_element -> (section_subjdomain_actions_and_tasks -> subject_domain_of_actions_and_tasks)
 (*
-	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> question)
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> action)
 (*
 	<- rrel_key_sc_element;;
 	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> information_action)
@@ -42,7 +42,7 @@ rrel_key_sc_element -> (section_subjdomain_actions_and_tasks -> subject_domain_o
 	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> receptor_action_ostis_system)
 (*
 	<- rrel_key_sc_element;;
-	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> question_initiated )
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> action_initiated )
 (*
 	<- rrel_key_sc_element;;
 	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> performed_action)
@@ -57,16 +57,16 @@ rrel_key_sc_element -> (section_subjdomain_actions_and_tasks -> subject_domain_o
 	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> planned_action)
 (*
 	<- rrel_key_sc_element;;
-	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> question_finished)
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> action_finished)
 (*
 	<- rrel_key_sc_element;;
-	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> question_finished_successfully)
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> action_finished_successfully)
 (*
 	<- rrel_key_sc_element;;
-	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> question_finished_unsuccessfully)
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> action_finished_unsuccessfully)
 (*
 	<- rrel_key_sc_element;;
-	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> question_finished_with_error)
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> action_finished_with_error)
 (*
 	<- rrel_key_sc_element;;
 	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> priority_actions)
@@ -162,7 +162,7 @@ rrel_key_sc_element -> (section_subjdomain_actions_and_tasks -> subject_domain_o
 	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> class_of_tasks)
 (*
 	<- rrel_key_sc_element;;
-	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> task_question)
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> task_action)
 (*
 	<- rrel_key_sc_element;;
 	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> command)

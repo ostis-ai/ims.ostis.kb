@@ -174,7 +174,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_formation_proposal_executor_of_project_task_operator4B (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: question_finished_unsuccessfully;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_finished_unsuccessfully;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _quest;;
 
@@ -210,7 +210,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_formation_proposal_executor_of_project_task_operator1F4 (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: question_initiated;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_initiated;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _sign_of_action2;;
 
@@ -399,7 +399,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_formation_proposal_executor_of_project_task_operator3E (*
 		_<- searchSetStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: question_initiated;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_initiated;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _sign_of_action2;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_of_formation_proposal_executor_of_project_task;;
@@ -412,7 +412,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_<- genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_formation_proposal_executor_of_project_task;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
-		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: question_initiated;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: action_initiated;;
 
 		_=> nrel_goto:: .._agent_of_formation_proposal_executor_of_project_task_operator3F;;
 	*);;
@@ -453,7 +453,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_formation_proposal_executor_of_project_task_operator4A (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: question_finished_successfully;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_finished_successfully;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _quest;;
 

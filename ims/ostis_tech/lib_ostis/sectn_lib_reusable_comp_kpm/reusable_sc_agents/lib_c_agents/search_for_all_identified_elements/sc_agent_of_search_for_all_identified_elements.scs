@@ -3,13 +3,13 @@ sc_agent_of_search_for_all_identified_elements
 	[sc-агент поиска всех идентифицированных элементов] (* <- lang_ru;; *);
 	[sc-agent of search for all identified elements] (* <- lang_en;; *);
 <- abstract_sc_agent;
-=> nrel_primary_initiation_condition: (sc_event_add_output_arc => question_initiated);
+=> nrel_primary_initiation_condition: (sc_event_add_output_arc => action_initiated);
 => nrel_initiation_condition_and_result: (..sc_agent_of_search_for_all_identified_elements_initiation_condition => ..sc_agent_of_search_for_all_identified_elements_result);
 <= nrel_sc_agent_key_sc_elements: 
 	{
-		question_initiated;
-		question;
-		question_search_all_identified_elements
+		action_initiated;
+		action;
+		action_search_all_identified_elements
 	};
 
 => nrel_inclusion: 
@@ -27,19 +27,19 @@ sc_agent_of_search_for_all_identified_elements
 
 ..sc_agent_of_search_for_all_identified_elements_initiation_condition
 = [*
-	question_search_all_identified_elements _-> .._question;;
-	question_initiated _-> .._question;;
-	question _-> .._question;;
-	.._question _-> rrel_1:: .._parameter_elem;;
-	.._question _-> rrel_2:: .._parameter_rel;;
+	action_search_all_identified_elements _-> .._action;;
+	action_initiated _-> .._action;;
+	action _-> .._action;;
+	.._action _-> rrel_1:: .._parameter_elem;;
+	.._action _-> rrel_2:: .._parameter_rel;;
 *];;
 
 ..sc_agent_of_search_for_all_identifiers_result
 = [*
-	question_search_all_identified_elements _-> .._question;;
-	question_finished _-> .._question;;
-	question _-> .._question;;
-	.._question _=> nrel_answer:: .._answer;;
-	.._question _-> rrel_1:: .._parameter_elem;;
-	.._question _-> rrel_2:: .._parameter_rel;;
+	action_search_all_identified_elements _-> .._action;;
+	action_finished _-> .._action;;
+	action _-> .._action;;
+	.._action _=> nrel_answer:: .._answer;;
+	.._action _-> rrel_1:: .._parameter_elem;;
+	.._action _-> rrel_2:: .._parameter_rel;;
 *];;

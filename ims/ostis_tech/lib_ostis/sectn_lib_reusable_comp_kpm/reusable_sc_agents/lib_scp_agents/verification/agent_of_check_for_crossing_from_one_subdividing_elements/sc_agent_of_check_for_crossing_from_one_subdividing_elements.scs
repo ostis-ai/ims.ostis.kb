@@ -12,15 +12,15 @@ sc_agent_of_check_for_crossing_from_one_subdividing_elements
     action_of_check_for_crossing_from_one_subdividing_elements;
 
 => nrel_primary_initiation_condition: 
-	(sc_event_add_output_arc => question_initiated);
+	(sc_event_add_output_arc => action_initiated);
 
 => nrel_initiation_condition_and_result: 
 	(..sc_agent_of_check_for_crossing_from_one_subdividing_elements => ..sc_agent_of_check_for_crossing_from_one_subdividing_elements_result);
 
 <= nrel_sc_agent_key_sc_elements: 
 	{
-	question_initiated;
-	question;
+	action_initiated;
+	action;
 	action_of_check_for_crossing_from_one_subdividing_elements
 	};
 
@@ -40,17 +40,17 @@ sc_agent_of_check_for_crossing_from_one_subdividing_elements
 
 ..sc_agent_of_check_for_crossing_from_one_subdividing_elements_condition
 = [*
-	action_of_check_for_crossing_from_one_subdividing_elements _-> .._question;;
-	question_initiated _-> .._question;;
-	question _-> .._question;;
-	.._question _-> .._param1;;
+	action_of_check_for_crossing_from_one_subdividing_elements _-> .._action;;
+	action_initiated _-> .._action;;
+	action _-> .._action;;
+	.._action _-> .._param1;;
 *];;
 
 ..sc_agent_of_check_for_crossing_from_one_subdividing_elements_result
 = [*
-	action_of_check_for_crossing_from_one_subdividing_elements _-> .._question;;
-	question_finished _-> .._question;;
-	question _-> .._question;;
-	.._question _=> nrel_answer:: .._answer;;
-	.._question _-> .._param1;;
+	action_of_check_for_crossing_from_one_subdividing_elements _-> .._action;;
+	action_finished _-> .._action;;
+	action _-> .._action;;
+	.._action _=> nrel_answer:: .._answer;;
+	.._action _-> .._param1;;
 *];;

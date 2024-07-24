@@ -156,12 +156,12 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_<- waitReturn;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _descr1;;
 
-		_=> nrel_goto:: .._agent_of_counting_arcs_in_structure_operator_question_finished_successfully;;
+		_=> nrel_goto:: .._agent_of_counting_arcs_in_structure_operator_action_finished_successfully;;
 	*);;
 
-	_-> .._agent_of_counting_arcs_in_structure_operator_question_finished_successfully (*
+	_-> .._agent_of_counting_arcs_in_structure_operator_action_finished_successfully (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: question_finished_successfully;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_finished_successfully;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _quest;;
 

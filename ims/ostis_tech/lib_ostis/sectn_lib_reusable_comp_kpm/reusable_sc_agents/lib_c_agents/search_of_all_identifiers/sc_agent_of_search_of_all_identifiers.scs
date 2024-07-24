@@ -3,13 +3,13 @@ sc_agent_of_search_of_all_identifiers
 	[sc-агент поиска всех идентификаторов заданного sc-элемента] (* <- lang_ru;; *);
 	[sc-agent of search of all identifiers of given sc-element] (* <- lang_en;; *);
 <- abstract_sc_agent;
-=> nrel_primary_initiation_condition: (sc_event_add_output_arc => question_initiated);
+=> nrel_primary_initiation_condition: (sc_event_add_output_arc => action_initiated);
 => nrel_initiation_condition_and_result: (..sc_agent_of_search_of_all_identifiers_initiation_condition => ..sc_agent_of_search_of_all_identifiers_result);
 <= nrel_sc_agent_key_sc_elements: 
 	{
-		question_initiated;
-		question;
-		question_search_all_identifiers
+		action_initiated;
+		action;
+		action_search_all_identifiers
 	};
 => nrel_inclusion: 
 	.c_realization_of_search_of_all_identifiers
@@ -26,17 +26,17 @@ sc_agent_of_search_of_all_identifiers
 
 ..sc_agent_of_search_of_all_identifiers_initiation_condition
 = [*
-	question_search_all_identifiers _-> .._question;;
-	question_initiated _-> .._question;;
-	question _-> .._question;;
-	.._question _-> .._parameter;;
+	action_search_all_identifiers _-> .._action;;
+	action_initiated _-> .._action;;
+	action _-> .._action;;
+	.._action _-> .._parameter;;
 *];;
 
 ..sc_agent_of_search_of_all_identifiers_result
 = [*
-	question_search_all_identifiers _-> .._question;;
-	question_finished _-> .._question;;
-	question _-> .._question;;
-	.._question _=> nrel_answer:: .._answer;;
-	.._question _-> .._parameter;;
+	action_search_all_identifiers _-> .._action;;
+	action_finished _-> .._action;;
+	action _-> .._action;;
+	.._action _=> nrel_answer:: .._answer;;
+	.._action _-> .._parameter;;
 *];;
