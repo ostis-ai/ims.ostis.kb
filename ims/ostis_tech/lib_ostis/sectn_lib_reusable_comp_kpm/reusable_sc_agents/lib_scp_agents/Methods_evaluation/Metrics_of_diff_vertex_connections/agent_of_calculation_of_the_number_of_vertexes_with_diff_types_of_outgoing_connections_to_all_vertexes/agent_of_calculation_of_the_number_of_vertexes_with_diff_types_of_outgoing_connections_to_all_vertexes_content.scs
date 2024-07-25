@@ -119,7 +119,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_calculation_of_the_number_of_vertexes_with_diff_types_of_outgoing_connections_to_all_vertexes_operator_unsuccess (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: question_finished_unsuccessfully;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_finished_unsuccessfully;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _quest;;
 
@@ -335,7 +335,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_calculation_of_the_number_of_vertexes_with_diff_types_of_outgoing_connections_to_all_vertexes_operator_succsess (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: question_finished_successfully;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_finished_successfully;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _quest;;
 

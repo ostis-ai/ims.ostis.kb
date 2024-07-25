@@ -9,15 +9,15 @@ sc_agent_of_calculation_ninetieth_percentile_vertex_degrees
     action_to_calculate_ninetieth_percentile_vertex_degrees;
 
 => nrel_primary_initiation_condition: 
-	(sc_event_add_output_arc => question_initiated);
+	(sc_event_add_output_arc => action_initiated);
 
 => nrel_initiation_condition_and_result: 
 	(..sc_agent_of_calculation_ninetieth_percentile_vertex_degrees_condition => ..sc_agent_of_calculation_ninetieth_percentile_vertex_degrees_result);
 
 <= nrel_sc_agent_key_sc_elements: 
 	{
-	question_initiated;
-	question;
+	action_initiated;
+	action;
 	action_to_calculate_ninetieth_percentile_vertex_degrees
 	};
 
@@ -36,17 +36,17 @@ sc_agent_of_calculation_ninetieth_percentile_vertex_degrees
 
 ..sc_agent_of_calculation_ninetieth_percentile_vertex_degrees_condition
 = [*
-	action_to_calculate_ninetieth_percentile_vertex_degrees _-> .._question;;
-	question_initiated _-> .._question;;
-	question _-> .._question;;
-	.._question _-> .._parameter;;
+	action_to_calculate_ninetieth_percentile_vertex_degrees _-> .._action;;
+	action_initiated _-> .._action;;
+	action _-> .._action;;
+	.._action _-> .._parameter;;
 *];;
 
 ..sc_agent_of_calculation_ninetieth_percentile_vertex_degrees_result
 = [*
-	action_to_calculate_ninetieth_percentile_vertex_degrees _-> .._question;;
-	question_finished _-> .._question;;
-	question _-> .._question;;
-	.._question _=> nrel_answer:: .._answer;;
-	.._question _-> .._parameter;;
+	action_to_calculate_ninetieth_percentile_vertex_degrees _-> .._action;;
+	action_finished _-> .._action;;
+	action _-> .._action;;
+	.._action _=> nrel_answer:: .._answer;;
+	.._action _-> .._parameter;;
 *];;

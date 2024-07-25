@@ -1,15 +1,15 @@
-lib_component_agent_of_finding_all_drafts_of_question_author
+lib_component_agent_of_finding_all_drafts_of_action_author
 => nrel_main_idtf:
 	[Компонент библиотеки. sc-агент поиска всех черновиков автора вопроса]
 	(* <- lang_ru;; *);
-	[Library component. sc-agent of finding all drafts of question author]
+	[Library component. sc-agent of finding all drafts of action author]
 	(* <- lang_en;; *);
 
 <- library_of_platform_independent_reusable_components; 
 <- library_of_atomic_reusable_components;
 
 -> rrel_key_sc_element: 
-	.platform_independent_realization_of_sc_agent_of_finding_all_drafts_of_question_author;
+	.platform_independent_realization_of_sc_agent_of_finding_all_drafts_of_action_author;
 
 <- rrel_key_sc_element: 
 	...
@@ -19,7 +19,7 @@ lib_component_agent_of_finding_all_drafts_of_question_author
 		...
 		(*
 		-> rrel_example:
-			"file://htmls/agent_of_finding_all_drafts_of_question_author.html"
+			"file://htmls/agent_of_finding_all_drafts_of_action_author.html"
 			(*
 			<- lang_ru;;
 			=> nrel_format: format_html;;
@@ -27,10 +27,10 @@ lib_component_agent_of_finding_all_drafts_of_question_author
 		*);;
 	*);;
 
-action_of_finding_all_drafts_of_question_author
+action_of_finding_all_drafts_of_action_author
 <- sc_node_not_relation;
 => nrel_main_idtf:
 	[действие. найти все черновики автора вопроса]
  	(* <- lang_ru;; *);
- 	[action. find all all drafts of question_author]
+ 	[action. find all all drafts of action_author]
  	(* <- lang_en;; *);;

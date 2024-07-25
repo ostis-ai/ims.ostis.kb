@@ -11,7 +11,7 @@ subject_domain_of_actions_and_tasks
 => nrel_primary_elements_class_private_subject_domain: subject_domain_of_actions_executing_in_sc_memory;
 => nrel_primary_elements_class_private_subject_domain: subject_domain_of_abstract_sc_agents;
 -> rrel_maximum_studied_object_class: 
-	question;
+	action;
 -> rrel_not_maximum_studied_object_class:
 	information_action;
 	behavioral_action;
@@ -21,15 +21,15 @@ subject_domain_of_actions_and_tasks
 	action_in_the_external_environment_ostis_system;
 	effector_action_ostis_system;
 	receptor_action_ostis_system;
-	question_initiated;
+	action_initiated;
 	performed_action;
 	active_action;
 	deferred_action;
 	planned_action;
-	question_finished;
-	question_finished_successfully;
-	question_finished_unsuccessfully;
-	question_finished_with_error;
+	action_finished;
+	action_finished_successfully;
+	action_finished_unsuccessfully;
+	action_finished_with_error;
 	priority_actions;
 	subject;
 	internal_subject_ostis_system;
@@ -44,7 +44,7 @@ subject_domain_of_actions_and_tasks
 	procedural_formulation_of_task;
 	declarative_formulation_of_task;
 	class_of_tasks;
-	task_question;
+	task_action;
 	command;
 	command_class;
 	command_class_without_arguments;
@@ -135,7 +135,7 @@ atomic_action_class
 		*);;
 	*);;
 
-question
+action
 <- sc_node_not_relation;
 => nrel_main_idtf:
 	[действие]
@@ -195,7 +195,7 @@ question
 
 <= nrel_subdividing: 	
 	{ 
-	question_initiated
+	action_initiated
 	(*
 	=> nrel_inclusion:
 		performed_action
@@ -206,7 +206,7 @@ question
 		*);;
 	*);
 	planned_action;
-	question_finished
+	action_finished
 	(*
 	=> nrel_idtf:
 		[прошлое действие]
@@ -347,7 +347,7 @@ receptor_action_ostis_system
 	[receptor action of OSTIS system]
 	(* <- lang_en;; *);;
 
-question_initiated
+action_initiated
 <- sc_node_not_relation; 
 => nrel_main_idtf:
 	[инициированное действие]
@@ -369,7 +369,7 @@ question_initiated
 		...
 		(*
 		-> rrel_example:
-				"file://content_html/explanation_for_question_initiated.html"
+				"file://content_html/explanation_for_action_initiated.html"
 				(*
 				<- lang_ru;;
 				=> nrel_format: format_html;;
@@ -499,7 +499,7 @@ planned_action
 	*);;
 
 
-question_finished
+action_finished
 <- sc_node_not_relation;
 => nrel_main_idtf:
 	[выполненное действие]
@@ -515,8 +515,8 @@ question_finished
 
 <= nrel_subdividing:
 	{
-		question_finished_successfully;
-		question_finished_unsuccessfully
+		action_finished_successfully;
+		action_finished_unsuccessfully
 	};
 
 <= nrel_inclusion:	
@@ -530,7 +530,7 @@ question_finished
 		...
 		(*
 		-> rrel_example:
-				"file://content_html/explanation_for_question_finished.html"
+				"file://content_html/explanation_for_action_finished.html"
 				(*
 				<- lang_ru;;
 				=> nrel_format: format_html;;
@@ -539,7 +539,7 @@ question_finished
 	*);;	
 
 
-question_finished_successfully
+action_finished_successfully
 <- sc_node_not_relation;
 => nrel_main_idtf:
 	[успешно выполненное действие]
@@ -555,7 +555,7 @@ question_finished_successfully
 		...
 		(*
 			-> rrel_example:
-				"file://content_html/explanation_for_question_finished_successfully.html"
+				"file://content_html/explanation_for_action_finished_successfully.html"
 				(*
 				<- lang_ru;;
 				=> nrel_format: format_html;;
@@ -564,7 +564,7 @@ question_finished_successfully
 	*);;		
 	
 	
-question_finished_unsuccessfully
+action_finished_unsuccessfully
 <- sc_node_not_relation;
 => nrel_main_idtf:
 	[безуспешно выполненное действие]
@@ -580,16 +580,16 @@ question_finished_unsuccessfully
 		...
 		(*
 			-> rrel_example:
-				"file://content_html/explanation_for_question_finished_unsuccessfully.html"
+				"file://content_html/explanation_for_action_finished_unsuccessfully.html"
 				(*
 				<- lang_ru;;
 				=> nrel_format: format_html;;
    				*);;
 		*);;
 	*);
-=> nrel_inclusion: question_finished_with_error;;
+=> nrel_inclusion: action_finished_with_error;;
 
-question_finished_with_error
+action_finished_with_error
 <- sc_node_not_relation;
 => nrel_main_idtf:
 	[действие, выполненное с ошибкой]
@@ -604,7 +604,7 @@ question_finished_with_error
 		...
 		(*
 			-> rrel_example:
-				"file://content_html/explanation_for_question_finished_with_error.html"
+				"file://content_html/explanation_for_action_finished_with_error.html"
 				(*
 				<- lang_ru;;
 				=> nrel_format: format_html;;
@@ -785,7 +785,7 @@ actions_class
 	(* <- lang_ru;; *);	
 	
 <= nrel_set_of_subsets:
-		question;
+		action;
 
 <= nrel_subdividing:
 {
@@ -1001,7 +1001,7 @@ nrel_conjunction_of_previous_actions
 	(* <- lang_ru;; *);	
 	
 <= nrel_inclusion:
-	question;
+	action;
 	
 <- rrel_key_sc_element:
 	...
@@ -1034,7 +1034,7 @@ nrel_condition_control
 	(* <- lang_ru;; *);
 	
 <= nrel_inclusion:
-	question;
+	action;
 	
 <- rrel_key_sc_element:
 	...
@@ -1262,7 +1262,7 @@ task
 	declarative_formulation_of_task;
 	
 => nrel_inclusion:	
-	task_question;
+	task_action;
 	command;;
 
 	
@@ -1352,12 +1352,12 @@ class_of_tasks
 	*);;	
 
 
-task_question
+task_action
 <- sc_node_not_relation;
 => nrel_main_idtf:
 	[вопрос]
 	(* <- lang_ru;; *);
-	[question]
+	[action]
 	(* <- lang_en;; *);
 
 => nrel_idtf:

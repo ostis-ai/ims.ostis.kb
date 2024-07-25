@@ -165,7 +165,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_object;;
 
 		_=> nrel_then:: .._agent_assignment_form_to_the_verification_result_operator1FF_gen_second_struct;;
-		_=> nrel_else:: .._agent_assignment_form_to_the_verification_result_gen_question_finished_unsuccessfully;;
+		_=> nrel_else:: .._agent_assignment_form_to_the_verification_result_gen_action_finished_unsuccessfully;;
 	*);;
 
 	_-> .._agent_assignment_form_to_the_verification_result_operator1FF_gen_second_struct (*
@@ -175,9 +175,9 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_=> nrel_goto:: .._agent_assignment_form_to_the_verification_result_operator_C1_gen_two_structures_in_main_struct;;
 	*);;
 
-	_-> .._agent_assignment_form_to_the_verification_result_gen_question_finished_unsuccessfully (*
+	_-> .._agent_assignment_form_to_the_verification_result_gen_action_finished_unsuccessfully (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: question_finished_unsuccessfully;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_finished_unsuccessfully;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _quest;;
 
@@ -496,20 +496,20 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_performer;;
 
-		_=> nrel_goto:: .._agent_assignment_form_to_the_verification_result_operator_find_question_initiated_arc;;
+		_=> nrel_goto:: .._agent_assignment_form_to_the_verification_result_operator_find_action_initiated_arc;;
 	*);;
 
-	_-> .._agent_assignment_form_to_the_verification_result_operator_find_question_initiated_arc (*
+	_-> .._agent_assignment_form_to_the_verification_result_operator_find_action_initiated_arc (*
 		_<- searchElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: question_initiated;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_initiated;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc_to_erase;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action_verify_structure;;
 
-		_=> nrel_then:: .._agent_assignment_form_to_the_verification_result_operator1_erase_question_initiated_arc;;
+		_=> nrel_then:: .._agent_assignment_form_to_the_verification_result_operator1_erase_action_initiated_arc;;
 		_=> nrel_else:: .._agent_assignment_form_to_the_verification_result_operator_call_removing;;
 	*);;
 
-	_-> .._agent_assignment_form_to_the_verification_result_operator1_erase_question_initiated_arc (*
+	_-> .._agent_assignment_form_to_the_verification_result_operator1_erase_action_initiated_arc (*
 		_<- eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _arc_to_erase;;
 
@@ -554,7 +554,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_assignment_form_to_the_verification_result_operator1J (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: question_initiated;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_initiated;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _new_init_action;;
 
@@ -807,12 +807,12 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_answer;;
 
-		_=> nrel_goto:: .._agent_assignment_form_to_the_verification_result_gen_question_finished_successfully;;
+		_=> nrel_goto:: .._agent_assignment_form_to_the_verification_result_gen_action_finished_successfully;;
 	*);;
 
-	_-> .._agent_assignment_form_to_the_verification_result_gen_question_finished_successfully (*
+	_-> .._agent_assignment_form_to_the_verification_result_gen_action_finished_successfully (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: question_finished_successfully;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_finished_successfully;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _quest;;
 

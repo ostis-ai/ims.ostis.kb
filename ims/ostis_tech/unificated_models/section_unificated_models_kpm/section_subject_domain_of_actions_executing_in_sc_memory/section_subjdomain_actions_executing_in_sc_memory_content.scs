@@ -11,9 +11,9 @@ subject_domain_of_actions_executing_in_sc_memory
 => nrel_primary_elements_class_private_subject_domain: subject_domain_developers_actions_knowledge_base_cooperation_hierarchy;
 -> rrel_maximum_studied_object_class: action_in_sc_memory;
 -> rrel_not_maximum_studied_object_class:
-	action_in_sc_memory_initiated_by_question;
+	action_in_sc_memory_initiated_by_action;
 	action_of_kb_editing;
-	question_merge_two_elements;
+	action_merge_two_elements;
 	action_to_renew_concepts;
 	action_to_delete_selected_sc_elements;
 	action_to_integrate_selected_structure_into_current_state_of_kb;
@@ -62,18 +62,18 @@ action_in_sc_memory
 		*);;
 	*);
 => nrel_inclusion:
-	action_in_sc_memory_initiated_by_question;
+	action_in_sc_memory_initiated_by_action;
 	action_of_kb_editing;
 	action_of_ostis_system_mode_setting;
 	action_of_editing_file_stored_in_sc_memory;
 	action_of_interpreting_program_stored_in_sc_memory;;
 
-action_in_sc_memory_initiated_by_question
+action_in_sc_memory_initiated_by_action
 <- sc_node_not_relation;
 => nrel_main_idtf:
 	[действие в sc-памяти, инициируемое вопросом]
 	(* <- lang_ru;; *);
-	[action in sc-memory initiated by question]
+	[action in sc-memory initiated by action]
 	(* <- lang_en;; *);
 => nrel_idtf:
 	[действие, направленное на формирование ответа на поставленный вопрос]
@@ -109,7 +109,7 @@ action_in_sc_memory_initiated_by_question
 					action_to_form_structure_describing_differences_of_designated_entities;;
 			*);
 			action_to_form_structure_describing_method_of_designated_task_solution;
-			action_to_form_plan_of_answer_to_selected_question_generation;
+			action_to_form_plan_of_answer_to_selected_action_generation;
 			action_to_form_execution_history_of_designated_action;
 			action_to_form_argumentation_of_designated_solution_correctness;
 			action_to_verify_argumentation_of_designated_solution_correctness;
@@ -246,12 +246,12 @@ action_to_form_structure_describing_method_of_designated_task_solution
 	[action. to form structure describing method of designated task solution]
 	(* <- lang_en;; *);;
 
-action_to_form_plan_of_answer_to_selected_question_generation
+action_to_form_plan_of_answer_to_selected_action_generation
 <- sc_node_not_relation;
 => nrel_main_idtf:
 	[действие. сформировать план генерации ответа на указанный вопрос]
 	(* <- lang_ru;; *);
-	[action. to form plan of answer to selected question generation]
+	[action. to form plan of answer to selected action generation]
 	(* <- lang_en;; *);;
 
 action_to_form_execution_history_of_designated_action
@@ -349,7 +349,7 @@ action_to_correct_mistakes_in_given_structure
 	[action. to correct mistakes in given structure]
 	(* <- lang_en;; *);;
 
-question_merge_two_elements
+action_merge_two_elements
 => nrel_idtf:
 	[действие. совместить два указанных sc-элемента]
 	(* <- lang_ru;; *);
@@ -650,9 +650,9 @@ action_of_interpreting_program_stored_in_sc_memory
 	[action of interpreting program stored in sc-memory]
 	(* <- lang_en;; *);
 => nrel_inclusion: 
-	question_scp_interpretation_request;;
+	action_scp_interpretation_request;;
 
-question_scp_interpretation_request
+action_scp_interpretation_request
 <- sc_node_not_relation;
 => nrel_main_idtf:
 	[действие интерпретации scp-программы]

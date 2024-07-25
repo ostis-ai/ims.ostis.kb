@@ -16,7 +16,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> rrel_1:: .._agent_of_finding_all_proposals_of_author1A (*
 		_<- searchElStr3;;
-		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _temp_of_question;;
+		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _temp_of_action;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: _input_arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _quest;;
 
@@ -226,12 +226,12 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_answer;;
 
-		_=> nrel_goto:: .._agent_of_finding_all_proposals_of_author_operator_successfully_finished_question;;
+		_=> nrel_goto:: .._agent_of_finding_all_proposals_of_author_operator_successfully_finished_action;;
 	*);;
 
-	_-> .._agent_of_finding_all_proposals_of_author_operator_successfully_finished_question (*
+	_-> .._agent_of_finding_all_proposals_of_author_operator_successfully_finished_action (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: question_finished_successfully;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_finished_successfully;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _quest;;
 

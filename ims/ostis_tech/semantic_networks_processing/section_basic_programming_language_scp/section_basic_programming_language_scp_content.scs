@@ -2568,13 +2568,13 @@ rrel_init
 	<- main_concept;
 
 	=> nrel_first_domain:
- 		question;
+ 		action;
 
  	=> nrel_second_domain:
- 		question;
+ 		action;
  
  	=> nrel_definitional_domain:
- 		question;
+ 		action;
 
 	<= nrel_inclusion:
 		rrel_1;
@@ -2602,7 +2602,7 @@ rrel_new_param
 		(*<- lang_ru;;*);
 
 	=> nrel_first_domain:
- 		question;
+ 		action;
 
  	=> nrel_second_domain:
  		sc_element;
@@ -2612,7 +2612,7 @@ rrel_new_param
  		(*
  			<= nrel_combination:
  			{
- 				question;
+ 				action;
  				sc_element
  			};;
  		*);
@@ -2721,7 +2721,7 @@ rrel_in
 		[in-parameter']
 		(*<- lang_en;;*);
 	=> nrel_first_domain:
- 		question;
+ 		action;
  	=> nrel_second_domain:
  		sc_element;
  	=> nrel_definitional_domain:
@@ -2729,7 +2729,7 @@ rrel_in
  		(*
  			<= nrel_combination:
  			{
- 				question;
+ 				action;
  				sc_element
  			};;
  		*);
@@ -2757,7 +2757,7 @@ rrel_out
 		[out-parameter']
 		(*<- lang_en;;*);
 	=> nrel_first_domain:
- 		question;
+ 		action;
  	=> nrel_second_domain:
  		sc_element;
  	=> nrel_definitional_domain:
@@ -2765,7 +2765,7 @@ rrel_out
  		(*
  			<= nrel_combination:
  			{
- 				question;
+ 				action;
  				sc_element
  			};;
  		*);

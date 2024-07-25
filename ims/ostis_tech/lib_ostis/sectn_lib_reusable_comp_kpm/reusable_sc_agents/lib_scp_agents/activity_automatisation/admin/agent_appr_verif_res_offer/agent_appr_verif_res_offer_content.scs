@@ -50,7 +50,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_approval_verification_result_of_offer_operator1P (*
 		_<- searchElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: question_initiated;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_initiated;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _act_param;;
 
@@ -120,7 +120,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_object;;
 
 		_=> nrel_then:: .._agent_approval_verification_result_of_offer_operator1_gen_act;;
-		_=> nrel_else:: .._agent_approval_verification_result_of_offer_gen_question_finished_unsuccessfully;;
+		_=> nrel_else:: .._agent_approval_verification_result_of_offer_gen_action_finished_unsuccessfully;;
 	*);;
 
 	_-> .._agent_approval_verification_result_of_offer_operator1_gen_act (*
@@ -130,9 +130,9 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_=> nrel_goto:: .._agent_approval_verification_result_of_offer_operator_gen_act_modify_offer_by_editing_the_kb_action_class;;
 	*);;
 
-	_-> .._agent_approval_verification_result_of_offer_gen_question_finished_unsuccessfully (*
+	_-> .._agent_approval_verification_result_of_offer_gen_action_finished_unsuccessfully (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: question_finished_unsuccessfully;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_finished_unsuccessfully;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _quest;;
 
@@ -157,7 +157,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_sequence_of_actions;;
 
 		_=> nrel_then:: .._agent_approval_verification_result_of_offer_operator_find_not_verificate_struct;;
-		_=> nrel_else:: .._agent_approval_verification_result_of_offer_gen_question_finished_unsuccessfully;;
+		_=> nrel_else:: .._agent_approval_verification_result_of_offer_gen_action_finished_unsuccessfully;;
 	*);;
 
 	_-> .._agent_approval_verification_result_of_offer_operator_find_not_verificate_struct (*
@@ -169,7 +169,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_object;;
 
 		_=> nrel_then:: .._agent_approval_verification_result_of_offer_operator_find_act_by_subact_relation;;
-		_=> nrel_else:: .._agent_approval_verification_result_of_offer_gen_question_finished_unsuccessfully;;
+		_=> nrel_else:: .._agent_approval_verification_result_of_offer_gen_action_finished_unsuccessfully;;
 	*);;
 
 	_-> .._agent_approval_verification_result_of_offer_operator_find_act_by_subact_relation (*
@@ -181,7 +181,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_subaction;;
 
 		_=> nrel_then:: .._agent_approval_verification_result_of_offer_operator_find_real_entity_arc;;
-		_=> nrel_else:: .._agent_approval_verification_result_of_offer_gen_question_finished_unsuccessfully;;
+		_=> nrel_else:: .._agent_approval_verification_result_of_offer_gen_action_finished_unsuccessfully;;
 	*);;
 
 	_-> .._agent_approval_verification_result_of_offer_operator_find_real_entity_arc (*
@@ -191,7 +191,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _previous_act;;
 
 		_=> nrel_then:: .._agent_approval_verification_result_of_offer_operator1_erase_real_entity_arc;;
-		_=> nrel_else:: .._agent_approval_verification_result_of_offer_gen_question_finished_unsuccessfully;;
+		_=> nrel_else:: .._agent_approval_verification_result_of_offer_gen_action_finished_unsuccessfully;;
 	*);;
 
 	_-> .._agent_approval_verification_result_of_offer_operator1_erase_real_entity_arc (*
@@ -207,20 +207,20 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _previous_act;;
 
-		_=> nrel_goto:: .._agent_approval_verification_result_of_offer_operator_find_question_init_arc;;
+		_=> nrel_goto:: .._agent_approval_verification_result_of_offer_operator_find_action_init_arc;;
 	*);;
 
-	_-> .._agent_approval_verification_result_of_offer_operator_find_question_init_arc (*
+	_-> .._agent_approval_verification_result_of_offer_operator_find_action_init_arc (*
 		_<- searchElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: question_initiated;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_initiated;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc_to_erase;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _previous_act;;
 
-		_=> nrel_then:: .._agent_approval_verification_result_of_offer_operator1_erase_question_initiated_arc;;
-		_=> nrel_else:: .._agent_approval_verification_result_of_offer_gen_question_finished_unsuccessfully;;
+		_=> nrel_then:: .._agent_approval_verification_result_of_offer_operator1_erase_action_initiated_arc;;
+		_=> nrel_else:: .._agent_approval_verification_result_of_offer_gen_action_finished_unsuccessfully;;
 	*);;
 
-	_-> .._agent_approval_verification_result_of_offer_operator1_erase_question_initiated_arc (*
+	_-> .._agent_approval_verification_result_of_offer_operator1_erase_action_initiated_arc (*
 		_<- eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _arc_to_erase;;
 
@@ -237,7 +237,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_assign:: rrel_scp_var:: rrel_set_3:: _verificate_structes;;
 
 		_=> nrel_then:: .._agent_approval_verification_result_of_offer_operator_find_verificate_struct_loop_enter;;
-		_=> nrel_else:: .._agent_approval_verification_result_of_offer_gen_question_finished_unsuccessfully;;
+		_=> nrel_else:: .._agent_approval_verification_result_of_offer_gen_action_finished_unsuccessfully;;
 	*);;
 
 	_-> .._agent_approval_verification_result_of_offer_operator_find_verificate_struct_loop_enter (*
@@ -247,7 +247,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _verificate_struct;;
 
 		_=> nrel_then:: .._agent_approval_verification_result_of_offer_operator1G_delete_arc_of_verificate_structes_set_loop;;
-		_=> nrel_else:: .._agent_approval_verification_result_of_offer_gen_question_finished_unsuccessfully;;
+		_=> nrel_else:: .._agent_approval_verification_result_of_offer_gen_action_finished_unsuccessfully;;
 	*);;
 
 	_-> .._agent_approval_verification_result_of_offer_operator1G_delete_arc_of_verificate_structes_set_loop (*
@@ -298,7 +298,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_authors;;
 
 		_=> nrel_then:: .._agent_approval_verification_result_of_offer_operator1_gen_act_performer;;
-		_=> nrel_else:: .._agent_approval_verification_result_of_offer_gen_question_finished_unsuccessfully;;
+		_=> nrel_else:: .._agent_approval_verification_result_of_offer_gen_action_finished_unsuccessfully;;
 	*);;
 
 	_-> .._agent_approval_verification_result_of_offer_operator1_gen_act_performer (*
@@ -340,19 +340,19 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _act_param;;
 
-		_=> nrel_goto:: .._agent_approval_verification_result_of_offer_operator1P_find_question_initiated_in_act_param;;
+		_=> nrel_goto:: .._agent_approval_verification_result_of_offer_operator1P_find_action_initiated_in_act_param;;
 	*);;
 
-	_-> .._agent_approval_verification_result_of_offer_operator1P_find_question_initiated_in_act_param (*
+	_-> .._agent_approval_verification_result_of_offer_operator1P_find_action_initiated_in_act_param (*
 		_<- searchElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: question_initiated;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_initiated;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc_to_erase;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _act_param;;
 
-		_=> nrel_goto:: .._agent_approval_verification_result_of_offer_operator1_erase_question_initiated_arc_of_act_param;;
+		_=> nrel_goto:: .._agent_approval_verification_result_of_offer_operator1_erase_action_initiated_arc_of_act_param;;
 	*);;
 
-	_-> .._agent_approval_verification_result_of_offer_operator1_erase_question_initiated_arc_of_act_param (*
+	_-> .._agent_approval_verification_result_of_offer_operator1_erase_action_initiated_arc_of_act_param (*
 		_<- eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _arc_to_erase;;
 
@@ -361,7 +361,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_approval_verification_result_of_offer_operator1_mark_new_act_as_initiate_entity (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: question_initiated;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_initiated;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _act_modify_offer_by_editing_the_kb;;
 
@@ -593,12 +593,12 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_<- printEl;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_approval_verification_result_of_offer;;
 
-		_=> nrel_goto:: .._agent_approval_verification_result_of_offer_gen_question_finished_successfully;;
+		_=> nrel_goto:: .._agent_approval_verification_result_of_offer_gen_action_finished_successfully;;
 	*);;
 
-	_-> .._agent_approval_verification_result_of_offer_gen_question_finished_successfully (*
+	_-> .._agent_approval_verification_result_of_offer_gen_action_finished_successfully (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: question_finished_successfully;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_finished_successfully;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _quest;;
 
