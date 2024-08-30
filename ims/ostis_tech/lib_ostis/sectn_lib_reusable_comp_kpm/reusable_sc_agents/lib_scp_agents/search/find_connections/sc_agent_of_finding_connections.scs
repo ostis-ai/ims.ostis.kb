@@ -52,7 +52,7 @@ sc_agent_of_finding_connections => nrel_main_idtf:
 	action_finding_connections _-> .._action;;
 	action_finished _-> .._action;;
 	action _-> .._action;;
-	.._action _=> nrel_answer:: .._answer;;
+	.._action _=> nrel_result:: .._answer;;
 	.._action _-> rrel_1:: .._parameter1;;
 	.._action _-> rrel_2:: .._parameter2;;
 *];;
