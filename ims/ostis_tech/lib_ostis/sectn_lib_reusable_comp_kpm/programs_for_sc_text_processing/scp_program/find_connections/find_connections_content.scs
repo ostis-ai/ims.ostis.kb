@@ -9,12 +9,12 @@ _<- scp_process;
 
 _-> rrel_1:: rrel_in:: _el1;
 _-> rrel_2:: rrel_in:: _el2;
-_-> rrel_3:: rrel_in:: _answer_proc_of_finding_connections;
+_-> rrel_3:: rrel_in:: _result_proc_of_finding_connections;
 _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> rrel_1:: .._proc_of_finding_connections_operator1A (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _answer_proc_of_finding_connections;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _result_proc_of_finding_connections;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _el1;;
 
@@ -23,7 +23,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._proc_of_finding_connections_operator1B (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _answer_proc_of_finding_connections;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _result_proc_of_finding_connections;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _el2;;
 
@@ -47,9 +47,9 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _elem;;
 		_-> rrel_4:: rrel_assign:: rrel_scp_var:: _arc33;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: _el2;;
-		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _answer_proc_of_finding_connections;;
-		_-> rrel_fixed:: rrel_scp_const:: rrel_set_3:: _answer_proc_of_finding_connections;;
-		_-> rrel_fixed:: rrel_scp_const:: rrel_set_4:: _answer_proc_of_finding_connections;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _result_proc_of_finding_connections;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_3:: _result_proc_of_finding_connections;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_4:: _result_proc_of_finding_connections;;
 
 		_=> nrel_then:: .._proc_of_finding_connections_operator3E;;
 		_=> nrel_else:: .._proc_of_finding_connections_operator3B;;
@@ -83,7 +83,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 			_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _el1;;
 			_-> rrel_2:: rrel_fixed:: rrel_scp_const:: _el2;;
 			_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _arc_set1;;
-			_-> rrel_4:: rrel_fixed:: rrel_scp_const:: _answer_proc_of_finding_connections;;
+			_-> rrel_4:: rrel_fixed:: rrel_scp_const:: _result_proc_of_finding_connections;;
 		*);;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _descr1;;
 
@@ -108,7 +108,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 			_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _el1;;
 			_-> rrel_2:: rrel_fixed:: rrel_scp_const:: _el2;;
 			_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _arc_set2;;
-			_-> rrel_4:: rrel_fixed:: rrel_scp_const:: _answer_proc_of_finding_connections;;
+			_-> rrel_4:: rrel_fixed:: rrel_scp_const:: _result_proc_of_finding_connections;;
 		*);;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _descr2;;
 
@@ -149,7 +149,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _rules;;
 			_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _rules2;;
 			_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _rules3;;
-			_-> rrel_4:: rrel_fixed:: rrel_scp_const:: _answer_proc_of_finding_connections;;
+			_-> rrel_4:: rrel_fixed:: rrel_scp_const:: _result_proc_of_finding_connections;;
 			_-> rrel_5:: rrel_fixed:: rrel_scp_const:: _el1;;
 			_-> rrel_6:: rrel_fixed:: rrel_scp_const:: _el2;;
 		*);;
@@ -199,7 +199,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _rules;;
 			_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _rules2;;
 			_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _rules3;;
-			_-> rrel_4:: rrel_fixed:: rrel_scp_const:: _answer_proc_of_finding_connections;;
+			_-> rrel_4:: rrel_fixed:: rrel_scp_const:: _result_proc_of_finding_connections;;
 			_-> rrel_5:: rrel_fixed:: rrel_scp_const:: _el1;;
 			_-> rrel_6:: rrel_fixed:: rrel_scp_const:: _el2;;
 		*);;
@@ -220,7 +220,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: .._proc_of_finding_connections_param4;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._proc_of_finding_connections_param5;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: .._proc_of_finding_connections_param6;;
-		_-> rrel_4:: rrel_fixed:: rrel_scp_const:: _answer_proc_of_finding_connections;;
+		_-> rrel_4:: rrel_fixed:: rrel_scp_const:: _result_proc_of_finding_connections;;
 
 		_=> nrel_goto:: .._proc_of_finding_connections_operator7B;;
 	*);;
@@ -230,7 +230,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: .._proc_of_finding_connections_param7;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._proc_of_finding_connections_param8;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: .._proc_of_finding_connections_param9;;
-		_-> rrel_4:: rrel_fixed:: rrel_scp_const:: _answer_proc_of_finding_connections;;
+		_-> rrel_4:: rrel_fixed:: rrel_scp_const:: _result_proc_of_finding_connections;;
 
 		_=> nrel_then:: .._proc_of_finding_connections_operator8A;;
 		_=> nrel_else:: .._proc_of_finding_connections_operator7C;;
@@ -241,7 +241,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: .._proc_of_finding_connections_param10;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._proc_of_finding_connections_param11;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: .._proc_of_finding_connections_param12;;
-		_-> rrel_4:: rrel_fixed:: rrel_scp_const:: _answer_proc_of_finding_connections;;
+		_-> rrel_4:: rrel_fixed:: rrel_scp_const:: _result_proc_of_finding_connections;;
 
 		_=> nrel_goto:: .._proc_of_finding_connections_operator_return;;
 	*);;
@@ -251,7 +251,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: .._proc_of_finding_connections_param13;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._proc_of_finding_connections_param14;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: .._proc_of_finding_connections_param15;;
-		_-> rrel_4:: rrel_fixed:: rrel_scp_const:: _answer_proc_of_finding_connections;;
+		_-> rrel_4:: rrel_fixed:: rrel_scp_const:: _result_proc_of_finding_connections;;
 
 		_=> nrel_goto:: .._proc_of_finding_connections_operator8A;;
 	*);;
@@ -280,8 +280,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _elem;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _node1;;
-		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _answer_proc_of_finding_connections;;
-		_-> rrel_fixed:: rrel_scp_const:: rrel_set_3:: _answer_proc_of_finding_connections;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _result_proc_of_finding_connections;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_3:: _result_proc_of_finding_connections;;
 
 		_=> nrel_goto:: .._proc_of_finding_connections_operator7D;;
 	*);;
@@ -293,9 +293,9 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _elem;;
 		_-> rrel_4:: rrel_assign:: rrel_scp_var:: _arc33;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: _el1;;
-		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _answer_proc_of_finding_connections;;
-		_-> rrel_fixed:: rrel_scp_const:: rrel_set_3:: _answer_proc_of_finding_connections;;
-		_-> rrel_fixed:: rrel_scp_const:: rrel_set_4:: _answer_proc_of_finding_connections;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _result_proc_of_finding_connections;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_3:: _result_proc_of_finding_connections;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_4:: _result_proc_of_finding_connections;;
 
 		_=> nrel_then:: .._proc_of_finding_connections_operator3E;;
 		_=> nrel_else:: .._proc_of_finding_connections_operator3C;;
@@ -308,9 +308,9 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _el1;;
 		_-> rrel_4:: rrel_assign:: rrel_scp_var:: _arc33;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: _el2;;
-		_-> rrel_fixed:: rrel_scp_const:: rrel_set_1:: _answer_proc_of_finding_connections;;
-		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _answer_proc_of_finding_connections;;
-		_-> rrel_fixed:: rrel_scp_const:: rrel_set_4:: _answer_proc_of_finding_connections;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_1:: _result_proc_of_finding_connections;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _result_proc_of_finding_connections;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_4:: _result_proc_of_finding_connections;;
 
 		_=> nrel_then:: .._proc_of_finding_connections_operator3F;;
 		_=> nrel_else:: .._proc_of_finding_connections_operator3D;;
@@ -321,8 +321,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _elem2;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _node1;;
-		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _answer_proc_of_finding_connections;;
-		_-> rrel_fixed:: rrel_scp_const:: rrel_set_3:: _answer_proc_of_finding_connections;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _result_proc_of_finding_connections;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_3:: _result_proc_of_finding_connections;;
 
 		_=> nrel_goto:: .._proc_of_finding_connections_operator7D;;
 	*);;
@@ -334,9 +334,9 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _el2;;
 		_-> rrel_4:: rrel_assign:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: _el1;;
-		_-> rrel_fixed:: rrel_scp_const:: rrel_set_1:: _answer_proc_of_finding_connections;;
-		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _answer_proc_of_finding_connections;;
-		_-> rrel_fixed:: rrel_scp_const:: rrel_set_4:: _answer_proc_of_finding_connections;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_1:: _result_proc_of_finding_connections;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _result_proc_of_finding_connections;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_4:: _result_proc_of_finding_connections;;
 
 		_=> nrel_then:: .._proc_of_finding_connections_operator3F;;
 		_=> nrel_else:: .._proc_of_finding_connections_operator7D;;
@@ -347,7 +347,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: .._proc_of_finding_connections_param16;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._proc_of_finding_connections_param17;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: .._proc_of_finding_connections_param18;;
-		_-> rrel_4:: rrel_fixed:: rrel_scp_const:: _answer_proc_of_finding_connections;;
+		_-> rrel_4:: rrel_fixed:: rrel_scp_const:: _result_proc_of_finding_connections;;
 
 		_=> nrel_then:: .._proc_of_finding_connections_operator8B;;
 		_=> nrel_else:: .._proc_of_finding_connections_operator7E;;
@@ -358,7 +358,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: .._proc_of_finding_connections_param19;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._proc_of_finding_connections_param20;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: .._proc_of_finding_connections_param21;;
-		_-> rrel_4:: rrel_fixed:: rrel_scp_const:: _answer_proc_of_finding_connections;;
+		_-> rrel_4:: rrel_fixed:: rrel_scp_const:: _result_proc_of_finding_connections;;
 
 		_=> nrel_then:: .._proc_of_finding_connections_operator_return;;
 		_=> nrel_else:: .._proc_of_finding_connections_operator8C;;
@@ -369,7 +369,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: .._proc_of_finding_connections_param22;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._proc_of_finding_connections_param23;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: .._proc_of_finding_connections_param24;;
-		_-> rrel_4:: rrel_fixed:: rrel_scp_const:: _answer_proc_of_finding_connections;;
+		_-> rrel_4:: rrel_fixed:: rrel_scp_const:: _result_proc_of_finding_connections;;
 
 		_=> nrel_goto:: .._proc_of_finding_connections_operator8B;;
 	*);;
@@ -379,7 +379,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: .._proc_of_finding_connections_param25;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._proc_of_finding_connections_param26;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: .._proc_of_finding_connections_param27;;
-		_-> rrel_4:: rrel_fixed:: rrel_scp_const:: _answer_proc_of_finding_connections;;
+		_-> rrel_4:: rrel_fixed:: rrel_scp_const:: _result_proc_of_finding_connections;;
 
 		_=> nrel_goto:: .._proc_of_finding_connections_operator_return;;
 	*);;

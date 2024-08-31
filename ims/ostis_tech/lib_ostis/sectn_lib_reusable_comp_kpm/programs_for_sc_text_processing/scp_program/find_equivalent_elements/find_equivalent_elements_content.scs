@@ -9,7 +9,7 @@ _<- scp_process;
 
 _-> rrel_1:: rrel_in:: _param;
 _-> rrel_2:: rrel_in:: _param2;
-_-> rrel_3:: rrel_in:: _answer_proc_equivalent_elements;
+_-> rrel_3:: rrel_in:: _result_proc_equivalent_elements;
 _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> rrel_1:: .._proc_equivalent_elements_operator1A (*
@@ -89,7 +89,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._proc_equivalent_elements_operator1H (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _answer_proc_equivalent_elements;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _result_proc_equivalent_elements;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc12;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _general;;
 

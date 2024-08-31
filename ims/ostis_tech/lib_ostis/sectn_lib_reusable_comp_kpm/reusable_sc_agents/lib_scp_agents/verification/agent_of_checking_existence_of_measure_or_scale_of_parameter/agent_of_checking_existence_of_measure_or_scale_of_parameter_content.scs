@@ -50,7 +50,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_checking_existence_of_measure_or_scale_of_parameter_operator2C (*
 		_<- genEl;;
-		_-> rrel_1:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: _answer_of_checking_parameter;;
+		_-> rrel_1:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: _result_of_checking_parameter;;
 
 		_=> nrel_goto:: .._agent_of_checking_existence_of_measure_or_scale_of_parameter_operator2D;;
 	*);;
@@ -110,7 +110,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_checking_existence_of_measure_or_scale_of_parameter_operator4A (*
 		_<- genEl;;
-		_-> rrel_1:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: rrel_struct:: _answer_of_proc_of_checking_parameter;;
+		_-> rrel_1:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: rrel_struct:: _result_of_proc_of_checking_parameter;;
 
 		_=> nrel_goto:: .._agent_of_checking_existence_of_measure_or_scale_of_parameter_operator5A;;
 	*);;
@@ -152,7 +152,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._agent_of_checking_existence_of_measure_or_scale_of_parameter_param1 (*
 			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _quest;;
 			_-> rrel_2:: rrel_fixed:: rrel_scp_const:: action_to_check_indication_of_scale_or_measure_for_values_of_parameters_within_given_structure;;
-			_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _answer_of_proc_of_checking_parameter;;
+			_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _result_of_proc_of_checking_parameter;;
 			_-> rrel_4:: rrel_fixed:: rrel_scp_const:: structure_of_checking_existence_of_measure_or_scale_of_parameter;;
 		*);;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _descr2;;
@@ -282,7 +282,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_checking_existence_of_measure_or_scale_of_parameter_operator7A_10 (*
 		_<- searchElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_proc_of_checking_parameter;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_proc_of_checking_parameter;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: measurement_of_fixed_measure;;
 
@@ -292,7 +292,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_checking_existence_of_measure_or_scale_of_parameter_operator7A_12 (*
 		_<- searchElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_proc_of_checking_parameter;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_proc_of_checking_parameter;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: scale;;
 
@@ -305,14 +305,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: scale;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _some_relation;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_of_proc_of_checking_parameter;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_proc_of_checking_parameter;;
 
 		_=> nrel_goto:: .._agent_of_checking_existence_of_measure_or_scale_of_parameter_operator7A_16;;
 	*);;
 
 	_-> .._agent_of_checking_existence_of_measure_or_scale_of_parameter_operator7A_13 (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_proc_of_checking_parameter;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_proc_of_checking_parameter;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: scale;;
 
@@ -321,7 +321,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_checking_existence_of_measure_or_scale_of_parameter_operator7A_16 (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_proc_of_checking_parameter;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_proc_of_checking_parameter;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _some_relation;;
 
@@ -335,9 +335,9 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _some_value;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_var:: _some_relation;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_of_proc_of_checking_parameter;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _answer_of_proc_of_checking_parameter;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _answer_of_proc_of_checking_parameter;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_proc_of_checking_parameter;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _result_of_proc_of_checking_parameter;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _result_of_proc_of_checking_parameter;;
 
 		_=> nrel_goto:: .._agent_of_checking_existence_of_measure_or_scale_of_parameter_operator7C;;
 	*);;
@@ -347,15 +347,15 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _number_or_value;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _some_value;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_1:: _answer_of_proc_of_checking_parameter;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_of_proc_of_checking_parameter;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_1:: _result_of_proc_of_checking_parameter;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_proc_of_checking_parameter;;
 
 		_=> nrel_goto:: .._agent_of_checking_existence_of_measure_or_scale_of_parameter_operator7D;;
 	*);;
 
 	_-> .._agent_of_checking_existence_of_measure_or_scale_of_parameter_operator7D (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_proc_of_checking_parameter;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_proc_of_checking_parameter;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _value_of_parameter;;
 
@@ -367,14 +367,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _characteristic_of_parameter;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _value_of_parameter;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_of_proc_of_checking_parameter;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_proc_of_checking_parameter;;
 
 		_=> nrel_goto:: .._agent_of_checking_existence_of_measure_or_scale_of_parameter_operator7F;;
 	*);;
 
 	_-> .._agent_of_checking_existence_of_measure_or_scale_of_parameter_operator7F (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_proc_of_checking_parameter;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_proc_of_checking_parameter;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _characteristic_of_parameter;;
 
@@ -386,14 +386,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: measurement_of_fixed_measure;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _some_relation;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_of_proc_of_checking_parameter;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_proc_of_checking_parameter;;
 
 		_=> nrel_goto:: .._agent_of_checking_existence_of_measure_or_scale_of_parameter_operator7A_16;;
 	*);;
 
 	_-> .._agent_of_checking_existence_of_measure_or_scale_of_parameter_operator7A_11 (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_proc_of_checking_parameter;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_proc_of_checking_parameter;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: measurement_of_fixed_measure;;
 
@@ -402,7 +402,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_checking_existence_of_measure_or_scale_of_parameter_operator7A_3 (*
 		_<- searchElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_proc_of_checking_parameter;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_proc_of_checking_parameter;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_zero_mark;;
 
@@ -417,15 +417,15 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _some_measure;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_zero_mark;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_of_proc_of_checking_parameter;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _answer_of_proc_of_checking_parameter;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_proc_of_checking_parameter;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _result_of_proc_of_checking_parameter;;
 
 		_=> nrel_goto:: .._agent_of_checking_existence_of_measure_or_scale_of_parameter_operator7A_7;;
 	*);;
 
 	_-> .._agent_of_checking_existence_of_measure_or_scale_of_parameter_operator7A_4 (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_proc_of_checking_parameter;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_proc_of_checking_parameter;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_zero_mark;;
 
@@ -434,7 +434,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_checking_existence_of_measure_or_scale_of_parameter_operator7A_7 (*
 		_<- searchElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_proc_of_checking_parameter;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_proc_of_checking_parameter;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _some_measure;;
 
@@ -444,7 +444,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_checking_existence_of_measure_or_scale_of_parameter_operator7A_8 (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_proc_of_checking_parameter;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_proc_of_checking_parameter;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _some_measure;;
 
@@ -463,7 +463,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_checking_existence_of_measure_or_scale_of_parameter_operator7A_1 (*
 		_<- searchElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_proc_of_checking_parameter;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_proc_of_checking_parameter;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_measure;;
 
@@ -478,15 +478,15 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _some_measure;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_measure;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_of_proc_of_checking_parameter;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _answer_of_proc_of_checking_parameter;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_proc_of_checking_parameter;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _result_of_proc_of_checking_parameter;;
 
 		_=> nrel_goto:: .._agent_of_checking_existence_of_measure_or_scale_of_parameter_operator7A_7;;
 	*);;
 
 	_-> .._agent_of_checking_existence_of_measure_or_scale_of_parameter_operator7A_2 (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_proc_of_checking_parameter;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_proc_of_checking_parameter;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_measure;;
 

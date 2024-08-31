@@ -63,7 +63,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: .._agent_of_forming_set_theoretic_ontology_param0;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._agent_of_forming_set_theoretic_ontology_param1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: .._agent_of_forming_set_theoretic_ontology_param2;;
-		_-> rrel_4:: rrel_assign:: rrel_scp_var:: _answer_of_agent;;
+		_-> rrel_4:: rrel_assign:: rrel_scp_var:: _result_of_agent;;
 
 		_=> nrel_then:: .._agent_of_forming_set_theoretic_ontology_operator_answer2;;
 		_=> nrel_else:: .._agent_of_forming_set_theoretic_ontology_operator_form1;;
@@ -99,7 +99,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_forming_set_theoretic_ontology_operator_answer2 (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_agent;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_agent;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: subject_domain;;
 
@@ -187,7 +187,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_forming_set_theoretic_ontology_operator_answer3 (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_agent;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_agent;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_ontology;;
 
@@ -196,7 +196,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_forming_set_theoretic_ontology_operator_answer4 (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_agent;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_agent;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: theoretic_set_ontology;;
 
@@ -254,7 +254,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_forming_set_theoretic_ontology_operator_answer11 (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_agent;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_agent;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: rrel_key_sc_element;;
 
@@ -265,7 +265,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_<- genElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _quest;;
 		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc1;;
-		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _answer_of_agent;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _result_of_agent;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_result;;
 
@@ -299,8 +299,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _elem_sd;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: rrel_key_sc_element;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_of_agent;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _answer_of_agent;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_agent;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _result_of_agent;;
 
 		_=> nrel_goto:: .._agent_of_forming_set_theoretic_ontology_operator_answer7;;
 	*);;

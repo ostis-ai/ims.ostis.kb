@@ -50,7 +50,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_finding_axioms_operator1D (*
 		_<- genEl;;
-		_-> rrel_1:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: _answer_finding_axiom;;
+		_-> rrel_1:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: _result_finding_axiom;;
 
 		_=> nrel_goto:: .._agent_of_finding_axioms_operator2A;;
 	*);;
@@ -75,9 +75,9 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _elem2;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: rrel_axiom;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_finding_axiom;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _answer_finding_axiom;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _answer_finding_axiom;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_finding_axiom;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _result_finding_axiom;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _result_finding_axiom;;
 
 		_=> nrel_then:: .._agent_of_finding_axioms_operator2C;;
 		_=> nrel_else:: .._agent_of_finding_axioms_operator_return;;
@@ -105,14 +105,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: sc_ontology;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _elem;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_finding_axiom;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_finding_axiom;;
 
 		_=> nrel_goto:: .._agent_of_finding_axioms_operator3B;;
 	*);;
 
 	_-> .._agent_of_finding_axioms_operator3B (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_finding_axiom;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_finding_axiom;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _elem;;
 
@@ -121,7 +121,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_finding_axioms_operator3C (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_finding_axiom;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_finding_axiom;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: sc_ontology;;
 
@@ -130,7 +130,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_finding_axioms_operator3D (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_finding_axiom;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_finding_axiom;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: rrel_axiom;;
 
@@ -148,7 +148,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_<- genElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _quest;;
 		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc;;
-		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _answer_finding_axiom;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _result_finding_axiom;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_result;;
 
@@ -172,7 +172,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_finding_identifier;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._agent_of_finding_axioms_param0 (*
 			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _nessecary_vertex;;
-			_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _answer_finding_axiom;;
+			_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _result_finding_axiom;;
 		*);;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _descr1;;
 

@@ -64,7 +64,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_changing_system_identifier_operator2A (*
 		_<- genEl;;
-		_-> rrel_1:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: _answer_of_change_system_element;;
+		_-> rrel_1:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: _result_of_change_system_element;;
 
 		_=> nrel_goto:: .._agent_of_changing_system_identifier_operator2B;;
 	*);;
@@ -113,15 +113,15 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _param2;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc_nrel;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_system_identifier;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_of_change_system_element;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _answer_of_change_system_element;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_change_system_element;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _result_of_change_system_element;;
 
 		_=> nrel_goto:: .._agent_of_changing_system_identifier_operator3B;;
 	*);;
 
 	_-> .._agent_of_changing_system_identifier_operator3B (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_change_system_element;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_change_system_element;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _param1;;
 
@@ -130,7 +130,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_changing_system_identifier_operator3C (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_change_system_element;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_change_system_element;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _param2;;
 
@@ -139,7 +139,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_changing_system_identifier_operator3D (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_change_system_element;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_change_system_element;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_system_identifier;;
 
@@ -150,7 +150,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_<- genElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _quest;;
 		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc;;
-		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _answer_of_change_system_element;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _result_of_change_system_element;;
 		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_result;;
 

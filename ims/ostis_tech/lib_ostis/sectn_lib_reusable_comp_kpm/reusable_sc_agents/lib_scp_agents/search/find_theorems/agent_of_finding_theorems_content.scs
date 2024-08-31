@@ -62,14 +62,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_finding_theorems_operator1D_with_context (*
 		_<- genEl;;
-		_-> rrel_1:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: _answer_findind_theorem;;
+		_-> rrel_1:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: _result_findind_theorem;;
 
 		_=> nrel_goto:: .._agent_of_finding_theorems_operator2A_check_elem_context;;
 	*);;
 
 	_-> .._agent_of_finding_theorems_operator1D (*
 		_<- genEl;;
-		_-> rrel_1:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: _answer_findind_theorem;;
+		_-> rrel_1:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: _result_findind_theorem;;
 
 		_=> nrel_goto:: .._agent_of_finding_theorems_operator2A;;
 	*);;
@@ -94,9 +94,9 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _elem2;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: rrel_theorem;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_findind_theorem;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _answer_findind_theorem;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _answer_findind_theorem;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_findind_theorem;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _result_findind_theorem;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _result_findind_theorem;;
 
 		_=> nrel_then:: .._agent_of_finding_theorems_operator2C;;
 		_=> nrel_else:: .._agent_of_finding_theorems_operator_return;;
@@ -124,14 +124,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: sc_ontology;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _elem;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_findind_theorem;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_findind_theorem;;
 
 		_=> nrel_goto:: .._agent_of_finding_theorems_operator3B;;
 	*);;
 
 	_-> .._agent_of_finding_theorems_operator3B (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_findind_theorem;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_findind_theorem;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _elem;;
 
@@ -140,7 +140,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_finding_theorems_operator3C (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_findind_theorem;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_findind_theorem;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: sc_ontology;;
 
@@ -149,7 +149,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_finding_theorems_operator3D (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_findind_theorem;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_findind_theorem;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: rrel_theorem;;
 
@@ -167,7 +167,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_<- genElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _quest;;
 		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc;;
-		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _answer_findind_theorem;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _result_findind_theorem;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_result;;
 
@@ -191,7 +191,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_finding_identifier;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._agent_of_finding_theorems_param0 (*
 			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _nessecary_vertex;;
-			_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _answer_findind_theorem;;
+			_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _result_findind_theorem;;
 		*);;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _descr1;;
 
@@ -352,7 +352,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_finding_identifier_with_context;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._agent_of_finding_theorems_param3 (*
 			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _nessecary_vertex;;
-			_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _answer_findind_theorem;;
+			_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _result_findind_theorem;;
 			_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _context;;
 		*);;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _descr2;;
@@ -374,15 +374,15 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _elem2;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: rrel_theorem;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_findind_theorem;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _answer_findind_theorem;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_findind_theorem;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _result_findind_theorem;;
 
 		_=> nrel_goto:: .._agent_of_finding_theorems_operator2B_with_context_logic_5_1;;
 	*);;
 
 	_-> .._agent_of_finding_theorems_operator2B_with_context_logic_5_1 (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_findind_theorem;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_findind_theorem;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _elem2;;
 

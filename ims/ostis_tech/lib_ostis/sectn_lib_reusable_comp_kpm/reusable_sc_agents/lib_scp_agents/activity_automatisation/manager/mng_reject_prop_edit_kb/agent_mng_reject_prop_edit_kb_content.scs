@@ -196,7 +196,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_manager_rejection_proposals_for_editing_kb_operator2A (*
 		_<- genEl;;
-		_-> rrel_1:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: _answer_of_manager_rejection_proposals_for_editing_kb;;
+		_-> rrel_1:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: _result_of_manager_rejection_proposals_for_editing_kb;;
 
 		_=> nrel_goto:: .._agent_of_manager_rejection_proposals_for_editing_kb_operator2B;;
 	*);;
@@ -206,7 +206,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_to_consider_offered_artist_of_project_task;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _sign_of_action;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_of_manager_rejection_proposals_for_editing_kb;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_manager_rejection_proposals_for_editing_kb;;
 
 		_=> nrel_then:: .._agent_of_manager_rejection_proposals_for_editing_kb_operator2B2;;
 		_=> nrel_else:: .._agent_of_manager_rejection_proposals_for_editing_kb_operator2C;;
@@ -214,7 +214,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_manager_rejection_proposals_for_editing_kb_operator2B2 (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_manager_rejection_proposals_for_editing_kb;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_manager_rejection_proposals_for_editing_kb;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: action_to_consider_offered_artist_of_project_task;;
 
@@ -226,7 +226,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: last_entity;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _sign_of_action;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_of_manager_rejection_proposals_for_editing_kb;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_manager_rejection_proposals_for_editing_kb;;
 
 		_=> nrel_then:: .._agent_of_manager_rejection_proposals_for_editing_kb_operator2C2;;
 		_=> nrel_else:: .._agent_of_manager_rejection_proposals_for_editing_kb_operator2D;;
@@ -234,7 +234,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_manager_rejection_proposals_for_editing_kb_operator2C2 (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_manager_rejection_proposals_for_editing_kb;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_manager_rejection_proposals_for_editing_kb;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: last_entity;;
 
@@ -243,7 +243,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_manager_rejection_proposals_for_editing_kb_operator2D (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_manager_rejection_proposals_for_editing_kb;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_manager_rejection_proposals_for_editing_kb;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _sign_of_action;;
 
@@ -257,16 +257,16 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _kb_struct;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_proposal;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_of_manager_rejection_proposals_for_editing_kb;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _answer_of_manager_rejection_proposals_for_editing_kb;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _answer_of_manager_rejection_proposals_for_editing_kb;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_manager_rejection_proposals_for_editing_kb;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _result_of_manager_rejection_proposals_for_editing_kb;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _result_of_manager_rejection_proposals_for_editing_kb;;
 
 		_=> nrel_goto:: .._agent_of_manager_rejection_proposals_for_editing_kb_operator3A2;;
 	*);;
 
 	_-> .._agent_of_manager_rejection_proposals_for_editing_kb_operator3A2 (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_manager_rejection_proposals_for_editing_kb;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_manager_rejection_proposals_for_editing_kb;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_proposal;;
 
@@ -280,16 +280,16 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _proposer;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_authors;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_of_manager_rejection_proposals_for_editing_kb;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _answer_of_manager_rejection_proposals_for_editing_kb;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _answer_of_manager_rejection_proposals_for_editing_kb;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_manager_rejection_proposals_for_editing_kb;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _result_of_manager_rejection_proposals_for_editing_kb;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _result_of_manager_rejection_proposals_for_editing_kb;;
 
 		_=> nrel_goto:: .._agent_of_manager_rejection_proposals_for_editing_kb_operator3B2;;
 	*);;
 
 	_-> .._agent_of_manager_rejection_proposals_for_editing_kb_operator3B2 (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_manager_rejection_proposals_for_editing_kb;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_manager_rejection_proposals_for_editing_kb;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_authors;;
 
@@ -324,16 +324,16 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _user;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_rejected;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_of_manager_rejection_proposals_for_editing_kb;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _answer_of_manager_rejection_proposals_for_editing_kb;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _answer_of_manager_rejection_proposals_for_editing_kb;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_manager_rejection_proposals_for_editing_kb;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _result_of_manager_rejection_proposals_for_editing_kb;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _result_of_manager_rejection_proposals_for_editing_kb;;
 
 		_=> nrel_goto:: .._agent_of_manager_rejection_proposals_for_editing_kb_operator4A2;;
 	*);;
 
 	_-> .._agent_of_manager_rejection_proposals_for_editing_kb_operator4A2 (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_manager_rejection_proposals_for_editing_kb;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_manager_rejection_proposals_for_editing_kb;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_rejected;;
 
@@ -347,16 +347,16 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _user;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_manager;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_1:: _answer_of_manager_rejection_proposals_for_editing_kb;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_of_manager_rejection_proposals_for_editing_kb;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _answer_of_manager_rejection_proposals_for_editing_kb;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_1:: _result_of_manager_rejection_proposals_for_editing_kb;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_manager_rejection_proposals_for_editing_kb;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _result_of_manager_rejection_proposals_for_editing_kb;;
 
 		_=> nrel_goto:: .._agent_of_manager_rejection_proposals_for_editing_kb_operator4B2;;
 	*);;
 
 	_-> .._agent_of_manager_rejection_proposals_for_editing_kb_operator4B2 (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_manager_rejection_proposals_for_editing_kb;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_manager_rejection_proposals_for_editing_kb;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_manager;;
 
@@ -367,7 +367,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_<- genElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _quest;;
 		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc1;;
-		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _answer_of_manager_rejection_proposals_for_editing_kb;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _result_of_manager_rejection_proposals_for_editing_kb;;
 		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_result;;
 
@@ -410,8 +410,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _temp_kb_elem;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _elem1;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_of_manager_rejection_proposals_for_editing_kb;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _answer_of_manager_rejection_proposals_for_editing_kb;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_manager_rejection_proposals_for_editing_kb;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _result_of_manager_rejection_proposals_for_editing_kb;;
 
 		_=> nrel_goto:: .._agent_of_manager_rejection_proposals_for_editing_kb_operator3G;;
 	*);;
@@ -421,7 +421,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_initiated;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _temp_kb_elem;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_of_manager_rejection_proposals_for_editing_kb;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_manager_rejection_proposals_for_editing_kb;;
 
 		_=> nrel_then:: .._agent_of_manager_rejection_proposals_for_editing_kb_operator3F4;;
 		_=> nrel_else:: .._agent_of_manager_rejection_proposals_for_editing_kb_operator3G;;
@@ -429,7 +429,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_manager_rejection_proposals_for_editing_kb_operator3F4 (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_manager_rejection_proposals_for_editing_kb;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_manager_rejection_proposals_for_editing_kb;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: action_initiated;;
 
@@ -438,7 +438,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_manager_rejection_proposals_for_editing_kb_operator3G (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_manager_rejection_proposals_for_editing_kb;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_manager_rejection_proposals_for_editing_kb;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _temp_kb_elem;;
 
@@ -450,7 +450,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _kb_struct;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _temp_kb_elem;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_of_manager_rejection_proposals_for_editing_kb;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_manager_rejection_proposals_for_editing_kb;;
 
 		_=> nrel_goto:: .._agent_of_manager_rejection_proposals_for_editing_kb_operator3D;;
 	*);;

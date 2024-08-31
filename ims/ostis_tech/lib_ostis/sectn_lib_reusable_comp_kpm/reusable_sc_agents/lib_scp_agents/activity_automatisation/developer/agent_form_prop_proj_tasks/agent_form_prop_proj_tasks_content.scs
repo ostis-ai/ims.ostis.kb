@@ -97,7 +97,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_formation_proposed_project_tasks_operator_A7 (*
 		_<- genEl;;
-		_-> rrel_1:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: _answer_of_formation_proposed_project_tasks;;
+		_-> rrel_1:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: _result_of_formation_proposed_project_tasks;;
 
 		_=> nrel_goto:: .._agent_of_formation_proposed_project_tasks_operator_B1;;
 	*);;
@@ -250,7 +250,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_formation_proposed_project_tasks_operator_D3 (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_formation_proposed_project_tasks;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_formation_proposed_project_tasks;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _param;;
 
@@ -262,8 +262,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _param;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _elem1;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_of_formation_proposed_project_tasks;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _answer_of_formation_proposed_project_tasks;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_formation_proposed_project_tasks;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _result_of_formation_proposed_project_tasks;;
 
 		_=> nrel_goto:: .._agent_of_formation_proposed_project_tasks_operator_D5;;
 	*);;
@@ -275,15 +275,15 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _param;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_result;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_of_formation_proposed_project_tasks;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _answer_of_formation_proposed_project_tasks;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_formation_proposed_project_tasks;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _result_of_formation_proposed_project_tasks;;
 
 		_=> nrel_goto:: .._agent_of_formation_proposed_project_tasks_operator_D6;;
 	*);;
 
 	_-> .._agent_of_formation_proposed_project_tasks_operator_D6 (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_formation_proposed_project_tasks;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_formation_proposed_project_tasks;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
 
@@ -292,7 +292,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_formation_proposed_project_tasks_operator_D7 (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_formation_proposed_project_tasks;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_formation_proposed_project_tasks;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_result;;
 
@@ -304,14 +304,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_to_build_new_piece_to_be_included_in_knowledge_base;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_of_formation_proposed_project_tasks;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_formation_proposed_project_tasks;;
 
 		_=> nrel_goto:: .._agent_of_formation_proposed_project_tasks_operator_D9;;
 	*);;
 
 	_-> .._agent_of_formation_proposed_project_tasks_operator_D9 (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_formation_proposed_project_tasks;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_formation_proposed_project_tasks;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: action_to_build_new_piece_to_be_included_in_knowledge_base;;
 
@@ -320,7 +320,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_formation_proposed_project_tasks_operator_D10 (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_formation_proposed_project_tasks;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_formation_proposed_project_tasks;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _propose;;
 
@@ -332,7 +332,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _propose;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _propose_elem;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_of_formation_proposed_project_tasks;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_formation_proposed_project_tasks;;
 
 		_=> nrel_goto:: .._agent_of_formation_proposed_project_tasks_operator_E1;;
 	*);;
@@ -344,16 +344,16 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _proposer;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_authors;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_of_formation_proposed_project_tasks;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _answer_of_formation_proposed_project_tasks;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _answer_of_formation_proposed_project_tasks;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_formation_proposed_project_tasks;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _result_of_formation_proposed_project_tasks;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _result_of_formation_proposed_project_tasks;;
 
 		_=> nrel_goto:: .._agent_of_formation_proposed_project_tasks_operator_E2;;
 	*);;
 
 	_-> .._agent_of_formation_proposed_project_tasks_operator_E2 (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_formation_proposed_project_tasks;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_formation_proposed_project_tasks;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_authors;;
 
@@ -367,15 +367,15 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _propose;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_proposal;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_of_formation_proposed_project_tasks;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _answer_of_formation_proposed_project_tasks;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_formation_proposed_project_tasks;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _result_of_formation_proposed_project_tasks;;
 
 		_=> nrel_goto:: .._agent_of_formation_proposed_project_tasks_operator_E4;;
 	*);;
 
 	_-> .._agent_of_formation_proposed_project_tasks_operator_E4 (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_formation_proposed_project_tasks;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_formation_proposed_project_tasks;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_proposal;;
 
@@ -384,7 +384,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_formation_proposed_project_tasks_operator_E5 (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_formation_proposed_project_tasks;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_formation_proposed_project_tasks;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action1;;
 
@@ -396,7 +396,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_initiated;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action1;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_of_formation_proposed_project_tasks;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_formation_proposed_project_tasks;;
 
 		_=> nrel_then:: .._agent_of_formation_proposed_project_tasks_operator_E7;;
 		_=> nrel_else:: .._agent_of_formation_proposed_project_tasks_operator_E8;;
@@ -404,7 +404,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_formation_proposed_project_tasks_operator_E7 (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_formation_proposed_project_tasks;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_formation_proposed_project_tasks;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: action_initiated;;
 
@@ -416,7 +416,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_to_consider_new_project_task;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action1;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_of_formation_proposed_project_tasks;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_formation_proposed_project_tasks;;
 
 		_=> nrel_then:: .._agent_of_formation_proposed_project_tasks_operator_E9;;
 		_=> nrel_else:: .._agent_of_formation_proposed_project_tasks_operator_E10;;
@@ -424,7 +424,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_formation_proposed_project_tasks_operator_E9 (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_formation_proposed_project_tasks;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_formation_proposed_project_tasks;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: action_to_consider_new_project_task;;
 
@@ -435,7 +435,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_<- genElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _quest;;
 		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc1;;
-		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _answer_of_formation_proposed_project_tasks;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _result_of_formation_proposed_project_tasks;;
 		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_result;;
 

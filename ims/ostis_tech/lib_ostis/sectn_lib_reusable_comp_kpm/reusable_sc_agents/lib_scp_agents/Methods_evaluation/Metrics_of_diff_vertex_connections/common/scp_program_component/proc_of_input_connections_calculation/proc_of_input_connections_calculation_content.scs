@@ -9,7 +9,7 @@ _<- scp_process;
 
 _-> rrel_1:: rrel_in:: _set;
 _-> rrel_2:: rrel_in:: _ontology;
-_-> rrel_3:: rrel_in:: _ans;
+_-> rrel_3:: rrel_in:: _result;
 _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> rrel_1:: .._proc_of_input_connections_calculation_operator_1A (*
@@ -198,7 +198,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._proc_of_input_connections_calculation_operator_9A (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _ans;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _result;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _kol_of_input_connections;;
 

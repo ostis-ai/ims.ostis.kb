@@ -78,7 +78,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_finding_definitions_operator2B (*
 		_<- genEl;;
-		_-> rrel_1:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: _answer_finding_definition;;
+		_-> rrel_1:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: _result_finding_definition;;
 
 		_=> nrel_goto:: .._agent_of_finding_definitions_operator3A_is_context_exist;;
 	*);;
@@ -137,7 +137,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_finding_definitions_operator6A (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_finding_definition;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_finding_definition;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: rrel_key_sc_element;;
 
@@ -146,7 +146,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_finding_definitions_operator6B (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_finding_definition;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_finding_definition;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _param;;
 
@@ -155,7 +155,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_finding_definitions_operator6C (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_finding_definition;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_finding_definition;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: definition;;
 
@@ -164,7 +164,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_finding_definitions_operator6D (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_finding_definition;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_finding_definition;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: explanation;;
 
@@ -175,7 +175,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_<- genElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _quest;;
 		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc;;
-		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _answer_finding_definition;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _result_finding_definition;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_result;;
 
@@ -194,7 +194,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_finding_definitions_operator3E (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_finding_definition;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_finding_definition;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _inst;;
 
@@ -218,8 +218,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _param;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: rrel_key_sc_element;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_finding_definition;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _answer_finding_definition;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_finding_definition;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _result_finding_definition;;
 
 		_=> nrel_then:: .._agent_of_finding_definitions_operator3G1;;
 		_=> nrel_else:: .._agent_of_finding_definitions_operator_return;;
@@ -230,7 +230,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: definition;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _inst;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_finding_definition;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_finding_definition;;
 
 		_=> nrel_then:: .._agent_of_finding_definitions_operator4A;;
 		_=> nrel_else:: .._agent_of_finding_definitions_operator3G2;;
@@ -241,7 +241,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_finding_identifier;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._agent_of_finding_definitions_param0 (*
 			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _inst;;
-			_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _answer_finding_definition;;
+			_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _result_finding_definition;;
 		*);;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _descr1;;
 
@@ -253,7 +253,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: explanation;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _inst;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_finding_definition;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_finding_definition;;
 
 		_=> nrel_then:: .._agent_of_finding_definitions_operator4A_is_context_exist;;
 		_=> nrel_else:: .._agent_of_finding_definitions_operator3B;;
@@ -273,7 +273,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_finding_identifier_with_context;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._agent_of_finding_definitions_param1 (*
 			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _inst;;
-			_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _answer_finding_definition;;
+			_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _result_finding_definition;;
 			_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _context;;
 		*);;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _descr3;;
@@ -293,7 +293,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_finding_translation_with_context;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._agent_of_finding_definitions_param2 (*
 			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _inst;;
-			_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _answer_finding_definition;;
+			_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _result_finding_definition;;
 			_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _context;;
 		*);;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _descr4;;
@@ -320,7 +320,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_finding_translation;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._agent_of_finding_definitions_param3 (*
 			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _inst;;
-			_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _answer_finding_definition;;
+			_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _result_finding_definition;;
 		*);;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _descr2;;
 

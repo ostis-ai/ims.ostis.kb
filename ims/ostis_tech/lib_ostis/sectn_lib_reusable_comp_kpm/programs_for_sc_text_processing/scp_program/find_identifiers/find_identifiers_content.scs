@@ -8,7 +8,7 @@ proc_of_finding_identifier = [*
 _<- scp_process;
 
 _-> rrel_1:: rrel_in:: _elem;
-_-> rrel_2:: rrel_in:: _answer_proc_of_finding_identifier;
+_-> rrel_2:: rrel_in:: _result_proc_of_finding_identifier;
 _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> rrel_1:: .._proc_of_finding_identifier_operator1A (*
@@ -48,7 +48,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._proc_of_finding_identifier_operator4 (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _answer_proc_of_finding_identifier;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _result_proc_of_finding_identifier;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_main_idtf;;
 
@@ -71,7 +71,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._proc_of_finding_identifier_operator1D (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _answer_proc_of_finding_identifier;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _result_proc_of_finding_identifier;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _idtf;;
 
@@ -85,8 +85,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _idtf;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_main_idtf;;
-		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _answer_proc_of_finding_identifier;;
-		_-> rrel_fixed:: rrel_scp_const:: rrel_set_4:: _answer_proc_of_finding_identifier;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _result_proc_of_finding_identifier;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_4:: _result_proc_of_finding_identifier;;
 
 		_=> nrel_then:: .._proc_of_finding_identifier_operator2B;;
 		_=> nrel_else:: .._proc_of_finding_identifier_operator_return;;
@@ -132,7 +132,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._proc_of_finding_identifier_operator3D (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _answer_proc_of_finding_identifier;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _result_proc_of_finding_identifier;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _lang2;;
 
@@ -144,7 +144,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _lang2;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _idtf;;
-		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _answer_proc_of_finding_identifier;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _result_proc_of_finding_identifier;;
 
 		_=> nrel_then:: .._proc_of_finding_identifier_operator3A;;
 		_=> nrel_else:: .._proc_of_finding_identifier_operator_return;;
