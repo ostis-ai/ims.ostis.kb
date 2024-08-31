@@ -10,7 +10,7 @@ proc_of_adding_general_action_comment = [*
 .._process1
 _<- scp_process;
 
-_-> rrel_1:: rrel_in:: _quest;
+_-> rrel_1:: rrel_in:: _action;
 _-> rrel_2:: rrel_in:: _message;
 _<= nrel_decomposition_of_action:: .._actions (*
 
@@ -23,7 +23,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._proc_of_adding_general_action_comment_operator_add_wrong_param_to_answer (*
 		_<- searchSetStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _quest;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _action;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _param;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_general_action_comment;;
@@ -36,7 +36,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_<- call;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_generating_validation_comment;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._proc_of_adding_general_action_comment_param0 (*
-			_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _quest;;
+			_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _action;;
 			_-> rrel_2:: rrel_fixed:: rrel_scp_const:: _message;;
 			_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _result_general_action_comment;;
 		*);;
@@ -54,7 +54,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._proc_of_adding_general_action_comment_operator_gen_wrong_param_answer (*
 		_<- genElStr5;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _quest;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _action;;
 		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _result_general_action_comment;;
 		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
@@ -67,7 +67,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_<- genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_finished_successfully;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
-		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _quest;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _action;;
 
 		_=> nrel_goto:: .._proc_of_adding_general_action_comment_operator_return;;
 	*);;

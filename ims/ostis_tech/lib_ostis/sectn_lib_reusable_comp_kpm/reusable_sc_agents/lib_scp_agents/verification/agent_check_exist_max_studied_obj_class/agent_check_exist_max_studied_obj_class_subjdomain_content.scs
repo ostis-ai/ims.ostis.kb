@@ -18,7 +18,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_<- searchElStr3;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _temp;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: _input_arc;;
-		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _quest;;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _action;;
 
 		_=> nrel_then:: .._agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator1B;;
 		_=> nrel_else:: .._agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator_return;;
@@ -28,7 +28,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_<- searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_of_checking_existence_of_max_studied_class_of_subject_domain;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
-		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _quest;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
 
 		_=> nrel_then:: .._agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator1C;;
 		_=> nrel_else:: .._agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator_return;;
@@ -41,7 +41,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator1C (*
 		_<- searchElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _quest;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: arc2;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: rrel_struct:: _structure;;
 
@@ -51,7 +51,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator1D (*
 		_<- searchElStr5;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _quest;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
 		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _context;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
@@ -65,7 +65,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_<- call;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_adding_validating_message;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_param0 (*
-			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _quest;;
+			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
 			_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [Wrong 1st parameter! It must be a structure.];;
 		*);;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _descr1;;
@@ -128,7 +128,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_<- call;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_generation_of_verification_answer;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_param1 (*
-			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _quest;;
+			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
 			_-> rrel_2:: rrel_fixed:: rrel_scp_const:: action_of_checking_existence_of_max_studied_class_of_subject_domain;;
 			_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _incorrect_structure;;
 			_-> rrel_4:: rrel_fixed:: rrel_scp_const:: structure_without_max_studied_object_class_of_subject_domain;;

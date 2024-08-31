@@ -18,7 +18,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_<- searchElStr3;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _temp;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: _input_arc;;
-		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _quest;;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _action;;
 
 		_=> nrel_goto:: .._agent_of_specifying_of_indicated_entity1B;;
 	*);;
@@ -27,7 +27,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_<- searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_of_request_assistance_of_entity_specification;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
-		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _quest;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
 		_-> rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: rrel_set_2:: rrel_struct:: _result_of_specifying_of_indicated_entity;;
 
 		_=> nrel_then:: .._agent_of_specifying_of_indicated_entity1C;;
@@ -36,7 +36,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_specifying_of_indicated_entity1C (*
 		_<- searchSetStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _quest;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_node:: rrel_scp_var:: _entity;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_specifying_of_indicated_entity;;
@@ -55,7 +55,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_<- genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_specifying_of_indicated_entity;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
-		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _quest;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
 
 		_=> nrel_goto:: .._agent_of_specifying_of_indicated_entity_add_action_to_answer;;
 	*);;
@@ -64,7 +64,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_<- call;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_adding_validating_message;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._agent_of_specifying_of_indicated_entity_param0 (*
-			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _quest;;
+			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
 			_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [Wrong parameter! It must be node];;
 		*);;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _descr1;;
@@ -196,7 +196,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_specifying_of_indicated_entity_gen_answer (*
 		_<- genElStr5;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _quest;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
 		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _result_of_specifying_of_indicated_entity;;
 		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
@@ -516,7 +516,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_specifying_of_indicated_entity9A (*
 		_<- genEl;;
-		_-> rrel_1:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: _quest_for_necessary_general_specification;;
+		_-> rrel_1:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: _action_for_necessary_general_specification;;
 
 		_=> nrel_goto:: .._agent_of_specifying_of_indicated_entity9B;;
 	*);;
@@ -535,7 +535,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_specifying_of_indicated_entity9C (*
 		_<- genElStr5;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _quest_for_necessary_general_specification;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action_for_necessary_general_specification;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _connection_for_spetification;;
 		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
@@ -546,7 +546,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_specifying_of_indicated_entity9D (*
 		_<- genElStr5;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _quest_for_necessary_general_specification;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action_for_necessary_general_specification;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _entity;;
 		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
@@ -559,7 +559,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_<- genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_of_logic_deduction;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
-		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _quest_for_necessary_general_specification;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action_for_necessary_general_specification;;
 
 		_=> nrel_goto:: .._agent_of_specifying_of_indicated_entity9G;;
 	*);;
@@ -568,7 +568,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_<- genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_initiated;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
-		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _quest_for_necessary_general_specification;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action_for_necessary_general_specification;;
 
 		_=> nrel_goto:: .._agent_of_specifying_of_indicated_entity9K;;
 	*);;
@@ -576,7 +576,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	_-> .._agent_of_specifying_of_indicated_entity9K (*
 		_<- sys_wait;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: sc_event_add_input_arc;;
-		_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _quest_for_necessary_general_specification;;
+		_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _action_for_necessary_general_specification;;
 
 		_=> nrel_goto:: .._agent_of_specifying_of_indicated_entity9H1;;
 	*);;
@@ -585,7 +585,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_<- searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_finished_unsuccessfully;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
-		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _quest_for_necessary_general_specification;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action_for_necessary_general_specification;;
 
 		_=> nrel_then:: .._agent_of_specifying_of_indicated_entity9J;;
 		_=> nrel_else:: .._agent_of_specifying_of_indicated_entity9I;;
@@ -595,7 +595,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_<- eraseElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_initiated;;
 		_-> rrel_2:: rrel_assign:: rrel_erase:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
-		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _quest_for_necessary_general_specification;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action_for_necessary_general_specification;;
 
 		_=> nrel_goto:: .._agent_of_specifying_of_indicated_entity8A;;
 	*);;
@@ -604,7 +604,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_<- searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_finished_successfully;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
-		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _quest_for_necessary_general_specification;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action_for_necessary_general_specification;;
 
 		_=> nrel_then:: .._agent_of_specifying_of_indicated_entity9J;;
 		_=> nrel_else:: .._agent_of_specifying_of_indicated_entity9K;;

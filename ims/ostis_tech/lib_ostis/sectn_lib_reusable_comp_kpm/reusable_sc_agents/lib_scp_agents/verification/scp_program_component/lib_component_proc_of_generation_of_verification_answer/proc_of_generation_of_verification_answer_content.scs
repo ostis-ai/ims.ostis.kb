@@ -7,7 +7,7 @@ proc_of_generation_of_verification_answer = [*
 .._process1
 _<- scp_process;
 
-_-> rrel_1:: rrel_in:: _quest;
+_-> rrel_1:: rrel_in:: _action;
 _-> rrel_2:: rrel_in:: _action_class;
 _-> rrel_3:: rrel_in:: _incorrect_struct;
 _-> rrel_4:: rrel_in:: _incorrect_struct_class;
@@ -34,7 +34,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_<- call;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_adding_general_action_comment;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._proc_of_generation_of_verification_answer_param1 (*
-			_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _quest;;
+			_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _action;;
 			_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [Problematic knowledge base fragments are not found.];;
 		*);;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _descr10;;
@@ -56,7 +56,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._proc_of_generation_of_verification_answer_operator_F2 (*
 		_<- searchSetStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _quest;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _action;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _param;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: .._proc_of_generation_of_verification_answer_param0;;
@@ -67,7 +67,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._proc_of_generation_of_verification_answer_operator_F3 (*
 		_<- searchSetStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _quest;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _action;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _param;;
 		_-> rrel_assign:: rrel_scp_var:: rrel_set_3:: _params;;
@@ -103,7 +103,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_<- genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._proc_of_generation_of_verification_answer_param0;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
-		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _quest;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _action;;
 
 		_=> nrel_goto:: .._proc_of_generation_of_verification_answer_operator_F10;;
 	*);;
@@ -112,7 +112,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_<- searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _action_class;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
-		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _quest;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _action;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: .._proc_of_generation_of_verification_answer_param0;;
 
 		_=> nrel_goto:: .._proc_of_generation_of_verification_answer_operator_F11;;
@@ -129,7 +129,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._proc_of_generation_of_verification_answer_operator_F12 (*
 		_<- genElStr5;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _quest;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _action;;
 		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _incorrect_struct;;
 		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
@@ -140,7 +140,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._proc_of_generation_of_verification_answer_operator_F13 (*
 		_<- searchSetStr5;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _quest;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _action;;
 		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _incorrect_struct;;
 		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
@@ -232,7 +232,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._proc_of_generation_of_verification_answer_operator_gen_full_answer (*
 		_<- genElStr5;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _quest;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _action;;
 		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: .._proc_of_generation_of_verification_answer_param0;;
 		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
