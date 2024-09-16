@@ -18,7 +18,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_<- searchElStr3;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _temp;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: _input_arc;;
-		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _quest;;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _action;;
 
 		_=> nrel_goto:: .._agent_of_check_for_crossing_from_one_subdividing_elements1B;;
 	*);;
@@ -27,7 +27,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_<- searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_of_check_for_crossing_from_one_subdividing_elements;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
-		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _quest;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
 
 		_=> nrel_then:: .._agent_of_check_for_crossing_from_one_subdividing_elements1C;;
 		_=> nrel_else:: .._agent_of_check_for_crossing_from_one_subdividing_elements_return;;
@@ -35,7 +35,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_check_for_crossing_from_one_subdividing_elements1C (*
 		_<- searchElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _quest;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: rrel_struct:: _param;;
 
@@ -50,7 +50,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_check_for_crossing_from_one_subdividing_elements1D (*
 		_<- searchElStr5;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _quest;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
 		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _context;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
@@ -64,7 +64,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_<- call;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_adding_validating_message;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._agent_of_check_for_crossing_from_one_subdividing_elements_param0 (*
-			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _quest;;
+			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
 			_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [Wrong parameter! It must be a structure];;
 		*);;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _descr1;;
@@ -111,7 +111,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_check_for_crossing_from_one_subdividing_elements2C (*
 		_<- genEl;;
-		_-> rrel_1:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: rrel_struct:: _answer_struct;;
+		_-> rrel_1:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: rrel_struct:: _result_struct;;
 
 		_=> nrel_goto:: .._agent_of_check_for_crossing_from_one_subdividing_elements3A;;
 	*);;
@@ -141,9 +141,9 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_<- call;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_generation_of_verification_answer;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._agent_of_check_for_crossing_from_one_subdividing_elements_param1 (*
-			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _quest;;
+			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
 			_-> rrel_2:: rrel_fixed:: rrel_scp_const:: action_of_check_for_crossing_from_one_subdividing_elements;;
-			_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _answer_struct;;
+			_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _result_struct;;
 			_-> rrel_4:: rrel_fixed:: rrel_scp_const:: structure_containing_elements_one_subdividing_non_empty_crossing;;
 		*);;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _descr1;;
@@ -166,7 +166,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_check_for_crossing_from_one_subdividing_elements10A (*
 		_<- searchElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_struct;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_struct;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _some_element;;
 
@@ -257,7 +257,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _set_of_concept_for_answer;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _some_concept;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _answer_struct;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _result_struct;;
 
 		_=> nrel_then:: .._agent_of_check_for_crossing_from_one_subdividing_elements9B;;
 		_=> nrel_else:: .._agent_of_check_for_crossing_from_one_subdividing_elements4A;;
@@ -282,7 +282,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_check_for_crossing_from_one_subdividing_elements9E (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_struct;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_struct;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _some_element;;
 
@@ -294,7 +294,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _some_concept;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _some_element;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_struct;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_struct;;
 
 		_=> nrel_goto:: .._agent_of_check_for_crossing_from_one_subdividing_elements9B;;
 	*);;

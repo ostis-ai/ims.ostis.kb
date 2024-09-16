@@ -18,7 +18,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_<- searchElStr3;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _temp;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: _input_arc;;
-		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _quest;;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _action;;
 
 		_=> nrel_then:: .._agent_of_assign_user_as_expert_operator1A;;
 		_=> nrel_else:: .._agent_of_assign_user_as_expert_return;;
@@ -28,7 +28,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_<- searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_assign_user_as_expert;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
-		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _quest;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
 
 		_=> nrel_then:: .._agent_of_assign_user_as_expert_operator1A1;;
 		_=> nrel_else:: .._agent_of_assign_user_as_expert_return;;
@@ -41,7 +41,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_assign_user_as_expert_operator1A1 (*
 		_<- searchElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _quest;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _user_future_expert;;
 
@@ -61,7 +61,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_assign_user_as_expert_operator1B (*
 		_<- searchElStr5;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _quest;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
 		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _user;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
@@ -75,7 +75,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_<- call;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_adding_validating_message;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._agent_of_assign_user_as_expert_param0 (*
-			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _quest;;
+			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
 			_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [Wrong first parameter! Node supplied as a parameter to the input is not a user];;
 		*);;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _descr1;;
@@ -104,7 +104,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_assign_user_as_expert_operator1D (*
 		_<- genEl;;
-		_-> rrel_1:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: _answer_of_assign_user_as_expert;;
+		_-> rrel_1:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: _result_of_assign_user_as_expert;;
 
 		_=> nrel_goto:: .._agent_of_assign_user_as_expert_operator1E;;
 	*);;
@@ -113,7 +113,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_<- call;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_adding_validating_message;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._agent_of_assign_user_as_expert_param1 (*
-			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _quest;;
+			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
 			_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [You have not administrator rights];;
 		*);;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _descr2;;
@@ -141,7 +141,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_assign_user_as_expert_operator2A (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_assign_user_as_expert;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_assign_user_as_expert;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _system;;
 
@@ -150,7 +150,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_assign_user_as_expert_operator2B (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_assign_user_as_expert;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_assign_user_as_expert;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _user_future_expert;;
 
@@ -164,15 +164,15 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _user_future_expert;;
 		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_expert;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_of_assign_user_as_expert;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _answer_of_assign_user_as_expert;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_assign_user_as_expert;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _result_of_assign_user_as_expert;;
 
 		_=> nrel_goto:: .._agent_of_assign_user_as_expert_operator2D;;
 	*);;
 
 	_-> .._agent_of_assign_user_as_expert_operator2D (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_assign_user_as_expert;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_assign_user_as_expert;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_expert;;
 
@@ -181,11 +181,11 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_assign_user_as_expert_operator2F (*
 		_<- genElStr5;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _quest;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
 		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc;;
-		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _answer_of_assign_user_as_expert;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _result_of_assign_user_as_expert;;
 		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
-		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_answer;;
+		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_result;;
 
 		_=> nrel_goto:: .._agent_of_assign_user_as_expert_return;;
 	*);;

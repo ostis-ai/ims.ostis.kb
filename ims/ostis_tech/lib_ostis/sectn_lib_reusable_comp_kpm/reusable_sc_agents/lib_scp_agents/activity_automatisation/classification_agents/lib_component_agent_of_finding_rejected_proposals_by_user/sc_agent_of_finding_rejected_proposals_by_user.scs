@@ -46,6 +46,6 @@ sc_agent_of_finding_rejected_proposals_by_user
 	action_of_finding_rejected_proposals_by_user _-> .._action;;
 	action_finished _-> .._action;;
 	action _-> .._action;;
-	.._action _=> nrel_answer:: .._answer_for_finding_rejected_proposals_by_user;;
+	.._action _=> nrel_result:: .._answer_for_finding_rejected_proposals_by_user;;
 	.._action _-> .._param;;
 *];;

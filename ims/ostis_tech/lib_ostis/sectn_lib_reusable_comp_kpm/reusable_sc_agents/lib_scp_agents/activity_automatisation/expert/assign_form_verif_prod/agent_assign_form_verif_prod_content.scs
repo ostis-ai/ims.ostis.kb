@@ -18,7 +18,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_<- searchElStr3;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _temp;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: _input_arc;;
-		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _quest;;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _action;;
 
 		_=> nrel_then:: .._agent_assignment_form_to_the_verification_result_operator1B;;
 		_=> nrel_else:: .._agent_assignment_form_to_the_verification_result_operator_return;;
@@ -28,7 +28,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_<- searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_form_task_to_result_of_proposal_verification;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
-		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _quest;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
 
 		_=> nrel_then:: .._agent_assignment_form_to_the_verification_result_operator_get_action_verify_structure_from_guest;;
 		_=> nrel_else:: .._agent_assignment_form_to_the_verification_result_operator_return;;
@@ -41,7 +41,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_assignment_form_to_the_verification_result_operator_get_action_verify_structure_from_guest (*
 		_<- searchElStr5;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _quest;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _action_verify_structure;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
@@ -73,7 +73,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_<- call;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_adding_validating_message;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._agent_assignment_form_to_the_verification_produce_param0 (*
-			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _quest;;
+			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
 			_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _validation_message;;
 		*);;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _descr4;;
@@ -90,7 +90,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_assignment_form_to_the_verification_result_operator1C (*
 		_<- searchElStr5;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _quest;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_link:: rrel_scp_var:: _comment_param;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
@@ -102,7 +102,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_assignment_form_to_the_verification_result_operator4W (*
 		_<- searchElStr5;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _quest;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
 		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _auth_user;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
@@ -179,7 +179,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_<- genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_finished_unsuccessfully;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
-		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _quest;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
 
 		_=> nrel_goto:: .._agent_assignment_form_to_the_verification_result_operator_return;;
 	*);;
@@ -581,7 +581,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_assignment_form_to_the_verification_result_operator1E1_gen_answer (*
 		_<- genEl;;
-		_-> rrel_1:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: _answer_assignment_form_to_the_verification_result;;
+		_-> rrel_1:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: _result_assignment_form_to_the_verification_result;;
 
 		_=> nrel_goto:: .._agent_assignment_form_to_the_verification_result_operator_add_last_entity_arc_to_answer;;
 	*);;
@@ -591,14 +591,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: last_entity;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action_verify_structure;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_assignment_form_to_the_verification_result;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_assignment_form_to_the_verification_result;;
 
 		_=> nrel_goto:: .._agent_assignment_form_to_the_verification_result_operator_add_last_entity_node_to_answer;;
 	*);;
 
 	_-> .._agent_assignment_form_to_the_verification_result_operator_add_last_entity_node_to_answer (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_assignment_form_to_the_verification_result;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_assignment_form_to_the_verification_result;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: last_entity;;
 
@@ -612,9 +612,9 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _any_performer;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_performer;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_assignment_form_to_the_verification_result;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _answer_assignment_form_to_the_verification_result;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _answer_assignment_form_to_the_verification_result;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_assignment_form_to_the_verification_result;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _result_assignment_form_to_the_verification_result;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _result_assignment_form_to_the_verification_result;;
 
 		_=> nrel_goto:: .._agent_assignment_form_to_the_verification_result_scn_add_new_action_arc_to_answer;;
 	*);;
@@ -624,14 +624,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: act_verify_the_desired_structure;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action_verify_structure;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_assignment_form_to_the_verification_result;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_assignment_form_to_the_verification_result;;
 
 		_=> nrel_goto:: .._agent_assignment_form_to_the_verification_result_operator_scn_add_previous_act_const_node_to_answer;;
 	*);;
 
 	_-> .._agent_assignment_form_to_the_verification_result_operator_scn_add_previous_act_const_node_to_answer (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_assignment_form_to_the_verification_result;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_assignment_form_to_the_verification_result;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: act_verify_the_desired_structure;;
 
@@ -640,7 +640,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_assignment_form_to_the_verification_result_operator_scn_add_action_verify_structure_to_answer (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_assignment_form_to_the_verification_result;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_assignment_form_to_the_verification_result;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action_verify_structure;;
 
@@ -654,15 +654,15 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _new_init_action;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_sequence_of_actions;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_assignment_form_to_the_verification_result;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _answer_assignment_form_to_the_verification_result;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_assignment_form_to_the_verification_result;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _result_assignment_form_to_the_verification_result;;
 
 		_=> nrel_goto:: .._agent_assignment_form_to_the_verification_result_operator_scn_add_sequence_of_actions_relation_node_to_answer;;
 	*);;
 
 	_-> .._agent_assignment_form_to_the_verification_result_operator_scn_add_sequence_of_actions_relation_node_to_answer (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_assignment_form_to_the_verification_result;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_assignment_form_to_the_verification_result;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_sequence_of_actions;;
 
@@ -671,7 +671,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_assignment_form_to_the_verification_result_operator_scn_add_new_init_action_to_answer (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_assignment_form_to_the_verification_result;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_assignment_form_to_the_verification_result;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _new_init_action;;
 
@@ -685,15 +685,15 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _struct_task;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_object;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_assignment_form_to_the_verification_result;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _answer_assignment_form_to_the_verification_result;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_assignment_form_to_the_verification_result;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _result_assignment_form_to_the_verification_result;;
 
 		_=> nrel_goto:: .._agent_assignment_form_to_the_verification_result_operator_scn_add_object_relation_node_to_answer;;
 	*);;
 
 	_-> .._agent_assignment_form_to_the_verification_result_operator_scn_add_object_relation_node_to_answer (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_assignment_form_to_the_verification_result;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_assignment_form_to_the_verification_result;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_object;;
 
@@ -707,15 +707,15 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _struct_task;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_result;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_assignment_form_to_the_verification_result;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _answer_assignment_form_to_the_verification_result;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_assignment_form_to_the_verification_result;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _result_assignment_form_to_the_verification_result;;
 
 		_=> nrel_goto:: .._agent_assignment_form_to_the_verification_result_operator_scn_add_result_relation_node_to_answer;;
 	*);;
 
 	_-> .._agent_assignment_form_to_the_verification_result_operator_scn_add_result_relation_node_to_answer (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_assignment_form_to_the_verification_result;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_assignment_form_to_the_verification_result;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_result;;
 
@@ -724,7 +724,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_assignment_form_to_the_verification_result_operator_scn_add_struct_param_node_to_answer (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_assignment_form_to_the_verification_result;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_assignment_form_to_the_verification_result;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _struct_task;;
 
@@ -736,14 +736,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_to_consider_result_of_proposal_verification;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _new_init_action;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_assignment_form_to_the_verification_result;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_assignment_form_to_the_verification_result;;
 
 		_=> nrel_goto:: .._agent_assignment_form_to_the_verification_result_operator_scn_add_new_action_class_node_to_answer;;
 	*);;
 
 	_-> .._agent_assignment_form_to_the_verification_result_operator_scn_add_new_action_class_node_to_answer (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_assignment_form_to_the_verification_result;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_assignment_form_to_the_verification_result;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: action_to_consider_result_of_proposal_verification;;
 
@@ -755,8 +755,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _struct_task;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _content;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_assignment_form_to_the_verification_result;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _answer_assignment_form_to_the_verification_result;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_assignment_form_to_the_verification_result;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _result_assignment_form_to_the_verification_result;;
 
 		_=> nrel_goto:: .._agent_assignment_form_to_the_verification_result_operator_gen_performer_relation_arcs_to_answer;;
 	*);;
@@ -768,15 +768,15 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _previous_action_performer;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_performer;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_assignment_form_to_the_verification_result;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _answer_assignment_form_to_the_verification_result;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_assignment_form_to_the_verification_result;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _result_assignment_form_to_the_verification_result;;
 
 		_=> nrel_goto:: .._agent_assignment_form_to_the_verification_result_operator_scn_add_performer_relation_node_to_answer;;
 	*);;
 
 	_-> .._agent_assignment_form_to_the_verification_result_operator_scn_add_performer_relation_node_to_answer (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_assignment_form_to_the_verification_result;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_assignment_form_to_the_verification_result;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_performer;;
 
@@ -785,7 +785,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_assignment_form_to_the_verification_result_operator_scn_add_struct_param_previous_action_performer_node_to_answer (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_assignment_form_to_the_verification_result;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_assignment_form_to_the_verification_result;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _previous_action_performer;;
 
@@ -794,18 +794,18 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_assignment_form_to_the_verification_result_operator1FF_show_second_param_test (*
 		_<- printEl;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_assignment_form_to_the_verification_result;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_assignment_form_to_the_verification_result;;
 
 		_=> nrel_goto:: .._agent_assignment_form_to_the_verification_result_operator_gen_full_answer;;
 	*);;
 
 	_-> .._agent_assignment_form_to_the_verification_result_operator_gen_full_answer (*
 		_<- genElStr5;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _quest;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
 		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc1;;
-		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _answer_assignment_form_to_the_verification_result;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _result_assignment_form_to_the_verification_result;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
-		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_answer;;
+		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_result;;
 
 		_=> nrel_goto:: .._agent_assignment_form_to_the_verification_result_gen_action_finished_successfully;;
 	*);;
@@ -814,7 +814,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_<- genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_finished_successfully;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
-		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _quest;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
 
 		_=> nrel_goto:: .._agent_assignment_form_to_the_verification_result_operator_return;;
 	*);;

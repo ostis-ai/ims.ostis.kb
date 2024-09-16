@@ -18,7 +18,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_<- searchElStr3;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _temp;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: _input_arc;;
-		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _quest;;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _action;;
 
 		_=> nrel_goto:: .._agent_of_finding_all_initiated_signs_operator1B;;
 	*);;
@@ -27,7 +27,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_<- searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_of_finding_all_initiated_signs;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
-		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _quest;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
 
 		_=> nrel_then:: .._agent_of_finding_all_initiated_signs_operator1C;;
 		_=> nrel_else:: .._agent_of_finding_all_initiated_signs_operator_return;;
@@ -35,7 +35,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_finding_all_initiated_signs_operator1C (*
 		_<- searchElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _quest;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _param;;
 
@@ -50,7 +50,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_finding_all_initiated_signs_operator1D (*
 		_<- genEl;;
-		_-> rrel_1:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: _answer_of_finding_all_initiated_signs;;
+		_-> rrel_1:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: _result_of_finding_all_initiated_signs;;
 
 		_=> nrel_goto:: .._agent_of_finding_all_initiated_signs_operator_add_param_to_answer_1D_1;;
 	*);;
@@ -59,14 +59,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_<- genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_finished_unsuccessfully;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
-		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _quest;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
 
 		_=> nrel_goto:: .._agent_of_finding_all_initiated_signs_operator_return;;
 	*);;
 
 	_-> .._agent_of_finding_all_initiated_signs_operator_add_param_to_answer_1D_1 (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_finding_all_initiated_signs;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_finding_all_initiated_signs;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _param;;
 
@@ -95,7 +95,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_<- call;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_adding_general_action_comment;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._agent_of_finding_all_initiated_signs_param0 (*
-			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _quest;;
+			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
 			_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [The search hasn't given any results];;
 		*);;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _descr1;;
@@ -185,7 +185,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_finding_all_initiated_signs_operator2E_add_performer_relation_to_answer (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_finding_all_initiated_signs;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_finding_all_initiated_signs;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_performer;;
 
@@ -221,7 +221,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_finding_all_initiated_signs_operator2E_add_proposal_relation_to_answer (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_finding_all_initiated_signs;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_finding_all_initiated_signs;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_proposal;;
 
@@ -240,7 +240,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_finding_all_initiated_signs_operator2E_add_authors_relation_to_answer (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_finding_all_initiated_signs;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_finding_all_initiated_signs;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_authors;;
 
@@ -279,11 +279,11 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_finding_all_initiated_signs_operator3B (*
 		_<- genElStr5;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _quest;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
 		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc1;;
-		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _answer_of_finding_all_initiated_signs;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _result_of_finding_all_initiated_signs;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
-		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_answer;;
+		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_result;;
 
 		_=> nrel_goto:: .._agent_of_finding_all_initiated_signs_operator_F1;;
 	*);;
@@ -292,7 +292,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_<- genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_finished_successfully;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
-		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _quest;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
 
 		_=> nrel_goto:: .._agent_of_finding_all_initiated_signs_operator_return;;
 	*);;
@@ -321,9 +321,9 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _author;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_authors;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_of_finding_all_initiated_signs;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _answer_of_finding_all_initiated_signs;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _answer_of_finding_all_initiated_signs;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_finding_all_initiated_signs;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _result_of_finding_all_initiated_signs;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _result_of_finding_all_initiated_signs;;
 
 		_=> nrel_then:: .._agent_of_finding_all_initiated_signs_operator2D_add_action_to_init_actions_set_to_check_authors_relation;;
 		_=> nrel_else:: .._agent_of_finding_all_initiated_signs_operatorA_check_authors_relation_content_loop_enter;;
@@ -345,9 +345,9 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _proposal;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_proposal;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_of_finding_all_initiated_signs;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _answer_of_finding_all_initiated_signs;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _answer_of_finding_all_initiated_signs;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_finding_all_initiated_signs;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _result_of_finding_all_initiated_signs;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _result_of_finding_all_initiated_signs;;
 
 		_=> nrel_then:: .._agent_of_finding_all_initiated_signs_operator2D_add_action_to_init_actions_set_to_check_proposal_relation;;
 		_=> nrel_else:: .._agent_of_finding_all_initiated_signs_operator2A_init_actions_set_for_proposal_set_loop_enter;;
@@ -385,9 +385,9 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _proposal;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_performer;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_of_finding_all_initiated_signs;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _answer_of_finding_all_initiated_signs;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _answer_of_finding_all_initiated_signs;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_finding_all_initiated_signs;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _result_of_finding_all_initiated_signs;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _result_of_finding_all_initiated_signs;;
 
 		_=> nrel_then:: .._agent_of_finding_all_initiated_signs_operator2D_add_action_to_flag_set;;
 		_=> nrel_else:: .._agent_of_finding_all_initiated_signs_operator2A_init_actions_set_loop_enter;;
@@ -444,7 +444,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_finding_all_initiated_signs_operator2D_add_class_action_node_to_answer (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_finding_all_initiated_signs;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_finding_all_initiated_signs;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _some_sign_class;;
 
@@ -456,14 +456,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _some_sign_class;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _some_sign;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_of_finding_all_initiated_signs;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_finding_all_initiated_signs;;
 
 		_=> nrel_goto:: .._agent_of_finding_all_initiated_signs_operator2D_add_some_sign_node_to_answer;;
 	*);;
 
 	_-> .._agent_of_finding_all_initiated_signs_operator2D_add_some_sign_node_to_answer (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _answer_of_finding_all_initiated_signs;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_finding_all_initiated_signs;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _some_sign;;
 
@@ -493,7 +493,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_initiated;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _some_sign;;
-		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _answer_of_finding_all_initiated_signs;;
+		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_finding_all_initiated_signs;;
 
 		_=> nrel_goto:: .._agent_of_finding_all_initiated_signs_operator2A_find_concept_inner_loop_enter;;
 	*);;

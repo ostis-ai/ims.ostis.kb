@@ -46,6 +46,6 @@ sc_agent_of_finding_all_drafts_of_author
 	action_of_finding_all_drafts_of_author _-> .._action;;
 	action_finished _-> .._action;;
 	action _-> .._action;;
-	.._action _=> nrel_answer:: .._answer_for_finding_all_drafts_of_author;;
+	.._action _=> nrel_result:: .._answer_for_finding_all_drafts_of_author;;
 	.._action _-> .._param;;
 *];;

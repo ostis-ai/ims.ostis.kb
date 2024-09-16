@@ -10,7 +10,7 @@ _<- scp_process;
 _-> rrel_1:: rrel_in:: _el1;
 _-> rrel_2:: rrel_in:: _el2;
 _-> rrel_3:: rrel_in:: _mainset;
-_-> rrel_4:: rrel_in:: _answer;
+_-> rrel_4:: rrel_in:: _result;
 _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> rrel_1:: .._proc_finding_arcs_between_concepts_operator1A (*
@@ -44,7 +44,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._proc_finding_arcs_between_concepts_operator1C (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _answer;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _result;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _arc2;;
 
@@ -56,8 +56,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _arc2;;
 		_-> rrel_2:: rrel_assign:: rrel_scp_var:: _arc3;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _smth1;;
-		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _answer;;
-		_-> rrel_fixed:: rrel_scp_const:: rrel_set_3:: _answer;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _result;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_3:: _result;;
 
 		_=> nrel_then:: .._proc_finding_arcs_between_concepts_operator3A;;
 		_=> nrel_else:: .._proc_finding_arcs_between_concepts_operator2B;;
@@ -68,8 +68,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _smth3;;
 		_-> rrel_2:: rrel_assign:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _arc3;;
-		_-> rrel_fixed:: rrel_scp_const:: rrel_set_1:: _answer;;
-		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _answer;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_1:: _result;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _result;;
 
 		_=> nrel_then:: .._proc_finding_arcs_between_concepts_operator1A;;
 		_=> nrel_else:: .._proc_finding_arcs_between_concepts_operator1A;;
@@ -80,8 +80,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _smth2;;
 		_-> rrel_2:: rrel_assign:: rrel_scp_var:: _arc3;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _arc2;;
-		_-> rrel_fixed:: rrel_scp_const:: rrel_set_1:: _answer;;
-		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _answer;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_1:: _result;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _result;;
 
 		_=> nrel_then:: .._proc_finding_arcs_between_concepts_operator3A;;
 		_=> nrel_else:: .._proc_finding_arcs_between_concepts_operator4A;;

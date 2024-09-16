@@ -8,7 +8,7 @@ proc_of_finding_illustrations = [*
 _<- scp_process;
 
 _-> rrel_1:: rrel_in:: _elem;
-_-> rrel_2:: rrel_in:: _answer_proc_of_finding_illustrations;
+_-> rrel_2:: rrel_in:: _result_proc_of_finding_illustrations;
 _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> rrel_1:: .._proc_of_finding_illustrations_operator1A (*
@@ -48,7 +48,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._proc_of_finding_illustrations_operator3A (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _answer_proc_of_finding_illustrations;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _result_proc_of_finding_illustrations;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: rrel_example;;
 
@@ -57,7 +57,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._proc_of_finding_illustrations_operator3B (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _answer_proc_of_finding_illustrations;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _result_proc_of_finding_illustrations;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_sc_text_translation;;
 
@@ -73,7 +73,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._proc_of_finding_illustrations_operator1D (*
 		_<- genElStr3;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _answer_proc_of_finding_illustrations;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _result_proc_of_finding_illustrations;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _translit;;
 
@@ -87,8 +87,8 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _elem;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_sc_text_translation;;
-		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _answer_proc_of_finding_illustrations;;
-		_-> rrel_fixed:: rrel_scp_const:: rrel_set_4:: _answer_proc_of_finding_illustrations;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _result_proc_of_finding_illustrations;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_4:: _result_proc_of_finding_illustrations;;
 
 		_=> nrel_then:: .._proc_of_finding_illustrations_operator2B;;
 		_=> nrel_else:: .._proc_of_finding_illustrations_operator_return;;
@@ -101,9 +101,9 @@ _<= nrel_decomposition_of_action:: .._actions (*
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _opr;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: rrel_example;;
-		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _answer_proc_of_finding_illustrations;;
-		_-> rrel_fixed:: rrel_scp_const:: rrel_set_3:: _answer_proc_of_finding_illustrations;;
-		_-> rrel_fixed:: rrel_scp_const:: rrel_set_4:: _answer_proc_of_finding_illustrations;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _result_proc_of_finding_illustrations;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_3:: _result_proc_of_finding_illustrations;;
+		_-> rrel_fixed:: rrel_scp_const:: rrel_set_4:: _result_proc_of_finding_illustrations;;
 
 		_=> nrel_then:: .._proc_of_finding_illustrations_operator1B;;
 		_=> nrel_else:: .._proc_of_finding_illustrations_operator_return;;
