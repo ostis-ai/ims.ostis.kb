@@ -30,3 +30,12 @@ lib_component_agent_of_change_arc_direction
 		*);;
 	*);;
 
+action_to_change_arc_direction
+<- sc_node_class;
+<= nrel_inclusion:
+    information_action;
+=> nrel_main_idtf:
+    [действие. изменить направление дуги]
+    (* <- lang_ru;; *);
+    [action. change arc direction]
+    (* <- lang_en;; *);;

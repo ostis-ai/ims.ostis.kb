@@ -32,6 +32,8 @@ lib_component_agent_of_forming_agreed_knowledge_base_part
 
 action_of_forming_agreed_knowledge_base_part
 <- sc_node_not_relation;
+<= nrel_inclusion:
+    information_action;
 => nrel_main_idtf:
 	[действие. сформировать согласованную часть базы знаний]
 		(*<- lang_ru;;*);

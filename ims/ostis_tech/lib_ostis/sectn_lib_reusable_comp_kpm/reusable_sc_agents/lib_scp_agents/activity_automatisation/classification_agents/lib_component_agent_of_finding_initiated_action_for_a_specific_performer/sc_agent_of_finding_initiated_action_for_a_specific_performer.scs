@@ -34,7 +34,7 @@ sc_agent_of_finding_initiated_action_for_a_specific_performer
 		(* <- active_sc_agent;; *);;  
 	*);;
 
-..sc_agent_of_search_initiated_action_for_a_specific_performer_condition
+..sc_agent_of_finding_initiated_action_for_a_specific_performer_condition
 = [*
 	action_of_finding_initiated_action_for_a_specific_performer _-> .._action;;
 	action_initiated _-> .._action;;
@@ -42,7 +42,7 @@ sc_agent_of_finding_initiated_action_for_a_specific_performer
 	.._action _-> .._parameter;;
 *];;
 
-..sc_agent_of_search_initiated_action_for_a_specific_performer_result
+..sc_agent_of_finding_initiated_action_for_a_specific_performer_result
 = [*
 	action_of_finding_initiated_action_for_a_specific_performer _-> .._action;;
 	action_finished _-> .._action;;

@@ -29,3 +29,13 @@ lib_component_agent_of_manager_approval_proposals_for_editing_kb
    			*);;
 		*);;
 	*);;
+
+action_to_approve_the_proposal_for_editing_the_knowledge_base_manager
+<- sc_node_class;
+<= nrel_inclusion:
+    information_action;
+=> nrel_main_idtf:
+    [действие. утвердить предложение по редактированию базы знаний менеджером]
+    (* <- lang_ru;; *);
+    [action. approve proposal for editing the knowledge base by manager]
+    (* <- lang_en;; *);;

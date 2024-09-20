@@ -15,7 +15,7 @@ sc_agent_of_check_for_crossing_from_one_subdividing_elements
 	(sc_event_after_generate_outgoing_arc => action_initiated);
 
 => nrel_initiation_condition_and_result: 
-	(..sc_agent_of_check_for_crossing_from_one_subdividing_elements => ..sc_agent_of_check_for_crossing_from_one_subdividing_elements_result);
+	(..sc_agent_of_check_for_crossing_from_one_subdividing_elements_condition => ..sc_agent_of_check_for_crossing_from_one_subdividing_elements_result);
 
 <= nrel_sc_agent_key_sc_elements: 
 	{

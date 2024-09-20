@@ -32,7 +32,10 @@ lib_component_agent_of_finding_connection_between_entity_and_alternative_of_spec
 
 sc_node_not_relation -> action_of_finding_connection_between_entity_and_alternative_of_specification;;
 
-action_of_finding_connection_between_entity_and_alternative_of_specification => nrel_main_idtf:
+action_of_finding_connection_between_entity_and_alternative_of_specification
+<= nrel_inclusion:
+    information_action;
+=> nrel_main_idtf:
 	[действие. найти связь между сущностью и альтернативой спецификации]
 		(*<- lang_ru;;*);;
 action_of_finding_connection_between_entity_and_alternative_of_specification => nrel_main_idtf:

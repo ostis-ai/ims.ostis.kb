@@ -30,3 +30,12 @@ lib_component_agent_rejection_verification_result_of_offer
 		*);;
 	*);;
 
+action_to_reject_the_result_of_proposal_verification
+<- sc_node_class;
+<= nrel_inclusion:
+    information_action;
+=> nrel_main_idtf:
+    [действие. отклонить результата верификации предложения]
+    (* <- lang_ru;; *);
+    [action. reject verification result of offer]
+    (* <- lang_en;; *);;

@@ -30,7 +30,10 @@ lib_component_agent_of_specifying_of_indicated_entity
 
 sc_node_not_relation -> action_of_request_assistance_of_entity_specification;;
 	
-action_of_request_assistance_of_entity_specification => nrel_main_idtf:
+action_of_request_assistance_of_entity_specification
+<= nrel_inclusion:
+    information_action;
+=> nrel_main_idtf:
 	[действие. запросить помощь в спецификации указываемой сущности]
 		(*<- lang_ru;;*);;
 action_of_request_assistance_of_entity_specification => nrel_main_idtf:

@@ -33,6 +33,8 @@ lib_component_agent_of_finding_formal_statement
 
 action_finding_formal_statement
 <- sc_node_not_relation;
+<= nrel_inclusion:
+    information_action;
 => nrel_main_idtf:
  	[действие. найти формальное утверждение]
 	(* <- lang_ru;; *);

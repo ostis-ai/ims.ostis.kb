@@ -12,7 +12,7 @@ sc_agent_of_checking_domains_of_relation_of_subject_domain
 	(sc_event_after_generate_outgoing_arc => action_initiated);
 	
 => nrel_initiation_condition_and_result: 
-	(..sc_agent_of_checking_domains_of_relation_of_condition => ..sc_agent_of_checking_domains_of_relation_result);
+	(..sc_agent_of_checking_domains_of_relation_condition => ..sc_agent_of_checking_domains_of_relation_result);
 	
 <= nrel_sc_agent_key_sc_elements: 
 	{
@@ -42,7 +42,7 @@ sc_agent_of_checking_domains_of_relation_of_subject_domain
 	.._action _-> .._parameter1;;
 *];;
 
-..agent_of_checking_domains_of_relation_result
+..sc_agent_of_checking_domains_of_relation_result
 = [*
 	action_of_checking_domains_of_relation _-> .._action;;
 	action_finished _-> .._action;;

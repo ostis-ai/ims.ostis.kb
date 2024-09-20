@@ -31,3 +31,12 @@ lib_component_agent_of_verify_the_desired_structure
 		*);;
 	*);;
 
+action_to_form_a_task_for_verification_of_the_proposal
+<- sc_node_class;
+<= nrel_inclusion:
+    information_action;
+=> nrel_main_idtf:
+    [действие. сформировать задания на верификацию предложения]
+    (* <- lang_ru;; *);
+    [action. form verification for the desired structure]
+    (* <- lang_en;; *);;

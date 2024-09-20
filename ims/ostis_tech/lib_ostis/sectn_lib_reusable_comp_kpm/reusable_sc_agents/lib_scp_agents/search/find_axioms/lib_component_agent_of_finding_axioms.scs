@@ -33,6 +33,8 @@ lib_component_agent_of_finding_axioms
 
 action_finding_axioms
 <- sc_node_not_relation;
+<= nrel_inclusion:
+    information_action;
 => nrel_main_idtf:
 	[действие. найти аксиомы]
 	(* <- lang_ru;; *);

@@ -30,4 +30,12 @@ lib_component_agent_of_removing_sc_element
 		*);;
 	*);;
 
-
+action_of_removing_sc_element
+<- sc_node_class;
+<= nrel_inclusion:
+    information_action;
+=> nrel_main_idtf:
+    [действие. удалить sc-элемент]
+    (* <- lang_ru;; *);
+    [action. removк sc-element]
+    (* <- lang_en;; *);;

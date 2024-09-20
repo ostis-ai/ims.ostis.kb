@@ -29,6 +29,8 @@ lib_component_agent_of_finding_rejected_proposals_by_user
 
 action_of_finding_rejected_proposals_by_user
 <- sc_node_not_relation;
+<= nrel_inclusion:
+    information_action;
 => nrel_main_idtf:
 	[действие. найти все отклоненные конкретным пользователем предложения]
  	(* <- lang_ru;; *);

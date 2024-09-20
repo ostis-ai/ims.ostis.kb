@@ -32,6 +32,8 @@ lib_component_agent_of_finding_drafts_developed_by_specific_developer
 
 action_to_find_drafts_developed_by_specific_developer
 <- sc_node_not_relation;
+<= nrel_inclusion:
+    information_action;
 => nrel_main_idtf:
 	[действие. найти черновики, разработанные конкретным разработчиком]
  	(* <- lang_ru;; *);
