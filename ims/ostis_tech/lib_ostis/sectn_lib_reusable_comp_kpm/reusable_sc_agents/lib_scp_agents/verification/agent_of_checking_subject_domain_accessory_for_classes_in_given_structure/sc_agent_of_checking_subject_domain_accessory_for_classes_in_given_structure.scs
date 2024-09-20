@@ -9,7 +9,7 @@ sc_agent_of_checking_subject_domain_accessory_for_classes_in_given_structure
     action_of_checking_subject_domain_accessory_for_classes_in_given_structure;
 
 => nrel_primary_initiation_condition: 
-	(sc_event_add_output_arc => action_initiated);
+	(sc_event_after_generate_outgoing_arc => action_initiated);
 	
 => nrel_initiation_condition_and_result: 
 	(..sc_agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_condition => ..sc_agent_of_checking_subject_domain_accessory_for_classes_in_given_structure_result);

@@ -119,7 +119,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 
 	_-> .._agent_of_finding_all_drafts_of_action_author_operator_check_answer_3 (*
 		_<- sys_wait;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: sc_event_remove_input_arc;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: sc_event_before_erase_incoming_arc;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _new_quest;;
 
 		_=> nrel_goto:: .._agent_of_finding_all_drafts_of_action_author_operator_check_answer_1;;

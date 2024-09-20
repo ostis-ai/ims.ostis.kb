@@ -4,7 +4,7 @@ sc_agent_of_checking_cycle_existence_of_ordering_relation
 	[Abstract sc-agent of checking cycles existence for order strict within a given structure] (* <- lang_en;; *);
 <- abstract_sc_agent;
 => nrel_sc_agent_action_class: action_of_checking_cycle_existence_of_ordering_relation;
-=> nrel_primary_initiation_condition: (sc_event_add_output_arc => action_initiated);
+=> nrel_primary_initiation_condition: (sc_event_after_generate_outgoing_arc => action_initiated);
 => nrel_initiation_condition_and_result: (..sc_agent_of_checking_cycle_existence_of_ordering_relation_initiation_condition => ..sc_agent_of_checking_cycle_existence_of_ordering_relation_result);
 <= nrel_sc_agent_key_sc_elements: 
 	{
