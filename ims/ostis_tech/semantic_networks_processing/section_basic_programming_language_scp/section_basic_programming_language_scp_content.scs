@@ -107,7 +107,11 @@ basic_programming_language_scp
 	rrel_node;
 	rrel_relation;
 	rrel_arc;
+	rrel_link;
 	rrel_access;
+	rrel_const;
+	rrel_var;
+	rrel_pos_const_perm;
 -> rrel_maximum_studied_object_class: 
 	scp_program;;
 
@@ -2853,6 +2857,7 @@ rrel_scp_operand
 	=> nrel_inclusion:
 		rrel_set;
 		rrel_erase;
+		rrel_link;
 		rrel_type_of_sc_element;;
 
 rrel_scp_const
@@ -2998,6 +3003,32 @@ rrel_assign
 						*);;
 				*);;
 		*);;
+
+rrel_const
+	<- sc_node_role_relation;
+	=> nrel_main_idtf:
+		[константный sc-элемент']
+		(*<- lang_ru;;*);
+		[constant sc-element']
+		(*<- lang_en;;*);
+	=> nrel_idtf:
+		[sc-константа']
+		(*<- lang_ru;;*);
+		[sc-constant']
+		(*<- lang_en;;*);;
+
+rrel_var
+<- sc_node_role_relation;
+	=> nrel_main_idtf:
+		[переменный sc-элемент']
+		(*<- lang_ru;;*);
+		[variable sc-element']
+		(*<- lang_en;;*);
+	=> nrel_idtf:
+		[sc-переменная']
+		(*<- lang_ru;;*);
+		[sc-variable']
+		(*<- lang_en;;*);;
 
 rrel_set
 <- sc_node_role_relation;
@@ -3244,6 +3275,7 @@ rrel_type_of_sc_element
  					};;
  				*);;
 		*);
+		rrel_link;
 		rrel_file
 		(*
 			=> nrel_main_idtf:
@@ -3267,6 +3299,11 @@ rrel_type_of_sc_element
  					};;
  				*);;
 		*)
+	};
+	<= nrel_subdividing:
+	{
+		rrel_const;
+		rrel_var
 	};;
 
 rrel_node
@@ -3408,6 +3445,21 @@ rrel_arc
 		*);
 		rrel_access
 	};;
+
+rrel_link
+<- sc_node_role_relation;
+	=> nrel_main_idtf:
+		[sc-файл']
+		(*<- lang_ru;;*);
+		[sc-file']
+		(*<- lang_en;;*);
+	=> nrel_idtf:
+		[sc-ссылка']
+		(*<- lang_ru;;*);
+		[sc-link']
+		(*<- lang_en;;*);
+ 	=> nrel_second_domain:
+ 		sc_link;;
 
 rrel_access
 <- sc_node_role_relation;
@@ -3572,6 +3624,23 @@ rrel_access
  					};;
  				*);;
 		*)
-	};;
-
+	};
+	=> nrel_inclusion: rrel_pos_const_perm (*
+		=> nrel_main_idtf:
+			[sc-дуга основного вида']
+			(*<- lang_ru;;*);
+			[main sc-arc']
+			(*<- lang_en;;*);;
+		<- sc_node_role_relation;;
+		=> nrel_second_domain:
+			...
+			(*
+				<= nrel_intersection:
+				{
+					rrel_pos;
+					rrel_const;
+					rrel_perm
+				};;
+			*);;
+	*);;
 *];;
