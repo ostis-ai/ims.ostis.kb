@@ -32,6 +32,8 @@ lib_component_agent_of_calculation_number_of_sections
 
 action_to_calculate_number_of_sections
 <- sc_node_not_relation;
+<= nrel_inclusion:
+    information_action;
 => nrel_main_idtf:
 	[действие. подсчитать количество разделов базы знаний]
  	(* <- lang_ru;; *);

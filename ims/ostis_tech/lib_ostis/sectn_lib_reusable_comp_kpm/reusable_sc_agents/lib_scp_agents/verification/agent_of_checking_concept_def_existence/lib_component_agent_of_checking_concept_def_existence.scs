@@ -32,6 +32,8 @@ lib_component_agent_of_checking_concept_def_existence
 
 action_to_check_concept_def_existence
 <- sc_node_not_relation;
+<= nrel_inclusion:
+    information_action;
 => nrel_main_idtf:
 	[действие. проверить наличие определений или пояснений у понятий, имеющихся в рамках заданной структуры]
  	(* <- lang_ru;; *);

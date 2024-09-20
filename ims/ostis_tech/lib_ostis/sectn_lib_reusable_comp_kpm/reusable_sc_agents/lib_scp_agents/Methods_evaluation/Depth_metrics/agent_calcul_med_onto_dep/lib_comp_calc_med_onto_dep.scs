@@ -32,6 +32,8 @@ lib_component_agent_of_calculation_median_of_ontology_depths
 
 action_to_calculate_median_of_ontology_depths
 <- sc_node_not_relation;
+<= nrel_inclusion:
+    information_action;
 => nrel_main_idtf:
 	[действие. подсчитать медиану глубины онтологии]
  	(* <- lang_ru;; *);

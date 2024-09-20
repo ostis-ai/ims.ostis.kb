@@ -34,6 +34,8 @@ lib_component_agent_of_counting_variables_in_structure
 action_to_count_variables_in_structure <- sc_node_not_relation;;
 
 action_to_count_variables_in_structure
+<= nrel_inclusion:
+    information_action;
 => nrel_main_idtf: 
 	[действие. посчитать количество sc-переменных в структуре] 
 	(* <- lang_ru;; *);

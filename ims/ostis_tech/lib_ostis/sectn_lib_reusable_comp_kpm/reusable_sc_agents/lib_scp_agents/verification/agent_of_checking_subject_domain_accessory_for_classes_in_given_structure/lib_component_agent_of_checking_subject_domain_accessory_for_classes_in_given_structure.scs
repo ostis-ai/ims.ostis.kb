@@ -32,7 +32,10 @@ lib_component_agent_of_checking_subject_domain_accessory_for_classes_in_given_st
 
 sc_node_not_relation -> action_of_checking_subject_domain_accessory_for_classes_in_given_structure;;
 
-action_of_checking_subject_domain_accessory_for_classes_in_given_structure => nrel_main_idtf:
+action_of_checking_subject_domain_accessory_for_classes_in_given_structure
+<= nrel_inclusion:
+    information_action;
+ => nrel_main_idtf:
 	[действие. проверить указание соответствующей предметной области для классов в рамках заданной структуры]
 		(*<- lang_ru;;*);;
 action_of_checking_subject_domain_accessory_for_classes_in_given_structure => nrel_main_idtf:

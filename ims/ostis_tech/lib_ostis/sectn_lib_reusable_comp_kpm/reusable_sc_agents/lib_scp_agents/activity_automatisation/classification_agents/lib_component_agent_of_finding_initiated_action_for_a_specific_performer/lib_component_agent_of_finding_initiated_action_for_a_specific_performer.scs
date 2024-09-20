@@ -32,6 +32,8 @@ lib_component_agent_of_finding_initiated_action_for_a_specific_performer
 
 action_of_finding_initiated_action_for_a_specific_performer
 <- sc_node_not_relation;
+<= nrel_inclusion:
+    information_action;
 => nrel_main_idtf:
 	[действие. найти действия, закреплённые за конкретным исполнителем]
 		(*<- lang_ru;;*);

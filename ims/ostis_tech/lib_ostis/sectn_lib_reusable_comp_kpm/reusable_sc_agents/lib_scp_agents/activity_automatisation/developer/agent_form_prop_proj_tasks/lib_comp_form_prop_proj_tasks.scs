@@ -30,4 +30,12 @@ lib_component_agent_of_formation_proposed_project_tasks
 		*);;
 	*);;
 
-
+action_to_form_a_proposal_of_project_task
+<- sc_node_class;
+<= nrel_inclusion:
+    information_action;
+=> nrel_main_idtf:
+    [действие. сформировать предложение проектного задания]
+    (* <- lang_ru;; *);
+    [action. form proposal of project task]
+    (* <- lang_en;; *);;

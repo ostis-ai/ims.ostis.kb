@@ -29,6 +29,8 @@ lib_component_agent_of_finding_approved_proposals_by_user
 
 action_of_finding_approved_proposals_by_user
 <- sc_node_not_relation;
+<= nrel_inclusion:
+    information_action;
 => nrel_main_idtf:
 	[действие. найти утвержденных предложений конкретным пользователем]
  	(* <- lang_ru;; *);

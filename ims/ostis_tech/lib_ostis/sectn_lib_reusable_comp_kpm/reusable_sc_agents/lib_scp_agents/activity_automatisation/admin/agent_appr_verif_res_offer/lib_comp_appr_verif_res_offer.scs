@@ -30,3 +30,12 @@ lib_component_agent_approval_verification_result_of_offer
 		*);;
 	*);;
 
+action_to_approve_the_result_of_proposal_verification
+<- sc_node_class;
+<= nrel_inclusion:
+    information_action;
+=> nrel_main_idtf:
+    [действие. утвердить результата верификации предложения]
+    (* <- lang_ru;; *);
+    [action. approve the verification result of offer]
+    (* <- lang_en;; *);;

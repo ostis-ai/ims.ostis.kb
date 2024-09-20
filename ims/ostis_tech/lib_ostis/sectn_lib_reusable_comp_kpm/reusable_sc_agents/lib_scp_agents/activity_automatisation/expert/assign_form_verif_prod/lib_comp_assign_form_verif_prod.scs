@@ -30,3 +30,13 @@ lib_component_agent_assignment_form_to_the_verification_produce
    			*);;
 		*);;
 	*);;
+
+action_form_task_to_result_of_proposal_verification
+<- sc_node_class;
+<= nrel_inclusion:
+    information_action;
+=> nrel_main_idtf:
+    [действие. сформировать задания на рассмотрение результата верификации]
+    (* <- lang_ru;; *);
+    [action. form task of the verification result]
+    (* <- lang_en;; *);;

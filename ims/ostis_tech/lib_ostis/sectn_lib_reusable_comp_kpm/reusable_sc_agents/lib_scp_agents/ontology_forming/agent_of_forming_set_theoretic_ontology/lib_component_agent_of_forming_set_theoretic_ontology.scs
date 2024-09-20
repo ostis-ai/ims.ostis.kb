@@ -31,7 +31,10 @@ lib_component_agent_of_forming_set_theoretic_ontology
 
 sc_node_not_relation -> action_of_forming_set_theoretic_ontology;;
 
-action_of_forming_set_theoretic_ontology => nrel_main_idtf:
+action_of_forming_set_theoretic_ontology
+<= nrel_inclusion:
+    information_action;
+ => nrel_main_idtf:
 	[действие. построить теоретико-множественную онтологию для заданной предметной области]
 	(*<- lang_ru;;*);;
 

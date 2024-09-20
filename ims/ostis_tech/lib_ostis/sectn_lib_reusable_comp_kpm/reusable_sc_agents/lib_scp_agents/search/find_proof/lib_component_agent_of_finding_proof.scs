@@ -33,6 +33,8 @@ lib_component_agent_of_finding_proof
 
 action_finding_proof
 <- sc_node_not_relation;
+<= nrel_inclusion:
+    information_action;
 => nrel_main_idtf:
  	[действие. найти доказательство]
 	(* <- lang_ru;; *);

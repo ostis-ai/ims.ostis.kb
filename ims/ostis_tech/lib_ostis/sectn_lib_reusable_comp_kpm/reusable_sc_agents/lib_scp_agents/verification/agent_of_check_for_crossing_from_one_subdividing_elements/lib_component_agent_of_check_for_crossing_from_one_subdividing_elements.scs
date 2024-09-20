@@ -28,12 +28,13 @@ lib_component_agent_of_check_for_crossing_from_one_subdividing_elements
 		*);;
 	*);;
 
-
-sc_node_not_relation -> action_of_check_for_crossing_from_one_subdividing_elements;;
-
-action_of_check_for_crossing_from_one_subdividing_elements => nrel_main_idtf:
+action_of_check_for_crossing_from_one_subdividing_elements
+<- sc_node_not_relation;
+<= nrel_inclusion:
+    information_action;
+=> nrel_main_idtf:
 	[действие. проверить наличие непустого пересечения у элементов одного разбиения в рамках заданной структуры]
-		(*<- lang_ru;;*);;
-action_of_check_for_crossing_from_one_subdividing_elements => nrel_main_idtf:
+		(*<- lang_ru;;*);
+=> nrel_main_idtf:
 	[action. check for crossing from one partition elements within the given structure]
 		(* <- lang_en;; *);;

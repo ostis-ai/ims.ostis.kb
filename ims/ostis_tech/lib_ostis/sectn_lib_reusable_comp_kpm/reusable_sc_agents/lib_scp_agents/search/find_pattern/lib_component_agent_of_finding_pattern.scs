@@ -30,3 +30,14 @@ lib_component_agent_of_finding_pattern
    			*);;
 		*);;
 	*);;
+
+action_search_structure_which_is_isomorphic_to_given_pattern
+<- sc_node_class;
+<= nrel_inclusion:
+    information_action;
+=> nrel_main_idtf:
+    [действие. найти конструкции для заданного шаблона]
+    (* <- lang_ru;; *);
+=> nrel_main_idtf:
+    [action. find constructions for given pattern]
+    (* <- lang_en;;	*);;

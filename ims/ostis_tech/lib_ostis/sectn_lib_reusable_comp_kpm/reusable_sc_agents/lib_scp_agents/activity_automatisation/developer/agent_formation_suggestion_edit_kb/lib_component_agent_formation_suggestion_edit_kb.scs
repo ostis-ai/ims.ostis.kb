@@ -29,3 +29,13 @@ lib_component_agent_formation_suggestion_edit_kb
    			*);;
 		*);;
 	*);;
+
+action_to_form_a_proposal_for_editing_the_knowledge_base
+<- sc_node_class;
+<= nrel_inclusion:
+    information_action;
+=> nrel_main_idtf:
+    [действие. сформировать предложение по редактированию базы знаний]
+    (* <- lang_ru;; *);
+    [action. form proposal for editing the knowledge base]
+    (* <- lang_en;; *);;

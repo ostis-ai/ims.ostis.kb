@@ -32,6 +32,8 @@ lib_component_agent_of_changing_main_identifier
 
 action_to_change_main_identifier
 <- sc_node_not_relation;
+<= nrel_inclusion:
+    information_action;
 => nrel_main_idtf:
 	[действие. заменить основной идентификатор sc-элемента на указанный файл]
  	(* <- lang_ru;; *);

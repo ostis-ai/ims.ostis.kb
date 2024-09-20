@@ -32,6 +32,8 @@ lib_component_agent_of_assign_user_as_manager
 
 action_assign_user_as_manager
 <- sc_node_not_relation;
+<= nrel_inclusion:
+    information_action;
 => nrel_main_idtf:
 	[действие. назначить пользователя менеджером]
  	(* <- lang_ru;; *);

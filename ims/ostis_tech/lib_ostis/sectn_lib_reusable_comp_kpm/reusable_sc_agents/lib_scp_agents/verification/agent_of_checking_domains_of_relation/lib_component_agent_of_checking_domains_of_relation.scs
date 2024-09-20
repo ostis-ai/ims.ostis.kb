@@ -31,6 +31,9 @@ lib_component_agent_of_checking_domains_of_relation
 	*);;
 
 sc_node_not_relation -> action_of_checking_domains_of_relation;;
+action_of_checking_domains_of_relation
+<= nrel_inclusion:
+    information_action;;
 
 action_of_checking_domains_of_relation => nrel_main_idtf:
 	[действие. проверить указание доменов у отношений в рамках заданной структуры]

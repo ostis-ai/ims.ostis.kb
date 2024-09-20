@@ -30,6 +30,12 @@ lib_component_agent_formation_proposal_executor_of_project_task
 		*);;
 	*);;
 
-
-
-
+action_to_consider_offered_artist_of_project_task
+<- sc_node_class;
+<= nrel_inclusion:
+    information_action;
+=> nrel_main_idtf:
+    [действие. сформировать предложение исполнителя проектного задания]
+    (* <- lang_ru;; *);
+    [action. form proposal executor of project task]
+    (* <- lang_en;; *);;

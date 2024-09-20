@@ -32,6 +32,8 @@ lib_component_agent_of_checking_the_main_idtf_for_all_foreign_lang
 
 action_check_the_main_idtf_for_all_foreign_lang 
 <- sc_node_not_relation;
+<= nrel_inclusion:
+    information_action;
 => nrel_main_idtf:
 	[действие. проверить наличие основных идентификаторов sc-элементов в рамках заданной структуры для всех внешних языков]
 	(* <- lang_ru;; *);
