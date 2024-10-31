@@ -1031,8 +1031,8 @@ nrel_strict_disjunction <- sc_node_non_role_relation;
 
 negation <- sc_node_non_role_relation; 
 => nrel_main_idtf:
-	[отрицание] (* <- lang_ru;; *);
-	[negation] (* <- lang_en;; *);
+	[отрицание*] (* <- lang_ru;; *);
+	[negation*] (* <- lang_en;; *);
 
 <- logical_operation;
 
