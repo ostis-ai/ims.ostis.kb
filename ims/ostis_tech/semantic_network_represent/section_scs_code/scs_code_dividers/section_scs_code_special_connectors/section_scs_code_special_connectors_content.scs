@@ -1,6 +1,6 @@
 section_scs_code_special_connectors =  [*
 special_scs_connector
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf: 
 	[специальный sc.s-коннектор]
 	(* <- lang_ru;; *);
@@ -41,7 +41,7 @@ special_scs_connector
 	*);;
 
 const_scs_divider_inclusion
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[константный sc.s-коннектор включение]
 	(* <- lang_ru;; *);
@@ -70,7 +70,7 @@ const_scs_divider_inclusion
 	"file://img/const_inclusion_scs_editor2.png" (* => nrel_format: format_png;; *);;
 
 var_scs_divider_inclusion
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[переменный sc.s-коннектор включение]
 	(* <- lang_ru;; *);
@@ -105,7 +105,7 @@ var_scs_divider_inclusion
 	"file://img/var_inclusion_scs_editor2.png" (* => nrel_format: format_png;; *);;
 
 const_scs_divider_non_inclusion
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[константный sc.s-коннектор невключение]
 	(* <- lang_ru;; *);
@@ -134,7 +134,7 @@ const_scs_divider_non_inclusion
 	"file://img/const_non_inclusion_scs_editor2.png" (* => nrel_format: format_png;; *);;
 
 var_scs_divider_non_inclusion
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[переменный sc.s-коннектор невключение]
 	(* <- lang_ru;; *);
@@ -169,7 +169,7 @@ var_scs_divider_non_inclusion
 	"file://img/var_non_inclusion_scs_editor2.png" (* => nrel_format: format_png;; *);;
 
 const_scs_divider_intersected_pair
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[константный sc.s-коннектор пересекающихся множеств]
 	(* <- lang_ru;; *);
@@ -197,7 +197,7 @@ const_scs_divider_intersected_pair
 	"file://img/const_intersect_scs_editor.png" (* => nrel_format: format_png;; *);;
 
 var_scs_divider_intersected_pair
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[переменный sc.s-коннектор пересекающихся множеств]
 	(* <- lang_ru;; *);
@@ -231,7 +231,7 @@ var_scs_divider_intersected_pair
 	"file://img/var_intersect_scs_editor.png" (* => nrel_format: format_png;; *);;
 
 const_scs_divider_non_intersected_pair
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[константный sc.s-коннектор непересекающихся множеств]
 	(* <- lang_ru;; *);
@@ -259,7 +259,7 @@ const_scs_divider_non_intersected_pair
 	"file://img/const_non_intersect_scs_editor.png" (* => nrel_format: format_png;; *);;
 
 var_scs_divider_non_intersected_pair
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[переменный sc.s-коннектор непересекающихся множеств]
 	(* <- lang_ru;; *);
@@ -293,7 +293,7 @@ var_scs_divider_non_intersected_pair
 	"file://img/var_non_intersect_scs_editor.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_identifier
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[sc.s-коннектор идентификации]
 	(* <- lang_ru;; *);
@@ -336,7 +336,7 @@ scs_divider_identifier
 	"file://img/identifier_scs_editor2.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_semantically_equal_files
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[sc.s-коннектор семантически эквивалентных файлов]
 	(* <- lang_ru;; *);
@@ -378,7 +378,7 @@ scs_divider_semantically_equal_files
 	"file://img/equal_files_scs_editor.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_semantically_non_equal_files
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[sc.s-коннектор семантически неэквивалентных файлов]
 	(* <- lang_ru;; *);
@@ -418,7 +418,7 @@ scs_divider_semantically_non_equal_files
 	"file://html/example_non_equal_files.html" (* => nrel_format: format_html;; *);;
 
 scs_divider_translation
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[sc.s-коннектор трансляции]
 	(* <- lang_ru;; *);
@@ -461,7 +461,7 @@ scs_divider_translation
 	"file://img/translation_scs_editor2.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_semantic_inclusion
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[sc.s-коннектор семантического включения]
 	(* <- lang_ru;; *);
@@ -504,7 +504,7 @@ scs_divider_semantic_inclusion
 	"file://img/semantic_inclusion_scs_editor2.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_equality
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[sc.s-коннектор равенства]
 	(* <- lang_ru;; *);
@@ -531,7 +531,7 @@ scs_divider_equality
 	"file://img/equality_scs_editor.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_non_equality
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[sc.s-коннектор неравенства]
 	(* <- lang_ru;; *);

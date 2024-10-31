@@ -28,7 +28,7 @@ lib_component_agent_of_finding_all_unreviewed_proposals_of_author
 	*);;
 
 action_of_finding_all_unreviewed_proposals_of_author
-<- sc_node_not_relation;
+<- sc_node_class;
 <= nrel_inclusion:
     information_action;
 => nrel_main_idtf:

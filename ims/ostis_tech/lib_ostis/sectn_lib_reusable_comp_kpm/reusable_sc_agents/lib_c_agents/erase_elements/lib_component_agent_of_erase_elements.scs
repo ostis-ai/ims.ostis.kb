@@ -22,7 +22,7 @@ lib_component_agent_of_erase_elements
 	*);;
 
 action_erase_elements
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
  	[действие. удалить sc-элементы]
 	(* <- lang_ru;;	*);

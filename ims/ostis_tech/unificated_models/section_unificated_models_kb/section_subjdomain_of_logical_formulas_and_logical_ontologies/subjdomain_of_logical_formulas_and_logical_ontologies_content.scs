@@ -4,7 +4,7 @@ subject_domain_of_logical_formulas_and_logical_ontologies
 	[Предметная область логических формул и логических онтологий] (* <- lang_ru;; *);
 	[Subject domain of logical formulas and logical ontologies] (* <- lang_en;; *);
 <- subject_domain;
-<- sc_node_struct;
+<- sc_node_structure;
 <- structure;
 -> rrel_maximum_studied_object_class:
 		statement;
@@ -47,7 +47,7 @@ subject_domain_of_logical_formulas_and_logical_ontologies
 	nrel_existence;
 	rrel_bind_variables;;
 
-formal_theory <- sc_node_not_relation;
+formal_theory <- sc_node_class;
 => nrel_main_idtf:
 	[формальная теория] (* <- lang_ru;; *);
 	[formal_theory] (* <- lang_en;; *);
@@ -181,7 +181,7 @@ rrel_theorem <- sc_node_role_relation;
 		*);;
 	*);;
 
-observation <- sc_node_not_relation;
+observation <- sc_node_class;
 => nrel_main_idtf:
 	[высказывание] (* <- lang_ru;; *);
 	[observation] (* <- lang_en;; *);
@@ -216,7 +216,7 @@ observation <- sc_node_not_relation;
 		*);;
 	*);;
 
-atomic_observation <- sc_node_not_relation;
+atomic_observation <- sc_node_class;
 => nrel_main_idtf:
 	[атомарное высказывание] (* <- lang_ru;; *);
 	[atomic observation] (* <- lang_en;; *);
@@ -237,7 +237,7 @@ atomic_observation <- sc_node_not_relation;
 		*);;
 	*);;
 
-non_atomic_observation <- sc_node_not_relation;
+non_atomic_observation <- sc_node_class;
 => nrel_main_idtf:
 	[неатомарное высказывание] (* <- lang_ru;; *);
 	[non atomic statement] (* <- lang_en;; *);
@@ -258,7 +258,7 @@ non_atomic_observation <- sc_node_not_relation;
 		*);;
 	*);;
 
-factual_observation <- sc_node_not_relation;
+factual_observation <- sc_node_class;
 => nrel_main_idtf:
 	[фактографическое высказывание] (* <- lang_ru;; *);
 	[factual observation] (* <- lang_en;; *);
@@ -279,7 +279,7 @@ factual_observation <- sc_node_not_relation;
 		*);;
 	*);;
 
-logical_formula <- sc_node_not_relation;
+logical_formula <- sc_node_class;
 => nrel_main_idtf:
 	[логическая формула] (* <- lang_ru;; *);
 	[logical formula] (* <- lang_en;; *);
@@ -312,7 +312,7 @@ logical_formula <- sc_node_not_relation;
 		*);;
 	*);;
 
-atomic_logical_formula <- sc_node_not_relation;
+atomic_logical_formula <- sc_node_class;
 => nrel_main_idtf:
 	[атомарная логическая формула] (* <- lang_ru;; *);
 	[atomic logical formula] (* <- lang_en;; *);
@@ -337,7 +337,7 @@ atomic_logical_formula <- sc_node_not_relation;
 		*);;
 	*);;
 
-non_atomic_logical_formula <- sc_node_not_relation;
+non_atomic_logical_formula <- sc_node_class;
 => nrel_main_idtf:
 	[неатомарная логическая формула] (* <- lang_ru;; *);
 	[non atomic logical formula] (* <- lang_en;; *);
@@ -373,7 +373,7 @@ non_atomic_logical_formula <- sc_node_not_relation;
 		*);;
 	*);;
 
-nrel_subformula <- sc_node_norole_relation;
+nrel_subformula <- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[подформула*] (* <- lang_ru;; *);
 	[subformula*] (* <- lang_en;; *);
@@ -410,7 +410,7 @@ nrel_subformula <- sc_node_norole_relation;
 		*);;
 	*);;
 
-statement <- sc_node_not_relation;
+statement <- sc_node_class;
 => nrel_main_idtf:
 	[утверждение] (* <- lang_ru;; *);
 	[statement] (* <- lang_en;; *);
@@ -453,7 +453,7 @@ statement <- sc_node_not_relation;
 		*);;
 	*);;
 
-definition <- sc_node_not_relation;
+definition <- sc_node_class;
 => nrel_main_idtf:
 	[определение] (* <- lang_ru;; *);
 	[definition] (* <- lang_en;; *);
@@ -495,7 +495,7 @@ definition <- sc_node_not_relation;
 		*);;
 	*);;
 
-generally_valid_logical_formula <- sc_node_not_relation;
+generally_valid_logical_formula <- sc_node_class;
 => nrel_main_idtf:
 	[общезначимая логическая формула] (* <- lang_ru;; *);
 	[general valid logical formula] (* <- lang_en;; *);
@@ -520,7 +520,7 @@ generally_valid_logical_formula <- sc_node_not_relation;
 		*);;
 	*);;
 
-contradictory_logical_formula <- sc_node_not_relation;
+contradictory_logical_formula <- sc_node_class;
 => nrel_main_idtf:
 	[противоречивая логическая формула] (* <- lang_ru;; *);
 	[contradictory logical formula] (*	<- lang_en;; *);
@@ -545,7 +545,7 @@ contradictory_logical_formula <- sc_node_not_relation;
 		*);;
 	*);;
 
-neutral_logical_formula <- sc_node_not_relation;
+neutral_logical_formula <- sc_node_class;
 => nrel_main_idtf:
 	[нейтральная логическая формула] (* <- lang_ru;; *);
 	[neutral logical formula] (* <- lang_en;; *);
@@ -568,7 +568,7 @@ neutral_logical_formula <- sc_node_not_relation;
 		*);;
 	*);;
 
-workable_logical_formula <- sc_node_not_relation;
+workable_logical_formula <- sc_node_class;
 => nrel_main_idtf:
 	[выполнимая логическая формула] (* <- lang_ru;; *);
 	[workable logical formula] (* <- lang_en;; *);
@@ -589,7 +589,7 @@ workable_logical_formula <- sc_node_not_relation;
 		*);;
 	*);;
 
-impossible_logical_formula <- sc_node_not_relation;
+impossible_logical_formula <- sc_node_class;
 => nrel_main_idtf:
 	[невыполнимая логическая формула] (* <- lang_ru;; *);
 	[impossible logical formula] (* <- lang_en;; *);
@@ -610,7 +610,7 @@ impossible_logical_formula <- sc_node_not_relation;
 		*);;
 	*);;
 
-tautology <- sc_node_not_relation;
+tautology <- sc_node_class;
 => nrel_main_idtf:
 	[тавтология] (* <- lang_ru;; *);
 	[tautology] (* <- lang_en;; *);
@@ -634,7 +634,7 @@ tautology <- sc_node_not_relation;
 		*);;
 	*);;
 
-logical_operation <- sc_node_not_relation;
+logical_operation <- sc_node_class;
 => nrel_main_idtf:
 	[логическая операция] (* <- lang_ru;; *);
 	[logical operation] (* <- lang_en;; *);
@@ -663,7 +663,7 @@ logical_operation <- sc_node_not_relation;
 		*);;
 	*);;
 
-nrel_implication <- sc_node_norole_relation;
+nrel_implication <- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[импликация*] (* <- lang_ru;; *);
 	[implication*] (* <- lang_en;; *);
@@ -823,7 +823,7 @@ rrel_then <- sc_node_role_relation;
 		*);;
 	*);;
 
-nrel_equivalence <- sc_node_norole_relation;
+nrel_equivalence <- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[эквиваленция*] (* <- lang_ru;; *);
 	[equivalence*] (* <- lang_en;; *);
@@ -871,7 +871,7 @@ nrel_equivalence <- sc_node_norole_relation;
 		*);;
 	*);;
 
-nrel_conjunction <- sc_node_norole_relation;
+nrel_conjunction <- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[конъюнкция*]	(* <- lang_ru;; *);
 	[conjunction*] (* <- lang_en;; *);
@@ -923,7 +923,7 @@ nrel_conjunction <- sc_node_norole_relation;
 		*);;
 	*);;
 
-nrel_disjunction <- sc_node_norole_relation;	
+nrel_disjunction <- sc_node_non_role_relation;	
 => nrel_main_idtf:
 	[дизъюнкция*] (* <- lang_ru;; *);
 	[disjunction*] (* <- lang_en;; *);
@@ -976,7 +976,7 @@ nrel_disjunction <- sc_node_norole_relation;
 		*);;
 	*);;
 
-nrel_strict_disjunction <- sc_node_norole_relation;
+nrel_strict_disjunction <- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[строгая дизъюнкция*] (* <- lang_ru;; *);
 	[strict disjunction*] (* <- lang_en;; *);
@@ -1029,7 +1029,7 @@ nrel_strict_disjunction <- sc_node_norole_relation;
 		*);;
 	*);;
 
-negation <- sc_node_norole_relation; 
+negation <- sc_node_non_role_relation; 
 => nrel_main_idtf:
 	[отрицание] (* <- lang_ru;; *);
 	[negation] (* <- lang_en;; *);
@@ -1072,7 +1072,7 @@ negation <- sc_node_norole_relation;
 		*);;
 	*);;
 
-quantifier <- sc_node_not_relation;
+quantifier <- sc_node_class;
 => nrel_main_idtf:
 	[квантор] (* <- lang_ru;; *);
 	[quantifier] (* <- lang_en;; *);
@@ -1095,7 +1095,7 @@ quantifier <- sc_node_not_relation;
 		*);;
 	*);;
 
-nrel_generality <- sc_node_norole_relation;
+nrel_generality <- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[всеобщность*] (* <- lang_ru;; *);
 	[generality*] (* <- lang_en;; *);
@@ -1147,7 +1147,7 @@ nrel_generality <- sc_node_norole_relation;
 		*);;
 	*);;
 
-existence_formula <- sc_node_norole_relation;
+existence_formula <- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[формула существования*] (* <- lang_ru;; *);
 	[existence formula*] (* <- lang_en;; *);
@@ -1159,7 +1159,7 @@ existence_formula <- sc_node_norole_relation;
 	atomic_logical_formula
 	};;
 
-existence_fold <- sc_node_norole_relation;
+existence_fold <- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[кратность существования] (* <- lang_ru;; *);
 	[existence fold] (* <- lang_en;; *);
@@ -1186,7 +1186,7 @@ existence_fold <- sc_node_norole_relation;
 
 
 
-unique_existence <- sc_node_norole_relation;
+unique_existence <- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[единственное существование*] (* <- lang_ru;; *);
 	[unique existence*] (* <- lang_en;; *);
@@ -1195,7 +1195,7 @@ unique_existence <- sc_node_norole_relation;
 	[однократное существование*] (* <- lang_ru;; *);
 	[формула существования и единственности*] (* <- lang_ru;; *);;
 
-nrel_existence <- sc_node_norole_relation;
+nrel_existence <- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[существование*] (* <- lang_ru;; *);
 	[existence*] (* <- lang_en;; *);
@@ -1247,7 +1247,7 @@ nrel_existence <- sc_node_norole_relation;
 		*);;
 	*);;
 
-number_values_of_variable <- sc_node_not_relation;
+number_values_of_variable <- sc_node_class;
 => nrel_main_idtf:
 	[число значений переменной] (* <- lang_ru;; *);
 	[number values of variable] (* <- lang_en;; *);
@@ -1270,7 +1270,7 @@ number_values_of_variable <- sc_node_not_relation;
 	*);;
 
 
-logical_formula_and_uniqueness <- sc_node_not_relation;
+logical_formula_and_uniqueness <- sc_node_class;
 => nrel_main_idtf:
 	[логическая формула и единственность] (* <- lang_ru;; *);
 	[logical formula and uniqueness] (* <- lang_en;; *);
@@ -1344,7 +1344,7 @@ rrel_bind_variables <- sc_node_role_relation;
 		*);;
 	*);;
 
-open_logical_formula <- sc_node_not_relation;
+open_logical_formula <- sc_node_class;
 => nrel_main_idtf:
 	[открытая логическая формула] (* <- lang_ru;; *);
 	[open logical formula] (* <- lang_en;; *);
@@ -1365,7 +1365,7 @@ open_logical_formula <- sc_node_not_relation;
 		*);;
 	*);;
 
-closed_logical_formula <- sc_node_not_relation;
+closed_logical_formula <- sc_node_class;
 => nrel_main_idtf:
 	[замкнутая логическая формула] (* <- lang_ru;; *);
 	[closed logical formula] (* <- lang_en;; *);

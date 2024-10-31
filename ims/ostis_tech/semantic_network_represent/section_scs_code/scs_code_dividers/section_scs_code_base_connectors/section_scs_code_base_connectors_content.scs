@@ -1,6 +1,6 @@
 section_scs_code_base_connectors =  [*
 scs_divider_connector
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf: 
 	[sc.s-коннектор]
 	(* <- lang_ru;; *);
@@ -21,7 +21,7 @@ scs_divider_connector
 };;
 
 basic_scs_connector
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[базовый sc.s-коннектор]
 	(* <- lang_ru;; *);
@@ -55,7 +55,7 @@ basic_scs_connector
 	*);;
 
 scs_divider_edge
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf: 
 	[sc.s-ребро]
 	(* <- lang_ru;; *);
@@ -69,7 +69,7 @@ scs_divider_edge
 	"file://img/edge_scg.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_common_type_arc
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf: 
 	[sc.s-дуга общего вида]
 	(* <- lang_ru;; *);
@@ -86,7 +86,7 @@ scs_divider_common_type_arc
 	"file://img/common_type_arc_scg2.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_accessory_arc
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf: 
 	[sc.s-дуга принадлежности]
 	(* <- lang_ru;; *);
@@ -103,7 +103,7 @@ scs_divider_accessory_arc
 	"file://img/accessory_arc_scg2.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_const_pos_stat_accessory_arc
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf: 
 	[константная позитивная стационарная sc.s-дуга принадлежности]
 	(* <- lang_ru;; *);

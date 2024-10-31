@@ -8,14 +8,14 @@ agent_of_finding_initiated_signs_of_actions_for_specific_class_of_actions
 
 agent_of_finding_initiated_signs_of_actions_for_specific_class_of_actions = [*
 .._process1
-_<- scp_process;
+<-_ scp_process;
 
 _-> rrel_1:: rrel_in:: _event;
 _-> rrel_2:: rrel_in:: _input_arc;
-_<= nrel_decomposition_of_action:: .._actions (*
+<=_ nrel_decomposition_of_action:: .._actions (*
 
 	_-> rrel_1:: .._agent_of_finding_initiated_signs_of_actions_for_specific_class_of_actions_operator1A (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _temp;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: _input_arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _action;;
@@ -24,7 +24,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_finding_initiated_signs_of_actions_for_specific_class_of_actions_operator1B (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_of_finding_initiated_signs_of_actions_for_specific_class_of_actions;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
@@ -34,7 +34,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_finding_initiated_signs_of_actions_for_specific_class_of_actions_operator1C (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _class_of_action;;
@@ -44,12 +44,12 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_finding_initiated_signs_of_actions_for_specific_class_of_actions_operator_return (*
-		_<- return;;
+		<-_ return;;
 
 	*);;
 
 	_-> .._agent_of_finding_initiated_signs_of_actions_for_specific_class_of_actions_operator1D (*
-		_<- ifType;;
+		<-_ ifType;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _class_of_action;;
 
 		_=> nrel_then:: .._agent_of_finding_initiated_signs_of_actions_for_specific_class_of_actions_operator1E;;
@@ -57,14 +57,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_finding_initiated_signs_of_actions_for_specific_class_of_actions_operator1E (*
-		_<- genEl;;
+		<-_ genEl;;
 		_-> rrel_1:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: _result_agent_of_finding_initiated_signs_of_actions_for_specific_class_of_actions;;
 
 		_=> nrel_goto:: .._agent_of_finding_initiated_signs_of_actions_for_specific_class_of_actions_operator1F;;
 	*);;
 
 	_-> .._agent_of_finding_initiated_signs_of_actions_for_specific_class_of_actions_call_proc_of_adding_validating_message (*
-		_<- call;;
+		<-_ call;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_adding_validating_message;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._agent_of_finding_initiated_signs_of_actions_for_specific_class_of_actions_param0 (*
 			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
@@ -76,21 +76,21 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_finding_initiated_signs_of_actions_for_specific_class_of_actions_call_proc_of_adding_validating_message_waitreturn_proc_of_adding_validating_message (*
-		_<- waitReturn;;
+		<-_ waitReturn;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _descr1;;
 
 		_=> nrel_goto:: .._agent_of_finding_initiated_signs_of_actions_for_specific_class_of_actions_operator_return;;
 	*);;
 
 	_-> .._agent_of_finding_initiated_signs_of_actions_for_specific_class_of_actions_operator1F (*
-		_<- genEl;;
+		<-_ genEl;;
 		_-> rrel_1:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: _set_of_initiated_actions;;
 
 		_=> nrel_goto:: .._agent_of_finding_initiated_signs_of_actions_for_specific_class_of_actions_operator2A;;
 	*);;
 
 	_-> .._agent_of_finding_initiated_signs_of_actions_for_specific_class_of_actions_operator2A (*
-		_<- searchSetStr3;;
+		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _class_of_action;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _sign_of_action;;
@@ -101,7 +101,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_finding_initiated_signs_of_actions_for_specific_class_of_actions_operator2B (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _set_of_signs_of_action;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _some_sign;;
@@ -111,21 +111,21 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_finding_initiated_signs_of_actions_for_specific_class_of_actions_operator2C (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _arc1;;
 
 		_=> nrel_goto:: .._agent_of_finding_initiated_signs_of_actions_for_specific_class_of_actions_operator2D;;
 	*);;
 
 	_-> .._agent_of_finding_initiated_signs_of_actions_for_specific_class_of_actions_operator2F (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _set_of_signs_of_action;;
 
 		_=> nrel_goto:: .._agent_of_finding_initiated_signs_of_actions_for_specific_class_of_actions_operator3A;;
 	*);;
 
 	_-> .._agent_of_finding_initiated_signs_of_actions_for_specific_class_of_actions_operator3A (*
-		_<- call;;
+		<-_ call;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_displaying_initiated_actions;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._agent_of_finding_initiated_signs_of_actions_for_specific_class_of_actions_param1 (*
 			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _set_of_initiated_actions;;
@@ -137,14 +137,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_finding_initiated_signs_of_actions_for_specific_class_of_actions_operator3B (*
-		_<- waitReturn;;
+		<-_ waitReturn;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _descr1;;
 
 		_=> nrel_goto:: .._agent_of_finding_initiated_signs_of_actions_for_specific_class_of_actions_operator4A;;
 	*);;
 
 	_-> .._agent_of_finding_initiated_signs_of_actions_for_specific_class_of_actions_operator4A (*
-		_<- genElStr5;;
+		<-_ genElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
 		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _result_agent_of_finding_initiated_signs_of_actions_for_specific_class_of_actions;;
@@ -155,7 +155,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_finding_initiated_signs_of_actions_for_specific_class_of_actions_operator2D (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_initiated;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _some_sign;;
@@ -165,7 +165,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_finding_initiated_signs_of_actions_for_specific_class_of_actions_operator2E (*
-		_<- genElStr3;;
+		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _set_of_initiated_actions;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _some_sign;;

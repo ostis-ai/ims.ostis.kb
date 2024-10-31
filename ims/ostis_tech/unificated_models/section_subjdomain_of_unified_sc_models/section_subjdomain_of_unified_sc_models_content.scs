@@ -11,7 +11,7 @@ subjdomain_of_unified_sc_models
 	[Subject domain of sc-model of computer systems]
 	(* <- lang_en;; *);
 <- subject_domain;
-<- sc_node_struct;
+<- sc_node_structure;
 <- structure;
 -> rrel_maximum_studied_object_class: sc_model_computer_systems;
 -> rrel_not_maximum_studied_object_class:
@@ -23,7 +23,7 @@ subjdomain_of_unified_sc_models
 	nrel_sc_model_decomposition;;
 
 sc_model_computer_systems
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[sc-модель компьютерной системы]
 	(* <- lang_ru;; *);
@@ -63,7 +63,7 @@ sc_memory
 	*);;
 
 sc_model_computer_system_interface
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[sc-модель интерфейса компьютерной системы]
 	(* <- lang_ru;; *);
@@ -78,7 +78,7 @@ sc_model => nrel_strict_inclusion:
 	sc_model_computer_system_interface;;
 
 sc_model
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[sc-модель]
 	(* <- lang_ru;; *);
@@ -101,7 +101,7 @@ sc_model
 	*);;
 
 nrel_sc_model_decomposition
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[декомпозиция sc-модели*]
 	(* <- lang_ru;; *);

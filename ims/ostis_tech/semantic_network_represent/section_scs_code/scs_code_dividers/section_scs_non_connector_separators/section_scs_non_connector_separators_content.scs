@@ -1,6 +1,6 @@
 section_scs_non_connector_separators =  [*
 scs_divider
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[sc.s-разделитель]
 	(* <- lang_ru;; *);
@@ -18,7 +18,7 @@ scs_divider
 };;
 
 scs_divider_incidence
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[sc.s-разделитель инцидентность]
 	(* <- lang_ru;; *);
@@ -47,7 +47,7 @@ scs_divider_incidence
 	"file://img/incidence_any_editor.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_modifier
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[модификатор sc.s-коннектора]
 	(* <- lang_ru;; *);
@@ -60,7 +60,7 @@ scs_divider_modifier
 };;
 
 scs_divider_simple_colon
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[sc.s-разделитель простое двоеточие]
 	(* <- lang_ru;; *);
@@ -103,7 +103,7 @@ scs_divider_simple_colon
 	"file://img/simple_colon_any_editor.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_double_colon
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[sc.s-разделитель двойное двоеточие]
 	(* <- lang_ru;; *);
@@ -144,7 +144,7 @@ scs_divider_double_colon
 	"file://img/double_colon_any_editor.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_metamodifier
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[метамодификатор sc.s-коннектора]
 	(* <- lang_ru;; *);
@@ -157,7 +157,7 @@ scs_divider_metamodifier
 };;
 
 scs_divider_simple_plus
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[sc.s-разделитель простой плюс]
 	(* <- lang_ru;; *);
@@ -200,7 +200,7 @@ scs_divider_simple_plus
 	"file://img/simple_plus_any_editor.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_double_plus
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[sc.s-разделитель двойной плюс]
 	(* <- lang_ru;; *);
@@ -241,7 +241,7 @@ scs_divider_double_plus
 	"file://img/double_plus_any_editor.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_simple_semicolon
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[sc.s-разделитель простая точка с запятой]
 	(* <- lang_ru;; *);
@@ -285,7 +285,7 @@ scs_divider_simple_semicolon
 	"file://img/simple_semicolon_any_editor.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_double_semicolon
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[sc.s-разделитель двойная точка с запятой]
 	(* <- lang_ru;; *);
@@ -312,7 +312,7 @@ scs_divider_double_semicolon
 	"file://img/double_semicolon_any_editor.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_subsentence
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[sc.s-ограничитель встроенных предложений]
 	(* <- lang_ru;; *);

@@ -12,7 +12,7 @@ kpm_dev_base_program_language
 		};;
 
 	abstract_sc_agent_verification_scp_programs
-		<- sc_node_not_relation;
+		<- sc_node_class;
 		=> nrel_main_idtf:
 			[Абстрактный sc-агент верификации scp-программ]
 			(* <- lang_ru;; *);
@@ -34,7 +34,7 @@ kpm_dev_base_program_language
 			*);;
 
 	abstract_sc_agent_debug_scp_programs
-		<- sc_node_not_relation;
+		<- sc_node_class;
 		=> nrel_main_idtf:
 		[Абстрактный sc-агент отладки scp-программ]
 		(* <- lang_ru;; *);
@@ -57,7 +57,7 @@ kpm_dev_base_program_language
 		};;
 
 abstract_sc_agent_run_scp_program_for_given_rrel_in_set
-		<- sc_node_not_relation;
+		<- sc_node_class;
 		=> nrel_main_idtf:
 		[Абстрактный sc-агент запуска заданной scp-программы для заданного множества входных данных]
 		(* <- lang_ru;; *);
@@ -65,7 +65,7 @@ abstract_sc_agent_run_scp_program_for_given_rrel_in_set
 		(* <- lang_en;; *);;
 
 abstract_sc_agent_run_scp_program_for_given_rrel_in_set_single_step
-		<- sc_node_not_relation;
+		<- sc_node_class;
 		=> nrel_main_idtf:
 		[Абстрактный sc-агент запуска заданной scp-программы для заданного множества входных данных в режиме пошагового выполнения]
 		(* <- lang_ru;; *);
@@ -73,7 +73,7 @@ abstract_sc_agent_run_scp_program_for_given_rrel_in_set_single_step
 		(* <- lang_en;; *);;
 
 abstract_sc_agent_of_search_all_operators_within_scp_program
-		<- sc_node_not_relation;
+		<- sc_node_class;
 		=> nrel_main_idtf:
 		[Абстрактный sc-агент поиска всех scp-операторов в рамках scp-программы]
 		(* <- lang_ru;; *);
@@ -81,7 +81,7 @@ abstract_sc_agent_of_search_all_operators_within_scp_program
 		(* <- lang_en;; *);;
 
 abstract_sc_agent_of_search_all_breakpoints_within_scp_process
-		<- sc_node_not_relation;
+		<- sc_node_class;
 		=> nrel_main_idtf:
 		[Абстрактный sc-агент поиска всех точек останова в рамках scp-процесса]
 		(* <- lang_ru;; *);
@@ -89,7 +89,7 @@ abstract_sc_agent_of_search_all_breakpoints_within_scp_process
 		(* <- lang_en;; *);;
 
 abstract_sc_agent_add_breakpoint_in_scp_program
-		<- sc_node_not_relation;
+		<- sc_node_class;
 		=> nrel_main_idtf:
 		[Абстрактный sc-агент добавления точки останова в scp-программу]
 		(* <- lang_ru;; *);
@@ -97,7 +97,7 @@ abstract_sc_agent_add_breakpoint_in_scp_program
 		(* <- lang_en;; *);;
 
 abstract_sc_agent_remove_breakpoint_from_scp_program
-		<- sc_node_not_relation;
+		<- sc_node_class;
 		=> nrel_main_idtf:
 		[Абстрактный sc-агент удаления точки останова из scp-программы]
 		(* <- lang_ru;; *);
@@ -105,7 +105,7 @@ abstract_sc_agent_remove_breakpoint_from_scp_program
 		(* <- lang_en;; *);;
 
 abstract_sc_agent_add_breakpoint_in_scp_process
-		<- sc_node_not_relation;
+		<- sc_node_class;
 		=> nrel_main_idtf:
 		[Абстрактный sc-агент добавления точки останова в scp-процесс]
 		(* <- lang_ru;; *);
@@ -113,7 +113,7 @@ abstract_sc_agent_add_breakpoint_in_scp_process
 		(* <- lang_en;; *);;
 
 abstract_sc_agent_remove_breakpoint_from_scp_process
-		<- sc_node_not_relation;
+		<- sc_node_class;
 		=> nrel_main_idtf:
 		[Абстрактный sc-агент удаления точки останова из scp-процесса]
 		(* <- lang_ru;; *);
@@ -121,7 +121,7 @@ abstract_sc_agent_remove_breakpoint_from_scp_process
 		(* <- lang_en;; *);;
 
 abstract_sc_agent_step_in
-		<- sc_node_not_relation;
+		<- sc_node_class;
 		=> nrel_main_idtf:
 		[Абстрактный sc-агент продолжения выполнения scp-процесса на один шаг]
 		(* <- lang_ru;; *);
@@ -129,7 +129,7 @@ abstract_sc_agent_step_in
 		(* <- lang_en;; *);;
 
 abstract_sc_agent_step_over
-		<- sc_node_not_relation;
+		<- sc_node_class;
 		=> nrel_main_idtf:
 		[Абстрактный sc-агент продолжения выполнения scp-процесса до точки останова или завершения]
 		(* <- lang_ru;; *);
@@ -137,7 +137,7 @@ abstract_sc_agent_step_over
 		(* <- lang_en;; *);;
 
 abstract_sc_agent_view_information_about_scp_process
-		<- sc_node_not_relation;
+		<- sc_node_class;
 		=> nrel_main_idtf:
 		[Абстрактный sc-агент просмотра информации об scp-процессе]
 		(* <- lang_ru;; *);
@@ -145,7 +145,7 @@ abstract_sc_agent_view_information_about_scp_process
 		(* <- lang_en;; *);;
 
 abstract_sc_agent_view_information_about_scp_operator
-		<- sc_node_not_relation;
+		<- sc_node_class;
 		=> nrel_main_idtf:
 		[Абстрактный sc-агент просмотра информации об scp-операторе]
 		(* <- lang_ru;; *);

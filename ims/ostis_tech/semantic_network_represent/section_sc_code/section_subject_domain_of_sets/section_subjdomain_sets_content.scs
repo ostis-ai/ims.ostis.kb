@@ -13,7 +13,7 @@ subject_domain_of_sets
 	[Предметная область, объектами исследования которой являются множества] 
 	(* <- lang_ru;; *);
 <- subject_domain;
-<- sc_node_struct;
+<- sc_node_structure;
 <- structure;
 => nrel_primary_elements_class_private_subject_domain: section_subject_domain_ligaments_relations;
 -> rrel_not_maximum_studied_object_class:
@@ -69,7 +69,7 @@ subject_domain_of_sets
 	nrel_equality_of_sets;
 -> rrel_maximum_studied_object_class: set;;
 
-sc_node_not_relation -> set;;
+sc_node_class -> set;;
 set
 => nrel_main_idtf:
 	[множество] 
@@ -172,7 +172,7 @@ set
 		*);;
 	*);;
 
-sc_node_norole_relation -> nrel_belonging;;	
+sc_node_non_role_relation -> nrel_belonging;;	
 nrel_belonging
 => nrel_main_idtf:
 	[принадлежность*] 
@@ -202,7 +202,7 @@ nrel_belonging
 		*);;
 	*);;
 
-sc_node_not_relation -> finite_set;;	
+sc_node_class -> finite_set;;	
 finite_set
 => nrel_main_idtf:
 	[конечное множество] 
@@ -228,7 +228,7 @@ finite_set
 		*);;
 	*);;	
 
-sc_node_not_relation -> infinite_set;;
+sc_node_class -> infinite_set;;
 infinite_set
 => nrel_main_idtf:
 	[бесконечное множество]
@@ -259,7 +259,7 @@ infinite_set
 		*);;
 	*);;
 
-sc_node_not_relation -> countable_set;;	
+sc_node_class -> countable_set;;	
 countable_set
 => nrel_main_idtf:
 	[счётное множество]
@@ -282,7 +282,7 @@ countable_set
 		*);;
 	*);;
 
-sc_node_not_relation -> uncountable_set;;	
+sc_node_class -> uncountable_set;;	
 uncountable_set
 => nrel_main_idtf:
 	[несчётное множество]
@@ -308,7 +308,7 @@ uncountable_set
 		*);;
 	*);;
 
-sc_node_not_relation -> cantor_set;;
+sc_node_class -> cantor_set;;
 cantor_set
 => nrel_main_idtf:
 	[множество без кратных элементов]
@@ -344,7 +344,7 @@ cantor_set
 		*);;
 	*);;
 
-sc_node_not_relation -> multiset;;
+sc_node_class -> multiset;;
 multiset
 => nrel_main_idtf:
 	[мультимножество]
@@ -372,7 +372,7 @@ multiset
 		*);;
 	*);;
 
-sc_node_not_relation -> multiplicity_of_belonging;;
+sc_node_class -> multiplicity_of_belonging;;
 multiplicity_of_belonging
 => nrel_main_idtf:
 	[кратность принадлежности]
@@ -416,7 +416,7 @@ multiplicity_of_belonging
 		*);;
 	*);;
 
-sc_node_not_relation -> class;;
+sc_node_class -> class;;
 class
 => nrel_main_idtf:
 	[класс]
@@ -447,7 +447,7 @@ class
 		*);;
 	*);;
 
-sc_node_not_relation -> class_of_primary_sc_elements;;
+sc_node_class -> class_of_primary_sc_elements;;
 class_of_primary_sc_elements
 => nrel_main_idtf:
 	[класс первичных sc-элементов]
@@ -470,7 +470,7 @@ class_of_primary_sc_elements
 		*);;
 	*);;
 
-sc_node_not_relation -> class_of_sets;;
+sc_node_class -> class_of_sets;;
 class_of_sets
 => nrel_main_idtf:
 	[класс множеств]
@@ -499,7 +499,7 @@ class_of_sets
 		*);;
 	*);;
 
-sc_node_not_relation -> class_of_structures;;
+sc_node_class -> class_of_structures;;
 class_of_structures
 => nrel_main_idtf:
 	[класс структур]
@@ -522,7 +522,7 @@ class_of_structures
 		*);;
 	*);;
 
-sc_node_not_relation -> class_of_classes;;
+sc_node_class -> class_of_classes;;
 class_of_classes
 => nrel_main_idtf:
 	[класс классов]
@@ -545,7 +545,7 @@ class_of_classes
 		*);;
 	*);;
 
-sc_node_not_relation -> fuzzy_set;;
+sc_node_class -> fuzzy_set;;
 fuzzy_set
 => nrel_main_idtf:
 	[нечёткое множество]
@@ -568,7 +568,7 @@ fuzzy_set
 		*);;
 	*);;
 
-sc_node_not_relation -> crisp_set;;
+sc_node_class -> crisp_set;;
 crisp_set
 => nrel_main_idtf:
 	[чёткое множество]
@@ -591,7 +591,7 @@ crisp_set
 		*);;
 	*);;
 
-sc_node_not_relation -> set_of_primary_essences;;
+sc_node_class -> set_of_primary_essences;;
 set_of_primary_essences
 => nrel_main_idtf:
 	[множество первичных сущностей]
@@ -616,7 +616,7 @@ set_of_primary_essences
 		*);;
 	*);;
 
-sc_node_not_relation -> class_of_primary_essences;;
+sc_node_class -> class_of_primary_essences;;
 class_of_primary_essences
 => nrel_main_idtf:
 	[класс первичных сущностей]
@@ -624,7 +624,7 @@ class_of_primary_essences
 	[class of primary essences]
 	(* <- lang_en;; *);;
 
-sc_node_not_relation -> set_of_sets;;
+sc_node_class -> set_of_sets;;
 set_of_sets
 => nrel_main_idtf:
 	[семейство множеств]
@@ -651,7 +651,7 @@ set_of_sets
 		*);;
 	*);;
 
-sc_node_not_relation -> non_reflexive_set;;
+sc_node_class -> non_reflexive_set;;
 non_reflexive_set
 => nrel_main_idtf:
 	[нерефлексивное множество]
@@ -674,7 +674,7 @@ non_reflexive_set
 		*);;
 	*);;
 
-sc_node_not_relation -> reflexive_set;;
+sc_node_class -> reflexive_set;;
 reflexive_set
 => nrel_main_idtf:
 	[рефлексивное множество]
@@ -697,7 +697,7 @@ reflexive_set
 		*);;
 	*);;
 
-sc_node_not_relation -> set_of_primary_essences_and_sets;;
+sc_node_class -> set_of_primary_essences_and_sets;;
 set_of_primary_essences_and_sets
 => nrel_main_idtf:
 	[множество первичных сущностей и множеств]
@@ -720,7 +720,7 @@ set_of_primary_essences_and_sets
 		*);;
 	*);;
 
-sc_node_not_relation -> formed_set;;
+sc_node_class -> formed_set;;
 formed_set
 => nrel_main_idtf:
 	[сформированное множество]
@@ -743,7 +743,7 @@ formed_set
 		*);;
 	*);;
 
-sc_node_not_relation -> unformed_set;;
+sc_node_class -> unformed_set;;
 unformed_set
 => nrel_main_idtf:
 	[несформированное множество]
@@ -766,7 +766,7 @@ unformed_set
 		*);;
 	*);;
 
-sc_node_not_relation -> empty_set;;
+sc_node_class -> empty_set;;
 empty_set
 => nrel_main_idtf:
 	[пустое множество]
@@ -790,7 +790,7 @@ empty_set
 		*);;
 	*);;
 
-sc_node_not_relation -> singletone;;
+sc_node_class -> singletone;;
 singletone
 => nrel_main_idtf:
 	[синглетон]
@@ -830,7 +830,7 @@ singletone
 		*);;
 	*);;
 
-sc_node_not_relation -> pair_set;;
+sc_node_class -> pair_set;;
 pair_set
 => nrel_main_idtf:
 	[пара]
@@ -873,7 +873,7 @@ pair_set
 		*);;
 	*);;
 
-sc_node_not_relation -> cantor_pair;;
+sc_node_class -> cantor_pair;;
 cantor_pair
 => nrel_main_idtf:
 	[пара разных элементов]
@@ -888,7 +888,7 @@ cantor_pair
 	[канторовское двумощное множество]
 	(* <- lang_ru;; *);;
 
-sc_node_not_relation -> pair_multiset;;
+sc_node_class -> pair_multiset;;
 pair_multiset
 => nrel_main_idtf:
 	[пара-мультимножество]
@@ -903,7 +903,7 @@ pair_multiset
 	[двумощное мультимножество]
 	(* <- lang_ru;; *);;
 
-sc_node_not_relation -> triple_set;;
+sc_node_class -> triple_set;;
 triple_set
 => nrel_main_idtf:
 	[тройка]
@@ -935,7 +935,7 @@ triple_set
 		*);;
 	*);;
 
-sc_node_not_relation -> non_oriented_set;;
+sc_node_class -> non_oriented_set;;
 non_oriented_set
 => nrel_main_idtf:
 	[неориентированное множество]
@@ -943,7 +943,7 @@ non_oriented_set
 	[non-oriented set]
 	(* <- lang_en;; *);;
 
-sc_node_not_relation -> oriented_set;;
+sc_node_class -> oriented_set;;
 oriented_set
 => nrel_main_idtf:
 	[ориентированное множество]
@@ -1000,7 +1000,7 @@ rrel_example
 		*);;
 	*);;
 
-sc_node_norole_relation -> nrel_inclusion;;
+sc_node_non_role_relation -> nrel_inclusion;;
 nrel_inclusion
 => nrel_main_idtf:
 	[включение*]
@@ -1077,7 +1077,7 @@ nrel_inclusion
 		*);;
 	*);;
 
-sc_node_norole_relation -> nrel_strict_inclusion;;
+sc_node_non_role_relation -> nrel_strict_inclusion;;
 nrel_strict_inclusion
 => nrel_main_idtf:
 	[строгое включение*]
@@ -1151,7 +1151,7 @@ nrel_strict_inclusion
 		*);;
 	*);;
 
-sc_node_norole_relation -> nrel_combination;;
+sc_node_non_role_relation -> nrel_combination;;
 nrel_combination
 => nrel_main_idtf:
 	[объединение*]
@@ -1223,7 +1223,7 @@ nrel_combination
 		*);;
 	*);;
 
-sc_node_norole_relation -> nrel_subdividing;;
+sc_node_non_role_relation -> nrel_subdividing;;
 nrel_subdividing
 => nrel_main_idtf:
 	[разбиение*]
@@ -1301,7 +1301,7 @@ nrel_subdividing
 		*);;
 	*);;
 
-sc_node_norole_relation -> nrel_intersection;;
+sc_node_non_role_relation -> nrel_intersection;;
 nrel_intersection
 => nrel_main_idtf:
 	[пересечение*]
@@ -1373,7 +1373,7 @@ nrel_intersection
 		*);;
 	*);;
 
-sc_node_norole_relation -> nrel_pair_of_intersecting_sets;;
+sc_node_non_role_relation -> nrel_pair_of_intersecting_sets;;
 nrel_pair_of_intersecting_sets
 => nrel_main_idtf:
 	[пара пересекающихся множеств*]
@@ -1457,7 +1457,7 @@ nrel_pair_of_intersecting_sets
 		*);;
 	*);;
 
-sc_node_norole_relation -> nrel_pairwise_intersecting_sets;;
+sc_node_non_role_relation -> nrel_pairwise_intersecting_sets;;
 nrel_pairwise_intersecting_sets
 => nrel_main_idtf:
 	[попарно пересекающиеся множества*]
@@ -1544,7 +1544,7 @@ nrel_pairwise_intersecting_sets
 		*);;
 	*);;
 
-sc_node_norole_relation -> nrel_intersecting_sets;;
+sc_node_non_role_relation -> nrel_intersecting_sets;;
 nrel_intersecting_sets
 => nrel_main_idtf:
 	[пересекающиеся множества*]
@@ -1603,7 +1603,7 @@ nrel_intersecting_sets
 		*);;
 	*);;
 
-sc_node_norole_relation -> nrel_pair_of_non_intersecting_sets;;
+sc_node_non_role_relation -> nrel_pair_of_non_intersecting_sets;;
 nrel_pair_of_non_intersecting_sets
 => nrel_main_idtf:
 	[пара непересекающихся множеств*]
@@ -1672,7 +1672,7 @@ nrel_pair_of_non_intersecting_sets
 		*);;
 	*);;
 
-sc_node_norole_relation -> nrel_pairwise_non_intersecting_sets;;
+sc_node_non_role_relation -> nrel_pairwise_non_intersecting_sets;;
 nrel_pairwise_non_intersecting_sets
 => nrel_main_idtf:
 	[попарно непересекающиеся множества*]
@@ -1728,7 +1728,7 @@ nrel_pairwise_non_intersecting_sets
 		*);;
 	*);;
 
-sc_node_norole_relation -> nrel_non_intersecting_sets;;
+sc_node_non_role_relation -> nrel_non_intersecting_sets;;
 nrel_non_intersecting_sets
 => nrel_main_idtf:
 	[непересекающиеся множества*]
@@ -1785,7 +1785,7 @@ nrel_non_intersecting_sets
 		*);;
 	*);;
 
-sc_node_norole_relation -> nrel_sets_difference;;
+sc_node_non_role_relation -> nrel_sets_difference;;
 nrel_sets_difference
 => nrel_main_idtf:
 	[разность множеств*]
@@ -1854,7 +1854,7 @@ nrel_sets_difference
 		*);;
 	*);;
 
-sc_node_norole_relation -> nrel_symmetric_sets_difference;;
+sc_node_non_role_relation -> nrel_symmetric_sets_difference;;
 nrel_symmetric_sets_difference
 => nrel_main_idtf:
 	[симметрическая разность множеств*]
@@ -1923,7 +1923,7 @@ nrel_symmetric_sets_difference
 		*);;
 	*);;
 
-sc_node_norole_relation -> nrel_cartesian_product;;
+sc_node_non_role_relation -> nrel_cartesian_product;;
 nrel_cartesian_product
 => nrel_main_idtf:
 	[декартово произведение*]
@@ -1982,7 +1982,7 @@ nrel_cartesian_product
 		*);;
 	*);;
 
-sc_node_not_relation -> cartesian_product;;
+sc_node_class -> cartesian_product;;
 cartesian_product
 => nrel_main_idtf:
 	[декартово произведение]
@@ -1994,7 +1994,7 @@ cartesian_product
 	(* <- lang_ru;; *);
 => nrel_second_domain: nrel_cartesian_product;;
 
-sc_node_norole_relation -> nrel_set_of_subsets;;
+sc_node_non_role_relation -> nrel_set_of_subsets;;
 nrel_set_of_subsets
 => nrel_main_idtf:
 	[семейство подмножеств*]
@@ -2037,7 +2037,7 @@ nrel_set_of_subsets
 		*);;
 	*);;
 
-sc_node_norole_relation -> nrel_boolean;;
+sc_node_non_role_relation -> nrel_boolean;;
 nrel_boolean
 => nrel_main_idtf:
 	[булеан*]
@@ -2082,7 +2082,7 @@ nrel_boolean
 		*);;
 	*);;
 
-sc_node_not_relation -> boolean;;
+sc_node_class -> boolean;;
 boolean
 => nrel_main_idtf:
 	[булеан]
@@ -2094,7 +2094,7 @@ boolean
 	(* <- lang_ru;; *);
 => nrel_second_domain: nrel_boolean;;
 
-sc_node_not_relation -> power_of_set;;
+sc_node_class -> power_of_set;;
 power_of_set
 => nrel_main_idtf:
 	[мощность]
@@ -2150,7 +2150,7 @@ power_of_set
 		*);;
 	*);;
 
-sc_node_norole_relation -> nrel_equality_of_sets;;
+sc_node_non_role_relation -> nrel_equality_of_sets;;
 nrel_equality_of_sets
 => nrel_main_idtf:
 	[равенство множеств*]

@@ -7,7 +7,7 @@ subject_domain_of_abstract_sc_agents
 		(* <- lang_en;; *);
 	<- subject_domain;
 	<- structure;
-	<- sc_node_struct;
+	<- sc_node_structure;
 	=> nrel_primary_elements_class_private_subject_domain: basic_programming_language_scp;
 	=> nrel_primary_elements_class_private_subject_domain: unified_semantic_model_programme_scp_interpretation;
 	-> rrel_maximum_studied_object_class: abstract_sc_agent;
@@ -46,7 +46,7 @@ subject_domain_of_abstract_sc_agents
 		nrel_lock;;
 
 abstract_sc_agent
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[абстрактный sc-агент]
 		(* <- lang_ru;; *);
@@ -96,7 +96,7 @@ abstract_sc_agent
 		};;
 
 abstract_sc_agent_is_not_implemented_on_the_scp_language
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[абстрактный sc-агент, не реализуемый на Языке SCP]
 		(* <- lang_ru;; *);
@@ -129,7 +129,7 @@ abstract_sc_agent_is_not_implemented_on_the_scp_language
 		};;
 	
 abstract_sc_agent_implemented_on_the_scp_language 
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[абстрактный sc-агент, реализуемый на Языке SCP]
 		(* <- lang_ru;; *);
@@ -161,7 +161,7 @@ abstract_sc_agent_implemented_on_the_scp_language
 		};;
 
 abstract_program_sc_agent 
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[абстрактный программный sc-агент]
 		(* <- lang_ru;; *);
@@ -189,7 +189,7 @@ abstract_program_sc_agent
 		};;
 
 non_atomic_abstract_sc_agent 
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[неатомарный абстрактный sc-агент]
 		(* <- lang_ru;; *);
@@ -211,7 +211,7 @@ non_atomic_abstract_sc_agent
 		*);;
 
 atomic_abstract_sc_agent
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[атомарный абстрактный sc-агент]
 		(* <- lang_ru;; *);
@@ -238,7 +238,7 @@ atomic_abstract_sc_agent
 		};;
 
 platform_independent_abstract_sc_agent
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[платформенно-независимый абстрактный sc-агент]
 		(* <- lang_ru;; *);
@@ -260,7 +260,7 @@ platform_independent_abstract_sc_agent
 		*);;
 
 platform_dependent_abstract_sc_agent
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[платформенно-зависимый абстрактный sc-агент]
 		(* <- lang_ru;; *);
@@ -283,7 +283,7 @@ platform_dependent_abstract_sc_agent
 	=>nrel_inclusion : abstract_sc_agent_is_not_implemented_on_the_scp_language;;
 
 inside_abstract_sc_agent
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[внутренний абстрактный sc-агент]
 		(* <- lang_ru;; *);
@@ -305,7 +305,7 @@ inside_abstract_sc_agent
 		*);;
 
 effector_abstract_sc_agent
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[эффекторный абстрактный sc-агент]
 		(* <- lang_ru;; *);
@@ -327,7 +327,7 @@ effector_abstract_sc_agent
 		*);;
 
 receptor_abstract_sc_agent
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[рецепторный абстрактный sc-агент]
 		(* <- lang_ru;; *);
@@ -349,7 +349,7 @@ receptor_abstract_sc_agent
 	*);;
 
 abstract_sc_agent_of_interpretation_of_scp_program
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[абстрактный sc-агент интерпретации scp-программ]
 		(* <- lang_ru;; *);
@@ -371,7 +371,7 @@ abstract_sc_agent_of_interpretation_of_scp_program
 		*);;
 
 abstract_program_sc_agent_implemented_on_the_scp_language
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[абстрактный программный sc-агент, реализуемый на Языке SCP]
 		(* <- lang_ru;; *);
@@ -379,7 +379,7 @@ abstract_program_sc_agent_implemented_on_the_scp_language
 		(* <- lang_en;; *);;
 
 abstract_sc_metaagent  
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[абстрактный sc-метаагент]
 		(* <- lang_ru;; *);
@@ -401,7 +401,7 @@ abstract_sc_metaagent
 		*);;
 
 nrel_abstract_sc_agent_decomposition
-	<- sc_node_norole_relation;
+	<- sc_node_non_role_relation;
 	<- decomposition_relation;
 	<- quasybinary_relation;
 	<- taxonomy_relation;
@@ -426,7 +426,7 @@ nrel_abstract_sc_agent_decomposition
 		*);;
 
 sc_agent
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[sc-агент]
 		(* <- lang_ru;; *);
@@ -453,7 +453,7 @@ sc_agent
 		*);;
 
 active_sc_agent
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[активный sc-агент]
 		(* <- lang_ru;; *);
@@ -476,7 +476,7 @@ active_sc_agent
 		*);;
 
 nrel_sc_agent_key_sc_elements
-	<- sc_node_norole_relation;
+	<- sc_node_non_role_relation;
 	=> nrel_main_idtf:
 		[ключевые sc-элементы sc-агента*]
 		(* <- lang_ru;; *);
@@ -498,7 +498,7 @@ nrel_sc_agent_key_sc_elements
 		*);;
 
 nrel_sc_agent_program
-	<- sc_node_norole_relation;
+	<- sc_node_non_role_relation;
 	=> nrel_main_idtf:
 		[программа sc-агента*]
 		(* <- lang_ru;; *);
@@ -520,7 +520,7 @@ nrel_sc_agent_program
 		*);;
 
 nrel_sc_agent_action_class
-    <- sc_node_norole_relation;
+    <- sc_node_non_role_relation;
 	=> nrel_main_idtf:
 		[класс действий агента*]
 		(* <- lang_ru;; *);
@@ -542,7 +542,7 @@ nrel_sc_agent_action_class
 		*);;
 
 nrel_primary_initiation_condition
-	<- sc_node_norole_relation;
+	<- sc_node_non_role_relation;
 	=> nrel_main_idtf:
 		[первичное условие инициирования*]
 		(* <- lang_ru;; *);
@@ -564,7 +564,7 @@ nrel_primary_initiation_condition
 		*);;
 
 nrel_initiation_condition_and_result
-	<- sc_node_norole_relation;
+	<- sc_node_non_role_relation;
 	=> nrel_main_idtf:
 		[условие инициирования и результат*]
 		(* <- lang_ru;; *);
@@ -586,7 +586,7 @@ nrel_initiation_condition_and_result
 		*);;
 
 sc_description_of_sc_agent_behavior
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[sc-описание поведения sc-агента]
 		(* <- lang_ru;; *);
@@ -623,7 +623,7 @@ scp_process
 	};;
 
 scp_metaprocess
-	<- sc_node_not_relation;
+	<- sc_node_class;
     => nrel_main_idtf:
 		[scp-метапроцесс]
 		(* <- lang_ru;; *);
@@ -631,7 +631,7 @@ scp_metaprocess
 		(* <- lang_en;; *);;
 
 scp_process_that_is_not_a_scp_metaprocess
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[scp-процесс, не являющий scp-метапроцессом]
 		(* <- lang_ru;; *);
@@ -644,14 +644,14 @@ sc_memory_process_corresponding_platform_dependent_sc_agent
 		(* <- lang_ru;; *);
 		[sc-memory process corresponding platform dependent sc-agent]
 		(* <- lang_en;; *);				
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	<= nrel_subdividing: {
 	    abstract_scp_machine_action;
 	    sc_memory_process_corresponding_platform_dependent_sc_agent_and_not_an_abstract_scp_machine_action
 		};;
 
 abstract_scp_machine_action
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[действие абстрактной scp-машины]
 		(* <- lang_ru;; *);
@@ -660,7 +660,7 @@ abstract_scp_machine_action
 	=> nrel_inclusion: action_scp_interpretation_request;;
 
 sc_memory_process_corresponding_platform_dependent_sc_agent_and_not_an_abstract_scp_machine_action
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[процесс в sc-памяти, соответствующий платформенно зависимому sc-агенту и не являющийся действием абстрактной scp-машины]
 		(* <- lang_ru;; *);
@@ -668,7 +668,7 @@ sc_memory_process_corresponding_platform_dependent_sc_agent_and_not_an_abstract_
 		(* <- lang_en;; *);;
 
 nrel_lock
-	<- sc_node_norole_relation;
+	<- sc_node_non_role_relation;
 	=> nrel_main_idtf:
 		[блокировка*]
 		(* <- lang_ru;; *);
@@ -705,7 +705,7 @@ nrel_lock
 		*);;  
 
 lock_type
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[тип блокировки]
 		(* <- lang_ru;; *);
@@ -730,7 +730,7 @@ lock_type
 	-> lock_for_deleting;;
 
 total_lock
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[полная блокировка]
 		(* <- lang_ru;; *);
@@ -752,7 +752,7 @@ total_lock
 		*);;
 
 lock_for_any_change
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[блокировка на любое изменение]
 		(* <- lang_ru;; *);
@@ -774,7 +774,7 @@ lock_for_any_change
 		*);;
 
 lock_for_deleting
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[блокировка на удаление]
 		(* <- lang_ru;; *);

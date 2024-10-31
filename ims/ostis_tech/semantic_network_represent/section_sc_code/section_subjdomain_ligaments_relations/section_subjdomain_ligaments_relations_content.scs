@@ -6,7 +6,7 @@ section_subject_domain_ligaments_relations
 	[Subject domain of sheaves and relations]
 	(* <- lang_en;; *);
 <- subject_domain;
-<- sc_node_struct;
+<- sc_node_structure;
 <- structure;
 -> rrel_maximum_studied_object_class:
 	sheaf;
@@ -45,8 +45,8 @@ section_subject_domain_ligaments_relations
 	equivalence_relation;
 	role_relation;
 	order_role_relation;
-	norole_relation;
-	norole_binary_relation;
+	non_role_relation;
+	non_role_binary_relation;
 	arity;
 	metarelation;
 	decomposition_relation;
@@ -80,7 +80,7 @@ section_subject_domain_ligaments_relations
 	nrel_set_of_permutations;;
 
 sheaf
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[связь]
 	(* <- lang_ru;; *);
@@ -134,7 +134,7 @@ sheaf
 	};;
 
 binary_sheaf
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[бинарная связь]
 	(* <- lang_ru;; *);
@@ -162,7 +162,7 @@ binary_sheaf
 	*);;
 
 sc_connector
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[sc-коннектор]
 	(* <- lang_ru;; *);
@@ -188,7 +188,7 @@ sc_connector
 		*);;
 
 non_atomic_binary_sheaf
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[неатомарная бинарная связь]
 		(* <- lang_ru;; *);
@@ -211,7 +211,7 @@ non_atomic_binary_sheaf
 		*);;
 
 non_binary_sheaf
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[небинарная связь]
 		(* <- lang_ru;; *);
@@ -234,7 +234,7 @@ non_binary_sheaf
 		*);;
 
 non_oriented_sheaf
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[неориентированная связь]
 		(* <- lang_ru;; *);
@@ -258,7 +258,7 @@ non_oriented_sheaf
 		*);;
 
 oriented_sheaf
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[ориентированная связь]
 		(* <- lang_ru;; *);
@@ -282,7 +282,7 @@ oriented_sheaf
 		*);;
 
 relation
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[отношение]
 	(* <- lang_ru;; *);
@@ -330,11 +330,11 @@ relation
 <= nrel_subdividing:
 	{
 		role_relation;
-		norole_relation
+		non_role_relation
 	};;
 
 class_of_equipotent_sheaves
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[класс равномощных связок]
 	(* <- lang_ru;; *);
@@ -366,7 +366,7 @@ class_of_equipotent_sheaves
 		*);;
 
 class_of_sheaves_with_different_cardinality
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[класс разномощных связок]
 	(* <- lang_ru;; *);
@@ -395,7 +395,7 @@ class_of_sheaves_with_different_cardinality
 		*);;
 
 unary_relation
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[унарное отношение]
 	(* <- lang_ru;; *);
@@ -425,7 +425,7 @@ unary_relation
 		*);;
 
 binary_relation
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[бинарное отношение]
 	(* <- lang_ru;; *);
@@ -461,7 +461,7 @@ binary_relation
 <= nrel_subdividing:
 	{
 		role_relation;
-		norole_binary_relation
+		non_role_binary_relation
 	};
 <- rrel_key_sc_element:
 	...
@@ -480,7 +480,7 @@ binary_relation
 		*);;
 
 quasybinary_relation
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[квазибинарное отношение]
 	(* <- lang_ru;; *);
@@ -518,7 +518,7 @@ quasybinary_relation
 		*);;
 
 ternary_relation
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[тернарное отношение]
 	(* <- lang_ru;; *);
@@ -546,7 +546,7 @@ ternary_relation
 		*);;
 
 nonbinary_relation
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[небинарное отношение]
 	(* <- lang_ru;; *);
@@ -569,7 +569,7 @@ nonbinary_relation
 		*);;
 
 oriented_relation
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[ориентированное отношение]
 	(* <- lang_ru;; *);
@@ -592,7 +592,7 @@ oriented_relation
 		*);;
 
 non_oriented_relation
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[неориентированное отношение]
 	(* <- lang_ru;; *);
@@ -615,7 +615,7 @@ non_oriented_relation
 		*);;
 
 reflexive_relation
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[рефлексивное отношение]
 	(* <- lang_ru;; *);
@@ -638,7 +638,7 @@ reflexive_relation
 		*);;
 
 antireflexive_relation
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[антирефлексивное отношение]
 	(* <- lang_ru;; *);
@@ -661,7 +661,7 @@ antireflexive_relation
 		*);;
 
 partially_reflexive_relation
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[частично рефлексивное отношение]
 	(* <- lang_ru;; *);
@@ -684,7 +684,7 @@ partially_reflexive_relation
 		*);;
 
 symmetric_relation
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[симметричное отношение]
 	(* <- lang_ru;; *);
@@ -707,7 +707,7 @@ symmetric_relation
 		*);;
 
 antisymmetric_relation
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[антисимметричное отношение]
 	(* <- lang_ru;; *);
@@ -730,7 +730,7 @@ antisymmetric_relation
 		*);;
 
 partially_symmetric_relation
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[частично симметричное отношение]
 	(* <- lang_ru;; *);
@@ -753,7 +753,7 @@ partially_symmetric_relation
 		*);;
 
 transitive_relation
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[транзитивное отношение]
 	(* <- lang_ru;; *);
@@ -776,7 +776,7 @@ transitive_relation
 		*);;
 
 antitransitive_relation
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[антитранзитивное отношение]
 	(* <- lang_ru;; *);
@@ -784,7 +784,7 @@ antitransitive_relation
 	(* <- lang_en;; *);;
 
 partially_transitive_relation
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[частично транзитивное отношение]
 	(* <- lang_ru;; *);
@@ -792,7 +792,7 @@ partially_transitive_relation
 	(* <- lang_en;; *);;
 
 related_relation
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[связанное отношение]
 	(* <- lang_ru;; *);
@@ -816,7 +816,7 @@ related_relation
 		*);;
 
 order_relation
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[отношение порядка]
 	(* <- lang_ru;; *);
@@ -844,7 +844,7 @@ order_relation
 		*);;
 
 strict_order_relation
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[отношение строгого порядка]
 	(* <- lang_ru;; *);
@@ -867,7 +867,7 @@ strict_order_relation
 		*);;
 
 non_strict_order_relation
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[отношение нестрогого порядка]
 	(* <- lang_ru;; *);
@@ -890,7 +890,7 @@ non_strict_order_relation
 		*);;
 
 tolerance_relation
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[отношение толерантности]
 	(* <- lang_ru;; *);
@@ -913,7 +913,7 @@ tolerance_relation
 		*);;
 
 equivalence_relation
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[отношение эквивалентности]
 	(* <- lang_ru;; *);
@@ -955,7 +955,7 @@ equivalence_relation
 		*);;
 
 role_relation
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[ролевое отношение]
 	(* <- lang_ru;; *);
@@ -1005,7 +1005,7 @@ role_relation
 		*);;
 
 order_role_relation
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[числовой атрибут]
 	(* <- lang_ru;; *);
@@ -1104,17 +1104,17 @@ rrel_10
 	[10']
 	(* <- lang_en;; *);;
 
-norole_relation
-<- sc_node_not_relation;
+non_role_relation
+<- sc_node_class;
 => nrel_main_idtf:
 	[неролевое отношение]
 	(* <- lang_ru;; *);
-	[norole relation]
+	[non_role relation]
 	(* <- lang_en;; *);
 <= nrel_subdividing:
 	{
 		nonbinary_relation;
-		norole_binary_relation
+		non_role_binary_relation
 	};
 <- rrel_key_sc_element:
 	...
@@ -1124,7 +1124,7 @@ norole_relation
 			...
 			(*
 			-> rrel_example:
-					"file://nl_files/explanation_for_norole_relation.html"			
+					"file://nl_files/explanation_for_non_role_relation.html"			
 					(*
 					<- lang_ru;;
 					=> nrel_format: format_html;;
@@ -1139,7 +1139,7 @@ norole_relation
 			...
 			(*
 			-> rrel_example:
-					"file://nl_files/rule_for_norole_relation.html"			
+					"file://nl_files/rule_for_non_role_relation.html"			
 					(*
 					<- lang_ru;;
 					=> nrel_format: format_html;;
@@ -1147,12 +1147,12 @@ norole_relation
 			*);;
 		*);;
 
-norole_binary_relation
-<- sc_node_not_relation;
+non_role_binary_relation
+<- sc_node_class;
 => nrel_main_idtf:
 	[неролевое бинарное отношение]
 	(* <- lang_ru;; *);
-	[norole_binary_relation]
+	[non_role_binary_relation]
 	(* <- lang_en;; *);
 <- rrel_key_sc_element:
 	...
@@ -1162,7 +1162,7 @@ norole_binary_relation
 			...
 			(*
 			-> rrel_example:
-					"file://nl_files/explanation_for_norole_binary_relation.html"			
+					"file://nl_files/explanation_for_non_role_binary_relation.html"			
 					(*
 					<- lang_ru;;
 					=> nrel_format: format_html;;
@@ -1171,7 +1171,7 @@ norole_binary_relation
 		*);;
 
 arity
-<- sc_node_not_relation;
+<- sc_node_class;
 <- parameter;
 => nrel_main_idtf:
 	[арность]
@@ -1209,7 +1209,7 @@ arity
 	*);;
 
 nrel_definitional_domain
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[область определения*] (* <- lang_ru;; *);
 	[definitional domain*] (* <- lang_en;; *);
@@ -1245,7 +1245,7 @@ nrel_definitional_domain
 	*);;
 
 nrel_relation_attribute
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[атрибут отношения*] (* <- lang_ru;; *);
 	[attribute of relation*] (* <- lang_en;; *);
@@ -1281,7 +1281,7 @@ nrel_relation_attribute
 	*);;
 
 nrel_domain
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[домен*] (* <- lang_ru;; *);
 	[domain*] (* <- lang_en;; *);
@@ -1317,7 +1317,7 @@ nrel_domain
 	*);;
 
 nrel_first_domain
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[первый домен*] (* <- lang_ru;; *);
 	[first domain*] (* <- lang_en;; *);
@@ -1350,7 +1350,7 @@ nrel_first_domain
 	*);;
 
 nrel_second_domain
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[второй домен*] (* <- lang_ru;; *);
 	[second domain*] (* <- lang_en;; *);
@@ -1384,7 +1384,7 @@ nrel_second_domain
 	*);;
 
 nrel_composition_of_relations
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[композиция отношений*] (* <- lang_ru;; *);
 	[composition of relations*] (* <- lang_en;; *);
@@ -1418,7 +1418,7 @@ nrel_composition_of_relations
 	*);;
 
 nrel_quotient_set
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[фактор-множество*] (* <- lang_ru;; *);
 	[quotient set*] (* <- lang_en;; *);
@@ -1456,7 +1456,7 @@ nrel_quotient_set
 	*);;
 
 metarelation
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[метаотношение] (* <- lang_ru;; *);
 	[metarelation] (* <- lang_en;; *);
@@ -1477,7 +1477,7 @@ metarelation
 	*);;
 
 decomposition_relation
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[отношение декомпозиции] (* <- lang_ru;; *);
 	[decomposition relation] (* <- lang_en;; *);
@@ -1486,14 +1486,14 @@ decomposition_relation
 -> nrel_decomposition_of_abstract_object;;
 
 integration_relation
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[отношение интеграции] (* <- lang_ru;; *);
 	[integration relation] (* <- lang_en;; *);
 -> nrel_combination;;
 
 nrel_mapping
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[соответствие*] (* <- lang_ru;; *);
 	[mapping*] (* <- lang_en;; *);
@@ -1549,19 +1549,19 @@ nrel_mapping
 	*);;
 
 nrel_mapping_between_non_intersecting_sets
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[соответствие между непересекающимися множествами*] (* <- lang_ru;; *);
 	[mapping between nonintersecting sets*] (* <- lang_en;; *);;
 
 nrel_mapping_between_strict_intersecting_sets
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[соответствие между строго пересекающимися множествами*] (* <- lang_ru;; *);
 	[mapping between strict intersecting sets*] (* <- lang_en;; *);;
 
 nrel_mapping_input_and_output_sets_of_which_coincide
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[соответствие, область отправления и область прибытия которого совпадают*] 
 	(* <- lang_ru;; *);
@@ -1569,7 +1569,7 @@ nrel_mapping_input_and_output_sets_of_which_coincide
 	(* <- lang_en;; *);;
 
 nrel_relation_of_mapping
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[отношение соответствия*] (* <- lang_ru;; *);
 	[relation of compliance*] (* <- lang_en;; *);
@@ -1751,7 +1751,7 @@ rrel_preimage_of_mapping
 	*);;
 
 nrel_total_mapping
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[всюду определенное соответствие*] (* <- lang_ru;; *);
 	[total mapping] (* <- lang_en;; *);
@@ -1799,7 +1799,7 @@ nrel_total_mapping
 	*);;
 
 nrel_partial_mapping
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[частично определенное соответствие*] (* <- lang_ru;; *);
 	[partial mapping*] (* <- lang_en;; *);
@@ -1846,7 +1846,7 @@ nrel_partial_mapping
 	*);;
 
 nrel_surjection
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[сюръективное соответствие*] (* <- lang_ru;; *);
 	[surjection*] (* <- lang_en;; *);
@@ -1894,7 +1894,7 @@ nrel_surjection
 	*);;
 
 nrel_non_surjective_mapping
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[несюръективное соответствие*] (* <- lang_ru;; *);
 	[non surjective mapping*] (* <- lang_en;; *);
@@ -1941,7 +1941,7 @@ nrel_non_surjective_mapping
 	*);;
 
 nrel_functional_mapping
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[однозначное соответствие*] (* <- lang_ru;; *);
 	[functional mapping*] (* <- lang_en;; *);
@@ -1990,7 +1990,7 @@ nrel_functional_mapping
 	*);;
 
 nrel_backward_mapping
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[обратное соответствие*] (* <- lang_ru;; *);
 	[backward mapping*] (* <- lang_en;; *);
@@ -2013,7 +2013,7 @@ nrel_backward_mapping
 	*);;
 
 nrel_inversible_mapping
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[обратимое соответствие*] (* <- lang_ru;; *);
 	[inversible mapping*] (* <- lang_en;; *);
@@ -2035,7 +2035,7 @@ nrel_inversible_mapping
 	*);;
 
 nrel_ambiguous_mapping
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[неоднозначное соответствие*] (* <- lang_ru;; *);
 	[ambiguous mapping*] (* <- lang_en;; *);
@@ -2080,7 +2080,7 @@ nrel_ambiguous_mapping
 	*);;
 
 nrel_injection
-<-sc_node_norole_relation;
+<-sc_node_non_role_relation;
 => nrel_main_idtf:
 	[инъективное соответствие*] (* <- lang_ru;; *);
 	[injective mapping*] (* <- lang_en;; *);
@@ -2129,7 +2129,7 @@ nrel_injection
 	*);;
 
 nrel_bijective_mapping
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 <= nrel_strict_inclusion: nrel_surjection;
 <= nrel_strict_inclusion: nrel_injection;
 <= nrel_strict_inclusion: nrel_total_mapping;
@@ -2180,7 +2180,7 @@ nrel_bijective_mapping
 	*);;
 
 nrel_set_of_combinations
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[множество сочетаний*] (* <- lang_ru;; *);
 	[set of combinations*] (* <- lang_en;; *);
@@ -2247,7 +2247,7 @@ nrel_set_of_combinations
 	*);;
 
 nrel_set_of_partial_permutations
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[множество размещений*] (* <- lang_ru;; *);
 	[set of partial permutations*] (* <- lang_en;; *);
@@ -2308,7 +2308,7 @@ nrel_set_of_partial_permutations
 	*);;
 
 nrel_set_of_permutations
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 <= nrel_strict_inclusion: nrel_set_of_partial_permutations;
 => nrel_main_idtf:
 	[множество перестановок*] (* <- lang_ru;; *);

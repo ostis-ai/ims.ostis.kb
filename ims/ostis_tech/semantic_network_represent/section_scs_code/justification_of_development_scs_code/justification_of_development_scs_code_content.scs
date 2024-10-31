@@ -1,6 +1,6 @@
 justification_of_development_scs_code =  [*
 scs_code
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_idtf:
 	[Язык SCs] (* <- lang_ru;; *);
 	[sc.s-текст] (* <- lang_ru;; *);
@@ -26,7 +26,7 @@ scs_code
 
 
 scs_sentence
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf: 
 	[sc.s-предложение](* <- lang_ru;; *);
 => nrel_idtf: 
@@ -50,21 +50,21 @@ scs_sentence_complex
 };;
 
 scs_sentence_simple
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf: 
 	[простое sc.s-предложение](* <- lang_ru;; *);
 => nrel_idtf:
 	[sc.s-предложение, не содержащее встроенных sc.s-предложений] (* <- lang_ru;; *);;
 
 scs_sentence_complex
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf: 
 	[сложное sc.s-предложение](* <- lang_ru;; *);
 => nrel_idtf:
 	[sc.s-предложение, содержащее встроенные sc.s-предложения] (* <- lang_ru;; *);;
 
 scs_sentence_1_level
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[sc.s-предложение уровня 1]
 	(* <- lang_ru;; *);
@@ -90,7 +90,7 @@ scs_sentence_1_level
 	"file://nl_files/example2_scs_sent_lvl1.html" (* => nrel_format: format_html;; *);;
 
 scs_sentence_2_level
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[sc.s-предложение уровня 2]
 	(* <- lang_ru;; *);
@@ -102,7 +102,7 @@ scs_sentence_2_level
 
 
 scs_sentence_3_level
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[sc.s-предложение уровня 3]
 	(* <- lang_ru;; *);
@@ -113,7 +113,7 @@ scs_sentence_3_level
 	"file://nl_files/example2_scs_sent_lvl3.html" (* => nrel_format: format_html;; *);;
 
 scs_sentence_4_level
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[sc.s-предложение уровня 4]
 	(* <- lang_ru;; *);
@@ -138,7 +138,7 @@ scs_sentence_4_level
 	"file://nl_files/example_scs_sent_lvl4.html" (* => nrel_format: format_html;; *);;
 
 scs_sentence_5_level
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[sc.s-предложение уровня 5]
 	(* <- lang_ru;; *);
@@ -148,7 +148,7 @@ scs_sentence_5_level
 	"file://nl_files/example_scs_sent_lvl5.html" (* => nrel_format: format_html;; *);;
 
 scs_sentence_6_level
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[sc.s-предложение уровня 6]
 	(* <- lang_ru;; *);
@@ -193,7 +193,7 @@ scs_sentence_6_level
 	"file://nl_files/example3_scs_sent_lvl6.html" (* => nrel_format: format_html;; *);;
 
 scs_sentence_7_level
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[sc.s-предложение уровня 7]
 	(* <- lang_ru;; *);
@@ -222,7 +222,7 @@ scs_sentence_7_level
 	*);;
 
 scs_nrel_representation_scs_editor
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[отображение в sc.s-редакторе*]
 	(* <- lang_ru;; *);
@@ -245,7 +245,7 @@ scs_nrel_representation_scs_editor
 	*);;
 
 scs_nrel_representation_standart_editor
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[отображение в стандартных редакторах*]
 	(* <- lang_ru;; *);
@@ -268,7 +268,7 @@ scs_nrel_representation_standart_editor
 	*);;
 
 scs_nrel_representation_scg_code
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[отображение в SCg-коде*]
 	(* <- lang_ru;; *);

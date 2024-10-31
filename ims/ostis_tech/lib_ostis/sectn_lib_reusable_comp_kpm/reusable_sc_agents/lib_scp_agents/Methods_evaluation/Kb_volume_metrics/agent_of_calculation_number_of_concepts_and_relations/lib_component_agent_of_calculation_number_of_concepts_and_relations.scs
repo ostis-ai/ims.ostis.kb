@@ -31,7 +31,7 @@ lib_component_agent_of_calculation_number_of_concepts_and_relations
 	*);;
 
 action_to_calculate_number_of_concepts_and_relations
-<- sc_node_not_relation;
+<- sc_node_class;
 <= nrel_inclusion:
     information_action;
 => nrel_main_idtf:

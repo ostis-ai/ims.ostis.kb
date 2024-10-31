@@ -6,7 +6,7 @@ subject_domain_numbers_and_numeric_structures
 	[Subject domain of numbers and numeric structures]
 	(* <- lang_en;; *);
 <- subject_domain;
-<- sc_node_struct;
+<- sc_node_structure;
 <- structure;
 -> rrel_maximum_studied_object_class:
 	number;
@@ -41,7 +41,7 @@ subject_domain_numbers_and_numeric_structures
 	nrel_more_or_equal;;
 	
 number
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[число]
 	(* <- lang_ru;; *);
@@ -67,7 +67,7 @@ number
 		*);;
 
 natural_number
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[натуральное число]
 	(* <- lang_ru;; *);
@@ -94,7 +94,7 @@ natural_number
 		*);;
 
 integer
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[целое число]
 	(* <- lang_ru;; *);
@@ -121,7 +121,7 @@ integer
 		*);;
 
 rational_number
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[рациональное число]
 	(* <- lang_ru;; *);
@@ -148,7 +148,7 @@ rational_number
 		*);;
 
 irrational_number
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[иррациональное число]
 	(* <- lang_ru;; *);
@@ -175,7 +175,7 @@ irrational_number
 		*);;
 
 real_number
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[действительное число]
 	(* <- lang_ru;; *);
@@ -213,7 +213,7 @@ real_number
 ..zero_singleton -> number_zero;;
 
 complex_number
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[комплексное число]
 	(* <- lang_ru;; *);
@@ -239,7 +239,7 @@ complex_number
 		*);;
 
 negative_number
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[отрицательное число]
 	(* <- lang_ru;; *);
@@ -265,7 +265,7 @@ negative_number
 		*);;
 
 positive_number
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[положительное число]
 	(* <- lang_ru;; *);
@@ -291,7 +291,7 @@ positive_number
 		*);;
 
 nrel_opposite_numbers
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 <- binary_relation;
 => nrel_main_idtf:
 	[противоположные числа*]
@@ -315,7 +315,7 @@ nrel_opposite_numbers
 		*);;
 
 nrel_modulus
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 <- binary_relation;
 => nrel_main_idtf:
 	[модуль*]
@@ -345,7 +345,7 @@ nrel_modulus
 		*);;
 
 arithmetic_expression
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[арифметическое выражение]
 	(* <- lang_ru;; *);
@@ -371,7 +371,7 @@ arithmetic_expression
 		*);;
 
 arithmetic_operation
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[арифметическая операция]
 	(* <- lang_ru;; *);
@@ -398,7 +398,7 @@ arithmetic_operation
 		*);;
 
 nrel_sum_of_numbers
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[сумма*]
 	(* <- lang_ru;; *);
@@ -438,7 +438,7 @@ nrel_sum_of_numbers
 	*);;
 
 nrel_multiplication_of_numbers
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[произведение*]
 	(* <- lang_ru;; *);
@@ -478,7 +478,7 @@ nrel_multiplication_of_numbers
 	*);;
 
 nrel_pow_numbers
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[возведение в степень*]
 	(* <- lang_ru;; *);
@@ -515,7 +515,7 @@ nrel_pow_numbers
 	*);;
 
 nrel_be_more
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[больше*]
 	(* <- lang_ru;; *);
@@ -553,7 +553,7 @@ nrel_be_more
 	*);;
 
 nrel_equal_numbers
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[равенство*]
 	(* <- lang_ru;; *);
@@ -597,7 +597,7 @@ nrel_equal_numbers
 	*);;
 
 nrel_more_or_equal
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[больше или равно*]
 	(* <- lang_ru;; *);
@@ -635,7 +635,7 @@ nrel_more_or_equal
 	*);;
 
 number_pi
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[Число Пи]
 	(* <- lang_ru;; *);
@@ -659,7 +659,7 @@ number_pi
 		*);;
 
 number_zero
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[Число нуль]
 	(* <- lang_ru;; *);
@@ -686,7 +686,7 @@ number_zero
 		*);;
 
 number_one
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[Число один]
 	(* <- lang_ru;; *);
@@ -714,7 +714,7 @@ number_one
 		*);;
 
 imaginary_unit
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[Мнимая единица]
 	(* <- lang_ru;; *);
@@ -741,7 +741,7 @@ imaginary_unit
 		*);;
 
 numeric_structure
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[числовая структура]
 	(* <- lang_ru;; *);
@@ -765,7 +765,7 @@ numeric_structure
 		*);;
 
 numeral_system
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[система счисления]
 	(* <- lang_ru;; *);
@@ -789,7 +789,7 @@ numeral_system
 		*);;
 
 decimal_numeral_system
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[десятичная система счисления]
 	(* <- lang_ru;; *);
@@ -798,7 +798,7 @@ decimal_numeral_system
 <- numeral_system;;
 
 binary_numeral_system
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[двоичная система счисления]
 	(* <- lang_ru;; *);
@@ -807,7 +807,7 @@ binary_numeral_system
 <- numeral_system;;
 
 hexadecimal_numeral_system
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[шестнадцатеричная система счисления]
 	(* <- lang_ru;; *);

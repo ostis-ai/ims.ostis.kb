@@ -4,14 +4,14 @@ proc_of_adding_proposal_content_to_substantive_part_of_kb
 
 proc_of_adding_proposal_content_to_substantive_part_of_kb = [*
 .._process1
-_<- scp_process;
+<-_ scp_process;
 
 _-> rrel_1:: rrel_in:: _proposal;
 _-> rrel_2:: rrel_in:: _section;
-_<= nrel_decomposition_of_action:: .._actions (*
+<=_ nrel_decomposition_of_action:: .._actions (*
 
 	_-> rrel_1:: .._proc_of_adding_proposal_content_to_substantive_part_of_kb_operator1B (*
-		_<- ifCoin;;
+		<-_ ifCoin;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _section;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: substantive_part_of_the_knowledge_base;;
 
@@ -20,7 +20,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_adding_proposal_content_to_substantive_part_of_kb_operator_get_substantive_part_of_kb_sign (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: substantive_part_of_the_knowledge_base;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _substantive_part_of_kb_sign;;
@@ -30,7 +30,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_adding_proposal_content_to_substantive_part_of_kb_operator_D2 (*
-		_<- searchSetStr3;;
+		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _proposal;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _content;;
@@ -40,12 +40,12 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_adding_proposal_content_to_substantive_part_of_kb_operator_return (*
-		_<- return;;
+		<-_ return;;
 
 	*);;
 
 	_-> .._proc_of_adding_proposal_content_to_substantive_part_of_kb_operator_D1 (*
-		_<- searchSetStr3;;
+		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _proposal;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _content;;

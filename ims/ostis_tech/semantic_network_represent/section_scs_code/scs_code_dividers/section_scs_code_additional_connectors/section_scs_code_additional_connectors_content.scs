@@ -1,6 +1,6 @@
 section_scs_code_additional_connectors =  [*
 additional_scs_connector
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf: 
 	[дополнительный sc.s-коннектор]
 	(* <- lang_ru;; *);
@@ -45,7 +45,7 @@ additional_scs_connector
 	*);;
 
 scs_divider_const_edge
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf: 
 	[константное sc.s-ребро]
 	(* <- lang_ru;; *);
@@ -59,7 +59,7 @@ scs_divider_const_edge
 	"file://img/const_edge_scg.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_var_edge
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf: 
 	[переменное sc.s-ребро]
 	(* <- lang_ru;; *);
@@ -68,12 +68,12 @@ scs_divider_var_edge
 => scs_nrel_representation_scs_editor:
 	"file://img/var_edge_scs_editor.png" (* => nrel_format: format_png;; *);
 => scs_nrel_representation_standart_editor:
-	[_<=>];
+	[<=_>];
 => scs_nrel_representation_scg_code:
 	"file://img/var_edge_scg.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_const_arc
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf: 
 	[константная sc.s-дуга]
 	(* <- lang_ru;; *);
@@ -90,7 +90,7 @@ scs_divider_const_arc
 	"file://img/const_arc_scg2.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_var_arc
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf: 
 	[переменная sc.s-дуга]
 	(* <- lang_ru;; *);
@@ -100,14 +100,14 @@ scs_divider_var_arc
 	"file://img/var_arc_scs_editor1.png" (* => nrel_format: format_png;; *);
 	"file://img/var_arc_scs_editor2.png" (* => nrel_format: format_png;; *);
 => scs_nrel_representation_standart_editor:
-	[_<=];
+	[<=_];
 	[_=>];
 => scs_nrel_representation_scg_code:
 	"file://img/var_arc_scg1.png" (* => nrel_format: format_png;; *);
 	"file://img/var_arc_scg2.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_var_pos_stat_accessory_arc
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf: 
 	[переменная позитивная стационарная sc.s-дуга принадлежности]
 	(* <- lang_ru;; *);
@@ -117,14 +117,14 @@ scs_divider_var_pos_stat_accessory_arc
 	"file://img/var_pos_stat_acc_scs_editor1.png" (* => nrel_format: format_png;; *);
 	"file://img/var_pos_stat_acc_scs_editor2.png" (* => nrel_format: format_png;; *);
 => scs_nrel_representation_standart_editor:
-	[_<-];
+	[<-_];
 	[_->];
 => scs_nrel_representation_scg_code:
 	"file://img/var_pos_stat_acc_scg1.png" (* => nrel_format: format_png;; *);
 	"file://img/var_pos_stat_acc_scg2.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_const_neg_stat_accessory_arc
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf: 
 	[константная негативная стационарная sc.s-дуга принадлежности]
 	(* <- lang_ru;; *);
@@ -141,7 +141,7 @@ scs_divider_const_neg_stat_accessory_arc
 	"file://img/const_neg_stat_acc_scg2.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_var_neg_stat_accessory_arc
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf: 
 	[переменная негативная стационарная sc.s-дуга принадлежности]
 	(* <- lang_ru;; *);
@@ -158,7 +158,7 @@ scs_divider_var_neg_stat_accessory_arc
 	"file://img/var_neg_stat_acc_scg2.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_const_fuz_stat_accessory_arc
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf: 
 	[константная нечеткая стационарная sc.s-дуга принадлежности]
 	(* <- lang_ru;; *);
@@ -175,7 +175,7 @@ scs_divider_const_fuz_stat_accessory_arc
 	"file://img/const_fuz_stat_acc_scg2.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_var_fuz_stat_accessory_arc
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf: 
 	[переменная нечеткая стационарная sc.s-дуга принадлежности]
 	(* <- lang_ru;; *);
@@ -192,7 +192,7 @@ scs_divider_var_fuz_stat_accessory_arc
 	"file://img/var_fuz_stat_acc_scg2.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_const_pos_nonstat_accessory_arc
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf: 
 	[константная позитивная нестационарная sc.s-дуга принадлежности]
 	(* <- lang_ru;; *);
@@ -209,7 +209,7 @@ scs_divider_const_pos_nonstat_accessory_arc
 	"file://img/const_pos_nonstat_acc_scg2.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_var_pos_nonstat_accessory_arc
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf: 
 	[переменная позитивная нестационарная sc.s-дуга принадлежности]
 	(* <- lang_ru;; *);
@@ -226,7 +226,7 @@ scs_divider_var_pos_nonstat_accessory_arc
 	"file://img/var_pos_nonstat_acc_scg2.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_const_neg_nonstat_accessory_arc
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf: 
 	[константная негативная нестационарная sc.s-дуга принадлежности]
 	(* <- lang_ru;; *);
@@ -243,7 +243,7 @@ scs_divider_const_neg_nonstat_accessory_arc
 	"file://img/const_neg_nonstat_acc_scg2.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_var_neg_nonstat_accessory_arc
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf: 
 	[переменная негативная нестационарная sc.s-дуга принадлежности]
 	(* <- lang_ru;; *);
@@ -260,7 +260,7 @@ scs_divider_var_neg_nonstat_accessory_arc
 	"file://img/var_neg_nonstat_acc_scg2.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_const_fuz_nonstat_accessory_arc
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf: 
 	[константная нечеткая нестационарная sc.s-дуга принадлежности]
 	(* <- lang_ru;; *);
@@ -277,7 +277,7 @@ scs_divider_const_fuz_nonstat_accessory_arc
 	"file://img/const_fuz_nonstat_acc_scg2.png" (* => nrel_format: format_png;; *);;
 
 scs_divider_var_fuz_nonstat_accessory_arc
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf: 
 	[переменная нечеткая нестационарная sc.s-дуга принадлежности]
 	(* <- lang_ru;; *);

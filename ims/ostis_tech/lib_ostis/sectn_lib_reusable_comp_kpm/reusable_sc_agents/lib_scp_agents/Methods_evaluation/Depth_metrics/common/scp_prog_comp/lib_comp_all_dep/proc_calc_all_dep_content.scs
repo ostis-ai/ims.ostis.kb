@@ -5,22 +5,22 @@ proc_of_calculation_all_depths_of_ontology
 
 proc_of_calculation_all_depths_of_ontology = [*
 .._process1
-_<- scp_process;
+<-_ scp_process;
 
 _-> rrel_1:: rrel_in:: _set_of_vertexes;
 _-> rrel_2:: rrel_in:: _ontology;
 _-> rrel_3:: rrel_in:: _all_depths;
-_<= nrel_decomposition_of_action:: .._actions (*
+<=_ nrel_decomposition_of_action:: .._actions (*
 
 	_-> rrel_1:: .._proc_of_calculation_all_depths_of_ontology_operator_gen_all_start_vartexes_set (*
-		_<- genEl;;
+		<-_ genEl;;
 		_-> rrel_1:: rrel_assign:: rrel_node:: rrel_scp_var:: _all_start_vertexes;;
 
 		_=> nrel_goto:: .._proc_of_calculation_all_depths_of_ontology_operator_get_all_start_vertexes;;
 	*);;
 
 	_-> .._proc_of_calculation_all_depths_of_ontology_operator_get_all_start_vertexes (*
-		_<- call;;
+		<-_ call;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_finding_all_start_vertexes;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._proc_of_calculation_all_depths_of_ontology_param0 (*
 			_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _set_of_vertexes;;
@@ -33,14 +33,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_all_depths_of_ontology_operator_waitreturn_getting_all_start_vertexes (*
-		_<- waitReturn;;
+		<-_ waitReturn;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _descr1;;
 
 		_=> nrel_goto:: .._proc_of_calculation_all_depths_of_ontology_operator_B1_loop_enter;;
 	*);;
 
 	_-> .._proc_of_calculation_all_depths_of_ontology_operator_B1_loop_enter (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _all_start_vertexes;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _start_vertex;;
@@ -50,26 +50,26 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_all_depths_of_ontology_operator_B2_loop_arc_erase (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _arc1;;
 
 		_=> nrel_goto:: .._proc_of_calculation_all_depths_of_ontology_operator_B3;;
 	*);;
 
 	_-> .._proc_of_calculation_all_depths_of_ontology_operator_E1_erase_temp_set (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _all_start_vertexes;;
 
 		_=> nrel_goto:: .._proc_of_calculation_all_depths_of_ontology_operator_return;;
 	*);;
 
 	_-> .._proc_of_calculation_all_depths_of_ontology_operator_return (*
-		_<- return;;
+		<-_ return;;
 
 	*);;
 
 	_-> .._proc_of_calculation_all_depths_of_ontology_operator_B3 (*
-		_<- varAssign;;
+		<-_ varAssign;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _depth;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [0];;
 
@@ -77,7 +77,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_all_depths_of_ontology_operator_B4_find_depths (*
-		_<- call;;
+		<-_ call;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_calculation_all_depths_of_ontology_with_one_start_vertex;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._proc_of_calculation_all_depths_of_ontology_param1 (*
 			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _start_vertex;;
@@ -91,7 +91,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_all_depths_of_ontology_operator_waitreturn_finding_depths (*
-		_<- waitReturn;;
+		<-_ waitReturn;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _descr2;;
 
 		_=> nrel_goto:: .._proc_of_calculation_all_depths_of_ontology_operator_B1_loop_enter;;

@@ -6,7 +6,7 @@ subject_domain_of_actions_of_unified_kpm_dev
 		[Subject domain of action of unified logical-semantic models of knowledge processing machines developer]	
 		(* <- lang_en;; *);
 	<- subject_domain;
-	<- sc_node_struct;
+	<- sc_node_structure;
 	<- structure;
 	-> rrel_not_maximum_studied_object_class: 
 	    action_to_develop_atomic_abstract_sc_agent;
@@ -31,7 +31,7 @@ subject_domain_of_actions_of_unified_kpm_dev
 	-> rrel_maximum_studied_object_class: action_to_develop_ostis_systems_knowledge_processing_machine;;
 
 action_to_develop_ostis_systems_knowledge_processing_machine
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[действие. разработать машину обработки знаний ostis-системы ]
 		(* <- lang_ru;; *);
@@ -52,7 +52,7 @@ action_to_develop_ostis_systems_knowledge_processing_machine
 		action_to_debug_sc_agent;;
 
 action_to_develop_atomic_abstract_sc_agent
-    <- sc_node_not_relation;
+    <- sc_node_class;
 	=> nrel_main_idtf:
 		[действие. разработать атомарный абстрактный sc-агент]
 		(* <- lang_ru;; *);
@@ -64,7 +64,7 @@ action_to_develop_atomic_abstract_sc_agent
 		action_to_develop_scp_program;;
 
 action_to_develop_platform_independent_atomic_abstract_sc_agent
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[действие. разработать платформенно-независимый атомарный абстрактный sc-агент]
 		(* <- lang_ru;; *);
@@ -72,7 +72,7 @@ action_to_develop_platform_independent_atomic_abstract_sc_agent
 		(* <- lang_en;; *);;
 
 action_to_decompose_platform_independent_atomic_abstract_sc_agent_to_scp_program
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[действие. декомпозировать платформенно-независимый атомарный абстрактный sc-агент на scp-программы]
 		(* <- lang_ru;; *);
@@ -80,7 +80,7 @@ action_to_decompose_platform_independent_atomic_abstract_sc_agent_to_scp_program
 		(* <- lang_en;; *);;
 
 action_to_develop_scp_program
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[действие. разработать scp-программу]
 		(* <- lang_ru;; *);
@@ -94,7 +94,7 @@ action_to_develop_scp_program
 		action_to_debug_scp_program;;
 
 action_to_specify_scp_program
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[действие. специфицировать scp-программу]
 		(* <- lang_ru;; *);
@@ -102,7 +102,7 @@ action_to_specify_scp_program
 		(* <- lang_en;; *);;
 
 action_to_find_scp_program_in_the_library_by_given_specification
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[действие. найти в библиотеке scp-программу, удовлетворяющую заданной спецификации]
 		(* <- lang_ru;; *);
@@ -110,7 +110,7 @@ action_to_find_scp_program_in_the_library_by_given_specification
 		(* <- lang_en;; *);;
 
 action_to_implement_the_specified_scp_program
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[действие. реализовать специфицированную scp-программу]
 		(* <- lang_ru;; *);
@@ -118,7 +118,7 @@ action_to_implement_the_specified_scp_program
 		(* <- lang_en;; *);;
 
 action_to_verify_scp_program
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[действие. верифицировать scp-программу]
 		(* <- lang_ru;; *);
@@ -126,7 +126,7 @@ action_to_verify_scp_program
 		(* <- lang_en;; *);;
 
 action_to_debug_scp_program
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[действие. отладить scp-программу]
 		(* <- lang_ru;; *);
@@ -134,7 +134,7 @@ action_to_debug_scp_program
 		(* <- lang_en;; *);;
 
 action_to_develop_non_atomic_abstract_sc_agent
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[действие. разработать неатомарный абстрактный sc-агент]
 		(* <- lang_ru;; *);
@@ -145,7 +145,7 @@ action_to_develop_non_atomic_abstract_sc_agent
 	   	action_to_develop_ostis_systems_knowledge_processing_machine;;
 
 action_to_decompose_non_atomic_abstract_sc_agent
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[действие. декомпозировать неатомарный абстрактный sc-агент]
 		(* <- lang_ru;; *);
@@ -153,7 +153,7 @@ action_to_decompose_non_atomic_abstract_sc_agent
 		(* <- lang_en;; *);;
 
 action_to_specify_abstract_sc_agent
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[действие. специфицировать абстрактный sc-агент]
 		(* <- lang_ru;; *);
@@ -161,7 +161,7 @@ action_to_specify_abstract_sc_agent
 		(* <- lang_en;; *);;
 
 action_to_find_abstract_sc_agent_in_the_library_by_given_specification
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[действие. найти в библиотеке абстрактный sc-агент, удовлетворяющий заданной спецификации]
 		(* <- lang_ru;; *);
@@ -169,7 +169,7 @@ action_to_find_abstract_sc_agent_in_the_library_by_given_specification
 		(* <- lang_en;; *);;
 
 action_to_verify_sc_agent
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[действие. верифицировать sc-агент]
 		(* <- lang_ru;; *);
@@ -182,7 +182,7 @@ action_to_verify_sc_agent
 		};;
 
 action_to_verify_atomic_sc_agent
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[действие. верифицировать атомарный sc-агент]
 		(* <- lang_ru;; *);
@@ -190,7 +190,7 @@ action_to_verify_atomic_sc_agent
 		(* <- lang_en;; *);;
 
 action_to_verify_non_atomic_sc_agent
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[действие. верифицировать неатомарный sc-агент]
 		(* <- lang_ru;; *);
@@ -198,7 +198,7 @@ action_to_verify_non_atomic_sc_agent
 		(* <- lang_en;; *);;
 
 action_to_debug_sc_agent
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[действие. отладить sc-агент]
 		(* <- lang_ru;; *);
@@ -211,7 +211,7 @@ action_to_debug_sc_agent
 		};;
 
 action_to_debug_non_atomic_sc_agent
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[действие. отладить неатомарный sc-агент]
 		(* <- lang_ru;; *);
@@ -219,7 +219,7 @@ action_to_debug_non_atomic_sc_agent
 		(* <- lang_en;; *);;
 
 action_to_debug_atomic_sc_agent
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[действие. отладить атомарный sc-агент]
 		(* <- lang_ru;; *);

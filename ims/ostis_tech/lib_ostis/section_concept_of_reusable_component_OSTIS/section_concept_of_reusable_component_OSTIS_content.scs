@@ -154,7 +154,7 @@ library_of_platform_independent_reusable_components
 	*);;
 
 nrel_attendant_component
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[сопутствующий компонент*] 
 	(* <- lang_ru;; *);
@@ -162,7 +162,7 @@ nrel_attendant_component
 	(* <- lang_en;; *);;
 
 nrel_library_component_decomposition
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 <- decomposition_relation;
 <- quasybinary_relation;
 => nrel_main_idtf:

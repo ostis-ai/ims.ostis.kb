@@ -6,7 +6,7 @@ subjdomain_problematic_kb_fragments
 	[Subject domain of problematic knowledge base fragments]
 	(* <- lang_en;; *);
 <- subject_domain;
-<- sc_node_struct;
+<- sc_node_structure;
 <- structure;
 -> rrel_maximum_studied_object_class:
 	structure_describing_problematic_kb_fragment;
@@ -31,7 +31,7 @@ subjdomain_problematic_kb_fragments
 	sc_garbage;;
 
 structure_describing_problematic_kb_fragment
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[структура, описывающая проблемный фрагмент базы знаний]
 	(* <- lang_ru;; *);
@@ -52,7 +52,7 @@ structure_describing_problematic_kb_fragment
 	};;
 
 incorrect_structure
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[некорректная структура]
 	(* <- lang_ru;; *);
@@ -81,7 +81,7 @@ incorrect_structure
 	*);;
 
 structure_contradicting_uniqueness_property
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[структура, противоречащая свойству единственности]
 	(* <- lang_ru;; *);
@@ -91,7 +91,7 @@ structure_contradicting_uniqueness_property
 	structure_containing_cantor_set_with_duplicate_elements;;
 
 structure_containing_cantor_set_with_duplicate_elements
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[канторовское множество содержит повторяющийся элемент]
 	(* <-lang_ru;; *);
@@ -99,7 +99,7 @@ structure_containing_cantor_set_with_duplicate_elements
 	(* <-lang_en;; *);;
 
 structure_containing_cycle_of_ordering_relation
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[цикл по отношению порядка]
 	(* <- lang_ru;; *);
@@ -107,7 +107,7 @@ structure_containing_cycle_of_ordering_relation
 	(* <- lang_en;; *);;
 
 structure_of_wrong_using_of_relations
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[несоответствие элементов связки доменам отношения]
 	(* <- lang_ru;; *);
@@ -115,7 +115,7 @@ structure_of_wrong_using_of_relations
 	(* <- lang_en;; *);;
 
 structure_of_cardinality_and_arity_of_relation_discrepancy
-<- sc_node_not_relation;
+<- sc_node_class;
 =>nrel_main_idtf:
 	[несоответствие мощности связки арности отношения]
 	(* <- lang_ru;; *);
@@ -123,7 +123,7 @@ structure_of_cardinality_and_arity_of_relation_discrepancy
 	(* <- lang_en;; *);;
 
 structure_containing_elements_one_subdividing_non_empty_crossing
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[элементы одного разбиения имеют непустое пересечение]
 	(* <- lang_ru;; *);
@@ -131,7 +131,7 @@ structure_containing_elements_one_subdividing_non_empty_crossing
 	(* <- lang_en;; *);;
 
 structure_describing_incompleteness_in_kb
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[структура, описывающая неполноту в базе знаний]
 	(* <- lang_ru;; *);
@@ -164,7 +164,7 @@ structure_describing_incompleteness_in_kb
 	*);;
 
 structure_which_elements_have_main_idtf_in_some_but_not_all_lang
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[указаны основные идентификаторы заданной сущности для некоторых, но не всех внешних языков]
 	(* <- lang_ru;; *);
@@ -172,7 +172,7 @@ structure_which_elements_have_main_idtf_in_some_but_not_all_lang
 	(* <- lang_en;; *);;
 
 structure_which_elements_have_sys_idtf_but_dont_have_main_idtf_in_all_lang
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[для заданной сущности указан системный, но не указаны основные идентификаторы для всех внешних языков]
 	(* <- lang_ru;; *);
@@ -180,7 +180,7 @@ structure_which_elements_have_sys_idtf_but_dont_have_main_idtf_in_all_lang
 	(* <- lang_en;; *);;
 
 structure_which_contains_concepts_without_any_definition_and_explanation
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[понятию предметной области не соответствует определение либо пояснение]
 	(* <- lang_ru;; *);
@@ -188,7 +188,7 @@ structure_which_contains_concepts_without_any_definition_and_explanation
 	(* <- lang_en;; *);;
 
 structure_which_contains_concepts_with_definition_but_without_using_constants
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[в определении не указаны используемые константы]
 	(* <- lang_ru;; *);
@@ -196,7 +196,7 @@ structure_which_contains_concepts_with_definition_but_without_using_constants
 	(* <- lang_en;; *);;
 
 structure_without_key_sc_element_for_semantic_neighborhood
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[не указан ключевой sc-элемент семантической окрестности]
 	(* <- lang_ru;; *);
@@ -204,7 +204,7 @@ structure_without_key_sc_element_for_semantic_neighborhood
 	(* <- lang_en;; *);;
 
 structure_without_max_studied_object_class_of_subject_domain
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[не указан максимальный класс объектов исследования предметной области]
 	(* <- lang_ru;; *);
@@ -212,7 +212,7 @@ structure_without_max_studied_object_class_of_subject_domain
 	(* <- lang_en;; *);;
 
 structure_with_partly_defined_relation
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[не указаны домены отношения]
 	(* <- lang_ru;; *);
@@ -220,7 +220,7 @@ structure_with_partly_defined_relation
 	(* <- lang_en;; *);;
 
 structure_of_checking_existence_of_measure_or_scale_of_parameter
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[не указано ни одной единицы измерения или шкалы для измеряемого параметра]
 	(* <- lang_ru;; *);
@@ -228,7 +228,7 @@ structure_of_checking_existence_of_measure_or_scale_of_parameter
 	(* <- lang_en;; *);;
 
 structure_which_contains_concepts_that_dont_belong_to_any_subjdomain
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[понятие не соотнесено ни с одной предметной областью]
 	(* <- lang_ru;; *);
@@ -236,7 +236,7 @@ structure_which_contains_concepts_that_dont_belong_to_any_subjdomain
 	(* <- lang_en;; *);;
 
 sc_garbage
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[информационный мусор]
 	(* <- lang_ru;; *);

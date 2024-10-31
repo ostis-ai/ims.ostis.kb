@@ -1,5 +1,5 @@
 section_semantic_memory_model =  [*
-sc_node_not_relation -> semantic_memory;;
+sc_node_class -> semantic_memory;;
 semantic_memory
 => nrel_main_idtf:
 	[семантическая память]
@@ -13,7 +13,7 @@ semantic_memory
 semantic_memory 
 => nrel_inclusion: count_dynamic_memory;;
 
-sc_node_not_relation -> count_dynamic_memory;;
+sc_node_class -> count_dynamic_memory;;
 count_dynamic_memory
 => nrel_main_idtf:
 	[графодинамическая память]
