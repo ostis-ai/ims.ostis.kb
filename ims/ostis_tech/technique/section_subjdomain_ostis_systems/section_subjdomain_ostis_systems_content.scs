@@ -1,7 +1,7 @@
 section_subjdomain_ostis_systems =  [*
 subjdomain_ostis_systems 
 <- subject_domain;
-<- sc_node_struct;
+<- sc_node_structure;
 <- structure;
 -> rrel_maximum_studied_object_class: ostis_system;
 -> rrel_not_maximum_studied_object_class: 
@@ -26,7 +26,7 @@ ostis_system <= nrel_abstract_basic_decomposition:
 	};;
 
 Myself
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[Собственное Я]
 	(* <- lang_ru;; *);
@@ -60,7 +60,7 @@ Myself
 	*);;
 
 nrel_subsidiary_ostis_system
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 <- binary_relation;
 => nrel_main_idtf:
 	[дочерняя ostis-система*] 

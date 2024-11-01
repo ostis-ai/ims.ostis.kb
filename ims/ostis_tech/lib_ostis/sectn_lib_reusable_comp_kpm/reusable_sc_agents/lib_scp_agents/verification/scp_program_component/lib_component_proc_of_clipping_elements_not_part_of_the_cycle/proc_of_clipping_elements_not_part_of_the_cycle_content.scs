@@ -5,16 +5,16 @@ proc_of_clipping_elements_not_part_of_the_cycle
 
 proc_of_clipping_elements_not_part_of_the_cycle = [*
 .._process1
-_<- scp_process;
+<-_ scp_process;
 
 _-> rrel_1:: rrel_in:: _start_element;
 _-> rrel_2:: rrel_in:: _last_element;
 _-> rrel_3:: rrel_in:: _struct_node;
 _-> rrel_4:: rrel_in:: _order_relation_param;
-_<= nrel_decomposition_of_action:: .._actions (*
+<=_ nrel_decomposition_of_action:: .._actions (*
 
 	_-> rrel_1:: .._proc_of_clipping_elements_not_part_of_the_cycle_operator1A (*
-		_<- searchSetStr5;;
+		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _start_element;;
 		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _node1;;
@@ -27,7 +27,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_clipping_elements_not_part_of_the_cycle_operator1B (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _set_for_next_node;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _node1;;
@@ -37,19 +37,19 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_clipping_elements_not_part_of_the_cycle_operator_return (*
-		_<- return;;
+		<-_ return;;
 
 	*);;
 
 	_-> .._proc_of_clipping_elements_not_part_of_the_cycle_operator1C (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 
 		_=> nrel_goto:: .._proc_of_clipping_elements_not_part_of_the_cycle_operator1D;;
 	*);;
 
 	_-> .._proc_of_clipping_elements_not_part_of_the_cycle_operator3A (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _struct_node;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _start_element;;
@@ -58,14 +58,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_clipping_elements_not_part_of_the_cycle_operator3B (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 
 		_=> nrel_goto:: .._proc_of_clipping_elements_not_part_of_the_cycle_operator_return;;
 	*);;
 
 	_-> .._proc_of_clipping_elements_not_part_of_the_cycle_operator1D (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _struct_node;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _node1;;
@@ -75,7 +75,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_clipping_elements_not_part_of_the_cycle_operator1F (*
-		_<- searchElStr5;;
+		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _start_element;;
 		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _node1;;
@@ -87,7 +87,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_clipping_elements_not_part_of_the_cycle_operator1G (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _struct_node;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
@@ -97,14 +97,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_clipping_elements_not_part_of_the_cycle_operator1H (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
 
 		_=> nrel_goto:: .._proc_of_clipping_elements_not_part_of_the_cycle_operator1I;;
 	*);;
 
 	_-> .._proc_of_clipping_elements_not_part_of_the_cycle_operator1I (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _struct_node;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_common:: rrel_fixed:: rrel_scp_var:: _arc1;;
@@ -114,14 +114,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_clipping_elements_not_part_of_the_cycle_operator1J (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
 
 		_=> nrel_goto:: .._proc_of_clipping_elements_not_part_of_the_cycle_operator2A;;
 	*);;
 
 	_-> .._proc_of_clipping_elements_not_part_of_the_cycle_operator2A (*
-		_<- ifCoin;;
+		<-_ ifCoin;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _last_element;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _node1;;
 
@@ -130,7 +130,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_clipping_elements_not_part_of_the_cycle_operator2B (*
-		_<- call;;
+		<-_ call;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_clipping_elements_not_part_of_the_cycle;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._proc_of_clipping_elements_not_part_of_the_cycle_param0 (*
 			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _node1;;
@@ -144,7 +144,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_clipping_elements_not_part_of_the_cycle_operator2C (*
-		_<- waitReturn;;
+		<-_ waitReturn;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _descr1;;
 
 		_=> nrel_goto:: .._proc_of_clipping_elements_not_part_of_the_cycle_operator1B;;

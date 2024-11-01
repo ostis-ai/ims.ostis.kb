@@ -5,14 +5,14 @@ proc_of_finding_identifier_extended
 
 proc_of_finding_identifier_extended = [*
 .._process1
-_<- scp_process;
+<-_ scp_process;
 
 _-> rrel_1:: rrel_in:: _elem;
 _-> rrel_2:: rrel_in:: _result_proc_of_finding_identifier_extended;
-_<= nrel_decomposition_of_action:: .._actions (*
+<=_ nrel_decomposition_of_action:: .._actions (*
 
 	_-> rrel_1:: .._proc_of_finding_identifier_extended_operator0 (*
-		_<- varAssign;;
+		<-_ varAssign;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _relation;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: nrel_main_idtf;;
 
@@ -20,7 +20,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_finding_identifier_extended_operator1A (*
-		_<- searchSetStr5;;
+		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _elem;;
 		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _elem2;;
@@ -33,7 +33,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_finding_identifier_extended_operator2A (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _mainset;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _idtf;;
@@ -43,7 +43,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_finding_identifier_extended_operator1B (*
-		_<- ifCoin;;
+		<-_ ifCoin;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _relation;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: nrel_idtf;;
 
@@ -52,12 +52,12 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_finding_identifier_extended_operator_return (*
-		_<- return;;
+		<-_ return;;
 
 	*);;
 
 	_-> .._proc_of_finding_identifier_extended_operator1C (*
-		_<- varAssign;;
+		<-_ varAssign;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _relation;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: nrel_idtf;;
 
@@ -65,28 +65,28 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_finding_identifier_extended_operator2B (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _arc2;;
 
 		_=> nrel_goto:: .._proc_of_finding_identifier_extended_operator2C;;
 	*);;
 
 	_-> .._proc_of_finding_identifier_extended_operator5 (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _set_of_languages;;
 
 		_=> nrel_goto:: .._proc_of_finding_identifier_extended_operator6;;
 	*);;
 
 	_-> .._proc_of_finding_identifier_extended_operator6 (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _mainset;;
 
 		_=> nrel_goto:: .._proc_of_finding_identifier_extended_operator1B;;
 	*);;
 
 	_-> .._proc_of_finding_identifier_extended_operator2C (*
-		_<- genElStr3;;
+		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _result_proc_of_finding_identifier_extended;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _idtf;;
@@ -95,7 +95,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_finding_identifier_extended_operator3A (*
-		_<- searchSetStr5;;
+		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _elem;;
 		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _idtf;;
@@ -108,7 +108,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_finding_identifier_extended_operator3B (*
-		_<- searchSetStr3;;
+		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _lang;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _idtf;;
@@ -119,7 +119,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_finding_identifier_extended_operator4A (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _set_of_languages;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _lang;;
@@ -129,14 +129,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_finding_identifier_extended_operator4B (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _arc1;;
 
 		_=> nrel_goto:: .._proc_of_finding_identifier_extended_operator4C;;
 	*);;
 
 	_-> .._proc_of_finding_identifier_extended_operator4C (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: languages;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _lang;;
@@ -146,7 +146,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_finding_identifier_extended_operator4D (*
-		_<- searchSetStr3;;
+		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _lang;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _idtf;;

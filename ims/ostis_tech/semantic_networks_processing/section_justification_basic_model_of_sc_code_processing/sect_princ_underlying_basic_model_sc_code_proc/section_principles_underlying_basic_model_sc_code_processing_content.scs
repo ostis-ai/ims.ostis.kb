@@ -22,7 +22,7 @@ structure
 	};;
 
 standard_structure
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[sc-конструкция стандартного вида]
 		(*<- lang_ru;;*);
@@ -51,7 +51,7 @@ standard_structure
 	};;
 
 sc_1_el_str
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[одноэлементная sc-конструкция]
 		(*<- lang_ru;;*);
@@ -86,7 +86,7 @@ sc_1_el_str
 	*);;
 
 sc_3_el_str
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[трехэлементная sc-конструкция]
 		(*<- lang_ru;;*);
@@ -121,7 +121,7 @@ sc_3_el_str
 	*);;
 
 sc_5_el_str
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[пятиэлементная sc-конструкция]
 		(*<- lang_ru;;*);
@@ -156,7 +156,7 @@ sc_5_el_str
 	*);;
 
 non_standard_structure
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[sc-конструкция нестандартного вида]
 		(*<- lang_ru;;*);

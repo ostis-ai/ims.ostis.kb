@@ -8,14 +8,14 @@ agent_of_change_arc_direction
 
 agent_of_change_arc_direction = [*
 .._process1
-_<- scp_process;
+<-_ scp_process;
 
 _-> rrel_1:: rrel_in:: _event;
 _-> rrel_2:: rrel_in:: _input_arc;
-_<= nrel_decomposition_of_action:: .._actions (*
+<=_ nrel_decomposition_of_action:: .._actions (*
 
 	_-> rrel_1:: .._agent_of_change_arc_direction_operator1A (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _temp;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: _input_arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _action;;
@@ -24,7 +24,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_change_arc_direction_operator1B (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_to_change_arc_direction;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
@@ -34,7 +34,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_change_arc_direction_operator1C (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _param;;
@@ -44,12 +44,12 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_change_arc_direction_operator_return (*
-		_<- return;;
+		<-_ return;;
 
 	*);;
 
 	_-> .._agent_of_change_arc_direction_operator_check_is_edge (*
-		_<- ifType;;
+		<-_ ifType;;
 		_-> rrel_1:: rrel_edge:: rrel_fixed:: rrel_scp_var:: _param;;
 
 		_=> nrel_then:: .._agent_of_change_arc_direction_operator_call_proc_of_adding_validating_message_1;;
@@ -57,7 +57,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_change_arc_direction_operator_call_proc_of_adding_validating_message_1 (*
-		_<- call;;
+		<-_ call;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_adding_validating_message;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._agent_of_change_arc_direction_param0 (*
 			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
@@ -69,7 +69,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_change_arc_direction_operator_check_is_arc (*
-		_<- ifType;;
+		<-_ ifType;;
 		_-> rrel_1:: rrel_fixed:: rrel_pos_const_perm:: rrel_scp_var:: _param;;
 
 		_=> nrel_then:: .._agent_of_change_arc_direction_operator_find_nodes_1;;
@@ -77,7 +77,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_change_arc_direction_operator_find_nodes_1 (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _node_1;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _param;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _node_2;;
@@ -86,7 +86,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_change_arc_direction_operator_check_is_binary_arc (*
-		_<- ifType;;
+		<-_ ifType;;
 		_-> rrel_1:: rrel_common:: rrel_fixed:: rrel_scp_var:: _param;;
 
 		_=> nrel_then:: .._agent_of_change_arc_direction_operator_find_nodes_2;;
@@ -94,7 +94,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_change_arc_direction_operator_find_nodes_2 (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _node_1;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _param;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _node_2;;
@@ -103,7 +103,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_change_arc_direction_operator_call_proc_of_adding_validating_message (*
-		_<- call;;
+		<-_ call;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_adding_validating_message;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._agent_of_change_arc_direction_param1 (*
 			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
@@ -115,14 +115,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_change_arc_direction_operator_waitreturn_proc_of_adding_validating_message (*
-		_<- waitReturn;;
+		<-_ waitReturn;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _descr1;;
 
 		_=> nrel_goto:: .._agent_of_change_arc_direction_operator_return;;
 	*);;
 
 	_-> .._agent_of_change_arc_direction_operator_gen_binary_arc (*
-		_<- genElStr3;;
+		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _node_2;;
 		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _result_arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _node_1;;
@@ -131,21 +131,21 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_change_arc_direction_operator_gen_set_of_possible_structs (*
-		_<- genEl;;
+		<-_ genEl;;
 		_-> rrel_1:: rrel_assign:: rrel_node:: rrel_scp_var:: _possible_structs;;
 
 		_=> nrel_goto:: .._agent_of_change_arc_direction_operator_gen_set_of_structs;;
 	*);;
 
 	_-> .._agent_of_change_arc_direction_operator_gen_set_of_structs (*
-		_<- genEl;;
+		<-_ genEl;;
 		_-> rrel_1:: rrel_assign:: rrel_node:: rrel_scp_var:: _structs;;
 
 		_=> nrel_goto:: .._agent_of_change_arc_direction_operator_find_structs;;
 	*);;
 
 	_-> .._agent_of_change_arc_direction_operator_find_structs (*
-		_<- searchSetStr3;;
+		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_assign:: rrel_const:: rrel_scp_var:: rrel_struct:: _elem;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _param;;
@@ -155,7 +155,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_change_arc_direction_operator_find_structure (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _possible_structs;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_const:: rrel_scp_var:: _structure;;
@@ -165,14 +165,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_change_arc_direction_operator_erase_struct (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _arc1;;
 
 		_=> nrel_goto:: .._agent_of_change_arc_direction_operator_is_section;;
 	*);;
 
 	_-> .._agent_of_change_arc_direction_operator_call_proc_of_transferring_incident_elements_from_one_arc_to_another (*
-		_<- call;;
+		<-_ call;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_transferring_incident_elements_from_one_arc_to_another;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._agent_of_change_arc_direction_param2 (*
 			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _param;;
@@ -184,35 +184,35 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_change_arc_direction_operator_waitreturn_proc_of_transferring_incident_elements_from_one_arc_to_another (*
-		_<- waitReturn;;
+		<-_ waitReturn;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _descr3;;
 
 		_=> nrel_goto:: .._agent_of_change_arc_direction_operator_delete_param;;
 	*);;
 
 	_-> .._agent_of_change_arc_direction_operator_delete_param (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _param;;
 
 		_=> nrel_goto:: .._agent_of_change_arc_direction_operator_delete_possible_structs;;
 	*);;
 
 	_-> .._agent_of_change_arc_direction_operator_delete_possible_structs (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _structs;;
 
 		_=> nrel_goto:: .._agent_of_change_arc_direction_operator_delete_structs;;
 	*);;
 
 	_-> .._agent_of_change_arc_direction_operator_delete_structs (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _possible_structs;;
 
 		_=> nrel_goto:: .._agent_of_change_arc_direction_operator_return;;
 	*);;
 
 	_-> .._agent_of_change_arc_direction_operator_is_section (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: section;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _structure;;
@@ -222,7 +222,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_change_arc_direction_operator_struct_is_found (*
-		_<- genElStr3;;
+		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _structs;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _new_arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _structure;;
@@ -231,7 +231,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_change_arc_direction_operator_struct_is_found_1 (*
-		_<- genElStr3;;
+		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _structure;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _new_arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _result_arc;;
@@ -240,7 +240,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_change_arc_direction_operator_gen_arc (*
-		_<- genElStr3;;
+		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _node_2;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _result_arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _node_1;;
@@ -249,7 +249,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_change_arc_direction_operator_waitreturn_proc_of_adding_validating_message_1 (*
-		_<- waitReturn;;
+		<-_ waitReturn;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _descr2;;
 
 		_=> nrel_goto:: .._agent_of_change_arc_direction_operator_return;;

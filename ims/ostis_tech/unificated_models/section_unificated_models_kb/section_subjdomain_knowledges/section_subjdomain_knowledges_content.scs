@@ -6,7 +6,7 @@ subject_domain_of_knowledges
 	[Subject domain of knowledges]	
 	(* <- lang_en;; *);
 <- subject_domain;
-<- sc_node_struct;
+<- sc_node_structure;
 <- structure;
 <= nrel_primary_elements_class_private_subject_domain: subject_domain_of_structures;
 => nrel_primary_elements_class_private_subject_domain: subject_domain_of_logical_formulas_and_logical_ontologies;
@@ -40,7 +40,7 @@ subject_domain_of_knowledges
 	nrel_exercise;
 	nrel_right_answer;;
 
-sc_node_not_relation -> knowledge;;
+sc_node_class -> knowledge;;
 knowledge
 => nrel_main_idtf:
 	[знание] 
@@ -76,7 +76,7 @@ knowledge
 		*);;
 	*);;
 
-sc_node_norole_relation -> nrel_metaknowledge;;	
+sc_node_non_role_relation -> nrel_metaknowledge;;	
 nrel_metaknowledge
 => nrel_main_idtf:
 	[метазнание*] 
@@ -104,7 +104,7 @@ nrel_metaknowledge
 		*);;
 	*);;
 
-sc_node_not_relation -> section;;	
+sc_node_class -> section;;	
 section
 => nrel_main_idtf:
 	[раздел] 
@@ -166,7 +166,7 @@ section
 		*);;
 	*);;	
 
-sc_node_not_relation -> section_argumentation;;
+sc_node_class -> section_argumentation;;
 section_argumentation
 => nrel_main_idtf:
 	[раздел-обоснование]
@@ -204,7 +204,7 @@ section_argumentation
 		*);;
 	*);;
 
-sc_node_not_relation -> section_documentation;;	
+sc_node_class -> section_documentation;;	
 section_documentation
 => nrel_main_idtf:
 	[раздел-документация]
@@ -242,7 +242,7 @@ section_documentation
 		*);;
 	*);;
 
-sc_node_not_relation -> section_description_of_subject_domain;;	
+sc_node_class -> section_description_of_subject_domain;;	
 section_description_of_subject_domain
 => nrel_main_idtf:
 	[раздел-описание предметной области]
@@ -265,7 +265,7 @@ section_description_of_subject_domain
 		*);;
 	*);;
 
-sc_node_not_relation -> section_description_of_semantic_neighborhood;;
+sc_node_class -> section_description_of_semantic_neighborhood;;
 section_description_of_semantic_neighborhood
 => nrel_main_idtf:
 	[раздел-описание семантической окрестности]
@@ -288,7 +288,7 @@ section_description_of_semantic_neighborhood
 		*);;
 	*);;
 
-sc_node_not_relation -> section_description_of_principles;;
+sc_node_class -> section_description_of_principles;;
 section_description_of_principles
 => nrel_main_idtf:
 	[раздел-описание принципов]
@@ -311,7 +311,7 @@ section_description_of_principles
 		*);;
 	*);;
 
-sc_node_norole_relation -> nrel_section_decomposition;;
+sc_node_non_role_relation -> nrel_section_decomposition;;
 nrel_section_decomposition
 => nrel_main_idtf:
 	[декомпозиция раздела*]
@@ -340,7 +340,7 @@ nrel_section_decomposition
 		*);;
 	*);;
 
-sc_node_norole_relation -> nrel_section_base_order;;
+sc_node_non_role_relation -> nrel_section_base_order;;
 nrel_section_base_order
 => nrel_main_idtf:
 	[базовый порядок разделов*]
@@ -375,7 +375,7 @@ nrel_section_base_order
 		*);;
 	*);;
 
-sc_node_not_relation -> non_atomic_section;;
+sc_node_class -> non_atomic_section;;
 non_atomic_section
 => nrel_main_idtf:
 	[неатомарный раздел]
@@ -404,7 +404,7 @@ non_atomic_section
 		*);;
 	*);;
 
-sc_node_not_relation -> atomic_section;;
+sc_node_class -> atomic_section;;
 atomic_section
 => nrel_main_idtf:
 	[атомарный раздел]
@@ -513,7 +513,7 @@ rrel_main_key_sc_element
 	*);;
 
 nrel_key_sc_element_order
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[порядок ключевых sc-элементов*]
 	(* <- lang_ru;; *);
@@ -540,7 +540,7 @@ nrel_key_sc_element_order
 		*);;
 	*);;
 
-sc_node_norole_relation -> nrel_comment;;
+sc_node_non_role_relation -> nrel_comment;;
 nrel_comment
 => nrel_main_idtf:
 	[комментарий*]
@@ -568,7 +568,7 @@ nrel_comment
 		*);;
 	*);;
 
-sc_node_norole_relation -> nrel_summary;;
+sc_node_non_role_relation -> nrel_summary;;
 nrel_summary
 => nrel_main_idtf:
 	[аннотация*]
@@ -593,7 +593,7 @@ nrel_summary
 		*);;
 	*);;
 
-sc_node_norole_relation -> nrel_introduction;;
+sc_node_non_role_relation -> nrel_introduction;;
 nrel_introduction
 => nrel_main_idtf:
 	[введение*]
@@ -618,7 +618,7 @@ nrel_introduction
 		*);;
 	*);;
 
-sc_node_norole_relation -> nrel_conclusion;;
+sc_node_non_role_relation -> nrel_conclusion;;
 nrel_conclusion
 => nrel_main_idtf:
 	[заключение*]
@@ -643,7 +643,7 @@ nrel_conclusion
 		*);;
 	*);;
 
-sc_node_norole_relation -> nrel_preface;;
+sc_node_non_role_relation -> nrel_preface;;
 nrel_preface
 => nrel_main_idtf:
 	[предисловие*]
@@ -668,7 +668,7 @@ nrel_preface
 		*);;
 	*);;
 
-sc_node_norole_relation -> nrel_postface;;
+sc_node_non_role_relation -> nrel_postface;;
 nrel_postface
 => nrel_main_idtf:
 	[послесловие*]
@@ -693,7 +693,7 @@ nrel_postface
 		*);;
 	*);;
 
-sc_node_norole_relation -> nrel_epigraph;;
+sc_node_non_role_relation -> nrel_epigraph;;
 nrel_epigraph
 => nrel_main_idtf:
 	[эпиграф*]
@@ -719,7 +719,7 @@ nrel_epigraph
 	*);;
 
 nrel_detalization
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[детализация*]
 	(* <- lang_ru;; *);
@@ -743,7 +743,7 @@ nrel_detalization
 		*);;
 	*);;
 
-sc_node_not_relation -> exercise;;
+sc_node_class -> exercise;;
 exercise 
 => nrel_main_idtf: 
 	[упражнение] 
@@ -751,7 +751,7 @@ exercise
 	[exercise] 
 	(*<-lang_en;;*);;
 
-sc_node_norole_relation -> nrel_exercise;;
+sc_node_non_role_relation -> nrel_exercise;;
 nrel_exercise 
 => nrel_main_idtf: 
 	[упражнение*] 
@@ -788,7 +788,7 @@ nrel_exercise
 		*);;
 	*);;
 
-sc_node_norole_relation -> nrel_right_answer;;
+sc_node_non_role_relation -> nrel_right_answer;;
 nrel_right_answer 
 => nrel_main_idtf: 
 	[правильный ответ*] 

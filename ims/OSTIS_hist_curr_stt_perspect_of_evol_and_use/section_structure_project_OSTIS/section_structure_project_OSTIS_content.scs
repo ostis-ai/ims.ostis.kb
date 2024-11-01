@@ -168,7 +168,7 @@ project_smart_home.system
 	(* <- lang_ru;; *);;		
 
 nrel_family_subprojects
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 <- binary_relation;
 <- taxonomy_relation;
 => nrel_main_idtf:
@@ -178,7 +178,7 @@ nrel_family_subprojects
 	(* <- lang_en;; *);;
 
 nrel_subproject
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 <- binary_relation;
 <- taxonomy_relation;
 <- strict_order_relation;

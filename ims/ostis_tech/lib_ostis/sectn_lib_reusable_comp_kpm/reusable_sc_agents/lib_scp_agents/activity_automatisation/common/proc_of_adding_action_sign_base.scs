@@ -4,14 +4,14 @@ proc_of_adding_action_sign_base
 
 proc_of_adding_action_sign_base = [*
 .._process1
-_<- scp_process;
+<-_ scp_process;
 
 _-> rrel_1:: rrel_in:: _action_sign;
 _-> rrel_2:: rrel_in:: _class;
-_<= nrel_decomposition_of_action:: .._actions (*
+<=_ nrel_decomposition_of_action:: .._actions (*
 
 	_-> rrel_1:: .._proc_of_adding_action_sign_base_operator_get_class_sign (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _class;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _class_sign;;
@@ -21,7 +21,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_adding_action_sign_base_operator_D1 (*
-		_<- searchElStr5;;
+		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _class_sign;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _prev_last_action;;
@@ -33,19 +33,19 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_adding_action_sign_base_operator_return (*
-		_<- return;;
+		<-_ return;;
 
 	*);;
 
 	_-> .._proc_of_adding_action_sign_base_operator_D2 (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _marked_arc;;
 
 		_=> nrel_goto:: .._proc_of_adding_action_sign_base_operator_D3;;
 	*);;
 
 	_-> .._proc_of_adding_action_sign_base_operator_D4 (*
-		_<- genElStr5;;
+		<-_ genElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _class_sign;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _action_sign;;
@@ -56,7 +56,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_adding_action_sign_base_operator_D3 (*
-		_<- genElStr5;;
+		<-_ genElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _prev_last_action;;
 		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _action_sign;;

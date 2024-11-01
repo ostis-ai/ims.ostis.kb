@@ -5,15 +5,15 @@ proc_of_calculation_number_of_all_types_of_input_connections
 
 proc_of_calculation_number_of_all_types_of_input_connections = [*
 .._process1
-_<- scp_process;
+<-_ scp_process;
 
 _-> rrel_1:: rrel_in:: _input_set;
 _-> rrel_2:: rrel_in:: _ontology;
 _-> rrel_3:: rrel_in:: _set_of_links;
-_<= nrel_decomposition_of_action:: .._actions (*
+<=_ nrel_decomposition_of_action:: .._actions (*
 
 	_-> rrel_1:: .._proc_of_calculation_number_of_all_types_of_input_connections_operator3A (*
-		_<- searchElStr5;;
+		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _subject_domain;;
 		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _ontology;;
@@ -25,7 +25,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_number_of_all_types_of_input_connections_operator3A1 (*
-		_<- varAssign;;
+		<-_ varAssign;;
 		_-> rrel_1:: rrel_assign:: rrel_link:: rrel_scp_var:: _accessories_arc;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [0];;
 
@@ -33,12 +33,12 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_number_of_all_types_of_input_connections_operator_return (*
-		_<- return;;
+		<-_ return;;
 
 	*);;
 
 	_-> .._proc_of_calculation_number_of_all_types_of_input_connections_operator3B (*
-		_<- searchSetStr3;;
+		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _input_set;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _current_vertex;;
@@ -49,7 +49,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_number_of_all_types_of_input_connections_operator_all_elements_loop_enter (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _all_vertexes;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _vertex;;
@@ -59,56 +59,56 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_number_of_all_types_of_input_connections_operator_erase_set_vertex (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _all_vertexes;;
 
 		_=> nrel_goto:: .._proc_of_calculation_number_of_all_types_of_input_connections_operator_return;;
 	*);;
 
 	_-> .._proc_of_calculation_number_of_all_types_of_input_connections_operator_loop_arc_erase (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _arc1;;
 
 		_=> nrel_goto:: .._proc_of_calculation_number_of_all_types_of_input_connections_operator_gen_set_of_input_arcs;;
 	*);;
 
 	_-> .._proc_of_calculation_number_of_all_types_of_input_connections_operator_erase_set_of_relations (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _set_of_relations;;
 
 		_=> nrel_goto:: .._proc_of_calculation_number_of_all_types_of_input_connections_operator_erase_set_of_input_arcs;;
 	*);;
 
 	_-> .._proc_of_calculation_number_of_all_types_of_input_connections_operator_erase_set_of_input_arcs (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _set_of_input_arcs;;
 
 		_=> nrel_goto:: .._proc_of_calculation_number_of_all_types_of_input_connections_operator_erase_accessories_arc;;
 	*);;
 
 	_-> .._proc_of_calculation_number_of_all_types_of_input_connections_operator_erase_accessories_arc (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_link:: rrel_node:: rrel_scp_var:: _accessories_arc;;
 
 		_=> nrel_goto:: .._proc_of_calculation_number_of_all_types_of_input_connections_operator_erase_set_vertex;;
 	*);;
 
 	_-> .._proc_of_calculation_number_of_all_types_of_input_connections_operator_gen_set_of_input_arcs (*
-		_<- genEl;;
+		<-_ genEl;;
 		_-> rrel_1:: rrel_assign:: rrel_node:: rrel_scp_var:: _set_of_input_arcs;;
 
 		_=> nrel_goto:: .._proc_of_calculation_number_of_all_types_of_input_connections_operator_gen_set_all_relations;;
 	*);;
 
 	_-> .._proc_of_calculation_number_of_all_types_of_input_connections_operator_gen_set_all_relations (*
-		_<- genEl;;
+		<-_ genEl;;
 		_-> rrel_1:: rrel_assign:: rrel_node:: rrel_scp_var:: _set_of_relations;;
 
 		_=> nrel_goto:: .._proc_of_calculation_number_of_all_types_of_input_connections_operator3C1;;
 	*);;
 
 	_-> .._proc_of_calculation_number_of_all_types_of_input_connections_operator3C1 (*
-		_<- searchSetStr3;;
+		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _node;;
 		_-> rrel_2:: rrel_assign:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _vertex;;
@@ -119,7 +119,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_number_of_all_types_of_input_connections_operator3C2 (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _set_of_input_arcs;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
@@ -129,7 +129,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_number_of_all_types_of_input_connections_operator_add_empty_link (*
-		_<- genElStr3;;
+		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _set_of_links;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: [0];;
@@ -138,14 +138,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_number_of_all_types_of_input_connections_operator3C3 (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _arc1;;
 
 		_=> nrel_goto:: .._proc_of_calculation_number_of_all_types_of_input_connections_operator3C4;;
 	*);;
 
 	_-> .._proc_of_calculation_number_of_all_types_of_input_connections_operator3C15 (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _set_of_input_arcs;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc2;;
@@ -155,21 +155,21 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_number_of_all_types_of_input_connections_operator3C16 (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _arc1;;
 
 		_=> nrel_goto:: .._proc_of_calculation_number_of_all_types_of_input_connections_operator3C17;;
 	*);;
 
 	_-> .._proc_of_calculation_number_of_all_types_of_input_connections_operator_gen_numb_of_types (*
-		_<- genEl;;
+		<-_ genEl;;
 		_-> rrel_1:: rrel_assign:: rrel_link:: rrel_node:: rrel_scp_var:: _numb_of_types;;
 
 		_=> nrel_goto:: .._proc_of_calculation_number_of_all_types_of_input_connections_operator3C22;;
 	*);;
 
 	_-> .._proc_of_calculation_number_of_all_types_of_input_connections_operator3C22 (*
-		_<- call;;
+		<-_ call;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_cardinality_calculation;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: agent_of_calculation_number_of_all_types_of_input_connections_operator3C25_params (*
 			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _set_of_relations;;
@@ -181,14 +181,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_number_of_all_types_of_input_connections_operator3C23 (*
-		_<- waitReturn;;
+		<-_ waitReturn;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _descr1;;
 
 		_=> nrel_goto:: .._proc_of_calculation_number_of_all_types_of_input_connections_operator3C24;;
 	*);;
 
 	_-> .._proc_of_calculation_number_of_all_types_of_input_connections_operator3C24 (*
-		_<- contAdd;;
+		<-_ contAdd;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _numb_of_types;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _numb_of_types;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _accessories_arc;;
@@ -197,7 +197,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_number_of_all_types_of_input_connections_operator3C25 (*
-		_<- varAssign;;
+		<-_ varAssign;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _accessories_arc;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [0];;
 
@@ -205,7 +205,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_number_of_all_types_of_input_connections_operator3C26 (*
-		_<- genElStr3;;
+		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _set_of_links;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _numb_of_types;;
@@ -214,7 +214,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_number_of_all_types_of_input_connections_operator3C17 (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _node;;
 		_-> rrel_2:: rrel_common:: rrel_fixed:: rrel_scp_var:: _arc2;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _some_vertex;;
@@ -223,7 +223,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_number_of_all_types_of_input_connections_operator3C18 (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _subject_domain;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _node;;
@@ -233,7 +233,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_number_of_all_types_of_input_connections_operator3C19 (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_assign:: rrel_node:: rrel_scp_var:: _some_relation;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_common:: rrel_fixed:: rrel_scp_var:: _arc2;;
@@ -242,7 +242,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_number_of_all_types_of_input_connections_operator3C20 (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _set_of_relations;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _some_relation;;
@@ -252,7 +252,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_number_of_all_types_of_input_connections_operator3C21 (*
-		_<- genElStr3;;
+		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _set_of_relations;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _some_relation;;
@@ -261,7 +261,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_number_of_all_types_of_input_connections_operator3C4 (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _node;;
 		_-> rrel_2:: rrel_fixed:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _some_vertex;;
@@ -270,7 +270,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_number_of_all_types_of_input_connections_operator3C5 (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _subject_domain;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _node;;
@@ -280,7 +280,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_number_of_all_types_of_input_connections_operator3C6 (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _role_relation;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
@@ -290,29 +290,29 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_number_of_all_types_of_input_connections_operator3C9 (*
-		_<- searchElStr5;;
+		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _node;;
 		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _possible_vertex;;
 		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
-		_-> rrel_5:: rrel_assign:: rrel_scp_var:: _norole_relation;;
+		_-> rrel_5:: rrel_assign:: rrel_scp_var:: _non_role_relation;;
 
 		_=> nrel_then:: .._proc_of_calculation_number_of_all_types_of_input_connections_operator3C10;;
 		_=> nrel_else:: .._proc_of_calculation_number_of_all_types_of_input_connections_operator3C2;;
 	*);;
 
 	_-> .._proc_of_calculation_number_of_all_types_of_input_connections_operator3C10 (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: quasybinary_relation;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
-		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _norole_relation;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _non_role_relation;;
 
 		_=> nrel_then:: .._proc_of_calculation_number_of_all_types_of_input_connections_operator3C11;;
 		_=> nrel_else:: .._proc_of_calculation_number_of_all_types_of_input_connections_operator3C2;;
 	*);;
 
 	_-> .._proc_of_calculation_number_of_all_types_of_input_connections_operator3C11 (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _subject_domain;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _possible_vertex;;
@@ -322,26 +322,26 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_number_of_all_types_of_input_connections_operator3C12 (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _set_of_relations;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
-		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _norole_relation;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _non_role_relation;;
 
 		_=> nrel_then:: .._proc_of_calculation_number_of_all_types_of_input_connections_operator3C2;;
 		_=> nrel_else:: .._proc_of_calculation_number_of_all_types_of_input_connections_operator3C13;;
 	*);;
 
 	_-> .._proc_of_calculation_number_of_all_types_of_input_connections_operator3C13 (*
-		_<- genElStr3;;
+		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _set_of_relations;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
-		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _norole_relation;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _non_role_relation;;
 
 		_=> nrel_goto:: .._proc_of_calculation_number_of_all_types_of_input_connections_operator3C2;;
 	*);;
 
 	_-> .._proc_of_calculation_number_of_all_types_of_input_connections_operator3C7 (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _set_of_relations;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _role_relation;;
@@ -351,7 +351,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_number_of_all_types_of_input_connections_operator3C14 (*
-		_<- varAssign;;
+		<-_ varAssign;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _accessories_arc;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [1];;
 
@@ -359,7 +359,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_number_of_all_types_of_input_connections_operator3C8 (*
-		_<- genElStr3;;
+		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _set_of_relations;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _role_relation;;

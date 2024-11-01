@@ -6,7 +6,7 @@ subject_domain_of_actions_and_tasks
 	[Subject domain of actions and tasks]
 	(* <- lang_en;; *);
 <- subject_domain;
-<- sc_node_struct;
+<- sc_node_structure;
 <- structure;
 => nrel_primary_elements_class_private_subject_domain: subject_domain_of_actions_executing_in_sc_memory;
 => nrel_primary_elements_class_private_subject_domain: subject_domain_of_abstract_sc_agents;
@@ -88,7 +88,7 @@ subject_domain_of_actions_and_tasks
 	nrel_second_argument_class;;
 
 non_atomic_action_class
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[неатомарный класс действий]
 	(* <- lang_ru;; *);
@@ -112,7 +112,7 @@ non_atomic_action_class
 	*);;
 
 atomic_action_class
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[атомарный класс действий]
 	(* <- lang_ru;; *);
@@ -136,7 +136,7 @@ atomic_action_class
 	*);;
 
 action
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[действие]
 	(* <- lang_ru;; *);
@@ -250,7 +250,7 @@ action
 
 
 information_action
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[информационное действие]
 	(* <- lang_ru;; *);
@@ -275,7 +275,7 @@ information_action
 	
 	
 behavioral_action
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[поведенческое действие]
 	(* <- lang_ru;; *);
@@ -300,7 +300,7 @@ behavioral_action
 	
 
 effector_action
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[эффекторное действие]
 	(* <- lang_ru;; *);
@@ -308,7 +308,7 @@ effector_action
 	(* <- lang_en;; *);;
 	
 receptor_action
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[рецепторное действие]
 	(* <- lang_ru;; *);
@@ -316,7 +316,7 @@ receptor_action
 	(* <- lang_en;; *);;
 	
 action_in_sc_memory
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[действие в sc-памяти]
 	(* <- lang_ru;; *);
@@ -324,7 +324,7 @@ action_in_sc_memory
 	(* <- lang_en;; *);;
 	
 action_in_the_external_environment_ostis_system
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[действие во внешней среде ostis-системы]
 	(* <- lang_ru;; *);
@@ -332,7 +332,7 @@ action_in_the_external_environment_ostis_system
 	(* <- lang_en;; *);;
 	
 effector_action_ostis_system
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[эффекторное действие ostis-системы]
 	(* <- lang_ru;; *);
@@ -340,7 +340,7 @@ effector_action_ostis_system
 	(* <- lang_en;; *);;
 	
 receptor_action_ostis_system
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[рецепторное действие ostis-системы]
 	(* <- lang_ru;; *);
@@ -348,7 +348,7 @@ receptor_action_ostis_system
 	(* <- lang_en;; *);;
 
 action_initiated
-<- sc_node_not_relation; 
+<- sc_node_class; 
 => nrel_main_idtf:
 	[инициированное действие]
 	(* <- lang_ru;; *);
@@ -379,7 +379,7 @@ action_initiated
 	
 	
 performed_action
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[выполняемое действие]
 	(* <- lang_ru;; *);
@@ -415,7 +415,7 @@ performed_action
 
 
 active_action
-<- sc_node_not_relation;	
+<- sc_node_class;	
 => nrel_main_idtf:
 	[активное действие]
 	(* <- lang_ru;; *);
@@ -440,7 +440,7 @@ active_action
 
 
 deferred_action
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[отложенное действие]
 	(* <- lang_ru;; *);
@@ -471,7 +471,7 @@ deferred_action
 
 
 planned_action
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[планируемое действие]
 	(* <- lang_ru;; *);
@@ -500,7 +500,7 @@ planned_action
 
 
 action_finished
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[выполненное действие]
 	(* <- lang_ru;; *);
@@ -540,7 +540,7 @@ action_finished
 
 
 action_finished_successfully
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[успешно выполненное действие]
 	(* <- lang_ru;; *);
@@ -565,7 +565,7 @@ action_finished_successfully
 	
 	
 action_finished_unsuccessfully
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[безуспешно выполненное действие]
 	(* <- lang_ru;; *);
@@ -590,7 +590,7 @@ action_finished_unsuccessfully
 => nrel_inclusion: action_finished_with_error;;
 
 action_finished_with_error
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[действие, выполненное с ошибкой]
 	(* <- lang_ru;; *);
@@ -613,7 +613,7 @@ action_finished_with_error
 	*);;
 	
 priority_actions
-<- sc_node_not_relation;	
+<- sc_node_class;	
 => nrel_main_idtf:
 	[приоритет действия]
 	(* <- lang_ru;; *);
@@ -684,7 +684,7 @@ rrel_action_with_very_low_priority
 	
 
 subject
-<- sc_node_not_relation;	
+<- sc_node_class;	
 => nrel_main_idtf:
 	[субъект]
 	(* <- lang_ru;; *);
@@ -707,7 +707,7 @@ subject
 
 	
 internal_subject_ostis_system
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[внутренний субъект ostis-системы]
 	(* <- lang_ru;; *);
@@ -739,7 +739,7 @@ internal_subject_ostis_system
 
 
 external_subject_ostis_system_interaction
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[внешний субъект ostis-системы, с которым осуществляется взаимодействие]
 	(* <- lang_ru;; *);
@@ -764,7 +764,7 @@ external_subject_ostis_system_interaction
 
 
 external_subject_ostis_system_without_interaction
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[внешний субъект ostis-системы, с которым взаимодействие не происходит]
 	(* <- lang_ru;; *);
@@ -773,7 +773,7 @@ external_subject_ostis_system_without_interaction
 
 
 actions_class
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[класс действий]
 	(* <- lang_ru;; *);
@@ -816,7 +816,7 @@ actions_class
 	*);;	
 	
 independent_actions_class
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[класс автономных действий]
 	(* <- lang_ru;; *);
@@ -839,7 +839,7 @@ independent_actions_class
 	*);;
 
 non_independent_actions_class
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[класс неавтономных действий]
 	(* <- lang_ru;; *);
@@ -847,7 +847,7 @@ non_independent_actions_class
 	(* <- lang_en;; *);;		
 
 nrel_decomposition_of_action
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[декомпозиция действия*]
 	(* <- lang_ru;; *);
@@ -878,7 +878,7 @@ nrel_decomposition_of_action
 <- quasybinary_relation;;	
 
 nrel_subaction
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[поддействие*]
 	(* <- lang_ru;; *);
@@ -912,7 +912,7 @@ nrel_subaction
 	nrel_temporal_part;;
 
 nrel_abstract_sub_action
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[абстрактное поддействие*]
 	(* <- lang_ru;; *);
@@ -923,7 +923,7 @@ nrel_abstract_sub_action
 	(* <- lang_ru;; *);;
 
 nrel_goto_new
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[последовательность действий*]
 	(* <- lang_ru;; *);
@@ -964,7 +964,7 @@ nrel_goto_new
 	nrel_error;;
 
 nrel_goto
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[#следующий оператор*]
 	(* <- lang_ru;; *);
@@ -989,7 +989,7 @@ nrel_goto
 	*);;
 
 nrel_conjunction_of_previous_actions
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[конъюнкция предшествующих действий*]
 	(* <- lang_ru;; *);
@@ -1020,7 +1020,7 @@ nrel_conjunction_of_previous_actions
 	*);;
 
 nrel_condition_control
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[проверка условия]
 	(* <- lang_ru;; *);
@@ -1053,7 +1053,7 @@ nrel_condition_control
 	*);;	
 	
 nrel_then
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[последовательность действий при положительном результате*]
 	(* <- lang_ru;; *);
@@ -1084,7 +1084,7 @@ nrel_then
 	*);;
 	
 nrel_else_new
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[последовательность действий при отрицательном результате*]
 	(* <- lang_ru;; *);
@@ -1117,7 +1117,7 @@ nrel_else_new
 
 	
 nrel_else
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[#следующий оператор при безуспешном выполнении*]
 	(* <- lang_ru;; *);
@@ -1142,7 +1142,7 @@ nrel_else
 	*);;
 
 nrel_error
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[последовательность действий в случае ошибки*]
 	(* <- lang_ru;; *);
@@ -1169,7 +1169,7 @@ nrel_error
 	*);;
 
 nrel_result
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[результат*]
 	(* <- lang_ru;; *);
@@ -1197,7 +1197,7 @@ nrel_result
 	*);;	
 	
 task
-<- sc_node_not_relation;	
+<- sc_node_class;	
 => nrel_main_idtf:
 	[задача]
 	(* <- lang_ru;; *);
@@ -1267,7 +1267,7 @@ task
 
 	
 procedural_formulation_of_task
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[процедурная формулировка задачи]
 	(* <- lang_ru;; *);
@@ -1296,7 +1296,7 @@ procedural_formulation_of_task
 
 
 declarative_formulation_of_task
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[декларативная формулировка задачи]
 	(* <- lang_ru;; *);
@@ -1325,7 +1325,7 @@ declarative_formulation_of_task
 
 
 class_of_tasks
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[класс задач]
 	(* <- lang_ru;; *);
@@ -1353,7 +1353,7 @@ class_of_tasks
 
 
 task_action
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[вопрос]
 	(* <- lang_ru;; *);
@@ -1365,7 +1365,7 @@ task_action
 	(* <- lang_ru;; *);;
 
 command
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[команда]
 	(* <- lang_ru;; *);
@@ -1395,7 +1395,7 @@ command
 	*);;	
 	
 command_class
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[класс команд]
 	(* <- lang_ru;; *);
@@ -1441,7 +1441,7 @@ command_class
 	};;
 
 user_interface_command_class
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[класс интерфейсных пользовательских команд]
 	(* <- lang_ru;; *);
@@ -1449,7 +1449,7 @@ user_interface_command_class
 	(* <- lang_en;; *);;
 	
 interface_command_class_of_ostis_user
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[класс интерфейсных команд пользователя ostis-системы]
 	(* <- lang_ru;; *);
@@ -1457,7 +1457,7 @@ interface_command_class_of_ostis_user
 	(* <- lang_en;; *);;
 	
 command_class_without_arguments
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[класс команд без аргументов]
 	(* <- lang_ru;; *);
@@ -1465,7 +1465,7 @@ command_class_without_arguments
 	(* <- lang_en;; *);;
 
 command_class_with_one_argument
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[класс команд с одним аргументом]
 	(* <- lang_ru;; *);
@@ -1473,7 +1473,7 @@ command_class_with_one_argument
 	(* <- lang_en;; *);;
 	
 command_class_with_two_arguments
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[класс команд с двумя аргументом]
 	(* <- lang_ru;; *);
@@ -1481,7 +1481,7 @@ command_class_with_two_arguments
 	(* <- lang_en;; *);;
 	
 command_class_with_random_arguments_number
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[класс команд с произвольным числом аргументов]
 	(* <- lang_ru;; *);
@@ -1489,7 +1489,7 @@ command_class_with_random_arguments_number
 	(* <- lang_en;; *);;
 
 atomic_command_class
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[атомарный класс команд]
 	(* <- lang_ru;; *);
@@ -1513,7 +1513,7 @@ atomic_command_class
 	*);;
 	
 non_atomic_command_class
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[неатомарный класс команд]
 	(* <- lang_ru;; *);
@@ -1537,7 +1537,7 @@ non_atomic_command_class
 	*);;
 
 plan
-<- sc_node_not_relation;		
+<- sc_node_class;		
 => nrel_main_idtf:
 	[план]
 	(* <- lang_ru;; *);
@@ -1568,7 +1568,7 @@ plan
 
 
 program
-<- sc_node_not_relation;	
+<- sc_node_class;	
 => nrel_main_idtf:
 	[программа]
 	(* <- lang_ru;; *);
@@ -1612,7 +1612,7 @@ program
 	*);;	
 
 program_in_sc_memory
-<- sc_node_not_relation;	
+<- sc_node_class;	
 => nrel_main_idtf:
 	[программа в sc-памяти]
 	(* <- lang_ru;; *);
@@ -1620,7 +1620,7 @@ program_in_sc_memory
 	(* <- lang_en;; *);;
 	
 protocol
-<- sc_node_not_relation;	
+<- sc_node_class;	
 => nrel_main_idtf:
 	[протокол]
 	(* <- lang_ru;; *);
@@ -1645,7 +1645,7 @@ protocol
 
 
 decision
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[решение]
 	(* <- lang_ru;; *);
@@ -1669,7 +1669,7 @@ decision
 	*);;	
 
 nrel_performer
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[исполнитель*]
 	(* <- lang_ru;; *);
@@ -1693,7 +1693,7 @@ nrel_performer
 	*);;	
 
 nrel_executing_actions_class
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[класс выполняемых действий*]
 	(* <- lang_ru;; *);
@@ -1720,7 +1720,7 @@ nrel_executing_actions_class
 	*);;
 	
 nrel_customer
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[заказчик*]
 	(* <- lang_ru;; *);
@@ -1744,7 +1744,7 @@ nrel_customer
 	*);;		
 
 nrel_initiator
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[инициатор*]
 	(* <- lang_ru;; *);
@@ -1768,7 +1768,7 @@ nrel_initiator
 	*);;
 
 nrel_object
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[объект*]
 	(* <- lang_ru;; *);
@@ -1792,7 +1792,7 @@ nrel_object
 	*);;		
 	
 nrel_context_of_action
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[контекст действия*]
 	(* <- lang_ru;; *);
@@ -1881,7 +1881,7 @@ rrel_third_section_argument
 	(* <- lang_en;; *);;
 	
 nrel_class_of_arguments
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[класс аргументов*]
 	(* <- lang_ru;; *);
@@ -1915,7 +1915,7 @@ nrel_class_of_arguments
 	*);;
 	
 nrel_first_argument_class
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[класс первых аргументов*]
 	(* <- lang_ru;; *);
@@ -1923,7 +1923,7 @@ nrel_first_argument_class
 	(* <- lang_en;; *);;
 	
 nrel_second_argument_class
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[класс вторых аргументов*]
 	(* <- lang_ru;; *);

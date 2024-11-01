@@ -8,14 +8,14 @@ agent_of_counting_nodes_in_structure
 
 agent_of_counting_nodes_in_structure = [*
 .._process1
-_<- scp_process;
+<-_ scp_process;
 
 _-> rrel_1:: rrel_in:: _event;
 _-> rrel_2:: rrel_in:: _input_arc;
-_<= nrel_decomposition_of_action:: .._actions (*
+<=_ nrel_decomposition_of_action:: .._actions (*
 
 	_-> rrel_1:: .._agent_of_counting_nodes_in_structure_operator_get_quest (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _temp;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: _input_arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _action;;
@@ -24,7 +24,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_counting_nodes_in_structure_operator_check_action (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_to_count_nodes_in_structure;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
@@ -34,7 +34,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_counting_nodes_in_structure_operator_get_first_argument (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: rrel_struct:: _pattern;;
@@ -44,12 +44,12 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_counting_nodes_in_structure_operator_return (*
-		_<- return;;
+		<-_ return;;
 
 	*);;
 
 	_-> .._agent_of_counting_nodes_in_structure_operator_get_context (*
-		_<- searchElStr5;;
+		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
 		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _context;;
@@ -61,7 +61,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_counting_nodes_in_structure_operator_invalid_first_argument (*
-		_<- varAssign;;
+		<-_ varAssign;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _validation_message;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [Wrong first parameter! It must be a structure(rrel_struct).];;
 
@@ -69,7 +69,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_counting_nodes_in_structure_operator_validation_failed (*
-		_<- call;;
+		<-_ call;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_adding_validating_message;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._agent_of_counting_nodes_in_structure_param0 (*
 			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
@@ -81,14 +81,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_counting_nodes_in_structure_operator_validation_failed_wait (*
-		_<- waitReturn;;
+		<-_ waitReturn;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _descr3;;
 
 		_=> nrel_goto:: .._agent_of_counting_nodes_in_structure_operator_return;;
 	*);;
 
 	_-> .._agent_of_counting_nodes_in_structure_operator_validate_context (*
-		_<- ifType;;
+		<-_ ifType;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: rrel_struct:: _context;;
 
 		_=> nrel_then:: .._agent_of_counting_nodes_in_structure_operator_set_context_existence_to_true;;
@@ -96,7 +96,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_counting_nodes_in_structure_operator_set_context_existence_to_false (*
-		_<- varAssign;;
+		<-_ varAssign;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _is_context_exist;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [false];;
 
@@ -104,7 +104,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_counting_nodes_in_structure_operator1 (*
-		_<- varAssign;;
+		<-_ varAssign;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _number_of_nodes;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [0];;
 
@@ -112,7 +112,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_counting_nodes_in_structure_operator2 (*
-		_<- searchSetStr3;;
+		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _pattern;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_node:: rrel_scp_var:: _node;;
@@ -123,7 +123,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_counting_nodes_in_structure_operator3 (*
-		_<- stringIfEq;;
+		<-_ stringIfEq;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _is_context_exist;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [true];;
 
@@ -132,7 +132,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_counting_nodes_in_structure_operator_gen_answer (*
-		_<- call;;
+		<-_ call;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_generation_of_metrics_answer;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._agent_of_counting_nodes_in_structure_param1 (*
 			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
@@ -145,14 +145,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_counting_nodes_in_structure_operator_gen_answer_wait_return (*
-		_<- waitReturn;;
+		<-_ waitReturn;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _descr2;;
 
 		_=> nrel_goto:: .._agent_of_counting_nodes_in_structure_operator_return;;
 	*);;
 
 	_-> .._agent_of_counting_nodes_in_structure_operator4B (*
-		_<- call;;
+		<-_ call;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_cardinality_counting_without_multiple_occurrences_with_context;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._agent_of_counting_nodes_in_structure_param2 (*
 			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _set_of_nodes;;
@@ -165,7 +165,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_counting_nodes_in_structure_operator4A (*
-		_<- call;;
+		<-_ call;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_cardinality_counting_without_multiple_occurrences;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._agent_of_counting_nodes_in_structure_param3 (*
 			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _set_of_nodes;;
@@ -177,28 +177,28 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_counting_nodes_in_structure_operator4C (*
-		_<- waitReturn;;
+		<-_ waitReturn;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _descr1;;
 
 		_=> nrel_goto:: .._agent_of_counting_nodes_in_structure_operator5;;
 	*);;
 
 	_-> .._agent_of_counting_nodes_in_structure_operator5 (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _set_of_nodes;;
 
 		_=> nrel_goto:: .._agent_of_counting_nodes_in_structure_operator6;;
 	*);;
 
 	_-> .._agent_of_counting_nodes_in_structure_operator6 (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _is_context_exist;;
 
 		_=> nrel_goto:: .._agent_of_counting_nodes_in_structure_operator_gen_answer;;
 	*);;
 
 	_-> .._agent_of_counting_nodes_in_structure_operator_set_context_existence_to_true (*
-		_<- varAssign;;
+		<-_ varAssign;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _is_context_exist;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [true];;
 
@@ -206,7 +206,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_counting_nodes_in_structure_operator_invalid_context (*
-		_<- varAssign;;
+		<-_ varAssign;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _validation_message;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [Wrong second parameter! It must be a structure(rrel_struct).];;
 

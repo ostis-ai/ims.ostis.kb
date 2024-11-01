@@ -8,15 +8,15 @@ proc_of_cardinality_counting_with_context
 
 proc_of_cardinality_counting_with_context = [*
 .._process1
-_<- scp_process;
+<-_ scp_process;
 
 _-> rrel_1:: rrel_in:: _set;
 _-> rrel_2:: rrel_in:: _cardinality;
 _-> rrel_3:: rrel_in:: _context;
-_<= nrel_decomposition_of_action:: .._actions (*
+<=_ nrel_decomposition_of_action:: .._actions (*
 
 	_-> rrel_1:: .._proc_of_cardinality_counting_with_context_operator1 (*
-		_<- contAssign;;
+		<-_ contAssign;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _cardinality;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [0];;
 
@@ -24,7 +24,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_cardinality_counting_with_context_operator2 (*
-		_<- searchSetStr3;;
+		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _set;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _element;;
@@ -35,7 +35,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_cardinality_counting_with_context_operator3A (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _temp_set;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _element;;
@@ -45,26 +45,26 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_cardinality_counting_with_context_operator_return (*
-		_<- return;;
+		<-_ return;;
 
 	*);;
 
 	_-> .._proc_of_cardinality_counting_with_context_operator3B (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 
 		_=> nrel_goto:: .._proc_of_cardinality_counting_with_context_operator3C;;
 	*);;
 
 	_-> .._proc_of_cardinality_counting_with_context_operator4 (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _temp_set;;
 
 		_=> nrel_goto:: .._proc_of_cardinality_counting_with_context_operator_return;;
 	*);;
 
 	_-> .._proc_of_cardinality_counting_with_context_operator3C (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _context;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _element;;
@@ -74,7 +74,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_cardinality_counting_with_context_operator3D (*
-		_<- contAdd;;
+		<-_ contAdd;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _cardinality;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: _cardinality;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: [1];;

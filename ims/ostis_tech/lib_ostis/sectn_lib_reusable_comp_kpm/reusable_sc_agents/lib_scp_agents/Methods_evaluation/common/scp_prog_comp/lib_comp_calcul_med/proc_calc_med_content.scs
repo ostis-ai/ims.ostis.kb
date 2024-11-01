@@ -5,14 +5,14 @@ proc_of_calculation_median
 
 proc_of_calculation_median = [*
 .._process1
-_<- scp_process;
+<-_ scp_process;
 
 _-> rrel_1:: rrel_in:: _input_values;
 _-> rrel_2:: rrel_in:: _median_value;
-_<= nrel_decomposition_of_action:: .._actions (*
+<=_ nrel_decomposition_of_action:: .._actions (*
 
 	_-> rrel_1:: .._proc_of_calculation_median_operator_sort_input_values (*
-		_<- call;;
+		<-_ call;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_sorting_set_of_values;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._proc_of_calculation_median_param0 (*
 			_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _input_values;;
@@ -23,14 +23,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_median_operator_waitreturn_sorting_input_values (*
-		_<- waitReturn;;
+		<-_ waitReturn;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _descr1;;
 
 		_=> nrel_goto:: .._proc_of_calculation_median_operator_D1_gen_index;;
 	*);;
 
 	_-> .._proc_of_calculation_median_operator_D1_gen_index (*
-		_<- varAssign;;
+		<-_ varAssign;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _index;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [1];;
 
@@ -38,7 +38,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_median_operator_D1_gen_result_value (*
-		_<- varAssign;;
+		<-_ varAssign;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _median_value;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [0];;
 
@@ -46,7 +46,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_median_operator_D2 (*
-		_<- searchElStr5;;
+		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _input_values;;
 		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _length;;
@@ -57,7 +57,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_median_operator_D3 (*
-		_<- contDiv;;
+		<-_ contDiv;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _middle_of_list;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _length;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: [2];;
@@ -66,7 +66,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_median_operator_D4 (*
-		_<- searchElStr5;;
+		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _input_values;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _first_elem;;
@@ -78,7 +78,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_median_operator_D5 (*
-		_<- ifGr;;
+		<-_ ifGr;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _middle_of_list;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _index;;
 
@@ -87,12 +87,12 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_median_operator_return (*
-		_<- return;;
+		<-_ return;;
 
 	*);;
 
 	_-> .._proc_of_calculation_median_operator_D6 (*
-		_<- searchElStr5;;
+		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _first_elem;;
 		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _next_elem;;
@@ -103,7 +103,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_median_operator_D9_gen_is_even_value (*
-		_<- contDivRem;;
+		<-_ contDivRem;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _is_even;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _length;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: [2];;
@@ -112,7 +112,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_median_operator_D9_is_even_value (*
-		_<- ifEq;;
+		<-_ ifEq;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _is_even;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [0];;
 
@@ -121,7 +121,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_median_operator_D11_even_length (*
-		_<- searchElStr5;;
+		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _first_elem;;
 		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _next_elem;;
@@ -132,7 +132,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_median_operator_D10_uneven_length (*
-		_<- varAssign;;
+		<-_ varAssign;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _median_value;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _first_elem;;
 
@@ -140,7 +140,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_median_operator_D12_even_length (*
-		_<- contAdd;;
+		<-_ contAdd;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _sum_of_elem;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _next_elem;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _first_elem;;
@@ -149,7 +149,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_median_operator_D13_even_length (*
-		_<- contDiv;;
+		<-_ contDiv;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _median_value;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _sum_of_elem;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: [2];;
@@ -158,7 +158,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_median_operator_D7 (*
-		_<- contAdd;;
+		<-_ contAdd;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _index;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _index;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: [1];;
@@ -167,7 +167,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_calculation_median_operator_D8 (*
-		_<- varAssign;;
+		<-_ varAssign;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _first_elem;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _next_elem;;
 

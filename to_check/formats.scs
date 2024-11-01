@@ -1,5 +1,5 @@
 format 
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf: 
 	[формат] 
 	(* 
@@ -16,7 +16,7 @@ format
 
 // --- scg ---
 format_scg_json
-<- sc_node_not_relation;
+<- sc_node_class;
 <- format;
 => nrel_main_idtf: 
 	[формат scg (json)] 
@@ -33,7 +33,7 @@ format_scg_json
 
 // --- scn ---
 format_scn_json
-<- sc_node_not_relation;
+<- sc_node_class;
 <- format;
 => nrel_main_idtf: 
 	[формат scn (json)] 
@@ -50,7 +50,7 @@ format_scn_json
 
 // --- scs ---
 format_scs_json 
-<- sc_node_not_relation;
+<- sc_node_class;
 <- format;
 => nrel_main_idtf: 
 	[формат scs (json)] 
@@ -69,7 +69,7 @@ format_scs_json
 
 // --- google map ---
 format_googlemaplink
-<- sc_node_not_relation;
+<- sc_node_class;
 <- format;
 => nrel_main_idtf: 
 	[формат googlemaplink] 
@@ -86,7 +86,7 @@ format_googlemaplink
 
 // --- html ---
 format_html 
-<- sc_node_not_relation;
+<- sc_node_class;
 <- format;
 => nrel_main_idtf: 
 	[формат html] 
@@ -103,7 +103,7 @@ format_html
 
 // --- youtube ---
 format_youtubelink
-<- sc_node_not_relation;
+<- sc_node_class;
 <- format;
 => nrel_main_idtf: 
 	[формат youtube]
@@ -122,7 +122,7 @@ format_youtubelink
 
 // --- txt ---
 format_txt
-<- sc_node_not_relation;
+<- sc_node_class;
 <- format;
 => nrel_main_idtf: 
 	[формат txt] 
@@ -142,7 +142,7 @@ format_txt
 
 // --- png ---
 format_png
-<- sc_node_not_relation;
+<- sc_node_class;
 <- format;
 => nrel_main_idtf: 
 	[формат png] 
@@ -159,7 +159,7 @@ format_png
 
 // --- link to github sources ---
 format_github_source_link
-<- sc_node_not_relation;
+<- sc_node_class;
 <- format;
 => nrel_main_idtf: 
 	[формат github source] 
@@ -176,7 +176,7 @@ format_github_source_link
 
 // ======== PDF ========
 format_pdf
-<- sc_node_not_relation;
+<- sc_node_class;
 <- format;
 => nrel_main_idtf: 
 	[формат pdf] 
@@ -193,5 +193,5 @@ format_pdf
 
 
 binary_types
-<- sc_node_not_relation;
+<- sc_node_class;
 -> binary_float; binary_int8; binary_int16; binary_int32; binary_int64;;

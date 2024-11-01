@@ -5,7 +5,7 @@ kpm_subsystem_dev_sc_agents
 	(* <- lang_ru;; *);
 	[Knowledge processing machine of subsystem of support the sc-agents designing]
 	(* <- lang_en;; *);
-	<- sc_node_not_relation;
+	<- sc_node_class;
 <= nrel_abstract_sc_agent_decomposition:
 	{
 		abstract_sc_agent_sc_agents_verification;
@@ -13,7 +13,7 @@ kpm_subsystem_dev_sc_agents
 	};;
 
 abstract_sc_agent_sc_agents_verification
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[Абстрактный sc-агент верификации sc-агентов]
 		(* <- lang_ru;; *);
@@ -26,7 +26,7 @@ abstract_sc_agent_sc_agents_verification
 		};;
 		
 abstract_sc_agent_specification_of_sc_agent_verification
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[Абстрактный sc-агент верификации спецификации sc-агента]
 		(* <- lang_ru;; *);
@@ -34,7 +34,7 @@ abstract_sc_agent_specification_of_sc_agent_verification
 		(* <- lang_en;; *);;
 
 abstract_sc_agent_verif_non_atomic_sc_agent_specif_consistency
-	<- sc_node_not_relation;
+	<- sc_node_class;
     => nrel_main_idtf:
 		[Абстрактный sc-агент верификации неатомарного sc-агента на непротиворечивость его спецификации спецификациям более частных sc-агентов в его составе]
 		(* <- lang_ru;; *);
@@ -42,7 +42,7 @@ abstract_sc_agent_verif_non_atomic_sc_agent_specif_consistency
 		(* <- lang_en;; *);;
 
 abstract_sc_metaagent_sc_agents_teams_debug
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[Абстрактный sc-метаагент отладки коллективов sc-агентов]
 		(* <- lang_ru;; *);
@@ -60,7 +60,7 @@ abstract_sc_metaagent_sc_agents_teams_debug
 		};;
 
 abstract_sc_metaagent_search_all_running_processes_corresponding_to_sc_agent
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 	[Абстрактный sc-метаагент поиска всех выполняющихся процессов, соответствующих заданному sc-агенту]
 	(* <- lang_ru;; *);
@@ -68,7 +68,7 @@ abstract_sc_metaagent_search_all_running_processes_corresponding_to_sc_agent
 	(* <- lang_en;; *);;
 	
 abstract_sc_agent_initiation_sc_agent_on_given_arguments
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 	[Абстрактный sc-агент инициирования заданного sc-агента на заданных аргументах]
 	(* <- lang_ru;; *);
@@ -76,7 +76,7 @@ abstract_sc_agent_initiation_sc_agent_on_given_arguments
 	(* <- lang_en;; *);;
 	
 abstract_sc_metaagent_of_given_sc_agent_activation
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 	[Абстрактный sc-метаагент активации заданного sc-агента]
 	(* <- lang_ru;; *);
@@ -84,7 +84,7 @@ abstract_sc_metaagent_of_given_sc_agent_activation
 	(* <- lang_en;; *);;
 	
 abstract_sc_metaagent_of_given_sc_agent_deactivation
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 	[Абстрактный sc-метаагент деактивации заданного sc-агента]
 	(* <- lang_ru;; *);
@@ -92,7 +92,7 @@ abstract_sc_metaagent_of_given_sc_agent_deactivation
 	(* <- lang_en;; *);;
 	
 abstract_sc_metaagent_lock_setting_in_sc_element
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 	[Абстрактный sc-метаагент установки блокировки заданного типа для заданного процесса на заданный sc-элемент]
 	(* <- lang_ru;; *);
@@ -100,7 +100,7 @@ abstract_sc_metaagent_lock_setting_in_sc_element
 	(* <- lang_en;; *);;
 	
 abstract_sc_metaagent_all_locks_of_given_process_release
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 	[Абстрактный sc-метаагент снятия всех блокировок заданного процесса]
 	(* <- lang_ru;; *);
@@ -108,7 +108,7 @@ abstract_sc_metaagent_all_locks_of_given_process_release
 	(* <- lang_en;; *);;
 	
 abstract_sc_metaagent_all_locks_from_given_sc_element_release
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 	[Абстрактный sc-метаагент снятия всех блокировок с заданного sc-элемента]
 	(* <- lang_ru;; *);

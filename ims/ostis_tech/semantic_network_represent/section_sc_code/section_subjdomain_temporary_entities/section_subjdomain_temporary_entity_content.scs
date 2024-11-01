@@ -12,7 +12,7 @@ subjdomain_temporary_entity
 	(* <- lang_ru;; *);
 
 <- subject_domain;
-<- sc_node_struct;
+<- sc_node_structure;
 <- structure;
 -> rrel_maximum_studied_object_class:
 	temporary_entity;
@@ -80,7 +80,7 @@ subjdomain_temporary_entity
 	rrel_last_added_sc_element;;
 
 temporary_entity
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[временная сущность]
 	(* <- lang_ru;; *);
@@ -133,7 +133,7 @@ temporary_entity
 	
 
 last_entity
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[прошлая сущность]
 	(* <- lang_ru;; *);
@@ -150,7 +150,7 @@ last_entity
 
 
 real_entity
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[настоящая сущность]
 	(* <- lang_ru;; *);
@@ -167,7 +167,7 @@ real_entity
 
 
 future_entity
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[будущая сущность]
 	(* <- lang_ru;; *);
@@ -205,7 +205,7 @@ future_entity
 
 	
 temporary_connection
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[временная связь]
 	(* <- lang_ru;; *);
@@ -237,7 +237,7 @@ temporary_connection
 	
 	
 situation
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[ситуация]
 	(* <- lang_ru;; *);
@@ -279,7 +279,7 @@ situation
 	
 	
 process
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[процесс]
 	(* <- lang_ru;; *);
@@ -331,7 +331,7 @@ process
 	*);;
 
 process_in_sc_memory
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[процесс в sc-памяти]
 	(* <- lang_ru;; *);
@@ -339,7 +339,7 @@ process_in_sc_memory
 	(* <- lang_en;; *);;	
 	
 process_in_the_environment_ostis_system
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[процесс во внешней среде ostis-системы]
 	(* <- lang_ru;; *);
@@ -348,7 +348,7 @@ process_in_the_environment_ostis_system
 	
 	
 material_entity
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[материальная сущность]
 	(* <- lang_ru;; *);
@@ -373,7 +373,7 @@ material_entity
 
 
 impact
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[воздействие]
 	(* <- lang_ru;; *);
@@ -406,7 +406,7 @@ impact
 
 nrel_affecting_entity
 
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 
 => nrel_main_idtf:
 	[воздействующая сущность*]
@@ -417,7 +417,7 @@ nrel_affecting_entity
 
 nrel_object_of_impact
 	
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 
 => nrel_main_idtf:
 	[объект воздействия*]
@@ -428,7 +428,7 @@ nrel_object_of_impact
 
 nrel_initial_situation
 
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 
 => nrel_main_idtf:
 	[начальная ситуация*]
@@ -463,7 +463,7 @@ nrel_initial_situation
 
 nrel_typical_situation
 
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 
 => nrel_main_idtf:
 	[причинная ситуация*]
@@ -495,7 +495,7 @@ nrel_typical_situation
 	
 nrel_final_situation
 
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 
 => nrel_main_idtf:
 	[конечная ситуация*]
@@ -530,7 +530,7 @@ nrel_final_situation
 	
 nrel_event
 
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 
 => nrel_main_idtf:
 	[событие*]
@@ -579,7 +579,7 @@ relation
 	};;
 
 class_of_temporary_connections
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[класс временных связей]
 	(* <- lang_ru;; *);
@@ -608,7 +608,7 @@ class_of_temporary_connections
 
 
 class_of_constant_connections
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[класс постоянных связей]
 	(* <- lang_ru;; *);
@@ -621,7 +621,7 @@ class_of_constant_connections
 	
 	
 class_of_temporary_and_constant_connections
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[класс временных и постоянных связей]
 	(* <- lang_ru;; *);
@@ -641,7 +641,7 @@ set
 	};;
 	
 situational_set
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[ситуативное множество]
 	(* <- lang_ru;; *);
@@ -678,7 +678,7 @@ rrel_last_added_sc_element
 <- role_relation;;
 
 non_situational_set
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[неситуативное множество]
 	(* <- lang_ru;; *);
@@ -703,7 +703,7 @@ non_situational_set
 
 	
 partial_situational_set
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[частично ситуативное множество]
 	(* <- lang_ru;; *);
@@ -728,7 +728,7 @@ partial_situational_set
 	
 
 temporal_connection
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[темпоральная связь]
 	(* <- lang_ru;; *);
@@ -741,7 +741,7 @@ temporal_connection
 	
 	
 temporal_relation	
-<- sc_node_not_relation;	
+<- sc_node_class;	
 => nrel_main_idtf:
 	[темпоральное отношение]
 	(* <- lang_ru;; *);
@@ -766,7 +766,7 @@ temporal_relation
 
 nrel_temporal_inclusion
 
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 
 => nrel_main_idtf:
 	[темпоральное включение*]
@@ -799,7 +799,7 @@ nrel_temporal_inclusion
 	
 nrel_temporal_part
 
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 
 => nrel_main_idtf:
 	[темпоральная часть*]
@@ -860,7 +860,7 @@ nrel_temporal_part
 	
 nrel_first_stage
 
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 
 => nrel_main_idtf:
 	[начальный этап*]
@@ -870,7 +870,7 @@ nrel_first_stage
 	
 nrel_final_stage
 
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 
 => nrel_main_idtf:
 	[конечный этап*]
@@ -881,7 +881,7 @@ nrel_final_stage
 
 nrel_intermediate_stage
 
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 
 => nrel_main_idtf:
 	[промежуточный этап*]
@@ -892,7 +892,7 @@ nrel_intermediate_stage
 	
 nrel_temporal_inclusion_without_coincidence_of_the_initial_and_final_moments
 	
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 
 => nrel_main_idtf:
 	[темпоральное включение без совпадения начальных и конечных моментов*]
@@ -931,7 +931,7 @@ nrel_temporal_inclusion_without_coincidence_of_the_initial_and_final_moments
 	
 nrel_temporal_inclusion_with_coincidence_of_the_initial_moments
 
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 
 => nrel_main_idtf:
 	[темпоральное включение с совпадением начальных моментов*]
@@ -965,7 +965,7 @@ nrel_temporal_inclusion_with_coincidence_of_the_initial_moments
 		
 nrel_temporal_inclusion_with_coincidence_of_the_final_moments
 
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 
 => nrel_main_idtf:
 	[темпоральное включение с совпадением конечных моментов*]
@@ -1000,7 +1000,7 @@ nrel_temporal_inclusion_with_coincidence_of_the_final_moments
 
 nrel_temporal_concurrence
 
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 
 => nrel_main_idtf:
 	[темпоральное совпадение*]
@@ -1015,7 +1015,7 @@ nrel_temporal_concurrence
 	
 nrel_temporal_union
 
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 
 => nrel_main_idtf:
 	[темпоральное объединение*]
@@ -1050,7 +1050,7 @@ nrel_temporal_union
 	
 nrel_temporal_decomposition
 
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 
 => nrel_main_idtf:
 	[темпоральная декомпозиция*]
@@ -1085,7 +1085,7 @@ nrel_temporal_decomposition
 	
 nrel_temporal_adjacency	
 	
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 
 => nrel_main_idtf:
 	[темпоральная смежность*]
@@ -1126,7 +1126,7 @@ nrel_temporal_adjacency
 	
 nrel_temporal_sequence_with_gap
 	
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 
 => nrel_main_idtf:
 	[темпоральная последовательность с промежутком*]
@@ -1161,7 +1161,7 @@ nrel_temporal_sequence_with_gap
 
 nrel_temporal_sequence_with_intersection
 	
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 
 => nrel_main_idtf:
 	[темпоральная последовательность с пересечением*]
@@ -1195,7 +1195,7 @@ nrel_temporal_sequence_with_intersection
 	
 
 begin
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[начало]
 	(* <- lang_ru;; *);
@@ -1254,7 +1254,7 @@ begin
 	
 
 completion
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[завершение]
 	(* <- lang_ru;; *);
@@ -1315,7 +1315,7 @@ completion
 
 	
 duration
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[длительность]
 	(* <- lang_ru;; *);
@@ -1381,7 +1381,7 @@ duration
 	*);;
 
 millennium
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[тысячелетие]
 	(* <- lang_ru;; *);
@@ -1389,7 +1389,7 @@ millennium
 	(* <- lang_en;; *);;
 
 century
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[век]
 	(* <- lang_ru;; *);
@@ -1397,7 +1397,7 @@ century
 	(* <- lang_en;; *);;
 
 year
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[год]
 	(* <- lang_ru;; *);
@@ -1405,7 +1405,7 @@ year
 	(* <- lang_en;; *);;
 	
 month
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[месяц]
 	(* <- lang_ru;; *);
@@ -1413,7 +1413,7 @@ month
 	(* <- lang_en;; *);;
 
 day
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[день]
 	(* <- lang_ru;; *);
@@ -1421,7 +1421,7 @@ day
 	(* <- lang_en;; *);;
 	
 hour
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[час]
 	(* <- lang_ru;; *);
@@ -1429,7 +1429,7 @@ hour
 	(* <- lang_en;; *);;
 	
 minute
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[минута]
 	(* <- lang_ru;; *);
@@ -1437,7 +1437,7 @@ minute
 	(* <- lang_en;; *);;
 	
 second
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[секунда]
 	(* <- lang_ru;; *);

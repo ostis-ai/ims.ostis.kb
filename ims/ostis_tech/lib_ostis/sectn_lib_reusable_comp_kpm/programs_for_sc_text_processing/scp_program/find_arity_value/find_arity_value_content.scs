@@ -8,14 +8,14 @@ proc_of_finding_arity_value
 
 proc_of_finding_arity_value = [*
 .._process1
-_<- scp_process;
+<-_ scp_process;
 
 _-> rrel_1:: rrel_in:: _relation;
 _-> rrel_2:: rrel_out:: _arity_value;
-_<= nrel_decomposition_of_action:: .._actions (*
+<=_ nrel_decomposition_of_action:: .._actions (*
 
 	_-> rrel_1:: .._proc_of_finding_arity_value_operator1 (*
-		_<- contAssign;;
+		<-_ contAssign;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _arity_value;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [0];;
 
@@ -23,7 +23,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_finding_arity_value_operator2 (*
-		_<- searchSetStr3;;
+		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_assign:: rrel_node:: rrel_scp_var:: _node;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _relation;;
@@ -34,7 +34,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_finding_arity_value_operator3A (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _set_of_nodes;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_node:: rrel_scp_var:: _node;;
@@ -44,26 +44,26 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_finding_arity_value_operator_return (*
-		_<- return;;
+		<-_ return;;
 
 	*);;
 
 	_-> .._proc_of_finding_arity_value_operator3B (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 
 		_=> nrel_goto:: .._proc_of_finding_arity_value_operator3C;;
 	*);;
 
 	_-> .._proc_of_finding_arity_value_operator5 (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _set_of_nodes;;
 
 		_=> nrel_goto:: .._proc_of_finding_arity_value_operator_return;;
 	*);;
 
 	_-> .._proc_of_finding_arity_value_operator3C (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: arity;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_node:: rrel_scp_var:: _node;;
@@ -73,7 +73,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_finding_arity_value_operator3D (*
-		_<- searchElStr5;;
+		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_node:: rrel_scp_var:: _node;;
 		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _arity;;
@@ -85,14 +85,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_finding_arity_value_operator4A (*
-		_<- genEl;;
+		<-_ genEl;;
 		_-> rrel_1:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: _arity_of_relation;;
 
 		_=> nrel_goto:: .._proc_of_finding_arity_value_operator4B;;
 	*);;
 
 	_-> .._proc_of_finding_arity_value_operator4B (*
-		_<- call;;
+		<-_ call;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_finding_value;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._proc_of_finding_arity_value_param0 (*
 			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _arity;;
@@ -104,14 +104,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_finding_arity_value_operator4C (*
-		_<- waitReturn;;
+		<-_ waitReturn;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _descr1;;
 
 		_=> nrel_goto:: .._proc_of_finding_arity_value_operator4D;;
 	*);;
 
 	_-> .._proc_of_finding_arity_value_operator4D (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _arity_of_relation;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_link:: rrel_scp_var:: _value;;
@@ -121,7 +121,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_finding_arity_value_operator4E (*
-		_<- contAssign;;
+		<-_ contAssign;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _arity_value;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _value;;
 
@@ -129,7 +129,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_finding_arity_value_operator4F (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _arity_of_relation;;
 
 		_=> nrel_goto:: .._proc_of_finding_arity_value_operator5;;

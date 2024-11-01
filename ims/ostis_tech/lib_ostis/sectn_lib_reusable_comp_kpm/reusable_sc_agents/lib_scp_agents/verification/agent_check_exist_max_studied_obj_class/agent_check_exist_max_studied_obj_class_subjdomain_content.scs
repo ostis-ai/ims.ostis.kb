@@ -8,14 +8,14 @@ agent_of_checking_existence_of_max_studied_object_class_of_subject_domain
 
 agent_of_checking_existence_of_max_studied_object_class_of_subject_domain = [*
 .._process1
-_<- scp_process;
+<-_ scp_process;
 
 _-> rrel_1:: rrel_in:: _event;
 _-> rrel_2:: rrel_in:: _input_arc;
-_<= nrel_decomposition_of_action:: .._actions (*
+<=_ nrel_decomposition_of_action:: .._actions (*
 
 	_-> rrel_1:: .._agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator1A (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _temp;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: _input_arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _action;;
@@ -25,7 +25,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator1B (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_of_checking_existence_of_max_studied_class_of_subject_domain;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
@@ -35,12 +35,12 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator_return (*
-		_<- return;;
+		<-_ return;;
 
 	*);;
 
 	_-> .._agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator1C (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: arc2;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: rrel_struct:: _structure;;
@@ -50,7 +50,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator1D (*
-		_<- searchElStr5;;
+		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
 		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _context;;
@@ -62,7 +62,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator_message (*
-		_<- call;;
+		<-_ call;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_adding_validating_message;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_param0 (*
 			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
@@ -74,14 +74,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator_wait_return_message (*
-		_<- waitReturn;;
+		<-_ waitReturn;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _descr1;;
 
 		_=> nrel_goto:: .._agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator_return;;
 	*);;
 
 	_-> .._agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator1D_set_context_existence_to_true (*
-		_<- varAssign;;
+		<-_ varAssign;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _is_context_exist;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [true];;
 
@@ -89,7 +89,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator1D_set_context_existence_to_false (*
-		_<- varAssign;;
+		<-_ varAssign;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _is_context_exist;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [false];;
 
@@ -97,14 +97,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator1D_gen_incorrect_structure (*
-		_<- genEl;;
+		<-_ genEl;;
 		_-> rrel_1:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: rrel_struct:: _incorrect_structure;;
 
 		_=> nrel_goto:: .._agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator1E;;
 	*);;
 
 	_-> .._agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator1E (*
-		_<- searchSetStr3;;
+		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _structure;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_node:: rrel_scp_var:: _elem;;
@@ -115,7 +115,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator1F (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _elem_set;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _elem;;
@@ -125,7 +125,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator_gen_verification_answer (*
-		_<- call;;
+		<-_ call;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_generation_of_verification_answer;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_param1 (*
 			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
@@ -139,28 +139,28 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator_waitreturn_generation_verification_answer (*
-		_<- waitReturn;;
+		<-_ waitReturn;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _descr2;;
 
 		_=> nrel_goto:: .._agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator_return;;
 	*);;
 
 	_-> .._agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator1F2 (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
 
 		_=> nrel_goto:: .._agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator1G;;
 	*);;
 
 	_-> .._agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator1F1 (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _elem_set;;
 
 		_=> nrel_goto:: .._agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator_gen_verification_answer;;
 	*);;
 
 	_-> .._agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator1G (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: subject_domain;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _elem;;
@@ -170,7 +170,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator2A (*
-		_<- searchElStr5;;
+		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _elem;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _max_class;;
@@ -182,7 +182,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator2B (*
-		_<- stringIfEq;;
+		<-_ stringIfEq;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _is_context_exist;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [true];;
 
@@ -191,7 +191,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator2C (*
-		_<- genElStr5;;
+		<-_ genElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _incorrect_structure;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _elem;;
@@ -202,7 +202,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator2B_true (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _context;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _max_class;;

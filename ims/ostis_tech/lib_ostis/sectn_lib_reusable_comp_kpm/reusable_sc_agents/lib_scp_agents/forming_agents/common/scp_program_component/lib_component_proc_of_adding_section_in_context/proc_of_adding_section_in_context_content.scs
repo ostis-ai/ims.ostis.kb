@@ -5,35 +5,35 @@ proc_of_adding_section_in_context
 
 proc_of_adding_section_in_context = [*
 .._process1
-_<- scp_process;
+<-_ scp_process;
 
 _-> rrel_1:: rrel_in:: _section;
 _-> rrel_2:: rrel_in:: _context;
-_<= nrel_decomposition_of_action:: .._actions (*
+<=_ nrel_decomposition_of_action:: .._actions (*
 
 	_-> rrel_1:: .._proc_of_adding_section_in_context_operator_gen_temp_context (*
-		_<- genEl;;
+		<-_ genEl;;
 		_-> rrel_1:: rrel_assign:: rrel_node:: rrel_scp_var:: rrel_struct:: _temp_context;;
 
 		_=> nrel_goto:: .._proc_of_adding_section_in_context_operator_T1;;
 	*);;
 
 	_-> .._proc_of_adding_section_in_context_operator_T1 (*
-		_<- printEl;;
+		<-_ printEl;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _section;;
 
 		_=> nrel_goto:: .._proc_of_adding_section_in_context_operator_G1;;
 	*);;
 
 	_-> .._proc_of_adding_section_in_context_operator_G1 (*
-		_<- genEl;;
+		<-_ genEl;;
 		_-> rrel_1:: rrel_assign:: rrel_node:: rrel_scp_var:: _section_relations_to_add;;
 
 		_=> nrel_goto:: .._proc_of_adding_section_in_context_operator_G2;;
 	*);;
 
 	_-> .._proc_of_adding_section_in_context_operator_G2 (*
-		_<- genElStr3;;
+		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _section_relations_to_add;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_postface;;
@@ -42,7 +42,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_adding_section_in_context_operator_G3 (*
-		_<- genElStr3;;
+		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _section_relations_to_add;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_preface;;
@@ -51,7 +51,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_adding_section_in_context_operator_G4 (*
-		_<- genElStr3;;
+		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _section_relations_to_add;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_detalization;;
@@ -60,7 +60,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_adding_section_in_context_operator_G5 (*
-		_<- genElStr3;;
+		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _section_relations_to_add;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_summary;;
@@ -69,7 +69,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_adding_section_in_context_operator_G6 (*
-		_<- genElStr3;;
+		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _section_relations_to_add;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_introduction;;
@@ -78,7 +78,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_adding_section_in_context_operator_G7 (*
-		_<- genElStr3;;
+		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _section_relations_to_add;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_epigraph;;
@@ -87,7 +87,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_adding_section_in_context_operator_G8 (*
-		_<- genElStr3;;
+		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _section_relations_to_add;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_conclusion;;
@@ -96,7 +96,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_adding_section_in_context_operator2 (*
-		_<- genElStr3;;
+		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _temp_context;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _section;;
@@ -105,7 +105,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_adding_section_in_context_operator2_1 (*
-		_<- call;;
+		<-_ call;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_finding_translation;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: proc_of_adding_section_in_context_operator2_1_params (*
 			_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _section;;
@@ -117,14 +117,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_adding_section_in_context_operator2_2 (*
-		_<- waitReturn;;
+		<-_ waitReturn;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _descr1;;
 
 		_=> nrel_goto:: .._proc_of_adding_section_in_context_operator2_3;;
 	*);;
 
 	_-> .._proc_of_adding_section_in_context_operator2_3 (*
-		_<- call;;
+		<-_ call;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_finding_identifier;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: proc_of_adding_section_in_context_operator2_3_params (*
 			_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _section;;
@@ -136,14 +136,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_adding_section_in_context_operator2_4 (*
-		_<- waitReturn;;
+		<-_ waitReturn;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _descr2;;
 
 		_=> nrel_goto:: .._proc_of_adding_section_in_context_operator_A1_loop_enter;;
 	*);;
 
 	_-> .._proc_of_adding_section_in_context_operator_A1_loop_enter (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _section_relations_to_add;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _relation;;
@@ -153,21 +153,21 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_adding_section_in_context_operator_A2 (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _arc1;;
 
 		_=> nrel_goto:: .._proc_of_adding_section_in_context_operator_A3;;
 	*);;
 
 	_-> .._proc_of_adding_section_in_context_operator_A9 (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _section_relations_to_add;;
 
 		_=> nrel_goto:: .._proc_of_adding_section_in_context_operator_B1;;
 	*);;
 
 	_-> .._proc_of_adding_section_in_context_operator_B1 (*
-		_<- searchSetStr3;;
+		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _section_class;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _section;;
@@ -178,14 +178,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_adding_section_in_context_operator_gen_visited_inner_struct (*
-		_<- genEl;;
+		<-_ genEl;;
 		_-> rrel_1:: rrel_assign:: rrel_node:: rrel_scp_var:: _visited_inner_structs;;
 
 		_=> nrel_goto:: .._proc_of_adding_section_in_context_operator_B2;;
 	*);;
 
 	_-> .._proc_of_adding_section_in_context_operator_B2 (*
-		_<- call;;
+		<-_ call;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_adding_struct_elems_to_context;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: proc_of_adding_section_in_context_operator_B2_params (*
 			_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _section;;
@@ -198,21 +198,21 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_adding_section_in_context_operator_B3 (*
-		_<- waitReturn;;
+		<-_ waitReturn;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _descr5;;
 
 		_=> nrel_goto:: .._proc_of_adding_section_in_context_operator_erase_visited_inner_structs;;
 	*);;
 
 	_-> .._proc_of_adding_section_in_context_operator_erase_visited_inner_structs (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _visited_inner_structs;;
 
 		_=> nrel_goto:: .._proc_of_adding_section_in_context_operator_B4;;
 	*);;
 
 	_-> .._proc_of_adding_section_in_context_operator_B4 (*
-		_<- searchSetStr5;;
+		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _section;;
 		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _next_section;;
@@ -227,7 +227,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_adding_section_in_context_operator_B5 (*
-		_<- genElStr3;;
+		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _temp_context;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_section_base_order;;
@@ -236,14 +236,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_adding_section_in_context_operator_B5_1 (*
-		_<- genEl;;
+		<-_ genEl;;
 		_-> rrel_1:: rrel_assign:: rrel_node:: rrel_scp_var:: _inner_sections;;
 
 		_=> nrel_goto:: .._proc_of_adding_section_in_context_operator_B6;;
 	*);;
 
 	_-> .._proc_of_adding_section_in_context_operator_B6 (*
-		_<- searchSetStr5;;
+		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _decomp_tuple;;
 		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _section;;
@@ -258,7 +258,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_adding_section_in_context_operator_B7 (*
-		_<- genElStr3;;
+		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _temp_context;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_section_decomposition;;
@@ -267,7 +267,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_adding_section_in_context_operator_C1_loop_enter (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _temp_context;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _elem_from_temp_context;;
@@ -277,21 +277,21 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_adding_section_in_context_operator_C2 (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _arc1;;
 
 		_=> nrel_goto:: .._proc_of_adding_section_in_context_operator_C3;;
 	*);;
 
 	_-> .._proc_of_adding_section_in_context_operator_C5_erase_temp_set (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _temp_context;;
 
 		_=> nrel_goto:: .._proc_of_adding_section_in_context_operator_D1_loop_enter;;
 	*);;
 
 	_-> .._proc_of_adding_section_in_context_operator_D1_loop_enter (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _inner_sections;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _inner_section;;
@@ -301,26 +301,26 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_adding_section_in_context_operator_D2 (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _arc1;;
 
 		_=> nrel_goto:: .._proc_of_adding_section_in_context_operator_D3;;
 	*);;
 
 	_-> .._proc_of_adding_section_in_context_operator_D5_erase_temp_set (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _inner_sections;;
 
 		_=> nrel_goto:: .._proc_of_adding_section_in_context_operator_return;;
 	*);;
 
 	_-> .._proc_of_adding_section_in_context_operator_return (*
-		_<- return;;
+		<-_ return;;
 
 	*);;
 
 	_-> .._proc_of_adding_section_in_context_operator_D3 (*
-		_<- call;;
+		<-_ call;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_adding_section_in_context;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._proc_of_adding_section_in_context_param0 (*
 			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _inner_section;;
@@ -332,14 +332,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_adding_section_in_context_operator_D4 (*
-		_<- waitReturn;;
+		<-_ waitReturn;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _descr6;;
 
 		_=> nrel_goto:: .._proc_of_adding_section_in_context_operator_D1_loop_enter;;
 	*);;
 
 	_-> .._proc_of_adding_section_in_context_operator_C3 (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _context;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _elem_from_temp_context;;
@@ -349,7 +349,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_adding_section_in_context_operator_C4 (*
-		_<- genElStr3;;
+		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _context;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _elem_from_temp_context;;
@@ -358,7 +358,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_adding_section_in_context_operator_B8 (*
-		_<- searchElStr5;;
+		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _decomp_tuple;;
 		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _section;;
@@ -369,7 +369,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_adding_section_in_context_operator_B9 (*
-		_<- searchSetStr3;;
+		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _decomp_tuple;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _inner_section;;
@@ -380,7 +380,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_adding_section_in_context_operator_B10 (*
-		_<- searchSetStr3;;
+		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _decomp_tuple;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _inner_section;;
@@ -390,7 +390,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_adding_section_in_context_operator_A3 (*
-		_<- searchSetStr5;;
+		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _section;;
 		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _node;;
@@ -405,7 +405,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_adding_section_in_context_operator_A4 (*
-		_<- genElStr3;;
+		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _temp_context;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _relation;;
@@ -414,7 +414,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_adding_section_in_context_operator_A5 (*
-		_<- call;;
+		<-_ call;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_finding_translation;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: proc_of_adding_section_in_context_operator_A5_params (*
 			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _node;;
@@ -426,14 +426,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_adding_section_in_context_operator_A6 (*
-		_<- waitReturn;;
+		<-_ waitReturn;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _descr3;;
 
 		_=> nrel_goto:: .._proc_of_adding_section_in_context_operator_A7;;
 	*);;
 
 	_-> .._proc_of_adding_section_in_context_operator_A7 (*
-		_<- call;;
+		<-_ call;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_finding_identifier;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: proc_of_adding_section_in_context_operator_A7_params (*
 			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _node;;
@@ -445,7 +445,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._proc_of_adding_section_in_context_operator_A8 (*
-		_<- waitReturn;;
+		<-_ waitReturn;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _descr4;;
 
 		_=> nrel_goto:: .._proc_of_adding_section_in_context_operator_A1_loop_enter;;

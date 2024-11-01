@@ -1,5 +1,5 @@
 context_technology_OSTIS_and_Metasystem_IMS_in_the_Global_knowledge_base =  [*
-sc_node_not_relation -> informatics;;
+sc_node_class -> informatics;;
 informatics
 => nrel_main_idtf:
 	[информатика]
@@ -16,7 +16,7 @@ informatics
 	(* <- lang_en;; *);;
 
 
-computer_system <- sc_node_not_relation;;
+computer_system <- sc_node_class;;
 computer_system
 => nrel_main_idtf:
 	[компьютерная система]
@@ -31,7 +31,7 @@ computer_system
 	(* <- lang_ru;; *);;
 
 
-artificial_intelligence <- sc_node_not_relation;;
+artificial_intelligence <- sc_node_class;;
 artificial_intelligence 
 => nrel_main_idtf:
 	[искусственный интеллект]
@@ -55,7 +55,7 @@ artificial_intelligence
    *);;
  *);;
 
-task_solved_by_traditional_computer_systems <- sc_node_not_relation;;
+task_solved_by_traditional_computer_systems <- sc_node_class;;
 task_solved_by_traditional_computer_systems
 => nrel_main_idtf:
 	[задача, решаемая традиционными компьютерными системами]
@@ -78,7 +78,7 @@ task_solved_by_traditional_computer_systems
  *);;
 
 
- intellectual_task <- sc_node_not_relation;;
+ intellectual_task <- sc_node_class;;
  intellectual_task
  => nrel_main_idtf:
 	[интеллектуальная задача]
@@ -111,7 +111,7 @@ intellectual_task
  *);;
 
 
-intelligent_system <- sc_node_not_relation;;
+intelligent_system <- sc_node_class;;
 intelligent_system
  => nrel_main_idtf:
 	[интеллектуальная система]
@@ -138,7 +138,7 @@ intelligent_system
  *);;
 
 
-engineering <- sc_node_not_relation;;
+engineering <- sc_node_class;;
 engineering
  => nrel_main_idtf:
 	[проектироваие]
@@ -164,7 +164,7 @@ engineering
    *);;
  *);;
 
-realization <- sc_node_not_relation;;
+realization <- sc_node_class;;
 realization
  => nrel_main_idtf:
 	[реализация]
@@ -188,7 +188,7 @@ realization
 
 
 
-artifact <- sc_node_not_relation;;
+artifact <- sc_node_class;;
 artifact
  => nrel_main_idtf:
 	[артефакт]
@@ -201,7 +201,7 @@ artifact
 	(* <- lang_ru;; *);;
 
 
-technical_system <- sc_node_not_relation;;
+technical_system <- sc_node_class;;
 technical_system
  => nrel_main_idtf:
 	[техническая система]
@@ -212,7 +212,7 @@ technical_system
 <= nrel_inclusion: artifact;;
 
 
-development_technology <- sc_node_not_relation;;
+development_technology <- sc_node_class;;
 development_technology
  => nrel_main_idtf:
 	[технология разработки]
@@ -229,7 +229,7 @@ development_technology
 => nrel_inclusion: technical_systems_development_technology;;
 
 
-technical_systems_development_technology <- sc_node_not_relation;;
+technical_systems_development_technology <- sc_node_class;;
 technical_systems_development_technology
  => nrel_main_idtf:
 	[технология разработки технических систем]

@@ -8,14 +8,14 @@ agent_of_calculation_normalized_dispersion_of_ontology_depths
 
 agent_of_calculation_normalized_dispersion_of_ontology_depths = [*
 .._process1
-_<- scp_process;
+<-_ scp_process;
 
 _-> rrel_1:: rrel_in:: _event;
 _-> rrel_2:: rrel_in:: _input_arc;
-_<= nrel_decomposition_of_action:: .._actions (*
+<=_ nrel_decomposition_of_action:: .._actions (*
 
 	_-> rrel_1:: .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator1A (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _temp;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: _input_arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _action;;
@@ -24,7 +24,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator1B (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_to_calculate_normalized_dispersion_of_ontology_depths;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
@@ -34,7 +34,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator1C (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _ontology;;
@@ -44,19 +44,19 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator_return (*
-		_<- return;;
+		<-_ return;;
 
 	*);;
 
 	_-> .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator1D (*
-		_<- genEl;;
+		<-_ genEl;;
 		_-> rrel_1:: rrel_assign:: rrel_node:: rrel_scp_var:: _ontology_classes;;
 
 		_=> nrel_goto:: .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator1E;;
 	*);;
 
 	_-> .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator1E (*
-		_<- call;;
+		<-_ call;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_finding_subclasses_by_taxonomy_relation;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._agent_of_calculation_normalized_dispersion_of_ontology_depths_param0 (*
 			_-> rrel_1:: rrel_fixed:: rrel_scp_const:: ontology;;
@@ -68,14 +68,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator1F (*
-		_<- waitReturn;;
+		<-_ waitReturn;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _descr10;;
 
 		_=> nrel_goto:: .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator1G;;
 	*);;
 
 	_-> .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator1G (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_node:: rrel_scp_var:: _ontology_classes;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _class;;
@@ -85,21 +85,21 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator1G1 (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _arc1;;
 
 		_=> nrel_goto:: .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator1H;;
 	*);;
 
 	_-> .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator_delete_ontology_classes (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _ontology_classes;;
 
 		_=> nrel_goto:: .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator_call_proc_of_adding_validating_message;;
 	*);;
 
 	_-> .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator_call_proc_of_adding_validating_message (*
-		_<- call;;
+		<-_ call;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_adding_validating_message;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._agent_of_calculation_normalized_dispersion_of_ontology_depths_param1 (*
 			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
@@ -111,14 +111,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator_waitreturn_proc_of_adding_validating_message (*
-		_<- waitReturn;;
+		<-_ waitReturn;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _descr1;;
 
 		_=> nrel_goto:: .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator_return;;
 	*);;
 
 	_-> .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator1H (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _class;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _ontology;;
@@ -128,7 +128,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator1C1 (*
-		_<- searchElStr5;;
+		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _subject_domain;;
 		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _ontology;;
@@ -140,14 +140,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator_gen_set_with_all_vertexes (*
-		_<- genEl;;
+		<-_ genEl;;
 		_-> rrel_1:: rrel_assign:: rrel_node:: rrel_scp_var:: _all_vertexes_of_ontology;;
 
 		_=> nrel_goto:: .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator1C2;;
 	*);;
 
 	_-> .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator7B (*
-		_<- genElStr3;;
+		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_finished_unsuccessfully;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
@@ -156,7 +156,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator1C2 (*
-		_<- searchSetStr5;;
+		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _subject_domain;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _vertex_of_ontology;;
@@ -168,7 +168,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator1C3 (*
-		_<- searchSetStr5;;
+		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _subject_domain;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _vertex_of_ontology;;
@@ -180,7 +180,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator1C4 (*
-		_<- searchSetStr5;;
+		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _subject_domain;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _vertex_of_ontology;;
@@ -192,14 +192,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator_gen_all_depths_set (*
-		_<- genEl;;
+		<-_ genEl;;
 		_-> rrel_1:: rrel_assign:: rrel_node:: rrel_scp_var:: _all_depths;;
 
 		_=> nrel_goto:: .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator_fill_all_depths_set;;
 	*);;
 
 	_-> .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator_fill_all_depths_set (*
-		_<- call;;
+		<-_ call;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_calculation_all_depths_of_ontology;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._agent_of_calculation_normalized_dispersion_of_ontology_depths_param2 (*
 			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _all_vertexes_of_ontology;;
@@ -212,21 +212,21 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator_waitreturn_filling_all_depths_set (*
-		_<- waitReturn;;
+		<-_ waitReturn;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _descr1;;
 
 		_=> nrel_goto:: .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator_gen_dispersion_value;;
 	*);;
 
 	_-> .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator_gen_dispersion_value (*
-		_<- genEl;;
+		<-_ genEl;;
 		_-> rrel_1:: rrel_assign:: rrel_link:: rrel_node:: rrel_scp_var:: _dispersion_value;;
 
 		_=> nrel_goto:: .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator_calc_dispersion_value;;
 	*);;
 
 	_-> .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator_calc_dispersion_value (*
-		_<- call;;
+		<-_ call;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_calculation_dispersion;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._agent_of_calculation_normalized_dispersion_of_ontology_depths_param3 (*
 			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _all_depths;;
@@ -238,21 +238,21 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator_waitreturn_calc_dispersion_value (*
-		_<- waitReturn;;
+		<-_ waitReturn;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _descr2;;
 
 		_=> nrel_goto:: .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator_gen_average_value;;
 	*);;
 
 	_-> .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator_gen_average_value (*
-		_<- genEl;;
+		<-_ genEl;;
 		_-> rrel_1:: rrel_assign:: rrel_link:: rrel_node:: rrel_scp_var:: _average_value;;
 
 		_=> nrel_goto:: .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator_calc_average_value;;
 	*);;
 
 	_-> .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator_calc_average_value (*
-		_<- call;;
+		<-_ call;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_calculation_average_value;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._agent_of_calculation_normalized_dispersion_of_ontology_depths_param4 (*
 			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _all_depths;;
@@ -264,14 +264,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator_waitreturn_calc_average_value (*
-		_<- waitReturn;;
+		<-_ waitReturn;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _descr3;;
 
 		_=> nrel_goto:: .._agent_of_calculation_normalized_dispersion_of_ontology_depths_E1_calc_result_value;;
 	*);;
 
 	_-> .._agent_of_calculation_normalized_dispersion_of_ontology_depths_E1_calc_result_value (*
-		_<- contDiv;;
+		<-_ contDiv;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _result_value;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _dispersion_value;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _average_value;;
@@ -280,42 +280,42 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator_G1_erase_temp_set (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _all_vertexes_of_ontology;;
 
 		_=> nrel_goto:: .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator_G2_erase_temp_set;;
 	*);;
 
 	_-> .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator_G2_erase_temp_set (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _all_depths;;
 
 		_=> nrel_goto:: .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator_G3_erase_temp_set;;
 	*);;
 
 	_-> .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator_G3_erase_temp_set (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _dispersion_value;;
 
 		_=> nrel_goto:: .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator_G4_erase_temp_set;;
 	*);;
 
 	_-> .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator_G4_erase_temp_set (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _average_value;;
 
 		_=> nrel_goto:: .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator_delete;;
 	*);;
 
 	_-> .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator_delete (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _ontology_classes;;
 
 		_=> nrel_goto:: .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator_gen_agent_work_result;;
 	*);;
 
 	_-> .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator_gen_agent_work_result (*
-		_<- call;;
+		<-_ call;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_generation_of_metrics_answer;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._agent_of_calculation_normalized_dispersion_of_ontology_depths_param5 (*
 			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
@@ -328,14 +328,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator_waitreturn_generation_agent_work_result (*
-		_<- waitReturn;;
+		<-_ waitReturn;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _descr4;;
 
 		_=> nrel_goto:: .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator7A;;
 	*);;
 
 	_-> .._agent_of_calculation_normalized_dispersion_of_ontology_depths_operator7A (*
-		_<- genElStr3;;
+		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_finished_successfully;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;

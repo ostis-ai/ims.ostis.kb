@@ -31,7 +31,7 @@ lib_component_agent_of_search_of_full_semantic_neighborhood
 	*);;
 
 action_search_full_semantic_neighborhood
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
  	[действие. найти полную семантическую окрестность]
 	(* <- lang_ru;;	*);

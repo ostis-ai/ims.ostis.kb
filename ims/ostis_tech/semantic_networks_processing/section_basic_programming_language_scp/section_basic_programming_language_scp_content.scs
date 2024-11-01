@@ -7,7 +7,7 @@ basic_programming_language_scp
 	(* <- lang_en;; *);
 		
 <- subject_domain;
-<- sc_node_struct;
+<- sc_node_structure;
 <- structure;
 -> rrel_not_maximum_studied_object_class:
 	scp_operator;
@@ -112,7 +112,7 @@ basic_programming_language_scp
 	scp_program;;
 
 new_scp_program
-<- sc_node_not_relation;
+<- sc_node_class;
 	=> nrel_main_idtf:
 		[scp-программа]
 		(*<- lang_ru;;*);
@@ -142,7 +142,7 @@ new_scp_program
 		*);;
 
 scp_program
-<- sc_node_not_relation;
+<- sc_node_class;
 	=> nrel_main_idtf:
 		[#scp-программа]
 		(*<- lang_ru;;*);
@@ -169,7 +169,7 @@ scp_program
 		*);;
 
 scp_lang
-<- sc_node_not_relation;
+<- sc_node_class;
 	=> nrel_main_idtf:
 		[#Язык SCP]
 		(*<- lang_ru;;*);
@@ -193,7 +193,7 @@ scp_lang
 		*);;
 
 scp_procedure
-<- sc_node_not_relation;
+<- sc_node_class;
 	=> nrel_main_idtf:
 		[#scp-процедура]
 		(*<- lang_ru;;*);
@@ -217,7 +217,7 @@ scp_procedure
 		*);;
 
 agent_scp_program
-<- sc_node_not_relation;
+<- sc_node_class;
 	=> nrel_main_idtf:
 		[агентная scp-программа]
 		(*<- lang_ru;;*);
@@ -247,7 +247,7 @@ agent_scp_program
 		*);;
 
 scp_process
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf:
 		[scp-процесс]
 		(*<- lang_ru;;*);
@@ -280,7 +280,7 @@ scp_process
 		*);;
 
 new_scp_operator
-<- sc_node_not_relation;
+<- sc_node_class;
 	=> nrel_main_idtf:
 		[scp-оператор]
 		(*
@@ -330,7 +330,7 @@ new_scp_operator
 	};;
 
 scp_operator
-<- sc_node_not_relation;
+<- sc_node_class;
 	=> nrel_main_idtf:
 		[#scp-оператор]
 		(*
@@ -375,7 +375,7 @@ scp_operator
 	};;
 
 scp_operator_executed_after_completion_of_at_least_one_of_the_previous
-<- sc_node_not_relation;
+<- sc_node_class;
 	=> nrel_main_idtf:
 		[scp-оператор, выполняемый после завершения хотя бы одного из предыдущих]
 		(*<- lang_ru;;*);
@@ -399,7 +399,7 @@ scp_operator_executed_after_completion_of_at_least_one_of_the_previous
 		*);;
 
 scp_operator_executed_after_completion_of_all_previous
-<- sc_node_not_relation;
+<- sc_node_class;
 	=> nrel_main_idtf:
 		[scp-оператор, выполняемый после завершения всех предыдущих]
 		(*<- lang_ru;;*);
@@ -423,7 +423,7 @@ scp_operator_executed_after_completion_of_all_previous
 		*);;
 
 scp_operator_of_structure_generation
-<- sc_node_not_relation;
+<- sc_node_class;
 	=> nrel_main_idtf:
 		[scp-оператор генерации конструкций]
 		(*<- lang_ru;;*);
@@ -453,7 +453,7 @@ scp_operator_of_structure_generation
 	};;
 
 sys_gen
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор генерации структуры по произвольному образцу]
@@ -485,7 +485,7 @@ sys_gen
 		"file://content_images/scp_operator_example_sys_gen4.png" (* => nrel_format: format_png;; *);;
 
 genElStr5
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор генерации пятиэлементной структуры]
@@ -515,7 +515,7 @@ genElStr5
 		"file://content_images/scp_operator_example_genElStr53.png" (* => nrel_format: format_png;; *);;
 
 genElStr3
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор генерации трехэлементной структуры]
@@ -553,7 +553,7 @@ genElStr3
 		"file://content_images/scp_operator_example_genElStr33.png" (* => nrel_format: format_png;; *);;
 
 genEl
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор генерации одноэлементной структуры]
@@ -588,7 +588,7 @@ genEl
 		"file://content_images/scp_operator_example_genEl3.png" (* => nrel_format: format_png;; *);;
 
 scp_operator_of_structure_associative_search
-<- sc_node_not_relation;
+<- sc_node_class;
 	=> nrel_main_idtf:
 		[scp-оператор ассоциативного поиска структуры]
 		(*<- lang_ru;;*);
@@ -619,7 +619,7 @@ scp_operator_of_structure_associative_search
 	};;
 
 sys_search
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор поиска структуры по произвольному образцу]
@@ -647,7 +647,7 @@ sys_search
 		"file://content_images/scp_operator_example_sys_search2.png" (* => nrel_format: format_png;; *);;
 
 searchSetStr5
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор поиска пятиэлементной структуры с формированием множеств]
@@ -671,7 +671,7 @@ searchSetStr5
 		*);;
 
 searchSetStr3
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор поиска трехэлементной структуры с формированием множеств]
@@ -695,7 +695,7 @@ searchSetStr3
 		*);;
 
 searchElStr5
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор поиска пятиэлементной структуры]
@@ -719,7 +719,7 @@ searchElStr5
 		*);;
 
 searchElStr3
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор поиска трехэлементной структуры]
@@ -743,7 +743,7 @@ searchElStr3
 		*);;
 
 scp_operator_of_structure_deleting
-<- sc_node_not_relation;
+<- sc_node_class;
 	=> nrel_main_idtf:
 		[scp-оператор удаления структуры]
 		(*<- lang_ru;;*);
@@ -774,7 +774,7 @@ scp_operator_of_structure_deleting
 	};;
 
 eraseEl
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор удаления одноэлементной структуры]
@@ -804,7 +804,7 @@ eraseEl
 		"file://content_images/scp_operator_example_eraseEl3.png" (* => nrel_format: format_png;; *);;
 
 eraseElStr3
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор удаления трехэлементной структуры]
@@ -832,7 +832,7 @@ eraseElStr3
 		"file://content_images/scp_operator_example_eraseElStr32.png" (* => nrel_format: format_png;; *);;
 
 eraseElStr5
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор удаления пятиэлементной структуры]
@@ -858,7 +858,7 @@ eraseElStr5
 		"file://content_images/scp_operator_example_eraseElStr51.png" (* => nrel_format: format_png;; *);;
 
 eraseSetStr3
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор удаления множества элементов трехэлементной структуры]
@@ -888,7 +888,7 @@ eraseSetStr3
 		"file://content_images/scp_operator_example_eraseSetStr33.png" (* => nrel_format: format_png;; *);;
 
 eraseSetStr5
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор удаления множества элементов пятиэлементной структуры]
@@ -916,7 +916,7 @@ eraseSetStr5
 		"file://content_images/scp_operator_example_eraseSetStr52.png" (* => nrel_format: format_png;; *);;
 
 scp_operator_of_conditions_check
-<- sc_node_not_relation;
+<- sc_node_class;
 	=> nrel_main_idtf:
 		[scp-оператор проверки условий]
 		(*<- lang_ru;;*);
@@ -948,7 +948,7 @@ scp_operator_of_conditions_check
 	};;
 
 ifType
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор проверки типа sc-элемента]
@@ -978,7 +978,7 @@ ifType
 		"file://content_images/scp_operator_example_ifType3.png" (* => nrel_format: format_png;; *);;
 
 ifVarAssign
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор проверки наличия значения у переменной]
@@ -1006,7 +1006,7 @@ ifVarAssign
 		"file://content_images/scp_operator_example_ifVarAssign2.png" (* => nrel_format: format_png;; *);;
 
 ifFormCont
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор проверки наличия содержимого у файла]
@@ -1030,7 +1030,7 @@ ifFormCont
 		*);;
 
 ifCoin
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор проверки совпадения значений операндов]
@@ -1058,7 +1058,7 @@ ifCoin
 		"file://content_images/scp_operator_example_ifCoin2.png" (* => nrel_format: format_png;; *);;
 
 ifEq
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор проверки равенства числовых содержимых файлов]
@@ -1088,7 +1088,7 @@ ifEq
 		"file://content_images/scp_operator_example_ifEq3.png" (* => nrel_format: format_png;; *);;
 
 ifGr
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор сравнения числовых содержимых файлов]
@@ -1116,7 +1116,7 @@ ifGr
 		"file://content_images/scp_operator_example_ifGr2.png" (* => nrel_format: format_png;; *);;
 
 scp_operator_of_scp_operand_value_control
-<- sc_node_not_relation;
+<- sc_node_class;
 	=> nrel_main_idtf:
 		[scp-оператор управления значениями операндов]
 		(*<- lang_ru;;*);
@@ -1144,7 +1144,7 @@ scp_operator_of_scp_operand_value_control
 	};;
 
 varAssign
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор присваивания значения переменной]
@@ -1172,7 +1172,7 @@ varAssign
 		"file://content_images/scp_operator_example_varAssign2.png" (* => nrel_format: format_png;; *);;
 
 varErase
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор удаления значения переменной]
@@ -1200,7 +1200,7 @@ varErase
 		"file://content_images/scp_operator_example_varErase2.png" (* => nrel_format: format_png;; *);;
 
 scp_operator_of_scp_process_control
-<- sc_node_not_relation;
+<- sc_node_class;
 	=> nrel_main_idtf:
 		[scp-оператор управления scp-процессами]
 		(*<- lang_ru;;*);
@@ -1231,7 +1231,7 @@ scp_operator_of_scp_process_control
 	};;
 
 call
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор асинхронного вызова подпрограммы]
@@ -1257,7 +1257,7 @@ call
 		"file://content_images/scp_operator_example_call.png" (* => nrel_format: format_png;; *);;
 
 waitReturn
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор ожидания завершения выполнения scp-программы]
@@ -1283,7 +1283,7 @@ waitReturn
 		"file://content_images/scp_operator_example_waitReturn.png" (* => nrel_format: format_png;; *);;
 
 waitReturnSet
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор ожидания завершения выполнения множества scp-программ]
@@ -1309,7 +1309,7 @@ waitReturnSet
 		"file://content_images/scp_operator_example_waitReturnSet.png" (* => nrel_format: format_png;; *);;
 
 return
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор завершения выполнения программы]
@@ -1334,7 +1334,7 @@ return
 
 /*syncronize*/
 syncronize
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[конъюнкция предшествующих scp-операторов]
@@ -1361,7 +1361,7 @@ syncronize
 
 
 scp_operator_of_event_control
-<- sc_node_not_relation;
+<- sc_node_class;
 	=> nrel_main_idtf:
 		[scp-оператор управления событиями]
 		(*<- lang_ru;;*);
@@ -1388,7 +1388,7 @@ scp_operator_of_event_control
 	};;
 
 sys_wait
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор ожидания события]
@@ -1414,7 +1414,7 @@ sys_wait
 		"file://content_images/scp_operator_example_sys_wait.png" (* => nrel_format: format_png;; *);;
 
 scp_operator_of_file_content_process
-<- sc_node_not_relation;
+<- sc_node_class;
 	=> nrel_main_idtf:
 		[scp-оператор обработки содержимых файлов]
 		(*<- lang_ru;;*);
@@ -1468,7 +1468,7 @@ scp_operator_of_file_content_process
 	};;
 
 contAdd
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор сложения числовых содержимых файлов]
@@ -1494,7 +1494,7 @@ contAdd
 		"file://content_images/scp_operator_example_contAdd.png" (* => nrel_format: format_png;; *);;
 
 contSub
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор вычитания числовых содержимых файлов]
@@ -1520,7 +1520,7 @@ contSub
 		"file://content_images/scp_operator_example_contSub.png" (* => nrel_format: format_png;; *);;
 
 contMult
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор умножения числовых содержимых файлов]
@@ -1546,7 +1546,7 @@ contMult
 		"file://content_images/scp_operator_example_contMult.png" (* => nrel_format: format_png;; *);;
 
 contDiv
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор деления числовых содержимых файлов]
@@ -1572,7 +1572,7 @@ contDiv
 		"file://content_images/scp_operator_example_contDiv.png" (* => nrel_format: format_png;; *);;
 
 contPow
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор возведения числового содержимого файла в степень]
@@ -1598,7 +1598,7 @@ contPow
 		"file://content_images/scp_operator_example_contPow.png" (* => nrel_format: format_png;; *);;
 
 contLn
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор вычисления логарифма числового содержимого файла]
@@ -1624,7 +1624,7 @@ contLn
 		"file://content_images/scp_operator_example_contLn.png" (* => nrel_format: format_png;; *);;
 
 contSin
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор вычисления синуса числового содержимого файла]
@@ -1650,7 +1650,7 @@ contSin
 		"file://content_images/scp_operator_example_contSin.png" (* => nrel_format: format_png;; *);;
 
 contCos
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор вычисления косинуса числового содержимого файла]
@@ -1675,7 +1675,7 @@ contCos
 	<=nrel_using_example:
 		"file://content_images/scp_operator_example_contCos.png" (* => nrel_format: format_png;; *);;
 contTg
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор вычисления тангенса числового содержимого файла]
@@ -1701,7 +1701,7 @@ contTg
 		"file://content_images/scp_operator_example_contTg.png" (* => nrel_format: format_png;; *);;
 
 contASin
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор вычисления арксинуса числового содержимого файла]
@@ -1727,7 +1727,7 @@ contASin
 		"file://content_images/scp_operator_example_contASin.png" (* => nrel_format: format_png;; *);;
 
 contACos
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор вычисления арккосинуса числового содержимого файла]
@@ -1753,7 +1753,7 @@ contACos
 		"file://content_images/scp_operator_example_contACos.png" (* => nrel_format: format_png;; *);;
 
 contATg
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор вычисления арктангенса числового содержимого файла]
@@ -1779,7 +1779,7 @@ contATg
 		"file://content_images/scp_operator_example_contATg.png" (* => nrel_format: format_png;; *);;
 
 contDivInt
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор нахождения целой части от деления числовых содержимых файлов]
@@ -1805,7 +1805,7 @@ contDivInt
 */
 
 contDivRem
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор нахождения остатка от деления числовых содержимых файлов]
@@ -1831,7 +1831,7 @@ contDivRem
 */
 
 contAssign
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор копирования содержимого файла]
@@ -1859,7 +1859,7 @@ contAssign
 		"file://content_images/scp_operator_example_contAssign_2.png" (* => nrel_format: format_png;; *);;
 
 contErase
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор удаления содержимого файла]
@@ -1885,7 +1885,7 @@ contErase
 		"file://content_images/scp_operator_example_contErase_2.png" (* => nrel_format: format_png;; *);;
 
 stringToUpperCase
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор перевода в верхний регистр строкового содержимого файла]
@@ -1909,7 +1909,7 @@ stringToUpperCase
 		"file://content_images/scp_operator_example_stringToUpperCase.png" (* => nrel_format: format_png;; *);;
 
 stringToLowerCase
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор перевода в нижний регистр строкового содержимого файла]
@@ -1933,7 +1933,7 @@ stringToLowerCase
 		"file://content_images/scp_operator_example_stringToLowerCase.png" (* => nrel_format: format_png;; *);;
 
 stringReplace
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор замены определенной части строкового содержимого файла на содержимое указанного файла]
@@ -1957,7 +1957,7 @@ stringReplace
 		"file://content_images/scp_operator_example_stringReplace.png" (* => nrel_format: format_png;; *);;
 
 stringEndsWith
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор проверки совпадения конца строкового содержимого файла со строковом содержимым другой файла]
@@ -1981,7 +1981,7 @@ stringEndsWith
 		"file://content_images/scp_operator_example_stringEndsWith.png" (* => nrel_format: format_png;; *);;
 
 stringStartsWith
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор проверки совпадения начальной части строкового содержимого файла со строковом содержимым другой файла]
@@ -2005,7 +2005,7 @@ stringStartsWith
 		"file://content_images/scp_operator_example_stringStartsWith.png" (* => nrel_format: format_png;; *);;
 
 stringSlice
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор получения части строкового содержимого файла по индексам]
@@ -2029,7 +2029,7 @@ stringSlice
 		"file://content_images/scp_operator_example_stringSlice.png" (* => nrel_format: format_png;; *);;
 
 stringSub
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор поиска строкового содержимого файла в строковом содержимом другой файла]
@@ -2053,7 +2053,7 @@ stringSub
 		"file://content_images/scp_operator_example_stringSub.png" (* => nrel_format: format_png;; *);;
 
 stringLen
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор вычисления длины строкового содержимого файла]
@@ -2077,7 +2077,7 @@ stringLen
 		"file://content_images/scp_operator_example_stringLen.png" (* => nrel_format: format_png;; *);;
 
 stringSplit
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор разбиения строки на подстроки]
@@ -2101,7 +2101,7 @@ stringSplit
 		"file://content_images/scp_operator_example_stringSplit.png" (* => nrel_format: format_png;; *);;
 
 stringIfGr
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор лексикографического сравнения строковых содержимых файлов]
@@ -2125,7 +2125,7 @@ stringIfGr
 		"file://content_images/scp_operator_example_stringIfGr.png" (* => nrel_format: format_png;; *);;
 
 stringIfEq
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор проверки равенства строковых содержимых файлов]
@@ -2149,7 +2149,7 @@ stringIfEq
 		"file://content_images/scp_operator_example_stringIfEq.png" (* => nrel_format: format_png;; *);;
 		
 contStringConcat
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор конкатенации строковых содержимых файлов]
@@ -2173,7 +2173,7 @@ contStringConcat
 		"file://content_images/scp_operator_example_contStringConcat.png" (* => nrel_format: format_png;; *);;
 
 scp_operator_of_information_output_to_consol
-<- sc_node_not_relation;
+<- sc_node_class;
 	=> nrel_main_idtf:
 		[scp-оператор вывода информации в консоль]
 		(*<- lang_ru;;*);
@@ -2202,7 +2202,7 @@ scp_operator_of_information_output_to_consol
 	};;
 
 print
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор вывода содержимого файла]
@@ -2230,7 +2230,7 @@ print
 		"file://content_images/scp_operator_example_print2.png" (* => nrel_format: format_png;; *);;
 
 printNl
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор вывода содержимого файла с переходом на новую строку]
@@ -2258,7 +2258,7 @@ printNl
 		"file://content_images/scp_operator_example_printNl2.png" (* => nrel_format: format_png;; *);;
 
 printEl
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор распечатки семантической окрестности sc-элемента]
@@ -2284,7 +2284,7 @@ printEl
 		"file://content_images/scp_operator_example_printEl1.png" (* => nrel_format: format_png;; *);;
 
 scp_operator_of_lock_management
-<- sc_node_not_relation;
+<- sc_node_class;
 	=> nrel_main_idtf:
 		[scp-оператор управления блокировками]
 		(*<- lang_ru;;*);
@@ -2319,7 +2319,7 @@ scp_operator_of_lock_management
 	};;
 
 unlockProc
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор снятия всех блокировок данного scp-процесса]
@@ -2343,7 +2343,7 @@ unlockProc
 */
 
 unlockEl
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор снятия блокировки с sc-элемента]
@@ -2367,7 +2367,7 @@ unlockEl
 */
 
 lockEl
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор установки полной блокировки на sc-элемент]
@@ -2391,7 +2391,7 @@ lockEl
 */
 
 lockElEdit
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор установки блокировки на изменение sc-элемента]
@@ -2415,7 +2415,7 @@ lockElEdit
 */
 
 lockElRemove
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор установки блокировки на удаление sc-элемент]
@@ -2439,7 +2439,7 @@ lockElRemove
 */
 
 unlockElStr
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор снятия блокировки со структуры]
@@ -2463,7 +2463,7 @@ unlockElStr
 */
 
 lockElStr
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор установки полной блокировки на структуру]
@@ -2487,7 +2487,7 @@ lockElStr
 */
 
 lockElStrEdit
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор установки блокировки на изменение структуры]
@@ -2511,7 +2511,7 @@ lockElStrEdit
 */
 
 lockElStrRemove
-<- sc_node_not_relation;
+<- sc_node_class;
 	<-scp_operator_atomic_type;
 	=> nrel_main_idtf:
 		[scp-оператор установки блокировки на удаление структуры]
@@ -2535,7 +2535,7 @@ lockElStrRemove
 */
 
 scp_operator_atomic_type
-<- sc_node_not_relation;
+<- sc_node_class;
 	=> nrel_main_idtf:
 		[атомарный тип scp-оператора]
 		(*<- lang_ru;;*);

@@ -1,5 +1,5 @@
 section_technique_of_designing_computer_systems_knowledge_bases_in_context_of_global_knowledge_base =  [*
-	semantic_space <- sc_node_not_relation;;
+	semantic_space <- sc_node_class;;
 	semantic_space 
 	=> nrel_main_idtf:
 	[смысловое пространство]
@@ -31,7 +31,7 @@ semantic_space
 
 
 
-sc_model_of_semantic_space <- sc_node_not_relation;;
+sc_model_of_semantic_space <- sc_node_class;;
 sc_model_of_semantic_space
 => nrel_main_idtf:
 	[SC-модель смыслового пространства]
@@ -62,7 +62,7 @@ sc_model_of_semantic_space
 <- infinite_set;
 <- semantic_space;;
 
-infinite_set <- sc_node_not_relation;;
+infinite_set <- sc_node_class;;
 infinite_set
 => nrel_main_idtf:
 	[бесконечное множество]
@@ -71,7 +71,7 @@ infinite_set
 	(* <- lang_en;; *);;
 
 
-global_knowledge_base <- sc_node_not_relation;;
+global_knowledge_base <- sc_node_class;;
 global_knowledge_base
 => nrel_main_idtf:
 	[Глобальная база знаний]
@@ -87,7 +87,7 @@ global_knowledge_base
 <- finite_set;;
 
 
-maximum_class_semantically_equivalent_information_constructions <- sc_node_not_relation;;
+maximum_class_semantically_equivalent_information_constructions <- sc_node_class;;
 maximum_class_semantically_equivalent_information_constructions
 => nrel_main_idtf:
 	[максимальный класс семантически эквивалентных информационных конструкций]
@@ -95,7 +95,7 @@ maximum_class_semantically_equivalent_information_constructions
 	[maximum class semantically equivalent information constructions]
 	(* <- lang_en;; *);;
 
-finite_set <- sc_node_not_relation;;
+finite_set <- sc_node_class;;
 finite_set
 => nrel_main_idtf:
 	[конечное множество]
@@ -104,7 +104,7 @@ finite_set
 	(* <- lang_en;; *);;
 
 
-semantic_model_of_global_knowledge_base <- sc_node_not_relation;;
+semantic_model_of_global_knowledge_base <- sc_node_class;;
 semantic_model_of_global_knowledge_base
 => nrel_main_idtf:
 	[Смысловая модель глобальной базы знаний]
@@ -121,7 +121,7 @@ semantic_model_of_global_knowledge_base
 <= nrel_inclusion: global_knowledge_base;;
 
 
-sc_model_global_knowledge_base <- sc_node_not_relation;;
+sc_model_global_knowledge_base <- sc_node_class;;
 sc_model_global_knowledge_base
 => nrel_main_idtf:
 	[SC-модель глобальной базы знаний]
@@ -141,7 +141,7 @@ sc_model_global_knowledge_base
 <- semantic_model_of_global_knowledge_base;;
 
 
-knowledge_base <- sc_node_not_relation;;
+knowledge_base <- sc_node_class;;
 knowledge_base 
 => nrel_main_idtf:
 	[база знаний]
@@ -171,7 +171,7 @@ knowledge_base
  *);;
 
 
-semantic_knowledge_base_model <- sc_node_not_relation;;
+semantic_knowledge_base_model <- sc_node_class;;
 semantic_knowledge_base_model
 => nrel_main_idtf:
 	[смысловая модель базы знаний]
@@ -186,7 +186,7 @@ semantic_knowledge_base_model
 <= nrel_inclusion: knowledge_base;;
 
 
-sc_model_of_knowledge_base <- sc_node_not_relation;;
+sc_model_of_knowledge_base <- sc_node_class;;
 sc_model_of_knowledge_base
 => nrel_main_idtf:
 	[sc-модель базы знаний]

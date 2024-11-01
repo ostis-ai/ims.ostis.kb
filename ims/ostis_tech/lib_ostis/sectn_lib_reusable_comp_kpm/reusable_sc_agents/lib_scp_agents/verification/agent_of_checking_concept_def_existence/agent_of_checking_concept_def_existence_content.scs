@@ -8,14 +8,14 @@ agent_of_checking_concept_def_existence
 
 agent_of_checking_concept_def_existence = [*
 .._process1
-_<- scp_process;
+<-_ scp_process;
 
 _-> rrel_1:: rrel_in:: _event;
 _-> rrel_2:: rrel_in:: _input_arc;
-_<= nrel_decomposition_of_action:: .._actions (*
+<=_ nrel_decomposition_of_action:: .._actions (*
 
 	_-> rrel_1:: .._agent_of_checking_concept_def_existence_operator1A (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _temp;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: _input_arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _action;;
@@ -24,7 +24,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_checking_concept_def_existence_operator1B (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_to_check_concept_def_existence;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
@@ -34,7 +34,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_checking_concept_def_existence_operator1C (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: rrel_struct:: _param;;
@@ -44,12 +44,12 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_checking_concept_def_existence_operator_return (*
-		_<- return;;
+		<-_ return;;
 
 	*);;
 
 	_-> .._agent_of_checking_concept_def_existence_operator1D_find_context (*
-		_<- searchElStr5;;
+		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
 		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _context;;
@@ -61,7 +61,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_checking_concept_def_existence_operator_invalid_first_param_msg (*
-		_<- varAssign;;
+		<-_ varAssign;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _validation_message;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [Wrong 1st parameter! It must be a structure.];;
 
@@ -69,7 +69,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_checking_concept_def_existence_operator_call_proc_of_adding_validating_message (*
-		_<- call;;
+		<-_ call;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_adding_validating_message;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._agent_of_checking_concept_def_existence_param0 (*
 			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
@@ -81,14 +81,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_checking_concept_def_existence_operator_waitreturn_proc_of_adding_validating_message (*
-		_<- waitReturn;;
+		<-_ waitReturn;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _descr1;;
 
 		_=> nrel_goto:: .._agent_of_checking_concept_def_existence_operator_return;;
 	*);;
 
 	_-> .._agent_of_checking_concept_def_existence_operator1D_set_context_existence_to_true (*
-		_<- varAssign;;
+		<-_ varAssign;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _is_context_exist;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [true];;
 
@@ -96,7 +96,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_checking_concept_def_existence_operator1D_set_context_existence_to_false (*
-		_<- varAssign;;
+		<-_ varAssign;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _is_context_exist;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [false];;
 
@@ -104,21 +104,21 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_checking_concept_def_existence_operator1E_gen_answer_node (*
-		_<- genEl;;
+		<-_ genEl;;
 		_-> rrel_1:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: rrel_struct:: _incorrect_structure;;
 
 		_=> nrel_goto:: .._agent_of_checking_concept_def_existence_operator1E_gen_concepts_node;;
 	*);;
 
 	_-> .._agent_of_checking_concept_def_existence_operator1E_gen_concepts_node (*
-		_<- genEl;;
+		<-_ genEl;;
 		_-> rrel_1:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: _concepts;;
 
 		_=> nrel_goto:: .._agent_of_checking_concept_def_existence_operator1F_get_params_1;;
 	*);;
 
 	_-> .._agent_of_checking_concept_def_existence_operator1F_get_params_1 (*
-		_<- searchSetStr3;;
+		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _param;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _concept;;
@@ -128,7 +128,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_checking_concept_def_existence_operator1F_get_params_2 (*
-		_<- searchSetStr3;;
+		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _param;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _concept;;
@@ -138,7 +138,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_checking_concept_def_existence_operator1F_get_params_3 (*
-		_<- searchSetStr3;;
+		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _param;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _concept;;
@@ -148,7 +148,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_checking_concept_def_existence_operator1G_loop_enter (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _concepts;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _concept;;
@@ -158,14 +158,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_checking_concept_def_existence_operator1G_loop1 (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _arc1;;
 
 		_=> nrel_goto:: .._agent_of_checking_concept_def_existence_operator1G_is_context_exist;;
 	*);;
 
 	_-> .._agent_of_checking_concept_def_existence_operator_gen_verification_answer (*
-		_<- call;;
+		<-_ call;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_generation_of_verification_answer;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._agent_of_checking_concept_def_existence_param1 (*
 			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
@@ -179,14 +179,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_checking_concept_def_existence_operator_waitreturn_generation_verification_answer (*
-		_<- waitReturn;;
+		<-_ waitReturn;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _descr3;;
 
 		_=> nrel_goto:: .._agent_of_checking_concept_def_existence_operator_temp_set_2_is_not_null;;
 	*);;
 
 	_-> .._agent_of_checking_concept_def_existence_operator_temp_set_2_is_not_null (*
-		_<- ifVarAssign;;
+		<-_ ifVarAssign;;
 		_-> rrel_1:: rrel_scp_var:: _concepts;;
 
 		_=> nrel_then:: .._agent_of_checking_concept_def_existence_operator_erase_temp_set_2;;
@@ -194,14 +194,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_checking_concept_def_existence_operator_erase_temp_set_2 (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _concepts;;
 
 		_=> nrel_goto:: .._agent_of_checking_concept_def_existence_operator_temp_set_3_is_not_null;;
 	*);;
 
 	_-> .._agent_of_checking_concept_def_existence_operator_temp_set_3_is_not_null (*
-		_<- ifVarAssign;;
+		<-_ ifVarAssign;;
 		_-> rrel_1:: rrel_scp_var:: _def_set;;
 
 		_=> nrel_then:: .._agent_of_checking_concept_def_existence_operator_erase_temp_set_3;;
@@ -209,14 +209,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_checking_concept_def_existence_operator_erase_temp_set_3 (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _def_set;;
 
 		_=> nrel_goto:: .._agent_of_checking_concept_def_existence_operator_return;;
 	*);;
 
 	_-> .._agent_of_checking_concept_def_existence_operator1G_is_context_exist (*
-		_<- stringIfEq;;
+		<-_ stringIfEq;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _is_context_exist;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [true];;
 
@@ -225,7 +225,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_checking_concept_def_existence_operator1G_context_logic_1 (*
-		_<- searchSetStr5;;
+		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _node;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _concept;;
@@ -238,7 +238,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_checking_concept_def_existence_operator1G_loop2 (*
-		_<- searchSetStr5;;
+		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _node;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _concept;;
@@ -251,7 +251,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_checking_concept_def_existence_operator_def_search_loop_enter1 (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _def_set;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _def;;
@@ -261,7 +261,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_checking_concept_def_existence_operator1G_loop_add_incorrect_concept (*
-		_<- genElStr5;;
+		<-_ genElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _incorrect_structure;;
 		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _concept;;
@@ -272,14 +272,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_checking_concept_def_existence_operator_def_search_loop1 (*
-		_<- eraseEl;;
+		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _arc1;;
 
 		_=> nrel_goto:: .._agent_of_checking_concept_def_existence_operator1G_loop_is_def;;
 	*);;
 
 	_-> .._agent_of_checking_concept_def_existence_operator1G_loop_is_def (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: definition;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _def;;
@@ -289,7 +289,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_checking_concept_def_existence_operator1G_loop_is_explanation (*
-		_<- searchElStr3;;
+		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: explanation;;
 		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _def;;
@@ -299,7 +299,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_checking_concept_def_existence_operator1G_context_logic_2 (*
-		_<- call;;
+		<-_ call;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: proc_of_finding_intersection_of_two_sets;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._agent_of_checking_concept_def_existence_param2 (*
 			_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _all_key_sc_elems;;
@@ -312,14 +312,14 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_checking_concept_def_existence_operator1G_context_logic_3 (*
-		_<- waitReturn;;
+		<-_ waitReturn;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _descr5;;
 
 		_=> nrel_goto:: .._agent_of_checking_concept_def_existence_operator_def_search_loop_enter1;;
 	*);;
 
 	_-> .._agent_of_checking_concept_def_existence_operator_validate_context (*
-		_<- ifType;;
+		<-_ ifType;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: rrel_struct:: _context;;
 
 		_=> nrel_then:: .._agent_of_checking_concept_def_existence_operator1E_gen_answer_node;;
@@ -327,7 +327,7 @@ _<= nrel_decomposition_of_action:: .._actions (*
 	*);;
 
 	_-> .._agent_of_checking_concept_def_existence_operator_invalid_second_param_msg (*
-		_<- varAssign;;
+		<-_ varAssign;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _validation_message;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [Wrong 2nd parameter! It must be a structure.];;
 

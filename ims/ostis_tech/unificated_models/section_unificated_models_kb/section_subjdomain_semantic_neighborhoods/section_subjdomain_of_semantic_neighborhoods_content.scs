@@ -6,7 +6,7 @@ subject_domain_of_semantic_neighborhoods
 	[Subject domain of semantic neighbourhoods]
 	(* <- lang_en;; *);
 <- subject_domain;
-<- sc_node_struct;
+<- sc_node_structure;
 <- structure;
 -> rrel_maximum_studied_object_class: semantic_neighborhood;
 -> rrel_not_maximum_studied_object_class:
@@ -30,7 +30,7 @@ subject_domain_of_semantic_neighborhoods
 	illustration;;
 
 semantic_neighborhood
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[семантическая окрестность]
 	(* <- lang_ru;; *);
@@ -68,7 +68,7 @@ semantic_neighborhood
 	*);;
 	
 semantic_neighborhood_by_incident_connector
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[семантическая окрестность по инцидентным коннекторам]
 	(* <- lang_ru;; *);
@@ -94,7 +94,7 @@ semantic_neighborhood_by_incident_connector
 	*);;
 
 semantic_neighborhood_by_outgoing_arcs
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[семантическая окрестность по выходящим дугам]
 	(* <- lang_ru;; *);
@@ -118,7 +118,7 @@ semantic_neighborhood_by_outgoing_arcs
 	*);;
 
 semantic_neighborhood_by_outgoing_arcs_access
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[семантическая окрестность по выходящим дугам принадлежности]
 	(* <- lang_ru;; *);
@@ -141,7 +141,7 @@ semantic_neighborhood_by_outgoing_arcs_access
 	*);;
 
 semantic_neighborhood_by_incoming_arcs
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[семантическая окрестность по входящим дугам]
 	(* <- lang_ru;; *);
@@ -166,7 +166,7 @@ semantic_neighborhood_by_incoming_arcs
 	*);;
 	
 semantic_neighborhood_by_incoming_arcs_access
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[семантическая окрестность по входящим дугам принадлежности]
 	(* <- lang_ru;; *);
@@ -189,7 +189,7 @@ semantic_neighborhood_by_incoming_arcs_access
 	*);;
 	
 full_semantic_neighborhood
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[полная семантическая окрестность]
 	(* <- lang_ru;; *);
@@ -215,7 +215,7 @@ full_semantic_neighborhood
 	*);;
 	
 basic_semantic_neighborhood
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[базовая семантическая окрестность]
 	(* <- lang_ru;; *);
@@ -247,7 +247,7 @@ basic_semantic_neighborhood
 	*);;
 
 specialized_semantic_neighborhood
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[специализированная семантическая окрестность]
 	(* <- lang_ru;; *);
@@ -279,7 +279,7 @@ specialized_semantic_neighborhood
 	*);;
 
 explanation
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[пояснение]
 	(* <- lang_ru;; *);
@@ -305,7 +305,7 @@ explanation
 	*);;
 
 note
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[примечание]
 	(* <- lang_ru;; *);
@@ -331,7 +331,7 @@ note
 	*);;
 
 identify_instances_rule
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[правило идентификации экземпляров]
 	(* <- lang_ru;; *);
@@ -357,7 +357,7 @@ identify_instances_rule
 	*);;
 
 terminological_neighbourhood
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[терминологическая семантическая окрестность]
 	(* <- lang_ru;; *);
@@ -380,7 +380,7 @@ terminological_neighbourhood
 	*);;
 	
 theoretic_set_semantic_neighborhood
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[теоретико-множественная семантическая окрестность]
 	(* <- lang_ru;; *);
@@ -403,7 +403,7 @@ theoretic_set_semantic_neighborhood
 	*);;
 
 decomposition_description
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[описание декомпозиции]
 	(* <- lang_ru;; *);
@@ -429,7 +429,7 @@ decomposition_description
 	*);;
 
 logic_semantic_neighborhood
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[логическая семантическая окрестность]
 	(* <- lang_ru;; *);
@@ -452,7 +452,7 @@ logic_semantic_neighborhood
 	*);;
 
 description_of_a_typical_instance
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[описание типичного экземпляра]
 	(* <- lang_ru;; *);
@@ -482,7 +482,7 @@ description_of_a_typical_instance
 	*);;
 
 comparative_analysis
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[сравнительный анализ]
 	(* <- lang_ru;; *);
@@ -505,7 +505,7 @@ comparative_analysis
 	*);;
 
 illustration
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[иллюстрация]
 	(* <- lang_ru;; *);

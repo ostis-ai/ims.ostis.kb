@@ -7,7 +7,7 @@ subject_domain_of_structures
 	(* <- lang_en;; *);
 
 <- subject_domain;
-<- sc_node_struct;
+<- sc_node_structure;
 <- structure;
 -> rrel_maximum_studied_object_class: 
 	structure;
@@ -45,7 +45,7 @@ subject_domain_of_structures
 	nrel_primary_syntax_sc_text_structure;;
 	
 structure
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[структура]
 	(* <- lang_ru;; *);
@@ -89,7 +89,7 @@ structure
 	
 
 connected_structure
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[связная структура]
 	(* <- lang_ru;; *);
@@ -114,7 +114,7 @@ connected_structure
 	
 	
 non_connected_structure
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[несвязная структура]
 	(* <- lang_ru;; *);
@@ -139,7 +139,7 @@ non_connected_structure
 	
 
 trivial_structure
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[тривиальная структура]
 	(* <- lang_ru;; *);
@@ -168,7 +168,7 @@ trivial_structure
 	
 	
 non_trivial_structure
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[нетривиальная структура]
 	(* <- lang_ru;; *);
@@ -508,7 +508,7 @@ rrel_second_level_element
 
 	
 second_level_structure
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[структура второго уровня]
 	(* <- lang_ru;; *);
@@ -533,7 +533,7 @@ second_level_structure
 
 	
 semantic_level_structural_element
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[семантический уровень структурного элемента]
 	(* <- lang_ru;; *);
@@ -574,7 +574,7 @@ semantic_level_structural_element
 
 
 quantity_semantic_level_structural_element
-<- sc_node_not_relation;
+<- sc_node_class;
 => nrel_main_idtf:
 	[количество семантических уровней элементов структуры]
 	(* <- lang_ru;; *);
@@ -631,7 +631,7 @@ rrel_metaconnection
 	
 	
 nrel_polymorphic
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[полиморфность*]
 	(* <- lang_ru;; *);
@@ -661,7 +661,7 @@ nrel_polymorphic
 
 
 nrel_polymorphism
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[полиморфизм*]
 	(* <- lang_ru;; *);
@@ -671,7 +671,7 @@ nrel_polymorphism
 <- binary_relation;;
 
 nrel_gomomorphic
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[гомоморфность*]
 	(* <- lang_ru;; *);
@@ -719,7 +719,7 @@ nrel_gomomorphic
 	
 
 nrel_gomomorphism
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[гомоморфизм*]
 	(* <- lang_ru;; *);
@@ -730,7 +730,7 @@ nrel_gomomorphism
 
 
 nrel_isomorphic
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[изоморфность*]
 	(* <- lang_ru;; *);
@@ -781,7 +781,7 @@ nrel_isomorphic
 	
 	
 nrel_isomorphism
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[изоморфизм*]
 	(* <- lang_ru;; *);
@@ -792,7 +792,7 @@ nrel_isomorphism
 
 
 nrel_automorphic
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[автоморфность*]
 	(* <- lang_ru;; *);
@@ -837,7 +837,7 @@ nrel_automorphic
 	
 	
 nrel_automorphism
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[автоморфизм*]
 	(* <- lang_ru;; *);
@@ -848,7 +848,7 @@ nrel_automorphism
 
 
 nrel_structures_analogy
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[аналогичность структур*]
 	(* <- lang_ru;; *);
@@ -893,7 +893,7 @@ nrel_structures_analogy
 	
 	
 nrel_sameness
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[сходство*]
 	(* <- lang_ru;; *);
@@ -904,7 +904,7 @@ nrel_sameness
 
 
 nrel_difference
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[различие*]
 	(* <- lang_ru;; *);
@@ -915,7 +915,7 @@ nrel_difference
 
 
 nrel_primary_syntax_sc_text_structure
-<- sc_node_norole_relation;
+<- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[первичная синтаксическая структура sc-текста*]
 	(* <- lang_ru;; *);
