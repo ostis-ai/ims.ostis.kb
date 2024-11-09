@@ -48,6 +48,7 @@ basic_programming_language_scp
 	scp_operator_of_event_control;
 	sys_wait;
 	scp_operator_of_file_content_process;
+	contRandom;
 	contAdd;
 	contSub;
 	contMult;
@@ -1437,6 +1438,7 @@ scp_operator_of_file_content_process
 		*);
 	<= nrel_subdividing: 
 	{
+		contRandom;
 		contAdd;
 		contSub;
 		contMult;
@@ -1466,6 +1468,15 @@ scp_operator_of_file_content_process
 		stringReplace;
 		stringSlice
 	};;
+
+contRandom
+<- sc_node_class;
+        <-scp_operator_atomic_type;
+        => nrel_main_idtf:
+                [scp-оператор генерации случайного числа]
+                (*<- lang_ru;;*);
+                [scp-operator of random number generation]
+                (*<- lang_en;;*);;
 
 contAdd
 <- sc_node_class;
