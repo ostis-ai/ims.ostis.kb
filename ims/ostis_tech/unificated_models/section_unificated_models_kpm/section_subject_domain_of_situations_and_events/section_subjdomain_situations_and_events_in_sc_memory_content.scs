@@ -55,14 +55,14 @@ subject_domain_situations_and_events_in_sc_memory
 	nrel_situation_in_sc_memory;
 	nrel_elementary_situation_in_sc_memory;
 	sc_event_after_generate_outgoing_arc;
-	sc_event_add_input_arc;
+	sc_event_after_generate_incoming_arc;
 	nrel_add_sc_arc_coming_in_given_sc_element_situation;
 	nrel_add_sc_edge_incident_to_given_sc_element_situation;
-	sc_event_remove_output_arc;
-	sc_event_remove_input_arc;
+	sc_event_before_erase_outgoing_arc;
+	sc_event_before_erase_incoming_arc;
 	nrel_remove_sc_edge_incident_to_given_sc_element_situation;
-	sc_event_remove_element;
-	sc_event_content_changed;;
+	sc_event_before_erase_element;
+	sc_event_before_change_link_content;;
 		
 sc_element
 <- sc_node_class;
@@ -437,18 +437,18 @@ nrel_elementary_situation_in_sc_memory
 
 <= nrel_subdividing: 
 	{  
-		sc_event_add_input_arc;
+		sc_event_after_generate_incoming_arc;
 		sc_event_after_generate_outgoing_arc;
 		nrel_add_sc_arc_coming_in_given_sc_element_situation;
 		nrel_add_sc_edge_incident_to_given_sc_element_situation;
-		sc_event_remove_output_arc;
-		sc_event_remove_input_arc;
+		sc_event_before_erase_outgoing_arc;
+		sc_event_before_erase_incoming_arc;
 		nrel_remove_sc_edge_incident_to_given_sc_element_situation;
-		sc_event_remove_element;
-		sc_event_content_changed
+		sc_event_before_erase_element;
+		sc_event_before_change_link_content
 	};;
 
-sc_event_add_input_arc
+sc_event_after_generate_incoming_arc
 <- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[событие добавления sc-дуги, входящей в заданный sc-элемент*]
@@ -483,7 +483,7 @@ nrel_add_sc_edge_incident_to_given_sc_element_situation
 	(* <- lang_en;; *);;
 	
 	
-sc_event_remove_output_arc
+sc_event_before_erase_outgoing_arc
 <- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[событие удаления sc-дуги, выходящей из заданного sc-элемента*]
@@ -492,7 +492,7 @@ sc_event_remove_output_arc
 	(* <- lang_en;; *);;
 	
 	
-sc_event_remove_input_arc
+sc_event_before_erase_incoming_arc
 <- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[событие удаления sc-дуги, входящей в заданный sc-элемент*]
@@ -510,7 +510,7 @@ nrel_remove_sc_edge_incident_to_given_sc_element_situation
 	(* <- lang_en;; *);;
 	
 	
-sc_event_remove_element
+sc_event_before_erase_element
 <- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[событие удаления sc-элемента*]
@@ -519,7 +519,7 @@ sc_event_remove_element
 	(* <- lang_en;; *);;
 	
 	
-sc_event_content_changed	
+sc_event_before_change_link_content
 <- sc_node_non_role_relation;
 => nrel_main_idtf:
 	[событие изменения содержимого файла*]
