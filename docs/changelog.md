@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Rename scp-operands role relations
+- Rename sc.s-element types
+- Rename event classes
 - Rename answer to result
 - Rename questions to actions
 
