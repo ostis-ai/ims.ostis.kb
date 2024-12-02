@@ -125,7 +125,7 @@ _-> rrel_3:: rrel_in:: _result;
 
 	_-> .._proc_of_calculation_number_of_all_types_of_outbound_connections_operator_3_7 (*
 		<-_ varAssign;;
-		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _is_exist_accessories_arc;;
+		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _is_exist_membership_arc;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [0];;
 
 		_=> nrel_goto:: .._proc_of_calculation_number_of_all_types_of_outbound_connections_operator_4;;
@@ -178,7 +178,7 @@ _-> rrel_3:: rrel_in:: _result;
 		<-_ contAdd;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _vertex_number;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _vertex_number;;
-		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _is_exist_accessories_arc;;
+		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _is_exist_membership_arc;;
 
 		_=> nrel_goto:: .._proc_of_calculation_number_of_all_types_of_outbound_connections_operator_6_4;;
 	*);;
@@ -267,7 +267,7 @@ _-> rrel_3:: rrel_in:: _result;
 
 	_-> .._proc_of_calculation_number_of_all_types_of_outbound_connections_operator_4_5 (*
 		<-_ varAssign;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _is_exist_accessories_arc;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _is_exist_membership_arc;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [1];;
 
 		_=> nrel_goto:: .._proc_of_calculation_number_of_all_types_of_outbound_connections_operator_4;;

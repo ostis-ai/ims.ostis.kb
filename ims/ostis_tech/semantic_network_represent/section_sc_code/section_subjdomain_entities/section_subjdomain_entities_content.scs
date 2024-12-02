@@ -32,9 +32,9 @@ subjdomain_entities
 	temporary_entity;
 	sc_node;
 	sc_connector;
-	sc_edge;
+	sc_common_edge;
 	sc_arc;
-	sc_arc_common;
+	sc_common_arc;
 	sc_arc_membership_or_nonmembership;
 	sc_arc_membership;
 	sc_arc_nonmembership;
@@ -465,11 +465,11 @@ sc_connector
 
 <= nrel_subdividing:
 	{
-		sc_edge;
+		sc_common_edge;
 		sc_arc
 	};;
 
-sc_edge
+sc_common_edge
 <- sc_node_class;
 
 => nrel_main_idtf:
@@ -480,11 +480,11 @@ sc_edge
 
 <= nrel_subdividing:
 	{
-		sc_edge_constant;
-		sc_edge_variable
+		sc_common_edge_constant;
+		sc_common_edge_variable
 	};;
 
-sc_edge_constant
+sc_common_edge_constant
 <- sc_node_class;
 => nrel_main_idtf:
 	[константное sc-ребро]
@@ -492,7 +492,7 @@ sc_edge_constant
 	[constant sc-edge]
 	(* <- lang_en;; *);;
 
-sc_edge_variable
+sc_common_edge_variable
 <- sc_node_class;
 => nrel_main_idtf:
 	[переменное sc-ребро]
@@ -511,11 +511,11 @@ sc_arc
 
 <= nrel_subdividing:
 	{
-		sc_arc_common;
+		sc_common_arc;
 		sc_arc_membership_or_nonmembership
 	};;
 
-sc_arc_common
+sc_common_arc
 <-sc_node_class;
 
 => nrel_main_idtf:
@@ -526,8 +526,8 @@ sc_arc_common
 
 <= nrel_subdividing:
 	{
-		sc_arc_common_constant;
-		sc_arc_common_variable
+		sc_common_arc_constant;
+		sc_common_arc_variable
 	};;
 
 sc_arc_membership_or_nonmembership
@@ -718,7 +718,7 @@ constant_sc_node
 	[constant sc-node]
 	(* <- lang_en;; *);;
 
-sc_arc_common_variable
+sc_common_arc_variable
 <- sc_node_class;
 
 => nrel_main_idtf:
@@ -727,7 +727,7 @@ sc_arc_common_variable
 	[variable sc-arc common]
 	(* <- lang_en;; *);;
 
-sc_arc_common_constant
+sc_common_arc_constant
 <- sc_node_class;
 
 => nrel_main_idtf:
@@ -773,14 +773,14 @@ sc_code_alphabet
 -> constant_sc_node;
 -> variable_sc_node;
 -> sc_connector;
--> sc_edge;
+-> sc_common_edge;
 -> sc_arc;
--> sc_edge_constant;					
--> sc_edge_variable;
--> sc_arc_common;
+-> sc_common_edge_constant;					
+-> sc_common_edge_variable;
+-> sc_common_arc;
 -> sc_arc_membership_or_nonmembership;
--> sc_arc_common_constant;
--> sc_arc_common_variable;
+-> sc_common_arc_constant;
+-> sc_common_arc_variable;
 -> sc_arc_membership;
 -> sc_arc_nonmembership;
 -> sc_arc_fuzzy_membership;

@@ -26,7 +26,7 @@ _-> rrel_3:: rrel_in:: _set_of_links;
 
 	_-> .._proc_of_calculation_number_of_all_types_of_input_connections_operator3A1 (*
 		<-_ varAssign;;
-		_-> rrel_1:: rrel_assign:: rrel_node_link:: rrel_scp_var:: _accessories_arc;;
+		_-> rrel_1:: rrel_assign:: rrel_node_link:: rrel_scp_var:: _membership_arc;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [0];;
 
 		_=> nrel_goto:: .._proc_of_calculation_number_of_all_types_of_input_connections_operator3B;;
@@ -83,12 +83,12 @@ _-> rrel_3:: rrel_in:: _set_of_links;
 		<-_ eraseEl;;
 		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_scp_var:: _set_of_input_arcs;;
 
-		_=> nrel_goto:: .._proc_of_calculation_number_of_all_types_of_input_connections_operator_erase_accessories_arc;;
+		_=> nrel_goto:: .._proc_of_calculation_number_of_all_types_of_input_connections_operator_erase_membership_arc;;
 	*);;
 
-	_-> .._proc_of_calculation_number_of_all_types_of_input_connections_operator_erase_accessories_arc (*
+	_-> .._proc_of_calculation_number_of_all_types_of_input_connections_operator_erase_membership_arc (*
 		<-_ eraseEl;;
-		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_node_link:: rrel_node:: rrel_scp_var:: _accessories_arc;;
+		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_node_link:: rrel_node:: rrel_scp_var:: _membership_arc;;
 
 		_=> nrel_goto:: .._proc_of_calculation_number_of_all_types_of_input_connections_operator_erase_set_vertex;;
 	*);;
@@ -191,14 +191,14 @@ _-> rrel_3:: rrel_in:: _set_of_links;
 		<-_ contAdd;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _numb_of_types;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _numb_of_types;;
-		_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _accessories_arc;;
+		_-> rrel_2:: rrel_fixed:: rrel_scp_var:: _membership_arc;;
 
 		_=> nrel_goto:: .._proc_of_calculation_number_of_all_types_of_input_connections_operator3C25;;
 	*);;
 
 	_-> .._proc_of_calculation_number_of_all_types_of_input_connections_operator3C25 (*
 		<-_ varAssign;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _accessories_arc;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _membership_arc;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [0];;
 
 		_=> nrel_goto:: .._proc_of_calculation_number_of_all_types_of_input_connections_operator3C26;;
@@ -352,7 +352,7 @@ _-> rrel_3:: rrel_in:: _set_of_links;
 
 	_-> .._proc_of_calculation_number_of_all_types_of_input_connections_operator3C14 (*
 		<-_ varAssign;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _accessories_arc;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _membership_arc;;
 		_-> rrel_2:: rrel_fixed:: rrel_scp_const:: [1];;
 
 		_=> nrel_goto:: .._proc_of_calculation_number_of_all_types_of_input_connections_operator3C2;;

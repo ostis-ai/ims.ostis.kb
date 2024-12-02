@@ -12,9 +12,9 @@ subject_domain_of_semantic_neighborhoods
 -> rrel_not_maximum_studied_object_class:
 	semantic_neighborhood_by_incident_connector;
 	semantic_neighborhood_by_outgoing_arcs;
-	semantic_neighborhood_by_outgoing_arcs_access;
+	semantic_neighborhood_by_outgoing_membership_arcs;
 	semantic_neighborhood_by_incoming_arcs;
-	semantic_neighborhood_by_incoming_arcs_access;
+	semantic_neighborhood_by_incoming_membership_arcs;
 	full_semantic_neighborhood;
 	basic_semantic_neighborhood;
 	specialized_semantic_neighborhood;
@@ -100,7 +100,7 @@ semantic_neighborhood_by_outgoing_arcs
 	(* <- lang_ru;; *);
 	[semantic neighborhood by outgoing arcs]
 	(* <- lang_en;; *);
-=> nrel_strict_inclusion: semantic_neighborhood_by_outgoing_arcs_access;
+=> nrel_strict_inclusion: semantic_neighborhood_by_outgoing_membership_arcs;
 <- rrel_key_sc_element:
 	...
 	(*
@@ -117,12 +117,12 @@ semantic_neighborhood_by_outgoing_arcs
 		*);;
 	*);;
 
-semantic_neighborhood_by_outgoing_arcs_access
+semantic_neighborhood_by_outgoing_membership_arcs
 <- sc_node_class;
 => nrel_main_idtf:
 	[семантическая окрестность по выходящим дугам принадлежности]
 	(* <- lang_ru;; *);
-	[semantic neighborhood by outgoing arcs access]
+	[semantic neighborhood by outgoing membership arcs]
 	(* <- lang_en;; *);
 <- rrel_key_sc_element:
 	...
@@ -132,7 +132,7 @@ semantic_neighborhood_by_outgoing_arcs_access
 		...
 		(*
 		-> rrel_example:
-			"file://nl_files/semantic_neighborhood_by_outgoing_arcs_access.html"
+			"file://nl_files/semantic_neighborhood_by_outgoing_membership_arcs.html"
 			(*
 			<- lang_ru;;
 			=> nrel_format: format_html;;
@@ -148,7 +148,7 @@ semantic_neighborhood_by_incoming_arcs
 	[semantic neighborhood by incoming arcs]
 	(* <- lang_en;; *);
 => nrel_strict_inclusion:
-	semantic_neighborhood_by_incoming_arcs_access;
+	semantic_neighborhood_by_incoming_membership_arcs;
 <- rrel_key_sc_element:
 	...
 	(*
@@ -165,7 +165,7 @@ semantic_neighborhood_by_incoming_arcs
 		*);;
 	*);;
 	
-semantic_neighborhood_by_incoming_arcs_access
+semantic_neighborhood_by_incoming_membership_arcs
 <- sc_node_class;
 => nrel_main_idtf:
 	[семантическая окрестность по входящим дугам принадлежности]
@@ -180,7 +180,7 @@ semantic_neighborhood_by_incoming_arcs_access
 		...
 		(*
 		-> rrel_example:
-			"file://nl_files/semantic_neighborhood_by_incoming_arcs_access.html"
+			"file://nl_files/semantic_neighborhood_by_incoming_membership_arcs.html"
 			(*
 			<- lang_ru;;
 			=> nrel_format: format_html;;
