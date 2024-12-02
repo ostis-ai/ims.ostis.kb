@@ -15,7 +15,7 @@ _-> rrel_3:: rrel_in:: _result_proc_of_generating_validation_comment;
 	_-> rrel_1:: .._proc_of_generating_validation_comment_operator1A (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _result_proc_of_generating_validation_comment;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _action_node;;
 
 		_=> nrel_goto:: .._proc_of_generating_validation_comment_operator1B1;;
@@ -31,9 +31,9 @@ _-> rrel_3:: rrel_in:: _result_proc_of_generating_validation_comment;
 	_-> .._proc_of_generating_validation_comment_operator1B2 (*
 		<-_ genElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _action_node;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_const:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _comment;;
-		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_comment;;
 
 		_=> nrel_goto:: .._proc_of_generating_validation_comment_operator1B3;;
@@ -42,9 +42,9 @@ _-> rrel_3:: rrel_in:: _result_proc_of_generating_validation_comment;
 	_-> .._proc_of_generating_validation_comment_operator1B3 (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _action_node;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _comment;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_comment;;
 		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _result_proc_of_generating_validation_comment;;
 		_-> rrel_fixed:: rrel_scp_const:: rrel_set_4:: _result_proc_of_generating_validation_comment;;
@@ -55,7 +55,7 @@ _-> rrel_3:: rrel_in:: _result_proc_of_generating_validation_comment;
 	_-> .._proc_of_generating_validation_comment_operator1B4_add_comment_node_to_answer (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _result_proc_of_generating_validation_comment;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _comment;;
 
 		_=> nrel_goto:: .._proc_of_generating_validation_comment_operator1B4;;
@@ -64,7 +64,7 @@ _-> rrel_3:: rrel_in:: _result_proc_of_generating_validation_comment;
 	_-> .._proc_of_generating_validation_comment_operator1B4 (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _result_proc_of_generating_validation_comment;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_comment;;
 
 		_=> nrel_goto:: .._proc_of_generating_validation_comment_operator1C1;;
@@ -73,7 +73,7 @@ _-> rrel_3:: rrel_in:: _result_proc_of_generating_validation_comment;
 	_-> .._proc_of_generating_validation_comment_operator1C1 (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: section_subjdomain_parameters_and_values;;
-		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _comment;;
 
 		_=> nrel_goto:: .._proc_of_generating_validation_comment_operator1C2;;
@@ -82,7 +82,7 @@ _-> rrel_3:: rrel_in:: _result_proc_of_generating_validation_comment;
 	_-> .._proc_of_generating_validation_comment_operator1C2 (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: section_subjdomain_parameters_and_values;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _comment;;
 		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _result_proc_of_generating_validation_comment;;
 
@@ -92,7 +92,7 @@ _-> rrel_3:: rrel_in:: _result_proc_of_generating_validation_comment;
 	_-> .._proc_of_generating_validation_comment_operator1C3 (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _result_proc_of_generating_validation_comment;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: section_subjdomain_parameters_and_values;;
 
 		_=> nrel_goto:: .._proc_of_generating_validation_comment_operator1D1;;
@@ -108,9 +108,9 @@ _-> rrel_3:: rrel_in:: _result_proc_of_generating_validation_comment;
 	_-> .._proc_of_generating_validation_comment_operator1D2 (*
 		<-_ genElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _translation;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_const:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _comment;;
-		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_sc_text_translation;;
 
 		_=> nrel_goto:: .._proc_of_generating_validation_comment_operator1B3_add_sc_text_translation_relation_arcs_to_answer;;
@@ -119,9 +119,9 @@ _-> rrel_3:: rrel_in:: _result_proc_of_generating_validation_comment;
 	_-> .._proc_of_generating_validation_comment_operator1B3_add_sc_text_translation_relation_arcs_to_answer (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _translation;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_const:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _comment;;
-		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_sc_text_translation;;
 		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _result_proc_of_generating_validation_comment;;
 		_-> rrel_fixed:: rrel_scp_const:: rrel_set_4:: _result_proc_of_generating_validation_comment;;
@@ -132,7 +132,7 @@ _-> rrel_3:: rrel_in:: _result_proc_of_generating_validation_comment;
 	_-> .._proc_of_generating_validation_comment_operator1_add_sc_text_translation_node_to_answer (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _result_proc_of_generating_validation_comment;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_sc_text_translation;;
 
 		_=> nrel_goto:: .._proc_of_generating_validation_comment_operator1C1_add_translation_var_node_to_answer;;
@@ -141,7 +141,7 @@ _-> rrel_3:: rrel_in:: _result_proc_of_generating_validation_comment;
 	_-> .._proc_of_generating_validation_comment_operator1C1_add_translation_var_node_to_answer (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _result_proc_of_generating_validation_comment;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _translation;;
 
 		_=> nrel_goto:: .._proc_of_generating_validation_comment_operator1D3;;
@@ -150,9 +150,9 @@ _-> rrel_3:: rrel_in:: _result_proc_of_generating_validation_comment;
 	_-> .._proc_of_generating_validation_comment_operator1D3 (*
 		<-_ genElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _translation;;
-		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _message;;
-		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: section_subjdomain_parameters_and_values;;
 
 		_=> nrel_goto:: .._proc_of_generating_validation_comment_operator1B3_add_link_and_translation_arcs_to_answer;;
@@ -161,9 +161,9 @@ _-> rrel_3:: rrel_in:: _result_proc_of_generating_validation_comment;
 	_-> .._proc_of_generating_validation_comment_operator1B3_add_link_and_translation_arcs_to_answer (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _translation;;
-		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _message;;
-		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: section_subjdomain_parameters_and_values;;
 		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _result_proc_of_generating_validation_comment;;
 		_-> rrel_fixed:: rrel_scp_const:: rrel_set_4:: _result_proc_of_generating_validation_comment;;
@@ -174,7 +174,7 @@ _-> rrel_3:: rrel_in:: _result_proc_of_generating_validation_comment;
 	_-> .._proc_of_generating_validation_comment_operator1C1_add_message_var_node_to_answer (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _result_proc_of_generating_validation_comment;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _message;;
 
 		_=> nrel_goto:: .._proc_of_generating_validation_comment_operator1D4_1;;
@@ -183,7 +183,7 @@ _-> rrel_3:: rrel_in:: _result_proc_of_generating_validation_comment;
 	_-> .._proc_of_generating_validation_comment_operator1D4_1 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: lang_en;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _message;;
 
 		_=> nrel_then:: .._proc_of_generating_validation_comment_operator1B3_add_lang_en_arcs_to_answer;;
@@ -193,7 +193,7 @@ _-> rrel_3:: rrel_in:: _result_proc_of_generating_validation_comment;
 	_-> .._proc_of_generating_validation_comment_operator1B3_add_lang_en_arcs_to_answer (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: lang_en;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _message;;
 		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _result_proc_of_generating_validation_comment;;
 
@@ -203,7 +203,7 @@ _-> rrel_3:: rrel_in:: _result_proc_of_generating_validation_comment;
 	_-> .._proc_of_generating_validation_comment_operator1D4 (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: lang_en;;
-		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _message;;
 
 		_=> nrel_goto:: .._proc_of_generating_validation_comment_operator1B3_add_lang_en_arcs_to_answer;;
@@ -212,7 +212,7 @@ _-> rrel_3:: rrel_in:: _result_proc_of_generating_validation_comment;
 	_-> .._proc_of_generating_validation_comment_operator1C1_add_language_const_node_to_answer (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _result_proc_of_generating_validation_comment;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: lang_en;;
 
 		_=> nrel_goto:: .._proc_of_generating_validation_comment_operator_return;;

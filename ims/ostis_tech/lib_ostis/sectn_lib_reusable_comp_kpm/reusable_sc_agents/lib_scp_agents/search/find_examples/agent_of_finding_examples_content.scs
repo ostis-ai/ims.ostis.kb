@@ -26,7 +26,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_examples_operator2 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_of_finding_examples;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
 
 		_=> nrel_then:: .._agent_of_finding_examples_operator3;;
@@ -36,7 +36,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_examples_operator3 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _param;;
 
 		_=> nrel_then:: .._agent_of_finding_examples_operator3_find_context;;
@@ -51,9 +51,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_examples_operator3_find_context (*
 		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _context;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_context_of_action;;
 
 		_=> nrel_then:: .._agent_of_finding_examples_operator3_set_context_existence_to_true;;
@@ -95,9 +95,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_examples_operator4B_context_logic_1 (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _param;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _node;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: rrel_example;;
 		_-> rrel_assign:: rrel_scp_var:: rrel_set_3:: _all_examples;;
 
@@ -108,9 +108,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_examples_operator4B (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _param;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _node;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: rrel_example;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_finding_examples;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _result_finding_examples;;
@@ -123,7 +123,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_examples_operator4C (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_finding_examples;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: rrel_example;;
 
 		_=> nrel_goto:: .._agent_of_finding_examples_operator4D;;
@@ -132,7 +132,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_examples_operator4D (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_finding_examples;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _param;;
 
 		_=> nrel_goto:: .._agent_of_finding_examples_operator_gen_answer_finding_examples;;
@@ -141,9 +141,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_examples_operator_gen_answer_finding_examples (*
 		<-_ genElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_const:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _result_finding_examples;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_result;;
 
 		_=> nrel_goto:: .._agent_of_finding_examples_operator_return;;
@@ -172,7 +172,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_examples_operator4B_context_logic_4 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _set_of_examples;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _example;;
 
 		_=> nrel_then:: .._agent_of_finding_examples_operator4B_context_logic_5;;
@@ -181,7 +181,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 
 	_-> .._agent_of_finding_examples_operator4B_context_logic_5 (*
 		<-_ eraseEl;;
-		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 
 		_=> nrel_goto:: .._agent_of_finding_examples_operator4B_context_logic_6;;
 	*);;
@@ -196,9 +196,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_examples_operator4B_context_logic_6 (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _param;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _example;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: rrel_example;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_finding_examples;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _result_finding_examples;;
@@ -210,7 +210,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_examples_operator4B_context_logic_7 (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_finding_examples;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _example;;
 
 		_=> nrel_goto:: .._agent_of_finding_examples_operator4B_context_logic_4;;

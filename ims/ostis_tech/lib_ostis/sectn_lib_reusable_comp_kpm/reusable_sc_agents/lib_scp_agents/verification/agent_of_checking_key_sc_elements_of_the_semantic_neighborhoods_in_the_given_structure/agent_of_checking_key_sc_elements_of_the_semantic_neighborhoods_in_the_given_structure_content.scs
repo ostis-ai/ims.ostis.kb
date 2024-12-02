@@ -26,7 +26,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator1B (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
 
 		_=> nrel_then:: .._agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator1C;;
@@ -36,8 +36,8 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator1C (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
-		_-> rrel_3:: rrel_assign:: rrel_scp_var:: rrel_struct:: _structure;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: rrel_structure:: _structure;;
 
 		_=> nrel_then:: .._agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator0A;;
 		_=> nrel_else:: .._agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_call_proc_of_adding_validating_message;;
@@ -83,7 +83,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 
 	_-> .._agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator0C (*
 		<-_ genEl;;
-		_-> rrel_1:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: rrel_struct:: _struct_of_answer;;
+		_-> rrel_1:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: rrel_structure:: _struct_of_answer;;
 
 		_=> nrel_goto:: .._agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator1A1;;
 	*);;
@@ -110,7 +110,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator2A1 (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _structure;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_node:: rrel_scp_var:: _element;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _set_of_element_of_structure;;
 
@@ -121,7 +121,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator2A2 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _set_of_subclasses_of_semantic_neighborhood;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_node:: rrel_scp_var:: _subclass;;
 
 		_=> nrel_then:: .._agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator2A3;;
@@ -165,7 +165,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 
 	_-> .._agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator2A3 (*
 		<-_ eraseEl;;
-		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 
 		_=> nrel_goto:: .._agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator2B1;;
 	*);;
@@ -173,7 +173,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator2B1 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _set_of_element_of_structure;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_node:: rrel_scp_var:: _element;;
 
 		_=> nrel_then:: .._agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator2B2;;
@@ -182,7 +182,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 
 	_-> .._agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator2B2 (*
 		<-_ eraseEl;;
-		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 
 		_=> nrel_goto:: .._agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator2B3;;
 	*);;
@@ -190,7 +190,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator2B3 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _subclass;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _element;;
 
 		_=> nrel_then:: .._agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator2B4;;
@@ -200,9 +200,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator2B4 (*
 		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _element;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _node;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: rrel_key_sc_element;;
 
 		_=> nrel_then:: .._agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator2B1;;
@@ -212,9 +212,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator2B5 (*
 		<-_ genElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _struct_of_answer;;
-		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _element;;
-		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: rrel_key_sc_element;;
 
 		_=> nrel_goto:: .._agent_of_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure_operator2B1;;

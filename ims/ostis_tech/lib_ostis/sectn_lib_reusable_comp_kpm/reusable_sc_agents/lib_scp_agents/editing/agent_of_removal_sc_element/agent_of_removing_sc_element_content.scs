@@ -26,7 +26,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_removing_sc_element_operator1B (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_of_removing_sc_element;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
 
 		_=> nrel_then:: .._agent_of_removing_sc_element_operator1C;;
@@ -36,7 +36,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_removing_sc_element_operator1C (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _param;;
 
 		_=> nrel_then:: .._agent_of_removing_sc_element_operator2A;;
@@ -58,9 +58,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_removing_sc_element_operator2B (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _param;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _text;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_system_identifer;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _removable_elem_set;;
 
@@ -70,9 +70,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_removing_sc_element_operator2C (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _param;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _text;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_main_idtf;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _removable_elem_set;;
 
@@ -82,9 +82,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_removing_sc_element_operator2D (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _param;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _text;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_idtf;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _removable_elem_set;;
 
@@ -94,7 +94,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_removing_sc_element_operator3A (*
 		<-_ eraseSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _removable_elem_set;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_erase:: rrel_scp_var:: _elem;;
 
 		_=> nrel_goto:: .._agent_of_removing_sc_element_operator3B;;

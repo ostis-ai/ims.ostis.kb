@@ -26,7 +26,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_proof_steps_operator1B (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_finding_proof_steps;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
 
 		_=> nrel_then:: .._agent_of_finding_proof_steps_operator1C;;
@@ -36,7 +36,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_proof_steps_operator1C (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _connection;;
 
 		_=> nrel_then:: .._agent_of_finding_proof_steps_operator1D;;
@@ -58,9 +58,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_proof_steps_operator2A (*
 		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _connection;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _elem;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_main_proof;;
 
 		_=> nrel_then:: .._agent_of_finding_proof_steps_operator2B;;
@@ -70,7 +70,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_proof_steps_operator2B (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _connection;;
 
 		_=> nrel_goto:: .._agent_of_finding_proof_steps_operator2C;;
@@ -79,7 +79,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_proof_steps_operator2C (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_main_statements;;
 
 		_=> nrel_goto:: .._agent_of_finding_proof_steps_operator2D1;;
@@ -95,7 +95,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_proof_steps_operator2D2 (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _gen;;
 
 		_=> nrel_goto:: .._agent_of_finding_proof_steps_operator2E;;
@@ -104,9 +104,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_proof_steps_operator2E (*
 		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _start_vertex;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _elem;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_decomposition_of_action;;
 
 		_=> nrel_then:: .._agent_of_finding_proof_steps_operator3A;;
@@ -116,7 +116,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_proof_steps_operator3A (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _start_vertex;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _param;;
 		_-> rrel_assign:: rrel_scp_var:: rrel_set_3:: _combinations;;
 
@@ -127,7 +127,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_proof_steps_operator3B (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _combinations;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _smth;;
 
 		_=> nrel_then:: .._agent_of_finding_proof_steps_operator3C;;
@@ -144,9 +144,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_proof_steps_operator4A (*
 		<-_ genElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _gen;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _connection;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_main_statements;;
 
 		_=> nrel_goto:: .._agent_of_finding_proof_steps_operator4B;;
@@ -155,9 +155,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_proof_steps_operator4B (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _gen;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _connection;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_main_statements;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _result;;
@@ -168,9 +168,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_proof_steps_gen_answer (*
 		<-_ genElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_const:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _result;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_result;;
 
 		_=> nrel_goto:: .._agent_of_finding_proof_steps_operator_return;;
@@ -179,9 +179,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_proof_steps_operator3D (*
 		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _smth;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _elem2;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: rrel_2;;
 
 		_=> nrel_then:: .._agent_of_finding_proof_steps_operator3F1;;
@@ -191,7 +191,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_proof_steps_operator3F1 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _gen;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _elem2;;
 
 		_=> nrel_then:: .._agent_of_finding_proof_steps_operator3B;;
@@ -201,7 +201,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_proof_steps_operator3F2 (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _elem2;;
 
 		_=> nrel_goto:: .._agent_of_finding_proof_steps_operator3F3;;
@@ -210,7 +210,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_proof_steps_operator3F3 (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _gen;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _nessecary_arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _nessecary_arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _elem2;;
 
 		_=> nrel_goto:: .._agent_of_finding_proof_steps_operator3F4;;
@@ -219,7 +219,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_proof_steps_operator3F4 (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _nessecary_arc;;
 
 		_=> nrel_goto:: .._agent_of_finding_proof_steps_operator3B;;

@@ -38,7 +38,7 @@ _-> rrel_2:: rrel_in:: _result_arc;
 	_-> .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_fill_set_of_input_arcs_1 (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _elem;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _param;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _set_of_arcs;;
 
@@ -48,7 +48,7 @@ _-> rrel_2:: rrel_in:: _result_arc;
 	_-> .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_fill_set_of_input_arcs_2 (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _elem;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _param;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _set_of_arcs;;
 
@@ -58,7 +58,7 @@ _-> rrel_2:: rrel_in:: _result_arc;
 	_-> .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_fill_set_of_input_arcs_3 (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _elem;;
-		_-> rrel_2:: rrel_assign:: rrel_edge:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_edge:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _param;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _set_of_arcs;;
 
@@ -68,7 +68,7 @@ _-> rrel_2:: rrel_in:: _result_arc;
 	_-> .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_input_arc (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _set_of_arcs;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _found_arc;;
 
 		_=> nrel_then:: .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_erase_from_set;;
@@ -85,7 +85,7 @@ _-> rrel_2:: rrel_in:: _result_arc;
 	_-> .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_fill_set_of_output_arcs_1 (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _param;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _elem;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _set_of_arcs;;
 
@@ -95,7 +95,7 @@ _-> rrel_2:: rrel_in:: _result_arc;
 	_-> .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_fill_set_of_output_arcs_2 (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _param;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _elem;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _set_of_arcs;;
 
@@ -105,7 +105,7 @@ _-> rrel_2:: rrel_in:: _result_arc;
 	_-> .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_fill_set_of_output_arcs_3 (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _param;;
-		_-> rrel_2:: rrel_assign:: rrel_edge:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_edge:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _elem;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _set_of_arcs;;
 
@@ -115,7 +115,7 @@ _-> rrel_2:: rrel_in:: _result_arc;
 	_-> .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_output_arc (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _set_of_arcs;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _found_arc;;
 
 		_=> nrel_then:: .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_erase_from_set_of_arcs;;
@@ -157,8 +157,8 @@ _-> rrel_2:: rrel_in:: _result_arc;
 
 	_-> .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_fill_possible_sections_1 (*
 		<-_ searchSetStr3;;
-		_-> rrel_1:: rrel_assign:: rrel_scp_var:: rrel_struct:: _elem;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_1:: rrel_assign:: rrel_scp_var:: rrel_structure:: _elem;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _found_arc;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_1:: _possible_sections;;
 
@@ -168,7 +168,7 @@ _-> rrel_2:: rrel_in:: _result_arc;
 	_-> .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_sections_1 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _possible_sections;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _section;;
 
 		_=> nrel_then:: .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_erase_section;;
@@ -185,7 +185,7 @@ _-> rrel_2:: rrel_in:: _result_arc;
 	_-> .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_any_section_exist (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _sections;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _section;;
 
 		_=> nrel_then:: .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_element;;
@@ -203,7 +203,7 @@ _-> rrel_2:: rrel_in:: _result_arc;
 
 	_-> .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_pos_const_perm_arc (*
 		<-_ ifType;;
-		_-> rrel_1:: rrel_fixed:: rrel_pos_const_perm:: rrel_scp_var:: _found_arc;;
+		_-> rrel_1:: rrel_fixed:: rrel_const_perm_pos_arc:: rrel_scp_var:: _found_arc;;
 
 		_=> nrel_then:: .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_exist_pos_const_perm_arc;;
 		_=> nrel_else:: .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_it_common_arc;;
@@ -212,7 +212,7 @@ _-> rrel_2:: rrel_in:: _result_arc;
 	_-> .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_exist_pos_const_perm_arc (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _result_arc;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _new_arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _new_arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _elem;;
 
 		_=> nrel_then:: .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_output_arc;;
@@ -221,7 +221,7 @@ _-> rrel_2:: rrel_in:: _result_arc;
 
 	_-> .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_it_common_arc (*
 		<-_ ifType;;
-		_-> rrel_1:: rrel_common:: rrel_fixed:: rrel_scp_var:: _found_arc;;
+		_-> rrel_1:: rrel_common_arc:: rrel_fixed:: rrel_scp_var:: _found_arc;;
 
 		_=> nrel_then:: .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_exist_common_arc;;
 		_=> nrel_else:: .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_exist_edge;;
@@ -230,7 +230,7 @@ _-> rrel_2:: rrel_in:: _result_arc;
 	_-> .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_exist_common_arc (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _result_arc;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _new_arc;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _new_arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _elem;;
 
 		_=> nrel_then:: .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_output_arc;;
@@ -240,7 +240,7 @@ _-> rrel_2:: rrel_in:: _result_arc;
 	_-> .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_exist_edge (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _result_arc;;
-		_-> rrel_2:: rrel_assign:: rrel_edge:: rrel_scp_var:: _new_arc;;
+		_-> rrel_2:: rrel_assign:: rrel_common_edge:: rrel_scp_var:: _new_arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _elem;;
 
 		_=> nrel_then:: .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_output_arc;;
@@ -250,7 +250,7 @@ _-> rrel_2:: rrel_in:: _result_arc;
 	_-> .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_gen_new_edge (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _result_arc;;
-		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_edge:: rrel_scp_var:: _new_arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_common_edge:: rrel_scp_var:: _new_arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _elem;;
 
 		_=> nrel_goto:: .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_all_sections_of_arc;;
@@ -259,7 +259,7 @@ _-> rrel_2:: rrel_in:: _result_arc;
 	_-> .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_all_sections_of_arc (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _sections;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _section;;
 
 		_=> nrel_then:: .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_delete_sect;;
@@ -295,7 +295,7 @@ _-> rrel_2:: rrel_in:: _result_arc;
 	_-> .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_add (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _section;;
-		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _new_arc;;
 
 		_=> nrel_goto:: .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_all_sections_of_arc;;
@@ -304,7 +304,7 @@ _-> rrel_2:: rrel_in:: _result_arc;
 	_-> .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_gen_common_arc (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _result_arc;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _new_arc;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_const:: rrel_scp_var:: _new_arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _elem;;
 
 		_=> nrel_goto:: .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_all_sections_of_arc;;
@@ -313,7 +313,7 @@ _-> rrel_2:: rrel_in:: _result_arc;
 	_-> .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_gen_pos_const_perm_arc (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _result_arc;;
-		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _new_arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _new_arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _elem;;
 
 		_=> nrel_goto:: .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_all_sections_of_arc;;
@@ -322,7 +322,7 @@ _-> rrel_2:: rrel_in:: _result_arc;
 	_-> .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_check_is_section (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: section;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _section;;
 
 		_=> nrel_then:: .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_section_has_found;;
@@ -332,7 +332,7 @@ _-> rrel_2:: rrel_in:: _result_arc;
 	_-> .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_section_has_found (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _sections;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _new_arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _new_arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _section;;
 
 		_=> nrel_goto:: .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_sections_1;;
@@ -341,7 +341,7 @@ _-> rrel_2:: rrel_in:: _result_arc;
 	_-> .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_system (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: system_element;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _found_arc;;
 
 		_=> nrel_then:: .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_input_arc;;
@@ -350,8 +350,8 @@ _-> rrel_2:: rrel_in:: _result_arc;
 
 	_-> .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_fill_possible_sections (*
 		<-_ searchSetStr3;;
-		_-> rrel_1:: rrel_assign:: rrel_scp_var:: rrel_struct:: _elem;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_1:: rrel_assign:: rrel_scp_var:: rrel_structure:: _elem;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _found_arc;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_1:: _possible_sections;;
 
@@ -361,7 +361,7 @@ _-> rrel_2:: rrel_in:: _result_arc;
 	_-> .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_sections (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _possible_sections;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _section;;
 
 		_=> nrel_then:: .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_erase_possible_section;;
@@ -378,7 +378,7 @@ _-> rrel_2:: rrel_in:: _result_arc;
 	_-> .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_any_section (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _sections;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _section;;
 
 		_=> nrel_then:: .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_elem;;
@@ -396,7 +396,7 @@ _-> rrel_2:: rrel_in:: _result_arc;
 
 	_-> .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_pos_const_perm (*
 		<-_ ifType;;
-		_-> rrel_1:: rrel_fixed:: rrel_pos_const_perm:: rrel_scp_var:: _found_arc;;
+		_-> rrel_1:: rrel_fixed:: rrel_const_perm_pos_arc:: rrel_scp_var:: _found_arc;;
 
 		_=> nrel_then:: .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_exist_pos_const_perm;;
 		_=> nrel_else:: .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_common_arc;;
@@ -405,7 +405,7 @@ _-> rrel_2:: rrel_in:: _result_arc;
 	_-> .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_exist_pos_const_perm (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _elem;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _new_arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _new_arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _result_arc;;
 
 		_=> nrel_then:: .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_input_arc;;
@@ -414,7 +414,7 @@ _-> rrel_2:: rrel_in:: _result_arc;
 
 	_-> .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_common_arc (*
 		<-_ ifType;;
-		_-> rrel_1:: rrel_common:: rrel_fixed:: rrel_scp_var:: _found_arc;;
+		_-> rrel_1:: rrel_common_arc:: rrel_fixed:: rrel_scp_var:: _found_arc;;
 
 		_=> nrel_then:: .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_exist_common;;
 		_=> nrel_else:: .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_exist_edge_1;;
@@ -423,7 +423,7 @@ _-> rrel_2:: rrel_in:: _result_arc;
 	_-> .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_exist_common (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _elem;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _new_arc;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _new_arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _result_arc;;
 
 		_=> nrel_then:: .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_input_arc;;
@@ -433,7 +433,7 @@ _-> rrel_2:: rrel_in:: _result_arc;
 	_-> .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_exist_edge_1 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _elem;;
-		_-> rrel_2:: rrel_assign:: rrel_edge:: rrel_scp_var:: _new_arc;;
+		_-> rrel_2:: rrel_assign:: rrel_common_edge:: rrel_scp_var:: _new_arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _result_arc;;
 
 		_=> nrel_then:: .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_input_arc;;
@@ -443,7 +443,7 @@ _-> rrel_2:: rrel_in:: _result_arc;
 	_-> .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_gen_edge (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _elem;;
-		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_edge:: rrel_scp_var:: _new_arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_common_edge:: rrel_scp_var:: _new_arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _result_arc;;
 
 		_=> nrel_goto:: .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_all_sections;;
@@ -452,7 +452,7 @@ _-> rrel_2:: rrel_in:: _result_arc;
 	_-> .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_all_sections (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _sections;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _section;;
 
 		_=> nrel_then:: .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_delete_section;;
@@ -488,7 +488,7 @@ _-> rrel_2:: rrel_in:: _result_arc;
 	_-> .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_add_section (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _section;;
-		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _new_arc;;
 
 		_=> nrel_goto:: .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_all_sections;;
@@ -497,7 +497,7 @@ _-> rrel_2:: rrel_in:: _result_arc;
 	_-> .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_gen_common (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _elem;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _new_arc;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_const:: rrel_scp_var:: _new_arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _result_arc;;
 
 		_=> nrel_goto:: .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_all_sections;;
@@ -506,7 +506,7 @@ _-> rrel_2:: rrel_in:: _result_arc;
 	_-> .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_gen_pos_const_perm (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _elem;;
-		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _new_arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _new_arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _result_arc;;
 
 		_=> nrel_goto:: .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_all_sections;;
@@ -515,7 +515,7 @@ _-> rrel_2:: rrel_in:: _result_arc;
 	_-> .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_section (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: section;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _section;;
 
 		_=> nrel_then:: .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_section_is_found;;
@@ -525,7 +525,7 @@ _-> rrel_2:: rrel_in:: _result_arc;
 	_-> .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_section_is_found (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _sections;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _new_arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _new_arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _section;;
 
 		_=> nrel_goto:: .._proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_sections;;

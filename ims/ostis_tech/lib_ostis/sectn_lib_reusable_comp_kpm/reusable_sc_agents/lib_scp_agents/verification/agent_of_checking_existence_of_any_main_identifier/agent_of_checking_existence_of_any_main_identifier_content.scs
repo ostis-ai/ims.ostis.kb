@@ -26,7 +26,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_checking_existence_of_any_main_identifier_operatorA2 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_to_find_sc_elements_without_any_main_identifier;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
 
 		_=> nrel_then:: .._agent_of_checking_existence_of_any_main_identifier_operatorA3;;
@@ -36,8 +36,8 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_checking_existence_of_any_main_identifier_operatorA3 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
-		_-> rrel_3:: rrel_assign:: rrel_scp_var:: rrel_struct:: _param;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: rrel_structure:: _param;;
 
 		_=> nrel_then:: .._agent_of_checking_existence_of_any_main_identifier_operatorA3_find_context;;
 		_=> nrel_else:: .._agent_of_checking_existence_of_any_main_identifier_operator_call_proc_of_adding_validating_message;;
@@ -51,9 +51,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_checking_existence_of_any_main_identifier_operatorA3_find_context (*
 		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _common_arc;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _common_arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _context;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc_in_relation;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc_in_relation;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_context_of_action;;
 
 		_=> nrel_then:: .._agent_of_checking_existence_of_any_main_identifier_operatorA3_set_context_existence_to_true;;
@@ -97,7 +97,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 
 	_-> .._agent_of_checking_existence_of_any_main_identifier_operatorB1 (*
 		<-_ genEl;;
-		_-> rrel_1:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: rrel_struct:: _incorrect_structure;;
+		_-> rrel_1:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: rrel_structure:: _incorrect_structure;;
 
 		_=> nrel_goto:: .._agent_of_checking_existence_of_any_main_identifier_operatorB2;;
 	*);;
@@ -105,7 +105,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_checking_existence_of_any_main_identifier_operatorB2 (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _param;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_node:: rrel_scp_var:: _node1;;
 		_-> rrel_assign:: rrel_scp_var:: rrel_set_3:: _allRelations;;
 
@@ -116,7 +116,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_checking_existence_of_any_main_identifier_operatorB3 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _allRelations;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _someRelation;;
 
 		_=> nrel_then:: .._agent_of_checking_existence_of_any_main_identifier_operatorB3_erase_arc;;
@@ -163,9 +163,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_checking_existence_of_any_main_identifier_operatorB4_context_logic2 (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _someRelation;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc2;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _node3;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc4;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc4;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_system_identifier;;
 		_-> rrel_assign:: rrel_scp_var:: rrel_set_3:: _allSystemIdtfs;;
 
@@ -176,9 +176,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_checking_existence_of_any_main_identifier_operatorB4 (*
 		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _someRelation;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc2;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _node3;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc4;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc4;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_system_identifier;;
 
 		_=> nrel_then:: .._agent_of_checking_existence_of_any_main_identifier_operatorB5;;
@@ -188,9 +188,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_checking_existence_of_any_main_identifier_operatorB5 (*
 		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _someRelation;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc3;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc3;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _node4;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc4;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc4;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_main_idtf;;
 
 		_=> nrel_then:: .._agent_of_checking_existence_of_any_main_identifier_operatorB3;;
@@ -200,9 +200,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_checking_existence_of_any_main_identifier_operatorB6 (*
 		<-_ genElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _incorrect_structure;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc5;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc5;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _someRelation;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc4;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc4;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: rrel_key_sc_element;;
 
 		_=> nrel_goto:: .._agent_of_checking_existence_of_any_main_identifier_operatorB3;;
@@ -211,7 +211,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_checking_existence_of_any_main_identifier_operatorB4_context_logic3 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _allSystemIdtfs;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _someSystemIdtf;;
 
 		_=> nrel_then:: .._agent_of_checking_existence_of_any_main_identifier_operatorB4_context_logic4;;
@@ -235,7 +235,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_checking_existence_of_any_main_identifier_operatorB4_context_logic5 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _context;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _someSystemIdtf;;
 
 		_=> nrel_then:: .._agent_of_checking_existence_of_any_main_identifier_operatorB4_context_logic6;;
@@ -252,9 +252,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_checking_existence_of_any_main_identifier_operatorB5_context_logic1 (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _someRelation;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc2;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _node3;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc4;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc4;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_main_idtf;;
 		_-> rrel_assign:: rrel_scp_var:: rrel_set_3:: _allMainIdtfs;;
 
@@ -265,7 +265,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_checking_existence_of_any_main_identifier_operatorB5_context_logic2 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _allMainIdtfs;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _someMainIdtf;;
 
 		_=> nrel_then:: .._agent_of_checking_existence_of_any_main_identifier_operatorB5_context_logic3;;
@@ -289,7 +289,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_checking_existence_of_any_main_identifier_operatorB5_context_logic4 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _context;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _someMainIdtf;;
 
 		_=> nrel_then:: .._agent_of_checking_existence_of_any_main_identifier_operatorB5_deleteAllMainIdtfs;;

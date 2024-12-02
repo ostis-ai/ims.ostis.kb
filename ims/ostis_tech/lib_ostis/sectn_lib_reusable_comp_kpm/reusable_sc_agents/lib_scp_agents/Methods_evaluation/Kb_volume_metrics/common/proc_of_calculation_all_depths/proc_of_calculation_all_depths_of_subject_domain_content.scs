@@ -31,9 +31,9 @@ _-> rrel_3:: rrel_in:: _all_depth;
 	_-> .._proc_of_calculation_all_depths_of_subject_domain_operator3 (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _subject_domain;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _elem;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_private_subject_domain;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _last_level_vertexes;;
 
@@ -43,9 +43,9 @@ _-> rrel_3:: rrel_in:: _all_depth;
 	_-> .._proc_of_calculation_all_depths_of_subject_domain_operator4 (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _subject_domain;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _elem;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_explored_relations_class_private_subject_domain;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _last_level_vertexes;;
 
@@ -55,9 +55,9 @@ _-> rrel_3:: rrel_in:: _all_depth;
 	_-> .._proc_of_calculation_all_depths_of_subject_domain_operator5 (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _subject_domain;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _elem;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_primary_elements_class_private_subject_domain;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _last_level_vertexes;;
 
@@ -121,7 +121,7 @@ _-> rrel_3:: rrel_in:: _all_depth;
 	_-> .._proc_of_calculation_all_depths_of_subject_domain_operator15 (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _all_depth;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _depth;;
 
 		_=> nrel_goto:: .._proc_of_calculation_all_depths_of_subject_domain_operator16;;

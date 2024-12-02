@@ -26,7 +26,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_counting_logical_formulas_quantity_operator1B (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_to_count_logical_formulas_quantity;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
 
 		_=> nrel_then:: .._agent_of_counting_logical_formulas_quantity_operator2A;;
@@ -35,7 +35,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 
 	_-> .._agent_of_counting_logical_formulas_quantity_operator2A (*
 		<-_ genEl;;
-		_-> rrel_1:: rrel_assign:: rrel_link:: rrel_node:: rrel_scp_var:: _quantity_of_definitions;;
+		_-> rrel_1:: rrel_assign:: rrel_node_link:: rrel_node:: rrel_scp_var:: _quantity_of_definitions;;
 
 		_=> nrel_goto:: .._agent_of_counting_logical_formulas_quantity_operator2B;;
 	*);;
@@ -66,7 +66,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 
 	_-> .._agent_of_counting_logical_formulas_quantity_operator3A (*
 		<-_ genEl;;
-		_-> rrel_1:: rrel_assign:: rrel_link:: rrel_node:: rrel_scp_var:: _quantity_of_statements;;
+		_-> rrel_1:: rrel_assign:: rrel_node_link:: rrel_node:: rrel_scp_var:: _quantity_of_statements;;
 
 		_=> nrel_goto:: .._agent_of_counting_logical_formulas_quantity_operator3B;;
 	*);;
@@ -136,7 +136,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_counting_logical_formulas_quantity_operator6A (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_finished_successfully;;
-		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
 
 		_=> nrel_goto:: .._agent_of_counting_logical_formulas_quantity_operator_return;;
