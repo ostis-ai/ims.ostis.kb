@@ -12,7 +12,7 @@ _-> rrel_1:: rrel_in:: _proposal;
 	_-> rrel_1:: .._proc_of_adding_proposal_content_to_development_plan_operator_get_development_plan_sign (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: computer_system_development_plan;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _development_plan_sign;;
 
 		_=> nrel_then:: .._proc_of_adding_proposal_content_to_development_plan_operator_D1;;
@@ -22,7 +22,7 @@ _-> rrel_1:: rrel_in:: _proposal;
 	_-> .._proc_of_adding_proposal_content_to_development_plan_operator_D1 (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _proposal;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _content;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _development_plan_sign;;
 

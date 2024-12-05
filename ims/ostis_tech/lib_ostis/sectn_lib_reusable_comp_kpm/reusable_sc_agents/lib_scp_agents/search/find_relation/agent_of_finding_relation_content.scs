@@ -26,7 +26,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_relation_operator0B (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_finding_relation;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
 
 		_=> nrel_then:: .._agent_of_finding_relation_operator0C;;
@@ -36,7 +36,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_relation_operator0C (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _connection;;
 
 		_=> nrel_then:: .._agent_of_finding_relation_operator0D;;
@@ -58,7 +58,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_relation_operator1A (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _connect;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc_of_perebor;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc_of_perebor;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _connection;;
 		_-> rrel_assign:: rrel_scp_var:: rrel_set_1:: _temp;;
 
@@ -69,7 +69,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_relation_operator1B (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _temp;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc_of_perebor;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc_of_perebor;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _may_be_connect;;
 
 		_=> nrel_then:: .._agent_of_finding_relation_operator1C;;
@@ -79,9 +79,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_relation_operator4A (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _el1;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _connection;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_first_domain;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_1:: _result_of_finding_relation;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_finding_relation;;
@@ -94,9 +94,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_relation_operator4B (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _el2;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _connection;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_second_domain;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_1:: _result_of_finding_relation;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_finding_relation;;
@@ -109,9 +109,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_relation_operator4C (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _el3;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _connection;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_third_domain;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_1:: _result_of_finding_relation;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_finding_relation;;
@@ -123,7 +123,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_relation_operator5A (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_finding_relation;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_first_domain;;
 
 		_=> nrel_goto:: .._agent_of_finding_relation_operator5B;;
@@ -132,7 +132,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_relation_operator5B (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_finding_relation;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_second_domain;;
 
 		_=> nrel_goto:: .._agent_of_finding_relation_operator5C;;
@@ -141,7 +141,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_relation_operator5C (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_finding_relation;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_third_domain;;
 
 		_=> nrel_goto:: .._agent_of_finding_relation_operator5D;;
@@ -150,7 +150,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_relation_operator5D (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_finding_relation;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_combination;;
 
 		_=> nrel_goto:: .._agent_of_finding_relation_operator5E;;
@@ -159,7 +159,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_relation_operator5E (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_finding_relation;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _connection;;
 
 		_=> nrel_goto:: .._agent_of_finding_relation_gen_answer_of_finding_relation;;
@@ -168,9 +168,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_relation_gen_answer_of_finding_relation (*
 		<-_ genElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_const:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _result_of_finding_relation;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_result;;
 
 		_=> nrel_goto:: .._agent_of_finding_relation_operator_return;;
@@ -186,9 +186,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_relation_operator1D (*
 		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _may_be_connect;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _node;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_combination;;
 
 		_=> nrel_then:: .._agent_of_finding_relation_operator1E;;
@@ -198,9 +198,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_relation_operator1E (*
 		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _inst;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _node;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_definitional_domain;;
 
 		_=> nrel_then:: .._agent_of_finding_relation_operator1B;;
@@ -210,9 +210,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_relation_operator2A (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _may_be_connect;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _node;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_combination;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_finding_relation;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _result_of_finding_relation;;
@@ -225,9 +225,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_relation_operator2B (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _smth;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _node;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_first_domain;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_1:: _result_of_finding_relation;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_finding_relation;;
@@ -240,7 +240,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_relation_operator3A (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_finding_relation;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _may_be_connect;;
 
 		_=> nrel_goto:: .._agent_of_finding_relation_operator3B;;
@@ -249,9 +249,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_relation_operator2C (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _smth;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _node;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_second_domain;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_1:: _result_of_finding_relation;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_finding_relation;;
@@ -264,9 +264,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_relation_operator2D (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _smth;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _node;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_third_domain;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_1:: _result_of_finding_relation;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_finding_relation;;
@@ -279,7 +279,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_relation_operator3B (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _may_be_connect;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _connection;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_finding_relation;;
 

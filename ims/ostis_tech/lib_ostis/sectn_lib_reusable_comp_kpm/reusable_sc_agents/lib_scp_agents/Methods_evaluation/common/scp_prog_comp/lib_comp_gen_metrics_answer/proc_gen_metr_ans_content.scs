@@ -22,7 +22,7 @@ _-> rrel_3:: rrel_in:: _result_value;
 	_-> .._proc_of_generation_of_metrics_answer_operator_F2 (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _action;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _ontology;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: .._proc_of_generation_of_metrics_answer_param0;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: .._proc_of_generation_of_metrics_answer_param0;;
@@ -33,7 +33,7 @@ _-> rrel_3:: rrel_in:: _result_value;
 	_-> .._proc_of_generation_of_metrics_answer_operator_F3 (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._proc_of_generation_of_metrics_answer_param0;;
-		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _action;;
 
 		_=> nrel_goto:: .._proc_of_generation_of_metrics_answer_operator_F4;;
@@ -42,9 +42,9 @@ _-> rrel_3:: rrel_in:: _result_value;
 	_-> .._proc_of_generation_of_metrics_answer_operator_F4 (*
 		<-_ genElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _action;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_const:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _result_value;;
-		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_result;;
 
 		_=> nrel_goto:: .._proc_of_generation_of_metrics_answer_operator_F5;;
@@ -53,9 +53,9 @@ _-> rrel_3:: rrel_in:: _result_value;
 	_-> .._proc_of_generation_of_metrics_answer_operator_F5 (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _action;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_const:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _result_value;;
-		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_result;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: .._proc_of_generation_of_metrics_answer_param0;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: .._proc_of_generation_of_metrics_answer_param0;;
@@ -66,7 +66,7 @@ _-> rrel_3:: rrel_in:: _result_value;
 	_-> .._proc_of_generation_of_metrics_answer_operator_F6 (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._proc_of_generation_of_metrics_answer_param0;;
-		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _result_value;;
 
 		_=> nrel_goto:: .._proc_of_generation_of_metrics_answer_operator_F7;;
@@ -75,7 +75,7 @@ _-> rrel_3:: rrel_in:: _result_value;
 	_-> .._proc_of_generation_of_metrics_answer_operator_F7 (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._proc_of_generation_of_metrics_answer_param0;;
-		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_result;;
 
 		_=> nrel_goto:: .._proc_of_generation_of_metrics_answer_operator_F8;;
@@ -84,7 +84,7 @@ _-> rrel_3:: rrel_in:: _result_value;
 	_-> .._proc_of_generation_of_metrics_answer_operator_F8 (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _action;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _action;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: .._proc_of_generation_of_metrics_answer_param0;;
 
@@ -94,7 +94,7 @@ _-> rrel_3:: rrel_in:: _result_value;
 	_-> .._proc_of_generation_of_metrics_answer_operator_F9 (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._proc_of_generation_of_metrics_answer_param0;;
-		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _action;;
 
 		_=> nrel_goto:: .._proc_of_generation_of_metrics_answer_operator_gen_full_answer;;
@@ -103,9 +103,9 @@ _-> rrel_3:: rrel_in:: _result_value;
 	_-> .._proc_of_generation_of_metrics_answer_operator_gen_full_answer (*
 		<-_ genElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _action;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_const:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: .._proc_of_generation_of_metrics_answer_param0;;
-		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_result;;
 
 		_=> nrel_goto:: .._proc_of_generation_of_metrics_answer_operator_return;;

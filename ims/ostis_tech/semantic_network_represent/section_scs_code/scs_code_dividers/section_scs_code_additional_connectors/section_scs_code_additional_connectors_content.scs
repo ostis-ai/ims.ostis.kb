@@ -19,17 +19,17 @@ additional_scs_connector
 	scs_divider_var_edge;
 	scs_divider_const_arc;
 	scs_divider_var_arc;
-	scs_divider_var_pos_stat_accessory_arc;
-	scs_divider_const_neg_stat_accessory_arc;
-	scs_divider_var_neg_stat_accessory_arc;
-	scs_divider_const_fuz_stat_accessory_arc;
-	scs_divider_var_fuz_stat_accessory_arc;
-	scs_divider_const_pos_nonstat_accessory_arc;
-	scs_divider_var_pos_nonstat_accessory_arc;
-	scs_divider_const_neg_nonstat_accessory_arc;
-	scs_divider_var_neg_nonstat_accessory_arc;
-	scs_divider_const_fuz_nonstat_accessory_arc;
-	scs_divider_var_fuz_nonstat_accessory_arc
+	scs_divider_var_pos_stat_membership_arc;
+	scs_divider_const_neg_stat_membership_arc;
+	scs_divider_var_neg_stat_membership_arc;
+	scs_divider_const_fuz_stat_membership_arc;
+	scs_divider_var_fuz_stat_membership_arc;
+	scs_divider_const_pos_nonstat_membership_arc;
+	scs_divider_var_pos_nonstat_membership_arc;
+	scs_divider_const_neg_nonstat_membership_arc;
+	scs_divider_var_neg_nonstat_membership_arc;
+	scs_divider_const_fuz_nonstat_membership_arc;
+	scs_divider_var_fuz_nonstat_membership_arc
 };
 
 <- rrel_key_sc_element:
@@ -106,12 +106,12 @@ scs_divider_var_arc
 	"file://img/var_arc_scg1.png" (* => nrel_format: format_png;; *);
 	"file://img/var_arc_scg2.png" (* => nrel_format: format_png;; *);;
 
-scs_divider_var_pos_stat_accessory_arc
+scs_divider_var_pos_stat_membership_arc
 <- sc_node_class;
 => nrel_main_idtf: 
 	[переменная позитивная стационарная sc.s-дуга принадлежности]
 	(* <- lang_ru;; *);
-	[variable positive stationary accessory sc.s-arc]
+	[variable positive stationary membership sc.s-arc]
 	(* <- lang_en;; *);
 => scs_nrel_representation_scs_editor:
 	"file://img/var_pos_stat_acc_scs_editor1.png" (* => nrel_format: format_png;; *);
@@ -123,12 +123,12 @@ scs_divider_var_pos_stat_accessory_arc
 	"file://img/var_pos_stat_acc_scg1.png" (* => nrel_format: format_png;; *);
 	"file://img/var_pos_stat_acc_scg2.png" (* => nrel_format: format_png;; *);;
 
-scs_divider_const_neg_stat_accessory_arc
+scs_divider_const_neg_stat_membership_arc
 <- sc_node_class;
 => nrel_main_idtf: 
 	[константная негативная стационарная sc.s-дуга принадлежности]
 	(* <- lang_ru;; *);
-	[constant negative stationary accessory sc.s-arc]
+	[constant negative stationary membership sc.s-arc]
 	(* <- lang_en;; *);
 => scs_nrel_representation_scs_editor:
 	"file://img/const_neg_stat_acc_scs_editor1.png" (* => nrel_format: format_png;; *);
@@ -140,12 +140,12 @@ scs_divider_const_neg_stat_accessory_arc
 	"file://img/const_neg_stat_acc_scg1.png" (* => nrel_format: format_png;; *);
 	"file://img/const_neg_stat_acc_scg2.png" (* => nrel_format: format_png;; *);;
 
-scs_divider_var_neg_stat_accessory_arc
+scs_divider_var_neg_stat_membership_arc
 <- sc_node_class;
 => nrel_main_idtf: 
 	[переменная негативная стационарная sc.s-дуга принадлежности]
 	(* <- lang_ru;; *);
-	[variable constant negative stationary accessory sc.s-arc]
+	[variable constant negative stationary membership sc.s-arc]
 	(* <- lang_en;; *);
 => scs_nrel_representation_scs_editor:
 	"file://img/var_neg_stat_acc_scs_editor1.png" (* => nrel_format: format_png;; *);
@@ -157,12 +157,12 @@ scs_divider_var_neg_stat_accessory_arc
 	"file://img/var_neg_stat_acc_scg1.png" (* => nrel_format: format_png;; *);
 	"file://img/var_neg_stat_acc_scg2.png" (* => nrel_format: format_png;; *);;
 
-scs_divider_const_fuz_stat_accessory_arc
+scs_divider_const_fuz_stat_membership_arc
 <- sc_node_class;
 => nrel_main_idtf: 
 	[константная нечеткая стационарная sc.s-дуга принадлежности]
 	(* <- lang_ru;; *);
-	[constant fuzzy stationary accessory sc.s-arc]
+	[constant fuzzy stationary membership sc.s-arc]
 	(* <- lang_en;; *);
 => scs_nrel_representation_scs_editor:
 	"file://img/const_fuz_stat_acc_scs_editor1.png" (* => nrel_format: format_png;; *);
@@ -174,12 +174,12 @@ scs_divider_const_fuz_stat_accessory_arc
 	"file://img/const_fuz_stat_acc_scg1.png" (* => nrel_format: format_png;; *);
 	"file://img/const_fuz_stat_acc_scg2.png" (* => nrel_format: format_png;; *);;
 
-scs_divider_var_fuz_stat_accessory_arc
+scs_divider_var_fuz_stat_membership_arc
 <- sc_node_class;
 => nrel_main_idtf: 
 	[переменная нечеткая стационарная sc.s-дуга принадлежности]
 	(* <- lang_ru;; *);
-	[variable fuzzy stationary accessory sc.s-arc]
+	[variable fuzzy stationary membership sc.s-arc]
 	(* <- lang_en;; *);
 => scs_nrel_representation_scs_editor:
 	"file://img/var_fuz_stat_acc_scs_editor1.png" (* => nrel_format: format_png;; *);
@@ -191,12 +191,12 @@ scs_divider_var_fuz_stat_accessory_arc
 	"file://img/var_fuz_stat_acc_scg1.png" (* => nrel_format: format_png;; *);
 	"file://img/var_fuz_stat_acc_scg2.png" (* => nrel_format: format_png;; *);;
 
-scs_divider_const_pos_nonstat_accessory_arc
+scs_divider_const_pos_nonstat_membership_arc
 <- sc_node_class;
 => nrel_main_idtf: 
 	[константная позитивная нестационарная sc.s-дуга принадлежности]
 	(* <- lang_ru;; *);
-	[constant positive non-stationary accessory sc.s-arc]
+	[constant positive non-stationary membership sc.s-arc]
 	(* <- lang_en;; *);
 => scs_nrel_representation_scs_editor:
 	"file://img/const_pos_nonstat_acc_scs_editor1.png" (* => nrel_format: format_png;; *);
@@ -208,12 +208,12 @@ scs_divider_const_pos_nonstat_accessory_arc
 	"file://img/const_pos_nonstat_acc_scg1.png" (* => nrel_format: format_png;; *);
 	"file://img/const_pos_nonstat_acc_scg2.png" (* => nrel_format: format_png;; *);;
 
-scs_divider_var_pos_nonstat_accessory_arc
+scs_divider_var_pos_nonstat_membership_arc
 <- sc_node_class;
 => nrel_main_idtf: 
 	[переменная позитивная нестационарная sc.s-дуга принадлежности]
 	(* <- lang_ru;; *);
-	[variable positive non-stationary accessory sc.s-arc]
+	[variable positive non-stationary membership sc.s-arc]
 	(* <- lang_en;; *);
 => scs_nrel_representation_scs_editor:
 	"file://img/var_pos_nonstat_acc_scs_editor1.png" (* => nrel_format: format_png;; *);
@@ -225,12 +225,12 @@ scs_divider_var_pos_nonstat_accessory_arc
 	"file://img/var_pos_nonstat_acc_scg1.png" (* => nrel_format: format_png;; *);
 	"file://img/var_pos_nonstat_acc_scg2.png" (* => nrel_format: format_png;; *);;
 
-scs_divider_const_neg_nonstat_accessory_arc
+scs_divider_const_neg_nonstat_membership_arc
 <- sc_node_class;
 => nrel_main_idtf: 
 	[константная негативная нестационарная sc.s-дуга принадлежности]
 	(* <- lang_ru;; *);
-	[constant negative non-stationary accessory sc.s-arc]
+	[constant negative non-stationary membership sc.s-arc]
 	(* <- lang_en;; *);
 => scs_nrel_representation_scs_editor:
 	"file://img/const_neg_nonstat_acc_scs_editor1.png" (* => nrel_format: format_png;; *);
@@ -242,12 +242,12 @@ scs_divider_const_neg_nonstat_accessory_arc
 	"file://img/const_neg_nonstat_acc_scg1.png" (* => nrel_format: format_png;; *);
 	"file://img/const_neg_nonstat_acc_scg2.png" (* => nrel_format: format_png;; *);;
 
-scs_divider_var_neg_nonstat_accessory_arc
+scs_divider_var_neg_nonstat_membership_arc
 <- sc_node_class;
 => nrel_main_idtf: 
 	[переменная негативная нестационарная sc.s-дуга принадлежности]
 	(* <- lang_ru;; *);
-	[variable negative non-stationary accessory sc.s-arc]
+	[variable negative non-stationary membership sc.s-arc]
 	(* <- lang_en;; *);
 => scs_nrel_representation_scs_editor:
 	"file://img/var_neg_nonstat_acc_scs_editor1.png" (* => nrel_format: format_png;; *);
@@ -259,12 +259,12 @@ scs_divider_var_neg_nonstat_accessory_arc
 	"file://img/var_neg_nonstat_acc_scg1.png" (* => nrel_format: format_png;; *);
 	"file://img/var_neg_nonstat_acc_scg2.png" (* => nrel_format: format_png;; *);;
 
-scs_divider_const_fuz_nonstat_accessory_arc
+scs_divider_const_fuz_nonstat_membership_arc
 <- sc_node_class;
 => nrel_main_idtf: 
 	[константная нечеткая нестационарная sc.s-дуга принадлежности]
 	(* <- lang_ru;; *);
-	[constant fuzzy non-stationary accessory sc.s-arc]
+	[constant fuzzy non-stationary membership sc.s-arc]
 	(* <- lang_en;; *);
 => scs_nrel_representation_scs_editor:
 	"file://img/const_fuz_nonstat_acc_scs_editor1.png" (* => nrel_format: format_png;; *);
@@ -276,12 +276,12 @@ scs_divider_const_fuz_nonstat_accessory_arc
 	"file://img/const_fuz_nonstat_acc_scg1.png" (* => nrel_format: format_png;; *);
 	"file://img/const_fuz_nonstat_acc_scg2.png" (* => nrel_format: format_png;; *);;
 
-scs_divider_var_fuz_nonstat_accessory_arc
+scs_divider_var_fuz_nonstat_membership_arc
 <- sc_node_class;
 => nrel_main_idtf: 
 	[переменная нечеткая нестационарная sc.s-дуга принадлежности]
 	(* <- lang_ru;; *);
-	[variable fuzzy non-stationary accessory sc.s-arc]
+	[variable fuzzy non-stationary membership sc.s-arc]
 	(* <- lang_en;; *);
 => scs_nrel_representation_scs_editor:
 	"file://img/var_fuz_nonstat_acc_scs_editor1.png" (* => nrel_format: format_png;; *);

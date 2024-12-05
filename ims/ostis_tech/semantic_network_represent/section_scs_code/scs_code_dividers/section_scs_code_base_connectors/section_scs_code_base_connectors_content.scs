@@ -38,8 +38,8 @@ basic_scs_connector
 {
 	scs_divider_edge;
 	scs_divider_common_type_arc;
-	scs_divider_accessory_arc;
-	scs_divider_const_pos_stat_accessory_arc
+	scs_divider_membership_arc;
+	scs_divider_const_pos_stat_membership_arc
 };
 
 <- rrel_key_sc_element:
@@ -85,29 +85,29 @@ scs_divider_common_type_arc
 	"file://img/common_type_arc_scg1.png" (* => nrel_format: format_png;; *);
 	"file://img/common_type_arc_scg2.png" (* => nrel_format: format_png;; *);;
 
-scs_divider_accessory_arc
+scs_divider_membership_arc
 <- sc_node_class;
 => nrel_main_idtf: 
 	[sc.s-дуга принадлежности]
 	(* <- lang_ru;; *);
-	[accessory sc.s-arc]
+	[membership sc.s-arc]
 	(* <- lang_en;; *);
 => scs_nrel_representation_scs_editor:
-	"file://img/accessory_arc_scs_editor1.png" (* => nrel_format: format_png;; *);
-	"file://img/accessory_arc_scs_editor2.png" (* => nrel_format: format_png;; *);
+	"file://img/membership_arc_scs_editor1.png" (* => nrel_format: format_png;; *);
+	"file://img/membership_arc_scs_editor2.png" (* => nrel_format: format_png;; *);
 => scs_nrel_representation_standart_editor:
 	[<**];
 	[ **> ];
 => scs_nrel_representation_scg_code:
-	"file://img/accessory_arc_scg1.png" (* => nrel_format: format_png;; *);
-	"file://img/accessory_arc_scg2.png" (* => nrel_format: format_png;; *);;
+	"file://img/membership_arc_scg1.png" (* => nrel_format: format_png;; *);
+	"file://img/membership_arc_scg2.png" (* => nrel_format: format_png;; *);;
 
-scs_divider_const_pos_stat_accessory_arc
+scs_divider_const_pos_stat_membership_arc
 <- sc_node_class;
 => nrel_main_idtf: 
 	[константная позитивная стационарная sc.s-дуга принадлежности]
 	(* <- lang_ru;; *);
-	[constant positive stationary accessory sc.s-arc]
+	[constant positive stationary membership sc.s-arc]
 	(* <- lang_en;; *);
 => scs_nrel_representation_scs_editor:
 	"file://img/const_pos_stat_acc_arc_scs_editor1.png" (* => nrel_format: format_png;; *);

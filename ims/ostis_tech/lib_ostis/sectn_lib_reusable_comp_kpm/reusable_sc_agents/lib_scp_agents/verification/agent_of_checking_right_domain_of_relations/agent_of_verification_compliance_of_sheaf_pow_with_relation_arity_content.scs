@@ -26,7 +26,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorA2 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_of_verification_compliance_of_sheaf_pow_with_relation_arity;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
 
 		_=> nrel_then:: .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorA3;;
@@ -36,8 +36,8 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorA3 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
-		_-> rrel_3:: rrel_assign:: rrel_scp_var:: rrel_struct:: _struct;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: rrel_structure:: _struct;;
 
 		_=> nrel_then:: .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorA4;;
 		_=> nrel_else:: .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_return;;
@@ -50,7 +50,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorA4 (*
 		<-_ genEl;;
-		_-> rrel_1:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: rrel_struct:: _result;;
+		_-> rrel_1:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: rrel_structure:: _result;;
 
 		_=> nrel_goto:: .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorB1;;
 	*);;
@@ -58,7 +58,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorB1 (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _struct;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _tempOutputNode;;
 		_-> rrel_assign:: rrel_scp_var:: rrel_set_3:: _setRelation;;
 
@@ -69,7 +69,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorB2 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _setRelation;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _someRelation;;
 
 		_=> nrel_then:: .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorB3;;
@@ -100,7 +100,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorK3 (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_finished_successfully;;
-		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
 
 		_=> nrel_goto:: .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_return;;
@@ -116,7 +116,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorB31 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _setRelation;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _someRelation;;
 
 		_=> nrel_then:: .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorB32;;
@@ -133,9 +133,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorB4 (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _someRelation;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _allConnectives;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arcInRelation;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arcInRelation;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_var:: _struct;;
 		_-> rrel_assign:: rrel_scp_var:: rrel_set_3:: _set;;
 
@@ -146,7 +146,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorB5 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _set;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _connective;;
 
 		_=> nrel_then:: .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorB6;;
@@ -179,7 +179,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorD1 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: unary_relation;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _someRelation;;
 
 		_=> nrel_then:: .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorE1;;
@@ -197,7 +197,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorD2 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: binary_relation;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _someRelation;;
 
 		_=> nrel_then:: .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorF1;;
@@ -215,7 +215,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorD3 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: ternary_relation;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _someRelation;;
 
 		_=> nrel_then:: .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorG1;;
@@ -233,7 +233,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorD4 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: quasybinary_relation;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _someRelation;;
 
 		_=> nrel_then:: .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorH1;;
@@ -260,7 +260,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorH7 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _firstDomain;;
-		_-> rrel_2:: rrel_common:: rrel_fixed:: rrel_scp_var:: _commonArc;;
+		_-> rrel_2:: rrel_common_arc:: rrel_fixed:: rrel_scp_var:: _commonArc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _secondDomain;;
 
 		_=> nrel_goto:: .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorH8;;
@@ -269,7 +269,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorH8 (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _firstDomain;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _allElementFromFirstDomain;;
 		_-> rrel_assign:: rrel_scp_var:: rrel_set_3:: _setQuasiBinaryElements;;
 
@@ -288,7 +288,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorJ1 (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _connective;;
 
 		_=> nrel_goto:: .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorJ2;;
@@ -299,7 +299,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _connective;;
 		_-> rrel_2:: rrel_assign:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _tempOutputNode;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arcInRelation;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arcInRelation;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_var:: _struct;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _result;;
@@ -313,7 +313,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _connective;;
 		_-> rrel_2:: rrel_assign:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _tempOutputNode;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arcInRelation;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arcInRelation;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_var:: _struct;;
 		_-> rrel_assign:: rrel_scp_var:: rrel_set_3:: _setNotRelation;;
 
@@ -324,9 +324,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorJ8 (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _connective;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _tempOutputNode;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arcInRelation;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arcInRelation;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_var:: _struct;;
 		_-> rrel_assign:: rrel_scp_var:: rrel_set_3:: _setElementsInRelation;;
 
@@ -337,7 +337,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorJ9 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _setElementsInRelation;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _someElementInRelation;;
 
 		_=> nrel_then:: .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorJ10;;
@@ -347,7 +347,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorJ12 (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _someRelation;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _connective;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result;;
 
@@ -357,7 +357,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorJ13 (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _someRelation;;
 
 		_=> nrel_goto:: .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorB5;;
@@ -373,9 +373,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorJ11 (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _connective;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _someElementInRelation;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arcInRelation;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arcInRelation;;
 		_-> rrel_5:: rrel_assign:: rrel_scp_var:: _someRoleRelation;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _result;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_5:: _result;;
@@ -386,7 +386,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorJ5 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _setNotRelation;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _someElement;;
 
 		_=> nrel_then:: .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorJ6;;
@@ -403,9 +403,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorJ7 (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _someNodeNotRelationElement;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _someElement;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arcInRelation;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arcInRelation;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_var:: _struct;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_1:: _result;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result;;
@@ -416,9 +416,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorJ14 (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _connective;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _elementFromFirstDomain;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arcInRelation;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arcInRelation;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_var:: _struct;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _result;;
 
@@ -428,7 +428,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorH10 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _setQuasiBinaryElements;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _elementFromFirstDomain;;
 
 		_=> nrel_then:: .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorH11;;
@@ -454,9 +454,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorH14 (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _firstDomain;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _commonArc;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _commonArc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _binaryElement;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arcInRelation;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arcInRelation;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_var:: _struct;;
 		_-> rrel_assign:: rrel_scp_var:: rrel_set_3:: _setAllBinaryElement;;
 
@@ -474,7 +474,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorH16 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _setAllBinaryElement;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _someElementInSecondDomain;;
 
 		_=> nrel_then:: .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorH17;;
@@ -516,9 +516,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorH3 (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _connective;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _commonArc;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _commonArc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _someElement;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arcInRelation;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arcInRelation;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_var:: _struct;;
 		_-> rrel_assign:: rrel_scp_var:: rrel_set_3:: _setNodesInQuasiBinaryRelation;;
 
@@ -529,7 +529,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorH4 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _setNodesInQuasiBinaryRelation;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _someElement;;
 
 		_=> nrel_then:: .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorH5;;
@@ -546,7 +546,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorH6 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _setNodesInQuasiBinaryRelation;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _someElement;;
 
 		_=> nrel_then:: .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorJ1;;
@@ -565,9 +565,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorG3 (*
 		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _connective;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _commonArc;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _commonArc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _someElement;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arcInRelation;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arcInRelation;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_var:: _struct;;
 
 		_=> nrel_then:: .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorJ1;;
@@ -577,9 +577,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorG4 (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _connective;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _someElement;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arcInRelation;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arcInRelation;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_var:: _struct;;
 		_-> rrel_assign:: rrel_scp_var:: rrel_set_3:: _setNodesInTernaryRelation;;
 
@@ -589,7 +589,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorG5 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _setNodesInTernaryRelation;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _someElement;;
 
 		_=> nrel_then:: .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorG6;;
@@ -606,9 +606,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorG7 (*
 		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _connective;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _someElement;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arcInRelation;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arcInRelation;;
 		_-> rrel_5:: rrel_assign:: rrel_scp_var:: _someTempRoleRelation;;
 
 		_=> nrel_then:: .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorG5;;
@@ -627,7 +627,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorF7 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: oriented_relation;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _someRelation;;
 
 		_=> nrel_then:: .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorF8;;
@@ -636,7 +636,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorF8 (*
 		<-_ ifType;;
-		_-> rrel_1:: rrel_common:: rrel_fixed:: rrel_scp_var:: _connective;;
+		_-> rrel_1:: rrel_common_arc:: rrel_fixed:: rrel_scp_var:: _connective;;
 
 		_=> nrel_then:: .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorF10;;
 		_=> nrel_else:: .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorJ1;;
@@ -644,7 +644,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorF9 (*
 		<-_ ifType;;
-		_-> rrel_1:: rrel_edge:: rrel_fixed:: rrel_scp_var:: _connective;;
+		_-> rrel_1:: rrel_common_edge:: rrel_fixed:: rrel_scp_var:: _connective;;
 
 		_=> nrel_then:: .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorF10;;
 		_=> nrel_else:: .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorJ1;;
@@ -662,9 +662,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorF11 (*
 		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _firstElementInBinaryRelation;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _elementFromFirstElement;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arcInRelation;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arcInRelation;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_var:: _struct;;
 
 		_=> nrel_then:: .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorJ1;;
@@ -674,9 +674,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorF12 (*
 		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _secondElementInBinaryRelation;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _elementFromSecondElement;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arcInRelation;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arcInRelation;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_var:: _struct;;
 
 		_=> nrel_then:: .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorJ1;;
@@ -686,9 +686,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorF3 (*
 		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _connective;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _commonArc;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _commonArc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _someElement;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arcInRelation;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arcInRelation;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_var:: _struct;;
 
 		_=> nrel_then:: .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorJ1;;
@@ -698,7 +698,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorF4 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: oriented_relation;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _someRelation;;
 
 		_=> nrel_then:: .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorF5;;
@@ -708,9 +708,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorF5 (*
 		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _connective;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _someElement;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arcInRelation;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arcInRelation;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: rrel_1;;
 
 		_=> nrel_then:: .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorF6;;
@@ -720,9 +720,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorF6 (*
 		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _connective;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _someElement;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arcInRelation;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arcInRelation;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: rrel_2;;
 
 		_=> nrel_then:: .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorB5;;
@@ -741,9 +741,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorE3 (*
 		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _connective;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _commonArc;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _commonArc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _someElement;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arcInRelation;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arcInRelation;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_var:: _struct;;
 
 		_=> nrel_then:: .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorJ1;;
@@ -753,9 +753,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorC3 (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _connective;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _tempOutputNode;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arcInRelation;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arcInRelation;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_var:: _struct;;
 		_-> rrel_assign:: rrel_scp_var:: rrel_set_3:: _adjacentNodes;;
 
@@ -766,7 +766,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorC4 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _adjacentNodes;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _node;;
 
 		_=> nrel_then:: .._agent_of_verification_compliance_of_sheaf_pow_with_relation_arity_operatorC5;;

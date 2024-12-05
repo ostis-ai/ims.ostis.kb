@@ -26,7 +26,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_counting_variables_in_structure_operator_check_action (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_to_count_variables_in_structure;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
 
 		_=> nrel_then:: .._agent_of_counting_variables_in_structure_operator_get_first_argument;;
@@ -36,8 +36,8 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_counting_variables_in_structure_operator_get_first_argument (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
-		_-> rrel_3:: rrel_assign:: rrel_scp_var:: rrel_struct:: _pattern;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: rrel_structure:: _pattern;;
 
 		_=> nrel_then:: .._agent_of_counting_variables_in_structure_operator_get_context;;
 		_=> nrel_else:: .._agent_of_counting_variables_in_structure_operator_invalid_first_argument;;
@@ -51,9 +51,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_counting_variables_in_structure_operator_get_context (*
 		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _context;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_context_of_action;;
 
 		_=> nrel_then:: .._agent_of_counting_variables_in_structure_operator_validate_context;;
@@ -89,7 +89,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 
 	_-> .._agent_of_counting_variables_in_structure_operator_validate_context (*
 		<-_ ifType;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: rrel_struct:: _context;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: rrel_structure:: _context;;
 
 		_=> nrel_then:: .._agent_of_counting_variables_in_structure_operator_set_context_existence_to_true;;
 		_=> nrel_else:: .._agent_of_counting_variables_in_structure_operator_invalid_context;;
@@ -114,7 +114,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_counting_variables_in_structure_operator2 (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _pattern;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: rrel_var:: _variable;;
 		_-> rrel_assign:: rrel_scp_var:: rrel_set_3:: _set_of_variables;;
 

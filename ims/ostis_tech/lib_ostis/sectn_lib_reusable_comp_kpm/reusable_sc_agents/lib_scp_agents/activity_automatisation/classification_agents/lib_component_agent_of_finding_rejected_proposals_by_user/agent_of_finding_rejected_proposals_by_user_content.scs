@@ -26,7 +26,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_rejected_proposals_by_user1B (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_of_finding_rejected_proposals_by_user;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
 
 		_=> nrel_then:: .._agent_of_finding_rejected_proposals_by_user1C;;
@@ -36,7 +36,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_rejected_proposals_by_user1C (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _param;;
 
 		_=> nrel_then:: .._agent_of_finding_rejected_proposals_by_user_check_on_user;;
@@ -51,7 +51,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_rejected_proposals_by_user_check_on_user (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: ui_user;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _param;;
 
 		_=> nrel_then:: .._agent_of_finding_rejected_proposals_by_user_2A_find_context;;
@@ -61,9 +61,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_rejected_proposals_by_user_2A_find_context (*
 		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _context;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_context_of_action;;
 
 		_=> nrel_then:: .._agent_of_finding_rejected_proposals_by_user_2A_set_context_existence_to_true;;
@@ -137,9 +137,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_rejected_proposals_by_user1F (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _action_node;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _param;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_rejected;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_1:: _set_of_object_rejected;;
 
@@ -150,7 +150,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_rejected_proposals_by_user1G (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _set_of_object_rejected;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc_remove;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc_remove;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _action_node;;
 
 		_=> nrel_then:: .._agent_of_finding_rejected_proposals_by_user2G;;
@@ -200,7 +200,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_rejected_proposals_by_user_check_is_const_nodes_necessary (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _is_const_nodes_necessary;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _node;;
 
 		_=> nrel_then:: .._agent_of_finding_rejected_proposals_by_user_add_nrel_rejected;;
@@ -210,7 +210,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_rejected_proposals_by_user_add_nrel_rejected (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_for_finding_rejected_proposals_by_user;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_rejected;;
 
 		_=> nrel_goto:: .._agent_of_finding_rejected_proposals_by_user_add_nrel_proposal;;
@@ -219,7 +219,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_rejected_proposals_by_user_check_is_answer_empty (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_for_finding_rejected_proposals_by_user;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _node;;
 
 		_=> nrel_then:: .._agent_of_finding_rejected_proposals_by_user11A;;
@@ -229,9 +229,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_rejected_proposals_by_user11A (*
 		<-_ genElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_const:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _result_for_finding_rejected_proposals_by_user;;
-		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_result;;
 
 		_=> nrel_goto:: .._agent_of_finding_rejected_proposals_by_user_erase_set_1;;
@@ -240,7 +240,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_rejected_proposals_by_user_add_nrel_proposal (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_for_finding_rejected_proposals_by_user;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_proposal;;
 
 		_=> nrel_goto:: .._agent_of_finding_rejected_proposals_by_user_add_nrel_authors;;
@@ -249,7 +249,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_rejected_proposals_by_user_add_nrel_authors (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_for_finding_rejected_proposals_by_user;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_authors;;
 
 		_=> nrel_goto:: .._agent_of_finding_rejected_proposals_by_user_add_param;;
@@ -258,7 +258,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_rejected_proposals_by_user_add_param (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_for_finding_rejected_proposals_by_user;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _param;;
 
 		_=> nrel_goto:: .._agent_of_finding_rejected_proposals_by_user11A;;
@@ -267,9 +267,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_rejected_proposals_by_user_finding_struct (*
 		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action_node;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_const:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _structure;;
-		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_proposal;;
 
 		_=> nrel_then:: .._agent_of_finding_rejected_proposals_by_user_add_action_finding_arc_node;;
@@ -288,7 +288,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_rejected_proposals_by_user_context_logic_1 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _context;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action_node;;
 
 		_=> nrel_then:: .._agent_of_finding_rejected_proposals_by_user_context_logic_3;;
@@ -298,7 +298,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_rejected_proposals_by_user_find_set_some_sign_class_1 (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _some_sign_class;;
-		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action_node;;
 		_-> rrel_assign:: rrel_scp_var:: rrel_set_1:: _set_of_some_sign_class;;
 
@@ -308,7 +308,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_rejected_proposals_by_user_find_set_some_sign_class_2 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _set_of_some_sign_class;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc_remove_2;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc_remove_2;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _some_sign_class;;
 
 		_=> nrel_then:: .._agent_of_finding_rejected_proposals_by_user_find_set_some_sign_class_3;;
@@ -325,9 +325,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_rejected_proposals_by_user3G (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action_node;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_const:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _param;;
-		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_rejected;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_for_finding_rejected_proposals_by_user;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _result_for_finding_rejected_proposals_by_user;;
@@ -339,7 +339,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_rejected_proposals_by_user_add_action_node (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_for_finding_rejected_proposals_by_user;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action_node;;
 
 		_=> nrel_goto:: .._agent_of_finding_rejected_proposals_by_user4G;;
@@ -348,9 +348,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_rejected_proposals_by_user4G (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action_node;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_const:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _structure;;
-		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_proposal;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_for_finding_rejected_proposals_by_user;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _result_for_finding_rejected_proposals_by_user;;
@@ -371,7 +371,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_rejected_proposals_by_user_context_logic_2 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _context;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _structure;;
 
 		_=> nrel_then:: .._agent_of_finding_rejected_proposals_by_user_add_structure;;
@@ -381,7 +381,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_rejected_proposals_by_user_add_structure (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_for_finding_rejected_proposals_by_user;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _structure;;
 
 		_=> nrel_goto:: .._agent_of_finding_rejected_proposals_by_user9G;;
@@ -390,7 +390,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_rejected_proposals_by_user9G (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _structure;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _elem_of_struct;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_for_finding_rejected_proposals_by_user;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _result_for_finding_rejected_proposals_by_user;;
@@ -401,9 +401,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_rejected_proposals_by_user10G (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _structure;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_const:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _author;;
-		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_authors;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_for_finding_rejected_proposals_by_user;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _result_for_finding_rejected_proposals_by_user;;
@@ -416,7 +416,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_rejected_proposals_by_user_add_in_is_const_nodes_necessary (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _is_const_nodes_necessary;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _author;;
 
 		_=> nrel_goto:: .._agent_of_finding_rejected_proposals_by_user1G;;
@@ -434,7 +434,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_rejected_proposals_by_user_context_logic_0 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _context;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _some_sign_class;;
 
 		_=> nrel_then:: .._agent_of_finding_rejected_proposals_by_user_find_set_some_sign_class_4;;
@@ -444,9 +444,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_rejected_proposals_by_user_find_set_some_sign_class_4 (*
 		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: section_developers_actions_knowledge_base_cooperation_hierarchy;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _some_sign_class;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: rrel_key_sc_element;;
 
 		_=> nrel_then:: .._agent_of_finding_rejected_proposals_by_user_find_set_some_sign_class_5;;
@@ -456,7 +456,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_rejected_proposals_by_user_find_set_some_sign_class_5 (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_for_finding_rejected_proposals_by_user;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _some_sign_class;;
 
 		_=> nrel_goto:: .._agent_of_finding_rejected_proposals_by_user_find_set_some_sign_class_6;;
@@ -465,7 +465,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_rejected_proposals_by_user_find_set_some_sign_class_6 (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _some_sign_class;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action_node;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_for_finding_rejected_proposals_by_user;;
 
@@ -475,7 +475,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_finding_rejected_proposals_by_user_context_logic_3 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _context;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _structure;;
 
 		_=> nrel_then:: .._agent_of_finding_rejected_proposals_by_user_find_set_some_sign_class_1;;
@@ -484,7 +484,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 
 	_-> .._agent_of_finding_rejected_proposals_by_user_validate_context (*
 		<-_ ifType;;
-		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: rrel_struct:: _context;;
+		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: rrel_structure:: _context;;
 
 		_=> nrel_then:: .._agent_of_finding_rejected_proposals_by_user_set_necessary;;
 		_=> nrel_else:: .._agent_of_finding_rejected_proposals_by_user_invalid_second_param_msg;;

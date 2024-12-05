@@ -13,7 +13,7 @@ _-> rrel_1:: rrel_in:: _input_set;
 	_-> rrel_1:: .._proc_of_sorting_set_of_values_operator_add_all_elem_to_temp_set (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _input_set;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _value;;
 		_-> rrel_assign:: rrel_scp_var:: rrel_set_3:: _all_values;;
 
@@ -24,7 +24,7 @@ _-> rrel_1:: rrel_in:: _input_set;
 	_-> .._proc_of_sorting_set_of_values_operator_get_first_value (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _input_set;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _marked_arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _marked_arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _first_value;;
 
 		_=> nrel_goto:: .._proc_of_sorting_set_of_values_operator_mark_as_first_elem;;
@@ -38,7 +38,7 @@ _-> rrel_1:: rrel_in:: _input_set;
 	_-> .._proc_of_sorting_set_of_values_operator_mark_as_first_elem (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: rrel_first;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _marked_arc;;
 
 		_=> nrel_goto:: .._proc_of_sorting_set_of_values_operator_mark_as_last_elem;;
@@ -47,7 +47,7 @@ _-> rrel_1:: rrel_in:: _input_set;
 	_-> .._proc_of_sorting_set_of_values_operator_mark_as_last_elem (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: rrel_last;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _marked_arc;;
 
 		_=> nrel_goto:: .._proc_of_sorting_set_of_values_operator_get_first_value_arc_of_temp_set;;
@@ -56,7 +56,7 @@ _-> rrel_1:: rrel_in:: _input_set;
 	_-> .._proc_of_sorting_set_of_values_operator_get_first_value_arc_of_temp_set (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _all_values;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _first_value;;
 
 		_=> nrel_goto:: .._proc_of_sorting_set_of_values_operator_first_value_arc_erase;;
@@ -72,7 +72,7 @@ _-> rrel_1:: rrel_in:: _input_set;
 	_-> .._proc_of_sorting_set_of_values_operator_all_elements_loop_enter (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _all_values;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _concrete_value;;
 
 		_=> nrel_then:: .._proc_of_sorting_set_of_values_operator_loop_arc_erase;;
@@ -95,7 +95,7 @@ _-> rrel_1:: rrel_in:: _input_set;
 
 	_-> .._proc_of_sorting_set_of_values_operator_gen_length_node (*
 		<-_ genEl;;
-		_-> rrel_1:: rrel_assign:: rrel_link:: rrel_node:: rrel_scp_var:: _length;;
+		_-> rrel_1:: rrel_assign:: rrel_node_link:: rrel_node:: rrel_scp_var:: _length;;
 
 		_=> nrel_goto:: .._proc_of_sorting_set_of_values_operator_call_proc_of_cardinality_colculation;;
 	*);;
@@ -122,9 +122,9 @@ _-> rrel_1:: rrel_in:: _input_set;
 	_-> .._proc_of_sorting_set_of_values_operator_add_length_to_input_set (*
 		<-_ genElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _input_set;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _length;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_length;;
 
 		_=> nrel_goto:: .._proc_of_sorting_set_of_values_operator_return;;
@@ -133,9 +133,9 @@ _-> rrel_1:: rrel_in:: _input_set;
 	_-> .._proc_of_sorting_set_of_values_operator_get_last_list_element (*
 		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _input_set;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _larger_value;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _can_be_removed;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _can_be_removed;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: rrel_last;;
 
 		_=> nrel_goto:: .._proc_of_sorting_set_of_values_operator_is_new_value_more_than_last_elem;;
@@ -160,9 +160,9 @@ _-> rrel_1:: rrel_in:: _input_set;
 	_-> .._proc_of_sorting_set_of_values_operator_is_less_than_last_1_get_lesser (*
 		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _lesser_value;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _larger_value;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_be_more;;
 
 		_=> nrel_then:: .._proc_of_sorting_set_of_values_operator_add_to_middle_1;;
@@ -181,9 +181,9 @@ _-> rrel_1:: rrel_in:: _input_set;
 	_-> .._proc_of_sorting_set_of_values_operator_change_first_value_1 (*
 		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _input_set;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _previous_first_elem;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc_to_remove;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc_to_remove;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: rrel_first;;
 
 		_=> nrel_goto:: .._proc_of_sorting_set_of_values_operator_change_first_value_2;;
@@ -199,9 +199,9 @@ _-> rrel_1:: rrel_in:: _input_set;
 	_-> .._proc_of_sorting_set_of_values_operator_change_first_value_3 (*
 		<-_ genElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _concrete_value;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _previous_first_elem;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_be_more;;
 
 		_=> nrel_goto:: .._proc_of_sorting_set_of_values_operator_change_first_value_4;;
@@ -210,7 +210,7 @@ _-> rrel_1:: rrel_in:: _input_set;
 	_-> .._proc_of_sorting_set_of_values_operator_change_first_value_4 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _input_set;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _marked_arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _marked_arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _concrete_value;;
 
 		_=> nrel_goto:: .._proc_of_sorting_set_of_values_operator_change_first_value_5;;
@@ -219,7 +219,7 @@ _-> rrel_1:: rrel_in:: _input_set;
 	_-> .._proc_of_sorting_set_of_values_operator_change_first_value_5 (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: rrel_first;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _marked_arc;;
 
 		_=> nrel_goto:: .._proc_of_sorting_set_of_values_operator_all_elements_loop_enter;;
@@ -236,9 +236,9 @@ _-> rrel_1:: rrel_in:: _input_set;
 	_-> .._proc_of_sorting_set_of_values_operator_add_to_middle_1_2 (*
 		<-_ eraseSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _lesser_value;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_erase:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_erase:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _larger_value;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_be_more;;
 
 		_=> nrel_goto:: .._proc_of_sorting_set_of_values_operator_add_to_middle_1_2_1;;
@@ -247,9 +247,9 @@ _-> rrel_1:: rrel_in:: _input_set;
 	_-> .._proc_of_sorting_set_of_values_operator_add_to_middle_1_2_1 (*
 		<-_ genElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _concrete_value;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _larger_value;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_be_more;;
 
 		_=> nrel_goto:: .._proc_of_sorting_set_of_values_operator_add_to_middle_1_2_2;;
@@ -258,9 +258,9 @@ _-> rrel_1:: rrel_in:: _input_set;
 	_-> .._proc_of_sorting_set_of_values_operator_add_to_middle_1_2_2 (*
 		<-_ genElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _lesser_value;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _concrete_value;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_be_more;;
 
 		_=> nrel_goto:: .._proc_of_sorting_set_of_values_operator_all_elements_loop_enter;;
@@ -269,7 +269,7 @@ _-> rrel_1:: rrel_in:: _input_set;
 	_-> .._proc_of_sorting_set_of_values_assign_new_last_element_2 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _input_set;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _marked_arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _marked_arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _concrete_value;;
 
 		_=> nrel_goto:: .._proc_of_sorting_set_of_values_assign_new_last_element_3;;
@@ -278,7 +278,7 @@ _-> rrel_1:: rrel_in:: _input_set;
 	_-> .._proc_of_sorting_set_of_values_assign_new_last_element_3 (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: rrel_last;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _marked_arc;;
 
 		_=> nrel_goto:: .._proc_of_sorting_set_of_values_assign_new_last_element_4;;
@@ -287,9 +287,9 @@ _-> rrel_1:: rrel_in:: _input_set;
 	_-> .._proc_of_sorting_set_of_values_assign_new_last_element_4 (*
 		<-_ genElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _larger_value;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _concrete_value;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_be_more;;
 
 		_=> nrel_goto:: .._proc_of_sorting_set_of_values_operator_all_elements_loop_enter;;

@@ -26,7 +26,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_calculation_median_of_vertex_degrees_operator1B (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_to_calculate_median_of_vertex_degrees;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
 
 		_=> nrel_then:: .._agent_of_calculation_median_of_vertex_degrees_operator1C;;
@@ -36,7 +36,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_calculation_median_of_vertex_degrees_operator1C (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _ontology;;
 
 		_=> nrel_then:: .._agent_of_calculation_median_of_vertex_degrees_operator1D;;
@@ -77,7 +77,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_calculation_median_of_vertex_degrees_operator1G (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_node:: rrel_scp_var:: _ontology_classes;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _class;;
 
 		_=> nrel_then:: .._agent_of_calculation_median_of_vertex_degrees_operator1G1;;
@@ -120,7 +120,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_calculation_median_of_vertex_degrees_operator1H (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _class;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _ontology;;
 
 		_=> nrel_then:: .._agent_of_calculation_median_of_vertex_degrees_operator1C1;;
@@ -130,9 +130,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_calculation_median_of_vertex_degrees_operator1C1 (*
 		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _subject_domain;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _ontology;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_ontology;;
 
 		_=> nrel_then:: .._agent_of_calculation_median_of_vertex_degrees_operator_gen_set_with_all_vertexes;;
@@ -149,7 +149,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_calculation_median_of_vertex_degrees_operator7B (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_finished_unsuccessfully;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
 
 		_=> nrel_goto:: .._agent_of_calculation_median_of_vertex_degrees_operator_return;;
@@ -158,9 +158,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_calculation_median_of_vertex_degrees_operator1C2 (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _subject_domain;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _vertex_of_ontology;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: rrel_explored_relation;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _all_vertexes_of_ontology;;
 
@@ -170,9 +170,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_calculation_median_of_vertex_degrees_operator1C3 (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _subject_domain;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _vertex_of_ontology;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: rrel_not_maximum_studied_object_class;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _all_vertexes_of_ontology;;
 
@@ -182,9 +182,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_calculation_median_of_vertex_degrees_operator1C4 (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _subject_domain;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _vertex_of_ontology;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: rrel_maximum_studied_object_class;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _all_vertexes_of_ontology;;
 
@@ -220,7 +220,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 
 	_-> .._agent_of_calculation_median_of_vertex_degrees_operator_gen_result_value (*
 		<-_ genEl;;
-		_-> rrel_1:: rrel_assign:: rrel_link:: rrel_node:: rrel_scp_var:: _result_value;;
+		_-> rrel_1:: rrel_assign:: rrel_node_link:: rrel_node:: rrel_scp_var:: _result_value;;
 
 		_=> nrel_goto:: .._agent_of_calculation_median_of_vertex_degrees_operator_calculate_median;;
 	*);;
@@ -288,7 +288,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_calculation_median_of_vertex_degrees_operator7A (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_finished_successfully;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
 
 		_=> nrel_goto:: .._agent_of_calculation_median_of_vertex_degrees_operator_return;;

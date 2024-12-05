@@ -22,9 +22,9 @@ _-> rrel_2:: rrel_in:: _ontology;
 	_-> .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_notrel2 (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _ontology_element;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: _elem;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: rrel_example;;
 		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _ontology;;
 		_-> rrel_fixed:: rrel_scp_const:: rrel_set_3:: _ontology;;
@@ -69,7 +69,7 @@ _-> rrel_2:: rrel_in:: _ontology;
 	_-> .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_rel4 (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _set;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _ontology_element;;
 		_-> rrel_fixed:: rrel_scp_const:: rrel_set_1:: _ontology;;
 		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _ontology;;
@@ -80,7 +80,7 @@ _-> rrel_2:: rrel_in:: _ontology;
 	_-> .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax1 (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _ontology;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _ontology_element;;
 
 		_=> nrel_goto:: .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_0;;
@@ -89,7 +89,7 @@ _-> rrel_2:: rrel_in:: _ontology;
 	_-> .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_0 (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: taxonomy_relation;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _elem;;
 		_-> rrel_assign:: rrel_scp_var:: rrel_set_3:: _set_tax_rel;;
 
@@ -99,7 +99,7 @@ _-> rrel_2:: rrel_in:: _ontology;
 	_-> .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_1 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _set_tax_rel;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _tax_rel;;
 
 		_=> nrel_then:: .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_2;;
@@ -116,7 +116,7 @@ _-> rrel_2:: rrel_in:: _ontology;
 	_-> .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_3 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: binary_relation;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _tax_rel;;
 
 		_=> nrel_then:: .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_4;;
@@ -126,9 +126,9 @@ _-> rrel_2:: rrel_in:: _ontology;
 	_-> .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_4 (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _ontology_element;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _elem;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_var:: _tax_rel;;
 		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _ontology;;
 		_-> rrel_fixed:: rrel_scp_const:: rrel_set_3:: _ontology;;
@@ -140,9 +140,9 @@ _-> rrel_2:: rrel_in:: _ontology;
 	_-> .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_5 (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _elem;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _ontology_element;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_var:: _tax_rel;;
 		_-> rrel_assign:: rrel_scp_var:: rrel_set_1:: _set_rel_elems;;
 		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _ontology;;
@@ -155,7 +155,7 @@ _-> rrel_2:: rrel_in:: _ontology;
 	_-> .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_6 (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _set_rel_elems;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _elem;;
 		_-> rrel_fixed:: rrel_scp_const:: rrel_set_3:: _ontology;;
 
@@ -165,7 +165,7 @@ _-> rrel_2:: rrel_in:: _ontology;
 	_-> .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle2_1 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _set_rel_elems;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_const:: rrel_node:: rrel_scp_var:: _rel_elems;;
 
 		_=> nrel_then:: .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle2_2;;
@@ -182,7 +182,7 @@ _-> rrel_2:: rrel_in:: _ontology;
 	_-> .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_7 (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _ontology;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _tax_rel;;
 
 		_=> nrel_goto:: .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle1_1;;
@@ -191,7 +191,7 @@ _-> rrel_2:: rrel_in:: _ontology;
 	_-> .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax_cycle2_3 (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _rel_elems;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _elem;;
 		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _ontology;;
 		_-> rrel_fixed:: rrel_scp_const:: rrel_set_3:: _ontology;;
@@ -202,7 +202,7 @@ _-> rrel_2:: rrel_in:: _ontology;
 	_-> .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_notrel3 (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _ontology;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: rrel_example;;
 
 		_=> nrel_goto:: .._proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_tax1;;

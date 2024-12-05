@@ -22,7 +22,7 @@ _-> rrel_3:: rrel_in:: _vertexes_of_lower_level;
 	_-> .._proc_of_finding_vertexes_of_lower_level_operator_A1 (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _current_node;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _node;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _uncheck_lower_level_vertexes;;
 
@@ -32,7 +32,7 @@ _-> rrel_3:: rrel_in:: _vertexes_of_lower_level;
 	_-> .._proc_of_finding_vertexes_of_lower_level_operator_get_all_taxonomy_relation (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: taxonomy_relation;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _relation;;
 		_-> rrel_assign:: rrel_scp_var:: rrel_set_3:: _all_taxonomy_relation;;
 
@@ -43,7 +43,7 @@ _-> rrel_3:: rrel_in:: _vertexes_of_lower_level;
 	_-> .._proc_of_finding_vertexes_of_lower_level_operator_D1_loop_enter (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _all_taxonomy_relation;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _concrete_taxonomy_relation;;
 
 		_=> nrel_then:: .._proc_of_finding_vertexes_of_lower_level_operator_D2_loop_arc_erase;;
@@ -53,7 +53,7 @@ _-> rrel_3:: rrel_in:: _vertexes_of_lower_level;
 	_-> .._proc_of_finding_vertexes_of_lower_level_operator_G1_loop_enter (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _uncheck_lower_level_vertexes;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _lower_level_vertex;;
 
 		_=> nrel_then:: .._proc_of_finding_vertexes_of_lower_level_operator_G2;;
@@ -89,7 +89,7 @@ _-> rrel_3:: rrel_in:: _vertexes_of_lower_level;
 	_-> .._proc_of_finding_vertexes_of_lower_level_operator_G3 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _ontology;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _lower_level_vertex;;
 
 		_=> nrel_then:: .._proc_of_finding_vertexes_of_lower_level_operator_G4;;
@@ -99,7 +99,7 @@ _-> rrel_3:: rrel_in:: _vertexes_of_lower_level;
 	_-> .._proc_of_finding_vertexes_of_lower_level_operator_G4 (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _vertexes_of_lower_level;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _lower_level_vertex;;
 
 		_=> nrel_goto:: .._proc_of_finding_vertexes_of_lower_level_operator_G1_loop_enter;;
@@ -115,7 +115,7 @@ _-> rrel_3:: rrel_in:: _vertexes_of_lower_level;
 	_-> .._proc_of_finding_vertexes_of_lower_level_operator_D3_is_quasybinary_relation (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: quasybinary_relation;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _concrete_taxonomy_relation;;
 
 		_=> nrel_then:: .._proc_of_finding_vertexes_of_lower_level_operator_F1_gen_temp_set;;
@@ -132,9 +132,9 @@ _-> rrel_3:: rrel_in:: _vertexes_of_lower_level;
 	_-> .._proc_of_finding_vertexes_of_lower_level_operator_E1 (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _current_node;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _vertex_of_lower_level;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_var:: _concrete_taxonomy_relation;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _uncheck_lower_level_vertexes;;
 
@@ -144,9 +144,9 @@ _-> rrel_3:: rrel_in:: _vertexes_of_lower_level;
 	_-> .._proc_of_finding_vertexes_of_lower_level_operator_F1 (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _ligament;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _current_node;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_var:: _concrete_taxonomy_relation;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_1:: _set_of_ligaments;;
 
@@ -157,7 +157,7 @@ _-> rrel_3:: rrel_in:: _vertexes_of_lower_level;
 	_-> .._proc_of_finding_vertexes_of_lower_level_operator_F2_loop_enter (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _set_of_ligaments;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _concrete_ligament;;
 
 		_=> nrel_then:: .._proc_of_finding_vertexes_of_lower_level_operator_F3_loop_arc_erase;;
@@ -181,7 +181,7 @@ _-> rrel_3:: rrel_in:: _vertexes_of_lower_level;
 	_-> .._proc_of_finding_vertexes_of_lower_level_operator_F4 (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _concrete_ligament;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _lower_level_vertex;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _uncheck_lower_level_vertexes;;
 

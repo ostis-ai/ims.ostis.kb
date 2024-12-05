@@ -107,7 +107,7 @@ basic_programming_language_scp
 	rrel_node;
 	rrel_relation;
 	rrel_arc;
-	rrel_access;
+	rrel_membership_arc;
 -> rrel_maximum_studied_object_class: 
 	scp_program;;
 
@@ -540,7 +540,7 @@ genElStr3
 	-> rrel_example:
 		..scp_operator_example_genElStr3 (*
 			-> rrel_1: rrel_fixed: rrel_scp_var: .._set_genElStr3;;
-			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: .._arc1_genElStr3;;
+			-> rrel_2: rrel_assign: rrel_const_perm_pos_arc: rrel_scp_var: .._arc1_genElStr3;;
 			-> rrel_3: rrel_assign: rrel_scp_var: .._element_genElStr3;;
 
 			=> nrel_goto: ..scp_operator_example_goto_genElStr3;;
@@ -3221,7 +3221,7 @@ rrel_type_of_sc_element
 	{
 		rrel_node;
 		rrel_arc;
-		rrel_edge
+		rrel_common_edge
 		(*
 			=> nrel_main_idtf:
 				[sc-ребро']
@@ -3292,7 +3292,7 @@ rrel_node
  		*);
 	<= nrel_subdividing: 
 	{
-		rrel_struct
+		rrel_structure
 		(*
 			=> nrel_main_idtf:
 				[структура']
@@ -3384,7 +3384,7 @@ rrel_arc
  		*);
 	<= nrel_subdividing: 
 	{
-		rrel_common
+		rrel_common_arc
 		(*
 			=> nrel_main_idtf:
 				[sc-дуга общего вида']
@@ -3406,10 +3406,10 @@ rrel_arc
  					};;
  				*);;
 		*);
-		rrel_access
+		rrel_membership_arc
 	};;
 
-rrel_access
+rrel_membership_arc
 <- sc_node_role_relation;
 	=> nrel_main_idtf:
 		[sc-дуга принадлежности']
@@ -3431,7 +3431,7 @@ rrel_access
  		*);
 	<= nrel_subdividing: 
 	{
-		rrel_pos
+		rrel_pos_arc
 		(*
 			=> nrel_main_idtf:
 				[позитивная sc-дуга принадлежности']
@@ -3453,7 +3453,7 @@ rrel_access
  					};;
  				*);;
 		*);
-		rrel_neg
+		rrel_neg_arc
 		(*
 			=> nrel_main_idtf:
 				[негативная sc-дуга принадлежности']
@@ -3475,7 +3475,7 @@ rrel_access
  					};;
  				*);;
 		*);
-		rrel_fuz
+		rrel_fuz_arc
 		(*
 			=> nrel_main_idtf:
 				[нечеткая sc-дуга принадлежности']
@@ -3500,7 +3500,7 @@ rrel_access
 	};
 	<= nrel_subdividing: 
 	{
-		rrel_temp
+		rrel_temp_arc
 		(*
 			=> nrel_main_idtf:
 				[временная sc-дуга принадлежности']
@@ -3536,7 +3536,7 @@ rrel_access
  					};;
  				*);;
 		*);
-		rrel_perm
+		rrel_perm_arc
 		(*
 			=> nrel_main_idtf:
 				[постоянная sc-дуга принадлежности']

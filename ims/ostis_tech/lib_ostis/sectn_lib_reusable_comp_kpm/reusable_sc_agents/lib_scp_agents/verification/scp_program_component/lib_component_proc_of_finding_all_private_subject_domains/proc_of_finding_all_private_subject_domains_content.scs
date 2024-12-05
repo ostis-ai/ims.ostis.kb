@@ -14,7 +14,7 @@ _-> rrel_2:: rrel_in:: _all_subject_domains;
 	_-> rrel_1:: .._proc_of_finding_all_private_subject_domains_operator_add_to_answer (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _all_subject_domains;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _subject_domain;;
 
 		_=> nrel_goto:: .._proc_of_finding_all_private_subject_domains_operator_gen_temp_set;;
@@ -30,9 +30,9 @@ _-> rrel_2:: rrel_in:: _all_subject_domains;
 	_-> .._proc_of_finding_all_private_subject_domains_operator1A_1 (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _subject_domain;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _private_subject_domain;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_explored_relations_class_private_subject_domain;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _private_subject_domains;;
 
@@ -42,9 +42,9 @@ _-> rrel_2:: rrel_in:: _all_subject_domains;
 	_-> .._proc_of_finding_all_private_subject_domains_operator1A_2 (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _subject_domain;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _private_subject_domain;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_primary_elements_class_private_subject_domain;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _private_subject_domains;;
 
@@ -54,9 +54,9 @@ _-> rrel_2:: rrel_in:: _all_subject_domains;
 	_-> .._proc_of_finding_all_private_subject_domains_operator1A_3 (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _subject_domain;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _private_subject_domain;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_private_subject_domain;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _private_subject_domains;;
 
@@ -66,7 +66,7 @@ _-> rrel_2:: rrel_in:: _all_subject_domains;
 	_-> .._proc_of_finding_all_private_subject_domains_operator2A (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _private_subject_domains;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _private_subject_domain;;
 
 		_=> nrel_then:: .._proc_of_finding_all_private_subject_domains_operator_zv10;;

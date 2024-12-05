@@ -17,9 +17,9 @@ _-> rrel_5:: rrel_in:: _context;
 	_-> rrel_1:: .._proc_of_finding_cycle_with_context_operator1A (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _current_node;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _node2;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: _order_relation_param;;
 		_-> rrel_assign:: rrel_scp_var:: rrel_set_3:: _set_for_next_node;;
 
@@ -30,7 +30,7 @@ _-> rrel_5:: rrel_in:: _context;
 	_-> .._proc_of_finding_cycle_with_context_operator1B (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _set_for_next_node;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _node2;;
 
 		_=> nrel_then:: .._proc_of_finding_cycle_with_context_operator1L;;
@@ -44,7 +44,7 @@ _-> rrel_5:: rrel_in:: _context;
 
 	_-> .._proc_of_finding_cycle_with_context_operator1L (*
 		<-_ eraseEl;;
-		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 
 		_=> nrel_goto:: .._proc_of_finding_cycle_with_context_operator1M;;
 	*);;
@@ -52,7 +52,7 @@ _-> rrel_5:: rrel_in:: _context;
 	_-> .._proc_of_finding_cycle_with_context_operator1C (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _struct_node;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _current_node;;
 
 		_=> nrel_then:: .._proc_of_finding_cycle_with_context_operator1D;;
@@ -61,7 +61,7 @@ _-> rrel_5:: rrel_in:: _context;
 
 	_-> .._proc_of_finding_cycle_with_context_operator1D (*
 		<-_ eraseEl;;
-		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 
 		_=> nrel_goto:: .._proc_of_finding_cycle_with_context_operator1E;;
 	*);;
@@ -69,9 +69,9 @@ _-> rrel_5:: rrel_in:: _context;
 	_-> .._proc_of_finding_cycle_with_context_operator1E (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _node1;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _current_node;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: _order_relation_param;;
 		_-> rrel_assign:: rrel_scp_var:: rrel_set_2:: _set_for_arc;;
 
@@ -82,9 +82,9 @@ _-> rrel_5:: rrel_in:: _context;
 	_-> .._proc_of_finding_cycle_with_context_operator1F (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _node1;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _current_node;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: _order_relation_param;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _set_for_arc;;
 
@@ -95,7 +95,7 @@ _-> rrel_5:: rrel_in:: _context;
 	_-> .._proc_of_finding_cycle_with_context_operator1G (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _set_for_arc;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _arc1;;
 
 		_=> nrel_then:: .._proc_of_finding_cycle_with_context_operator1H;;
@@ -104,7 +104,7 @@ _-> rrel_5:: rrel_in:: _context;
 
 	_-> .._proc_of_finding_cycle_with_context_operator1H (*
 		<-_ eraseEl;;
-		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 
 		_=> nrel_goto:: .._proc_of_finding_cycle_with_context_operator1I;;
 	*);;
@@ -119,7 +119,7 @@ _-> rrel_5:: rrel_in:: _context;
 	_-> .._proc_of_finding_cycle_with_context_operator1I (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _struct_node;;
-		_-> rrel_2:: rrel_assign:: rrel_erase:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_erase:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _arc1;;
 
 		_=> nrel_then:: .._proc_of_finding_cycle_with_context_operator1J;;
@@ -128,7 +128,7 @@ _-> rrel_5:: rrel_in:: _context;
 
 	_-> .._proc_of_finding_cycle_with_context_operator1J (*
 		<-_ eraseEl;;
-		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 
 		_=> nrel_goto:: .._proc_of_finding_cycle_with_context_operator1G;;
 	*);;
@@ -136,7 +136,7 @@ _-> rrel_5:: rrel_in:: _context;
 	_-> .._proc_of_finding_cycle_with_context_operator1M (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _context;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _node2;;
 
 		_=> nrel_then:: .._proc_of_finding_cycle_with_context_operator2A;;
@@ -146,9 +146,9 @@ _-> rrel_5:: rrel_in:: _context;
 	_-> .._proc_of_finding_cycle_with_context_operator2A (*
 		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _current_node;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _node2;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: _order_relation_param;;
 
 		_=> nrel_then:: .._proc_of_finding_cycle_with_context_operator2B;;
@@ -158,8 +158,8 @@ _-> rrel_5:: rrel_in:: _context;
 	_-> .._proc_of_finding_cycle_with_context_operator2B (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _set_of_unvisited_arcs;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
-		_-> rrel_3:: rrel_common:: rrel_fixed:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
+		_-> rrel_3:: rrel_common_arc:: rrel_fixed:: rrel_scp_var:: _arc1;;
 
 		_=> nrel_then:: .._proc_of_finding_cycle_with_context_operator2C;;
 		_=> nrel_else:: .._proc_of_finding_cycle_with_context_operator1B;;
@@ -167,7 +167,7 @@ _-> rrel_5:: rrel_in:: _context;
 
 	_-> .._proc_of_finding_cycle_with_context_operator2C (*
 		<-_ eraseEl;;
-		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 
 		_=> nrel_goto:: .._proc_of_finding_cycle_with_context_operator2D;;
 	*);;
@@ -175,7 +175,7 @@ _-> rrel_5:: rrel_in:: _context;
 	_-> .._proc_of_finding_cycle_with_context_operator2D (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _struct_node;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc_of_cycle_label;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc_of_cycle_label;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _node2;;
 
 		_=> nrel_then:: .._proc_of_finding_cycle_with_context_operator3A;;
@@ -185,9 +185,9 @@ _-> rrel_5:: rrel_in:: _context;
 	_-> .._proc_of_finding_cycle_with_context_operator3A (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _current_node;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc2;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _node2;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: _order_relation_param;;
 		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _struct_node;;
 		_-> rrel_fixed:: rrel_scp_const:: rrel_set_4:: _struct_node;;
@@ -198,9 +198,9 @@ _-> rrel_5:: rrel_in:: _context;
 	_-> .._proc_of_finding_cycle_with_context_operator2E (*
 		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _node2;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _next_node;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: _order_relation_param;;
 
 		_=> nrel_then:: .._proc_of_finding_cycle_with_context_operator4A;;
@@ -210,9 +210,9 @@ _-> rrel_5:: rrel_in:: _context;
 	_-> .._proc_of_finding_cycle_with_context_operator4A (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _current_node;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _node2;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: _order_relation_param;;
 		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _struct_node;;
 		_-> rrel_fixed:: rrel_scp_const:: rrel_set_4:: _struct_node;;
@@ -224,7 +224,7 @@ _-> rrel_5:: rrel_in:: _context;
 	_-> .._proc_of_finding_cycle_with_context_operator4B (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _struct_node;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _node2;;
 
 		_=> nrel_goto:: .._proc_of_finding_cycle_with_context_operator5A;;
@@ -255,9 +255,9 @@ _-> rrel_5:: rrel_in:: _context;
 	_-> .._proc_of_finding_cycle_with_context_operator5C (*
 		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _struct_node;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _node2;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: rrel_1;;
 
 		_=> nrel_then:: .._proc_of_finding_cycle_with_context_operator_return;;
@@ -267,8 +267,8 @@ _-> rrel_5:: rrel_in:: _context;
 	_-> .._proc_of_finding_cycle_with_context_operator3B (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: rrel_1;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
-		_-> rrel_3:: rrel_fixed:: rrel_pos_const_perm:: rrel_scp_var:: _arc_of_cycle_label;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_fixed:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc_of_cycle_label;;
 
 		_=> nrel_goto:: .._proc_of_finding_cycle_with_context_operator_return;;
 	*);;
