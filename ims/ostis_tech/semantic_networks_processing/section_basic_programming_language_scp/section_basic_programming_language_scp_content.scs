@@ -31,6 +31,7 @@ basic_programming_language_scp
 	eraseSetStr5;
 	scp_operator_of_conditions_check;
 	ifType;
+	ifTypeCoin;
 	ifVarAssign;
 	ifFormCont;
 	ifCoin;
@@ -48,6 +49,7 @@ basic_programming_language_scp
 	scp_operator_of_event_control;
 	sys_wait;
 	scp_operator_of_file_content_process;
+	contRandom;
 	contAdd;
 	contSub;
 	contMult;
@@ -940,6 +942,7 @@ scp_operator_of_conditions_check
 	<= nrel_subdividing: 
 	{
 		ifType;
+		ifTypeCoin;
 		ifVarAssign;
 		ifFormCont;
 		ifCoin;
@@ -1028,6 +1031,16 @@ ifFormCont
 					*);;
 				*);;
 		*);;
+
+
+ifTypeCoin
+<- sc_node_class;
+	<-scp_operator_atomic_type;
+	=> nrel_main_idtf:
+		[scp-оператор проверки совпадения sc-типов значений операндов]
+		(*<- lang_ru;;*);
+		[scp-operator of check of coincidence of sc-types of values of operands]
+		(*<- lang_en;;*);;
 
 ifCoin
 <- sc_node_class;
@@ -1437,6 +1450,7 @@ scp_operator_of_file_content_process
 		*);
 	<= nrel_subdividing: 
 	{
+		contRandom;
 		contAdd;
 		contSub;
 		contMult;
@@ -1466,6 +1480,15 @@ scp_operator_of_file_content_process
 		stringReplace;
 		stringSlice
 	};;
+
+contRandom
+<- sc_node_class;
+        <-scp_operator_atomic_type;
+        => nrel_main_idtf:
+                [scp-оператор генерации случайного числа]
+                (*<- lang_ru;;*);
+                [scp-operator of random number generation]
+                (*<- lang_en;;*);;
 
 contAdd
 <- sc_node_class;
