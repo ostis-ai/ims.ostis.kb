@@ -31,6 +31,7 @@ basic_programming_language_scp
 	eraseSetStr5;
 	scp_operator_of_conditions_check;
 	ifType;
+	ifTypeCoin;
 	ifVarAssign;
 	ifFormCont;
 	ifCoin;
@@ -941,6 +942,7 @@ scp_operator_of_conditions_check
 	<= nrel_subdividing: 
 	{
 		ifType;
+		ifTypeCoin;
 		ifVarAssign;
 		ifFormCont;
 		ifCoin;
@@ -1029,6 +1031,16 @@ ifFormCont
 					*);;
 				*);;
 		*);;
+
+
+ifTypeCoin
+<- sc_node_class;
+	<-scp_operator_atomic_type;
+	=> nrel_main_idtf:
+		[scp-оператор проверки совпадения sc-типов значений операндов]
+		(*<- lang_ru;;*);
+		[scp-operator of check of coincidence of sc-types of values of operands]
+		(*<- lang_en;;*);;
 
 ifCoin
 <- sc_node_class;
