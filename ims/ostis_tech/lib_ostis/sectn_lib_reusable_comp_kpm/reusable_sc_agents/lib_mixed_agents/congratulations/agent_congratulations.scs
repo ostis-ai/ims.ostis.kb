@@ -1,0 +1,528 @@
+agent_congratulations
+=> nrel_main_idtf:
+    [агентная scp-программа поздравления] (* <- lang_ru;; *);
+    [agent scp-program for congratulation] (* <- lang_en;; *);
+<- scp_program;
+<- agent_scp_program;
+-> rrel_key_sc_element: .._process1;;
+
+agent_congratulations = [*
+.._process1
+<-_ scp_process;
+
+_-> rrel_1:: rrel_in:: .._event;
+_-> rrel_2:: rrel_in:: .._input_arc;
+<=_ nrel_decomposition_of_action:: .._actions (*
+
+    _-> rrel_1:: .._search_congratulation_node (*
+        <-_ searchElStr3;;
+        _-> rrel_1:: rrel_assign:: rrel_scp_var:: _...;;
+        _-> rrel_2:: rrel_fixed:: rrel_scp_const:: .._input_arc;;
+        _-> rrel_3:: rrel_assign:: rrel_scp_var:: .._congratulation;;
+
+        _=> nrel_goto:: .._get_nikita;;
+    *);;
+
+    _-> .._get_nikita (*
+        <-_ searchElStr5;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._congratulation;;
+        _-> rrel_2:: rrel_assign:: rrel_scp_var:: _...;;
+        _-> rrel_3:: rrel_assign:: rrel_scp_var:: .._nikita;;
+        _-> rrel_4:: rrel_assign:: rrel_scp_var:: _...;;
+        _-> rrel_5:: rrel_fixed:: rrel_scp_const:: rrel_one_year_older_boy;;
+
+        _=> nrel_goto:: .._fix_all_bugs;;
+    *);;
+
+    _-> .._fix_all_bugs (*
+        <-_ action_fix_all_sc_machine_bugs;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._be_healthy;;
+    *);;
+
+    _-> .._be_healthy (*
+        <-_ action_be_healthy;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._visit_mount_kilimanjaro;;
+    *);;
+
+    _-> .._visit_mount_kilimanjaro (*
+        <-_ action_visit_mount_kilimanjaro;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._teach_olympiad_student;;
+    *);;
+
+    _-> .._teach_olympiad_student (*
+        <-_ action_teach_olympiad_student;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._ride_minsk_avenues;;
+    *);;
+
+    _-> .._ride_minsk_avenues (*
+        <-_ action_ride_bike;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+        _-> rrel_2:: rrel_fixed:: rrel_scp_const:: rrel_distance:: full_length_of_all_avenues_in_minsk;;
+
+        _=> nrel_goto:: .._rest;;
+    *);;
+
+    _-> .._rest (*
+        <-_ action_rest;;
+        <-_ action_periodically_repeated;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_note:: [Если ты перегоришь, то будешь грустить];;
+        _=> nrel_goto:: .._mother_tongue_wish;;
+    *);;
+
+    _-> .._mother_tongue_wish (*
+        <-_ action_wish_all_the_best;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+        _-> rrel_2:: rrel_fixed:: rrel_scp_const::
+            [Няхай натхненне і ідэі прывядуць да вялікіх дасягненняў.
+             Хай кожны крок на шляху стварэння штучнага интэллекта будзе ўдалым,
+             а веды — бязмежнымі. Жадаю поспехаў у рэалізацыі ўсіх задумак
+             і адкрыццяў у свеце тэхналогій!];;
+
+        _=> nrel_goto:: .._create_priorities;;
+    *);;
+
+    _-> .._create_priorities (*
+        <-_ action_learn_to_prioritise_and_delegate_when_necessary;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._find_time_for_another_rest;;
+    *);;
+
+    _-> .._find_time_for_another_rest (*
+        <-_ action_always_find_time_for_another_rest;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_note::
+            [Желаю в этот особенный день не только радости и счастья,
+            но и возможности отдохнуть от повседневной суеты.
+            Пусть каждый момент будет наполнен спокойствием и умиротворением.
+            Пусть у тебя всегда будет время для любимых занятий,
+            путешествий и просто наслаждения жизнью.];;
+        _=> nrel_goto:: .._dream;;
+    *);;
+
+    _-> .._dream (*
+        <-_ action_dream_and_create;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_note::
+            [Желаю тебе больше творческих моментов, чтобы реализовать все свои идеи и мечты.];;
+        _=> nrel_goto:: .._be_a_professional;;
+    *);;
+
+    _-> .._be_a_professional (*
+        <-_ action_be_a_professional;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_note::
+            [Мы прекрасно понимаем, что это уже и так правда. Но нет предела совершенству,
+            поэтому желаю не утратить любовь к своему делу, хотеть развиваться
+            и привносить новое в свою жизнь и жизнь других.];;
+        _=> nrel_goto:: .._read_book_about_programming;;
+    *);;
+
+    _-> .._read_book_about_programming (*
+        <-_ action_read_book_about_programming_with_unexpected_plot_twists;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._search_mushroom;;
+    *);;
+
+    _-> .._search_mushroom (*
+        <-_ action_search_biggest_mushroom_in_whole_minsk;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._drink_cocoa;;
+    *);;
+
+    _-> .._drink_cocoa (*
+        <-_ action_drink_incredibly_delicious_cocoa_with_little_marshmallows;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._get_feastables;;
+    *);;
+
+    _-> .._get_feastables (*
+        <-_ action_get_largest_feastables_chocolate_ever;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._mankind_future;;
+    *);;
+
+    _-> .._mankind_future (*
+        <-_ action_have_dream_that_foretells_the_mankind_future;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._cross_river;;
+    *);;
+
+    _-> .._cross_river (*
+        <-_ action_successfully_cross_the_river_on_a_homemade_raft;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._realise_everything_planned;;
+        _=> nrel_goto:: .._appreciate_life;;
+    *);;
+
+    _-> .._realise_everything_planned (*
+        <-_ action_realise_everything_planned;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._create_plans;;
+    *);;
+
+    _-> .._create_plans (*
+        <-_ action_create_plans_for_the_future;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._enjoy_job;;
+    *);;
+
+    _-> .._appreciate_life (*
+        <-_ action_appreciate_life_and_smile;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._enjoy_job;;
+    *);;
+
+    _-> .._enjoy_job (*
+        <-_ action_always_enjoy_job;;
+        <-_ scp_operator_executable_after_all_previous;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._obvesti_voenkomat_vokrug_paltsa;;
+    *);;
+
+    _-> .._obvesti_voenkomat_vokrug_paltsa (*
+        <-_ action_obvesti_voenkomat_vokrug_paltsa;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._complete_endeavours;;
+    *);;
+
+    _-> .._complete_endeavours (*
+        <-_ action_successfully_complete_all_endeavours;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._defend_thesis;;
+    *);;
+
+    _-> .._defend_thesis (*
+        <-_ action_defend_masters_thesis_at_the_level_of_doctoral_thesis;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._educate_specialists;;
+    *);;
+
+    _-> .._educate_specialists (*
+        <-_ action_educate_the_younger_generation_of_platform_specialists;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._live_high;;
+    *);;
+
+    _-> .._live_high (*
+        <-_ action_live_high_life;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._go_camping;;
+    *);;
+
+    _-> .._go_camping (*
+        <-_ action_go_several_summer_camping;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._read_and_share_book;;
+    *);;
+
+    _-> .._read_and_share_book (*
+        <-_ action_read_book_and_share_impressions;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._learn;;
+    *);;
+
+    _-> .._learn (*
+        <-_ action_learn;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_note::
+            [Научиться чему-то новому и понять, что после этих знаний жизнь стала прекраснее.];;
+        _=> nrel_goto:: .._realise;;
+    *);;
+
+    _-> .._realise (*
+        <-_ action_realise_you_are_surrounded_by_people_who_love_you;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_note::[Осознать (впервые или заново), что тебя окружают люди, которые тебя очень любят.];;
+        _=> nrel_goto:: .._draw_pictures;;
+    *);;
+
+    _-> .._draw_pictures (*
+        <-_ action_draw_you_own_whiteboard_pictures;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._wake_up_with_wish;;
+    *);;
+
+    _-> .._wake_up_with_wish (*
+        <-_ action_wake_up_every_morning_with_wish;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_note:: [Просыпаться каждое утро с желанием (каким угодно, лишь бы оно было)];;
+        _=> nrel_goto:: .._visit_new_place;;
+    *);;
+
+    _-> .._visit_new_place (*
+        <-_ action_visit_new_city_or_country;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._learn_new_dish;;
+    *);;
+
+    _-> .._learn_new_dish (*
+        <-_ action_learn_new_dish_to_cook;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._look_up_at_stars;;
+    *);;
+
+    _-> .._look_up_at_stars (*
+        <-_ action_look_up_at_stars_with_someone;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._write_article;;
+    *);;
+
+    _-> .._write_article (*
+        <-_ action_write_ostis_2025_article;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._solve_problems;;
+    *);;
+
+    _-> .._solve_problems (*
+        <-_ action_solve_seven_hard_problems;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._find_new_friends;;
+    *);;
+
+    _-> .._find_new_friends (*
+        <-_ action_find_new_friends;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._read_putted_off_book;;
+    *);;
+
+    _-> .._read_putted_off_book (*
+        <-_ action_read_book_you_have_always_put_off;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._watch_film;;
+    *);;
+
+    _-> .._watch_film (*
+        <-_ action_watch_film_you_did_not_have_time_to_see;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._visit_cities;;
+    *);;
+
+    _-> .._visit_cities (*
+        <-_ action_visit_three_new_cities_cities;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._help_friend;;
+    *);;
+
+    _-> .._help_friend (*
+        <-_ action_help_friend_in_a_trouble;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._fall_in_love;;
+    *);;
+
+    _-> .._fall_in_love (*
+        <-_ action_fall_in_love;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._dream_weekend;;
+    *);;
+
+    _-> .._dream_weekend (*
+        <-_ action_spend_the_weekend_of_your_dreams;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._stay_on_track;;
+    *);;
+
+    _-> .._stay_on_track (*
+        <-_ action_stay_on_track;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._discover_new_knowledge_horizon;;
+    *);;
+
+    _-> .._discover_new_knowledge_horizon (*
+        <-_ action_discover_new_knowledge_horizon;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._broaden_horizons;;
+    *);;
+
+    _-> .._broaden_horizons (*
+        <-_ action_broaden_horizons_and_see_the_world_from_new_perspectives;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._be_inspired;;
+    *);;
+
+    _-> .._be_inspired (*
+        <-_ action_be_inspired_by_success_and_turn_dreams_into_reality;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._harmonise;;
+    *);;
+
+    _-> .._harmonise (*
+        <-_ action_despite_the_hustle_and_bustle_and_worries_find_moments_to_relax_be_inspired_and_be_in_harmony_with_yourself;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._everyday_wish;;
+    *);;
+
+    _-> .._everyday_wish (*
+        <-_ action_wish_all_the_best;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+        _-> rrel_2:: rrel_fixed:: rrel_scp_const::
+            [Дорогой коллега, поздравляю тебя с праздником!
+            Желаю тебе успехов в работе, крепкого здоровья, радости и счастья в личной жизни.
+            Пусть каждый день приносит только положительные эмоции и новые возможности для саморазвития.];;
+
+        _=> nrel_goto:: .._travel;;
+    *);;
+
+    _-> .._travel (*
+        <-_ action_get_inspired_and_discover_new_things_through_travelling;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._use_a_vacation;;
+    *);;
+
+    _-> .._use_a_vacation (*
+        <-_ action_use_a_vacation;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._delight_students_success;;
+    *);;
+
+    _-> .._delight_students_success (*
+        <-_ action_delight_success_of_students_you_supervise;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._find_exciting_new_topic_to_research;;
+    *);;
+
+    _-> .._find_exciting_new_topic_to_research (*
+        <-_ action_find_exciting_new_topic_to_research;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._remember_you_can_do_anything;;
+    *);;
+
+    _-> .._remember_you_can_do_anything (*
+        <-_ action_remember_you_are_strong_in_spirit_and_you_can_do_anything;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_note: [собрать команду, объяснить задачу, создать карточки, быть на острие прогресса];;
+        _=> nrel_goto:: .._surprise_get_together;;
+    *);;
+
+    _-> .._surprise_get_together (*
+        <-_ action_have_surprise_get_together_with_the_team;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._music_exchange;;
+    *);;
+
+    _-> .._music_exchange (*
+        <-_ action_music_exchange_with_serega;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._achieve_goals;;
+    *);;
+
+    _-> .._achieve_goals (*
+        <-_ action_achieve_all_the_brave_goals;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._find_balance;;
+    *);;
+
+    _-> .._find_balance (*
+        <-_ action_find_work_study_personal_life_balance;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._enjoy_everyday;;
+    *);;
+
+    _-> .._enjoy_everyday (*
+        <-_ action_enjoy_everyday;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._live_bright;;
+    *);;
+
+    _-> .._live_bright (*
+        <-_ action_live_bright_and_vividly;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._try_something_new;;
+    *);;
+
+    _-> .._try_something_new (*
+        <-_ action_not_be_afraid_to_try_something_new;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._travel_new_places;;
+    *);;
+
+    _-> .._travel_new_places (*
+        <-_ action_travel_new_places;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+
+        _=> nrel_goto:: .._invent_time_machine;;
+    *);;
+
+    _-> .._invent_time_machine (*
+        <-_ action_invent_time_machine;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+        _-> rrel_2:: rrel_assign:: rrel_scp_var:: .._time_machine;;
+
+        _=> nrel_goto:: .._make_your_every_wish_come_true;;
+    *);;
+
+    _-> .._make_your_every_wish_come_true (*
+        <-_ action_make_your_every_wish_come_true;;
+        _-> rrel_1:: rrel_fixed:: rrel_scp_var:: .._nikita;;
+        _-> rrel_2:: rrel_fixed:: rrel_scp_var:: .._time_machine;;
+
+        _=> nrel_note: [Исполняй любое желание, которое пожелаешь, пока Солнце не погаснет!];;
+        _=> nrel_goto:: .._make_your_every_wish_come_true;;
+    *);;
+
+*);;
+
+*];;

@@ -1,0 +1,42 @@
+sc_agent_congratulations
+=> nrel_main_idtf:
+	[sc-агент для поздравления] (* <- lang_ru;; *);
+	[sc-agent for congratulation] (* <- lang_en;; *);
+<- abstract_sc_agent;
+=> nrel_primary_initiation_condition:
+    (sc_event_after_generate_outgoing_arc => congratulation_initiated);
+=> nrel_sc_agent_action_class:
+    action_congratulate;
+=> nrel_initiation_condition_and_result:
+    (..sc_agent_congratulations_initiation_condition
+        => ..sc_agent_congratulations_result_condition);
+<= nrel_sc_agent_key_sc_elements:
+{
+    congratulation_initiated;
+    action_congratulate
+};
+=> nrel_inclusion:
+    sc_agent_congratulations_implementation
+    (*
+        <- platform_dependent_abstract_sc_agent;;
+        <= nrel_sc_agent_program:
+        {
+            agent_congratulations;
+            "file://almost_infinite_loop.py";
+            "file://bjarne_stroustrup.cpp";
+            "file://anjumanya.cpp"
+        };;
+    *);;
+
+..sc_agent_congratulations_initiation_condition
+= [*
+    action_congratulate _-> .._congratulation;;
+    congratulation_initiated _-> .._congratulation;;
+    .._congratulation _-> rrel_one_year_older_boy:: .._nikita;;
+*];;
+
+..sc_agent_congratulations_result_condition
+= [*
+    .._nikita _=> nrel_mood:: .._mood;;
+    concept_happy_mood _-> .._mood;;
+*];;
