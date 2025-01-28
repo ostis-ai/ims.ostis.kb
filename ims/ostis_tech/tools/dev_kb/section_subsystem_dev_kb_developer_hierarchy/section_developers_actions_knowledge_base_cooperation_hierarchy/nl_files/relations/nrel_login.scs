@@ -12,14 +12,14 @@ nrel_login
 	[login*]
 	(* <- lang_en;; *);
 => nrel_first_domain: concept_user;
-=> nrel_second_domain: sc_link;
+=> nrel_second_domain: sc_node_link;
 => nrel_definitional_domain: 
 	... 
 	(*
 	<= nrel_combination: 
 		{
 		concept_user;
-		sc_link
+		sc_node_link
 		};;
 	*);
 <- rrel_key_sc_element:

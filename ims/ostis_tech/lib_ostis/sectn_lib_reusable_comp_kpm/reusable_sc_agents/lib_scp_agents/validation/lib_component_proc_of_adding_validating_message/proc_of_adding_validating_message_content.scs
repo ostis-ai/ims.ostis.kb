@@ -21,7 +21,7 @@ _-> rrel_2:: rrel_in:: _message;
 	_-> .._proc_of_adding_validating_message_operator_add_wrong_param_to_answer (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _action;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _wrong_param;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_for_wrong_param;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _result_for_wrong_param;;
@@ -52,9 +52,9 @@ _-> rrel_2:: rrel_in:: _message;
 	_-> .._proc_of_adding_validating_message_operator_gen_wrong_param_answer (*
 		<-_ genElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _action;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_const:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _result_for_wrong_param;;
-		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_result;;
 
 		_=> nrel_goto:: .._proc_of_adding_validating_message_operator_success_action;;
@@ -63,7 +63,7 @@ _-> rrel_2:: rrel_in:: _message;
 	_-> .._proc_of_adding_validating_message_operator_success_action (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_finished_unsuccessfully;;
-		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: _action;;
 
 		_=> nrel_goto:: .._proc_of_adding_validating_message_operator_return;;

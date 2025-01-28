@@ -26,7 +26,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_calculation_of_the_number_of_vertexes_with_diff_types_of_outgoing_connections_to_all_vertexes_operator0B (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_to_calculate_the_number_of_vertexes_with_diff_types_of_outgoing_connections_to_all_the_vertexes_of_the_ontology;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
 
 		_=> nrel_then:: .._agent_calculation_of_the_number_of_vertexes_with_diff_types_of_outgoing_connections_to_all_vertexes_operator0C;;
@@ -36,7 +36,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_calculation_of_the_number_of_vertexes_with_diff_types_of_outgoing_connections_to_all_vertexes_operator0C (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _ontology;;
 
 		_=> nrel_then:: .._agent_calculation_of_the_number_of_vertexes_with_diff_types_of_outgoing_connections_to_all_vertexes_operator1D;;
@@ -77,7 +77,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_calculation_of_the_number_of_vertexes_with_diff_types_of_outgoing_connections_to_all_vertexes_operator1G (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_node:: rrel_scp_var:: _ontology_classes;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _class;;
 
 		_=> nrel_then:: .._agent_calculation_of_the_number_of_vertexes_with_diff_types_of_outgoing_connections_to_all_vertexes_operator1G1;;
@@ -120,7 +120,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_calculation_of_the_number_of_vertexes_with_diff_types_of_outgoing_connections_to_all_vertexes_operator_unsuccess (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_finished_unsuccessfully;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
 
 		_=> nrel_goto:: .._agent_calculation_of_the_number_of_vertexes_with_diff_types_of_outgoing_connections_to_all_vertexes_operator_return;;
@@ -129,7 +129,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_calculation_of_the_number_of_vertexes_with_diff_types_of_outgoing_connections_to_all_vertexes_operator1H (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _class;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _ontology;;
 
 		_=> nrel_then:: .._agent_calculation_of_the_number_of_vertexes_with_diff_types_of_outgoing_connections_to_all_vertexes_operator1C1;;
@@ -139,9 +139,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_calculation_of_the_number_of_vertexes_with_diff_types_of_outgoing_connections_to_all_vertexes_operator1C1 (*
 		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _subject_domain;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _ontology;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_ontology;;
 
 		_=> nrel_then:: .._agent_calculation_of_the_number_of_vertexes_with_diff_types_of_outgoing_connections_to_all_vertexes_operator_gen_set_with_all_vertexes;;
@@ -158,9 +158,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_calculation_of_the_number_of_vertexes_with_diff_types_of_outgoing_connections_to_all_vertexes_operator0E (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _subject_domain;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _vertex_of_ontology;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: rrel_explored_relation;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _set_ontology_elem;;
 
@@ -170,9 +170,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_calculation_of_the_number_of_vertexes_with_diff_types_of_outgoing_connections_to_all_vertexes_operator0F (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _subject_domain;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _vertex_of_ontology;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: rrel_not_maximum_studied_object_class;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _set_ontology_elem;;
 
@@ -182,9 +182,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_calculation_of_the_number_of_vertexes_with_diff_types_of_outgoing_connections_to_all_vertexes_operator0G (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _subject_domain;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _vertex_of_ontology;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: rrel_maximum_studied_object_class;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _set_ontology_elem;;
 
@@ -193,7 +193,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 
 	_-> .._agent_calculation_of_the_number_of_vertexes_with_diff_types_of_outgoing_connections_to_all_vertexes_operator_gen_ontology_cardinality (*
 		<-_ genEl;;
-		_-> rrel_1:: rrel_assign:: rrel_link:: rrel_node:: rrel_scp_var:: _ontology_cardinality;;
+		_-> rrel_1:: rrel_assign:: rrel_node_link:: rrel_node:: rrel_scp_var:: _ontology_cardinality;;
 
 		_=> nrel_goto:: .._agent_calculation_of_the_number_of_vertexes_with_diff_types_of_outgoing_connections_to_all_vertexes_operator_call_set_ontology_elem_power;;
 	*);;
@@ -219,7 +219,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 
 	_-> .._agent_calculation_of_the_number_of_vertexes_with_diff_types_of_outgoing_connections_to_all_vertexes_operator1A (*
 		<-_ genEl;;
-		_-> rrel_1:: rrel_assign:: rrel_link:: rrel_node:: rrel_scp_var:: _count_answer;;
+		_-> rrel_1:: rrel_assign:: rrel_node_link:: rrel_node:: rrel_scp_var:: _count_answer;;
 
 		_=> nrel_goto:: .._agent_calculation_of_the_number_of_vertexes_with_diff_types_of_outgoing_connections_to_all_vertexes_operator1B;;
 	*);;
@@ -262,7 +262,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_calculation_of_the_number_of_vertexes_with_diff_types_of_outgoing_connections_to_all_vertexes_operator3A (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _set_answer;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _cardinality;;
 
 		_=> nrel_then:: .._agent_calculation_of_the_number_of_vertexes_with_diff_types_of_outgoing_connections_to_all_vertexes_operator3B;;
@@ -336,7 +336,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_calculation_of_the_number_of_vertexes_with_diff_types_of_outgoing_connections_to_all_vertexes_operator_succsess (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_finished_successfully;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
 
 		_=> nrel_goto:: .._agent_calculation_of_the_number_of_vertexes_with_diff_types_of_outgoing_connections_to_all_vertexes_operator_return;;

@@ -38,7 +38,7 @@ _-> rrel_6:: rrel_in:: _el2;
 	_-> .._proc_finding_overall_concepts_operator2A (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _rules3;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _node;;
 
 		_=> nrel_then:: .._proc_finding_overall_concepts_operator2B;;
@@ -47,7 +47,7 @@ _-> rrel_6:: rrel_in:: _el2;
 
 	_-> .._proc_finding_overall_concepts_operator2B (*
 		<-_ eraseEl;;
-		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 
 		_=> nrel_goto:: .._proc_finding_overall_concepts_operator2C1;;
 	*);;
@@ -81,9 +81,9 @@ _-> rrel_6:: rrel_in:: _el2;
 	_-> .._proc_finding_overall_concepts_operator2C1 (*
 		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _d1;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _node;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: rrel_studied_relation;;
 
 		_=> nrel_then:: .._proc_finding_overall_concepts_operator3D;;
@@ -93,7 +93,7 @@ _-> rrel_6:: rrel_in:: _el2;
 	_-> .._proc_finding_overall_concepts_operator3D (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _result_proc_finding_overall_concepts;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _node;;
 
 		_=> nrel_goto:: .._proc_finding_overall_concepts_operator4A;;
@@ -102,9 +102,9 @@ _-> rrel_6:: rrel_in:: _el2;
 	_-> .._proc_finding_overall_concepts_operator2C2 (*
 		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _d2;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _node;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: rrel_studied_object_class;;
 
 		_=> nrel_then:: .._proc_finding_overall_concepts_operator3D;;
@@ -114,9 +114,9 @@ _-> rrel_6:: rrel_in:: _el2;
 	_-> .._proc_finding_overall_concepts_operator2C3 (*
 		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _d3;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _node;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: rrel_maximum_studied_object_class;;
 
 		_=> nrel_then:: .._proc_finding_overall_concepts_operator3D;;
@@ -126,7 +126,7 @@ _-> rrel_6:: rrel_in:: _el2;
 	_-> .._proc_finding_overall_concepts_operator2C4 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: subject_domain;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _node;;
 
 		_=> nrel_then:: .._proc_finding_overall_concepts_operator3D;;
@@ -181,7 +181,7 @@ _-> rrel_6:: rrel_in:: _el2;
 	_-> .._proc_finding_overall_concepts_operator2C9 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: languages;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _node;;
 
 		_=> nrel_then:: .._proc_finding_overall_concepts_operator3D;;
@@ -200,7 +200,7 @@ _-> rrel_6:: rrel_in:: _el2;
 	_-> .._proc_finding_overall_concepts_operator2D (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _elem;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _node;;
 		_-> rrel_assign:: rrel_scp_var:: rrel_set_1:: _sub_dom;;
 
@@ -211,7 +211,7 @@ _-> rrel_6:: rrel_in:: _el2;
 	_-> .._proc_finding_overall_concepts_operator3A (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _sub_dom;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _inst;;
 
 		_=> nrel_then:: .._proc_finding_overall_concepts_operator3B;;
@@ -220,7 +220,7 @@ _-> rrel_6:: rrel_in:: _el2;
 
 	_-> .._proc_finding_overall_concepts_operator3B (*
 		<-_ eraseEl;;
-		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 
 		_=> nrel_goto:: .._proc_finding_overall_concepts_operator3C1;;
 	*);;
@@ -243,9 +243,9 @@ _-> rrel_6:: rrel_in:: _el2;
 	_-> .._proc_finding_overall_concepts_operator3C1 (*
 		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _subject_domain1;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _inst;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: rrel_studied_relation;;
 
 		_=> nrel_then:: .._proc_finding_overall_concepts_operator3D;;
@@ -255,9 +255,9 @@ _-> rrel_6:: rrel_in:: _el2;
 	_-> .._proc_finding_overall_concepts_operator3C2 (*
 		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _subject_domain2;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _inst;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: rrel_studied_object_class;;
 
 		_=> nrel_then:: .._proc_finding_overall_concepts_operator3D;;
@@ -267,9 +267,9 @@ _-> rrel_6:: rrel_in:: _el2;
 	_-> .._proc_finding_overall_concepts_operator3C3 (*
 		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _subject_domain3;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _inst;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: rrel_maximum_studied_object_class;;
 
 		_=> nrel_then:: .._proc_finding_overall_concepts_operator3D;;

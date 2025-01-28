@@ -26,7 +26,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_calculation_number_of_subject_domains_operator1B (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_to_calculate_number_of_subject_domains;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
 
 		_=> nrel_then:: .._agent_of_calculation_number_of_subject_domains_operator_gen_all_subject_domains;;
@@ -48,7 +48,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_calculation_number_of_subject_domains_operator1C2 (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: subject_domain;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _some_subject_domain;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _all_subject_domains;;
 
@@ -57,7 +57,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 
 	_-> .._agent_of_calculation_number_of_subject_domains_operator_gen_result_value_set (*
 		<-_ genEl;;
-		_-> rrel_1:: rrel_assign:: rrel_link:: rrel_node:: rrel_scp_var:: _result_value;;
+		_-> rrel_1:: rrel_assign:: rrel_node_link:: rrel_node:: rrel_scp_var:: _result_value;;
 
 		_=> nrel_goto:: .._agent_of_calculation_number_of_subject_domains_operator_calc_sections_number_set;;
 	*);;
@@ -111,7 +111,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_calculation_number_of_subject_domains_operator7A (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_finished_successfully;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
 
 		_=> nrel_goto:: .._agent_of_calculation_number_of_subject_domains_operator_return;;

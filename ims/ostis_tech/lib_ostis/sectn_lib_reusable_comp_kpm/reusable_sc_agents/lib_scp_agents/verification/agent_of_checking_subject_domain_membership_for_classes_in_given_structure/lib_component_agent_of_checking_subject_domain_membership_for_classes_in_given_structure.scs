@@ -1,18 +1,18 @@
-lib_component_agent_of_checking_subject_domain_accessory_for_classes_in_given_structure
+lib_component_agent_of_checking_subject_domain_membership_for_classes_in_given_structure
 => nrel_main_idtf:
 	[Компонент библиотеки. sc-агент проверки указания соответствующей предметной области для классов в рамках заданной структуры]
 	(* <- lang_ru;; *);
-	[Library component. sc-agent of checking subject domain accessory for classes in given structure]
+	[Library component. sc-agent of checking subject domain membership for classes in given structure]
 	(* <- lang_en;; *);
 
 <- library_of_platform_independent_reusable_components; 
 <- library_of_atomic_reusable_components; 
 
 => nrel_attendant_component: 
-	lib_component_ui_menu_file_for_agent_of_checking_subject_domain_accessory_for_classes_in_given_structure;
+	lib_component_ui_menu_file_for_agent_of_checking_subject_domain_membership_for_classes_in_given_structure;
 
 -> rrel_key_sc_element: 
-	.platform_independent_realization_of_sc_agent_of_checking_subject_domain_accessory_for_classes_in_given_structure;
+	.platform_independent_realization_of_sc_agent_of_checking_subject_domain_membership_for_classes_in_given_structure;
 
 <- rrel_key_sc_element: 
 	...
@@ -22,7 +22,7 @@ lib_component_agent_of_checking_subject_domain_accessory_for_classes_in_given_st
 		...
 		(*
 		-> rrel_example:
-			"file://htmls/Agent_of_checking_subject_domain_accessory_for_classes_in_given_structure.html"
+			"file://htmls/Agent_of_checking_subject_domain_membership_for_classes_in_given_structure.html"
 			(*
 			<- lang_ru;;
 			=> nrel_format: format_html;;
@@ -30,14 +30,14 @@ lib_component_agent_of_checking_subject_domain_accessory_for_classes_in_given_st
 		*);;
 	*);;
 
-sc_node_class -> action_of_checking_subject_domain_accessory_for_classes_in_given_structure;;
+sc_node_class -> action_of_checking_subject_domain_membership_for_classes_in_given_structure;;
 
-action_of_checking_subject_domain_accessory_for_classes_in_given_structure
+action_of_checking_subject_domain_membership_for_classes_in_given_structure
 <= nrel_inclusion:
     information_action;
  => nrel_main_idtf:
 	[действие. проверить указание соответствующей предметной области для классов в рамках заданной структуры]
 		(*<- lang_ru;;*);;
-action_of_checking_subject_domain_accessory_for_classes_in_given_structure => nrel_main_idtf:
-	[action. check subject domain accessory for classes in given structure]
+action_of_checking_subject_domain_membership_for_classes_in_given_structure => nrel_main_idtf:
+	[action. check subject domain membership for classes in given structure]
 		(* <- lang_en;; *);;

@@ -26,7 +26,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_rejection_verification_result_of_offer_operator1B (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_to_reject_the_result_of_proposal_verification;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
 
 		_=> nrel_then:: .._agent_rejection_verification_result_of_offer_operator1D;;
@@ -36,7 +36,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_rejection_verification_result_of_offer_operator1D (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _act_param;;
 
 		_=> nrel_then:: .._agent_rejection_verification_result_of_offer_operator1P;;
@@ -51,7 +51,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_rejection_verification_result_of_offer_operator1P (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_initiated;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _act_param;;
 
 		_=> nrel_then:: .._agent_rejection_verification_result_of_offer_operator_correct_act_checker;;
@@ -61,7 +61,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_rejection_verification_result_of_offer_operator_correct_act_checker (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_to_consider_result_of_proposal_verification;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _act_param;;
 
 		_=> nrel_then:: .._agent_rejection_verification_result_of_offer_operator_find_user;;
@@ -90,9 +90,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_rejection_verification_result_of_offer_operator_find_user (*
 		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _user;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_authors;;
 
 		_=> nrel_then:: .._agent_rejection_verification_result_of_offer_operator_correct_user_checker;;
@@ -102,9 +102,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_rejection_verification_result_of_offer_operator_correct_user_checker (*
 		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _uknown_entity;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _user;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_administrator;;
 
 		_=> nrel_then:: .._agent_rejection_verification_result_of_offer_operator1_mark_act_param_as_past_entity;;
@@ -114,7 +114,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_rejection_verification_result_of_offer_operator1_mark_act_param_as_past_entity (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: last_entity;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_const:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _act_param;;
 
 		_=> nrel_goto:: .._agent_rejection_verification_result_of_offer_operator1_gen_rejection_relation_act;;
@@ -123,9 +123,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_rejection_verification_result_of_offer_operator1_gen_rejection_relation_act (*
 		<-_ genElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _act_param;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_const:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _user;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_rejected;;
 
 		_=> nrel_goto:: .._agent_rejection_verification_result_of_offer_operator_call_removing;;
@@ -177,7 +177,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_rejection_verification_result_of_offer_operator_add_previous_act_to_answer (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_rejection_verification_result_of_offer;;
-		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _act_param;;
 
 		_=> nrel_goto:: .._agent_rejection_verification_result_of_offer_operator_add_result_desicion_arcs_to_answer;;
@@ -186,9 +186,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_rejection_verification_result_of_offer_operator_add_result_desicion_arcs_to_answer (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _act_param;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_const:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _admin_name;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_rejected;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_rejection_verification_result_of_offer;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _result_rejection_verification_result_of_offer;;
@@ -200,7 +200,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_rejection_verification_result_of_offer_operator_add_rejected_relation_to_answer (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_rejection_verification_result_of_offer;;
-		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_rejected;;
 
 		_=> nrel_goto:: .._agent_rejection_verification_result_of_offer_operator_add_object_relation_arcs_to_answer;;
@@ -209,9 +209,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_rejection_verification_result_of_offer_operator_add_object_relation_arcs_to_answer (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _act_param;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _verification_structure;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_object;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_rejection_verification_result_of_offer;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _result_rejection_verification_result_of_offer;;
@@ -223,7 +223,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_rejection_verification_result_of_offer_operator_add_verification_structure_nodes_to_answer (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _verification_structure;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _node;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_rejection_verification_result_of_offer;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _result_rejection_verification_result_of_offer;;
@@ -234,7 +234,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_rejection_verification_result_of_offer_operator_add_object_relation_node_to_answer (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_rejection_verification_result_of_offer;;
-		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_object;;
 
 		_=> nrel_goto:: .._agent_rejection_verification_result_of_offer_operator_add_act_param_action_class_arc_to_answer_rejection_verification_result_of_offer;;
@@ -243,7 +243,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_rejection_verification_result_of_offer_operator_add_act_param_action_class_arc_to_answer_rejection_verification_result_of_offer (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_to_consider_result_of_proposal_verification;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _act_param;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_rejection_verification_result_of_offer;;
 
@@ -253,7 +253,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_rejection_verification_result_of_offer_operator_add_ct_param_action_class_to_answer_rejection_verification_result_of_offer (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_rejection_verification_result_of_offer;;
-		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: action_to_consider_result_of_proposal_verification;;
 
 		_=> nrel_goto:: .._agent_rejection_verification_result_of_offer_operator_gen_full_answer;;
@@ -262,9 +262,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_rejection_verification_result_of_offer_operator_gen_full_answer (*
 		<-_ genElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_const:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _result_rejection_verification_result_of_offer;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_result;;
 
 		_=> nrel_goto:: .._agent_rejection_verification_result_of_offer_operator_pre_return;;
@@ -280,7 +280,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_rejection_verification_result_of_offer_gen_action_finished_successfully (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_finished_successfully;;
-		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
 
 		_=> nrel_goto:: .._agent_rejection_verification_result_of_offer_operator_return;;

@@ -27,7 +27,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_formation_proposed_project_tasks_operator_A2 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_to_form_a_proposal_of_project_task;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
 
 		_=> nrel_then:: .._agent_of_formation_proposed_project_tasks_operator_A3;;
@@ -42,8 +42,8 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_formation_proposed_project_tasks_operator_A3 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
-		_-> rrel_3:: rrel_assign:: rrel_scp_var:: rrel_struct:: _param;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
+		_-> rrel_3:: rrel_assign:: rrel_scp_var:: rrel_structure:: _param;;
 
 		_=> nrel_then:: .._agent_of_formation_proposed_project_tasks_operator_A4;;
 		_=> nrel_else:: .._agent_of_formation_proposed_project_tasks_operator_call_proc_of_adding_validating_message;;
@@ -78,7 +78,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_formation_proposed_project_tasks_operator_A5 (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_to_build_new_piece_to_be_included_in_knowledge_base;;
-		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
 
 		_=> nrel_goto:: .._agent_of_formation_proposed_project_tasks_operator_A6;;
@@ -87,9 +87,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_formation_proposed_project_tasks_operator_A6 (*
 		<-_ genElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_const:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _param;;
-		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_result;;
 
 		_=> nrel_goto:: .._agent_of_formation_proposed_project_tasks_operator_A7;;
@@ -112,7 +112,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_formation_proposed_project_tasks_operator_B2 (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _propose;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
 
 		_=> nrel_goto:: .._agent_of_formation_proposed_project_tasks_operator_B3;;
@@ -121,7 +121,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_formation_proposed_project_tasks_operator_B3 (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _propose;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: action_to_build_new_piece_to_be_included_in_knowledge_base;;
 
 		_=> nrel_goto:: .._agent_of_formation_proposed_project_tasks_operator_B4;;
@@ -130,7 +130,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_formation_proposed_project_tasks_operator_B4 (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _propose;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _param;;
 
 		_=> nrel_goto:: .._agent_of_formation_proposed_project_tasks_operator_B5;;
@@ -139,9 +139,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_formation_proposed_project_tasks_operator_B5 (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _param;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_assign:: rrel_scp_var:: _non_role_target;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _propose;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _propose;;
@@ -154,7 +154,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_formation_proposed_project_tasks_operator_B6 (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_to_build_new_piece_to_be_included_in_knowledge_base;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _propose;;
 
@@ -165,7 +165,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_formation_proposed_project_tasks_operator_F2 (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_finished_unsuccessfully;;
-		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
 
 		_=> nrel_goto:: .._agent_of_formation_proposed_project_tasks_return;;
@@ -181,9 +181,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_formation_proposed_project_tasks_operator_C2 (*
 		<-_ genElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action1;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_const:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _propose;;
-		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_proposal;;
 
 		_=> nrel_goto:: .._agent_of_formation_proposed_project_tasks_operator_C3;;
@@ -192,7 +192,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_formation_proposed_project_tasks_operator_C3 (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_to_consider_new_project_task;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action1;;
 
 		_=> nrel_goto:: .._agent_of_formation_proposed_project_tasks_operator_C4;;
@@ -201,7 +201,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_formation_proposed_project_tasks_operator_C4 (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_initiated;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action1;;
 
 		_=> nrel_goto:: .._agent_of_formation_proposed_project_tasks_operator_D1;;
@@ -210,9 +210,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_formation_proposed_project_tasks_operator_D1 (*
 		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _author;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_authors;;
 
 		_=> nrel_then:: .._agent_of_formation_proposed_project_tasks_operator_D2;;
@@ -222,9 +222,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_formation_proposed_project_tasks_operator_D2 (*
 		<-_ genElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _propose;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_const:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _author;;
-		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_authors;;
 
 		_=> nrel_goto:: .._agent_of_formation_proposed_project_tasks_operator_call_adding;;
@@ -251,7 +251,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_formation_proposed_project_tasks_operator_D3 (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_formation_proposed_project_tasks;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _param;;
 
 		_=> nrel_goto:: .._agent_of_formation_proposed_project_tasks_operator_D4;;
@@ -260,7 +260,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_formation_proposed_project_tasks_operator_D4 (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _param;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _elem1;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_formation_proposed_project_tasks;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _result_of_formation_proposed_project_tasks;;
@@ -271,9 +271,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_formation_proposed_project_tasks_operator_D5 (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _param;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_result;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_formation_proposed_project_tasks;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _result_of_formation_proposed_project_tasks;;
@@ -284,7 +284,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_formation_proposed_project_tasks_operator_D6 (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_formation_proposed_project_tasks;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
 
 		_=> nrel_goto:: .._agent_of_formation_proposed_project_tasks_operator_D7;;
@@ -293,7 +293,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_formation_proposed_project_tasks_operator_D7 (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_formation_proposed_project_tasks;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_result;;
 
 		_=> nrel_goto:: .._agent_of_formation_proposed_project_tasks_operator_D8;;
@@ -302,7 +302,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_formation_proposed_project_tasks_operator_D8 (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_to_build_new_piece_to_be_included_in_knowledge_base;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_formation_proposed_project_tasks;;
 
@@ -312,7 +312,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_formation_proposed_project_tasks_operator_D9 (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_formation_proposed_project_tasks;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: action_to_build_new_piece_to_be_included_in_knowledge_base;;
 
 		_=> nrel_goto:: .._agent_of_formation_proposed_project_tasks_operator_D10;;
@@ -321,7 +321,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_formation_proposed_project_tasks_operator_D10 (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_formation_proposed_project_tasks;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _propose;;
 
 		_=> nrel_goto:: .._agent_of_formation_proposed_project_tasks_operator_D11;;
@@ -330,7 +330,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_formation_proposed_project_tasks_operator_D11 (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _propose;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _propose_elem;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_formation_proposed_project_tasks;;
 
@@ -340,9 +340,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_formation_proposed_project_tasks_operator_E1 (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _propose;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _proposer;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_authors;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_formation_proposed_project_tasks;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_3:: _result_of_formation_proposed_project_tasks;;
@@ -354,7 +354,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_formation_proposed_project_tasks_operator_E2 (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_formation_proposed_project_tasks;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_authors;;
 
 		_=> nrel_goto:: .._agent_of_formation_proposed_project_tasks_operator_E3;;
@@ -363,9 +363,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_formation_proposed_project_tasks_operator_E3 (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action1;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _propose;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_proposal;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_formation_proposed_project_tasks;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_4:: _result_of_formation_proposed_project_tasks;;
@@ -376,7 +376,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_formation_proposed_project_tasks_operator_E4 (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_formation_proposed_project_tasks;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_proposal;;
 
 		_=> nrel_goto:: .._agent_of_formation_proposed_project_tasks_operator_E5;;
@@ -385,7 +385,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_formation_proposed_project_tasks_operator_E5 (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_formation_proposed_project_tasks;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action1;;
 
 		_=> nrel_goto:: .._agent_of_formation_proposed_project_tasks_operator_E6;;
@@ -394,7 +394,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_formation_proposed_project_tasks_operator_E6 (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_initiated;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action1;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_formation_proposed_project_tasks;;
 
@@ -405,7 +405,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_formation_proposed_project_tasks_operator_E7 (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_formation_proposed_project_tasks;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: action_initiated;;
 
 		_=> nrel_goto:: .._agent_of_formation_proposed_project_tasks_operator_E8;;
@@ -414,7 +414,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_formation_proposed_project_tasks_operator_E8 (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_to_consider_new_project_task;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action1;;
 		_-> rrel_fixed:: rrel_scp_var:: rrel_set_2:: _result_of_formation_proposed_project_tasks;;
 
@@ -425,7 +425,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_formation_proposed_project_tasks_operator_E9 (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _result_of_formation_proposed_project_tasks;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: action_to_consider_new_project_task;;
 
 		_=> nrel_goto:: .._agent_of_formation_proposed_project_tasks_operator_E10;;
@@ -434,9 +434,9 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_formation_proposed_project_tasks_operator_E10 (*
 		<-_ genElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_const:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_const:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _result_of_formation_proposed_project_tasks;;
-		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_result;;
 
 		_=> nrel_goto:: .._agent_of_formation_proposed_project_tasks_operator_F1;;
@@ -445,7 +445,7 @@ _-> rrel_2:: rrel_in:: _input_arc;
 	_-> .._agent_of_formation_proposed_project_tasks_operator_F1 (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: action_finished_successfully;;
-		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
 
 		_=> nrel_goto:: .._agent_of_formation_proposed_project_tasks_return;;

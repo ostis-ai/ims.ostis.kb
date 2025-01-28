@@ -14,7 +14,7 @@ _-> rrel_2:: rrel_in:: _result;
 	_-> rrel_1:: .._proc_of_displaying_initiated_actions_operator1B (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _result;;
-		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: action_initiated;;
 
 		_=> nrel_goto:: .._proc_of_displaying_initiated_actions_operator2A;;
@@ -23,7 +23,7 @@ _-> rrel_2:: rrel_in:: _result;
 	_-> .._proc_of_displaying_initiated_actions_operator2A (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _actions;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _action;;
 
 		_=> nrel_then:: .._proc_of_displaying_initiated_actions_operator2B;;
@@ -32,7 +32,7 @@ _-> rrel_2:: rrel_in:: _result;
 
 	_-> .._proc_of_displaying_initiated_actions_operator2B (*
 		<-_ eraseEl;;
-		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 
 		_=> nrel_goto:: .._proc_of_displaying_initiated_actions_operator2C;;
 	*);;
@@ -45,7 +45,7 @@ _-> rrel_2:: rrel_in:: _result;
 	_-> .._proc_of_displaying_initiated_actions_operator2C (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _result;;
-		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
 
 		_=> nrel_goto:: .._proc_of_displaying_initiated_actions_operator2D;;
@@ -54,9 +54,9 @@ _-> rrel_2:: rrel_in:: _result;
 	_-> .._proc_of_displaying_initiated_actions_operator2D (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _next_quest;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_sequence_of_actions;;
 		_-> rrel_assign:: rrel_scp_var:: rrel_set_2:: _arcs;;
 		_-> rrel_fixed:: rrel_scp_const:: rrel_set_4:: _result;;
@@ -68,7 +68,7 @@ _-> rrel_2:: rrel_in:: _result;
 	_-> .._proc_of_displaying_initiated_actions_operator2N (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _result;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_sequence_of_actions;;
 
 		_=> nrel_then:: .._proc_of_displaying_initiated_actions_operator2E;;
@@ -78,9 +78,9 @@ _-> rrel_2:: rrel_in:: _result;
 	_-> .._proc_of_displaying_initiated_actions_operator2I (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _next_quest;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_sequence_of_actions;;
 		_-> rrel_assign:: rrel_scp_var:: rrel_set_2:: _arcs;;
 
@@ -91,7 +91,7 @@ _-> rrel_2:: rrel_in:: _result;
 	_-> .._proc_of_displaying_initiated_actions_operator2P (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _result;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _bin_arc;;
 
 		_=> nrel_then:: .._proc_of_displaying_initiated_actions_operator2J;;
@@ -101,9 +101,9 @@ _-> rrel_2:: rrel_in:: _result;
 	_-> .._proc_of_displaying_initiated_actions_operator3A (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _performer;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_performer;;
 		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _result;;
 		_-> rrel_fixed:: rrel_scp_const:: rrel_set_3:: _result;;
@@ -116,7 +116,7 @@ _-> rrel_2:: rrel_in:: _result;
 	_-> .._proc_of_displaying_initiated_actions_operator3B (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _result;;
-		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_performer;;
 
 		_=> nrel_goto:: .._proc_of_displaying_initiated_actions_operator4A;;
@@ -125,7 +125,7 @@ _-> rrel_2:: rrel_in:: _result;
 	_-> .._proc_of_displaying_initiated_actions_operator4A (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _action_name;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _action;;
 		_-> rrel_fixed:: rrel_scp_const:: rrel_set_1:: _result;;
 		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _result;;
@@ -136,7 +136,7 @@ _-> rrel_2:: rrel_in:: _result;
 	_-> .._proc_of_displaying_initiated_actions_operator5A (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _args;;
 		_-> rrel_assign:: rrel_scp_var:: rrel_set_2:: _arcs_to_args;;
 		_-> rrel_fixed:: rrel_scp_const:: rrel_set_3:: _result;;
@@ -148,7 +148,7 @@ _-> rrel_2:: rrel_in:: _result;
 	_-> .._proc_of_displaying_initiated_actions_operator6A (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _arcs_to_args;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _arc_to_argument;;
 
 		_=> nrel_then:: .._proc_of_displaying_initiated_actions_operator6B;;
@@ -158,9 +158,9 @@ _-> rrel_2:: rrel_in:: _result;
 	_-> .._proc_of_displaying_initiated_actions_operator10A (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _proposal;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_assign:: rrel_scp_var:: _relation;;
 		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _result;;
 		_-> rrel_fixed:: rrel_scp_const:: rrel_set_3:: _result;;
@@ -174,9 +174,9 @@ _-> rrel_2:: rrel_in:: _result;
 	_-> .._proc_of_displaying_initiated_actions_operator10B (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _action;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _element;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_assign:: rrel_scp_var:: _relation;;
 		_-> rrel_assign:: rrel_scp_var:: rrel_set_3:: _args_and_proposals;;
 
@@ -186,7 +186,7 @@ _-> rrel_2:: rrel_in:: _result;
 	_-> .._proc_of_displaying_initiated_actions_operator11A (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _args_and_proposals;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _arg_or_proposal;;
 
 		_=> nrel_then:: .._proc_of_displaying_initiated_actions_operator11B;;
@@ -195,7 +195,7 @@ _-> rrel_2:: rrel_in:: _result;
 
 	_-> .._proc_of_displaying_initiated_actions_operator11B (*
 		<-_ eraseEl;;
-		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 
 		_=> nrel_goto:: .._proc_of_displaying_initiated_actions_operator11C;;
 	*);;
@@ -210,9 +210,9 @@ _-> rrel_2:: rrel_in:: _result;
 	_-> .._proc_of_displaying_initiated_actions_operator11C (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _arg_or_proposal;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _proposal;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_const:: nrel_authors;;
 		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _result;;
 		_-> rrel_fixed:: rrel_scp_const:: rrel_set_3:: _result;;
@@ -225,7 +225,7 @@ _-> rrel_2:: rrel_in:: _result;
 	_-> .._proc_of_displaying_initiated_actions_operator11D (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _arg_or_proposal;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _element;;
 		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _result;;
 		_-> rrel_fixed:: rrel_scp_const:: rrel_set_3:: _result;;
@@ -236,7 +236,7 @@ _-> rrel_2:: rrel_in:: _result;
 	_-> .._proc_of_displaying_initiated_actions_operator11E (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _result;;
-		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_authors;;
 
 		_=> nrel_then:: .._proc_of_displaying_initiated_actions_operator11A;;
@@ -246,7 +246,7 @@ _-> rrel_2:: rrel_in:: _result;
 	_-> .._proc_of_displaying_initiated_actions_operator11F (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _result;;
-		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_authors;;
 
 		_=> nrel_goto:: .._proc_of_displaying_initiated_actions_operator11A;;
@@ -254,7 +254,7 @@ _-> rrel_2:: rrel_in:: _result;
 
 	_-> .._proc_of_displaying_initiated_actions_operator6B (*
 		<-_ eraseEl;;
-		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 
 		_=> nrel_goto:: .._proc_of_displaying_initiated_actions_operator7A;;
 	*);;
@@ -262,7 +262,7 @@ _-> rrel_2:: rrel_in:: _result;
 	_-> .._proc_of_displaying_initiated_actions_operator7A (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: rrel_1;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _arc_to_argument;;
 		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _result;;
 
@@ -273,7 +273,7 @@ _-> rrel_2:: rrel_in:: _result;
 	_-> .._proc_of_displaying_initiated_actions_operator7B (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _result;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _arc_to_argument;;
 
 		_=> nrel_goto:: .._proc_of_displaying_initiated_actions_operator7C;;
@@ -282,7 +282,7 @@ _-> rrel_2:: rrel_in:: _result;
 	_-> .._proc_of_displaying_initiated_actions_operator8A (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: rrel_2;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _arc_to_argument;;
 		_-> rrel_fixed:: rrel_scp_const:: rrel_set_2:: _result;;
 
@@ -293,7 +293,7 @@ _-> rrel_2:: rrel_in:: _result;
 	_-> .._proc_of_displaying_initiated_actions_operator8B (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _result;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _arc_to_argument;;
 
 		_=> nrel_goto:: .._proc_of_displaying_initiated_actions_operator8C;;
@@ -302,7 +302,7 @@ _-> rrel_2:: rrel_in:: _result;
 	_-> .._proc_of_displaying_initiated_actions_operator9A (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _result;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _arc_to_argument;;
 
 		_=> nrel_goto:: .._proc_of_displaying_initiated_actions_operator6A;;
@@ -311,7 +311,7 @@ _-> rrel_2:: rrel_in:: _result;
 	_-> .._proc_of_displaying_initiated_actions_operator8C (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _result;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: rrel_2;;
 
 		_=> nrel_then:: .._proc_of_displaying_initiated_actions_operator6A;;
@@ -321,7 +321,7 @@ _-> rrel_2:: rrel_in:: _result;
 	_-> .._proc_of_displaying_initiated_actions_operator8D (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _result;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: rrel_2;;
 
 		_=> nrel_goto:: .._proc_of_displaying_initiated_actions_operator6A;;
@@ -330,7 +330,7 @@ _-> rrel_2:: rrel_in:: _result;
 	_-> .._proc_of_displaying_initiated_actions_operator7C (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _result;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: rrel_1;;
 
 		_=> nrel_then:: .._proc_of_displaying_initiated_actions_operator6A;;
@@ -340,7 +340,7 @@ _-> rrel_2:: rrel_in:: _result;
 	_-> .._proc_of_displaying_initiated_actions_operator7D (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _result;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: rrel_1;;
 
 		_=> nrel_goto:: .._proc_of_displaying_initiated_actions_operator6A;;
@@ -349,7 +349,7 @@ _-> rrel_2:: rrel_in:: _result;
 	_-> .._proc_of_displaying_initiated_actions_operator2J (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _arcs;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _bin_arc;;
 
 		_=> nrel_then:: .._proc_of_displaying_initiated_actions_operator2K;;
@@ -359,7 +359,7 @@ _-> rrel_2:: rrel_in:: _result;
 	_-> .._proc_of_displaying_initiated_actions_operator2Q (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _result;;
-		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_sequence_of_actions;;
 
 		_=> nrel_goto:: .._proc_of_displaying_initiated_actions_operator2J;;
@@ -367,7 +367,7 @@ _-> rrel_2:: rrel_in:: _result;
 
 	_-> .._proc_of_displaying_initiated_actions_operator2K (*
 		<-_ eraseEl;;
-		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 
 		_=> nrel_goto:: .._proc_of_displaying_initiated_actions_operator2L;;
 	*);;
@@ -382,7 +382,7 @@ _-> rrel_2:: rrel_in:: _result;
 	_-> .._proc_of_displaying_initiated_actions_operator2L (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _result;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _bin_arc;;
 
 		_=> nrel_then:: .._proc_of_displaying_initiated_actions_operator2M;;
@@ -392,7 +392,7 @@ _-> rrel_2:: rrel_in:: _result;
 	_-> .._proc_of_displaying_initiated_actions_operator2M (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _result;;
-		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _bin_arc;;
 
 		_=> nrel_goto:: .._proc_of_displaying_initiated_actions_operator2J;;
@@ -401,7 +401,7 @@ _-> rrel_2:: rrel_in:: _result;
 	_-> .._proc_of_displaying_initiated_actions_operator2E (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _arcs;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _bin_arc;;
 
 		_=> nrel_then:: .._proc_of_displaying_initiated_actions_operator2F;;
@@ -411,7 +411,7 @@ _-> rrel_2:: rrel_in:: _result;
 	_-> .._proc_of_displaying_initiated_actions_operator2O (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _result;;
-		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_const:: nrel_sequence_of_actions;;
 
 		_=> nrel_goto:: .._proc_of_displaying_initiated_actions_operator2E;;
@@ -419,7 +419,7 @@ _-> rrel_2:: rrel_in:: _result;
 
 	_-> .._proc_of_displaying_initiated_actions_operator2F (*
 		<-_ eraseEl;;
-		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_1:: rrel_erase:: rrel_fixed:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 
 		_=> nrel_goto:: .._proc_of_displaying_initiated_actions_operator2G;;
 	*);;
@@ -427,7 +427,7 @@ _-> rrel_2:: rrel_in:: _result;
 	_-> .._proc_of_displaying_initiated_actions_operator2G (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _result;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _bin_arc;;
 
 		_=> nrel_then:: .._proc_of_displaying_initiated_actions_operator2E;;
@@ -437,7 +437,7 @@ _-> rrel_2:: rrel_in:: _result;
 	_-> .._proc_of_displaying_initiated_actions_operator2H (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _result;;
-		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _bin_arc;;
 
 		_=> nrel_goto:: .._proc_of_displaying_initiated_actions_operator2I;;

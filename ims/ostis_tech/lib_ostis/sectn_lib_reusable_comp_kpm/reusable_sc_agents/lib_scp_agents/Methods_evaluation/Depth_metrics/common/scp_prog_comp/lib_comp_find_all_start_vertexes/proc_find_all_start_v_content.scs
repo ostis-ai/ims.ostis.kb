@@ -15,7 +15,7 @@ _-> rrel_3:: rrel_in:: _all_start_vertexes;
 	_-> rrel_1:: .._proc_of_finding_all_start_vertexes_operator_add_all_vertexes_to_temp_set (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _set_of_vertexes;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _vertex;;
 		_-> rrel_assign:: rrel_scp_var:: rrel_set_3:: _all_vertexes;;
 
@@ -26,7 +26,7 @@ _-> rrel_3:: rrel_in:: _all_start_vertexes;
 	_-> .._proc_of_finding_all_start_vertexes_operator_get_all_taxonomy_relation (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: taxonomy_relation;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _relation;;
 		_-> rrel_assign:: rrel_scp_var:: rrel_set_3:: _all_taxonomy_relation;;
 
@@ -42,7 +42,7 @@ _-> rrel_3:: rrel_in:: _all_start_vertexes;
 	_-> .._proc_of_finding_all_start_vertexes_operator_A1_loop_enter (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _all_vertexes;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _concrete_vertex;;
 
 		_=> nrel_then:: .._proc_of_finding_all_start_vertexes_operator_A2_loop_arc_erase;;
@@ -73,8 +73,8 @@ _-> rrel_3:: rrel_in:: _all_start_vertexes;
 	_-> .._proc_of_finding_all_start_vertexes_operator_A3_get_all_relations (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _any_node;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
-		_-> rrel_4:: rrel_assign:: rrel_common:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _concrete_vertex;;
 		_-> rrel_5:: rrel_assign:: rrel_scp_var:: _relation;;
 		_-> rrel_assign:: rrel_scp_var:: rrel_set_5:: _relations;;
@@ -86,7 +86,7 @@ _-> rrel_3:: rrel_in:: _all_start_vertexes;
 	_-> .._proc_of_finding_all_start_vertexes_operator_A4_sub_loop_enter (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _relations;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _relation;;
 
 		_=> nrel_then:: .._proc_of_finding_all_start_vertexes_operator_A5_sub_loop_arc_erase;;
@@ -96,7 +96,7 @@ _-> rrel_3:: rrel_in:: _all_start_vertexes;
 	_-> .._proc_of_finding_all_start_vertexes_operator_B1_get_possible_ligaments (*
 		<-_ searchSetStr3;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _any_node;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _concrete_vertex;;
 		_-> rrel_assign:: rrel_scp_var:: rrel_set_1:: _possible_ligaments;;
 
@@ -107,7 +107,7 @@ _-> rrel_3:: rrel_in:: _all_start_vertexes;
 	_-> .._proc_of_finding_all_start_vertexes_operator_B2_sub_loop_enter (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _possible_ligaments;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _possible_ligament;;
 
 		_=> nrel_then:: .._proc_of_finding_all_start_vertexes_operator_B3_sub_loop_arc_erase;;
@@ -117,7 +117,7 @@ _-> rrel_3:: rrel_in:: _all_start_vertexes;
 	_-> .._proc_of_finding_all_start_vertexes_operator_C1_mark_as_start_vertex (*
 		<-_ genElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _all_start_vertexes;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _concrete_vertex;;
 
 		_=> nrel_goto:: .._proc_of_finding_all_start_vertexes_operator_A1_loop_enter;;
@@ -140,7 +140,7 @@ _-> rrel_3:: rrel_in:: _all_start_vertexes;
 	_-> .._proc_of_finding_all_start_vertexes_B7_is_ontology_node (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _ontology;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _possible_ligament;;
 
 		_=> nrel_then:: .._proc_of_finding_all_start_vertexes_operator_A7_erase_possible_ligaments_temp_set;;
@@ -157,9 +157,9 @@ _-> rrel_3:: rrel_in:: _all_start_vertexes;
 	_-> .._proc_of_finding_all_start_vertexes_operator_B4 (*
 		<-_ searchSetStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _possible_ligament;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _maybe_ontology_node;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_assign:: rrel_scp_var:: _relation;;
 		_-> rrel_assign:: rrel_scp_var:: rrel_set_5:: _relations_for_check;;
 
@@ -170,7 +170,7 @@ _-> rrel_3:: rrel_in:: _all_start_vertexes;
 	_-> .._proc_of_finding_all_start_vertexes_operator_B5_1_loop_enter (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _relations_for_check;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _relation;;
 
 		_=> nrel_then:: .._proc_of_finding_all_start_vertexes_operator_B5_2_loop_arc_erase;;
@@ -194,7 +194,7 @@ _-> rrel_3:: rrel_in:: _all_start_vertexes;
 	_-> .._proc_of_finding_all_start_vertexes_operator_B5 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _all_taxonomy_relation;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _relation;;
 
 		_=> nrel_then:: .._proc_of_finding_all_start_vertexes_operator_check_is_quasy_relation;;
@@ -204,7 +204,7 @@ _-> rrel_3:: rrel_in:: _all_start_vertexes;
 	_-> .._proc_of_finding_all_start_vertexes_operator_check_is_quasy_relation (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: quasybinary_relation;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _relation;;
 
 		_=> nrel_then:: .._proc_of_finding_all_start_vertexes_operator_B6_1;;
@@ -214,9 +214,9 @@ _-> rrel_3:: rrel_in:: _all_start_vertexes;
 	_-> .._proc_of_finding_all_start_vertexes_operator_B6_1 (*
 		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _possible_ligament;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_assign:: rrel_scp_var:: _maybe_ontology_node;;
-		_-> rrel_4:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc2;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc2;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_var:: _relation;;
 
 		_=> nrel_goto:: .._proc_of_finding_all_start_vertexes_B6_is_ontology_node;;
@@ -225,7 +225,7 @@ _-> rrel_3:: rrel_in:: _all_start_vertexes;
 	_-> .._proc_of_finding_all_start_vertexes_B6_is_ontology_node (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _ontology;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _maybe_ontology_node;;
 
 		_=> nrel_then:: .._proc_of_finding_all_start_vertexes_operator_A7_erase_relations_for_check_temp_set;;
@@ -256,7 +256,7 @@ _-> rrel_3:: rrel_in:: _all_start_vertexes;
 	_-> .._proc_of_finding_all_start_vertexes_operator_A6 (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_var:: _all_taxonomy_relation;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _relation;;
 
 		_=> nrel_then:: .._proc_of_finding_all_start_vertexes_operator_A6_is_quasybinary_relation;;
@@ -266,7 +266,7 @@ _-> rrel_3:: rrel_in:: _all_start_vertexes;
 	_-> .._proc_of_finding_all_start_vertexes_operator_A6_is_quasybinary_relation (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: quasybinary_relation;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _relation;;
 
 		_=> nrel_then:: .._proc_of_finding_all_start_vertexes_operator_A4_sub_loop_enter;;
@@ -276,8 +276,8 @@ _-> rrel_3:: rrel_in:: _all_start_vertexes;
 	_-> .._proc_of_finding_all_start_vertexes_A6_1_get_ontology_node (*
 		<-_ searchElStr5;;
 		_-> rrel_1:: rrel_assign:: rrel_scp_var:: _maybe_ontology_node;;
-		_-> rrel_2:: rrel_assign:: rrel_common:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
-		_-> rrel_4:: rrel_assign:: rrel_common:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_common_arc:: rrel_scp_var:: _arc1;;
+		_-> rrel_4:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _concrete_vertex;;
 		_-> rrel_5:: rrel_fixed:: rrel_scp_var:: _relation;;
 
@@ -287,7 +287,7 @@ _-> rrel_3:: rrel_in:: _all_start_vertexes;
 	_-> .._proc_of_finding_all_start_vertexes_A6_2_is_ontology_node (*
 		<-_ searchElStr3;;
 		_-> rrel_1:: rrel_fixed:: rrel_scp_const:: _ontology;;
-		_-> rrel_2:: rrel_assign:: rrel_pos_const_perm:: rrel_scp_var:: _arc1;;
+		_-> rrel_2:: rrel_assign:: rrel_const_perm_pos_arc:: rrel_scp_var:: _arc1;;
 		_-> rrel_3:: rrel_fixed:: rrel_scp_var:: _maybe_ontology_node;;
 
 		_=> nrel_then:: .._proc_of_finding_all_start_vertexes_operator_A7_erase_relations_temp_set;;
